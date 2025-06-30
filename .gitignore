@@ -1,0 +1,11 @@
+ANALYSIS/
+DATA/
+DOCX/
+FIGS/
+__pycache__/
+*.pkl
+*.csv
+*.log
+*.DS_Store
+*.ipynb_checkpoints/
+.env
