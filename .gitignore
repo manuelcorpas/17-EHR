@@ -2,6 +2,7 @@ ANALYSIS/
 DATA/
 DOCX/
 FIGS/
+ARCHIVE/
 __pycache__/
 *.pkl
 *.csv
