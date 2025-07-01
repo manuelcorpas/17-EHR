@@ -100,6 +100,29 @@ To ensure research quality, we implemented comprehensive preprint detection and 
 * **Biobank Coverage**: Research volume and trends for each target biobank
 * **Temporal Patterns**: Publication trends and growth rates over time (2000-2024)
 
+### MeSH-Based Semantic Clustering Analysis
+
+**Methodology**: Per-biobank clustering of publications based on MeSH term semantic similarity using TF-IDF vectorization and K-means clustering.
+
+**Pipeline Components**:
+- **MeSH Term Preprocessing**: Tokenization, cleaning, and normalization of Medical Subject Headings
+- **TF-IDF Vectorization**: Biobank-specific document-term matrices using MeSH descriptors
+- **Bootstrap K-Selection**: Silhouette-based optimal cluster determination (K=2-10, 50 bootstrap iterations)
+- **K-means Clustering**: Semantic grouping of publications within each biobank
+- **c-DF-IPF Scoring**: Cluster-level Document Frequency × Inverse Publication Frequency for top MeSH term identification
+- **Dimensionality Reduction**: PCA and UMAP projections of cluster centroids for visualization
+
+**Research Questions Addressed**:
+- What are the distinct semantic research clusters within each biobank?
+- How do research themes compare across different biobank communities?
+- Which MeSH terms characterize each biobank's research specializations?
+- How complex/diverse is the research landscape within each biobank?
+
+**Output Visualizations**:
+- **Composite Figures**: All biobanks displayed together for cross-comparison
+- **Individual Figures**: Detailed per-biobank cluster analysis
+- **2D Projections**: PCA and UMAP visualizations of semantic cluster relationships
+
 ### Network Analysis
 * **MeSH Co-occurrence**: Identification of research theme relationships
 * **Cross-Biobank Comparisons**: Research focus similarities and differences between biobanks
@@ -121,6 +144,12 @@ All visualizations are generated in both PNG and PDF formats suitable for academ
 * **Journal Analysis**: Publishing venue preferences
 * **Publication Trends**: Multi-year trend lines with statistical analysis
 * **Combined Overview**: Comprehensive research landscape summary
+
+### MeSH Clustering Visualizations
+* **Composite PCA/UMAP Plots**: All biobanks in integrated figures for cross-comparison
+* **Individual Biobank Clusters**: Detailed semantic cluster analysis per biobank
+* **Cluster Summaries**: Top MeSH terms per cluster using c-DF-IPF scoring
+* **Research Theme Maps**: 2D projections showing semantic relationships between publication clusters
 
 ### Quality Standards
 * High-resolution outputs (300 DPI)
@@ -157,10 +186,10 @@ All visualizations are generated in both PNG and PDF formats suitable for academ
 ## 🔬 Extensions Underway
 
 ### Advanced Analytics
-* **Semantic Clustering**: MeSH terms grouped into thematic research domains
-* **Biobank Research Profiling**: Characterization of research focus per biobank using MeSH analysis
+* **Semantic Clustering**: MeSH terms grouped into thematic research domains ✅ **IMPLEMENTED**
+* **Biobank Research Profiling**: Characterization of research focus per biobank using MeSH analysis ✅ **IMPLEMENTED**
 * **Temporal Theme Evolution**: Tracking how research themes change over time (2000-2024)
-* **Cross-Biobank Theme Analysis**: Comparative analysis of research focus between biobanks
+* **Cross-Biobank Theme Analysis**: Comparative analysis of research focus between biobanks ✅ **IMPLEMENTED**
 
 ### Text Mining and NLP
 * **Abstract Analysis**: Natural language processing of abstract content for deeper insights
@@ -178,14 +207,16 @@ All visualizations are generated in both PNG and PDF formats suitable for academ
 
 ```
 ├── PYTHON/
-│   ├── 00-00-biobank-data-retrieval.py    # PubMed data collection
-│   └── 00-01-biobank-analysis.py          # Analysis and visualization
+│   ├── 00-00-biobank-data-retrieval.py      # PubMed data collection
+│   ├── 00-01-biobank-analysis.py            # Analysis and visualization
+│   └── 00-02-biobank-mesh-clustering.py     # MeSH semantic clustering
 ├── DATA/
-│   ├── biobank_research_data.csv          # Raw retrieved data
+│   ├── biobank_research_data.csv            # Raw retrieved data
 │   └── biobank_research_data_deduplicated.csv
 ├── ANALYSIS/
-│   └── 00-01-BIOBANK-ANALYSIS/           # Generated figures and reports
-└── README.md                              # This file
+│   ├── 00-01-BIOBANK-ANALYSIS/             # Basic analysis figures and reports
+│   └── 00-02-BIOBANK-MESH-CLUSTERING/      # Semantic clustering results
+└── README.md                                # This file
 ```
 
 ## 🚀 Usage
@@ -193,21 +224,47 @@ All visualizations are generated in both PNG and PDF formats suitable for academ
 ### Data Retrieval
 ```bash
 # Retrieve papers mentioning target biobanks from PubMed (2000-2025)
-# Note: Analysis script will filter to 2000-2024 and exclude preprints
+# Note: Analysis scripts will filter to 2000-2024 and exclude preprints
 python PYTHON/00-00-biobank-data-retrieval.py
 ```
 
-### Analysis and Visualization
+### Basic Analysis and Visualization
 ```bash
 # Generate publication-quality figures and statistics
 # Automatically excludes 2025 data and preprints for analysis
 python PYTHON/00-01-biobank-analysis.py
 ```
 
+### MeSH Semantic Clustering
+```bash
+# Generate semantic clusters of publications within each biobank
+# Creates both composite and individual biobank visualizations
+python PYTHON/00-02-biobank-mesh-clustering.py
+```
+
 ### Requirements
 ```bash
+# Basic analysis
 pip install pandas matplotlib seaborn numpy scipy biopython
+
+# MeSH clustering (additional requirements)
+pip install scikit-learn umap-learn
 ```
+
+## 📊 Key Outputs
+
+### From Basic Analysis (`00-01-BIOBANK-ANALYSIS/`)
+* Publication trends and biobank-specific statistics
+* MeSH term frequency analysis  
+* Journal distribution patterns
+* Temporal publication patterns (2000-2024)
+
+### From MeSH Clustering (`00-02-BIOBANK-MESH-CLUSTERING/`)
+* **Composite visualizations**: `composite_pca_all_biobanks.png`, `composite_umap_all_biobanks.png`
+* **Individual biobank clusters**: `pca_clusters_<biobank>.png`, `umap_clusters_<biobank>.png`
+* **Cluster assignments**: `clustering_results_<biobank>.csv`
+* **Semantic summaries**: `cluster_summaries_<biobank>.csv` (top MeSH terms by c-DF-IPF)
+* **Overall summary**: `biobank_clustering_summary.csv`
 
 ## ✍️ Citation
 
