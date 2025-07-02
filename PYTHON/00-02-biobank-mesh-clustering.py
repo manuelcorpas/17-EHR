@@ -1,80 +1,12 @@
-def create_individual_biobank_plots(all_projection_data):
-    """Create individual detailed plots for each biobank (for specific analysis)"""
-    logger.info("Creating individual biobank plots for detailed analysis")
-    
-    for proj_data in all_projection_data:
-        biobank_name = proj_data['biobank_name']
-        pca_coords = proj_data['pca_coords']
-        umap_coords = proj_data['umap_coords']
-        cluster_sizes = proj_data['cluster_sizes']
-        explained_var = proj_data['pca_explained_variance']
-        
-        # Create detailed PCA plot
-        plt.figure(figsize=(12, 9))
-        colors = plt.cm.tab10(np.linspace(0, 1, len(pca_coords)))
-        
-        for i, (x, y) in enumerate(pca_coords):
-            cluster_size = cluster_sizes[i]
-            plt.scatter(x, y, c=[colors[i]], s=100 + cluster_size * 2, 
-                       alpha=0.8, edgecolors='black', linewidth=1)
-            plt.annotate(f'C{i}\n(n={cluster_size})', (x, y), 
-                        xytext=(5, 5), textcoords='offset points', 
-                        fontsize=10, ha='left', va='bottom',
-                        bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.7))
-        
-        plt.title(f'PCA: MeSH Term Clusters within {biobank_name}\n'
-                  f'({len(pca_coords)} semantic clusters from TF-IDF analysis)', 
-                  fontsize=14, fontweight='bold')
-        plt.xlabel(f'PC1 ({explained_var[0]:.1%} variance)', fontsize=12)
-        plt.ylabel(f'PC2 ({explained_var[1]:.1%} variance)', fontsize=12)
-        plt.grid(True, alpha=0.3)
-        
-        plt.figtext(0.02, 0.02, 
-                    f'Each point = 1 cluster of publications within {biobank_name}\n'
-                    f'Point size ∝ number of publications in cluster\n'
-                    f'Distance = semantic similarity of MeSH terms',
-                    fontsize=9, style='italic')
-        
-        pca_file = os.path.join(analysis_dir, f'pca_clusters_{biobank_name.lower().replace(" ", "_")}.png')
-        plt.savefig(pca_file, dpi=300, bbox_inches='tight')
-        plt.close()
-        
-        # Create detailed UMAP plot (if available)
-        if umap_coords is not None:
-            plt.figure(figsize=(12, 9))
-            
-            for i, (x, y) in enumerate(umap_coords):
-                cluster_size = cluster_sizes[i]
-                plt.scatter(x, y, c=[colors[i]], s=100 + cluster_size * 2, 
-                           alpha=0.8, edgecolors='black', linewidth=1)
-                plt.annotate(f'C{i}\n(n={cluster_size})', (x, y), 
-                            xytext=(5, 5), textcoords='offset points', 
-                            fontsize=10, ha='left', va='bottom',
-                            bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.7))
-            
-            plt.title(f'UMAP: MeSH Term Clusters within {biobank_name}\n'
-                      f'({len(umap_coords)} semantic clusters from TF-IDF analysis)', 
-                      fontsize=14, fontweight='bold')
-            plt.xlabel('UMAP1', fontsize=12)
-            plt.ylabel('UMAP2', fontsize=12)
-            plt.grid(True, alpha=0.3)
-            
-            plt.figtext(0.02, 0.02, 
-                        f'Each point = 1 cluster of publications within {biobank_name}\n'
-                        f'Point size ∝ number of publications in cluster\n'
-                        f'Proximity = semantic similarity of MeSH terms',
-                        fontsize=9, style='italic')
-            
-            umap_file = os.path.join(analysis_dir, f'umap_clusters_{biobank_name.lower().replace(" ", "_")}.png')
-            plt.savefig(umap_file, dpi=300, bbox_inches='tight')
-            plt.close()#!/usr/bin/env python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 """
-BIOBANK MESH TERM CLUSTERING PIPELINE
+BIOBANK MESH TERM CLUSTERING PIPELINE - ENHANCED VERSION
 
 Clusters biomedical publications from different biobanks based on their MeSH terms.
 Identifies semantic clusters of publications within each biobank using TF-IDF and K-means.
+ENHANCED: Includes comprehensive supplementary table generation for cluster interpretation.
 
 PIPELINE:
 1. Load and preprocess MeSH terms from biobank publications
@@ -86,6 +18,7 @@ PIPELINE:
    e. Semantic summaries using TF-IDF weights
    f. 2D projections (PCA/UMAP) of cluster centroids
 3. Save biobank-specific results and visualizations
+4. **NEW**: Generate comprehensive supplementary table with cluster characteristics
 
 NOTE: Each biobank is analyzed separately because they represent different research 
 communities with distinct publication patterns and MeSH term distributions.
@@ -103,6 +36,8 @@ OUTPUT FILES:
 - ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/composite_umap_all_biobanks.png: INTEGRATED UMAP showing all biobanks
 - ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/pca_clusters_<biobank>.png: Individual detailed PCA per biobank
 - ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/umap_clusters_<biobank>.png: Individual detailed UMAP per biobank
+- **NEW** ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/supplementary_cluster_characteristics_table.csv: COMPREHENSIVE cluster details
+- **NEW** ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/cluster_summary_overview.csv: Simplified overview table
 
 USAGE:
 1. Place this script in PYTHON/ directory as 00-02-biobank-mesh-clustering.py
@@ -573,6 +508,77 @@ def create_composite_visualizations(all_projection_data):
     # Create individual biobank plots for detailed analysis
     create_individual_biobank_plots(valid_projections)
 
+def create_individual_biobank_plots(all_projection_data):
+    """Create individual detailed plots for each biobank (for specific analysis)"""
+    logger.info("Creating individual biobank plots for detailed analysis")
+    
+    for proj_data in all_projection_data:
+        biobank_name = proj_data['biobank_name']
+        pca_coords = proj_data['pca_coords']
+        umap_coords = proj_data['umap_coords']
+        cluster_sizes = proj_data['cluster_sizes']
+        explained_var = proj_data['pca_explained_variance']
+        
+        # Create detailed PCA plot
+        plt.figure(figsize=(12, 9))
+        colors = plt.cm.tab10(np.linspace(0, 1, len(pca_coords)))
+        
+        for i, (x, y) in enumerate(pca_coords):
+            cluster_size = cluster_sizes[i]
+            plt.scatter(x, y, c=[colors[i]], s=100 + cluster_size * 2, 
+                       alpha=0.8, edgecolors='black', linewidth=1)
+            plt.annotate(f'C{i}\n(n={cluster_size})', (x, y), 
+                        xytext=(5, 5), textcoords='offset points', 
+                        fontsize=10, ha='left', va='bottom',
+                        bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.7))
+        
+        plt.title(f'PCA: MeSH Term Clusters within {biobank_name}\n'
+                  f'({len(pca_coords)} semantic clusters from TF-IDF analysis)', 
+                  fontsize=14, fontweight='bold')
+        plt.xlabel(f'PC1 ({explained_var[0]:.1%} variance)', fontsize=12)
+        plt.ylabel(f'PC2 ({explained_var[1]:.1%} variance)', fontsize=12)
+        plt.grid(True, alpha=0.3)
+        
+        plt.figtext(0.02, 0.02, 
+                    f'Each point = 1 cluster of publications within {biobank_name}\n'
+                    f'Point size ∝ number of publications in cluster\n'
+                    f'Distance = semantic similarity of MeSH terms',
+                    fontsize=9, style='italic')
+        
+        pca_file = os.path.join(analysis_dir, f'pca_clusters_{biobank_name.lower().replace(" ", "_")}.png')
+        plt.savefig(pca_file, dpi=300, bbox_inches='tight')
+        plt.close()
+        
+        # Create detailed UMAP plot (if available)
+        if umap_coords is not None:
+            plt.figure(figsize=(12, 9))
+            
+            for i, (x, y) in enumerate(umap_coords):
+                cluster_size = cluster_sizes[i]
+                plt.scatter(x, y, c=[colors[i]], s=100 + cluster_size * 2, 
+                           alpha=0.8, edgecolors='black', linewidth=1)
+                plt.annotate(f'C{i}\n(n={cluster_size})', (x, y), 
+                            xytext=(5, 5), textcoords='offset points', 
+                            fontsize=10, ha='left', va='bottom',
+                            bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.7))
+            
+            plt.title(f'UMAP: MeSH Term Clusters within {biobank_name}\n'
+                      f'({len(umap_coords)} semantic clusters from TF-IDF analysis)', 
+                      fontsize=14, fontweight='bold')
+            plt.xlabel('UMAP1', fontsize=12)
+            plt.ylabel('UMAP2', fontsize=12)
+            plt.grid(True, alpha=0.3)
+            
+            plt.figtext(0.02, 0.02, 
+                        f'Each point = 1 cluster of publications within {biobank_name}\n'
+                        f'Point size ∝ number of publications in cluster\n'
+                        f'Proximity = semantic similarity of MeSH terms',
+                        fontsize=9, style='italic')
+            
+            umap_file = os.path.join(analysis_dir, f'umap_clusters_{biobank_name.lower().replace(" ", "_")}.png')
+            plt.savefig(umap_file, dpi=300, bbox_inches='tight')
+            plt.close()
+
 #############################################################################
 # 7. Save Results
 #############################################################################
@@ -635,8 +641,210 @@ def save_overall_summary(all_summaries):
     logger.info(f"Overall summary saved: {summary_file}")
 
 #############################################################################
-# 8. Main Pipeline
+# 8. NEW ENHANCED FUNCTIONS - Supplementary Table Generation
 #############################################################################
+
+def generate_cluster_description(top_terms):
+    """Generate a human-readable description of the cluster based on top terms"""
+    if not top_terms:
+        return "Undefined cluster"
+    
+    # Convert MeSH terms to readable format
+    readable_terms = [term['term'].replace('_', ' ').title() for term in top_terms]
+    
+    if len(readable_terms) == 1:
+        return f"Research focused on {readable_terms[0]}"
+    elif len(readable_terms) == 2:
+        return f"Research combining {readable_terms[0]} and {readable_terms[1]}"
+    else:
+        return f"Research spanning {readable_terms[0]}, {readable_terms[1]}, and {readable_terms[2]}"
+
+def infer_research_theme(top_terms):
+    """Infer the primary research theme based on top terms"""
+    if not top_terms:
+        return "Unknown"
+    
+    # Common research theme mappings
+    theme_keywords = {
+        'Genomics': ['genome', 'genetic', 'dna', 'snp', 'gwas', 'polymorphism', 'allele', 'genotype'],
+        'Cardiovascular': ['heart', 'cardiovascular', 'cardiac', 'blood_pressure', 'hypertension', 'coronary'],
+        'Neurological': ['brain', 'neurological', 'cognitive', 'alzheimer', 'dementia', 'neural'],
+        'Metabolic': ['diabetes', 'obesity', 'metabolism', 'glucose', 'insulin', 'lipid'],
+        'Cancer': ['cancer', 'tumor', 'oncology', 'malignant', 'carcinoma', 'neoplasm'],
+        'Imaging': ['imaging', 'mri', 'scan', 'radiological', 'tomography'],
+        'Environmental': ['environment', 'pollution', 'exposure', 'air_quality', 'toxicity'],
+        'Epidemiological': ['epidemiology', 'cohort', 'longitudinal', 'prospective', 'risk_factors'],
+        'Pregnancy/Maternal': ['pregnancy', 'maternal', 'prenatal', 'birth', 'fetal'],
+        'Pediatric': ['infant', 'child', 'pediatric', 'adolescent', 'development']
+    }
+    
+    # Check top terms against theme keywords
+    top_term_text = ' '.join([term['term'].lower() for term in top_terms])
+    
+    for theme, keywords in theme_keywords.items():
+        if any(keyword in top_term_text for keyword in keywords):
+            return theme
+    
+    # If no specific theme found, use the most prominent term
+    return top_terms[0]['term'].replace('_', ' ').title()
+
+def create_supplementary_cluster_table(all_cluster_data):
+    """Create comprehensive supplementary table summarizing all cluster characteristics"""
+    logger.info("Creating supplementary cluster characteristics table")
+    
+    # Ensure analysis directory exists
+    os.makedirs(analysis_dir, exist_ok=True)
+    logger.info(f"Output directory: {analysis_dir}")
+    
+    supplementary_rows = []
+    
+    for biobank_data in all_cluster_data:
+        biobank_name = biobank_data['biobank_name']
+        cluster_summaries = biobank_data['cluster_summaries']
+        publications_df = biobank_data['publications_df']
+        cluster_labels = biobank_data['cluster_labels']
+        feature_names = biobank_data['feature_names']
+        tfidf_matrix = biobank_data['tfidf_matrix']
+        
+        for cluster_id, summary in cluster_summaries.items():
+            # Get cluster-specific data
+            cluster_mask = cluster_labels == cluster_id
+            cluster_pubs_count = summary['n_publications']
+            
+            # Count unique MeSH terms in this cluster
+            cluster_tfidf = tfidf_matrix[cluster_mask]
+            unique_terms_in_cluster = np.sum(np.array((cluster_tfidf > 0).sum(axis=0)).flatten() > 0)
+            
+            # Get top 5 c-DF-IPF terms with their semantic descriptors
+            top_terms = summary['top_terms_cdf_ipf'][:5]
+            
+            # Format top terms for display
+            top_terms_formatted = []
+            for i, term_info in enumerate(top_terms):
+                term = term_info['term']
+                score = term_info['cdf_ipf_score']
+                
+                # Create semantic descriptor (convert underscore back to readable format)
+                semantic_descriptor = term.replace('_', ' ').title()
+                
+                top_terms_formatted.append(f"{term} ({semantic_descriptor}): {score:.4f}")
+            
+            # Create row for supplementary table
+            supplementary_row = {
+                'Biobank': biobank_name,
+                'Cluster_ID': f"C{cluster_id}",
+                'Number_of_Publications': cluster_pubs_count,
+                'Total_Unique_MeSH_Terms': unique_terms_in_cluster,
+                'Top_5_Semantic_Terms_cDF_IPF': ' | '.join(top_terms_formatted),
+                'Cluster_Description': generate_cluster_description(top_terms[:3]),
+                'Primary_Research_Theme': infer_research_theme(top_terms[:3]),
+                'c_DF_IPF_Score_Range': f"{top_terms[0]['cdf_ipf_score']:.4f} - {top_terms[-1]['cdf_ipf_score']:.4f}" if top_terms else "N/A"
+            }
+            
+            # Add individual top terms as separate columns for easier analysis
+            for i, term_info in enumerate(top_terms[:5]):
+                col_prefix = f"Term_{i+1}"
+                supplementary_row[f"{col_prefix}_MeSH"] = term_info['term']
+                supplementary_row[f"{col_prefix}_Semantic_Descriptor"] = term_info['term'].replace('_', ' ').title()
+                supplementary_row[f"{col_prefix}_cDF_IPF_Score"] = term_info['cdf_ipf_score']
+                supplementary_row[f"{col_prefix}_DF_Score"] = term_info['df_score']
+                supplementary_row[f"{col_prefix}_IPF_Score"] = term_info['ipf_score']
+            
+            supplementary_rows.append(supplementary_row)
+    
+    # Create DataFrame and save
+    supplementary_df = pd.DataFrame(supplementary_rows)
+    
+    # Sort by biobank and cluster size for better readability
+    supplementary_df = supplementary_df.sort_values(['Biobank', 'Number_of_Publications'], ascending=[True, False])
+    
+    # Save supplementary table
+    supplementary_file = os.path.join(analysis_dir, 'supplementary_cluster_characteristics_table.csv')
+    supplementary_df.to_csv(supplementary_file, index=False)
+    logger.info(f"✅ Supplementary cluster characteristics table saved: {supplementary_file}")
+    
+    # Also create a summary version with just key information
+    summary_columns = ['Biobank', 'Cluster_ID', 'Number_of_Publications', 
+                      'Total_Unique_MeSH_Terms', 'Primary_Research_Theme',
+                      'Top_5_Semantic_Terms_cDF_IPF']
+    
+    summary_df = supplementary_df[summary_columns].copy()
+    summary_file = os.path.join(analysis_dir, 'cluster_summary_overview.csv')
+    summary_df.to_csv(summary_file, index=False)
+    logger.info(f"✅ Cluster summary overview saved: {summary_file}")
+    
+    # Verify files exist and log their sizes
+    if os.path.exists(supplementary_file):
+        size_kb = os.path.getsize(supplementary_file) / 1024
+        logger.info(f"📊 Supplementary table: {len(supplementary_df)} rows, {len(supplementary_df.columns)} columns ({size_kb:.1f} KB)")
+    
+    if os.path.exists(summary_file):
+        size_kb = os.path.getsize(summary_file) / 1024
+        logger.info(f"📊 Summary overview: {len(summary_df)} rows, {len(summary_df.columns)} columns ({size_kb:.1f} KB)")
+    
+    return supplementary_df
+
+#############################################################################
+# 9. ENHANCED Main Pipeline
+#############################################################################
+
+def process_biobank_enhanced(biobank_name, biobank_df):
+    """Enhanced version of process_biobank that collects data for supplementary table"""
+    logger.info(f"\n{'='*60}")
+    logger.info(f"INDEPENDENT ANALYSIS: {biobank_name} ({len(biobank_df):,} publications)")
+    logger.info(f"Clustering publications within {biobank_name} based on MeSH semantic similarity")
+    logger.info(f"{'='*60}")
+    
+    # Minimum publications threshold
+    if len(biobank_df) < 10:
+        logger.warning(f"Skipping {biobank_name}: too few publications ({len(biobank_df)})")
+        return [], None, None
+    
+    # 1. Create TF-IDF matrix (biobank-specific)
+    logger.info(f"1. Creating TF-IDF matrix from {biobank_name} publications only")
+    tfidf_matrix, feature_names, filtered_df = create_tfidf_matrix(biobank_df)
+    
+    if tfidf_matrix is None:
+        logger.warning(f"Skipping {biobank_name}: insufficient valid MeSH terms")
+        return [], None, None
+    
+    # 2. Bootstrap optimal K selection (within biobank)
+    logger.info(f"2. Finding optimal clusters within {biobank_name}")
+    optimal_k = bootstrap_optimal_k(tfidf_matrix)
+    
+    # 3. K-means clustering (biobank-specific)
+    logger.info(f"3. Clustering {biobank_name} publications into {optimal_k} semantic groups")
+    cluster_labels, kmeans_model = perform_kmeans_clustering(tfidf_matrix, optimal_k)
+    
+    # 4. c-DF-IPF scoring
+    logger.info(f"4. Computing c-DF-IPF scores for {biobank_name} clusters")
+    cluster_summaries = compute_cdf_ipf(filtered_df, feature_names, tfidf_matrix, cluster_labels)
+    
+    # 5. Semantic summaries
+    logger.info(f"5. Generating semantic summaries for {biobank_name}")
+    semantic_summaries = compute_semantic_summaries(tfidf_matrix, feature_names, cluster_labels)
+    
+    # 6. 2D projections (biobank-specific) - collect data for composite visualization
+    logger.info(f"6. Computing projections for {biobank_name}")
+    projection_data = create_2d_projections(tfidf_matrix, cluster_labels, biobank_name)
+    
+    # 7. Save results
+    logger.info(f"7. Saving {biobank_name} results")
+    summary_rows = save_biobank_results(biobank_name, filtered_df, cluster_labels, 
+                                       cluster_summaries, semantic_summaries)
+    
+    # 8. Collect data for supplementary table
+    cluster_data = {
+        'biobank_name': biobank_name,
+        'cluster_summaries': cluster_summaries,
+        'publications_df': filtered_df,
+        'cluster_labels': cluster_labels,
+        'feature_names': feature_names,
+        'tfidf_matrix': tfidf_matrix,
+        'semantic_summaries': semantic_summaries
+    }
+    
+    return summary_rows, projection_data, cluster_data
 
 def process_biobank(biobank_name, biobank_df):
     """Process a single biobank through the complete pipeline (INDEPENDENT ANALYSIS)
@@ -686,8 +894,120 @@ def process_biobank(biobank_name, biobank_df):
     
     return summary_rows, projection_data
 
+def main_enhanced():
+    """Enhanced main execution function with supplementary table generation"""
+    print("=" * 80)
+    print("BIOBANK MESH TERM CLUSTERING PIPELINE - ENHANCED VERSION")
+    print("Per-biobank semantic clustering with supplementary characteristics table")
+    print("(Each biobank analyzed independently)")
+    print("=" * 80)
+    
+    try:
+        # Load data
+        df = load_biobank_data()
+        
+        # Print biobank statistics
+        biobank_stats = df['Biobank'].value_counts()
+        print(f"\n📊 Biobank publication counts:")
+        for biobank, count in biobank_stats.items():
+            print(f"   {biobank}: {count:,} publications")
+        
+        print(f"\n🎯 Processing pipeline (PER-BIOBANK ANALYSIS):")
+        print(f"   Each biobank analyzed independently with enhanced reporting")
+        print(f"   📋 NEW: Comprehensive supplementary cluster characteristics table")
+        
+        # Process each biobank and collect data
+        all_summaries = []
+        all_projection_data = []
+        all_cluster_data = []
+        
+        for biobank_name in sorted(df['Biobank'].unique()):
+            biobank_df = df[df['Biobank'] == biobank_name].copy()
+            summary_rows, projection_data, cluster_data = process_biobank_enhanced(biobank_name, biobank_df)
+            
+            all_summaries.extend(summary_rows)
+            if projection_data is not None:
+                all_projection_data.append(projection_data)
+            if cluster_data is not None:
+                all_cluster_data.append(cluster_data)
+        
+        # Create composite visualizations
+        logger.info("\n" + "="*60)
+        logger.info("CREATING COMPOSITE VISUALIZATIONS")
+        logger.info("="*60)
+        create_composite_visualizations(all_projection_data)
+        
+        # Create supplementary cluster characteristics table
+        logger.info("\n" + "="*60)
+        logger.info("CREATING SUPPLEMENTARY CLUSTER CHARACTERISTICS TABLE")
+        logger.info("="*60)
+        supplementary_df = create_supplementary_cluster_table(all_cluster_data)
+        
+        # Save overall summary
+        save_overall_summary(all_summaries)
+        
+        # Print summary statistics
+        print(f"\n✅ Enhanced clustering pipeline complete!")
+        print(f"📂 All results saved to: {analysis_dir}")
+        print(f"📊 SUPPLEMENTARY TABLE STATISTICS:")
+        print(f"   Total clusters analyzed: {len(supplementary_df)}")
+        print(f"   Biobanks included: {supplementary_df['Biobank'].nunique()}")
+        print(f"   Largest cluster: {supplementary_df['Number_of_Publications'].max()} publications")
+        print(f"   Average cluster size: {supplementary_df['Number_of_Publications'].mean():.1f} publications")
+        
+        print(f"\n📂 ALL OUTPUT FILES IN: ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/")
+        print(f"   📋 NEW SUPPLEMENTARY TABLES:")
+        print(f"      - supplementary_cluster_characteristics_table.csv (COMPREHENSIVE)")
+        print(f"      - cluster_summary_overview.csv (SIMPLIFIED)")
+        print(f"   📊 COMPOSITE VISUALIZATIONS:")
+        print(f"      - composite_pca_all_biobanks.png")
+        print(f"      - composite_umap_all_biobanks.png")
+        print(f"   📈 INDIVIDUAL BIOBANK FILES:")
+        print(f"      - clustering_results_<biobank>.csv")
+        print(f"      - cluster_summaries_<biobank>.csv")
+        print(f"      - pca_clusters_<biobank>.png")
+        print(f"      - umap_clusters_<biobank>.png")
+        print(f"   📋 SUMMARY:")
+        print(f"      - biobank_clustering_summary.csv")
+        print(f"")
+        print(f"📊 SUPPLEMENTARY TABLE INCLUDES:")
+        print(f"   ✓ Cluster ID and biobank")
+        print(f"   ✓ Number of publications per cluster")
+        print(f"   ✓ Total unique MeSH terms per cluster")
+        print(f"   ✓ Top 5 semantic terms with c-DF-IPF scores")
+        print(f"   ✓ MeSH terms with semantic descriptors")
+        print(f"   ✓ Inferred primary research themes")
+        print(f"   ✓ Individual term scores (DF, IPF, c-DF-IPF)")
+        
+        # Verify files were created
+        supplementary_file = os.path.join(analysis_dir, 'supplementary_cluster_characteristics_table.csv')
+        summary_file = os.path.join(analysis_dir, 'cluster_summary_overview.csv')
+        
+        print(f"\n🔍 FILE VERIFICATION:")
+        if os.path.exists(supplementary_file):
+            file_size = os.path.getsize(supplementary_file) / 1024  # KB
+            print(f"   ✅ supplementary_cluster_characteristics_table.csv ({file_size:.1f} KB)")
+        else:
+            print(f"   ❌ supplementary_cluster_characteristics_table.csv - NOT FOUND")
+            
+        if os.path.exists(summary_file):
+            file_size = os.path.getsize(summary_file) / 1024  # KB
+            print(f"   ✅ cluster_summary_overview.csv ({file_size:.1f} KB)")
+        else:
+            print(f"   ❌ cluster_summary_overview.csv - NOT FOUND")
+        
+        print(f"\n💡 To reference clusters in your figures:")
+        print(f"   Use the Cluster_ID column (C0, C1, C2, etc.) to match")
+        print(f"   clusters with their semantic descriptions in the table.")
+
+        return supplementary_df
+        
+    except Exception as e:
+        logger.error(f"Error in enhanced pipeline: {e}")
+        raise
+
 def main():
-    """Main execution function"""
+    """Main execution function (original version)"""
     print("=" * 80)
     print("BIOBANK MESH TERM CLUSTERING PIPELINE")
     print("Per-biobank semantic clustering of publications by MeSH terms")
@@ -769,5 +1089,13 @@ def main():
         logger.error(f"Error in main pipeline: {e}")
         raise
 
+# Choose which version to run:
+# - main_enhanced() for NEW supplementary table functionality
+# - main() for original functionality only
+
 if __name__ == "__main__":
-    main()
+    # Run the enhanced version with supplementary table generation
+    supplementary_table = main_enhanced()
+    
+    # Uncomment below line to run original version without supplementary tables
+    # main()
