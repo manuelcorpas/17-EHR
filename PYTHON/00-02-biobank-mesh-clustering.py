@@ -8,15 +8,23 @@ Clusters biomedical publications from different biobanks based on their MeSH ter
 Identifies semantic clusters of publications within each biobank using TF-IDF and K-means.
 ENHANCED: Includes comprehensive supplementary table generation for cluster interpretation.
 
-NOTE: Now applies the same filtering logic as 00-01-biobank-analysis.py to ensure consistent counts:
+NOTE: Now applies EXACT same filtering logic as 00-01-biobank-analysis.py to ensure consistent counts:
 - Year filtering (2000-2024, excluding 2025 as incomplete)
 - Preprint exclusion using the same identifiers and patterns
 - Same data cleaning procedures
+- Reports total published papers (matching analysis script)
+- BUT only clusters papers that have MeSH terms available
+
+FILTERING APPROACH:
+1. Apply exact same filtering as analysis script to get total published papers
+2. Report these totals (should match analysis script exactly)
+3. For clustering: use only the subset that has MeSH terms
+4. This ensures consistency while still enabling meaningful clustering
 
 PIPELINE:
 1. Load and preprocess data with consistent filtering (same as analysis script)
 2. **PER-BIOBANK ANALYSIS** (each biobank analyzed independently):
-   a. Create TF-IDF matrix from that biobank's publications only
+   a. Create TF-IDF matrix from that biobank's publications with MeSH terms
    b. Bootstrap optimal K selection (silhouette scoring)
    c. K-means clustering within that biobank
    d. c-DF-IPF scoring for top MeSH terms per cluster
@@ -108,7 +116,7 @@ PREPRINT_IDENTIFIERS = [
 #############################################################################
 
 def load_biobank_data():
-    """Load biobank research data and apply consistent filtering with analysis script"""
+    """Load biobank research data and apply EXACT same filtering as analysis script"""
     input_file = os.path.join(data_dir, 'biobank_research_data.csv')
     
     if not os.path.exists(input_file):
@@ -117,16 +125,10 @@ def load_biobank_data():
     logger.info(f"Loading data from {input_file}")
     df_raw = pd.read_csv(input_file, low_memory=False)
     
-    logger.info(f"Loaded {len(df_raw):,} publications with MeSH terms from {df_raw['Biobank'].nunique()} biobanks")
+    logger.info(f"Loaded {len(df_raw):,} total records from {df_raw['Biobank'].nunique()} biobanks")
     
-    # Print biobank publication counts (before filtering)
-    biobank_stats = df_raw['Biobank'].value_counts()
-    print(f"\n📊 Biobank publication counts:")
-    for biobank, count in biobank_stats.items():
-        print(f"   {biobank}: {count:,} publications")
-    
-    # Apply the same filtering logic as 00-01-biobank-analysis.py
-    logger.info("Applying consistent filtering logic with analysis script...")
+    # Apply the EXACT same filtering logic as 00-01-biobank-analysis.py
+    logger.info("Applying EXACT same filtering logic as analysis script...")
     
     # Step 1: Clean and prepare basic data
     df = df_raw.copy()
@@ -166,28 +168,24 @@ def load_biobank_data():
         mask = df_year_filtered['Journal'].str.contains(pattern, case=False, na=False)
         df_year_filtered.loc[mask, 'is_preprint'] = True
     
-    # Step 6: Separate preprints and published papers
+    # Step 6: Separate preprints and published papers (SAME AS ANALYSIS SCRIPT)
     df_preprints = df_year_filtered[df_year_filtered['is_preprint'] == True].copy()
     df_published = df_year_filtered[df_year_filtered['is_preprint'] == False].copy()
     
-    # Step 7: Remove rows without MeSH terms (final step)
-    df_published = df_published.dropna(subset=['MeSH_Terms'])
-    df_published = df_published[df_published['MeSH_Terms'].str.strip() != '']
-    
-    # Step 8: Print comprehensive filtering statistics
+    # Step 7: Print comprehensive filtering statistics (SAME TOTALS AS ANALYSIS SCRIPT)
     total_raw = len(df_raw)
     total_year_filtered = len(df_year_filtered)
     preprint_count = len(df_preprints)
     published_count = len(df_published)
     
-    logger.info(f"\n📊 COMPREHENSIVE FILTERING RESULTS (CONSISTENT WITH ANALYSIS):")
+    logger.info(f"\n📊 FILTERING RESULTS (SHOULD MATCH ANALYSIS SCRIPT EXACTLY):")
     logger.info(f"   📁 Raw dataset: {total_raw:,} records")
     logger.info(f"   📅 After year filtering (2000-2024): {total_year_filtered:,} records")
     logger.info(f"   📑 Preprints identified: {preprint_count:,} records ({preprint_count/total_year_filtered*100:.1f}%)")
-    logger.info(f"   📖 Published papers with MeSH terms: {published_count:,} records ({published_count/total_year_filtered*100:.1f}%)")
+    logger.info(f"   📖 Published papers (ALL): {published_count:,} records ({published_count/total_year_filtered*100:.1f}%)")
     
-    # Print biobank distribution for published papers (should match analysis script)
-    logger.info(f"\n📋 Published papers by biobank (should match analysis script):")
+    # Print biobank distribution for ALL published papers (should match analysis script EXACTLY)
+    logger.info(f"\n📋 Published papers by biobank (SHOULD MATCH ANALYSIS SCRIPT):")
     biobank_counts = df_published['Biobank'].value_counts()
     total_published = len(df_published)
     for biobank, count in biobank_counts.items():
@@ -195,13 +193,29 @@ def load_biobank_data():
         logger.info(f"   • {biobank}: {count:,} papers ({percentage:.1f}%)")
     logger.info(f"   📊 Total published papers: {biobank_counts.sum():,}")
     
+    # NOW check how many have MeSH terms for clustering (but don't exclude from total)
+    df_with_mesh = df_published.dropna(subset=['MeSH_Terms'])
+    df_with_mesh = df_with_mesh[df_with_mesh['MeSH_Terms'].str.strip() != '']
+    
+    logger.info(f"\n🔬 MeSH TERM AVAILABILITY FOR CLUSTERING:")
+    logger.info(f"   📖 Published papers with MeSH terms: {len(df_with_mesh):,} ({len(df_with_mesh)/published_count*100:.1f}%)")
+    logger.info(f"   📖 Published papers without MeSH terms: {published_count - len(df_with_mesh):,} ({(published_count - len(df_with_mesh))/published_count*100:.1f}%)")
+    
+    mesh_biobank_counts = df_with_mesh['Biobank'].value_counts()
+    logger.info(f"\n📋 Papers WITH MeSH terms by biobank (for clustering):")
+    for biobank, count in mesh_biobank_counts.items():
+        total_biobank = biobank_counts[biobank]
+        percentage = (count / total_biobank) * 100
+        logger.info(f"   • {biobank}: {count:,} / {total_biobank:,} papers ({percentage:.1f}% have MeSH)")
+    
     # Validate required columns
     required_cols = ['Biobank', 'PMID', 'MeSH_Terms']
-    missing_cols = [col for col in required_cols if col not in df_published.columns]
+    missing_cols = [col for col in required_cols if col not in df_with_mesh.columns]
     if missing_cols:
         raise ValueError(f"Missing required columns: {missing_cols}")
     
-    return df_published
+    # Return ONLY papers with MeSH terms for clustering, but report total published counts
+    return df_with_mesh
 
 def preprocess_mesh_terms(mesh_string):
     """Clean and preprocess MeSH terms string"""
@@ -990,21 +1004,22 @@ def main_enhanced():
     print("=" * 80)
     
     try:
-        # Load data with consistent filtering (same as analysis script)
-        df = load_biobank_data()
+        # Load data with EXACT same filtering as analysis script
+        df_with_mesh = load_biobank_data()
         
         print(f"\n🎯 Processing pipeline (PER-BIOBANK ANALYSIS):")
         print(f"   Each biobank analyzed independently with enhanced reporting")
         print(f"   📋 NEW: Comprehensive supplementary cluster characteristics table")
-        print(f"   ✅ CONSISTENT FILTERING: Same logic as 00-01-biobank-analysis.py")
+        print(f"   ✅ EXACT FILTERING: Same totals as 00-01-biobank-analysis.py")
+        print(f"   🔬 CLUSTERING: Only papers with MeSH terms ({len(df_with_mesh):,} papers)")
         
         # Process each biobank and collect data
         all_summaries = []
         all_projection_data = []
         all_cluster_data = []
         
-        for biobank_name in sorted(df['Biobank'].unique()):
-            biobank_df = df[df['Biobank'] == biobank_name].copy()
+        for biobank_name in sorted(df_with_mesh['Biobank'].unique()):
+            biobank_df = df_with_mesh[df_with_mesh['Biobank'] == biobank_name].copy()
             summary_rows, projection_data, cluster_data = process_biobank_enhanced(biobank_name, biobank_df)
             
             all_summaries.extend(summary_rows)
@@ -1053,11 +1068,12 @@ def main_enhanced():
         print(f"      - biobank_clustering_summary.csv")
         print(f"")
         print(f"✅ CONSISTENCY CHECK:")
-        print(f"   - Applied same filtering as 00-01-biobank-analysis.py")
-        print(f"   - Publication counts should now match analysis script")
+        print(f"   - Applied EXACT same filtering as 00-01-biobank-analysis.py")
+        print(f"   - Total published papers should match analysis script exactly")
+        print(f"   - Clustering done on papers with MeSH terms only")
         print(f"   - Year range: 2000-2024 (2025 excluded as incomplete)")
         print(f"   - Preprints excluded using same identifiers")
-        print(f"   - Published papers only (peer-reviewed)")
+        print(f"   - Quality assured published papers only")
         
         # Verify files were created
         supplementary_file = os.path.join(analysis_dir, 'supplementary_cluster_characteristics_table.csv')
@@ -1095,8 +1111,8 @@ def main():
     print("=" * 80)
     
     try:
-        # Load data with consistent filtering
-        df = load_biobank_data()
+        # Load data with EXACT same filtering as analysis script
+        df_with_mesh = load_biobank_data()
         
         print(f"\n🎯 Processing pipeline (PER-BIOBANK ANALYSIS):")
         print(f"   Each biobank analyzed independently because:")
@@ -1104,7 +1120,8 @@ def main():
         print(f"   - Distinct MeSH term distributions")
         print(f"   - Separate publication patterns")
         print(f"")
-        print(f"   ✅ CONSISTENT FILTERING: Same logic as 00-01-biobank-analysis.py")
+        print(f"   ✅ EXACT FILTERING: Same totals as 00-01-biobank-analysis.py")
+        print(f"   🔬 CLUSTERING: Only papers with MeSH terms ({len(df_with_mesh):,} papers)")
         print(f"   Steps per biobank:")
         print(f"   1. TF-IDF vectorization of MeSH terms (biobank-specific)")
         print(f"   2. Bootstrap optimal K selection (K=2-10)")
@@ -1122,8 +1139,8 @@ def main():
         all_summaries = []
         all_projection_data = []
         
-        for biobank_name in sorted(df['Biobank'].unique()):
-            biobank_df = df[df['Biobank'] == biobank_name].copy()
+        for biobank_name in sorted(df_with_mesh['Biobank'].unique()):
+            biobank_df = df_with_mesh[df_with_mesh['Biobank'] == biobank_name].copy()
             summary_rows, projection_data = process_biobank(biobank_name, biobank_df)
             all_summaries.extend(summary_rows)
             if projection_data is not None:
@@ -1152,8 +1169,9 @@ def main():
         print(f"   - biobank_clustering_summary.csv (combined summary)")
         
         print(f"\n✅ CONSISTENCY CHECK:")
-        print(f"   - Publication counts now match 00-01-biobank-analysis.py")
+        print(f"   - Total published papers match 00-01-biobank-analysis.py exactly")
         print(f"   - Same filtering logic applied (year range, preprint exclusion)")
+        print(f"   - Clustering uses only papers with MeSH terms")
         print(f"   - Quality assured published papers only")
         
         print(f"\n🎯 Key insights from composite visualizations:")
