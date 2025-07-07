@@ -1,15 +1,16 @@
 #!/usr/bin/env python3
 """
-Complete Research Gap Visualization - ALL DISEASES LABELED
-==========================================================
+Complete Research Gap Visualization - ALL DISEASES LABELED (FIXED POSITIONING)
+==============================================================================
 
 Creates the full visualization with main plot + panels A,B,C,D
-All 25 diseases labeled in main plot (no connecting lines)
+All 25 diseases labeled in main plot with improved label positioning
+Red dot labels positioned much closer to their bubbles
 
 Usage: 
-    python 01-01-complete-labeled-viz.py
+    python research_gap_viz_fixed.py
 
-Output: Complete visualization with all diseases labeled
+Output: Complete visualization with all diseases labeled and fixed positioning
 """
 
 import pandas as pd
@@ -82,9 +83,9 @@ def load_research_gap_data():
         print(f"Error loading data files: {e}")
         return None, None, None
 
-def create_complete_labeled_visualization(gap_df, summary_data, output_prefix='research_gap_complete_labeled'):
+def create_complete_labeled_visualization(gap_df, summary_data, output_prefix='research_gap_complete_labeled_fixed'):
     """
-    Create complete visualization with main plot + panels A,B,C,D, all diseases labeled (no lines).
+    Create complete visualization with main plot + panels A,B,C,D, all diseases labeled with fixed positioning.
     """
     
     # Create figure with custom layout
@@ -139,22 +140,22 @@ def create_complete_labeled_visualization(gap_df, summary_data, output_prefix='r
         bubble_size_factor = np.sqrt(bubble_radius / (np.pi * 6))  # Reverse of size calculation
         
         if is_critical:
-            # Special positioning for overlapping diseases
+            # Special positioning for overlapping diseases - MUCH closer to dots
             if 'Malaria' in disease_name:
                 # Position Malaria to the left and slightly below
-                base_offset_x, base_offset_y = (-1.5, -0.5)  # Left and slightly below
-                offset_x = base_offset_x * bubble_size_factor * 1.5  # Moderate offset
-                offset_y = base_offset_y * bubble_size_factor * 4   # Moderate offset
+                base_offset_x, base_offset_y = (-0.8, -0.3)  # Left and slightly below
+                offset_x = base_offset_x * bubble_size_factor * 0.6  # Very close
+                offset_y = base_offset_y * bubble_size_factor * 1.5   # Very close
             elif 'Diarrheal' in disease_name:
                 # Position Diarrheal Diseases to the right and slightly below
-                base_offset_x, base_offset_y = (1.5, -0.5)  # Right and slightly below
-                offset_x = base_offset_x * bubble_size_factor * 1.5  # Moderate offset  
-                offset_y = base_offset_y * bubble_size_factor * 4   # Moderate offset
+                base_offset_x, base_offset_y = (0.8, -0.3)  # Right and slightly below
+                offset_x = base_offset_x * bubble_size_factor * 0.6  # Very close
+                offset_y = base_offset_y * bubble_size_factor * 1.5   # Very close
             else:
                 # For other critical diseases: position at top, very close
-                base_offset_x, base_offset_y = (0, 1.0)  # At top
-                offset_x = base_offset_x * bubble_size_factor * 0.5  # Very close
-                offset_y = base_offset_y * bubble_size_factor * 3   # Very close
+                base_offset_x, base_offset_y = (0, 0.6)  # At top
+                offset_x = base_offset_x * bubble_size_factor * 0.3  # Very close
+                offset_y = base_offset_y * bubble_size_factor * 1.2   # Very close
         else:
             # For adequate (blue) diseases: use existing pattern
             offset_patterns = [
@@ -378,10 +379,10 @@ def create_complete_labeled_visualization(gap_df, summary_data, output_prefix='r
 
 def main():
     """
-    Main function to generate the complete labeled visualization.
+    Main function to generate the complete labeled visualization with fixed positioning.
     """
-    print("Creating Complete Labeled Research Gap Visualization")
-    print("=" * 65)
+    print("Creating Complete Labeled Research Gap Visualization (Fixed Positioning)")
+    print("=" * 75)
     
     # Load data
     gap_df, effort_df, summary_data = load_research_gap_data()
@@ -404,16 +405,17 @@ def main():
     
     print(f"\nSaving figure to: {output_dir}")
     
-    # Generate complete visualization with all diseases labeled
-    output_prefix = str(output_dir / 'research_gap_complete_all_labeled')
+    # Generate complete visualization with all diseases labeled and fixed positioning
+    output_prefix = str(output_dir / 'research_gap_complete_labeled_fixed')
     
-    print("\nCreating complete visualization with all diseases labeled...")
+    print("\nCreating complete visualization with fixed label positioning...")
     create_complete_labeled_visualization(gap_df, summary_data, output_prefix)
     
     print(f"\nVISUALIZATION COMPLETE!")
-    print(f"File saved: research_gap_complete_all_labeled.png")
+    print(f"File saved: research_gap_complete_labeled_fixed.png")
     print(f"Features:")
     print(f"   • All {len(gap_df)} diseases labeled in main plot")
+    print(f"   • RED DOT LABELS positioned much closer to bubbles")
     print(f"   • NO connecting lines (clean labels)")
     print(f"   • Complete A, B, C, D panels included")
     print(f"   • Box colors match bubble colors")
