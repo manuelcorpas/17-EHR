@@ -1,12 +1,25 @@
-ANALYSIS/
-DATA/
-DOCX/
-FIGS/
-ARCHIVE/
+# Large generated data files (users will regenerate with scripts)
+DATA/biobank_research_data*.csv
+
+# Large archive directory
+DATA/ARCHIVE/
+
+# Temporary files
+DATA/~$*.xlsx
+DATA/.DS_Store
+**/~$*
+
+# Analysis outputs (preserve structure only)
+ANALYSIS/*/
+!ANALYSIS/*/.gitkeep
+!ANALYSIS/*/README.md
+!ANALYSIS/*/*.txt
+
+# Python
 __pycache__/
-*.pkl
-*.csv
-*.log
-*.DS_Store
-*.ipynb_checkpoints/
+*.pyc
 .env
+
+# OS files
+.DS_Store
+Thumbs.db
