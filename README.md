@@ -1,280 +1,272 @@
-# 17-EHR
+# EHR-Linked Biobanks Research Analysis Framework
 
-This repository supports a high-impact review article titled **"Challenges and Opportunities Using Global EHR Linked Biobanks"**, invited for Volume 9 of the *Annual Review of Biomedical Data Science (2026)*. It includes code and data to characterize and visualize the global literature landscape of major biobank initiatives.
+This repository provides a comprehensive analytical framework for systematically examining the global research landscape of Electronic Health Record (EHR)-linked biobanks. The framework combines bibliometric analysis, semantic clustering, and research gap discovery to understand research themes, temporal trends, and alignment with global health priorities.
 
-## 🧠 Project Goal
+## 🎯 Framework Overview
 
-To systematically examine the scientific landscape of research utilizing five major biobank initiatives, with a focus on understanding research themes, temporal trends, and comparative research activity. This analysis provides foundational data for understanding the global impact and research directions of major biobanking efforts.
+This multi-component framework supports the analysis presented in **"The Research Footprint of Global EHR-Linked Biobanks"**, providing both the analytical pipeline and research gap discovery tools for understanding biobank research landscapes and their alignment with global disease burden.
 
-* UK Biobank
-* All of Us (US)
-* FinnGen (Finland)
-* Estonian Biobank
-* Million Veteran Program (MVP, US)
+### Target Biobanks
+* **UK Biobank** (United Kingdom)
+* **All of Us Research Program** (United States)
+* **FinnGen** (Finland)
+* **Estonian Biobank** (Estonia)
+* **Million Veteran Program (MVP)** (United States)
 
-## 🔍 Methods Overview
+### Framework Components
 
-To generate the literature corpus used throughout this repository, we conducted a systematic search of PubMed using the NCBI Entrez API between 2000 and 2024. The search strategy focused specifically on identifying all published research that mentions any of the five major biobank initiatives by name, prioritizing published, peer-reviewed articles while systematically excluding preprints to ensure research quality and validity.
+**Component 1: Biobank Literature Analysis**
+- Systematic PubMed data retrieval for biobank-linked publications
+- MeSH-based semantic clustering and thematic analysis
+- Publication trends and biobank-specific research profiling
+- Cross-biobank comparative analysis
 
-### Data Collection Strategy
+**Component 2: Research Gap Discovery**
+- Global disease burden analysis using GBD 2021 data (25 diseases)
+- Research effort quantification via publication mapping
+- Burden-adjusted gap scoring and opportunity identification
+- Global health equity assessment
 
-**PubMed Query Period**: 2000–2024 (2025 excluded as incomplete year)
+**Component 3: Data-Driven Visualization**
+- Publication-quality figures for academic publication
+- Interactive research gap visualizations
+- Comprehensive equity and priority analysis dashboards
 
-**Search Methodology**: 
-- **Biobank-Specific Name Searches**: Individual searches for each target biobank using exact names and known aliases
-- **No Thematic Filtering**: Comprehensive retrieval of ALL papers mentioning target biobanks regardless of research topic
-- **Simple Boolean Logic**: Biobank names OR aliases + date range constraints only
+## 🔍 Methodology
 
-**Target Biobanks and Search Terms**:
-- **UK Biobank**: "UK Biobank", "United Kingdom Biobank", "U.K. Biobank", "UK-Biobank"
-- **Million Veteran Program**: "Million Veteran Program", "Million Veterans Program", "MVP biobank", "MVP cohort", "MVP genomics", "Veterans Affairs Million Veteran Program", "VA Million Veteran Program"
-- **FinnGen**: "FinnGen", "FinnGen biobank", "FinnGen study", "FinnGen cohort", "FinnGen consortium"
-- **All of Us**: "All of Us Research Program", "All of Us cohort", "All of Us biobank", "AoU Research Program", "Precision Medicine Initiative cohort"
-- **Estonian Biobank**: "Estonian Biobank", "Estonia Biobank", "Estonian Genome Center", "Estonian Health Cohort", "Tartu Biobank"
+### Biobank Literature Retrieval
 
-**Quality Assurance**:
-- ✅ **Preprint Exclusion**: Systematic filtering of medRxiv, bioRxiv, Research Square, arXiv, and other preprint servers (applied post-retrieval)
-- ✅ **Published Papers Only**: Focus on peer-reviewed, formally published research
-- ✅ **Complete Year Analysis**: 2025 excluded to prevent bias from incomplete data
-- ✅ **Date-based Chunking**: Year-by-year (and month-by-month when needed) retrieval to bypass PubMed's 9,999 record limit
-- ✅ **Comprehensive Coverage**: No topic restrictions - captures all research domains mentioning target biobanks
+**PubMed Query Strategy**: Systematic search of peer-reviewed literature (2000-2024)
 
-### Technical Implementation
+**Search Methodology**:
+- **Biobank-Specific Searches**: Exact names and validated aliases for each target biobank
+- **Comprehensive Coverage**: No thematic filtering - captures all research domains
+- **Quality Assurance**: Systematic preprint exclusion and data validation
 
-**Search Query Structure**:
+**Search Terms by Biobank**:
+- **UK Biobank**: "UK Biobank", "United Kingdom Biobank", "U.K. Biobank"
+- **Million Veteran Program**: "Million Veteran Program", "MVP biobank", "Veterans Affairs Million Veteran Program"
+- **FinnGen**: "FinnGen", "FinnGen biobank", "FinnGen study", "FinnGen consortium"
+- **All of Us**: "All of Us Research Program", "All of Us cohort", "AoU Research Program"
+- **Estonian Biobank**: "Estonian Biobank", "Estonian Genome Center", "Tartu Biobank"
+
+**Data Quality Standards**:
+- ✅ **Published Papers Only**: Systematic preprint exclusion (medRxiv, bioRxiv, Research Square, etc.)
+- ✅ **Complete Temporal Coverage**: 2000-2024 (2025 excluded as incomplete)
+- ✅ **API Compliance**: NCBI rate limiting and batch processing
+- ✅ **Deduplication**: PMID-based unique paper identification
+
+**Final Dataset**: 14,142 peer-reviewed publications with MeSH annotations
+
+### Research Gap Analysis Methodology
+
+**Global Disease Burden Integration**:
+- **Data Source**: Global Burden of Disease Study 2021 (IHME)
+- **Coverage**: 25 high-priority diseases across major health domains
+- **Metrics**: DALYs, mortality, and prevalence data
+- **Scope**: Global estimates (both sexes, all ages, 2021)
+
+**25-Disease Analytical Framework**:
 ```
-(biobank_terms) AND ("YEAR"[PDAT])
+Cardiovascular: Ischemic Heart Disease, Stroke
+Mental Health: Depression, Anxiety Disorders, Bipolar Disorder
+Infectious: Tuberculosis, HIV/AIDS, Malaria, Diarrheal Diseases
+Neoplasms: Lung Cancer, Breast Cancer, Colorectal Cancer
+Metabolic: Diabetes Mellitus Type 2
+Neurological: Alzheimer Disease
+Respiratory: COPD, Asthma
+Musculoskeletal: Low Back Pain, Rheumatoid Arthritis
+Kidney: Chronic Kidney Disease
+Digestive: Cirrhosis
+Maternal/Child: Preterm Birth Complications
+Sensory: Cataracts
+Injuries: Road Traffic Accidents
+Neglected: Neglected Tropical Diseases
+Endocrine: Thyroid Disorders
 ```
-Where `biobank_terms` = `"Term1"[All Fields] OR "Term2"[All Fields] OR ...`
 
-**Scalability Approach**:
-- **Primary Strategy**: Year-by-year searches (2000-2024)
-- **Fallback Strategy**: Month-by-month searches when yearly results exceed 9,999 records
-- **Rate Limiting**: 0.34-second delays between API calls to respect NCBI guidelines
-- **Batch Processing**: 100-record batches for metadata retrieval
+**Gap Scoring Algorithm**:
+- **Composite Burden Score**: `(0.5 × DALYs) + (50 × Deaths) + [10 × log₁₀(Prevalence)]`
+- **Research Intensity**: Publications per million DALYs
+- **Gap Classification**: Critical (>70), High (50-70), Moderate (30-50), Low (<30)
+- **Opportunity Scoring**: Biobank-specific unrealized research potential
 
-### Data Processing Pipeline
+### Semantic Clustering Pipeline
 
-**Deduplication Strategy**: 
-- Articles mentioning multiple biobanks appear once per biobank in raw data
-- PMID-based deduplication creates unique article dataset
-- Both raw and deduplicated datasets preserved for different analyses
+**MeSH-Based Analysis**:
+- **TF-IDF Vectorization**: MeSH terms converted to semantic vectors
+- **Per-Biobank Clustering**: Independent analysis preserving biobank research identities
+- **Bootstrap K-Selection**: Optimal cluster number via silhouette scoring (50 iterations)
+- **c-DF-IPF Scoring**: Cluster characterization using term importance weighting
 
-**Metadata Extraction**:
-- **Bibliographic Data**: Titles, abstracts, journals, publication years
-- **Indexing Terms**: MeSH terms (Medical Subject Headings)
-- **Identifiers**: PubMed IDs (PMIDs) for cross-referencing
-- **Biobank Attribution**: Which biobank(s) each paper mentions
+**Dimensionality Reduction**:
+- **PCA Projections**: Variance-preserving 2D cluster visualization
+- **UMAP Projections**: Non-linear manifold learning for semantic similarity
 
-**Output Datasets**:
-- `biobank_research_data.csv`: Raw data with potential duplicates across biobanks
-- `biobank_research_data_deduplicated.csv`: Unique papers (PMID-based deduplication)
+## 📊 Analytical Outputs
 
-The resulting dataset captures the complete landscape of published research mentioning these major biobank initiatives, providing comprehensive coverage for bibliometric and trend analyses.
+### Biobank Research Analysis
+- **Publication Trends**: Temporal patterns and growth trajectories (2000-2024)
+- **Thematic Profiling**: MeSH frequency analysis and research specializations
+- **Semantic Clustering**: Research theme identification within each biobank
+- **Cross-Biobank Comparison**: Convergent and divergent research patterns
 
-### Preprint Filtering Methodology
+### Research Gap Discovery
+- **Burden vs Effort Analysis**: Disease burden plotted against research investment
+- **Critical Gap Identification**: High-burden, low-research disease areas
+- **Biobank Opportunity Scores**: Unrealized research potential quantification
+- **Global Health Equity Assessment**: Resource allocation disparities
 
-To ensure research quality, we implemented comprehensive preprint detection and exclusion:
+### Key Findings
+- **Research Imbalance**: Profound misalignment between disease burden and research attention
+- **Critical Gaps**: Diseases affecting Global South populations severely underrepresented
+- **Biobank Specialization**: Distinct research signatures reflecting institutional mandates
+- **Methodological Contribution**: Scalable framework for research priority assessment
 
-**Excluded Sources**:
-- medRxiv, bioRxiv, Research Square
-- arXiv, ChemRxiv, PeerJ Preprints
-- F1000Research, OSF Preprints
-- Any journal containing "preprint", "working paper", or similar terms
-
-**Filtering Statistics**: 
-- Detailed breakdown of excluded preprints by source
-- Transparency reporting on filtering impact
-- Comparative analysis of published vs. preprint distributions
-
-## 🧩 Analytical Pipeline
-
-### Publication Analysis
-* **Temporal Trends**: Yearly publication patterns (2000-2024)
-* **Biobank-Specific Analysis**: Individual biobank research landscapes
-* **Quality Metrics**: Impact factors, citation patterns, journal prestige
-
-### Content Analysis
-* **MeSH Term Analysis**: Top medical subject headings per biobank and globally
-* **Journal Distribution**: Publication venue preferences and patterns
-* **Biobank Coverage**: Research volume and trends for each target biobank
-* **Temporal Patterns**: Publication trends and growth rates over time (2000-2024)
-
-### MeSH-Based Semantic Clustering Analysis
-
-**Methodology**: Per-biobank clustering of publications based on MeSH term semantic similarity using TF-IDF vectorization and K-means clustering.
-
-**Pipeline Components**:
-- **MeSH Term Preprocessing**: Tokenization, cleaning, and normalization of Medical Subject Headings
-- **TF-IDF Vectorization**: Biobank-specific document-term matrices using MeSH descriptors
-- **Bootstrap K-Selection**: Silhouette-based optimal cluster determination (K=2-10, 50 bootstrap iterations)
-- **K-means Clustering**: Semantic grouping of publications within each biobank
-- **c-DF-IPF Scoring**: Cluster-level Document Frequency × Inverse Publication Frequency for top MeSH term identification
-- **Dimensionality Reduction**: PCA and UMAP projections of cluster centroids for visualization
-
-**Research Questions Addressed**:
-- What are the distinct semantic research clusters within each biobank?
-- How do research themes compare across different biobank communities?
-- Which MeSH terms characterize each biobank's research specializations?
-- How complex/diverse is the research landscape within each biobank?
-
-**Output Visualizations**:
-- **Composite Figures**: All biobanks displayed together for cross-comparison
-- **Individual Figures**: Detailed per-biobank cluster analysis
-- **2D Projections**: PCA and UMAP visualizations of semantic cluster relationships
-
-### Network Analysis
-* **MeSH Co-occurrence**: Identification of research theme relationships
-* **Cross-Biobank Comparisons**: Research focus similarities and differences between biobanks
-* **Temporal Evolution**: How research themes have evolved over 25 years
-
-### Bibliometric Analysis
-* **Publication Volume**: Papers per biobank, year, and journal
-* **Research Diversity**: Breadth of topics covered per biobank
-* **Growth Patterns**: Temporal trends in biobank research activity
-
-## 📊 Visualization Outputs
-
-### Publication-Quality Figures
-All visualizations are generated in both PNG and PDF formats suitable for academic publication:
-
-* **Preprint Filtering Summary**: Transparency in data quality assurance
-* **Yearly Distribution Plots**: Publication trends by biobank (2000-2024)
-* **MeSH Terms Analysis**: Top research themes per biobank
-* **Journal Analysis**: Publishing venue preferences
-* **Publication Trends**: Multi-year trend lines with statistical analysis
-* **Combined Overview**: Comprehensive research landscape summary
-
-### MeSH Clustering Visualizations
-* **Composite PCA/UMAP Plots**: All biobanks in integrated figures for cross-comparison
-* **Individual Biobank Clusters**: Detailed semantic cluster analysis per biobank
-* **Cluster Summaries**: Top MeSH terms per cluster using c-DF-IPF scoring
-* **Research Theme Maps**: 2D projections showing semantic relationships between publication clusters
-
-### Quality Standards
-* High-resolution outputs (300 DPI)
-* Professional color palettes and typography
-* Clear legends and axis labels
-* Academic publication formatting standards
-
-## 📚 Curation Notes
-
-### Data Quality Assurance
-* **Metadata Completeness**: Systematic extraction of available PubMed fields (Title, Abstract, Journal, Year, MeSH Terms, PMID)
-* **Biobank Entity Recognition**: Exact string matching for biobank names and established aliases
-* **Temporal Filtering**: Year validation ensuring data completeness and accuracy (2000-2024)
-* **Deduplication**: PMID-based removal of duplicate articles across biobank searches
-
-### Data Limitations
-* **Citation Metrics**: Not retrieved in current implementation
-* **Author Information**: Not extracted from PubMed records  
-* **Institutional Affiliations**: Not included in current data collection
-* **Full-Text Access**: Limited to PubMed abstracts and metadata
-
-### Search Strategy Validation
-* **Comprehensive Coverage**: Simple name-based search ensures maximum recall for target biobanks
-* **No False Positives**: Exact string matching minimizes irrelevant results
-* **Temporal Completeness**: Year-by-year approach ensures no missing time periods
-* **API Compliance**: Rate limiting and batch processing respect NCBI guidelines
-
-### Reproducibility
-* **Version Control**: All scripts and parameters documented
-* **Data Provenance**: Clear tracking of data sources and transformations
-* **Parameter Documentation**: Configurable analysis parameters
-* **Error Handling**: Robust exception handling and progress monitoring
-
-## 🔬 Extensions Underway
-
-### Advanced Analytics
-* **Semantic Clustering**: MeSH terms grouped into thematic research domains ✅ **IMPLEMENTED**
-* **Biobank Research Profiling**: Characterization of research focus per biobank using MeSH analysis ✅ **IMPLEMENTED**
-* **Temporal Theme Evolution**: Tracking how research themes change over time (2000-2024)
-* **Cross-Biobank Theme Analysis**: Comparative analysis of research focus between biobanks ✅ **IMPLEMENTED**
-
-### Text Mining and NLP
-* **Abstract Analysis**: Natural language processing of abstract content for deeper insights
-* **Topic Modeling**: Unsupervised discovery of research themes beyond MeSH terms
-* **Keyword Extraction**: Identification of emerging terminology and research areas
-* **Comparative Biobank Vocabularies**: Analysis of language and terminology differences
-
-### Methodological Enhancements
-* **Search Strategy Optimization**: Refinement of biobank name detection and alias expansion
-* **Metadata Enrichment**: Integration with external databases for additional paper metrics
-* **Validation Studies**: Manual review of samples to assess search precision and recall
-* **Temporal Bias Assessment**: Analysis of search completeness across different time periods
-
-## 📁 Repository Structure
+## 🗂️ Repository Structure
 
 ```
 ├── PYTHON/
-│   ├── 00-00-biobank-data-retrieval.py      # PubMed data collection
-│   ├── 00-01-biobank-analysis.py            # Analysis and visualization
-│   └── 00-02-biobank-mesh-clustering.py     # MeSH semantic clustering
+│   ├── 00-00-biobank-data-retrieval.py      # PubMed systematic retrieval
+│   ├── 00-01-biobank-analysis.py            # Publication analysis & visualization
+│   ├── 00-02-biobank-mesh-clustering.py     # MeSH semantic clustering
+│   ├── 01-00-research-gap-discovery.py      # 25-disease gap analysis
+│   └── 01-01-data-driven-viz.py             # Advanced visualization suite
 ├── DATA/
-│   ├── biobank_research_data.csv            # Raw retrieved data
-│   └── biobank_research_data_deduplicated.csv
+│   ├── biobank_research_data.csv            # Raw publication dataset
+│   ├── biobank_research_data_deduplicated.csv
+│   └── IHMEGBD_2021_DATA*.csv               # GBD 2021 disease burden data
 ├── ANALYSIS/
-│   ├── 00-01-BIOBANK-ANALYSIS/             # Basic analysis figures and reports
-│   └── 00-02-BIOBANK-MESH-CLUSTERING/      # Semantic clustering results
-└── README.md                                # This file
+│   ├── 00-01-BIOBANK-ANALYSIS/             # Publication analysis outputs
+│   ├── 00-02-BIOBANK-MESH-CLUSTERING/      # Semantic clustering results
+│   ├── 01-00-RESEARCH-GAP-DISCOVERY/       # Gap analysis results
+│   └── 01-01-DATA-VIZ/                     # Advanced visualizations
+└── README.md                                # This framework documentation
 ```
 
-## 🚀 Usage
+## 🚀 Usage Pipeline
 
-### Data Retrieval
+### 1. Data Retrieval
 ```bash
-# Retrieve papers mentioning target biobanks from PubMed (2000-2025)
-# Note: Analysis scripts will filter to 2000-2024 and exclude preprints
+# Retrieve all biobank-linked publications from PubMed (2000-2024)
 python PYTHON/00-00-biobank-data-retrieval.py
 ```
 
-### Basic Analysis and Visualization
+### 2. Biobank Literature Analysis
 ```bash
-# Generate publication-quality figures and statistics
-# Automatically excludes 2025 data and preprints for analysis
+# Generate publication trends, MeSH analysis, and quality-assured statistics
 python PYTHON/00-01-biobank-analysis.py
 ```
 
-### MeSH Semantic Clustering
+### 3. Semantic Clustering
 ```bash
-# Generate semantic clusters of publications within each biobank
-# Creates both composite and individual biobank visualizations
+# Perform MeSH-based clustering within each biobank
 python PYTHON/00-02-biobank-mesh-clustering.py
 ```
 
-### Requirements
+### 4. Research Gap Discovery
 ```bash
-# Basic analysis
-pip install pandas matplotlib seaborn numpy scipy biopython
-
-# MeSH clustering (additional requirements)
-pip install scikit-learn umap-learn
+# Analyze disease burden vs research effort (25 diseases)
+python PYTHON/01-00-research-gap-discovery.py
 ```
 
-## 📊 Key Outputs
+### 5. Advanced Visualization
+```bash
+# Generate publication-quality research gap visualizations
+python PYTHON/01-01-data-driven-viz.py
+```
 
-### From Basic Analysis (`00-01-BIOBANK-ANALYSIS/`)
-* Publication trends and biobank-specific statistics
-* MeSH term frequency analysis  
-* Journal distribution patterns
-* Temporal publication patterns (2000-2024)
+## 📈 Key Visualizations
 
-### From MeSH Clustering (`00-02-BIOBANK-MESH-CLUSTERING/`)
-* **Composite visualizations**: `composite_pca_all_biobanks.png`, `composite_umap_all_biobanks.png`
-* **Individual biobank clusters**: `pca_clusters_<biobank>.png`, `umap_clusters_<biobank>.png`
-* **Cluster assignments**: `clustering_results_<biobank>.csv`
-* **Semantic summaries**: `cluster_summaries_<biobank>.csv` (top MeSH terms by c-DF-IPF)
-* **Overall summary**: `biobank_clustering_summary.csv`
+### Biobank Analysis Suite
+- **Publication Growth Trajectories**: Annual publication trends by biobank
+- **Research Theme Profiles**: Top MeSH terms and specialization patterns
+- **Semantic Cluster Maps**: PCA/UMAP projections of research themes
+- **Cross-Biobank Comparisons**: Integrated research landscape analysis
 
-## ✍️ Citation
+### Research Gap Analysis Suite
+- **Disease Burden vs Research Matrix**: 25-disease priority mapping
+- **Critical Gap Identification**: High-burden, low-research visualization
+- **Biobank Opportunity Heatmaps**: Unrealized research potential by institution
+- **Global Health Equity Dashboard**: Resource allocation disparity analysis
 
-This repository accompanies the invited review for *Annual Review of Biomedical Data Science (Vol. 9, 2026)*. The methodology prioritizes research quality through systematic preprint exclusion and temporal data completeness.
+### Publication-Quality Standards
+- **Resolution**: 300 DPI for academic publication
+- **Formats**: PNG and PDF outputs
+- **Typography**: Professional academic formatting
+- **Color Palettes**: Accessibility-compliant scientific visualization
+
+## 🔬 Technical Requirements
+
+### Core Dependencies
+```bash
+# Data retrieval and analysis
+pip install pandas numpy matplotlib seaborn scipy biopython
+
+# Machine learning and clustering
+pip install scikit-learn umap-learn
+
+# Statistical analysis
+pip install statsmodels
+```
+
+### System Requirements
+- **Python**: 3.8+ recommended
+- **Memory**: 4GB+ for large dataset processing
+- **Storage**: 1GB for full dataset and outputs
+- **Network**: Stable connection for PubMed API access
+
+## 📊 Output Highlights
+
+### Research Gap Discovery Results
+- **Critical Gaps Identified**: Malaria, tuberculosis, diarrheal diseases, neglected tropical diseases
+- **Research Opportunity Scores**: Quantified potential by biobank
+- **Global Health Equity Metrics**: 175M+ DALYs in underrepresented conditions
+- **Burden-Adjusted Recommendations**: Data-driven priority identification
+
+### Biobank Research Signatures
+- **UK Biobank**: Broadest thematic diversity, environmental epidemiology leadership
+- **FinnGen**: Mendelian randomization and registry-based phenotyping focus
+- **All of Us**: Diversity, equity, and population health emphasis
+- **Million Veteran Program**: Veteran-specific health conditions specialization
+- **Estonian Biobank**: Regulatory genomics and cardiometabolic traits
+
+### Methodological Innovations
+- **Semantic Clustering Framework**: MeSH-based biobank research profiling
+- **Burden-Adjusted Gap Scoring**: Objective research priority quantification
+- **Cross-Biobank Comparative Analysis**: Institutional research signature characterization
+- **Real-Time Data Integration**: GBD 2021 authoritative burden data utilization
+
+## 📚 Scientific Impact
+
+### Research Applications
+- **Funding Priority Setting**: Evidence-based resource allocation guidance
+- **Biobank Strategic Planning**: Research portfolio diversification recommendations
+- **Global Health Policy**: Equity-informed research investment strategies
+- **Academic Research**: Comprehensive biobank landscape characterization
+
+### Methodological Contributions
+- **Scalable Gap Analysis**: Reproducible framework for research priority assessment
+- **Semantic Research Profiling**: MeSH-based institutional characterization methodology
+- **Burden-Research Alignment**: Quantitative equity assessment tools
+- **Publication-Quality Automation**: Standardized academic visualization pipeline
+
+## ✍️ Citation and Acknowledgments
+
+This framework supports the research presented in **"The Research Footprint of Global EHR-Linked Biobanks"** and provides reproducible tools for biobank research landscape analysis and global health research gap discovery.
+
+**Data Sources**:
+- PubMed/MEDLINE (National Library of Medicine)
+- Global Burden of Disease Study 2021 (IHME)
+- Medical Subject Headings (MeSH) Thesaurus
+
+**Methodological Framework**: Transparent, reproducible, and academically rigorous approach to biobank research analysis with systematic quality assurance and global health equity assessment.
 
 ---
 
-**Author**: Dr. Manuel Corpas  
-**Affiliation**: University of Westminster  
-**GitHub**: [manuelcorpas](https://github.com/manuelcorpas)  
-**Contact**: [m.corpas@westminster.ac.uk](mailto:m.corpas@westminster.ac.uk)
+**Principal Investigator**: Dr. Manuel Corpas  
+**Institution**: University of Westminster, London  
+**Contact**: [m.corpas@westminster.ac.uk](mailto:m.corpas@westminster.ac.uk)  
+**Repository**: [https://github.com/manuelcorpas/17-EHR](https://github.com/manuelcorpas/17-EHR)
 
-**Data Quality Standards**: Published papers only (2000-2024) | Preprints excluded | Name-based biobank identification | Comprehensive temporal coverage
+**Quality Standards**: Published papers only (2000-2024) | Systematic preprint exclusion | Authoritative disease burden data | Reproducible analytical pipeline
