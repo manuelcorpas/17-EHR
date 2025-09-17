@@ -2,30 +2,31 @@
 # -*- coding: utf-8 -*-
 
 """
-BIOBANK BIAS DETECTION PIPELINE
-================================
+ABSTRACT-BASED BIOBANK BIAS DETECTION PIPELINE V3.0
+====================================================
 
-Detects and analyzes various types of biases in biobank research publications:
-- Population stratification (ancestry-related confounding)
-- Batch effects (temporal processing variations)
-- Missing data patterns (systematic missingness)
-- Sampling biases (demographic underrepresentation)
-- Technical variation (platform-specific biases)
+Detects bias indicators from abstracts in biobank research:
+- Identifies population biases, sampling issues, and limitations
+- Extracts demographic and methodological features from abstracts
+- Compares bias profiles across biobanks
+- Identifies health equity gaps
+- Provides actionable insights for improving research diversity
 
-This script analyzes abstracts and MeSH terms to identify bias-related discussions,
-quantifies bias awareness trends, and provides comprehensive reporting.
-
-INPUT: DATA/biobank_research_data.csv (from 00-00-biobank-data-retrieval.py)
-OUTPUT: Bias detection results, visualizations, and comprehensive report
+Major features:
+1. Abstract-appropriate pattern detection
+2. Feature extraction (sample size, demographics, etc.)
+3. Comparative bias profiling across biobanks
+4. Equity gap analysis
+5. Risk scoring based on detectable indicators
 
 USAGE:
-    python PYTHON/02-00-biobank-bias-detection.py
+    python projects/ge-100k/PYTHON/02-00-ge-fairness-abstract.py
 
 REQUIREMENTS:
     pip install pandas numpy matplotlib seaborn scikit-learn nltk
 """
 
-import os
+import argparse
 import re
 import warnings
 import numpy as np
@@ -37,33 +38,38 @@ from datetime import datetime
 import logging
 import json
 from pathlib import Path
-
-# NLP libraries
-import nltk
-from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+from typing import Dict, List, Tuple, Optional
+import math
 
 warnings.filterwarnings('ignore')
 
+# Setup paths using Pathlib
+SCRIPT = Path(__file__).resolve()
+GE_ROOT = SCRIPT.parents[1]  # projects/ge-100k
+DATA_DIR = GE_ROOT / "DATA"
+ANALYSIS_ROOT = GE_ROOT / "ANALYSIS" / "02-00-GE-FAIRNESS"
+RUN_ID = datetime.now().strftime("%Y%m%d-%H%M%S")
+
+# Parse arguments
+ap = argparse.ArgumentParser(description="Abstract-Based Biobank Bias Detection Pipeline")
+ap.add_argument("--config", default=str(GE_ROOT / "CONFIG" / "ge.default.yml"))
+ap.add_argument("--outdir", default=None, help="Optional output directory; if unset, uses dated run folder.")
+args = ap.parse_args()
+
+# Set output directory
+if args.outdir:
+    OUT_DIR = Path(args.outdir)
+else:
+    OUT_DIR = ANALYSIS_ROOT / RUN_ID
+OUT_DIR.mkdir(parents=True, exist_ok=True)
+
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, 
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 logger = logging.getLogger(__name__)
-
-# Setup paths
-current_dir = os.getcwd()
-data_dir = os.path.join(current_dir, "DATA")
-analysis_dir = os.path.join(current_dir, "ANALYSIS", "02-00-BIOBANK-BIAS-DETECTION")
-os.makedirs(analysis_dir, exist_ok=True)
-
-# Download NLTK data if needed
-try:
-    nltk.data.find('punkt')
-except LookupError:
-    nltk.download('punkt')
-try:
-    nltk.data.find('stopwords')
-except LookupError:
-    nltk.download('stopwords')
+logger.info(f"Output directory: {OUT_DIR}")
 
 # Publication-quality plot settings
 plt.rcParams.update({
@@ -82,649 +88,1038 @@ plt.rcParams.update({
 })
 
 #############################################################################
-# 1. BIAS DEFINITIONS AND PATTERNS
+# 1. ABSTRACT-BASED BIAS INDICATOR DETECTION
 #############################################################################
 
-BIAS_CATEGORIES = {
-    'population_stratification': {
-        'name': 'Population Stratification',
-        'description': 'Ancestry-related confounding in genetic studies',
-        'keywords': [
-            'population stratification', 'ancestry', 'population structure',
-            'genetic ancestry', 'principal component', 'eigenstrat', 'admixture',
-            'population substructure', 'ethnic', 'ethnicity', 'race', 'racial',
-            'european ancestry', 'african ancestry', 'asian ancestry', 
-            'hispanic', 'latino', 'diverse population', 'homogeneous population',
-            'gwas', 'genetic association', 'confounding', 'stratification'
-        ],
-        'mesh_terms': [
-            'Genetics, Population', 'Ethnic Groups', 'Continental Population Groups',
-            'Genome-Wide Association Study', 'Genetic Variation', 'Polymorphism, Single Nucleotide'
-        ],
-        'severity_indicators': {
-            'high': ['confounding', 'false positive', 'spurious association'],
-            'medium': ['adjust', 'control', 'account for'],
-            'low': ['consider', 'potential', 'may affect']
-        }
-    },
+class AbstractBiasDetector:
+    """Detect bias indicators from abstracts rather than mitigation methods."""
     
-    'batch_effects': {
-        'name': 'Batch Effects',
-        'description': 'Technical variation from temporal processing',
-        'keywords': [
-            'batch effect', 'batch correction', 'combat', 'technical variation',
-            'processing batch', 'experimental batch', 'batch variability',
-            'batch-to-batch', 'systematic bias', 'technical artifact',
-            'normalization', 'batch adjustment', 'plate effect', 'run effect',
-            'temporal variation', 'processing time', 'batch confounding'
-        ],
-        'mesh_terms': [
-            'Artifact', 'Data Accuracy', 'Quality Control', 'Reproducibility of Results',
-            'Bias', 'Research Design'
-        ],
-        'severity_indicators': {
-            'high': ['severe batch', 'substantial batch', 'significant batch'],
-            'medium': ['moderate batch', 'some batch', 'batch variation'],
-            'low': ['minimal batch', 'slight batch', 'minor batch']
-        }
-    },
+    def __init__(self):
+        self.setup_indicators()
     
-    'missing_data': {
-        'name': 'Missing Data Patterns',
-        'description': 'Non-random missingness indicating systematic bias',
-        'keywords': [
-            'missing data', 'missingness', 'incomplete data', 'data completeness',
-            'missing at random', 'missing not at random', 'mcar', 'mar', 'mnar',
-            'imputation', 'missing value', 'incomplete case', 'dropout',
-            'loss to follow-up', 'attrition', 'non-response', 'data quality',
-            'complete case', 'listwise deletion', 'multiple imputation'
-        ],
-        'mesh_terms': [
-            'Data Collection', 'Data Accuracy', 'Lost to Follow-Up', 
-            'Patient Dropouts', 'Data Interpretation, Statistical'
-        ],
-        'severity_indicators': {
-            'high': ['substantial missing', 'extensive missing', '>30% missing'],
-            'medium': ['moderate missing', '10-30% missing', 'some missing'],
-            'low': ['minimal missing', '<10% missing', 'few missing']
+    def setup_indicators(self):
+        """Define patterns for bias indicators detectable in abstracts."""
+        
+        self.bias_indicators = {
+            'population_bias': {
+                'homogeneous': [
+                    r'\b(?:UK|British|European|Caucasian|white)\s+(?:only|cohort|population|participants)\b',
+                    r'\b(?:mostly|predominantly|primarily)\s+(?:male|female|men|women)\b',
+                    r'\b(?:single|one)\s+(?:center|centre|hospital|clinic|site)\b',
+                    r'\bhomogeneous\s+(?:population|cohort|sample)\b',
+                    r'\b(?:restricted|limited)\s+to\s+(?:UK|European|white)\b'
+                ],
+                'age_restricted': [
+                    r'\b(?:elderly|older\s+adults?|aged\s+\d+[-–]\d+)\s+(?:only|exclusively)\b',
+                    r'\bmiddle[-\s]aged\b.*\b(?:only|exclusively)\b',
+                    r'\bexclud\w+\s+(?:younger|older|elderly|children)\b',
+                    r'\bage\s+(?:range|group)[:]\s*\d+[-–]\d+\b'
+                ],
+                'selection_bias': [
+                    r'\bhealthy\s+volunteers?\b',
+                    r'\bself[-\s]selected\b',
+                    r'\bconvenience\s+sample\b',
+                    r'\bvolunteer\s+bias\b',
+                    r'\bparticipants?\s+who\s+(?:agreed|consented|volunteered)\b'
+                ]
+            },
+            
+            'sample_size_issues': {
+                'very_small': [
+                    r'\bn\s*[=:]\s*[1-9]\d?\b',  # n < 100
+                    r'\b(?:sample\s+size|n)\s*[=:]\s*[1-9]\d?\b',
+                    r'\bvery\s+small\s+sample\b'
+                ],
+                'small': [
+                    r'\bn\s*[=:]\s*[1-9]\d{2}\b',  # n = 100-999
+                    r'\bsmall\s+sample\s+size\b',
+                    r'\blimited\s+sample\b',
+                    r'\bpilot\s+study\b',
+                    r'\bexploratory\s+(?:study|analysis)\b',
+                    r'\bpreliminary\s+(?:study|findings)\b'
+                ],
+                'moderate': [
+                    r'\bn\s*[=:]\s*[1-9]\d{3,4}\b',  # n = 1,000-99,999
+                    r'\bthousands?\s+of\s+participants?\b'
+                ],
+                'large': [
+                    r'\bn\s*[=:]\s*[1-9]\d{5,}\b',  # n >= 100,000
+                    r'\b\d+\s*(?:hundred\s+)?thousands?\s+(?:of\s+)?participants?\b',
+                    r'\blarge[-\s]scale\b',
+                    r'\bpopulation[-\s]based\b',
+                    r'\b\d+[,.]?\d*\s*million\s+participants?\b'
+                ]
+            },
+            
+            'temporal_limitations': {
+                'cross_sectional': [
+                    r'\bcross[-\s]sectional\s+(?:study|design|analysis)\b',
+                    r'\bsingle\s+time[-\s]point\b',
+                    r'\bbaseline\s+(?:data\s+)?only\b',
+                    r'\bno\s+(?:longitudinal|follow[-\s]up)\b'
+                ],
+                'short_followup': [
+                    r'\b\d+[-\s](?:month|week)s?\s+(?:follow[-\s]up|duration)\b',
+                    r'\bshort[-\s]term\s+(?:follow[-\s]up|study)\b',
+                    r'\bmedian\s+follow[-\s]up.*\d+\s+(?:months?|weeks?)\b'
+                ],
+                'retrospective': [
+                    r'\bretrospective\s+(?:study|analysis|cohort)\b',
+                    r'\bhistorical\s+(?:data|cohort)\b',
+                    r'\blookback\s+period\b'
+                ]
+            },
+            
+            'geographic_limitations': {
+                'single_country': [
+                    r'\b(?:UK|US|United\s+States|Finland|Estonia)\s+(?:biobank|cohort)\b',
+                    r'\bnational\s+(?:cohort|study|sample)\b',
+                    r'\bsingle\s+country\b',
+                    r'\bcountry[-\s]specific\b'
+                ],
+                'urban_bias': [
+                    r'\burban\s+(?:population|cohort|participants|areas?)\b',
+                    r'\bcity[-\s]based\b',
+                    r'\bmetropolitan\s+areas?\b',
+                    r'\bexclud\w+\s+rural\b'
+                ],
+                'regional': [
+                    r'\bregional\s+(?:cohort|sample|study)\b',
+                    r'\b(?:single|one)\s+(?:state|province|region)\b',
+                    r'\blocal\s+(?:population|community)\b'
+                ]
+            },
+            
+            'acknowledged_limitations': {
+                'generalizability': [
+                    r'\blimited\s+generalizability\b',
+                    r'\bmay\s+not\s+(?:generalize|be\s+generalizable)\b',
+                    r'\bcaution.*generaliz\w+\b',
+                    r'\bnot\s+representative\b',
+                    r'\blimitations?\s+include\b',
+                    r'\bresults\s+may\s+not\s+apply\b'
+                ],
+                'confounding': [
+                    r'\bunmeasured\s+confound\w+\b',
+                    r'\bresidual\s+confound\w+\b',
+                    r'\bcannot\s+(?:rule\s+out|exclude)\b',
+                    r'\bcausal.*cannot\s+be\s+(?:established|determined)\b',
+                    r'\bpotential\s+confound\w+\b'
+                ],
+                'missing_data': [
+                    r'\bmissing\s+(?:data|information)\b',
+                    r'\bincomplete\s+(?:data|information|records)\b',
+                    r'\bdata\s+(?:not\s+)?available\b',
+                    r'\blost\s+to\s+follow[-\s]up\b'
+                ]
+            },
+            
+            'diversity_indicators': {
+                'mentions_diversity': [
+                    r'\bdivers\w+\s+(?:population|cohort|sample)\b',
+                    r'\bmulti[-\s]?ethnic\b',
+                    r'\brepresentative\s+(?:of|sample)\b',
+                    r'\binclusive\s+(?:recruitment|sample)\b',
+                    r'\bminority\s+(?:populations?|groups?)\b'
+                ],
+                'mentions_equity': [
+                    r'\bhealth\s+(?:equity|disparities|inequalities)\b',
+                    r'\bunderserved\s+(?:populations?|communities)\b',
+                    r'\bsocioeconomic\s+(?:diversity|factors)\b',
+                    r'\baccess\s+to\s+(?:care|healthcare)\b'
+                ]
+            }
         }
-    },
-    
-    'sampling_bias': {
-        'name': 'Sampling Bias',
-        'description': 'Demographic underrepresentation',
-        'keywords': [
-            'sampling bias', 'selection bias', 'recruitment bias', 'underrepresented',
-            'overrepresented', 'representative sample', 'generalizability',
-            'external validity', 'diversity', 'inclusion', 'exclusion criteria',
-            'healthy volunteer', 'convenience sample', 'demographic bias',
-            'socioeconomic', 'geographic bias', 'urban rural', 'age bias',
-            'gender bias', 'sex bias', 'minority', 'vulnerable population'
-        ],
-        'mesh_terms': [
-            'Selection Bias', 'Patient Selection', 'Sampling Studies',
-            'Health Status Disparities', 'Healthcare Disparities', 'Minority Groups'
-        ],
-        'severity_indicators': {
-            'high': ['severe underrepresentation', 'lack of diversity', 'homogeneous sample'],
-            'medium': ['limited diversity', 'some underrepresentation', 'moderate bias'],
-            'low': ['slight underrepresentation', 'mostly representative', 'minor bias']
+        
+        # Disease focus patterns
+        self.disease_patterns = {
+            'common_diseases': [
+                r'\b(?:diabetes|hypertension|cancer|heart\s+disease|stroke)\b',
+                r'\b(?:obesity|depression|anxiety|asthma|COPD)\b',
+                r'\b(?:cardiovascular|coronary|metabolic)\s+disease\b'
+            ],
+            'rare_diseases': [
+                r'\brare\s+(?:disease|disorder|condition)\b',
+                r'\borphan\s+disease\b',
+                r'\b(?:genetic|hereditary)\s+(?:disorder|syndrome)\b',
+                r'\bprevalence.*(?:<|less\s+than)\s*(?:1|0\.\d+)%\b'
+            ],
+            'infectious_diseases': [
+                r'\b(?:COVID|SARS|influenza|tuberculosis|HIV|malaria)\b',
+                r'\b(?:infectious|communicable)\s+disease\b',
+                r'\b(?:viral|bacterial|parasitic)\s+infection\b'
+            ]
         }
-    },
-    
-    'technical_variation': {
-        'name': 'Technical Variation',
-        'description': 'Platform-specific measurement biases',
-        'keywords': [
-            'technical variation', 'platform bias', 'measurement error',
-            'instrument variation', 'assay variability', 'platform effect',
-            'technical noise', 'measurement bias', 'calibration', 'standardization',
-            'quality control', 'technical replicate', 'coefficient of variation',
-            'inter-assay', 'intra-assay', 'platform comparison', 'method comparison',
-            'analytical variation', 'pre-analytical'
-        ],
-        'mesh_terms': [
-            'Equipment and Supplies', 'Calibration', 'Reference Standards',
-            'Quality Control', 'Reproducibility of Results', 'Observer Variation'
-        ],
-        'severity_indicators': {
-            'high': ['high variability', 'poor reproducibility', 'significant variation'],
-            'medium': ['moderate variability', 'acceptable reproducibility', 'some variation'],
-            'low': ['low variability', 'good reproducibility', 'minimal variation']
-        }
-    }
-}
 
-#############################################################################
-# 2. DATA LOADING AND PREPROCESSING
-#############################################################################
-
-def load_biobank_data():
-    """Load and preprocess biobank research data."""
-    input_file = os.path.join(data_dir, 'biobank_research_data.csv')
-    
-    if not os.path.exists(input_file):
-        logger.error(f"Input file not found: {input_file}")
-        logger.info("Please run 00-00-biobank-data-retrieval.py first to generate the data.")
+    def extract_sample_size(self, text: str) -> Optional[int]:
+        """Extract sample size from abstract text."""
+        
+        patterns = [
+            r'\bn\s*[=:]\s*([0-9,]+)\b',
+            r'\b([0-9,]+)\s+(?:participants?|subjects?|patients?|individuals?)\b',
+            r'\bsample\s+size\s*(?:of|[=:])\s*([0-9,]+)\b',
+            r'\btotal\s+of\s+([0-9,]+)\s+(?:participants?|subjects?)\b'
+        ]
+        
+        for pattern in patterns:
+            match = re.search(pattern, text.lower())
+            if match:
+                try:
+                    # Remove commas and convert to int
+                    size_str = match.group(1).replace(',', '')
+                    return int(size_str)
+                except:
+                    continue
+        
         return None
     
-    logger.info(f"Loading data from {input_file}")
-    df = pd.read_csv(input_file, low_memory=False)
+    def extract_demographics(self, text: str) -> Dict:
+        """Extract demographic information from abstract."""
+        
+        demographics = {
+            'mean_age': None,
+            'age_range': None,
+            'percent_female': None,
+            'percent_male': None
+        }
+        
+        # Extract mean age
+        age_patterns = [
+            r'mean\s+age\s*(?:of|[=:])\s*(\d+(?:\.\d+)?)\s*(?:years?)?',
+            r'average\s+age\s*(?:of|[=:])\s*(\d+(?:\.\d+)?)\s*(?:years?)?',
+            r'aged\s+(\d+(?:\.\d+)?)\s*±\s*\d+(?:\.\d+)?\s*years?'
+        ]
+        
+        for pattern in age_patterns:
+            match = re.search(pattern, text.lower())
+            if match:
+                try:
+                    demographics['mean_age'] = float(match.group(1))
+                    break
+                except:
+                    continue
+        
+        # Extract age range
+        range_pattern = r'age(?:d|s?)?\s+(\d+)\s*[-–to]\s*(\d+)\s*(?:years?)?'
+        match = re.search(range_pattern, text.lower())
+        if match:
+            try:
+                demographics['age_range'] = (int(match.group(1)), int(match.group(2)))
+            except:
+                pass
+        
+        # Extract sex distribution
+        female_patterns = [
+            r'(\d+(?:\.\d+)?)\s*%\s*(?:were\s+)?(?:female|women)',
+            r'(?:female|women)\s*[:]\s*(\d+(?:\.\d+)?)\s*%'
+        ]
+        
+        for pattern in female_patterns:
+            match = re.search(pattern, text.lower())
+            if match:
+                try:
+                    demographics['percent_female'] = float(match.group(1))
+                    demographics['percent_male'] = 100 - demographics['percent_female']
+                    break
+                except:
+                    continue
+        
+        return demographics
     
-    # Clean data
-    df['Year'] = pd.to_numeric(df['Year'], errors='coerce')
-    df = df.dropna(subset=['Year'])
-    df['Year'] = df['Year'].astype(int)
+    def extract_countries(self, text: str) -> List[str]:
+        """Extract country mentions from abstract."""
+        
+        countries = []
+        country_patterns = [
+            r'\b(?:United\s+Kingdom|UK|Britain|England|Scotland|Wales)\b',
+            r'\b(?:United\s+States|US|USA|America)\b',
+            r'\b(?:Finland|Finnish)\b',
+            r'\b(?:Estonia|Estonian)\b',
+            r'\b(?:Sweden|Swedish|Norway|Norwegian|Denmark|Danish)\b',
+            r'\b(?:Germany|German|France|French|Italy|Italian|Spain|Spanish)\b',
+            r'\b(?:China|Chinese|Japan|Japanese|Korea|Korean)\b',
+            r'\b(?:India|Indian|Brazil|Brazilian|Mexico|Mexican)\b',
+            r'\b(?:Canada|Canadian|Australia|Australian)\b'
+        ]
+        
+        for pattern in country_patterns:
+            if re.search(pattern, text, re.IGNORECASE):
+                # Extract base country name
+                country = re.search(pattern, text, re.IGNORECASE).group(0)
+                countries.append(country)
+        
+        return list(set(countries))
     
-    # Filter years
-    df = df[(df['Year'] >= 2000) & (df['Year'] <= 2024)]
+    def analyze_abstract(self, abstract: str) -> Dict:
+        """Comprehensive analysis of a single abstract for bias indicators."""
+        
+        if not abstract or pd.isna(abstract):
+            return self._empty_results()
+        
+        abstract_lower = abstract.lower()
+        
+        results = {
+            'indicators': defaultdict(list),
+            'features': {},
+            'scores': {},
+            'risk_factors': []
+        }
+        
+        # Check all bias indicators
+        for bias_category, indicator_groups in self.bias_indicators.items():
+            for indicator_type, patterns in indicator_groups.items():
+                for pattern in patterns:
+                    if re.search(pattern, abstract_lower, re.IGNORECASE):
+                        results['indicators'][bias_category].append(indicator_type)
+                        break
+        
+        # Extract quantitative features
+        results['features']['sample_size'] = self.extract_sample_size(abstract)
+        results['features'].update(self.extract_demographics(abstract))
+        results['features']['countries'] = self.extract_countries(abstract)
+        results['features']['num_countries'] = len(results['features']['countries'])
+        
+        # Check study design
+        results['features']['is_gwas'] = bool(re.search(r'genome[-\s]wide', abstract_lower))
+        results['features']['is_longitudinal'] = bool(re.search(r'longitudinal|follow[-\s]up|prospective|cohort', abstract_lower))
+        results['features']['is_cross_sectional'] = bool(re.search(r'cross[-\s]sectional', abstract_lower))
+        results['features']['is_retrospective'] = bool(re.search(r'retrospective|historical', abstract_lower))
+        
+        # Check diversity mentions
+        results['features']['mentions_diversity'] = any(
+            re.search(pattern, abstract_lower) 
+            for pattern in self.bias_indicators['diversity_indicators']['mentions_diversity']
+        )
+        results['features']['mentions_limitations'] = any(
+            re.search(pattern, abstract_lower) 
+            for pattern in self.bias_indicators['acknowledged_limitations']['generalizability']
+        )
+        
+        # Check disease focus
+        for disease_type, patterns in self.disease_patterns.items():
+            results['features'][f'has_{disease_type}'] = any(
+                re.search(pattern, abstract_lower) for pattern in patterns
+            )
+        
+        # Calculate risk scores
+        results['scores'] = self.calculate_risk_scores(results)
+        
+        return results
     
-    # Clean text fields
-    df['Abstract'] = df['Abstract'].fillna('')
-    df['Title'] = df['Title'].fillna('')
-    df['MeSH_Terms'] = df['MeSH_Terms'].fillna('')
+    def calculate_risk_scores(self, analysis_results: Dict) -> Dict:
+        """Calculate various bias risk scores based on detected indicators."""
+        
+        scores = {}
+        features = analysis_results['features']
+        indicators = analysis_results['indicators']
+        
+        # Population homogeneity risk
+        homogeneity_factors = [
+            'homogeneous' in indicators.get('population_bias', []),
+            'age_restricted' in indicators.get('population_bias', []),
+            features.get('num_countries', 0) <= 1,
+            not features.get('mentions_diversity', False)
+        ]
+        scores['homogeneity_risk'] = sum(homogeneity_factors) / len(homogeneity_factors)
+        
+        # Sample size adequacy - FIXED: Handle None values
+        sample_size = features.get('sample_size')
+        if sample_size is not None and sample_size > 0:
+            if sample_size < 100:
+                scores['sample_size_score'] = 0.0
+            elif sample_size < 500:
+                scores['sample_size_score'] = 0.25
+            elif sample_size < 5000:
+                scores['sample_size_score'] = 0.5
+            elif sample_size < 50000:
+                scores['sample_size_score'] = 0.75
+            else:
+                scores['sample_size_score'] = 1.0
+        else:
+            scores['sample_size_score'] = 0.5  # Unknown
+        
+        # Temporal robustness
+        temporal_factors = [
+            features.get('is_longitudinal', False),
+            not features.get('is_cross_sectional', False),
+            'short_followup' not in indicators.get('temporal_limitations', [])
+        ]
+        scores['temporal_robustness'] = sum(temporal_factors) / len(temporal_factors)
+        
+        # Geographic diversity
+        geographic_factors = [
+            features.get('num_countries', 0) > 1,
+            'single_country' not in indicators.get('geographic_limitations', []),
+            'urban_bias' not in indicators.get('geographic_limitations', [])
+        ]
+        scores['geographic_diversity'] = sum(geographic_factors) / len(geographic_factors)
+        
+        # Transparency score
+        transparency_factors = [
+            features.get('mentions_limitations', False),
+            'generalizability' in indicators.get('acknowledged_limitations', []),
+            'confounding' in indicators.get('acknowledged_limitations', [])
+        ]
+        scores['transparency'] = sum(transparency_factors) / len(transparency_factors)
+        
+        # Overall bias risk (higher = more risk)
+        risk_components = [
+            1 - scores['sample_size_score'],
+            scores['homogeneity_risk'],
+            1 - scores['temporal_robustness'],
+            1 - scores['geographic_diversity'],
+            1 - scores['transparency']
+        ]
+        scores['overall_bias_risk'] = np.mean(risk_components)
+        
+        # Equity consideration score
+        equity_factors = [
+            features.get('mentions_diversity', False),
+            any(key.startswith('has_') and features.get(key, False) 
+                for key in ['has_rare_diseases', 'has_infectious_diseases']),
+            scores['geographic_diversity'] > 0.5
+        ]
+        scores['equity_consideration'] = sum(equity_factors) / len(equity_factors)
+        
+        return scores
     
-    # Combine text for analysis
-    df['combined_text'] = df['Title'] + ' ' + df['Abstract']
-    
-    logger.info(f"Loaded {len(df):,} papers from {df['Biobank'].nunique()} biobanks")
-    logger.info(f"Year range: {df['Year'].min()}-{df['Year'].max()}")
-    
-    return df
+    def _empty_results(self) -> Dict:
+        """Return empty results structure."""
+        return {
+            'indicators': {},
+            'features': {
+                'sample_size': None,
+                'mean_age': None,
+                'age_range': None,
+                'percent_female': None,
+                'percent_male': None,
+                'countries': [],
+                'num_countries': 0,
+                'is_gwas': False,
+                'is_longitudinal': False,
+                'is_cross_sectional': False,
+                'mentions_diversity': False,
+                'mentions_limitations': False
+            },
+            'scores': {
+                'homogeneity_risk': 0.5,
+                'sample_size_score': 0.5,
+                'temporal_robustness': 0.5,
+                'geographic_diversity': 0.5,
+                'transparency': 0.5,
+                'overall_bias_risk': 0.5,
+                'equity_consideration': 0.0
+            },
+            'risk_factors': []
+        }
 
 #############################################################################
-# 3. BIAS DETECTION FUNCTIONS
+# 2. BIOBANK COMPARISON AND PROFILING
 #############################################################################
 
-def detect_bias_mentions(text, bias_category):
-    """Detect mentions of a specific bias type in text."""
-    if not text:
-        return False, [], 0
+def analyze_biobank_profiles(df: pd.DataFrame, detector: AbstractBiasDetector) -> Dict:
+    """Create comparative bias profiles for each biobank."""
     
-    text_lower = text.lower()
-    keywords = BIAS_CATEGORIES[bias_category]['keywords']
+    biobank_profiles = {}
     
-    found_keywords = []
-    for keyword in keywords:
-        if keyword in text_lower:
-            found_keywords.append(keyword)
+    for biobank in df['Biobank'].unique():
+        biobank_data = df[df['Biobank'] == biobank]
+        
+        profile = {
+            'total_papers': len(biobank_data),
+            'temporal_range': (int(biobank_data['Year'].min()), int(biobank_data['Year'].max())),
+            'sample_sizes': [],
+            'countries_mentioned': set(),
+            'study_designs': Counter(),
+            'bias_indicators': Counter(),
+            'risk_scores': [],
+            'equity_scores': [],
+            'transparency_scores': []
+        }
+        
+        # Analyze each paper
+        for _, paper in biobank_data.iterrows():
+            abstract = str(paper.get('Abstract', ''))
+            if pd.notna(abstract):
+                analysis = detector.analyze_abstract(abstract)
+                
+                # Collect sample sizes
+                if analysis['features']['sample_size']:
+                    profile['sample_sizes'].append(analysis['features']['sample_size'])
+                
+                # Collect countries
+                profile['countries_mentioned'].update(analysis['features']['countries'])
+                
+                # Track study designs
+                if analysis['features']['is_longitudinal']:
+                    profile['study_designs']['longitudinal'] += 1
+                if analysis['features']['is_cross_sectional']:
+                    profile['study_designs']['cross_sectional'] += 1
+                if analysis['features']['is_gwas']:
+                    profile['study_designs']['gwas'] += 1
+                
+                # Track bias indicators
+                for category, indicators in analysis['indicators'].items():
+                    for indicator in indicators:
+                        profile['bias_indicators'][f'{category}:{indicator}'] += 1
+                
+                # Collect scores
+                profile['risk_scores'].append(analysis['scores']['overall_bias_risk'])
+                profile['equity_scores'].append(analysis['scores']['equity_consideration'])
+                profile['transparency_scores'].append(analysis['scores']['transparency'])
+        
+        # Calculate summary statistics
+        profile['median_sample_size'] = np.median(profile['sample_sizes']) if profile['sample_sizes'] else None
+        profile['geographic_diversity'] = len(profile['countries_mentioned'])
+        profile['mean_risk_score'] = np.mean(profile['risk_scores']) if profile['risk_scores'] else 0.5
+        profile['mean_equity_score'] = np.mean(profile['equity_scores']) if profile['equity_scores'] else 0.0
+        profile['mean_transparency_score'] = np.mean(profile['transparency_scores']) if profile['transparency_scores'] else 0.5
+        
+        # Calculate proportions
+        total = len(biobank_data)
+        profile['prop_longitudinal'] = profile['study_designs']['longitudinal'] / total if total > 0 else 0
+        profile['prop_cross_sectional'] = profile['study_designs']['cross_sectional'] / total if total > 0 else 0
+        profile['prop_gwas'] = profile['study_designs']['gwas'] / total if total > 0 else 0
+        
+        biobank_profiles[biobank] = profile
     
-    # Calculate confidence score based on number of matches
-    confidence = min(len(found_keywords) / 3.0, 1.0)  # Normalize to 0-1
-    
-    return len(found_keywords) > 0, found_keywords, confidence
+    return biobank_profiles
 
-def analyze_bias_severity(text, bias_category):
-    """Analyze the severity of bias discussion in text."""
-    if not text:
-        return 'none'
-    
-    text_lower = text.lower()
-    severity_indicators = BIAS_CATEGORIES[bias_category]['severity_indicators']
-    
-    for severity_level in ['high', 'medium', 'low']:
-        for indicator in severity_indicators[severity_level]:
-            if indicator in text_lower:
-                return severity_level
-    
-    return 'mentioned'  # Bias mentioned but severity unclear
+#############################################################################
+# 3. ENHANCED VISUALIZATION
+#############################################################################
 
-def check_mesh_terms_for_bias(mesh_terms, bias_category):
-    """Check if MeSH terms indicate bias-related content."""
-    if not mesh_terms:
-        return False
+def create_bias_landscape_dashboard(results_df: pd.DataFrame, biobank_profiles: Dict):
+    """Create comprehensive dashboard showing bias landscape."""
     
-    mesh_list = [term.strip() for term in str(mesh_terms).split(';')]
-    bias_mesh = BIAS_CATEGORIES[bias_category]['mesh_terms']
+    fig = plt.figure(figsize=(20, 14))
+    gs = fig.add_gridspec(4, 3, hspace=0.3, wspace=0.3)
     
-    for mesh_term in mesh_list:
-        for bias_term in bias_mesh:
-            if bias_term.lower() in mesh_term.lower():
-                return True
+    # 1. Spider plot comparing biobanks
+    ax1 = fig.add_subplot(gs[0:2, 0], projection='polar')
     
-    return False
+    categories = ['Sample Size', 'Geographic\nDiversity', 'Temporal\nRobustness', 
+                  'Transparency', 'Equity\nFocus']
+    num_vars = len(categories)
+    angles = [n / float(num_vars) * 2 * np.pi for n in range(num_vars)]
+    angles += angles[:1]
+    
+    ax1.set_theta_offset(np.pi / 2)
+    ax1.set_theta_direction(-1)
+    ax1.set_xticks(angles[:-1])
+    ax1.set_xticklabels(categories)
+    
+    colors = plt.cm.Set2(np.linspace(0, 1, len(biobank_profiles)))
+    
+    for idx, (biobank, profile) in enumerate(biobank_profiles.items()):
+        values = [
+            np.log10(profile['median_sample_size'] + 1) / 6 if profile['median_sample_size'] else 0.3,
+            min(profile['geographic_diversity'] / 10, 1),
+            profile['prop_longitudinal'],
+            profile['mean_transparency_score'],
+            profile['mean_equity_score']
+        ]
+        values += values[:1]
+        
+        ax1.plot(angles, values, 'o-', linewidth=2, label=biobank, color=colors[idx])
+        ax1.fill(angles, values, alpha=0.25, color=colors[idx])
+    
+    ax1.set_ylim(0, 1)
+    ax1.set_title('A. Biobank Bias Profile Comparison', fontweight='bold', pad=20)
+    ax1.legend(loc='upper right', bbox_to_anchor=(1.3, 1.1))
+    
+    # 2. Sample size distribution by biobank
+    ax2 = fig.add_subplot(gs[0, 1:])
+    
+    sample_data = []
+    for biobank, profile in biobank_profiles.items():
+        for size in profile['sample_sizes']:
+            sample_data.append({'Biobank': biobank, 'Sample Size': size})
+    
+    if sample_data:
+        sample_df = pd.DataFrame(sample_data)
+        sample_df['Log Sample Size'] = np.log10(sample_df['Sample Size'] + 1)
+        
+        biobanks = sample_df['Biobank'].unique()
+        positions = range(len(biobanks))
+        
+        for pos, biobank in enumerate(biobanks):
+            biobank_samples = sample_df[sample_df['Biobank'] == biobank]['Log Sample Size']
+            if len(biobank_samples) > 0:
+                bp = ax2.boxplot([biobank_samples], positions=[pos], widths=0.6,
+                                 patch_artist=True, showfliers=False)
+                bp['boxes'][0].set_facecolor(colors[pos])
+        
+        ax2.set_xticks(positions)
+        ax2.set_xticklabels(biobanks, rotation=45, ha='right')
+        ax2.set_ylabel('Log10(Sample Size)', fontweight='bold')
+        ax2.set_title('B. Sample Size Distribution by Biobank', fontweight='bold')
+        ax2.grid(True, alpha=0.3)
+    
+    # 3. Geographic diversity comparison
+    ax3 = fig.add_subplot(gs[1, 1])
+    
+    geo_data = [(name, profile['geographic_diversity']) 
+                for name, profile in biobank_profiles.items()]
+    geo_data.sort(key=lambda x: x[1], reverse=True)
+    
+    names, diversities = zip(*geo_data)
+    bars = ax3.barh(range(len(names)), diversities, color='steelblue')
+    ax3.set_yticks(range(len(names)))
+    ax3.set_yticklabels(names)
+    ax3.set_xlabel('Number of Countries Mentioned', fontweight='bold')
+    ax3.set_title('C. Geographic Diversity by Biobank', fontweight='bold')
+    
+    for i, (bar, div) in enumerate(zip(bars, diversities)):
+        ax3.text(div + 0.1, bar.get_y() + bar.get_height()/2, 
+                f'{div}', va='center')
+    
+    # 4. Study design proportions
+    ax4 = fig.add_subplot(gs[1, 2])
+    
+    design_data = []
+    for biobank, profile in biobank_profiles.items():
+        design_data.append({
+            'Biobank': biobank,
+            'Longitudinal': profile['prop_longitudinal'],
+            'Cross-sectional': profile['prop_cross_sectional'],
+            'GWAS': profile['prop_gwas']
+        })
+    
+    design_df = pd.DataFrame(design_data)
+    design_df.set_index('Biobank')[['Longitudinal', 'Cross-sectional', 'GWAS']].plot(
+        kind='bar', stacked=False, ax=ax4, color=['#2ecc71', '#e74c3c', '#3498db']
+    )
+    ax4.set_ylabel('Proportion of Studies', fontweight='bold')
+    ax4.set_title('D. Study Design Distribution', fontweight='bold')
+    ax4.legend(title='Design Type')
+    ax4.set_xticklabels(ax4.get_xticklabels(), rotation=45, ha='right')
+    
+    # 5. Risk score distribution
+    ax5 = fig.add_subplot(gs[2, :2])
+    
+    risk_data = []
+    for biobank, profile in biobank_profiles.items():
+        for score in profile['risk_scores']:
+            risk_data.append({'Biobank': biobank, 'Risk Score': score})
+    
+    if risk_data:
+        risk_df = pd.DataFrame(risk_data)
+        
+        for idx, biobank in enumerate(risk_df['Biobank'].unique()):
+            biobank_risks = risk_df[risk_df['Biobank'] == biobank]['Risk Score']
+            ax5.hist(biobank_risks, bins=20, alpha=0.5, label=biobank, color=colors[idx])
+        
+        ax5.set_xlabel('Overall Bias Risk Score', fontweight='bold')
+        ax5.set_ylabel('Number of Papers', fontweight='bold')
+        ax5.set_title('E. Distribution of Bias Risk Scores', fontweight='bold')
+        ax5.legend()
+        ax5.axvline(0.5, color='red', linestyle='--', alpha=0.5, label='Neutral')
+    
+    # 6. Equity vs Risk scatter
+    ax6 = fig.add_subplot(gs[2, 2])
+    
+    for idx, (biobank, profile) in enumerate(biobank_profiles.items()):
+        if profile['risk_scores'] and profile['equity_scores']:
+            ax6.scatter(profile['risk_scores'], profile['equity_scores'], 
+                       alpha=0.5, label=biobank, color=colors[idx], s=30)
+    
+    ax6.set_xlabel('Bias Risk Score', fontweight='bold')
+    ax6.set_ylabel('Equity Consideration Score', fontweight='bold')
+    ax6.set_title('F. Risk vs Equity Trade-off', fontweight='bold')
+    ax6.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+    ax6.grid(True, alpha=0.3)
+    
+    # 7. Temporal trends in bias risk
+    ax7 = fig.add_subplot(gs[3, :])
+    
+    yearly_risk = results_df.groupby(['Year', 'Biobank'])['overall_bias_risk'].mean().reset_index()
+    
+    for idx, biobank in enumerate(yearly_risk['Biobank'].unique()):
+        biobank_yearly = yearly_risk[yearly_risk['Biobank'] == biobank]
+        biobank_yearly = biobank_yearly[biobank_yearly['Year'] >= 2010]  # Focus on recent years
+        if len(biobank_yearly) > 0:
+            ax7.plot(biobank_yearly['Year'], biobank_yearly['overall_bias_risk'], 
+                    marker='o', label=biobank, color=colors[idx], linewidth=2)
+    
+    ax7.set_xlabel('Year', fontweight='bold')
+    ax7.set_ylabel('Mean Bias Risk Score', fontweight='bold')
+    ax7.set_title('G. Temporal Trends in Bias Risk', fontweight='bold')
+    ax7.legend()
+    ax7.grid(True, alpha=0.3)
+    
+    plt.suptitle('BIOBANK BIAS LANDSCAPE: Abstract-Based Assessment', 
+                 fontsize=16, fontweight='bold', y=0.98)
+    
+    # Save figure
+    fig_path = OUT_DIR / "bias_overview_comprehensive.png"
+    plt.savefig(fig_path, dpi=300, bbox_inches='tight')
+    plt.savefig(fig_path.with_suffix('.pdf'), bbox_inches='tight')
+    logger.info(f"Saved bias landscape dashboard: {fig_path}")
+    
+    return fig
 
-def analyze_all_biases(df):
-    """Analyze all papers for each type of bias."""
-    logger.info("Analyzing papers for bias mentions...")
+#############################################################################
+# 4. MAIN ANALYSIS PIPELINE
+#############################################################################
+
+def analyze_papers_abstract_based(df: pd.DataFrame) -> pd.DataFrame:
+    """Analyze papers using abstract-based bias detection."""
+    
+    logger.info("Starting abstract-based bias analysis...")
+    detector = AbstractBiasDetector()
+
+    df = df.reset_index(drop=True)
     
     results = []
     total_papers = len(df)
     
     for idx, row in df.iterrows():
-        if idx % 1000 == 0:
+        if idx % 500 == 0:
             logger.info(f"Processing paper {idx}/{total_papers} ({idx/total_papers*100:.1f}%)")
         
-        paper_result = {
+        abstract = str(row.get('Abstract', ''))
+        title = str(row.get('Title', ''))
+        
+        # Analyze abstract
+        analysis = detector.analyze_abstract(abstract)
+        
+        # Create flat result structure
+        paper_results = {
             'PMID': row['PMID'],
             'Biobank': row['Biobank'],
             'Year': row['Year'],
-            'Title': row['Title']
+            'Title': title[:100] if pd.notna(title) else ''
         }
         
-        # Analyze each bias type
-        for bias_type in BIAS_CATEGORIES:
-            # Check abstract
-            mentioned, keywords, confidence = detect_bias_mentions(
-                row['combined_text'], bias_type
-            )
-            
-            # Check MeSH terms
-            mesh_indicates = check_mesh_terms_for_bias(row['MeSH_Terms'], bias_type)
-            
-            # Determine severity if mentioned
-            severity = analyze_bias_severity(row['combined_text'], bias_type) if mentioned else 'none'
-            
-            # Store results
-            paper_result[f'{bias_type}_mentioned'] = int(mentioned)
-            paper_result[f'{bias_type}_confidence'] = confidence
-            paper_result[f'{bias_type}_severity'] = severity
-            paper_result[f'{bias_type}_mesh'] = int(mesh_indicates)
-            paper_result[f'{bias_type}_keywords'] = '|'.join(keywords) if keywords else ''
+        # Add features
+        for feature_name, feature_value in analysis['features'].items():
+            if isinstance(feature_value, list):
+                paper_results[feature_name] = '|'.join(map(str, feature_value))
+            else:
+                paper_results[feature_name] = feature_value
         
-        results.append(paper_result)
+        # Add scores
+        for score_name, score_value in analysis['scores'].items():
+            paper_results[score_name] = score_value
+        
+        # Add indicator counts
+        for category in ['population_bias', 'sample_size_issues', 'temporal_limitations', 
+                        'geographic_limitations', 'acknowledged_limitations']:
+            indicators = analysis['indicators'].get(category, [])
+            paper_results[f'{category}_count'] = len(indicators)
+            paper_results[f'{category}_types'] = '|'.join(indicators)
+        
+        # Overall quality score (inverse of bias risk)
+        paper_results['overall_quality'] = 1 - analysis['scores']['overall_bias_risk']
+        
+        # Count total bias indicators
+        total_indicators = sum(len(v) for v in analysis['indicators'].values())
+        paper_results['total_bias_indicators'] = total_indicators
+        
+        # Flag papers with critical issues - FIXED: Handle None sample_size
+        sample_size = analysis['features'].get('sample_size')
+        paper_results['has_critical_issues'] = (
+            analysis['scores']['overall_bias_risk'] > 0.7 or
+            (sample_size is not None and sample_size < 100) or
+            total_indicators > 5
+        )
+        
+        results.append(paper_results)
     
     return pd.DataFrame(results)
-
 #############################################################################
-# 4. ANALYSIS FUNCTIONS
+# 5. REPORT GENERATION
 #############################################################################
-
-def analyze_bias_cooccurrence(bias_df):
-    """Analyze which biases tend to be discussed together."""
-    logger.info("Analyzing bias co-occurrence patterns...")
-    
-    bias_types = list(BIAS_CATEGORIES.keys())
-    n_biases = len(bias_types)
-    
-    # Create co-occurrence matrix
-    cooccurrence_matrix = np.zeros((n_biases, n_biases))
-    
-    for i, bias1 in enumerate(bias_types):
-        for j, bias2 in enumerate(bias_types):
-            if i <= j:
-                # Count papers mentioning both biases
-                both_mentioned = ((bias_df[f'{bias1}_mentioned'] == 1) & 
-                                 (bias_df[f'{bias2}_mentioned'] == 1)).sum()
-                cooccurrence_matrix[i, j] = both_mentioned
-                cooccurrence_matrix[j, i] = both_mentioned
-    
-    # Normalize by diagonal (self-occurrence)
-    normalized_matrix = np.zeros_like(cooccurrence_matrix)
-    for i in range(n_biases):
-        for j in range(n_biases):
-            if cooccurrence_matrix[i, i] > 0:
-                normalized_matrix[i, j] = cooccurrence_matrix[i, j] / cooccurrence_matrix[i, i]
-    
-    return cooccurrence_matrix, normalized_matrix, bias_types
-
-def analyze_temporal_trends(bias_df):
-    """Analyze how bias awareness has changed over time."""
-    logger.info("Analyzing temporal trends in bias awareness...")
-    
-    yearly_stats = []
-    
-    for year in sorted(bias_df['Year'].unique()):
-        year_data = bias_df[bias_df['Year'] == year]
-        year_stat = {'Year': year, 'Total_Papers': len(year_data)}
-        
-        # Calculate percentage of papers mentioning each bias
-        for bias_type in BIAS_CATEGORIES:
-            mentioned_count = (year_data[f'{bias_type}_mentioned'] == 1).sum()
-            percentage = (mentioned_count / len(year_data)) * 100 if len(year_data) > 0 else 0
-            year_stat[f'{bias_type}_percentage'] = percentage
-        
-        yearly_stats.append(year_stat)
-    
-    return pd.DataFrame(yearly_stats)
-
-def analyze_by_biobank(bias_df):
-    """Analyze bias patterns by biobank."""
-    logger.info("Analyzing bias patterns by biobank...")
-    
-    biobank_stats = []
-    
-    for biobank in bias_df['Biobank'].unique():
-        biobank_data = bias_df[bias_df['Biobank'] == biobank]
-        
-        stat = {
-            'Biobank': biobank,
-            'Total_Papers': len(biobank_data),
-            'Years_Active': f"{biobank_data['Year'].min()}-{biobank_data['Year'].max()}"
-        }
-        
-        # Calculate bias awareness metrics
-        for bias_type in BIAS_CATEGORIES:
-            mentioned_count = (biobank_data[f'{bias_type}_mentioned'] == 1).sum()
-            percentage = (mentioned_count / len(biobank_data)) * 100 if len(biobank_data) > 0 else 0
-            
-            # Calculate average confidence
-            mentioned_papers = biobank_data[biobank_data[f'{bias_type}_mentioned'] == 1]
-            avg_confidence = mentioned_papers[f'{bias_type}_confidence'].mean() if len(mentioned_papers) > 0 else 0
-            
-            stat[f'{bias_type}_percentage'] = percentage
-            stat[f'{bias_type}_avg_confidence'] = avg_confidence
-        
-        # Calculate overall bias awareness score
-        stat['Overall_Bias_Awareness'] = np.mean([stat[f'{bias_type}_percentage'] 
-                                                   for bias_type in BIAS_CATEGORIES])
-        
-        biobank_stats.append(stat)
-    
-    return pd.DataFrame(biobank_stats)
-
-#############################################################################
-# 5. VISUALIZATION FUNCTIONS
-#############################################################################
-
-def create_bias_overview_visualization(bias_df, temporal_df, biobank_df):
-    """Create comprehensive bias overview visualization."""
-    logger.info("Creating bias overview visualization...")
-    
-    fig = plt.figure(figsize=(20, 14))
-    gs = fig.add_gridspec(3, 3, hspace=0.3, wspace=0.3)
-    
-    # 1. Overall bias prevalence
-    ax1 = fig.add_subplot(gs[0, :2])
-    bias_prevalence = []
-    for bias_type in BIAS_CATEGORIES:
-        prevalence = (bias_df[f'{bias_type}_mentioned'] == 1).sum() / len(bias_df) * 100
-        bias_prevalence.append({
-            'Bias': BIAS_CATEGORIES[bias_type]['name'],
-            'Prevalence': prevalence
-        })
-    
-    prev_df = pd.DataFrame(bias_prevalence).sort_values('Prevalence', ascending=True)
-    colors = plt.cm.RdYlBu_r(np.linspace(0.3, 0.9, len(prev_df)))
-    
-    bars = ax1.barh(prev_df['Bias'], prev_df['Prevalence'], color=colors, edgecolor='black')
-    ax1.set_xlabel('% of Papers Mentioning Bias', fontweight='bold')
-    ax1.set_title('A. Bias Awareness in Biobank Research Literature', fontweight='bold', fontsize=14)
-    
-    # Add percentage labels
-    for bar, val in zip(bars, prev_df['Prevalence']):
-        ax1.text(val + 0.5, bar.get_y() + bar.get_height()/2, f'{val:.1f}%', 
-                va='center', fontweight='bold')
-    
-    # 2. Temporal trends
-    ax2 = fig.add_subplot(gs[0, 2])
-    recent_years = temporal_df[temporal_df['Year'] >= 2015]
-    
-    for bias_type in BIAS_CATEGORIES:
-        ax2.plot(recent_years['Year'], recent_years[f'{bias_type}_percentage'],
-                marker='o', label=BIAS_CATEGORIES[bias_type]['name'][:15], linewidth=2)
-    
-    ax2.set_xlabel('Year', fontweight='bold')
-    ax2.set_ylabel('% Papers Discussing Bias', fontweight='bold')
-    ax2.set_title('B. Temporal Trends (2015-2024)', fontweight='bold')
-    ax2.legend(fontsize=8, loc='best')
-    ax2.grid(True, alpha=0.3)
-    
-    # 3. Bias co-occurrence heatmap
-    ax3 = fig.add_subplot(gs[1, :])
-    cooccur_matrix, norm_matrix, bias_labels = analyze_bias_cooccurrence(bias_df)
-    
-    # Use short names for heatmap
-    short_names = [BIAS_CATEGORIES[b]['name'].split()[0] for b in bias_labels]
-    
-    sns.heatmap(norm_matrix, annot=True, fmt='.2f', cmap='YlOrRd',
-                xticklabels=short_names, yticklabels=short_names,
-                ax=ax3, cbar_kws={'label': 'Co-occurrence Rate'})
-    ax3.set_title('C. Bias Co-occurrence Matrix (Normalized)', fontweight='bold', fontsize=14)
-    
-    # 4. Biobank comparison
-    ax4 = fig.add_subplot(gs[2, :2])
-    top_biobanks = biobank_df.nlargest(5, 'Total_Papers')
-    
-    x = np.arange(len(top_biobanks))
-    width = 0.15
-    
-    for i, bias_type in enumerate(list(BIAS_CATEGORIES.keys())[:5]):
-        values = top_biobanks[f'{bias_type}_percentage'].values
-        offset = (i - 2) * width
-        ax4.bar(x + offset, values, width, label=BIAS_CATEGORIES[bias_type]['name'][:15])
-    
-    ax4.set_xlabel('Biobank', fontweight='bold')
-    ax4.set_ylabel('% Papers Mentioning Bias', fontweight='bold')
-    ax4.set_title('D. Bias Awareness by Biobank', fontweight='bold', fontsize=14)
-    ax4.set_xticks(x)
-    ax4.set_xticklabels(top_biobanks['Biobank'].values, rotation=45, ha='right')
-    ax4.legend(fontsize=9, loc='upper right')
-    ax4.grid(True, alpha=0.3, axis='y')
-    
-    # 5. Severity distribution
-    ax5 = fig.add_subplot(gs[2, 2])
-    severity_data = []
-    for bias_type in BIAS_CATEGORIES:
-        mentioned_papers = bias_df[bias_df[f'{bias_type}_mentioned'] == 1]
-        if len(mentioned_papers) > 0:
-            severity_counts = mentioned_papers[f'{bias_type}_severity'].value_counts()
-            for severity, count in severity_counts.items():
-                if severity != 'none':
-                    severity_data.append({
-                        'Bias': BIAS_CATEGORIES[bias_type]['name'][:10],
-                        'Severity': severity,
-                        'Count': count
-                    })
-    
-    if severity_data:
-        sev_df = pd.DataFrame(severity_data)
-        sev_pivot = sev_df.pivot(index='Bias', columns='Severity', values='Count').fillna(0)
-        
-        sev_pivot.plot(kind='bar', stacked=True, ax=ax5, 
-                      color=['#2ecc71', '#f39c12', '#e74c3c', '#95a5a6'])
-        ax5.set_xlabel('Bias Type', fontweight='bold')
-        ax5.set_ylabel('Number of Papers', fontweight='bold')
-        ax5.set_title('E. Bias Severity Distribution', fontweight='bold')
-        ax5.set_xticklabels(ax5.get_xticklabels(), rotation=45, ha='right')
-        ax5.legend(title='Severity', fontsize=8)
-    
-    plt.suptitle('BIAS DETECTION IN BIOBANK RESEARCH: Comprehensive Analysis', 
-                fontsize=16, fontweight='bold', y=0.98)
-    
-    # Save figure
-    output_file = os.path.join(analysis_dir, 'bias_overview_comprehensive.png')
-    plt.savefig(output_file, dpi=300, bbox_inches='tight')
-    plt.savefig(output_file.replace('.png', '.pdf'), bbox_inches='tight')
-    logger.info(f"✅ Saved comprehensive overview: {output_file}")
-    
-    return fig
-
-#############################################################################
-# 6. REPORT GENERATION
-#############################################################################
-
-def generate_comprehensive_report(bias_df, temporal_df, biobank_df):
-    """Generate comprehensive bias detection report."""
-    logger.info("Generating comprehensive report...")
+def generate_bias_report(results_df: pd.DataFrame, biobank_profiles: Dict) -> Dict:
+    """Generate comprehensive bias assessment report."""
     
     report = {
         'metadata': {
             'analysis_date': datetime.now().isoformat(),
-            'total_papers': len(bias_df),
-            'total_biobanks': bias_df['Biobank'].nunique(),
-            'year_range': f"{bias_df['Year'].min()}-{bias_df['Year'].max()}"
+            'total_papers': len(results_df),
+            'analysis_version': '3.0 (Abstract-Based)'
         },
-        'summary_statistics': {},
-        'temporal_trends': {},
-        'biobank_analysis': {}
+        'overall_summary': {},
+        'biobank_comparisons': {},
+        'bias_indicators': {},
+        'equity_gaps': {},
+        'recommendations': []
     }
     
-    # Summary statistics for each bias
-    for bias_type in BIAS_CATEGORIES:
-        mentioned_count = (bias_df[f'{bias_type}_mentioned'] == 1).sum()
-        prevalence = (mentioned_count / len(bias_df)) * 100
-        
-        mentioned_papers = bias_df[bias_df[f'{bias_type}_mentioned'] == 1]
-        avg_confidence = mentioned_papers[f'{bias_type}_confidence'].mean() if len(mentioned_papers) > 0 else 0
-        
-        severity_dist = mentioned_papers[f'{bias_type}_severity'].value_counts().to_dict() if len(mentioned_papers) > 0 else {}
-        
-        report['summary_statistics'][bias_type] = {
-            'name': BIAS_CATEGORIES[bias_type]['name'],
-            'papers_mentioning': int(mentioned_count),
-            'prevalence_percentage': round(prevalence, 2),
-            'average_confidence': round(avg_confidence, 3),
-            'severity_distribution': severity_dist
+    # Overall summary
+    report['overall_summary'] = {
+        'mean_bias_risk': float(results_df['overall_bias_risk'].mean()),
+        'median_sample_size': float(results_df['sample_size'].median()) if results_df['sample_size'].notna().any() else None,
+        'papers_with_critical_issues': int(results_df['has_critical_issues'].sum()),
+        'papers_mentioning_diversity': int(results_df['mentions_diversity'].sum()),
+        'papers_acknowledging_limitations': int(results_df['mentions_limitations'].sum()),
+        'proportion_longitudinal': float(results_df['is_longitudinal'].mean()),
+        'proportion_cross_sectional': float(results_df['is_cross_sectional'].mean())
+    }
+    
+    # Biobank comparisons
+    for biobank, profile in biobank_profiles.items():
+        report['biobank_comparisons'][biobank] = {
+            'total_papers': profile['total_papers'],
+            'median_sample_size': profile['median_sample_size'],
+            'geographic_diversity': profile['geographic_diversity'],
+            'mean_risk_score': profile['mean_risk_score'],
+            'mean_equity_score': profile['mean_equity_score'],
+            'prop_longitudinal': profile['prop_longitudinal']
         }
     
-    # Temporal trends
-    recent_trends = temporal_df[temporal_df['Year'] >= 2019]
-    for bias_type in BIAS_CATEGORIES:
-        trend_data = recent_trends[['Year', f'{bias_type}_percentage']].to_dict('records')
-        report['temporal_trends'][bias_type] = trend_data
+    # Top bias indicators
+    indicator_counts = Counter()
+    for col in results_df.columns:
+        if col.endswith('_types'):
+            types = results_df[col].str.split('|', expand=True).stack()
+            types = types[types != '']
+            indicator_counts.update(types)
     
-    # Top biobanks by bias awareness
-    top_biobanks = biobank_df.nlargest(5, 'Overall_Bias_Awareness')
-    report['biobank_analysis']['top_aware_biobanks'] = top_biobanks[
-        ['Biobank', 'Total_Papers', 'Overall_Bias_Awareness']
-    ].to_dict('records')
+    report['bias_indicators']['most_common'] = dict(indicator_counts.most_common(10))
     
-    # Save JSON report
-    report_file = os.path.join(analysis_dir, 'bias_detection_report.json')
+    # Equity gaps
+    report['equity_gaps'] = {
+        'low_diversity_papers': int((results_df['equity_consideration'] < 0.3).sum()),
+        'single_country_studies': int((results_df['num_countries'] <= 1).sum()),
+        'very_small_samples': int((results_df['sample_size'] < 100).sum()),
+        'high_risk_papers': int((results_df['overall_bias_risk'] > 0.7).sum())
+    }
+    
+    # Generate recommendations
+    if report['overall_summary']['mean_bias_risk'] > 0.6:
+        report['recommendations'].append(
+            "High overall bias risk detected. Prioritize diverse recruitment and multi-site studies."
+        )
+    
+    if report['overall_summary']['proportion_longitudinal'] < 0.3:
+        report['recommendations'].append(
+            "Increase longitudinal studies to better capture temporal dynamics and causal relationships."
+        )
+    
+    diversity_papers = results_df['mentions_diversity'].sum()
+    if diversity_papers < len(results_df) * 0.2:
+        report['recommendations'].append(
+            "Only {:.1f}% of papers mention diversity. Implement diversity-focused recruitment strategies.".format(
+                diversity_papers / len(results_df) * 100
+            )
+        )
+    
+    # Save report
+    report_file = OUT_DIR / "bias_detection_report.json"
     with open(report_file, 'w') as f:
         json.dump(report, f, indent=2, default=str)
-    logger.info(f"✅ Saved comprehensive report: {report_file}")
     
-    # Generate text summary
+    logger.info(f"Saved bias report: {report_file}")
+    
+    # Generate text summary - FIXED f-string syntax
+    median_sample = report['overall_summary']['median_sample_size']
+    median_sample_str = f"{median_sample:,.0f}" if median_sample else "N/A"
+    
     summary_text = f"""
-BIOBANK BIAS DETECTION REPORT
-=============================
+ABSTRACT-BASED BIOBANK BIAS DETECTION REPORT
+============================================
 Generated: {report['metadata']['analysis_date']}
 
 DATASET OVERVIEW:
 - Total papers analyzed: {report['metadata']['total_papers']:,}
-- Biobanks included: {report['metadata']['total_biobanks']}
-- Time period: {report['metadata']['year_range']}
+- Analysis version: {report['metadata']['analysis_version']}
 
-BIAS PREVALENCE SUMMARY:
-"""
-    
-    for bias_type, stats in report['summary_statistics'].items():
-        summary_text += f"""
-{stats['name'].upper()}:
-- Papers mentioning: {stats['papers_mentioning']:,} ({stats['prevalence_percentage']:.1f}%)
-- Average confidence: {stats['average_confidence']:.2f}
-- Severity: {stats.get('severity_distribution', {})}
-"""
-    
-    # Most aware biobanks
-    summary_text += "\nTOP BIOBANKS BY BIAS AWARENESS:\n"
-    for biobank_info in report['biobank_analysis']['top_aware_biobanks']:
-        summary_text += f"• {biobank_info['Biobank']}: {biobank_info['Overall_Bias_Awareness']:.1f}% awareness\n"
-    
-    # Key findings
-    most_discussed = max(report['summary_statistics'].items(), 
-                        key=lambda x: x[1]['prevalence_percentage'])
-    least_discussed = min(report['summary_statistics'].items(), 
-                         key=lambda x: x[1]['prevalence_percentage'])
-    
-    summary_text += f"""
-KEY FINDINGS:
-- Most discussed bias: {most_discussed[1]['name']} ({most_discussed[1]['prevalence_percentage']:.1f}%)
-- Least discussed bias: {least_discussed[1]['name']} ({least_discussed[1]['prevalence_percentage']:.1f}%)
-- Gap in awareness: {most_discussed[1]['prevalence_percentage'] - least_discussed[1]['prevalence_percentage']:.1f} percentage points
+BIAS RISK SUMMARY:
+- Mean bias risk score: {report['overall_summary']['mean_bias_risk']:.2f}
+- Papers with critical issues: {report['overall_summary']['papers_with_critical_issues']:,}
+- Papers mentioning diversity: {report['overall_summary']['papers_mentioning_diversity']:,}
+- Papers acknowledging limitations: {report['overall_summary']['papers_acknowledging_limitations']:,}
 
-RECOMMENDATIONS:
-1. Increase awareness of underrepresented bias types, especially {least_discussed[1]['name']}
-2. Standardize bias reporting across all biobanks
-3. Implement systematic bias assessment protocols
-4. Enhance diversity and inclusion in recruitment strategies
-5. Develop bias mitigation guidelines specific to biobank research
+STUDY DESIGN PATTERNS:
+- Longitudinal studies: {report['overall_summary']['proportion_longitudinal']:.1%}
+- Cross-sectional studies: {report['overall_summary']['proportion_cross_sectional']:.1%}
+- Median sample size: {median_sample_str}
+
+TOP BIAS INDICATORS:
 """
+    
+    for indicator, count in list(report['bias_indicators']['most_common'].items())[:5]:
+        summary_text += f"- {indicator}: {count} occurrences\n"
+    
+    summary_text += "\nBIOBANK COMPARISON:\n"
+    for biobank, stats in report['biobank_comparisons'].items():
+        biobank_median = stats['median_sample_size']
+        biobank_median_str = f"{biobank_median:,.0f}" if biobank_median else "N/A"
+        
+        summary_text += f"\n{biobank}:\n"
+        summary_text += f"  - Papers: {stats['total_papers']:,}\n"
+        summary_text += f"  - Median sample size: {biobank_median_str}\n"
+        summary_text += f"  - Geographic diversity: {stats['geographic_diversity']} countries\n"
+        summary_text += f"  - Mean bias risk: {stats['mean_risk_score']:.2f}\n"
+        summary_text += f"  - Equity score: {stats['mean_equity_score']:.2f}\n"
+    
+    summary_text += "\nEQUITY GAPS:\n"
+    summary_text += f"- Low diversity papers: {report['equity_gaps']['low_diversity_papers']:,}\n"
+    summary_text += f"- Single country studies: {report['equity_gaps']['single_country_studies']:,}\n"
+    summary_text += f"- Very small samples (<100): {report['equity_gaps']['very_small_samples']:,}\n"
+    summary_text += f"- High risk papers: {report['equity_gaps']['high_risk_papers']:,}\n"
+    
+    summary_text += "\nRECOMMENDATIONS:\n"
+    for rec in report['recommendations']:
+        summary_text += f"- {rec}\n"
     
     # Save text summary
-    summary_file = os.path.join(analysis_dir, 'bias_detection_summary.txt')
+    summary_file = OUT_DIR / "bias_detection_summary.txt"
     with open(summary_file, 'w') as f:
         f.write(summary_text)
-    logger.info(f"✅ Saved text summary: {summary_file}")
+    
+    logger.info(f"Saved text summary: {summary_file}")
     
     print(summary_text)
     
     return report
-
 #############################################################################
-# 7. MAIN PIPELINE
+# 6. MAIN EXECUTION
 #############################################################################
 
 def main():
-    """Main execution pipeline for bias detection."""
+    """Main execution pipeline."""
+    
     print("=" * 80)
-    print("BIOBANK BIAS DETECTION PIPELINE")
-    print("Comprehensive Analysis of Bias Awareness in Biobank Research")
+    print("ABSTRACT-BASED BIOBANK BIAS DETECTION PIPELINE V3.0")
+    print("Identifying Bias Indicators from Publication Abstracts")
     print("=" * 80)
     
     try:
         # Load data
-        print("\n📊 Loading biobank research data...")
-        df = load_biobank_data()
+        possible_files = [
+            DATA_DIR / "biobank_research_data.csv",
+            DATA_DIR / "ge_pubmed_qc.csv"
+        ]
         
-        if df is None:
-            print("❌ Could not load data. Please ensure biobank_research_data.csv exists.")
+        input_file = None
+        for file_path in possible_files:
+            if file_path.exists():
+                input_file = file_path
+                break
+        
+        if not input_file:
+            print(f"❌ Input file not found in {DATA_DIR}")
+            print(f"   Looked for: {[str(f) for f in possible_files]}")
+            print("Please ensure data file exists.")
             return None, None
         
-        # Detect biases
-        print("\n🔍 Detecting bias mentions in abstracts...")
-        print(f"   Analyzing {len(df):,} papers for {len(BIAS_CATEGORIES)} bias types...")
-        bias_df = analyze_all_biases(df)
+        print(f"\n📊 Loading data from {input_file}...")
+        df = pd.read_csv(input_file, low_memory=False)
         
-        # Save raw results
-        bias_results_file = os.path.join(analysis_dir, 'bias_detection_results.csv')
-        bias_df.to_csv(bias_results_file, index=False)
-        print(f"✅ Saved bias detection results: {bias_results_file}")
+        # Clean and filter
+        df['Year'] = pd.to_numeric(df['Year'], errors='coerce')
+        df = df.dropna(subset=['Year'])
+        df = df[(df['Year'] >= 2000) & (df['Year'] <= 2024)]
         
-        # Temporal analysis
-        print("\n📈 Analyzing temporal trends...")
-        temporal_df = analyze_temporal_trends(bias_df)
-        temporal_file = os.path.join(analysis_dir, 'temporal_trends.csv')
+        # Remove papers without abstracts
+        initial_count = len(df)
+        df = df[df['Abstract'].notna()]
+        df = df[df['Abstract'].str.len() > 50]  # Ensure meaningful abstracts
+        
+        print(f"Loaded {len(df):,} papers with abstracts from {df['Biobank'].nunique()} biobanks")
+        print(f"(Filtered out {initial_count - len(df):,} papers without meaningful abstracts)")
+        
+        # Run abstract-based analysis
+        print("\n🔬 Running abstract-based bias detection...")
+        print("   - Extracting demographic and methodological features")
+        print("   - Identifying bias indicators and limitations")
+        print("   - Calculating risk and equity scores")
+        
+        results_df = analyze_papers_abstract_based(df)
+        
+        # Save main results
+        results_file = OUT_DIR / "bias_detection_results.csv"
+        results_df.to_csv(results_file, index=False)
+        print(f"\n✅ Saved bias detection results: {results_file}")
+        
+        # Create biobank profiles
+        print("\n📊 Creating biobank bias profiles...")
+        detector = AbstractBiasDetector()
+        biobank_profiles = analyze_biobank_profiles(df, detector)
+        
+        # Save temporal trends
+        temporal_df = results_df.groupby('Year').agg({
+            'overall_bias_risk': 'mean',
+            'equity_consideration': 'mean',
+            'sample_size': 'median',
+            'mentions_diversity': 'mean',
+            'is_longitudinal': 'mean'
+        }).reset_index()
+        temporal_df.columns = ['Year', 'mean_bias_risk', 'mean_equity_score', 
+                               'median_sample_size', 'prop_diversity', 'prop_longitudinal']
+        temporal_file = OUT_DIR / "temporal_trends.csv"
         temporal_df.to_csv(temporal_file, index=False)
         
-        # Biobank analysis
-        print("\n🏥 Analyzing by biobank...")
-        biobank_df = analyze_by_biobank(bias_df)
-        biobank_file = os.path.join(analysis_dir, 'biobank_bias_analysis.csv')
-        biobank_df.to_csv(biobank_file, index=False)
+        # Save biobank-level analysis
+        # Save biobank-level analysis
+        biobank_summary = []
+        for biobank, profile in biobank_profiles.items():
+            # Calculate mean bias indicator count - FIXED: values are already counts
+            if profile['bias_indicators']:
+                mean_indicator_count = np.mean(list(profile['bias_indicators'].values()))
+            else:
+                mean_indicator_count = 0
+            
+            biobank_summary.append({
+                'Biobank': biobank,
+                'overall_quality': 1 - profile['mean_risk_score'],
+                'red_flag_count': mean_indicator_count,  # Use the calculated mean
+                'biases_addressed': profile['mean_transparency_score']
+            })
+        biobank_df = pd.DataFrame(biobank_summary)
+        biobank_file = OUT_DIR / "biobank_bias_analysis.csv"
+        biobank_df.to_csv(biobank_file, index=False)    
         
         # Create visualizations
-        print("\n🎨 Creating visualizations...")
-        create_bias_overview_visualization(bias_df, temporal_df, biobank_df)
+        print("\n📊 Creating bias landscape dashboard...")
+        create_bias_landscape_dashboard(results_df, biobank_profiles)
         
-        # Generate comprehensive report
-        print("\n📋 Generating comprehensive report...")
-        report = generate_comprehensive_report(bias_df, temporal_df, biobank_df)
+        # Generate report
+        print("\n📋 Generating bias assessment report...")
+        report = generate_bias_report(results_df, biobank_profiles)
         
+        # Print key findings
         print("\n" + "=" * 80)
-        print("✅ BIAS DETECTION PIPELINE COMPLETE!")
-        print(f"📂 All results saved to: {analysis_dir}")
-        print("\n📊 KEY OUTPUTS:")
-        print("   • bias_detection_results.csv - Raw detection results")
-        print("   • bias_overview_comprehensive.png - Main visualization")
-        print("   • bias_detection_report.json - Detailed JSON report")
-        print("   • bias_detection_summary.txt - Executive summary")
+        print("ANALYSIS COMPLETE - KEY FINDINGS")
+        print("=" * 80)
         
-        # Print quick stats
-        print("\n📈 QUICK STATISTICS:")
-        for bias_type in BIAS_CATEGORIES:
-            prevalence = (bias_df[f'{bias_type}_mentioned'] == 1).sum() / len(bias_df) * 100
-            print(f"   • {BIAS_CATEGORIES[bias_type]['name']}: {prevalence:.1f}% of papers")
+        print(f"\n📈 BIAS RISK METRICS:")
+        print(f"   • Mean bias risk: {report['overall_summary']['mean_bias_risk']:.2f}")
+        print(f"   • Papers with critical issues: {report['overall_summary']['papers_with_critical_issues']:,}")
+        median_sample = report['overall_summary']['median_sample_size']
+        median_sample_display = f"{median_sample:,.0f}" if median_sample else "N/A"
+        print(f"   • Median sample size: {median_sample_display}")
+
+        print(f"\n🌍 DIVERSITY & EQUITY:")
+        print(f"   • Papers mentioning diversity: {report['overall_summary']['papers_mentioning_diversity']:,}")
+        print(f"   • Single-country studies: {report['equity_gaps']['single_country_studies']:,}")
+        print(f"   • Low equity consideration: {report['equity_gaps']['low_diversity_papers']:,}")
         
-        # Try to run Fairlearn analysis if available
-        try:
-            from PYTHON.fairlearn_enhanced import run_enhanced_fairness_analysis
-            print("\n🎯 Running enhanced Fairlearn analysis...")
-            fairlearn_results = run_enhanced_fairness_analysis(bias_df, analysis_dir)
-            print("✅ Fairlearn analysis complete!")
-        except ImportError:
-            print("\n💡 To run enhanced fairness analysis:")
-            print("   1. Install Fairlearn: pip install fairlearn")
-            print("   2. Use the enhanced Fairlearn script you have")
+        print(f"\n🏆 TOP PERFORMING BIOBANK:")
+        best_biobank = min(biobank_profiles.items(), key=lambda x: x[1]['mean_risk_score'])
+        print(f"   • {best_biobank[0]}: Risk score {best_biobank[1]['mean_risk_score']:.2f}")
         
-        return bias_df, report
+        print(f"\n⚠️ HIGHEST RISK BIOBANK:")
+        worst_biobank = max(biobank_profiles.items(), key=lambda x: x[1]['mean_risk_score'])
+        print(f"   • {worst_biobank[0]}: Risk score {worst_biobank[1]['mean_risk_score']:.2f}")
+        
+        print(f"\n💡 KEY RECOMMENDATIONS:")
+        for rec in report['recommendations'][:3]:
+            print(f"   • {rec}")
+        
+        print(f"\n📂 All outputs saved to: {OUT_DIR}")
+        
+        return results_df, report
         
     except Exception as e:
-        logger.error(f"Error in bias detection pipeline: {e}")
+        logger.error(f"Error in analysis: {e}")
         print(f"\n❌ Error: {e}")
+        import traceback
+        traceback.print_exc()
         return None, None
 
 if __name__ == "__main__":
-    bias_results, final_report = main()
+    results, report = main()
