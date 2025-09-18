@@ -12,6 +12,7 @@ Output: ANALYSIS/00-03-GE-CLUSTER-ANALYSIS/
 PURPOSE:
 Produces professional visualizations for executive presentation of MeSH clustering results.
 Designed for board of directors presentation with emphasis on strategic insights.
+Analysis covers 2013-2024 publications (post-100K Genomes Project launch).
 
 USAGE:
 1. Place this script in PYTHON/ directory as 00-03-ge-cluster-analysis.py
@@ -73,7 +74,7 @@ CLUSTER_COLORS = {
     9: '#BC6C25'   # Model organisms - Bronze
 }
 
-# Cluster labels for presentation
+# Cluster labels for presentation (consistent across all visualizations)
 CLUSTER_LABELS = {
     0: 'Software\nInfrastructure',
     1: 'Ethics &\nConsent',
@@ -86,6 +87,20 @@ CLUSTER_LABELS = {
     8: 'Paediatric\nGenomics',
     9: 'Model\nOrganisms'
 }
+
+# Full theme names without line breaks for legends
+CLUSTER_THEMES = [
+    'Software Infrastructure',
+    'Ethics & Consent',
+    'Population Genomics',
+    'Rare Disease Discovery',
+    'Cancer Genetics',
+    'Sequencing Methods',
+    'Programme Identity',
+    'Demographics',
+    'Paediatric Genomics',
+    'Model Organisms'
+]
 
 def load_ge_data():
     """Load and validate Genomics England clustering data"""
@@ -121,7 +136,7 @@ def create_strategic_overview(results, summaries):
     gs = GridSpec(3, 3, figure=fig, hspace=0.3, wspace=0.3)
     
     # Main title
-    fig.suptitle('Genomics England Research Portfolio Strategic Analysis\n2000-2024 Publications (n=593)',
+    fig.suptitle('Genomics England Research Portfolio Strategic Analysis\n2013-2024 Publications (n=593)',
                  fontsize=20, fontweight='bold', y=0.98)
     
     # 1. PCA Visualization with annotations (top left, larger)
@@ -152,16 +167,16 @@ def plot_annotated_pca(ax, results):
     
     # PCA coordinates from the original analysis
     pca_coords = np.array([
-        [0.29, 0.29],   # C0
-        [0.00, -0.08],  # C1
-        [0.02, 0.00],   # C2
-        [0.03, -0.02],  # C3
-        [0.10, -0.13],  # C4
-        [-0.01, 0.09],  # C5
-        [0.13, -0.16],  # C6
-        [-0.17, 0.04],  # C7
-        [-0.30, 0.12],  # C8
-        [-0.01, 0.09]   # C9
+        [0.29, 0.29],   # C0 Software - far right/top
+        [0.00, -0.08],  # C1 Ethics - center
+        [0.02, 0.00],   # C2 Population Genomics - center
+        [0.03, -0.02],  # C3 Rare Disease - center
+        [0.10, -0.13],  # C4 Cancer - bottom right
+        [-0.01, 0.09],  # C5 Sequencing - center-top
+        [0.13, -0.16],  # C6 Programme Identity - bottom right
+        [-0.17, 0.04],  # C7 Demographics - left
+        [-0.30, 0.12],  # C8 Paediatrics - far left
+        [-0.01, 0.09]   # C9 Model Organisms - center-top
     ])
     
     cluster_sizes = results.groupby('cluster').size().values
@@ -184,61 +199,43 @@ def plot_annotated_pca(ax, results):
                             edgecolor=CLUSTER_COLORS[i],
                             alpha=0.9))
     
-    # Add strategic zones
-    # Core clinical zone
-    core_zone = plt.Circle((0.02, -0.02), 0.12, 
-                           color='blue', alpha=0.1, 
-                           linestyle='--', fill=False, 
-                           linewidth=2, label='Core Clinical')
-    ax.add_patch(core_zone)
-    
-    # Technical infrastructure zone
-    tech_zone = plt.Circle((0.15, 0.08), 0.15,
-                          color='green', alpha=0.1,
-                          linestyle='--', fill=False,
-                          linewidth=2, label='Technical')
-    ax.add_patch(tech_zone)
-    
-    # Specialised clinical zone
-    spec_zone = plt.Circle((-0.24, 0.08), 0.12,
-                          color='orange', alpha=0.1,
-                          linestyle='--', fill=False,
-                          linewidth=2, label='Specialised')
-    ax.add_patch(spec_zone)
-    
-    ax.set_xlabel('PC1 (22.5% variance) - Technical → Clinical', fontsize=12, fontweight='bold')
-    ax.set_ylabel('PC2 (17.9% variance) - Population → Specialised', fontsize=12, fontweight='bold')
+    # Fix axis labels to reflect actual PCA interpretation
+    ax.set_xlabel('PC1 (22.5% variance) - Specialised ← → Technical/Infrastructure', 
+                 fontsize=12, fontweight='bold')
+    ax.set_ylabel('PC2 (17.9% variance) - Clinical/Applied ← → Methods/Discovery', 
+                 fontsize=12, fontweight='bold')
     ax.set_title('Research Portfolio Semantic Landscape', fontsize=14, fontweight='bold', pad=20)
     
     ax.grid(True, alpha=0.3, linestyle=':')
     ax.set_xlim(-0.4, 0.4)
     ax.set_ylim(-0.25, 0.35)
     
-    # Add legend for zones
-    ax.legend(loc='upper left', frameon=True, fancybox=True, shadow=True)
+    # Add text annotations for strategic groupings instead of zones
+    ax.text(-0.24, 0.18, 'Specialised', fontsize=10, style='italic', 
+           alpha=0.7, ha='center')
+    ax.text(0.20, 0.25, 'Technical/Methods', fontsize=10, style='italic', 
+           alpha=0.7, ha='center')
+    ax.text(0.05, -0.18, 'Core Clinical', fontsize=10, style='italic', 
+           alpha=0.7, ha='center')
+    ax.text(0.06, -0.22, 'Governance', fontsize=10, style='italic', 
+           alpha=0.7, ha='center')
 
 def plot_portfolio_composition(ax, results):
-    """Create portfolio composition donut chart"""
+    """Create portfolio composition donut chart by research themes"""
     
     cluster_counts = results.groupby('cluster').size()
     
-    # Group into strategic categories
-    categories = {
-        'Core Clinical (54%)': [2, 3, 4],  # Population, Rare, Cancer
-        'Infrastructure (11%)': [0, 5],     # Software, Sequencing
-        'Enablers (16%)': [1, 6, 7],       # Ethics, Programme, Demographics
-        'Specialised (19%)': [8, 9]        # Paediatrics, Models
-    }
+    # Define labels with counts for display
+    theme_labels = [f'{CLUSTER_THEMES[i]} ({cluster_counts[i]})' 
+                   for i in range(10)]
     
-    cat_sizes = []
-    cat_colors = ['#54C6EB', '#2E4057', '#048A81', '#F18F01']
-    
-    for cat, clusters in categories.items():
-        cat_sizes.append(sum(cluster_counts[c] for c in clusters))
+    # Use consistent colors for each theme
+    theme_colors = [CLUSTER_COLORS[i] for i in range(10)]
+    theme_sizes = [cluster_counts[i] for i in range(10)]
     
     # Create donut chart
-    wedges, texts, autotexts = ax.pie(cat_sizes, labels=categories.keys(),
-                                       colors=cat_colors, autopct='%1.0f%%',
+    wedges, texts, autotexts = ax.pie(theme_sizes, labels=theme_labels,
+                                       colors=theme_colors, autopct='%1.0f%%',
                                        startangle=90, pctdistance=0.85)
     
     # Make it a donut
@@ -249,62 +246,85 @@ def plot_portfolio_composition(ax, results):
     ax.text(0, 0, '593\nPapers', ha='center', va='center',
            fontsize=16, fontweight='bold')
     
-    ax.set_title('Portfolio Strategic Composition', fontsize=12, fontweight='bold')
+    ax.set_title('Portfolio Strategic Composition by Theme', fontsize=12, fontweight='bold')
     
+    # Adjust text sizes and colors
+    for text in texts:
+        text.set_fontsize(8)
     for autotext in autotexts:
         autotext.set_color('white')
         autotext.set_fontweight('bold')
-        autotext.set_fontsize(10)
+        autotext.set_fontsize(8)
 
 def plot_temporal_evolution(ax, results):
-    """Show temporal evolution of research focus"""
+    """Show temporal evolution of research focus as a stream graph"""
     
-    # Create year bins
-    results['year_bin'] = pd.cut(results['Year'], 
-                                 bins=[2000, 2015, 2020, 2024],
-                                 labels=['2000-2015', '2016-2020', '2021-2024'])
+    # Filter to start from 2013
+    results_filtered = results[results['Year'] >= 2013].copy()
     
-    # Count papers by cluster and period
-    temporal = results.groupby(['year_bin', 'cluster']).size().unstack(fill_value=0)
+    # Create year-cluster matrix
+    years = range(2013, 2025)
+    cluster_data = {}
     
-    # Normalize to percentages
-    temporal_pct = temporal.div(temporal.sum(axis=1), axis=0) * 100
+    for cluster in range(10):
+        cluster_counts = []
+        for year in years:
+            count = len(results_filtered[(results_filtered['cluster'] == cluster) & 
+                                        (results_filtered['Year'] == year)])
+            cluster_counts.append(count)
+        # Apply smoothing for better visualization
+        cluster_data[cluster] = np.convolve(cluster_counts, np.ones(3)/3, mode='same')
     
-    # Plot stacked area
-    temporal_pct.T.plot(kind='bar', stacked=True, ax=ax,
-                        color=[CLUSTER_COLORS[i] for i in range(10)],
-                        width=0.7)
+    # Create stacked area plot (stream graph style)
+    x = list(years)
+    y_stack = np.array([cluster_data[i] for i in range(10)])
     
-    ax.set_xlabel('Period', fontsize=11, fontweight='bold')
-    ax.set_ylabel('% of Publications', fontsize=11, fontweight='bold')
-    ax.set_title('Portfolio Evolution Over Time', fontsize=12, fontweight='bold')
-    ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left', 
-             labels=[CLUSTER_LABELS[i].replace('\n', ' ') for i in range(10)],
-             fontsize=8, frameon=False)
-    ax.set_xticklabels(ax.get_xticklabels(), rotation=0)
+    # Use consistent cluster theme labels
+    # Create stream graph
+    ax.stackplot(x, y_stack, labels=CLUSTER_THEMES,
+                colors=[CLUSTER_COLORS[i] for i in range(10)],
+                alpha=0.8)
+    
+    ax.set_xlabel('Year', fontsize=11, fontweight='bold')
+    ax.set_ylabel('Number of Publications', fontsize=11, fontweight='bold')
+    ax.set_title('Portfolio Evolution: Year-by-Year Publication Counts (2013-2024)', 
+                fontsize=12, fontweight='bold')
+    
+    # Create legend with theme names
+    ax.legend(labels=CLUSTER_THEMES,
+             bbox_to_anchor=(1.05, 1), loc='upper left',
+             fontsize=8, frameon=False, title='Research Themes')
+    
+    ax.grid(True, alpha=0.2, axis='y')
+    ax.set_xlim(2013, 2024)
+    
+    # Add total count annotations on top
+    for year in years:
+        year_total = sum(cluster_data[cluster][year-2013] for cluster in range(10))
+        if year_total > 0:
+            ax.text(year, year_total + 2, str(int(year_total)), 
+                   ha='center', va='bottom', fontsize=7, fontweight='bold')
 
 def plot_theme_distribution(ax, summaries):
-    """Create horizontal bar chart of top research themes"""
+    """Create horizontal bar chart of top research themes with consistent labels"""
     
-    # Get top terms per cluster with cluster sizes
-    top_terms_by_cluster = {}
-    for cluster in range(10):
-        cluster_data = summaries[summaries['cluster'] == cluster]
-        n_pubs = cluster_data.iloc[0]['n_publications']
-        top_term = cluster_data.iloc[0]['term_cdf_ipf'].replace('_', ' ').title()
-        top_terms_by_cluster[cluster] = (top_term, n_pubs)
+    # Get cluster sizes from summaries
+    cluster_sizes = summaries.groupby('cluster')['n_publications'].first().sort_index()
     
-    # Sort by publication count
-    sorted_clusters = sorted(top_terms_by_cluster.items(), 
-                           key=lambda x: x[1][1], reverse=True)
+    # Create data for plotting with cluster number, theme, and size
+    theme_data = [(i, CLUSTER_THEMES[i], cluster_sizes[i], CLUSTER_COLORS[i]) 
+                  for i in range(10)]
+    # Sort by size (descending)
+    theme_data_sorted = sorted(theme_data, key=lambda x: x[2], reverse=True)
+    
+    # Extract sorted values
+    labels = [f"C{item[0]}: {item[1]}" for item in theme_data_sorted]
+    values = [item[2] for item in theme_data_sorted]
+    colors = [item[3] for item in theme_data_sorted]
     
     # Create horizontal bar chart
-    y_pos = np.arange(len(sorted_clusters))
-    pubs = [item[1][1] for item in sorted_clusters]
-    labels = [f"C{item[0]}: {item[1][0]}" for item in sorted_clusters]
-    colors = [CLUSTER_COLORS[item[0]] for item in sorted_clusters]
-    
-    bars = ax.barh(y_pos, pubs, color=colors, alpha=0.8, edgecolor='white', linewidth=2)
+    y_pos = np.arange(len(labels))
+    bars = ax.barh(y_pos, values, color=colors, alpha=0.8, edgecolor='white', linewidth=2)
     
     ax.set_yticks(y_pos)
     ax.set_yticklabels(labels, fontsize=10)
@@ -313,7 +333,7 @@ def plot_theme_distribution(ax, summaries):
     ax.grid(True, axis='x', alpha=0.3)
     
     # Add value labels
-    for i, (bar, pub_count) in enumerate(zip(bars, pubs)):
+    for i, (bar, pub_count) in enumerate(zip(bars, values)):
         ax.text(bar.get_width() + 2, bar.get_y() + bar.get_height()/2,
                f'{pub_count}', va='center', fontsize=9, fontweight='bold')
 
@@ -538,17 +558,26 @@ def plot_collaboration_potential(ax):
 def create_temporal_dynamics(results):
     """Create Figure 4: Temporal Dynamics Analysis"""
     
-    fig = plt.figure(figsize=(22, 14))
-    gs = GridSpec(3, 3, figure=fig, hspace=0.3, wspace=0.25)
+    # Much larger figure with better aspect ratio
+    fig = plt.figure(figsize=(28, 18))
     
-    fig.suptitle('Temporal Dynamics: Evolution of Research Themes 2000-2024',
-                fontsize=20, fontweight='bold', y=0.98)
+    # Create custom grid with more space
+    # Top row: stream graph takes 2 cols, heatmap takes 1 col
+    # Make top row taller to accommodate legend
+    gs = GridSpec(3, 3, figure=fig, 
+                 hspace=0.5,  # More vertical spacing
+                 wspace=0.7,  # More horizontal spacing
+                 height_ratios=[1.5, 1, 1],  # Top row is 50% taller
+                 left=0.05, right=0.95, top=0.93, bottom=0.05)
     
-    # 1. Stream graph (top, spanning 2 columns)
+    fig.suptitle('Temporal Dynamics: Evolution of Research Themes 2013-2024',
+                fontsize=20, fontweight='bold')
+    
+    # 1. Stream graph (top left, spanning 2 columns)
     ax1 = fig.add_subplot(gs[0, :2])
     plot_stream_graph(ax1, results)
     
-    # 2. Heatmap of cluster intensity by year (top right)
+    # 2. Heatmap (top right)
     ax2 = fig.add_subplot(gs[0, 2])
     plot_cluster_heatmap(ax2, results)
     
@@ -564,11 +593,11 @@ def create_temporal_dynamics(results):
     ax5 = fig.add_subplot(gs[1, 2])
     plot_transition_analysis(ax5, results)
     
-    # 6. Detailed timeline (bottom, spanning all columns)
+    # 6. Detailed timeline (bottom row, spanning all columns)
     ax6 = fig.add_subplot(gs[2, :])
     plot_detailed_timeline(ax6, results)
     
-    plt.tight_layout(rect=[0, 0.02, 1, 0.96])
+    # Don't use tight_layout as we've manually set the GridSpec parameters
     output_file = os.path.join(output_dir, 'GE_Temporal_Dynamics.png')
     plt.savefig(output_file, dpi=300, bbox_inches='tight', facecolor='white')
     plt.show()
@@ -576,57 +605,73 @@ def create_temporal_dynamics(results):
     print(f"✓ Figure 4: Temporal Dynamics saved to {output_file}")
 
 def plot_stream_graph(ax, results):
-    """Create a stream graph showing cluster evolution"""
+    """Create a stream graph showing cluster evolution with proper spacing"""
+    
+    # Filter to start from 2013
+    results_filtered = results[results['Year'] >= 2013].copy()
     
     # Create year-cluster matrix
-    years = range(2000, 2025)
+    years = range(2013, 2025)
     cluster_data = {}
     
     for cluster in range(10):
         cluster_counts = []
         for year in years:
-            count = len(results[(results['cluster'] == cluster) & (results['Year'] == year)])
+            count = len(results_filtered[(results_filtered['cluster'] == cluster) & 
+                                        (results_filtered['Year'] == year)])
             cluster_counts.append(count)
-        # Apply smoothing for better visualization
+        # Apply smoothing
         cluster_data[cluster] = np.convolve(cluster_counts, np.ones(3)/3, mode='same')
     
-    # Create stacked area plot (stream graph style)
+    # Create stacked area plot
     x = list(years)
     y_stack = np.array([cluster_data[i] for i in range(10)])
     
-    # Create the stack
-    ax.stackplot(x, y_stack, labels=[CLUSTER_LABELS[i].replace('\n', ' ') for i in range(10)],
-                colors=[CLUSTER_COLORS[i] for i in range(10)], alpha=0.8)
+    # Create the stack with consistent theme labels
+    stack = ax.stackplot(x, y_stack, labels=CLUSTER_THEMES,
+                         colors=[CLUSTER_COLORS[i] for i in range(10)], 
+                         alpha=0.8)
     
-    ax.set_xlabel('Year', fontsize=12, fontweight='bold')
-    ax.set_ylabel('Publications per Year', fontsize=12, fontweight='bold')
-    ax.set_title('Research Theme Evolution (Stream Graph)', fontsize=13, fontweight='bold')
-    ax.legend(loc='upper left', bbox_to_anchor=(1.02, 1), fontsize=9, frameon=False)
+    ax.set_xlabel('Year', fontsize=10, fontweight='bold')
+    ax.set_ylabel('Publications per Year', fontsize=10, fontweight='bold')
+    ax.set_title('Research Theme Evolution (Stream Graph)', fontsize=11, fontweight='bold', pad=8)
+    
+    # Create legend in two columns below the plot
+    handles, labels = ax.get_legend_handles_labels()
+    ax.legend(handles, labels, 
+             loc='upper center', bbox_to_anchor=(0.5, -0.12),
+             ncol=5, fontsize=7, frameon=False, 
+             columnspacing=1, handletextpad=0.5, title='Research Themes')
+    
     ax.grid(True, alpha=0.2, axis='y')
-    ax.set_xlim(2000, 2024)
+    ax.set_xlim(2013, 2024)
     
-    # Add key events annotations
+    # Key events with smaller text
     key_events = [
-        (2013, '100K Genomes\nProject Launch'),
-        (2018, 'NHS Genomic\nMedicine Service'),
-        (2020, 'COVID-19\nPivot')
+        (2013, '100K Launch'),
+        (2018, 'NHS Service'),
+        (2020, 'COVID-19')
     ]
     
+    ylim = ax.get_ylim()[1]
     for year, event in key_events:
-        ax.axvline(x=year, color='red', linestyle='--', alpha=0.3)
-        ax.text(year, ax.get_ylim()[1]*0.95, event, rotation=0,
-               fontsize=8, ha='center', style='italic',
-               bbox=dict(boxstyle='round', facecolor='yellow', alpha=0.3))
+        ax.axvline(x=year, color='red', linestyle='--', alpha=0.3, linewidth=1)
+        ax.text(year, ylim*0.9, event, rotation=0,
+               fontsize=6, ha='center', style='italic',
+               bbox=dict(boxstyle='round,pad=0.2', facecolor='yellow', alpha=0.3))
 
 def plot_cluster_heatmap(ax, results):
     """Create heatmap of cluster intensity by year"""
     
+    # Filter to start from 2013
+    results_filtered = results[results['Year'] >= 2013].copy()
+    
     # Create year-cluster matrix
-    years = range(2000, 2025)
+    years = range(2013, 2025)
     heatmap_data = np.zeros((10, len(years)))
     
     for i, year in enumerate(years):
-        year_data = results[results['Year'] == year]
+        year_data = results_filtered[results_filtered['Year'] == year]
         if len(year_data) > 0:
             for cluster in range(10):
                 cluster_count = len(year_data[year_data['cluster'] == cluster])
@@ -642,8 +687,8 @@ def plot_cluster_heatmap(ax, results):
     im = ax.imshow(heatmap_norm, cmap='YlOrRd', aspect='auto')
     
     # Set ticks
-    ax.set_xticks(np.arange(0, len(years), 5))
-    ax.set_xticklabels([str(years[i]) for i in range(0, len(years), 5)], rotation=45)
+    ax.set_xticks(np.arange(0, len(years), 2))
+    ax.set_xticklabels([str(years[i]) for i in range(0, len(years), 2)], rotation=45)
     ax.set_yticks(np.arange(10))
     ax.set_yticklabels([f'C{i}' for i in range(10)])
     
@@ -682,16 +727,17 @@ def plot_growth_rates(ax, results):
     bars = ax.bar(clusters, growth_rates, color=colors, alpha=0.7, edgecolor='black')
     
     ax.axhline(y=0, color='black', linestyle='-', linewidth=0.5)
-    ax.set_ylabel('Growth Rate (%)', fontsize=11, fontweight='bold')
-    ax.set_title('5-Year Growth Rate\n(2020-24 vs 2015-19)', fontsize=12, fontweight='bold')
+    ax.set_ylabel('Growth Rate (%)', fontsize=10, fontweight='bold')
+    ax.set_title('5-Year Growth Rate\n(2020-24 vs 2015-19)', fontsize=11, fontweight='bold', pad=10)
     ax.grid(True, alpha=0.3, axis='y')
+    ax.tick_params(axis='x', labelsize=8)
     
     # Add value labels
     for bar, rate in zip(bars, growth_rates):
         height = bar.get_height()
         ax.text(bar.get_x() + bar.get_width()/2., height,
                f'{rate:.0f}%', ha='center', va='bottom' if height > 0 else 'top',
-               fontsize=8, fontweight='bold')
+               fontsize=7, fontweight='bold')
 
 def plot_emerging_declining(ax, results):
     """Identify emerging and declining themes"""
@@ -725,25 +771,26 @@ def plot_emerging_declining(ax, results):
     ax.barh(clusters, scores, color=colors, alpha=0.8, edgecolor='black')
     ax.axvline(x=0, color='black', linestyle='-', linewidth=1)
     
-    ax.set_xlabel('Trend Score', fontsize=11, fontweight='bold')
-    ax.set_title('Emerging vs Declining\nThemes', fontsize=12, fontweight='bold')
+    ax.set_xlabel('Trend Score', fontsize=10, fontweight='bold')
+    ax.set_title('Emerging vs Declining\nThemes', fontsize=11, fontweight='bold', pad=10)
     ax.grid(True, alpha=0.3, axis='x')
+    ax.tick_params(axis='y', labelsize=8)
     
-    # Add labels
+    # Add smaller labels
     ax.text(0.5, 0.5, 'EMERGING →', transform=ax.transAxes,
-           fontsize=10, color='green', fontweight='bold')
+           fontsize=8, color='green', fontweight='bold')
     ax.text(0.1, 0.5, '← DECLINING', transform=ax.transAxes,
-           fontsize=10, color='red', fontweight='bold')
+           fontsize=8, color='red', fontweight='bold')
 
 def plot_transition_analysis(ax, results):
     """Analyze transitions between research phases"""
     
-    # Define research phases
+    # Define research phases starting from 2013
     phases = {
-        '2000-2012': 'Foundation',
-        '2013-2017': '100K Launch',
-        '2018-2020': 'NHS Integration',
-        '2021-2024': 'Mature Operations'
+        '2013-2015': 'Foundation',
+        '2016-2018': 'Scale-up',
+        '2019-2021': 'NHS Integration',
+        '2022-2024': 'Mature Operations'
     }
     
     # Calculate dominant clusters per phase
@@ -756,6 +803,7 @@ def plot_transition_analysis(ax, results):
             top_clusters = phase_results['cluster'].value_counts().head(3)
             phase_data.append({
                 'phase': phase_name,
+                'years': phase_years,
                 'top_clusters': top_clusters.index.tolist(),
                 'percentages': (top_clusters.values / len(phase_results) * 100).tolist()
             })
@@ -767,20 +815,22 @@ def plot_transition_analysis(ax, results):
     
     for i, phase in enumerate(phase_data):
         # Phase box
-        rect = FancyBboxPatch((0.1, y_positions[i] - 0.08), 0.25, 0.12,
+        rect = FancyBboxPatch((0.05, y_positions[i] - 0.08), 0.3, 0.12,
                               boxstyle="round,pad=0.01",
                               facecolor='lightblue', edgecolor='navy',
                               linewidth=2, alpha=0.7)
         ax.add_patch(rect)
         
-        # Phase name
-        ax.text(0.225, y_positions[i] - 0.02, phase['phase'],
+        # Phase name and years
+        ax.text(0.2, y_positions[i] + 0.01, phase['phase'],
                ha='center', va='center', fontsize=10, fontweight='bold')
+        ax.text(0.2, y_positions[i] - 0.04, f"({phase['years']})",
+               ha='center', va='center', fontsize=8, style='italic')
         
         # Top clusters
         for j, (cluster, pct) in enumerate(zip(phase['top_clusters'][:3], 
                                                phase['percentages'][:3])):
-            ax.text(0.4 + j*0.15, y_positions[i] - 0.02,
+            ax.text(0.4 + j*0.18, y_positions[i] - 0.02,
                    f"C{cluster}\n({pct:.0f}%)",
                    ha='center', va='center', fontsize=9,
                    bbox=dict(boxstyle='round', 
@@ -789,8 +839,8 @@ def plot_transition_analysis(ax, results):
         
         # Arrow to next phase
         if i < len(phase_data) - 1:
-            ax.annotate('', xy=(0.225, y_positions[i+1] + 0.04),
-                       xytext=(0.225, y_positions[i] - 0.12),
+            ax.annotate('', xy=(0.2, y_positions[i+1] + 0.04),
+                       xytext=(0.2, y_positions[i] - 0.12),
                        arrowprops=dict(arrowstyle='->', lw=2,
                                      color='gray', alpha=0.5))
     
@@ -801,8 +851,11 @@ def plot_transition_analysis(ax, results):
 def plot_detailed_timeline(ax, results):
     """Create detailed timeline with key milestones and cluster evolution"""
     
+    # Filter to start from 2013
+    results_filtered = results[results['Year'] >= 2013].copy()
+    
     # Prepare data
-    years = sorted(results['Year'].unique())
+    years = sorted(results_filtered['Year'].unique())
     
     # Create timeline base
     ax.plot(years, [0]*len(years), 'k-', linewidth=2, alpha=0.5)
@@ -812,7 +865,8 @@ def plot_detailed_timeline(ax, results):
         cluster_years = []
         cluster_sizes = []
         for year in years:
-            count = len(results[(results['cluster'] == cluster) & (results['Year'] == year)])
+            count = len(results_filtered[(results_filtered['cluster'] == cluster) & 
+                                        (results_filtered['Year'] == year)])
             if count > 0:
                 cluster_years.append(year)
                 cluster_sizes.append(count)
@@ -829,7 +883,6 @@ def plot_detailed_timeline(ax, results):
     
     # Add key milestones
     milestones = [
-        (2003, 'Human Genome Project Complete', 3),
         (2013, '100,000 Genomes Project Launch', 4),
         (2016, 'First Rare Disease Diagnoses', 2),
         (2018, 'NHS Genomic Medicine Service', 4),
@@ -847,10 +900,10 @@ def plot_detailed_timeline(ax, results):
     
     ax.set_xlabel('Year', fontsize=12, fontweight='bold')
     ax.set_ylabel('Research Clusters', fontsize=12, fontweight='bold')
-    ax.set_title('Detailed Timeline: Cluster Evolution and Key Milestones', 
+    ax.set_title('Detailed Timeline: Cluster Evolution and Key Milestones (2013-2024)', 
                 fontsize=13, fontweight='bold')
     ax.grid(True, alpha=0.2)
-    ax.set_xlim(1999, 2025)
+    ax.set_xlim(2012.5, 2024.5)
     ax.set_ylim(-6, 12)
     
     # Add legend for largest clusters only
@@ -1088,7 +1141,7 @@ def main():
     
     print("="*60)
     print("GENOMICS ENGLAND BOARD PRESENTATION SUITE")
-    print("Strategic Portfolio Analysis 2000-2024")
+    print("Strategic Portfolio Analysis 2013-2024")
     print("="*60)
     print(f"\nScript: PYTHON/00-03-ge-cluster-analysis.py")
     print(f"Input:  {input_dir}")
