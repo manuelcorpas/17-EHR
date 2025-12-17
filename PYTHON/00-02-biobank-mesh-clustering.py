@@ -49,12 +49,12 @@ OUTPUT FILES:
 - ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/clustering_results_<biobank>.csv: Publications with cluster assignments
 - ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/cluster_summaries_<biobank>.csv: Top MeSH terms per cluster
 - ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/biobank_clustering_summary.csv: Overall summary across all biobanks
-- ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/composite_pca_all_biobanks.png: INTEGRATED PCA showing all biobanks (Figure 3A)
-- **NEW** ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/unified_pca_all_clusters.png: UNIFIED PCA showing overlaps (Figure 3B)
-- **NEW** ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/unified_umap_all_clusters.png: UNIFIED UMAP showing overlaps
-- ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/composite_umap_all_biobanks.png: INTEGRATED UMAP showing all biobanks
-- ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/pca_clusters_<biobank>.png: Individual detailed PCA per biobank
-- ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/umap_clusters_<biobank>.png: Individual detailed UMAP per biobank
+- ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/composite_pca_all_biobanks.png/.pdf: INTEGRATED PCA showing all biobanks (Figure 3)
+- **NEW** ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/unified_pca_all_clusters.png/.pdf: UNIFIED PCA showing overlaps (Figure 3B)
+- **NEW** ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/unified_umap_all_clusters.png/.pdf: UNIFIED UMAP showing overlaps
+- ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/composite_umap_all_biobanks.png/.pdf: INTEGRATED UMAP showing all biobanks
+- ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/pca_clusters_<biobank>.png/.pdf: Individual detailed PCA per biobank
+- ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/umap_clusters_<biobank>.png/.pdf: Individual detailed UMAP per biobank
 - ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/supplementary_cluster_characteristics_table.csv: COMPREHENSIVE cluster details
 - ANALYSIS/00-02-BIOBANK-MESH-CLUSTERING/cluster_summary_overview.csv: Simplified overview table
 
@@ -714,9 +714,11 @@ def create_unified_visualization(all_centroids_data, save_projections=True, load
     
     # Save Figure 3B
     pca_unified_file = os.path.join(analysis_dir, 'unified_pca_all_clusters.png')
+    pca_unified_pdf = os.path.join(analysis_dir, 'unified_pca_all_clusters.pdf')
     plt.savefig(pca_unified_file, dpi=300, bbox_inches='tight', facecolor='white')
+    plt.savefig(pca_unified_pdf, dpi=300, bbox_inches='tight', facecolor='white')
     plt.close()
-    logger.info(f"✅ Figure 3B (PCA) saved: {pca_unified_file}")
+    logger.info(f"✅ Figure 3B (PCA) saved: {pca_unified_file} and {pca_unified_pdf}")
     
     # Create UMAP version if available
     if UMAP_AVAILABLE and len(centroids_matrix) >= 10:
@@ -838,9 +840,11 @@ def create_unified_visualization(all_centroids_data, save_projections=True, load
         
         # Save UMAP figure
         umap_unified_file = os.path.join(analysis_dir, 'unified_umap_all_clusters.png')
+        umap_unified_pdf = os.path.join(analysis_dir, 'unified_umap_all_clusters.pdf')
         plt.savefig(umap_unified_file, dpi=300, bbox_inches='tight', facecolor='white')
+        plt.savefig(umap_unified_pdf, dpi=300, bbox_inches='tight', facecolor='white')
         plt.close()
-        logger.info(f"✅ Figure 3B (UMAP) saved: {umap_unified_file}")
+        logger.info(f"✅ Figure 3B (UMAP) saved: {umap_unified_file} and {umap_unified_pdf}")
     
     # Generate overlap analysis report
     generate_overlap_analysis(all_centroids_data, pca_coords)
@@ -1065,9 +1069,11 @@ def create_annotated_unified_visualization(all_centroids_data, all_cluster_data,
     
     # Save annotated version
     annotated_file = os.path.join(analysis_dir, 'unified_pca_annotated.png')
+    annotated_pdf = os.path.join(analysis_dir, 'unified_pca_annotated.pdf')
     plt.savefig(annotated_file, dpi=300, bbox_inches='tight', facecolor='white')
+    plt.savefig(annotated_pdf, dpi=300, bbox_inches='tight', facecolor='white')
     plt.close()
-    logger.info(f"✅ Annotated Figure 3B saved: {annotated_file}")
+    logger.info(f"✅ Annotated Figure 3B saved: {annotated_file} and {annotated_pdf}")
     
     return pca_coords
 
@@ -1121,9 +1127,11 @@ def create_overlap_heatmap(all_centroids_data):
     
     # Save heatmap
     heatmap_file = os.path.join(analysis_dir, 'cluster_similarity_heatmap.png')
+    heatmap_pdf = os.path.join(analysis_dir, 'cluster_similarity_heatmap.pdf')
     plt.savefig(heatmap_file, dpi=300, bbox_inches='tight', facecolor='white')
+    plt.savefig(heatmap_pdf, dpi=300, bbox_inches='tight', facecolor='white')
     plt.close()
-    logger.info(f"✅ Similarity heatmap saved: {heatmap_file}")
+    logger.info(f"✅ Similarity heatmap saved: {heatmap_file} and {heatmap_pdf}")
     
     return similarities, cluster_labels
 
@@ -1177,7 +1185,7 @@ def generate_overlap_analysis(all_centroids_data, pca_coords):
         logger.info(f"\n✅ Overlap analysis saved: {overlap_file}")
 
 #############################################################################
-# 7. Original 2D Projections and Visualization (Figure 3A)
+# 7. Original 2D Projections and Visualization (Figure 3)
 #############################################################################
 
 def create_2d_projections(tfidf_matrix, cluster_labels, biobank_name):
@@ -1231,7 +1239,7 @@ def create_2d_projections(tfidf_matrix, cluster_labels, biobank_name):
     return projection_data
 
 def create_composite_visualizations(all_projection_data):
-    """Create composite PCA and UMAP figures showing all biobanks together (Figure 3A)"""
+    """Create composite PCA and UMAP figures showing all biobanks together (Figure 3)"""
     if not all_projection_data:
         logger.warning("No projection data available for composite visualization")
         return
@@ -1247,7 +1255,7 @@ def create_composite_visualizations(all_projection_data):
     cols = min(3, n_biobanks)  # Max 3 columns
     rows = math.ceil(n_biobanks / cols)
     
-    # Create composite PCA figure (Figure 3A)
+    # Create composite PCA figure (Figure 3)
     fig, axes = plt.subplots(rows, cols, figsize=(5*cols, 4*rows))
     if n_biobanks == 1:
         axes = [axes]
@@ -1256,7 +1264,7 @@ def create_composite_visualizations(all_projection_data):
     else:
         axes = axes.flatten()
     
-    fig.suptitle('Figure 3A: PCA - MeSH Term Clusters Across All Biobanks\n'
+    fig.suptitle('Figure 3: PCA - MeSH Term Clusters Across All Biobanks\n'
                  'Each panel shows semantic clusters within one biobank', 
                  fontsize=16, fontweight='bold', y=0.98)
     
@@ -1293,9 +1301,11 @@ def create_composite_visualizations(all_projection_data):
     
     plt.tight_layout()
     pca_composite_file = os.path.join(analysis_dir, 'composite_pca_all_biobanks.png')
+    pca_composite_pdf = os.path.join(analysis_dir, 'composite_pca_all_biobanks.pdf')
     plt.savefig(pca_composite_file, dpi=300, bbox_inches='tight')
+    plt.savefig(pca_composite_pdf, dpi=300, bbox_inches='tight')
     plt.close()
-    logger.info(f"Figure 3A (PCA) saved: {pca_composite_file}")
+    logger.info(f"Figure 3 (PCA) saved: {pca_composite_file} and {pca_composite_pdf}")
     
     # Create composite UMAP figure (if data available)
     umap_data_available = [p for p in valid_projections if p['umap_coords'] is not None]
@@ -1345,9 +1355,11 @@ def create_composite_visualizations(all_projection_data):
         
         plt.tight_layout()
         umap_composite_file = os.path.join(analysis_dir, 'composite_umap_all_biobanks.png')
+        umap_composite_pdf = os.path.join(analysis_dir, 'composite_umap_all_biobanks.pdf')
         plt.savefig(umap_composite_file, dpi=300, bbox_inches='tight')
+        plt.savefig(umap_composite_pdf, dpi=300, bbox_inches='tight')
         plt.close()
-        logger.info(f"Composite UMAP plot saved: {umap_composite_file}")
+        logger.info(f"Composite UMAP plot saved: {umap_composite_file} and {umap_composite_pdf}")
     
     # Create individual biobank plots for detailed analysis
     create_individual_biobank_plots(valid_projections)
@@ -1390,7 +1402,9 @@ def create_individual_biobank_plots(all_projection_data):
                     fontsize=9, style='italic')
         
         pca_file = os.path.join(analysis_dir, f'pca_clusters_{biobank_name.lower().replace(" ", "_")}.png')
+        pca_file_pdf = os.path.join(analysis_dir, f'pca_clusters_{biobank_name.lower().replace(" ", "_")}.pdf')
         plt.savefig(pca_file, dpi=300, bbox_inches='tight')
+        plt.savefig(pca_file_pdf, dpi=300, bbox_inches='tight')
         plt.close()
         
         # Create detailed UMAP plot (if available)
@@ -1420,7 +1434,9 @@ def create_individual_biobank_plots(all_projection_data):
                         fontsize=9, style='italic')
             
             umap_file = os.path.join(analysis_dir, f'umap_clusters_{biobank_name.lower().replace(" ", "_")}.png')
+            umap_file_pdf = os.path.join(analysis_dir, f'umap_clusters_{biobank_name.lower().replace(" ", "_")}.pdf')
             plt.savefig(umap_file, dpi=300, bbox_inches='tight')
+            plt.savefig(umap_file_pdf, dpi=300, bbox_inches='tight')
             plt.close()
 
 #############################################################################
@@ -1699,7 +1715,7 @@ def main_enhanced():
     print("=" * 80)
     print("BIOBANK MESH TERM CLUSTERING PIPELINE - ENHANCED WITH UNIFIED VISUALIZATION")
     print("Per-biobank semantic clustering + unified semantic space analysis")
-    print("Generates Figure 3A (separate panels) and Figure 3B (unified space)")
+    print("Generates Figure 3 (separate panels) and Figure 3B (unified space)")
     print("=" * 80)
     
     try:
@@ -1707,7 +1723,7 @@ def main_enhanced():
         df_with_mesh = load_biobank_data()
         
         print(f"\n🎯 Processing pipeline:")
-        print(f"   📊 Figure 3A: Each biobank analyzed independently (separate panels)")
+        print(f"   📊 Figure 3: Each biobank analyzed independently (separate panels)")
         print(f"   🔄 Figure 3B: All clusters in unified semantic space (shows overlaps)")
         print(f"   📋 Supplementary tables with cluster characteristics")
         print(f"   ✅ EXACT FILTERING: Same totals as 00-01-biobank-analysis.py")
@@ -1728,9 +1744,9 @@ def main_enhanced():
             if cluster_data is not None:
                 all_cluster_data.append(cluster_data)
         
-        # Create Figure 3A: composite visualizations (separate panels)
+        # Create Figure 3: composite visualizations (separate panels)
         logger.info("\n" + "="*60)
-        logger.info("CREATING FIGURE 3A: COMPOSITE VISUALIZATIONS")
+        logger.info("CREATING FIGURE 3: COMPOSITE VISUALIZATIONS")
         logger.info("="*60)
         create_composite_visualizations(all_projection_data)
         
@@ -1764,10 +1780,10 @@ def main_enhanced():
         print(f"📂 All results saved to: {analysis_dir}")
         
         print(f"\n🎨 FIGURE 3 COMPONENTS:")
-        print(f"   📊 Figure 3A: composite_pca_all_biobanks.png")
+        print(f"   📊 Figure 3: composite_pca_all_biobanks.png/.pdf")
         print(f"      - Shows each biobank's clusters independently")
         print(f"      - Separate panels for comparison")
-        print(f"   🔄 Figure 3B: unified_pca_all_clusters.png")
+        print(f"   🔄 Figure 3B: unified_pca_all_clusters.png/.pdf")
         print(f"      - All clusters in shared semantic space")
         print(f"      - Reveals overlaps and distinct territories")
         print(f"      - Color = biobank, size = cluster size")
@@ -1780,9 +1796,9 @@ def main_enhanced():
         
         print(f"\n📂 ALL OUTPUT FILES:")
         print(f"   🎨 FIGURE 3 VISUALIZATIONS:")
-        print(f"      - composite_pca_all_biobanks.png (Figure 3A)")
-        print(f"      - unified_pca_all_clusters.png (Figure 3B)")
-        print(f"      - unified_umap_all_clusters.png (Figure 3B - UMAP)")
+        print(f"      - composite_pca_all_biobanks.png/.pdf (Figure 3)")
+        print(f"      - unified_pca_all_clusters.png/.pdf (Figure 3B)")
+        print(f"      - unified_umap_all_clusters.png/.pdf (Figure 3B - UMAP)")
         print(f"      - semantic_overlap_analysis.csv (cluster distances)")
         print(f"   📋 SUPPLEMENTARY TABLES:")
         print(f"      - supplementary_cluster_characteristics_table.csv")
@@ -1790,8 +1806,8 @@ def main_enhanced():
         print(f"   📈 INDIVIDUAL BIOBANK FILES:")
         print(f"      - clustering_results_<biobank>.csv")
         print(f"      - cluster_summaries_<biobank>.csv")
-        print(f"      - pca_clusters_<biobank>.png")
-        print(f"      - umap_clusters_<biobank>.png")
+        print(f"      - pca_clusters_<biobank>.png/.pdf")
+        print(f"      - umap_clusters_<biobank>.png/.pdf")
         print(f"   📋 SUMMARY:")
         print(f"      - biobank_clustering_summary.csv")
         
