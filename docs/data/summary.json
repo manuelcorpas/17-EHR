@@ -1,0 +1,88 @@
+{
+  "totals": {
+    "publications": 75356,
+    "biobanks": 27,
+    "diseases": 25,
+    "countries": 19,
+    "yearsCovered": 34
+  },
+  "equity": {
+    "ratio": 70.82,
+    "hicPublications": 73709,
+    "globalSouthPublications": 378
+  },
+  "gaps": {
+    "distribution": {
+      "Low": 20,
+      "Moderate": 5
+    },
+    "criticalCount": 0,
+    "topGaps": [
+      {
+        "id": "malaria",
+        "name": "Malaria",
+        "score": 50
+      },
+      {
+        "id": "tuberculosis",
+        "name": "Tuberculosis",
+        "score": 50
+      },
+      {
+        "id": "diarrheal_diseases",
+        "name": "Diarrheal Diseases",
+        "score": 50
+      },
+      {
+        "id": "road_traffic",
+        "name": "Road Traffic Injuries",
+        "score": 40
+      },
+      {
+        "id": "copd",
+        "name": "Chronic Obstructive Pulmonary Disease",
+        "score": 35
+      }
+    ]
+  },
+  "topBiobanks": [
+    {
+      "id": "emerge",
+      "name": "eMERGE Network",
+      "publications": 47755,
+      "ros": 0.0
+    },
+    {
+      "id": "uk_biobank",
+      "name": "UK Biobank",
+      "publications": 13341,
+      "ros": 0.0
+    },
+    {
+      "id": "decode",
+      "name": "deCODE Genetics",
+      "publications": 5604,
+      "ros": 0.0
+    },
+    {
+      "id": "finngen",
+      "name": "FinnGen",
+      "publications": 2683,
+      "ros": 0.0
+    },
+    {
+      "id": "hunt",
+      "name": "HUNT Study",
+      "publications": 1152,
+      "ros": 0.0
+    }
+  ],
+  "regions": {
+    "AMR": 49264,
+    "EUR": 24445,
+    "WPR": 1269,
+    "AFR": 204,
+    "EMR": 174
+  },
+  "lastUpdate": "2025-12-23T19:10:12.751603"
+}
