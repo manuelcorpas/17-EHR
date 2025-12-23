@@ -1,0 +1,105 @@
+
+BIOBANK RESEARCH IMPACT & INFLUENCE ANALYSIS
+===========================================
+
+JOURNAL IMPACT METRICS:
+
+Estonian Biobank:
+  - Average Impact Factor: 8.91
+  - High-Impact Rate: 25.3%
+  - Q1 Journal Rate: 33.7%
+  - Journal Diversity: 0.300
+
+Million Veteran Program:
+  - Average Impact Factor: 6.25
+  - High-Impact Rate: 13.5%
+  - Q1 Journal Rate: 18.1%
+  - Journal Diversity: 0.393
+
+All of Us:
+  - Average Impact Factor: 3.16
+  - High-Impact Rate: 3.1%
+  - Q1 Journal Rate: 4.6%
+  - Journal Diversity: 0.395
+
+UK Biobank:
+  - Average Impact Factor: 3.11
+  - High-Impact Rate: 4.1%
+  - Q1 Journal Rate: 6.9%
+  - Journal Diversity: 0.117
+
+FinnGen:
+  - Average Impact Factor: 2.93
+  - High-Impact Rate: 3.2%
+  - Q1 Journal Rate: 4.2%
+  - Journal Diversity: 0.274
+
+RESEARCH QUALITY INDICATORS:
+
+FinnGen:
+  - Methodology Focus: 76.0%
+  - International Collaboration: 1.5%
+  - Average MeSH Terms: 9.3
+  - Research Complexity: 3.32
+
+Million Veteran Program:
+  - Methodology Focus: 27.0%
+  - International Collaboration: 8.6%
+  - Average MeSH Terms: 10.9
+  - Research Complexity: 4.75
+
+Estonian Biobank:
+  - Methodology Focus: 26.0%
+  - International Collaboration: 5.9%
+  - Average MeSH Terms: 13.0
+  - Research Complexity: 5.48
+
+UK Biobank:
+  - Methodology Focus: 22.0%
+  - International Collaboration: 1.8%
+  - Average MeSH Terms: 11.1
+  - Research Complexity: 4.33
+
+All of Us:
+  - Methodology Focus: 2.2%
+  - International Collaboration: 2.9%
+  - Average MeSH Terms: 9.4
+  - Research Complexity: 4.09
+
+KNOWLEDGE TRANSFER & GROWTH:
+
+FinnGen:
+  - Growth Rate: 198.1 papers/year
+  - Growth Acceleration: 0.761
+  - Research Maturity: 1.00
+  - Recent Activity (2020+): 99.8%
+
+UK Biobank:
+  - Growth Rate: 108.1 papers/year
+  - Growth Acceleration: 0.552
+  - Research Maturity: 1.00
+  - Recent Activity (2020+): 89.7%
+
+All of Us:
+  - Growth Rate: 27.0 papers/year
+  - Growth Acceleration: 0.716
+  - Research Maturity: 1.00
+  - Recent Activity (2020+): 93.3%
+
+Million Veteran Program:
+  - Growth Rate: 5.5 papers/year
+  - Growth Acceleration: 0.541
+  - Research Maturity: 1.00
+  - Recent Activity (2020+): 90.7%
+
+Estonian Biobank:
+  - Growth Rate: 4.0 papers/year
+  - Growth Acceleration: 0.369
+  - Research Maturity: 1.00
+  - Recent Activity (2020+): 39.6%
+
+SUMMARY INSIGHTS:
+- Highest Impact: Estonian Biobank (IF: 8.91)
+- Best Quality Indicators: FinnGen (76.0% methodology focus)
+- Fastest Growing: FinnGen (198.1 papers/year)
+- Most Diverse: All of Us

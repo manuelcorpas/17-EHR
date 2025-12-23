@@ -1,0 +1,9421 @@
+Overlap Terms (MeSH ∩ Keywords):
+academic medical centers
+accreditation
+activities of daily living
+acute coronary syndrome
+acute kidney injury
+acute-on-chronic liver failure
+adaptive immunity
+adenocarcinoma
+adolescent
+africa
+aging
+air pollution
+albuminuria
+algorithms
+alpha-synuclein
+alternative splicing
+alveolar epithelial cells
+amino acids
+amyotrophic lateral sclerosis
+angiogenesis
+angiopoietin-like protein 3
+anorexia
+anthropometry
+anti-infective agents
+anticoagulants
+antihypertensive agents
+anxiety
+aortic valve stenosis
+apical hypertrophic cardiomyopathy
+apolipoprotein l1
+apoptosis
+aquaculture
+arabidopsis
+area under curve
+arthritis, rheumatoid
+artificial intelligence
+ascorbic acid
+asia
+aspirin
+asthenia
+asthma
+atherosclerosis
+atrial fibrillation
+attitude
+australia
+austria
+autism spectrum disorder
+autoantibodies
+autoimmune diseases
+autoimmunity
+automation
+autophagy
+autopsy
+bariatric surgery
+bartter syndrome
+beauty
+benchmarking
+bibliometrics
+big data
+biodiversity
+bioethics
+biofortification
+biological specimen banks
+biomarkers
+biomedical research
+biopsy
+biotechnology
+bipolar disorder
+blockchain
+blood
+blood glucose
+blood pressure
+blood transfusion
+body mass index
+body size
+bone marrow
+botswana
+brain
+brain ischemia
+brain mapping
+brazil
+breast
+breeding
+bronchoalveolar lavage fluid
+brucella
+brucellosis
+c-reactive protein
+cachexia
+cadmium
+calcitonin gene-related peptide
+calcium
+campylobacter
+campylobacter jejuni
+cancer-associated fibroblasts
+cannabis
+capacity building
+capecitabine
+carcinogenesis
+cardiac rehabilitation
+cardiology
+cardiomyopathies
+cardiomyopathy, hypertrophic
+cardiovascular diseases
+cardiovascular system
+case-control studies
+catheter ablation
+causality
+cause of death
+cell cycle
+cell line
+cell proliferation
+cell-free nucleic acids
+cerebral hemorrhage
+cerebrospinal fluid
+cerebrovascular disorders
+certification
+cetuximab
+chemoradiotherapy
+chest pain
+chikungunya virus
+child
+child development
+chile
+china
+chloroquine
+cholangiocarcinoma
+cholesterol
+chronic disease
+chronic pain
+cidofovir
+ciliopathies
+circadian rhythm
+circulating tumor dna
+cisplatin
+clathrin
+cleft lip
+cleft palate
+climate change
+clinical decision-making
+clonal evolution
+clonal hematopoiesis
+clopidogrel
+cloud computing
+cluster analysis
+cluster headache
+coffee
+cognition
+cognitive reserve
+cohort studies
+colchicine
+collagen
+collagen type iv
+colorectal neoplasms
+comet assay
+common data elements
+communication
+community health workers
+community-based participatory research
+comorbidity
+comprehension
+computational biology
+computer systems
+consanguinity
+continuous positive airway pressure
+coronary artery disease
+coronary disease
+coronavirus infections
+cost-benefit analysis
+counseling
+covid-19
+creatinine
+crispr-cas systems
+critical care
+crizotinib
+cryobiology
+cryopreservation
+cryptorchidism
+culture
+cystatin c
+cystic fibrosis
+cytokines
+dasatinib
+data accuracy
+data analysis
+data collection
+data curation
+data management
+data mining
+data science
+database management systems
+death
+death, sudden, cardiac
+decision making
+decision support techniques
+decorin
+deep brain stimulation
+deep learning
+delirium
+delivery of health care
+dementia
+denmark
+dental caries
+dental informatics
+dental records
+dental research
+depression
+dermoscopy
+developing countries
+dexmedetomidine
+diabetes mellitus
+diabetic retinopathy
+diagnosis
+diagnostic imaging
+diarrhea
+diet
+dietary supplements
+disease
+disease progression
+dna
+dna damage
+dna methylation
+dogs
+down syndrome
+drosophila
+drug development
+drug discovery
+drug resistance
+drug therapy
+dysbiosis
+early diagnosis
+echocardiography
+ecuador
+education
+egypt
+electrocardiography
+electroencephalography
+electronic health records
+embolic stroke
+employment
+endocytosis
+endoplasmic reticulum stress
+energy metabolism
+enterotoxigenic escherichia coli
+environment
+environmental exposure
+eosinophilic esophagitis
+epidemiologic methods
+epidemiologic studies
+epigenomics
+epilepsy
+escherichia coli
+esophageal squamous cell carcinoma
+esophagus
+estonia
+ethical review
+ethiopia
+ethnicity
+europe
+evidence-based medicine
+exercise
+exome
+exome sequencing
+exosomes
+exposome
+extracellular matrix
+extracellular vesicles
+fatty liver
+female
+ferroptosis
+fertility
+fetus
+fibrinogen
+fibrinolysis
+fibrinolytic agents
+fibroblasts
+fibrosis
+fiji
+focus groups
+follow-up studies
+frailty
+france
+freezing
+fruit
+gastroenteritis
+gastroenterology
+gastrointestinal diseases
+gastrointestinal neoplasms
+gefitinib
+gemcitabine
+gene editing
+gene expression
+gene expression profiling
+gene fusion
+gene-environment interaction
+general practice
+genes
+genetic association studies
+genetic counseling
+genetic predisposition to disease
+genetic research
+genetic risk score
+genetic services
+genetic testing
+genetic variation
+genetics
+genome
+genome-wide association study
+genomic islands
+genomic medicine
+genomics
+genotype
+germ cells
+germany
+gestational trophoblastic disease
+ghana
+glaucoma
+glial fibrillary acidic protein
+glioblastoma
+glioma
+global burden of disease
+global health
+glomerular filtration rate
+glucose
+glycated hemoglobin
+glycemic control
+glycerophospholipids
+glycolysis
+glycosylation
+gout
+graft rejection
+gray matter
+guatemala
+haemophilus influenzae
+hand
+haploinsufficiency
+headache
+health
+health equity
+health facilities
+health information exchange
+health information interoperability
+health information management
+health information systems
+health level seven
+health policy
+health promotion
+health services
+health services research
+health surveys
+healthcare disparities
+healthy lifestyle
+heart
+heart disease risk factors
+heart diseases
+heart failure
+helminths
+hematology
+hematuria
+hemolysis
+hemorrhagic stroke
+hepatocytes
+heterochromatin
+hidradenitis suppurativa
+histology
+hiv
+hong kong
+hospitalization
+human genetics
+human genome project
+human papillomavirus 16
+human rights
+humans
+hydroxymethylglutaryl-coa reductase inhibitors
+hypercalcemia
+hypercholesterolemia
+hyperglycemia
+hypertension
+hyperuricemia
+immune checkpoint inhibitors
+immunity
+immunization
+immunogenetics
+immunohistochemistry
+immunomodulation
+immunotherapy
+in situ hybridization
+incidence
+incidental findings
+india
+indigenous peoples
+induced pluripotent stem cells
+infant
+infections
+inflammation
+inflammatory bowel diseases
+informatics
+information dissemination
+information management
+information storage and retrieval
+information systems
+information technology
+informed consent
+inpatients
+insulin resistance
+intellectual disability
+interferon lambda
+interleukin-16
+interleukin-6
+intracranial aneurysm
+iran
+ireland
+irritable bowel syndrome
+ischemic stroke
+italy
+jamaica
+japan
+kidney
+kidney calculi
+kidney transplantation
+klebsiella
+klebsiella pneumoniae
+knowledge bases
+knowledge management
+latin america
+learning health system
+leiomyosarcoma
+leishmania
+leukemia
+li-fraumeni syndrome
+life expectancy
+linkage disequilibrium
+lipid metabolism
+lipidomics
+lipids
+lipoprotein(a)
+liquid biopsy
+liver
+liver diseases
+long qt syndrome
+longitudinal studies
+low back pain
+lung
+lung neoplasms
+lycopene
+lyme disease
+lymphoma
+machine learning
+macrophages
+magnetic resonance imaging
+magnetic resonance spectroscopy
+major histocompatibility complex
+malaria
+malawi
+malignant hyperthermia
+malnutrition
+mammography
+management information systems
+marfan syndrome
+mass screening
+mass spectrometry
+mast cells
+maternal mortality
+meaningful use
+mediation analysis
+medical informatics
+medical informatics applications
+medical record linkage
+medical records
+medicare
+medication adherence
+medicine
+medulloblastoma
+melanoma
+mendelian randomization analysis
+menopause
+menopause, premature
+mental disorders
+mental health
+mesenchymal stem cells
+mesothelioma
+metabolic diseases
+metabolic syndrome
+metabolome
+metabolomics
+metadata
+metagenomics
+methotrexate
+microbiota
+microfluidics
+micrornas
+microsatellite instability
+microvessels
+middle east
+milk
+miniaturization
+mitochondria
+mitochondrial diseases
+mitosis
+mitral valve prolapse
+molecular biology
+molecular epidemiology
+molecular imaging
+molecular medicine
+molecular targeted therapy
+monocytes
+morbidity
+mortality
+multi-institutional systems
+multifactorial inheritance
+multimorbidity
+multiomics
+multiple sclerosis
+mutation
+myocardial infarction
+myocardial ischemia
+myocardial revascularization
+myocarditis
+nanopore sequencing
+nasopharyngeal carcinoma
+natural language processing
+needs assessment
+neisseria meningitidis
+neonatal sepsis
+neoplasms
+nepal
+nephrolithiasis
+nephrology
+neuroblastoma
+neurodegenerative diseases
+neuroglia
+neuroimaging
+neuromuscular diseases
+neurosurgery
+neuroticism
+neutrophils
+new zealand
+nigeria
+nivolumab
+non-alcoholic fatty liver disease
+noncommunicable diseases
+nursing homes
+nutrients
+obesity
+ochrobactrum
+odds ratio
+one health
+onychomycosis
+ophthalmology
+opioid-related disorders
+oral health
+organoids
+osteoarthritis
+osteoporosis
+ovarian neoplasms
+overweight
+ownership
+oxidative stress
+paclitaxel
+pain
+pain management
+pakistan
+palliative care
+pancreas
+pancreatitis
+pandemic preparedness
+pandemics
+parents
+parkinson disease
+particulate matter
+pathologists
+pathology
+pathology, molecular
+patient advocacy
+patient care
+patient care team
+patient generated health data
+patient participation
+patient selection
+patient-centered care
+patients
+pediatrics
+penetrance
+perception
+percutaneous coronary intervention
+pericarditis
+periodontal diseases
+periodontitis
+peripheral arterial disease
+peritoneal dialysis
+personal autonomy
+peru
+pessimism
+pesticides
+pharmacogenetics
+pharmacology
+phenomics
+phenotype
+philosophy
+placenta
+plasma
+platelet count
+pneumonia
+poland
+policy
+polycystic ovary syndrome
+polymerase chain reaction
+polymorphism, genetic
+population
+population health
+post-acute covid-19 syndrome
+post-concussion syndrome
+postoperative complications
+potassium
+poultry
+pre-eclampsia
+precision medicine
+pregnancy
+preoperative care
+prevalence
+preventive medicine
+primary cell culture
+primary health care
+primary immunodeficiency diseases
+primary prevention
+privacy
+progesterone
+prognosis
+progression-free survival
+propranolol
+prospective studies
+prostate-specific antigen
+proteins
+proteomics
+proton pump inhibitors
+pseudomonas aeruginosa
+psoriasis
+psychiatry
+psychological distress
+psychopathology
+psychotropic drugs
+public health
+public opinion
+public policy
+publishing
+pulmonary arterial hypertension
+pulmonary fibrosis
+qatar
+qualitative research
+quality control
+quality improvement
+quality of life
+radiation oncology
+radiology
+radiotherapy
+rare diseases
+rats
+recurrence
+reference standards
+reference values
+refugees
+regenerative medicine
+registries
+regression analysis
+renal replacement therapy
+research
+research design
+research subjects
+retina
+retinoblastoma
+reverse genetics
+rheumatology
+risk
+risk assessment
+risk factors
+rituximab
+rna
+rna stability
+rna-seq
+rotavirus
+rwanda
+salicylic acid
+saliva
+salmonella
+salmonella typhi
+sample size
+sarcoma
+sarcopenia
+sars-cov-2
+schizophrenia
+scotland
+sedentary behavior
+selection bias
+semantic web
+semantics
+sepsis
+serum
+sex hormone-binding globulin
+shigella
+signal transduction
+singapore
+single-cell analysis
+skin
+sleep duration
+smoking
+smoking cessation
+social determinants of health
+social media
+sodium
+software
+south africa
+south sudan
+spain
+spirometry
+spondylitis, ankylosing
+sri lanka
+staphylococcus aureus
+staurosporine
+stem cells
+stents
+stomach
+streptococcus pneumoniae
+streptococcus pyogenes
+stroke
+stroke volume
+subarachnoid hemorrhage
+suicidal ideation
+suicide
+support vector machine
+survival analysis
+sustained virologic response
+switzerland
+systems biology
+tacrolimus
+tamoxifen
+tanzania
+technology
+telemedicine
+telomere
+temozolomide
+testosterone
+thailand
+therapeutics
+thromboembolism
+thrombospondin 1
+tissue banks
+tissue donors
+tissue engineering
+tissue preservation
+tobacco smoking
+tobacco use
+topotecan
+torque teno virus
+tourette syndrome
+trace elements
+transcriptome
+translational science, biomedical
+trastuzumab
+treatment outcome
+triglycerides
+trust
+tuberculosis
+tumor microenvironment
+tumor necrosis factor inhibitors
+tumor necrosis factor-alpha
+tumor-associated macrophages
+tunisia
+typhoid fever
+uk biobank
+united kingdom
+united states
+unsupervised machine learning
+urinary bladder neoplasms
+urolithiasis
+urothelium
+uveal melanoma
+vaccination
+vaccine development
+vaccines
+vegetables
+venous thromboembolism
+venous thrombosis
+veterans
+vietnam
+vitamin d
+vitamin d deficiency
+vocabulary
+waist circumference
+walking
+walking speed
+warfarin
+weight loss
+whole genome sequencing
+workflow
+writing
+zebrafish
+zika virus
+
+Only in MeSH:
+1-acylglycerol-3-phosphate o-acyltransferase
+2-propanol
+2019-ncov vaccine mrna-1273
+3' untranslated regions
+a549 cells
+abattoirs
+abnormalities, multiple
+abo blood-group system
+abortion, habitual
+abortion, spontaneous
+absorptiometry, photon
+abstracting and indexing
+academic success
+academies and institutes
+acceleration
+accelerometry
+access to information
+acculturation
+acetic acid
+acetylation
+acetylcysteine
+acquired immunodeficiency syndrome
+acrylamides
+actin cytoskeleton
+actinin
+actins
+acute disease
+acute lung injury
+acyl-coa dehydrogenase
+acyltransferases
+adamts proteins
+adaptation, psychological
+adaptive clinical trials as topic
+adaptor proteins, signal transducing
+adenocarcinoma of lung
+adenocarcinoma, clear cell
+adenoma
+adenosine
+adenosine triphosphate
+adenosylhomocysteinase
+adenoviridae
+adipocytes
+adipogenesis
+adipokines
+adipose tissue
+adiposity
+administration, inhalation
+administration, metronomic
+administration, oral
+administrative claims, healthcare
+ado-trastuzumab emtansine
+adrenal cortex hormones
+adrenal cortex neoplasms
+adrenergic beta-antagonists
+adrenocortical carcinoma
+adult
+adult stem cells
+adverse drug reaction reporting systems
+advertising
+advisory committees
+aerobiosis
+aerospace medicine
+affect
+africa south of the sahara
+africa, eastern
+africa, northern
+africa, southern
+africa, western
+african people
+agaricales
+age distribution
+age factors
+age of onset
+aged
+aged, 80 and over
+agriculture
+air pollutants
+air pollution, indoor
+alanine transaminase
+albumins
+alcohol dehydrogenase
+alcohol drinking
+alcoholism
+aldehyde dehydrogenase, mitochondrial
+aldehyde oxidoreductases
+aldosterone
+alkalosis
+alleles
+alopecia
+alpha 1-antitrypsin
+alpha 1-antitrypsin deficiency
+alpha-glucosidases
+alpha-ketoglutarate-dependent dioxygenase fto
+alphapapillomavirus
+altruism
+alzheimer disease
+ambulatory care
+ambulatory care facilities
+american heart association
+american recovery and reinvestment act
+americas
+amides
+amino acid sequence
+amino acid substitution
+amino acid transport system y+
+aminopyridines
+ampicillin
+ampulla of vater
+amygdala
+amyloid beta-peptides
+analgesics, opioid
+analysis of variance
+anaplasmataceae
+anaplasmataceae infections
+anaplastic lymphoma kinase
+androgen antagonists
+androgens
+anemia, sickle cell
+anesthesia, general
+angiopoietin-1
+angiopoietin-2
+angiopoietin-like proteins
+angiopoietins
+angiotensin-converting enzyme 2
+anilides
+aniline compounds
+animals
+animals, newborn
+anodontia
+anorexia nervosa
+anthrax
+anthropology, medical
+anti-asthmatic agents
+anti-bacterial agents
+anti-hiv agents
+anti-retroviral agents
+antibiotics, antineoplastic
+antibodies, bacterial
+antibodies, bispecific
+antibodies, monoclonal
+antibodies, monoclonal, humanized
+antibodies, neutralizing
+antibodies, protozoan
+antibodies, viral
+anticholesteremic agents
+anticonvulsants
+antidepressive agents
+antigen presentation
+antigen-antibody complex
+antigens, bacterial
+antigens, cd
+antigens, cd20
+antigens, differentiation, b-lymphocyte
+antigens, fungal
+antigens, neoplasm
+antigens, viral
+antimalarials
+antimanic agents
+antineoplastic agents
+antineoplastic agents, hormonal
+antineoplastic agents, immunological
+antineoplastic agents, phytogenic
+antineoplastic combined chemotherapy protocols
+antiprotozoal agents
+antipsychotic agents
+antiretroviral therapy, highly active
+antirheumatic agents
+antithyroid agents
+antitubercular agents
+antiviral agents
+anus neoplasms
+anxiety disorders
+aortic aneurysm
+aortic aneurysm, abdominal
+aortic diseases
+aortic valve
+apoferritins
+apolipoprotein a-i
+apolipoprotein c-iii
+apolipoprotein e2
+apolipoprotein e4
+apolipoproteins a
+apolipoproteins b
+apolipoproteins e
+apoptosis regulatory proteins
+aqueous humor
+arab world
+arabs
+archives
+argentina
+arginine
+argininosuccinate synthase
+arizona
+armadillo domain proteins
+aromatase inhibitors
+arrhythmias, cardiac
+arrhythmogenic right ventricular dysplasia
+artemether, lumefantrine drug combination
+artemisinins
+arterial occlusive diseases
+arterial pressure
+arteries
+arthritis, juvenile
+arthroplasty, replacement, knee
+artocarpus
+aryl hydrocarbon hydroxylases
+arylamine n-acetyltransferase
+asia, eastern
+asia, southeastern
+asia, southern
+asian
+asian american native hawaiian and pacific islander
+asian people
+aspartic acid
+aspergillus
+asphyxia neonatorum
+astrocytoma
+astronauts
+asymptomatic diseases
+asymptomatic infections
+ataxia telangiectasia mutated proteins
+atlases as topic
+atorvastatin
+atp binding cassette transporter 1
+atp binding cassette transporter, subfamily g, member 2
+attention deficit and disruptive behavior disorders
+attention deficit disorder with hyperactivity
+attitude of health personnel
+attitude to computers
+attitude to health
+audiometry
+australasian people
+australian aboriginal and torres strait islander peoples
+authorship
+autistic disorder
+autoantigens
+automated facial recognition
+automation, laboratory
+autonomic nervous system
+autophagy-related protein 7
+awards and prizes
+axilla
+axoneme
+azacitidine
+azithromycin
+b-lymphocytes
+b7-h1 antigen
+bacillus anthracis
+bacteremia
+bacteria
+bacterial adhesion
+bacterial infections
+bacterial proteins
+bacteriophages
+bangladesh
+basal metabolism
+base sequence
+basic-leucine zipper transcription factors
+bayes theorem
+bays
+bcl-2-like protein 11
+behavior
+behavior, addictive
+behavior, animal
+behavioral research
+behavioral symptoms
+belgium
+benzamides
+benzenesulfonamides
+benzimidazoles
+benzodioxoles
+benzofurans
+beta 2-microglobulin
+beta catenin
+beta-lactamases
+betacoronavirus
+bias
+bicuspid aortic valve disease
+bile duct neoplasms
+bile ducts, intrahepatic
+bilirubin
+binding sites
+binge-eating disorder
+biocompatible materials
+bioethical issues
+biofilms
+biological assay
+biological evolution
+biological ontologies
+biological products
+biological science disciplines
+biological therapy
+biological transport
+biological variation, population
+biology
+biomarkers, pharmacological
+biomarkers, tumor
+biomedical technology
+biometric identification
+biopsy, large-core needle
+biosimilar pharmaceuticals
+biostatistics
+bioterrorism
+birth cohort
+birth weight
+bites and stings
+black or african american
+black people
+bleomycin
+blood banks
+blood cell count
+blood coagulation
+blood coagulation disorders
+blood coagulation tests
+blood culture
+blood donors
+blood glucose self-monitoring
+blood loss, surgical
+blood preservation
+blood proteins
+blood specimen collection
+blood transfusion, autologous
+blood vessel prosthesis
+blotting, northern
+blotting, western
+bnt162 vaccine
+body composition
+body fluids
+body height
+body weight
+bone and bones
+bone density
+bone marrow cells
+bone marrow examination
+bone morphogenetic protein 4
+bone morphogenetic protein receptors, type ii
+bone neoplasms
+borrelia burgdorferi
+bortezomib
+botany
+brachial artery
+brachytherapy
+brain cortical thickness
+brain death
+brain diseases
+brain neoplasms
+brain stem neoplasms
+brca1 protein
+brca2 protein
+breakthrough infections
+breast feeding
+breast neoplasms
+breath tests
+bridged-ring compounds
+british columbia
+bromodomain containing proteins
+bronchi
+bronchitis
+bronchodilator agents
+budgets
+buffers
+bupleurum
+burnout, professional
+butadienes
+calcaneus
+calcifediol
+calcinosis
+calcitriol
+calcium carbonate
+calcium signaling
+calcium-binding proteins
+calibration
+california
+caloric restriction
+campylobacter infections
+canada
+cancer care facilities
+cancer survivors
+cancer vaccines
+capsid proteins
+carbapenem-resistant enterobacteriaceae
+carbapenems
+carbohydrates
+carbolines
+carbon-carbon ligases
+carbonic anhydrase ix
+carboplatin
+carcinoembryonic antigen
+carcinogens
+carcinoid tumor
+carcinoma
+carcinoma, basal cell
+carcinoma, endometrioid
+carcinoma, hepatocellular
+carcinoma, large cell
+carcinoma, lewis lung
+carcinoma, lobular
+carcinoma, neuroendocrine
+carcinoma, non-small-cell lung
+carcinoma, ovarian epithelial
+carcinoma, pancreatic ductal
+carcinoma, renal cell
+carcinoma, squamous cell
+carcinoma, transitional cell
+cardiac catheterization
+cardiac imaging techniques
+cardiac surgical procedures
+cardiometabolic risk factors
+cardiomyopathy, dilated
+cardiotoxicity
+caribbean region
+carotid arteries
+carotid artery diseases
+carotid intima-media thickness
+carotid stenosis
+carrier proteins
+carrier state
+caspase 3
+caspase 8
+caspase 9
+caspase inhibitors
+cat diseases
+catalase
+cataloging
+catalysis
+cataract
+catha
+cathepsin d
+catheterization, peripheral
+cation transport proteins
+cats
+cattle
+cattle diseases
+caveolins
+cd4 antigens
+cd4-positive t-lymphocytes
+cd8-positive t-lymphocytes
+cefotaxime
+cell adhesion molecules
+cell count
+cell culture techniques
+cell culture techniques, three dimensional
+cell cycle proteins
+cell differentiation
+cell growth processes
+cell hypoxia
+cell line, tumor
+cell lineage
+cell membrane
+cell movement
+cell polarity
+cell separation
+cell survival
+cell transformation, neoplastic
+cell- and tissue-based therapy
+cell-derived microparticles
+cells, cultured
+cellular reprogramming
+cellular reprogramming techniques
+cellular senescence
+centers for disease control and prevention, u.s.
+centers for medicare and medicaid services, u.s.
+central american people
+central nervous system agents
+central nervous system diseases
+central nervous system neoplasms
+central nervous system sensitization
+centrifugation
+cephalosporins
+ceramides
+cerebellar neoplasms
+cerebellar vermis
+cerebellum
+cerebral cortex
+cerebral palsy
+cerebral small vessel diseases
+cervix uteri
+chalcones
+chaperonin containing tcp-1
+charities
+checklist
+checkpoint kinase 1
+checkpoint kinase 2
+chemical and drug induced liver injury
+chemistry, pharmaceutical
+chemoembolization, therapeutic
+chemokine ccl2
+chemokine ccl4
+chemokine ccl5
+chemokine cxcl10
+chemokine cxcl9
+chemokines, cxc
+chemotaxis
+chemotherapy, adjuvant
+chemotherapy-induced febrile neutropenia
+chi-square distribution
+chicago
+chick embryo
+chickens
+chikungunya fever
+child abuse
+child abuse, sexual
+child health services
+child nutrition disorders
+child, preschool
+chiroptera
+chlamydia infections
+chlorides
+chlorocebus aethiops
+cholangitis
+cholangitis, sclerosing
+cholesterol ester transfer proteins
+cholesterol, hdl
+cholesterol, ldl
+chondrocytes
+chorioamnionitis
+choriocarcinoma
+chromatin
+chromatography, gel
+chromatography, liquid
+chromosome aberrations
+chromosome breakpoints
+chromosome deletion
+chromosome disorders
+chromosome mapping
+chromosomes
+chromosomes, human
+chromosomes, human, pair 1
+chromosomes, human, pair 12
+chromosomes, human, pair 15
+chromosomes, human, pair 19
+chromosomes, human, pair 2
+chromosomes, human, pair 3
+chromosomes, human, pair 7
+chromosomes, human, pair 9
+chromosomes, human, x
+cichlids
+cigarette smoking
+ciprofloxacin
+circulating microrna
+citrates
+class i phosphatidylinositol 3-kinases
+clinical chemistry tests
+clinical coding
+clinical competence
+clinical decision rules
+clinical laboratory information systems
+clinical laboratory services
+clinical laboratory techniques
+clinical medicine
+clinical pharmacy information systems
+clinical protocols
+clinical trials as topic
+clinical trials, phase i as topic
+clinical trials, phase ii as topic
+clinical trials, phase iii as topic
+clone cells
+clusterin
+coculture techniques
+codon
+codon, nonsense
+cognition disorders
+cognitive behavioral therapy
+cognitive dysfunction
+coinfection
+colectomy
+colitis
+colitis, collagenous
+colitis, lymphocytic
+colitis, microscopic
+colitis, ulcerative
+collagen type i
+collections as topic
+colombia
+colon
+colonic neoplasms
+colonoscopy
+colorado
+colorectal neoplasms, hereditary nonpolyposis
+combined modality therapy
+commerce
+communicable disease control
+communicable diseases
+communicable diseases, emerging
+communication barriers
+community health centers
+community mental health services
+community networks
+community participation
+community-acquired infections
+community-institutional relations
+comparative effectiveness research
+comparative genomic hybridization
+complement c1q
+computer communication networks
+computer graphics
+computer literacy
+computer security
+computer simulation
+computers
+conduct disorder
+confidence intervals
+confidentiality
+conflict of interest
+confounding factors, epidemiologic
+congenital abnormalities
+congresses as topic
+connectin
+connectome
+consensus
+consent forms
+conservation of natural resources
+constipation
+consultants
+consumer behavior
+containment of biohazards
+continuity of patient care
+control groups
+convalescence
+cooperative behavior
+cord blood stem cell transplantation
+coronary angiography
+coronary artery bypass
+coronary vessels
+cost control
+cost of illness
+cost-effectiveness analysis
+costs and cost analysis
+covid-19 drug treatment
+covid-19 serological testing
+covid-19 testing
+covid-19 vaccines
+cpg islands
+cranial irradiation
+craniofacial dysostosis
+craniosynostoses
+craniotomy
+creatine
+critical illness
+critical pathways
+crohn disease
+crops, agricultural
+cross infection
+cross-sectional studies
+crosses, genetic
+crowdsourcing
+cryoprotective agents
+cryptosporidiosis
+cryptosporidium
+crystalloid solutions
+culicidae
+cullin proteins
+cultural characteristics
+cultural diversity
+curcumin
+current procedural terminology
+curriculum
+cyclic nucleotide phosphodiesterases, type 1
+cyclin-dependent kinase 4
+cyclin-dependent kinase 6
+cyclin-dependent kinase inhibitor p15
+cyclin-dependent kinase inhibitor p16
+cyclin-dependent kinase inhibitor p21
+cyclin-dependent kinases
+cyclins
+cyclophosphamide
+cystadenocarcinoma, serous
+cystectomy
+cystic fibrosis transmembrane conductance regulator
+cytochrome p-450 cyp1b1
+cytochrome p-450 cyp2a6
+cytochrome p-450 cyp2c19
+cytochrome p-450 cyp2c9
+cytochrome p-450 cyp2d6
+cytochrome p-450 cyp3a
+cytochrome p-450 enzyme system
+cytochrome p450 family 4
+cytodiagnosis
+cytoplasm
+cytoreduction surgical procedures
+cytosine
+cytoskeletal proteins
+cytotoxicity, immunologic
+czech republic
+data anonymization
+data warehousing
+databases as topic
+databases, bibliographic
+databases, chemical
+databases, factual
+databases, genetic
+databases, nucleic acid
+databases, pharmaceutical
+datasets as topic
+death certificates
+decidua
+decision making, organizational
+decision support systems, clinical
+decitabine
+delayed diagnosis
+delivery of health care, integrated
+dementia, vascular
+democratic republic of the congo
+demography
+demyelinating diseases
+dendritic cells
+deoxycytidine
+depressive disorder
+depressive disorder, major
+dermatitis
+dermatitis, atopic
+dermatology
+dermatomyositis
+desensitization, immunologic
+desmosomes
+deubiquitinating enzyme cyld
+developed countries
+developmental disabilities
+device approval
+dextromethorphan
+diabetes complications
+diabetes mellitus, type 1
+diabetes mellitus, type 2
+diabetes, gestational
+diabetic cardiomyopathies
+diabetic nephropathies
+diagnosis, computer-assisted
+diagnosis, differential
+diagnostic techniques and procedures
+diagnostic techniques, cardiovascular
+diagnostic test approval
+diagnostic tests, routine
+diarylquinolines
+diastole
+diet records
+diet surveys
+diet, healthy
+diet, mediterranean
+diet, vegetarian
+dietary approaches to stop hypertension
+dietary fats
+diffusion magnetic resonance imaging
+diffusion of innovation
+diffusion tensor imaging
+digestive system diseases
+digestive system neoplasms
+dioxygenases
+dipeptidyl-peptidase iv inhibitors
+direct-to-consumer screening and testing
+directed tissue donation
+disability evaluation
+disability-adjusted life years
+disclosure
+disease management
+disease models, animal
+disease outbreaks
+disease susceptibility
+disease-free survival
+diseases in twins
+disorders of excessive somnolence
+dissection
+diverticular diseases
+diverticulitis
+diverticulum
+dna (cytosine-5-)-methyltransferases
+dna contamination
+dna copy number variations
+dna fingerprinting
+dna helicases
+dna methyltransferase 3a
+dna mismatch repair
+dna mutational analysis
+dna polymerase ii
+dna repair
+dna transposable elements
+dna, bacterial
+dna, circular
+dna, complementary
+dna, mitochondrial
+dna, neoplasm
+dna, plant
+dna, protozoan
+dna-binding proteins
+dna-directed rna polymerases
+docetaxel
+documentation
+dog diseases
+donor selection
+dose fractionation, radiation
+dose-response relationship, drug
+dose-response relationship, radiation
+down-regulation
+doxorubicin
+dried blood spot testing
+drosophila melanogaster
+drosophila proteins
+drug administration schedule
+drug approval
+drug carriers
+drug compounding
+drug delivery systems
+drug design
+drug dosage calculations
+drug evaluation, preclinical
+drug hypersensitivity
+drug industry
+drug interactions
+drug monitoring
+drug prescriptions
+drug repositioning
+drug resistance, bacterial
+drug resistance, multiple, bacterial
+drug resistance, neoplasm
+drug resistance, viral
+drug screening assays, antitumor
+drug therapy, computer-assisted
+drug utilization
+drug-related side effects and adverse reactions
+drugs, chinese herbal
+duodenal neoplasms
+duodenal ulcer
+dura mater
+duty to recontact
+dysentery, bacillary
+dyslipidemias
+dyspepsia
+e1a-associated p300 protein
+early detection of cancer
+east asian people
+eating
+ecology
+economic status
+economics, hospital
+ecosystem
+ectodysplasins
+eczema
+edar receptor
+edible grain
+education, graduate
+education, medical
+education, medical, continuing
+education, medical, graduate
+education, medical, undergraduate
+education, professional
+educational status
+efficiency, organizational
+elasticity imaging techniques
+electrolytes
+electronic data processing
+electronic mail
+electronics
+electrophoresis, capillary
+electrophysiologic techniques, cardiac
+electrophysiology
+elephantiasis
+eligibility determination
+embryo, nonmammalian
+embryonic development
+embryonic stem cells
+emergencies
+emergency service, hospital
+emergency services, psychiatric
+emotions
+empathy
+endangered species
+endogenous retroviruses
+endometrial neoplasms
+endometriosis
+endometrium
+endophenotypes
+endophthalmitis
+endoplasmic reticulum
+endoplasmic reticulum-associated degradation
+endoscopy, digestive system
+endosomal sorting complexes required for transport
+endothelial cells
+endothelin-1
+endotoxemia
+endovascular procedures
+endpoint determination
+energy intake
+england
+enhancer of zeste homolog 2 protein
+enteritis
+enteroendocrine cells
+environmental health
+environmental medicine
+environmental monitoring
+enzyme-linked immunosorbent assay
+enzyme-linked immunospot assay
+eosine yellowish-(ys)
+eosinophilia
+eosinophils
+epidemics
+epidemiologic research design
+epidemiological monitoring
+epidermal growth factor
+epigenesis, genetic
+epigenome
+epilepsy, rolandic
+epistasis, genetic
+epithelial cells
+epithelial-mesenchymal transition
+epithelium
+epoxide hydrolases
+epstein-barr virus infections
+equipment and supplies
+equipment design
+erbb receptors
+erythrocyte indices
+escherichia coli infections
+escherichia coli proteins
+escherichia coli vaccines
+esophageal neoplasms
+esophagectomy
+esophagitis
+estrogen receptor alpha
+estrogen replacement therapy
+estrogens
+estrone
+ethical analysis
+ethical theory
+ethics committees
+ethics committees, research
+ethics, medical
+ethics, research
+ethnic and racial minorities
+european people
+european union
+evaluation studies as topic
+evidence-based practice
+evolution, molecular
+exanthema
+exons
+expert systems
+expressed sequence tags
+extracellular fluid
+extracellular matrix proteins
+extrachromosomal inheritance
+extraterrestrial environment
+eye banks
+eye neoplasms
+eye proteins
+fabaceae
+fabry disease
+facies
+familial primary pulmonary hypertension
+family
+family health
+fanconi anemia complementation group n protein
+fasting
+fatty acid-binding proteins
+fatty acids
+fatty acids, omega-3
+fear
+feasibility studies
+feces
+federal government
+feeding behavior
+femur
+fertility preservation
+fertilization in vitro
+fetal alcohol spectrum disorders
+fetal blood
+fetal development
+fetal growth retardation
+fetal membranes, premature rupture
+fibrillin-1
+fibroblast growth factor 7
+fibrosarcoma
+fimbriae proteins
+financial management
+financial support
+financing, government
+financing, organized
+finland
+fish oils
+fisheries
+fishes
+fixatives
+flavanones
+florida
+flow cytometry
+fluid therapy
+fluorenes
+fluorescence
+fluorescent antibody technique
+fluorescent dyes
+fluoroquinolones
+fluorouracil
+food analysis
+food hypersensitivity
+food preferences
+food, fortified
+food, processed
+foot
+forced expiratory volume
+forecasting
+forkhead transcription factors
+formaldehyde
+formative feedback
+forms and records control
+foundations
+founder effect
+fractionation, field flow
+fragile x mental retardation protein
+frail elderly
+frameshift mutation
+freedom
+freeze drying
+frontotemporal dementia
+frozen sections
+fructokinases
+fructose metabolism, inborn errors
+fucosyltransferases
+functional laterality
+fund raising
+fusobacterium infections
+fusobacterium nucleatum
+g protein-coupled inwardly-rectifying potassium channels
+gabon
+gain of function mutation
+gait
+galactoside 2-alpha-l-fucosyltransferase
+gallstones
+gamma-linolenic acid
+gas chromatography-mass spectrometry
+gasdermins
+gastric bypass
+gastritis
+gastritis, atrophic
+gastroesophageal reflux
+gastrointestinal absorption
+gastrointestinal agents
+gastrointestinal microbiome
+gastroschisis
+gata3 transcription factor
+gata6 transcription factor
+gender identity
+gene amplification
+gene deletion
+gene dosage
+gene expression regulation
+gene expression regulation, developmental
+gene expression regulation, leukemic
+gene expression regulation, neoplastic
+gene frequency
+gene knockdown techniques
+gene knockout techniques
+gene ontology
+gene regulatory networks
+gene silencing
+general practitioners
+general surgery
+genes, bacterial
+genes, brca2
+genes, dominant
+genes, essential
+genes, homeobox
+genes, neoplasm
+genes, p53
+genes, regulator
+genes, rrna
+genes, tumor suppressor
+genetic diseases, inborn
+genetic heterogeneity
+genetic linkage
+genetic loci
+genetic markers
+genetic pleiotropy
+genetic privacy
+genetic therapy
+genetic vectors
+genetics, medical
+genetics, population
+genome, bacterial
+genome, human
+genome, microbial
+genome, mitochondrial
+genome, plant
+genome, protozoan
+genome, viral
+genomic structural variation
+genotyping techniques
+geography
+georgia
+geriatrics
+germ-line mutation
+germinal center kinases
+gestational age
+giardia
+giardiasis
+glaucoma, open-angle
+globins
+glomerulonephritis, iga
+glucocorticoids
+glucosamine
+glucose intolerance
+glucose metabolism disorders
+glucose tolerance test
+glucose transport proteins, facilitative
+glucose transporter type 1
+glucose-6-phosphatase
+glucosephosphate dehydrogenase
+glucosephosphate dehydrogenase deficiency
+glucosyltransferases
+glucuronosyltransferase
+glutamine
+glycation end products, advanced
+glycine max
+glycoproteins
+glycosaminoglycans
+glypicans
+goals
+governing board
+government
+government programs
+government regulation
+gpi-linked proteins
+graft survival
+graft vs host disease
+graves disease
+graves ophthalmopathy
+great lakes region
+greece
+growth disorders
+gtp phosphohydrolases
+gtp-binding proteins
+guanine nucleotide dissociation inhibitors
+guanine nucleotide exchange factors
+guideline adherence
+guidelines as topic
+guinea pigs
+gynecologic surgical procedures
+hamartoma syndrome, multiple
+hand strength
+haplotypes
+hct116 cells
+head and neck neoplasms
+headache disorders
+headache disorders, secondary
+health behavior
+health care costs
+health care reform
+health care sector
+health care surveys
+health communication
+health education
+health impact assessment
+health inequities
+health insurance portability and accountability act
+health knowledge, attitudes, practice
+health occupations
+health personnel
+health plan implementation
+health planning
+health planning guidelines
+health priorities
+health records, personal
+health resources
+health services accessibility
+health services needs and demand
+health status
+health status disparities
+health workforce
+healthy aging
+healthy volunteers
+hearing loss
+heart atria
+heart defects, congenital
+heart rate
+heart valve prosthesis
+heart valve prosthesis implantation
+heart ventricles
+heating
+hedgehog proteins
+hek293 cells
+helicobacter infections
+helicobacter pylori
+helminthiasis
+hemangiosarcoma
+hematologic diseases
+hematologic neoplasms
+hematoma
+hematopoiesis
+hematopoietic stem cell transplantation
+hematoxylin
+hemiplegia
+hemochromatosis
+hemochromatosis protein
+hemodynamics
+hemoglobinopathies
+hemoglobins
+hemorrhage
+hemorrhagic fever, ebola
+hep g2 cells
+hepacivirus
+hepatic stellate cells
+hepatitis
+hepatitis antibodies
+hepatitis b virus
+hepatitis b, chronic
+hepatitis c
+hepatitis c, chronic
+hepatitis e
+hepatitis e virus
+hepatitis, autoimmune
+hepatitis, viral, human
+hepatocyte growth factor
+hepatocyte nuclear factor 3-alpha
+hepatocyte nuclear factor 4
+hepatocyte nuclear factors
+heptanoic acids
+heredity
+hernia, inguinal
+herpes zoster
+herpesvirus 4, human
+heterocyclic compounds, 3-ring
+heterocyclic compounds, 4 or more rings
+heterografts
+heterozygote
+heuristics
+high-throughput nucleotide sequencing
+high-throughput screening assays
+hip fractures
+hippocampus
+hispanic or latino
+histocompatibility antigens class i
+histocompatibility antigens class ii
+histocompatibility testing
+histological techniques
+histone deacetylase inhibitors
+histone-lysine n-methyltransferase
+histones
+histoplasma
+histoplasmosis
+history, 18th century
+history, 19th century
+history, 20th century
+history, 21st century
+history, ancient
+history, medieval
+hiv infections
+hiv-1
+hla antigens
+hla-a antigens
+hla-b antigens
+hla-b27 antigen
+hla-drb5 chains
+hla-e antigens
+hmga2 protein
+hodgkin disease
+home care services
+homeodomain proteins
+homeostasis
+homocysteine
+homozygote
+hormones
+horse diseases
+horses
+hospice and palliative care nursing
+hospital costs
+hospital information systems
+hospital mortality
+hospital records
+hospitals
+hospitals, general
+hospitals, university
+host microbial interactions
+host-parasite interactions
+host-pathogen interactions
+hot temperature
+hsp40 heat-shock proteins
+human experimentation
+human papillomavirus 18
+human papillomavirus recombinant vaccine quadrivalent, types 6, 11, 16, 18
+human papillomavirus viruses
+human trafficking
+human umbilical vein endothelial cells
+hungary
+huntington disease
+hydatidiform mole
+hydrodynamics
+hydrogen
+hydrogen peroxide
+hydrolases
+hydroxamic acids
+hydroxybutyrates
+hydroxylation
+hydroxymethylglutaryl coa reductases
+hyperaldosteronism
+hyperandrogenism
+hyperlipidemias
+hyperlipoproteinemia type ii
+hypersensitivity
+hypertension, portal
+hypertension, pulmonary
+hyperthermic intraperitoneal chemotherapy
+hypertriglyceridemia
+hypertrophy
+hypnotics and sedatives
+hypobetalipoproteinemias
+hypoglycemia
+hypoglycemic agents
+hypolipidemic agents
+hypothalamo-hypophyseal system
+hypoxia-inducible factor 1, alpha subunit
+hypoxia-ischemia, brain
+idiopathic pulmonary fibrosis
+image interpretation, computer-assisted
+image processing, computer-assisted
+imatinib mesylate
+imidazoles
+imipenem
+immune checkpoint proteins
+immune evasion
+immune system diseases
+immune tolerance
+immunity, cellular
+immunity, humoral
+immunity, innate
+immunity, mucosal
+immunization programs
+immunization, secondary
+immunoassay
+immunocompromised host
+immunoconjugates
+immunogenicity, vaccine
+immunoglobulin a
+immunoglobulin e
+immunoglobulin g
+immunoglobulin m
+immunologic factors
+immunologic memory
+immunologic surveillance
+immunophenotyping
+immunosuppression therapy
+immunosuppressive agents
+immunotherapy, adoptive
+in situ hybridization, fluorescence
+inactivation, metabolic
+inbreeding depression
+income
+indazoles
+indel mutation
+indians, north american
+individuality
+indonesia
+industrial development
+industry
+infant nutritional physiological phenomena
+infant, low birth weight
+infant, newborn
+infant, premature
+infectious disease transmission, vertical
+infertility, female
+inflammation mediators
+influenza a virus
+influenza a virus, h1n1 subtype
+influenza b virus
+information services
+inheritance patterns
+injections
+insulin
+insulin secretion
+insulin-like growth factor binding protein 1
+insulin-like growth factor binding protein 3
+insulin-like growth factor binding protein 5
+insulin-like growth factor i
+insulin-like growth factor ii
+insulin-secreting cells
+insulins
+insurance claim review
+insurance coverage
+insurance, health
+integrative medicine
+integrin alpha4beta1
+intellectual property
+intelligence
+intensive care units
+intensive care units, neonatal
+intercellular signaling peptides and proteins
+interdisciplinary communication
+interdisciplinary research
+interdisciplinary studies
+interferon regulatory factor-7
+interferon regulatory factors
+interferon type i
+interferon-alpha
+interferon-gamma
+interinstitutional relations
+interleukin-11 receptor alpha subunit
+interleukin-13
+interleukin-15
+interleukin-15 receptor alpha subunit
+interleukin-17
+interleukin-18
+interleukin-4
+interleukin-5
+interleukin-7 receptor alpha subunit
+interleukin-9
+interleukins
+intermittent fasting
+international agencies
+international classification of diseases
+international cooperation
+international normalized ratio
+internationality
+internet
+interpersonal relations
+interprofessional relations
+intersectoral collaboration
+interviews as topic
+intestinal diseases, parasitic
+intestinal mucosa
+intestine, small
+intestines
+intracellular signaling peptides and proteins
+intraepithelial lymphocytes
+intraocular pressure
+inventions
+investments
+iodine radioisotopes
+iowa
+ipomoea batatas
+irinotecan
+iron
+ischemia
+ischemic attack, transient
+islets of langerhans
+isoniazid
+isoxazoles
+israel
+janus kinase 1
+janus kinase 2
+jaundice, neonatal
+jaundice, obstructive
+jews
+job satisfaction
+jordan
+journal impact factor
+kallikreins
+kaplan-meier estimate
+karyotyping
+kazakhstan
+kelch repeat
+keloid
+kenya
+ketoglutaric acids
+kidney diseases
+kidney failure, chronic
+kidney function tests
+kidney glomerulus
+kidney neoplasms
+killer cells, natural
+klebsiella infections
+klotho proteins
+knee injuries
+knee joint
+knowledge discovery
+kruppel-like transcription factors
+kv1.3 potassium channel
+kynurenine
+lab-on-a-chip devices
+laboratories
+laboratories, clinical
+lactams
+lactams, macrocyclic
+lactic acid
+lamotrigine
+language
+language development
+laryngeal neoplasms
+late onset disorders
+latent class analysis
+laxatives
+ldl-receptor related proteins
+lead
+leadership
+learning
+lebanon
+lectins, c-type
+leg
+legislation as topic
+legislation, medical
+leiomyoma
+leishmaniasis
+leisure activities
+length of stay
+leptin
+leucovorin
+leukemia, lymphocytic, chronic, b-cell
+leukemia, monocytic, acute
+leukemia, myeloid, acute
+leukocyte count
+leukocytes
+leukocytes, mononuclear
+leukoencephalopathies
+levodopa
+lewy body disease
+leydig cells
+liability, legal
+life style
+likelihood functions
+limb salvage
+limit of detection
+linear models
+linitis plastica
+lipase
+lipid metabolism, inborn errors
+lipodystrophy
+lipoprotein lipase
+lipoproteins
+lipoproteins, hdl
+lipoproteins, ldl
+liposomes
+listeria
+listeria monocytogenes
+listeriosis
+literacy
+lithium compounds
+lithostathine
+lithuania
+liver cirrhosis
+liver cirrhosis, alcoholic
+liver cirrhosis, biliary
+liver diseases, alcoholic
+liver failure
+liver neoplasms
+liver neoplasms, experimental
+liver transplantation
+liver-specific organic anion transporter 1
+livestock
+living donors
+logistic models
+london
+loneliness
+longevity
+los angeles
+loss of function mutation
+loss of heterozygosity
+luminescent measurements
+lung diseases
+lung diseases, interstitial
+lung injury
+lupus erythematosus, systemic
+lymph node excision
+lymph nodes
+lymphatic metastasis
+lymphocyte activation
+lymphocyte count
+lymphocyte subsets
+lymphocytes
+lymphocytes, tumor-infiltrating
+lymphokines
+lymphoma, b-cell
+lymphoma, large b-cell, diffuse
+lymphoma, t-cell, peripheral
+lysine
+lysosomal membrane proteins
+macaca mulatta
+macrolides
+macrophage activation
+macula lutea
+macular degeneration
+magnetic resonance imaging, cine
+maine
+malaria, falciparum
+male
+malformations of cortical development
+mammary neoplasms, animal
+manitoba
+mannosyltransferases
+map kinase kinase 4
+map kinase kinase kinase 1
+map kinase signaling system
+marketing of health services
+markov chains
+maryland
+maternal age
+maternal health
+maternal health services
+maternal inheritance
+maternal-fetal exchange
+matrix metalloproteinase 1
+matrix metalloproteinase 2
+matrix metalloproteinase 9
+mcf-7 cells
+measles vaccine
+meat
+mechanistic target of rapamycin complex 1
+mechanistic target of rapamycin complex 2
+medical history taking
+medical laboratory personnel
+medical missions
+medical oncology
+medical order entry systems
+medical record administrators
+medical records systems, computerized
+medical subject headings
+medically underserved area
+medicine, chinese traditional
+megakaryocytes
+meiosis
+melanocortins
+melanocytes
+melanoma, cutaneous malignant
+melanosis
+membrane proteins
+membrane transport proteins
+memory t cells
+menarche
+meningitis, bacterial
+mental competency
+mental health services
+mental recall
+mentors
+mesothelioma, malignant
+meta-analysis as topic
+metabolic networks and pathways
+metagenome
+metal-organic frameworks
+metals
+metaplasia
+metapneumovirus
+metformin
+methicillin-resistant staphylococcus aureus
+methionine
+methionine adenosyltransferase
+methyltransferases
+metronidazole
+mexico
+mice
+mice, inbred balb c
+mice, inbred c57bl
+mice, inbred cba
+mice, inbred dba
+mice, inbred nod
+mice, knockout
+mice, nude
+mice, scid
+mice, transgenic
+michigan
+microarray analysis
+microbial sensitivity tests
+microbiological techniques
+microcephaly
+microcirculation
+microfilament proteins
+micronutrients
+micropeptides
+microphysiological systems
+microsatellite repeats
+microscopy
+microscopy, fluorescence
+microspheres
+microtomy
+microtubule-associated proteins
+middle aged
+middle eastern people
+migraine disorders
+migraine with aura
+migraine without aura
+military medicine
+military personnel
+milk, human
+minimally invasive surgical procedures
+minnesota
+minority groups
+missed diagnosis
+mitogen-activated protein kinase kinases
+mitral valve
+mitral valve insufficiency
+mixed function oxygenases
+mobile applications
+models, animal
+models, biological
+models, economic
+models, genetic
+models, immunological
+models, molecular
+models, organizational
+models, psychological
+models, statistical
+models, theoretical
+molecular diagnostic techniques
+molecular docking simulation
+molecular dynamics simulation
+molecular sequence annotation
+molecular structure
+molecular typing
+mongolia
+monitoring, physiologic
+monosaccharide transport proteins
+moral obligations
+morals
+morocco
+morpholines
+mosaicism
+mosquito vectors
+mothers
+motivation
+motor activity
+mouth mucosa
+mouth neoplasms
+mozambique
+mucin 5ac
+mucocutaneous lymph node syndrome
+mucous membrane
+mucus
+multicenter studies as topic
+multidrug resistance-associated protein 2
+multidrug resistance-associated proteins
+multilocus sequence typing
+multimodal imaging
+multiple chronic conditions
+multiple myeloma
+multiple trauma
+multiplex polymerase chain reaction
+multivariate analysis
+munc18 proteins
+muscle contraction
+muscle proteins
+muscle relaxation
+muscle, smooth
+muscular atrophy, spinal
+muscular diseases
+muscular dystrophy, duchenne
+musculoskeletal diseases
+musculoskeletal system
+mushroom bodies
+mutant chimeric proteins
+mutation rate
+mutation, missense
+muts homolog 2 protein
+mycobacterium tuberculosis
+myelin proteins
+myelodysplastic syndromes
+myeloid cells
+myocardial contraction
+myocardium
+myocytes, cardiac
+myocytes, smooth muscle
+myotonic dystrophy
+n-acetylglucosaminyltransferases
+n-acetylneuraminic acid
+nadph oxidase 4
+nadph oxidases
+nanomedicine
+nanoparticles
+nanopores
+nanotechnology
+naphthoquinones
+nasopharyngeal neoplasms
+nasopharynx
+natalizumab
+national cancer institute (u.s.)
+national health programs
+national human genome research institute (u.s.)
+national institute of diabetes and digestive and kidney diseases (u.s.)
+national institutes of health (u.s.)
+necrosis
+nedd4 ubiquitin protein ligases
+negotiating
+neoadjuvant therapy
+neonatal screening
+neonatology
+neoplasm grading
+neoplasm invasiveness
+neoplasm metastasis
+neoplasm proteins
+neoplasm recurrence, local
+neoplasm seeding
+neoplasm staging
+neoplasm transplantation
+neoplasms, experimental
+neoplasms, germ cell and embryonal
+neoplasms, multiple primary
+neoplasms, second primary
+neoplasms, unknown primary
+neoplastic cells, circulating
+neoplastic stem cells
+neoplastic syndromes, hereditary
+neovascularization, pathologic
+nephritis, hereditary
+nephritis, interstitial
+nephroma, mesoblastic
+nerve fibers
+nerve net
+nerve tissue proteins
+nervous system diseases
+nervous system malformations
+netherlands
+netrin receptors
+netrins
+neural networks, computer
+neural pathways
+neuralgia
+neurodevelopmental disorders
+neuroendocrine tumors
+neurofilament proteins
+neurologists
+neurology
+neuronal plasticity
+neurons
+neuropharmacology
+neuropsychological tests
+neurosurgical procedures
+nevus
+new south wales
+new york city
+nf-e2-related factor 2
+nf-kappa b
+nf-kappa b p50 subunit
+niacinamide
+nitric oxide
+nitriles
+nitrogen
+nitrogen dioxide
+nitroreductases
+nk cell lectin-like receptor subfamily k
+nomograms
+norovirus
+north america
+north carolina
+northern ireland
+norway
+nuclear proteins
+nuclear receptor subfamily 1, group f, member 1
+nucleophosmin
+nucleotides
+nurse clinicians
+nurse's role
+nursing informatics
+nursing methodology research
+nursing process
+nursing research
+nutrition surveys
+nutritional requirements
+nutritional sciences
+nutritional status
+obesity, abdominal
+obesity, metabolically benign
+obesity, morbid
+observational studies as topic
+observer variation
+obstetric labor, premature
+obstetrics
+occult blood
+occupational exposure
+occupational health
+occupational medicine
+occupations
+ocular motility disorders
+odorants
+oleanolic acid
+oligomenorrhea
+oligonucleotide array sequence analysis
+oligopeptides
+oncogene fusion
+oncogene proteins
+oncogene proteins, fusion
+oncogene proteins, viral
+ondansetron
+ontario
+oocyte retrieval
+oocytes
+oogenesis
+opportunistic infections
+oral ulcer
+organ culture techniques
+organ preservation
+organ size
+organ sparing treatments
+organ specificity
+organizational case studies
+organizational innovation
+organizational objectives
+organizations
+organizations, nonprofit
+organophosphonates
+organoplatinum compounds
+organs at risk
+ornithine
+oropharyngeal neoplasms
+orphan drug production
+orthopedic procedures
+osmolar concentration
+osteoarthritis, hip
+osteoarthritis, knee
+osteoblasts
+osteochondrodysplasias
+osteoclasts
+osteocytes
+osteogenesis
+osteonectin
+osteoporotic fractures
+osteosarcoma
+out-of-hospital cardiac arrest
+outcome and process assessment, health care
+outcome assessment, health care
+outpatients
+ovarian cysts
+ovarian diseases
+ovary
+oxaliplatin
+oxaloacetates
+oxcarbazepine
+oxidative phosphorylation
+oxidoreductases
+oxidoreductases acting on sulfur group donors
+oximes
+pacemaker, artificial
+pacific island people
+pain, postoperative
+palatine tonsil
+pancreatic neoplasms
+pancreatitis, chronic
+pancreatitis-associated proteins
+panitumumab
+papillomaviridae
+papillomavirus e7 proteins
+papillomavirus infections
+papillomavirus vaccines
+paraffin embedding
+paralysis
+parasitemia
+parathyroid hormone
+parental consent
+parenting
+parity
+patents as topic
+pathology, clinical
+patient acceptance of health care
+patient acuity
+patient care management
+patient compliance
+patient discharge
+patient discharge summaries
+patient education as topic
+patient identification systems
+patient navigation
+patient outcome assessment
+patient portals
+patient preference
+patient reported outcome measures
+patient rights
+patient-specific modeling
+pattern recognition, automated
+pediatric obesity
+pedigree
+peer review
+pelvis
+penile neoplasms
+pennsylvania
+peptide fragments
+peptides
+perciformes
+perilla
+perinatology
+periodicals as topic
+periodontal ligament
+perioperative care
+perioperative period
+peripheral nervous system diseases
+peripheral vascular diseases
+peritoneal lavage
+peroxisome proliferator-activated receptors
+persistent infection
+personal protective equipment
+personality
+personality disorders
+persons with disabilities
+phage therapy
+phagocytes
+phagocytosis
+pharmaceutical preparations
+pharmacists
+pharmacogenomic testing
+pharmacogenomic variants
+pharmacology, clinical
+pharmacovigilance
+pharmacy service, hospital
+pharynx
+phenylketonurias
+phenylurea compounds
+philippines
+philosophy, medical
+phosphates
+phosphatidylinositol 3-kinases
+phosphoinositide-3 kinase inhibitors
+phospholipases
+phospholipases a2, calcium-independent
+phospholipids
+phosphoproteins
+phosphorylation
+phosphotransferases (alcohol group acceptor)
+photophobia
+phylogeny
+phylogeography
+physical chromosome mapping
+physical examination
+physician's role
+physician-patient relations
+physicians
+physicians, primary care
+phytoplankton
+pilot projects
+piperazines
+piperidines
+pituitary diseases
+pituitary gland
+pituitary neoplasms
+pituitary-adrenal system
+placebos
+placenta diseases
+placenta growth factor
+planning techniques
+plant breeding
+plant leaves
+plants
+plasma exchange
+plasmids
+plasminogen activator inhibitor 1
+plasmodium berghei
+plasmodium falciparum
+plastics
+platelet aggregation inhibitors
+platelet-derived growth factor
+pleural neoplasms
+pneumococcal infections
+pneumococcal vaccines
+pneumonectomy
+pneumonia, viral
+point-of-care systems
+point-of-care testing
+poison control centers
+policy making
+politics
+poly(adp-ribose) polymerase inhibitors
+polycystic kidney, autosomal dominant
+polycystic kidney, autosomal recessive
+polyesters
+polyethylene glycols
+polymorphism, single nucleotide
+polypharmacy
+polyps
+polyradiculoneuropathy, chronic inflammatory demyelinating
+polysaccharides
+polystyrenes
+pons
+population dynamics
+population groups
+population surveillance
+porins
+porphyromonas gingivalis
+positive-pressure respiration
+positron emission tomography computed tomography
+positron-emission tomography
+post-exposure prophylaxis
+postmenopause
+postoperative nausea and vomiting
+postpartum hemorrhage
+postpartum period
+postthrombotic syndrome
+potassium channels, inwardly rectifying
+potassium channels, tandem pore domain
+poverty
+power, psychological
+ppar gamma
+practice guidelines as topic
+practice patterns, nurses'
+practice patterns, physicians'
+pragmatic clinical trials as topic
+precancerous conditions
+precursor cell lymphoblastic leukemia-lymphoma
+prediabetic state
+predictive value of tests
+prefrontal cortex
+pregnancy complications
+pregnancy complications, cardiovascular
+pregnancy complications, infectious
+pregnancy outcome
+pregnancy trimesters
+pregnancy, twin
+pregnancy-associated plasma protein-a
+pregnanediol
+pregnant people
+premature birth
+premenopause
+prenatal care
+prenatal exposure delayed effects
+prescription drug misuse
+prescription drug overuse
+prescription drugs
+preservation, biological
+pressure
+pressure ulcer
+primary myelofibrosis
+primary ovarian insufficiency
+primates
+principal component analysis
+printing, three-dimensional
+private sector
+probability
+procalcitonin
+process assessment, health care
+procollagen
+procollagen n-endopeptidase
+proctectomy
+product surveillance, postmarketing
+professional-patient relations
+program development
+program evaluation
+programmed cell death 1 receptor
+programming languages
+prolapse
+proliferating cell nuclear antigen
+proline
+promoter regions, genetic
+promyelocytic leukemia zinc finger protein
+proof of concept study
+propensity score
+proportional hazards models
+proprotein convertase 9
+prostate
+prostatectomy
+prostatic neoplasms
+prostatic neoplasms, castration-resistant
+prosthesis design
+proteasome endopeptidase complex
+proteasome inhibitors
+protein biosynthesis
+protein conformation
+protein domains
+protein folding
+protein inhibitors of activated stat
+protein interaction maps
+protein isoforms
+protein kinase inhibitors
+protein kinases
+protein processing, post-translational
+protein serine-threonine kinases
+protein stability
+protein structure, tertiary
+protein transport
+protein-arginine n-methyltransferases
+protein-tyrosine kinases
+proteogenomics
+proteoglycans
+proteolysis
+proteome
+proto-oncogene mas
+proto-oncogene proteins
+proto-oncogene proteins b-raf
+proto-oncogene proteins c-akt
+proto-oncogene proteins c-kit
+proto-oncogene proteins c-met
+proto-oncogene proteins c-myc
+proto-oncogene proteins c-ret
+proto-oncogene proteins c-sis
+proto-oncogene proteins p21(ras)
+protozoan proteins
+pseudomonas infections
+pseudoxanthoma elasticum
+psychology
+psychotherapy
+psychotic disorders
+pten phosphohydrolase
+puberty
+puberty, delayed
+puberty, precocious
+public health administration
+public health practice
+public health surveillance
+public relations
+public reporting of healthcare data
+public sector
+public-private sector partnerships
+publications
+pubmed
+pulmonary artery
+pulmonary aspergillosis
+pulmonary disease, chronic obstructive
+pulmonary medicine
+pulse wave analysis
+purines
+putamen
+pyrazines
+pyrazoles
+pyridines
+pyridones
+pyrimidines
+pyrimidinones
+pyrroles
+pyruvate kinase
+pyruvates
+quality assurance, health care
+quality indicators, health care
+quality of health care
+quality-adjusted life years
+quantitative trait loci
+quantitative trait, heritable
+queensland
+quercetin
+quinazolines
+quinolines
+quinoxalines
+rabies
+rabies vaccines
+rabies virus
+race factors
+racial groups
+radial artery
+radiation genomics
+radiation injuries
+radiation tolerance
+radiation, ionizing
+radiation-sensitizing agents
+radio frequency identification device
+radiography
+radiology department, hospital
+radiology information systems
+radiosurgery
+radiotherapy dosage
+radiotherapy planning, computer-assisted
+radiotherapy, adjuvant
+radiotherapy, intensity-modulated
+ramucirumab
+random allocation
+random forest
+randomized controlled trials as topic
+reaction time
+reading
+reagent kits, diagnostic
+real-time polymerase chain reaction
+reassortant viruses
+receptor protein-tyrosine kinases
+receptor tyrosine kinase-like orphan receptors
+receptor, erbb-2
+receptor, erbb-4
+receptor, fibroblast growth factor, type 1
+receptor, fibroblast growth factor, type 3
+receptor, interferon alpha-beta
+receptor, melanocortin, type 4
+receptor, melatonin, mt2
+receptor, platelet-derived growth factor alpha
+receptor, tie-2
+receptor, transforming growth factor-beta type ii
+receptors, adrenergic
+receptors, amino acid
+receptors, androgen
+receptors, antigen, b-cell
+receptors, antigen, t-cell
+receptors, antigen, t-cell, gamma-delta
+receptors, calcitriol
+receptors, cell surface
+receptors, chimeric antigen
+receptors, cxcr4
+receptors, cytoplasmic and nuclear
+receptors, estrogen
+receptors, g-protein-coupled
+receptors, immunologic
+receptors, interleukin-6
+receptors, interleukin-8b
+receptors, ldl
+receptors, leptin
+receptors, nicotinic
+receptors, opioid, mu
+receptors, polymeric immunoglobulin
+receptors, progesterone
+receptors, purinergic p2x7
+receptors, thyrotropin
+receptors, transferrin
+recombinant fusion proteins
+records
+rectal neoplasms
+rectum
+referral and consultation
+regional medical programs
+reimbursement, incentive
+relaxin
+religion
+remission induction
+remuneration
+renal dialysis
+renal insufficiency
+renal insufficiency, chronic
+renin
+reoperation
+reperfusion injury
+repressor proteins
+reproducibility of results
+reproduction
+republic of korea
+research personnel
+research report
+research support as topic
+researcher-subject relations
+residence characteristics
+resource-limited settings
+respect
+respiration, artificial
+respiratory function tests
+respiratory physiological phenomena
+respiratory sounds
+respiratory syncytial virus, human
+respiratory tract diseases
+respiratory tract infections
+response evaluation criteria in solid tumors
+rest
+resuscitation
+retinal diseases
+retinal ganglion cells
+retinal neoplasms
+retinal pigment epithelium
+retinoblastoma binding proteins
+retreatment
+retrospective studies
+reverse transcriptase polymerase chain reaction
+review literature as topic
+rhabdoid tumor
+rhabdomyosarcoma
+rheumatic diseases
+rhinitis, allergic
+rhinovirus
+rhode island
+ribosomal proteins
+rifampin
+risk adjustment
+risk management
+risk reduction behavior
+risk-taking
+rna helicases
+rna interference
+rna, competitive endogenous
+rna, long noncoding
+rna, messenger
+rna, neoplasm
+rna, ribosomal, 16s
+rna, ribosomal, 23s
+rna, small interfering
+rna, viral
+rna-binding proteins
+roc curve
+romania
+roseobacter
+rotavirus infections
+rotavirus vaccines
+rural population
+russia
+ryanodine receptor calcium release channel
+saccharomyces cerevisiae
+saline solution
+salivary proteins and peptides
+salmonella enterica
+salmonella infections
+salmonella infections, animal
+saponins
+sarcoidosis
+sarcoma, ewing
+sarcoma, synovial
+sarcomeres
+saudi arabia
+scandinavian and nordic countries
+schizophrenic psychology
+schools, medical
+scleroderma, systemic
+scoliosis
+seasons
+seawater
+secondary care
+secretory pathway
+seer program
+segmental duplications, genomic
+selection, genetic
+self care
+self efficacy
+self report
+self-injurious behavior
+self-management
+semaphorins
+semen
+semen analysis
+semicarbazides
+senegal
+sensitivity and specificity
+sentinel lymph node biopsy
+sentinel surveillance
+sequence alignment
+sequence analysis
+sequence analysis, dna
+sequence analysis, rna
+sequence deletion
+serine
+serine-arginine splicing factors
+seroconversion
+seroepidemiologic studies
+serogroup
+serologic tests
+serum albumin
+severity of illness index
+sex characteristics
+sex distribution
+sex factors
+sheep
+shigella flexneri
+shigella sonnei
+shigella vaccines
+shock, septic
+siberia
+siblings
+sick leave
+sigmoidoscopy
+simvastatin
+single-blind method
+single-cell gene expression analysis
+sirolimus
+sirtuin 2
+skin diseases
+skin neoplasms
+sleep
+sleep apnea, obstructive
+sleep initiation and maintenance disorders
+sleep wake disorders
+smad3 protein
+smad8 protein
+small cell lung carcinoma
+small molecule libraries
+small ubiquitin-related modifier proteins
+snoring
+social class
+social conditions
+social control, formal
+social discrimination
+social environment
+social justice
+social networking
+social responsibility
+social values
+societies
+societies, medical
+societies, scientific
+sociodemographic factors
+socioeconomic factors
+sodium chloride symporter inhibitors
+sodium chloride, dietary
+sodium, dietary
+sodium-potassium-exchanging atpase
+sofosbuvir
+soft tissue infections
+solanaceous alkaloids
+solanum tuberosum
+solitary nucleus
+solute carrier family 12, member 1
+solvents
+somatomedins
+somatotypes
+sorafenib
+south american people
+south asian people
+south carolina
+southeast asian people
+sox9 transcription factor
+space flight
+spatial memory
+species specificity
+specimen handling
+spectrometry, mass, matrix-assisted laser desorption-ionization
+spectroscopy, fourier transform infrared
+spheroids, cellular
+sphingomyelin phosphodiesterase
+sphingomyelins
+spike glycoprotein, coronavirus
+spinal cord
+spinal cord injuries
+spinal fusion
+spondylarthritis
+squamous cell carcinoma of head and neck
+staining and labeling
+stakeholder participation
+staphylococcal infections
+stat3 transcription factor
+state medicine
+statistics as topic
+statistics, nonparametric
+stem cell research
+stem cell transplantation
+stereotaxic techniques
+stevens-johnson syndrome
+stomach neoplasms
+streptococcal infections
+stress disorders, post-traumatic
+stress, mechanical
+stress, psychological
+stromal cells
+students
+students, health occupations
+students, medical
+substance-related disorders
+sucrose
+sugars
+suicide prevention
+suicide, attempted
+sulfamethoxazole
+sulfites
+sulfonamides
+sulfones
+sulfonylurea compounds
+superoxide dismutase
+supervised machine learning
+surgery department, hospital
+surgical procedures, operative
+surveys and questionnaires
+survival of motor neuron 1 protein
+survival rate
+survivin
+suture techniques
+sweden
+sweetening agents
+swine
+syndrome
+systematic reviews as topic
+systematized nomenclature of medicine
+systemic inflammatory response syndrome
+systems analysis
+systems integration
+systole
+t-box domain proteins
+t-lymphocyte subsets
+t-lymphocytes
+t-lymphocytes, cytotoxic
+t-lymphocytes, regulatory
+taiwan
+tandem mass spectrometry
+taq polymerase
+tardive dyskinesia
+taste
+taste perception
+tau proteins
+taxoids
+tazobactam
+tea
+teaching
+technology assessment, biomedical
+technology transfer
+technology, pharmaceutical
+telecommunications
+telephone
+telomerase
+telomere homeostasis
+temperament
+temperature
+tennessee
+terminology as topic
+tertiary care centers
+testicular neoplasms
+testis
+tetraspanins
+text messaging
+th1 cells
+th17 cells
+thalassemia
+theranostic nanomedicine
+therapies, investigational
+thinking
+thoracic surgery
+thoracic surgical procedures
+threonine
+thromboplastin
+thrombospondins
+thyroid cancer, papillary
+thyroid carcinoma, anaplastic
+thyroid gland
+thyroid hormones
+thyroid neoplasms
+ticagrelor
+time
+time factors
+time-to-treatment
+tinea pedis
+tissue and organ harvesting
+tissue and organ procurement
+tissue array analysis
+tissue culture techniques
+tissue fixation
+tissue scaffolds
+tobacco products
+tobacco use cessation
+tobacco use disorder
+toll-like receptor 3
+toll-like receptor 7
+tomography, optical coherence
+tomography, x-ray computed
+tongue
+tonsillectomy
+tooth
+tor serine-threonine kinases
+torsades de pointes
+total quality management
+toxicity tests
+toxoplasma
+toxoplasmosis
+trans-activators
+transcortin
+transcription factor 7-like 2 protein
+transcription factors
+transcription, genetic
+transcriptional coactivator with pdz-binding motif proteins
+transfection
+transforming growth factor beta
+transients and migrants
+translational research, biomedical
+transplantation, heterologous
+transplants
+travel
+treatment failure
+trehalose
+triage
+triazines
+trigger finger disorder
+triggering receptor expressed on myeloid cells-1
+trimethoprim, sulfamethoxazole drug combination
+triple negative breast neoplasms
+triterpenes
+trophoblasts
+troponin t
+trustees
+truth disclosure
+trypsin
+trypsinogen
+tuberculosis, multidrug-resistant
+tuberculosis, pulmonary
+tumor burden
+tumor cells, cultured
+tumor hypoxia
+tumor suppressor protein p53
+tumor suppressor proteins
+turkey
+twin studies as topic
+twins
+twins, dizygotic
+twins, monozygotic
+tyk2 kinase
+ubiquitin thiolesterase
+ubiquitin-protein ligases
+ubiquitin-specific proteases
+ubiquitination
+uganda
+ultrasonography
+ultraviolet rays
+umbilical cord
+uncertainty
+undiagnosed diseases
+unified medical language system
+united states department of defense
+united states department of veterans affairs
+united states dept. of health and human services
+united states food and drug administration
+universities
+up-regulation
+urban population
+uric acid
+urinary bladder
+urinary tract infections
+urogenital abnormalities
+urogenital neoplasms
+urologic diseases
+urologic neoplasms
+urology
+uromodulin
+ursodeoxycholic acid
+user-computer interface
+uterine cervical dysplasia
+uterine cervical neoplasms
+uterine neoplasms
+uterus
+uveal neoplasms
+vaccination coverage
+vaccination refusal
+vaccines, attenuated
+vaccines, conjugate
+vaccines, synthetic
+vacuum
+vagina
+vaginal smears
+valproic acid
+value-based purchasing
+vascular diseases
+vascular endothelial growth factor a
+vascular endothelial growth factor receptor-1
+vascular stiffness
+vascular surgical procedures
+ventricular function, left
+ventricular function, right
+ventricular remodeling
+vero cells
+vesicular transport proteins
+veterans health
+victoria
+vigna
+vinblastine
+vincristine
+vinorelbine
+viral load
+viral proteins
+viral vaccines
+virulence
+virulence factors
+virus diseases
+virus replication
+viruses
+visual fields
+vital capacity
+vitamin d-binding protein
+vitamin k 1
+vitamin k epoxide reductases
+vitamins
+vitreous body
+vocabulary, controlled
+volatile organic compounds
+vulnerable populations
+waist-hip ratio
+wakefulness
+washington
+wastewater
+wastewater-based epidemiological monitoring
+wasting syndrome
+water
+water microbiology
+wearable electronic devices
+weight gain
+weight reduction programs
+weightlessness
+wharton jelly
+white
+white matter
+white people
+wilms tumor
+wisconsin
+wnt proteins
+wnt signaling pathway
+wolman disease
+women's health
+wood
+workforce
+world health organization
+wounds and injuries
+wrist
+x chromosome
+xenograft model antitumor assays
+y-box-binding protein 1
+yap-signaling proteins
+young adult
+yttrium radioisotopes
+zambia
+zebrafish proteins
+zika virus infection
+zoonoses
+
+Only in Keywords:
+
+#bladdercancer
+#blcsm
+#uroonc
+#utuc
+1,4
+1000 genomes project
+16p11.2
+16s rrna
+16s rrna gene
+16s rrna gene-based sequencing
+25(oh)d
+25(oh)d2
+25(oh)d3
+25-hydroxyvitamin d
+28-day mortality
+2c-like
+3d cell culture, culture conditions
+3d culture
+3d culture technology
+3d cultures
+3d models
+3d structural modeling
+5-fluorouracil
+5-fu-resistant colorectal cancer
+5-triphosphate 3-kinase a
+5-trisphosphate
+a high-tech crop improvement
+abca1
+abcc2
+abcd
+abcg2
+abcg2 rs2231142
+abdominal aortic aneurysm
+aberrant expression
+aboriginal and torres strait islanders
+aboriginal health
+abscopal response
+absenteeism
+absolute risk
+abuse
+academia-biotech-pharma ecosystem
+academic research
+acc data standards
+acc/aha clinical data standards
+acc/aha data standards
+accelerometer
+access
+access committee
+access to care
+access to genetic services
+access to genomic medicine
+accrual
+accuracy
+accuracy heterogeneity
+ace-2
+ace2
+acetaminophen
+acetylsalicylic acid
+acgh
+acid suppression
+acinar cells
+acinetobacter baumannii
+ack1
+acmg
+acmg/amp
+acral
+acromegaly
+actin
+actionable genetic findings
+actionable mutation
+activated and expanded natural killer (nkae) cells
+activation
+acute care hospital
+acute exacerbation
+acute hiv infection
+acute immune response
+acute ischemic stroke
+acute kidney injury, transplantation
+acute lymphoblastic leukemia
+acute myeloid leukemia
+acute pancreatitis
+acute pediatrics
+acute respiratory distress syndrome of extrapulmonary
+acute respiratory distress syndrome of pulmonary
+acute respiratory distress syndrome(ards)
+acute retroviral syndrome
+acute stroke therapy
+acvr1
+adaptation
+adaptive platform trial
+adaptive trials
+adatmegosztás
+addiction
+additive interaction
+additive models
+adenovirus
+adherence
+adhesion
+adi resistance
+adipocyte
+adiponectin
+adjuvant chemotherapy
+adma
+administrative claims
+administrative data
+administrative information
+admixed populations
+admixture
+adolescent assent
+adolescent brain cognitive development study
+adolescent idiopathic scoliosis
+adolescentes
+adolescents
+adolescents and young adults
+adoptive t cell therapy
+adrenergic beta antagonists
+adrenocortical adenoma
+adults
+advanced age
+advanced cancers
+advanced glycation end products
+advanced therapeutics
+advanced urological cancers
+advances in diagnosis and treatments
+adversarial learning
+adversarial network
+adverse drug events
+adverse drug reactions
+adverse events
+aetiology
+affective disorder
+affinity-based proteomics
+affordable genetic testing
+african american
+african ancestry
+african ethics
+african-ancestry populations
+africans
+age
+age at natural menopause
+age at onset
+age at onset of diabetes
+age interactions
+age-related disease
+age-related macular degeneration
+age-specific rate
+age-standardized incidence rate
+age-standardized rate
+ageing
+aggressive prostate cancer
+ago2, argonaute risc catalytic component 2
+aha scientific statements
+ai
+aids
+ajcc, american joint committee on cancer
+albumin endocytosis
+albumin-to-creatinine ratio
+alcohol
+alcohol abuse
+alcohol consumption
+alcohol dependence
+alcohol use
+alert fatigue
+alg3
+alg8
+algorithm
+alignment
+alk
+alk mutation
+alk-inhibitor
+all
+all of us
+all of us research program
+all-cause mortality
+allele
+allele frequency
+alpelisib
+alport syndrome
+alspac
+alternating hemiplegia of childhood
+alveolarisation
+alzheimer's disease
+alzheimer’s disease
+amd
+american college of medical genetics and genomics
+american indian/alaska native
+amidation
+amino acid metabolism
+aml
+amr
+amr surveillance
+amygdala nuclei
+amyloid pathology
+amyloid-beta
+amyloidosis
+analgesics
+anaplastic thyroid cancer (atc)
+ancestry
+ancestry diversity
+ancillary obligations
+and private sector
+androgen excess
+andrology
+anesthesiology
+anesthetics
+aneurysm
+ang1
+ang2
+angina
+angina pectoris
+angiogram
+angiography
+angioplasty
+angiosarcoma
+angiotensin i-converting enzyme type 2 (ace2)
+angptl4
+angptl8
+animal model
+animal research
+anm
+anoikis resistance
+antenatal care (anc)
+anti-cancer agents
+anti-müllerian hormon
+anti-nuclear antibody
+anti-obesity medication
+anti-pd-1 therapy
+anti-rbd igg
+antibiotic dosing
+antibiotic prophylaxis
+antibiotic resistance
+antibiotics resistance
+antibody
+antibody response
+anticancer
+anticancer agents
+anticoagulation agents
+antidepressants
+antigen
+antimicrobial resistance
+antioxidants
+antiplatelet agents
+antiplatelet drugs
+antiplatelet therapy
+antipsychotics
+antiretroviral resistance
+antiretroviral therapy
+antiretroviral treatment (art)
+antisocial
+antitumor effect
+antivirals
+aortic dissection
+aortic stenosis
+aortitis
+aortopathy
+apheresis
+apixaban
+apob, apolipoprotein b
+apoc3
+apoe
+apoe genetic risk
+apoe, apolipoprotein e
+apoe4
+apol1
+apol1 protein
+apolipoprotein
+apolipoproteins
+application
+application programming interface
+applications of computational statistics > genomics/proteomics/genetics
+approval
+aquatic genetic resources
+aqueous humor liquid biopsy
+arab countries
+arab middle east region
+arbovírus
+archetypes
+architecture
+archival tissue
+archived plasma
+ards
+area under the precision-recall curve (aucpr)
+area under the receiver operating characteristic (auroc)
+area under the roc curve (auc)
+arginase2
+arginine starvation
+arhgap fusions
+armc5
+aromatic compounds
+arpkd
+array-cgh
+arrhythmias
+artemisinin combination therapy
+arterial graft
+arterial hypertension
+arterial ischemic stroke
+arthritis
+article 29 working party
+artificial intelligence (ai)
+artificial intelligence-ai
+artificial neural network (ann), clinical natural language processing (clinical nlp)
+artificial neural networks (ann)
+artocarpus altilis
+asian subgroups
+aspergillosis
+asph
+asr
+assay
+assembloid
+assent
+assessment data
+association
+association mapping analysis
+association studies
+association study
+asthma costs
+asthma genetics
+asthma mortality
+asthma severity
+asthma susceptibility
+asthma-copd overlap
+asymptomatic carriage
+asymptomatic infection
+atac-seq
+ataxia-telangiectasia mutated
+atg14
+atherosclerosis-related diseases
+athlete
+athlome project consortium
+atp-binding cassette transporter
+atp1a3
+atp6v1a
+atp9a
+atrial fibrillation • stroke • genetic study • gsdmd • asia
+atrial flutter
+attention-deficit/hyperactivity disorder
+attitudes
+attitudes toward death
+attitudes towards research
+auc, area under the curve
+audit
+auroc, area under the receiver operator curve
+australian
+authenticity
+authority
+autism
+autism spectrum disorders
+autism spectrum disorders (asds)
+autochtone
+autoimmune
+autoimmune disease
+autoimmune disorder
+autoimmune hepatitis
+autoimmune liver disease
+automated analysis
+automated icd assignment
+automatic summarization
+automatic translation
+automation d001331
+autonomy
+autonomy, consent
+autosomal dominant polycystic kidney disease (adpkd)
+avatar model of cancer
+average acceleration
+awake craniotomy
+axillary lymph node
+axl
+azd2014
+azd8931
+azd9291
+azgp1
+aβ channels
+b cells
+b-ap15
+b-cell lymphoma
+bacillus anthracis endemic anthrax
+back pain
+bacterial dna
+bacterial infection
+bacterial meningitis
+bacterial resistance
+bacterial spread
+bacterial transmission
+bacterial vaccines
+bacteria–host cell interactions
+bait capture
+barrett's esophagus
+barrier
+barrier integrity
+basal
+basal β-cell function
+basal-like bladder cancer
+base editing
+basic (laboratory) research/science
+basic semen examination
+bats
+bayesian
+bayesian inference
+bayesian penalized regression
+bb, biobank borealis of northern finland
+bbmri
+bbmri-eric
+bbmri.be
+bbmri.nl
+bbmri_cz.
+bcdims
+beagle5.1
+becker muscular dystrophy
+bects
+beef production
+beginner
+behavioral health intervention
+behavioral risk factor surveillance system survey
+behaviour change
+benefit sharing
+benefits for participation
+best practice alerts (bpas)
+best practices
+best practices and guidelines
+beta cell imaging
+beta cell mass
+beta-blockade
+beta-cell
+bi-directional causal estimation
+bibliometric analysis
+bicuspid aortic valve
+big data analytics
+big data approach
+big data science
+big data, artificial intelligence (ai)
+big health data
+biliary tract cancer
+bilingual population
+bind-nl
+bio bank
+bio- and genomebank
+bio-banking
+bio-imaging
+bio-référentiel social
+bioavailability
+biobancos
+biobank
+biobank 3.0
+biobank access
+biobank consent
+biobank data
+biobank education
+biobank ethics
+biobank governance
+biobank information technology
+biobank it
+biobank japan project
+biobank network
+biobank networks
+biobank participants
+biobank repository
+biobank research
+biobank software
+biobank studies
+biobank study
+biobank to practice
+biobank, information and communications technology (ict)
+biobank-technologies
+biobanked human biospecimens
+biobanking
+biobanking and biorepositories
+biobanking economics
+biobanking education
+biobanking irb
+biobanking rare gynaecological cancers
+biobanking science
+biobanking, health research data repositories
+biobankology
+biobanks
+biobehavioral study
+biochemistry
+biochips
+biocloud
+biodistributor
+biodiversity biobanks
+biodiversity genomics
+bioengineered organs
+bioethics of psychiatric research
+biofilm formation
+bioinformatic
+bioinformatic analyses
+bioinformatic platforms
+bioinformatics
+bioinformatics analysis
+biologic specimen banks
+biological ageing
+biological aging
+biological databases
+biological factors
+biological material
+biological materials
+biological models
+biological networks
+biological psychiatry
+biological specimen bank
+biological specimens bank
+biologics
+biology of aging
+biomaker
+biomarker
+biomarker discovery
+biomarker exploration
+biomarker panels
+biomarker qualification
+biomarker research
+biomarker signatures
+biomarkers (bms)
+biomarkers (tumour)
+biomarkers/oncogenes/molecular oncology
+biomaterial management
+biomechanics
+biomedical
+biomedical data
+biomedical data integration
+biomedical enhancement
+biomedical ethics
+biomedical informatics
+biomedical knowledge graph
+biomedical literature
+biomonitoring
+biopreservation
+biopsy sample
+biopsy tissue
+biorepositories
+biorepositories/biobanks
+biorepository
+biorepository operations
+biorepository research
+bioresource
+bioresources
+biosafety protection
+biosample repository
+biosamples
+biosimilars
+biospecimen
+biospecimen donor
+biospecimen quality
+biospecimen research
+biospecimen science
+biospecimen utilisation
+biospecimens
+biosurveillance
+biotechnology revolution
+biotrust
+biovu
+bipolar depression
+birthweight
+bitter-taste receptor
+black
+black african or caribbean
+blactx-m
+bladder
+bladder cancer
+bladder cancer risk
+bladder cancer stem cells
+bladder carcinoma
+bladder urothelial carcinoma
+blanket consent
+bleeding
+blood bank, registries
+blood collection agencies
+blood eosinophil count
+blood lipid
+blood metabolites
+blood sample
+blood spot
+blood test
+blood vessel occlusion
+blood-derived biospecimens
+bloodstream infection
+blueprint
+blunt traumatic aortic injury
+bmd
+bmi
+bmi - body mass index
+bmi, body mass index
+bnt162b2
+bnt162b2 (comirnaty®)
+body donation
+body metabolism
+body shape indices
+body-mass index
+bolivia
+bone allografts
+bone banks
+bone marrow adipose tissue
+bone marrow adiposity
+bone marrow adiposity society
+bone marrow fat
+bone marrow invasion
+bone marrow niche
+bone mineral density
+bone tumors
+booster
+booster vaccination
+bootstrap
+borderline personality disorder
+bottlenecks in health data
+bowel symptoms
+bp5
+bph
+brain age
+brain aging
+brain cancer
+brain drain
+brain functional connectivity
+brain functional network
+brain health
+brain iron
+brain metastases
+brain metastasis
+brain organoids
+brain plasticity
+brain reserve
+brain risk score
+brain structure
+brain tumor
+brain tumors
+brain volume
+brain-gut-microbiome axis
+brainstem
+brainvar
+brazilians
+brca
+brca 1
+brca cancers
+brca1
+brca2
+breakthrough infection
+breast cancer
+breast cancer (bc)
+breast cancer biobank
+breast cancer biomarkers
+breast cancer index
+breast cancer predisposition
+breast cancer prognosis
+breast cancer risk
+breast cancer risk factors
+breast cancer risk prediction
+breast cancer stem cells
+breast cancer susceptibility genes
+breast cancer-specific survival
+breast invasive ductal carcinoma
+breastfeeding
+brfss
+bridg
+broad consent
+bronchial epithelial cells
+bronchopulmonary dysplasia
+bruton's tyrosine kinase inhibitor
+budget
+burden of disease
+burden score
+burn patients
+burnout
+business plan
+butyrylcholinesterase deficiency
+c+t
+c-jun
+c-met
+c1q-apoe complex
+ca2+ oscillations
+cab
+cad, coronary artery disease
+calcific aortic valve disease
+caliper
+cambodia
+campylobacteriosis
+canalization
+cancer
+cancer animal model
+cancer attractor
+cancer cachexia
+cancer clinical research
+cancer diagnosis
+cancer diagnostics
+cancer disparities
+cancer drug response
+cancer education program
+cancer genes
+cancer genetics
+cancer genomic medicine
+cancer genomics
+cancer imaging
+cancer immunotherapy
+cancer incidence
+cancer management
+cancer moonshot
+cancer networks
+cancer organoids
+cancer patient
+cancer pharmacogenomics
+cancer precision medicine
+cancer predisposition
+cancer predisposition gene
+cancer prevention
+cancer progression
+cancer registries
+cancer registry
+cancer research
+cancer risk
+cancer screening
+cancer screening and prevention
+cancer site-specific mortality
+cancer stem cell
+cancer stem cells
+cancer survivorship
+cancer syndromes
+cancer synoptic reports
+cancer therapy
+cancer treatment
+cancer trials
+cancer-associated thrombosis
+cancer: endocrine
+cancerous brain tissues
+cancers
+cancers pulmonaires non à petites cellules
+cancer‐associated fibroblasts
+candida albicans
+candidate gene studies
+canine
+cap
+capacity development
+capacity-building
+capillary electrophoresis
+capn2
+car t-cells
+carbapenem
+carbapenem resistance
+cardiac
+cardiac arrest
+cardiac arrhythmia
+cardiac epidemiology
+cardiac events
+cardiac function
+cardiac magnetic resonance
+cardiac morphology
+cardiac mri
+cardiac myosin inhibitors
+cardiac research
+cardiac surgery
+cardiac surgery, stent(s)
+cardiac volumetry
+cardio-metabolic disease
+cardiogenic shock
+cardioinformatics
+cardiometabolic health
+cardiometabolic markers
+cardiomyopathy
+cardiorespiratory fitness
+cardiovascular
+cardiovascular disease
+cardiovascular disease (cvd)
+cardiovascular endpoints
+cardiovascular events
+cardiovascular health (cvh)
+cardiovascular illness
+cardiovascular imaging
+cardiovascular magnetic resonance
+cardiovascular magnetic resonance imaging
+cardiovascular outcome
+cardiovascular remodelling
+cardiovascular research
+cardiovascular risk
+cardiovascular risk score
+cardioversion
+care coordination
+care pathway
+care widening models
+caribbean
+case report
+case study
+case-control
+case-control association testing
+case–control
+case–control study
+caspase 1
+caspase-3
+castrate-resistant prostate cancer (crpc)
+castration-resistant prostate cancer treatment
+catalog
+cationic amphiphilic drugs (cads)
+catrip and cabig
+cattle breeding
+causal
+causal association
+causal associations
+causal inference
+causal relationships
+causes of death
+caveolin
+cc2d1a
+ccfa partners
+ccl19
+ccl2
+ccna2
+ccr2
+cd20
+cd21low
+cd3
+cd37
+cd4+ cytotoxic t lymphocytes
+cd44
+cd68
+cdca7
+cdh1
+cdisc
+cdisc odm
+cdisc sdtm
+cdisc standards
+cdk12/cyclin k
+cdk4/6 inhibitor
+cdk4/6 inhibitors
+cdk7
+cdm
+cds
+cea
+celiac disease
+cell biology
+cell colonization
+cell cycle progression
+cell isolation
+cell line atlas
+cell lines
+cell preservation
+cell repository
+cell senescence
+cell therapies
+cell therapy
+cell viability
+cell-based therapies
+cell-free dna
+cellular biology
+cellular immunity
+censoring
+central obesity
+central sensitization
+centralized model
+cerclage
+cerebrospinal fluid biomarkers
+certain
+cervical cancer
+cervical cancer screening
+cervical cytology biobank
+cervical intraepithelial neoplasia
+cervicovaginal
+cervix cancer
+cetp
+cfdna
+cftr
+cftr correctors
+cftr potentiators
+cgga
+cgsl
+chaiqin chengqi decoction
+challenges
+challenges and inequalities of access
+change model
+change of management
+channel attention
+charge consortium
+charlson comorbidity index (cci)
+chart review
+check-point inhibitor
+checkpoint blockade updates
+checkpoint inhibitors
+chek2 c.1100delc germline genetic variant
+chemo-immunotherapy
+chemo-resistance
+chemoimmunotherapy
+chemokine
+chemokine c-x-c receptor 4 (cxcr4)
+chemokines
+chemoprevention
+chemoresistance
+chemotherapy
+chemotherapy response
+chemotherapy-induced amenorrhea
+chest pain myocardial infarction
+child health
+childhood abuse
+childhood cancer
+childhood leukemia
+childhood stunting
+childhood tb
+childhood trauma
+children
+chimeric antigen receptor
+chimeric antigen receptor - car
+china biobanking
+chinese american
+chinese pattern
+chip
+chirurgie
+chirurgie robot-assistée
+chirurgie vidéothoracoscopique
+chlamydia screening
+chlamydia trachomatis
+chlamydia trachomatis (ct)
+chm biobank
+cholesterogenic genes
+cholesteryl ester transfer protein
+christianson syndrome
+chromatin landscape
+chromatin remodeling
+chromosomal disorders
+chromosomal karyotype
+chromosomal microarray analysis
+chromosome 1
+chronic airways disease
+chronic alcohol use
+chronic conditions
+chronic corpus atrophic gastritis
+chronic covid-19 syndrome
+chronic diseases
+chronic fatigue syndrome
+chronic hepatitis
+chronic illness
+chronic inflammation
+chronic inflammatory demyelinating polyneuropathy
+chronic kidney disease
+chronic kidney disease (ckd)
+chronic kidney diseases
+chronic liver disease
+chronic obstructive pulmonary disease
+chronic overlapping pain conditions
+chronic postsurgical pain
+chronic rhinosinusitis
+chronotype
+ci, confidence interval
+cibersort
+cibisatamab
+cid
+cigarette smoke
+ciliopathy
+cimi
+circadian rhythms regulator
+circulating biomarkers
+circulating cell-free dna
+circulating cell-free dna (cfdna)
+circulating fatty object
+circulating free dna
+circulating mirna
+circulating nucleosomes
+circulating protein
+circulating soluble her2 (sher2)
+circulating tumor cells
+circulating tumor-specific markers
+circulating tumour cells
+circulating tumour dna (ctdna)
+circulating vitamin c
+circumferential strain
+cirrhosis
+cirrhosis of the liver
+ckb data release 15
+ckd
+ckd progression
+claims data
+classical complement cascade (ccc)
+classification
+classification with costs
+clear cell ovarian carcinoma
+clia
+clinical
+clinical actionability
+clinical and translational science award
+clinical annotation
+clinical bacteria
+clinical biobank
+clinical bioinformatics
+clinical burden
+clinical care
+clinical chemistry
+clinical data
+clinical data acquisition standards harmonization
+clinical data development
+clinical data interchange standards consortium
+clinical data interchange standards consortium (cdisc)
+clinical data management
+clinical data repository
+clinical data research network
+clinical data standards
+clinical data warehouse
+clinical decision
+clinical decision making
+clinical decision support
+clinical decision support (cds)
+clinical decision support system
+clinical decision support systems
+clinical decision support systems (cdss)
+clinical decision support systems (cdsss)
+clinical decision support tools
+clinical decision-making tool
+clinical decisions support systems
+clinical engagement with genomic results
+clinical event adjudication
+clinical events
+clinical genome sequencing laboratory
+clinical genome testing
+clinical genomics
+clinical implementation
+clinical informatics
+clinical information
+clinical information modeling initiative (cimi)
+clinical knowledge graphs
+clinical lab 2.0
+clinical laboratory improvement amendments
+clinical microbiology
+clinical nephrology
+clinical outcome
+clinical outcome assessments
+clinical outcome prediction
+clinical outcomes
+clinical parameters
+clinical pharmacogenetics implementation consortium (cpic)
+clinical pharmacogenomics
+clinical phenotype
+clinical phenotyping
+clinical physiology
+clinical prediction
+clinical prediction model
+clinical presentation
+clinical proteomics
+clinical protocol
+clinical quality
+clinical recruitment
+clinical registry
+clinical research
+clinical research data
+clinical research data warehouse
+clinical research informatics
+clinical risk assessment
+clinical samples
+clinical sequencing
+clinical specimens
+clinical standardization
+clinical study
+clinical study meta-data standards
+clinical translation
+clinical translational research
+clinical trial
+clinical trial database
+clinical trial protocol
+clinical trials
+clinical trials design
+clinical utility
+clinical validity
+clinical variants
+clinical workflow
+clinical-exome
+clinically isolated syndrome
+clinical trials
+clinicogenomic
+clinicogenomic registries
+clinicogenomics
+clinicopathological signatures
+clonal hematopoiesis of indeterminate potential
+clonal relationship
+closed-loop deep brain stimulation
+cloud-based analytics
+club theory
+clumping and thresholding
+cluster of differentiation 44
+clustering
+clusters
+cmuh genetic biobank
+cncds
+cnn
+cns drug discovery
+cnv-etlai
+cnvs
+cny, chinese yuan
+co-clinical trial
+co-design
+co-essentiality
+co-expression
+co-morbidity
+co-observation
+coad
+coagulation
+coalition against major diseases
+coclinical trial
+coding germline variants
+cognitive ability
+cognitive decline
+cognitive functioning
+cognitive interviews
+cohort
+cohort definition
+cohort discovery
+cohort profile
+cohort study
+cohort study (or longitudinal study)
+cohorts
+cold ischemia
+cold storage
+collaboration
+collaborative network
+collaborative working groups
+collagenous colitis
+collection and storage method
+college of american pathologists
+collider stratification bias
+colocalization
+colon cancer
+colonization
+colonization factor
+colonization factor gene clusters
+colorectal
+colorectal cancer
+colorectal cancer (crc)
+colorectal cancer liver metastasis
+colorectal carcinoma
+colorectal surgery
+combination
+combination therapies
+combination therapy
+combinatorial therapies
+commercial access
+commercialisation
+commercialization
+commercial–academic partnerships
+common breast cancer susceptibility variants
+common data model
+common disease
+common germline genetic variants
+common rule
+communal guilt
+communication d003142
+communication in healthcare
+community
+community advisory board
+community and family participation
+community and public health
+community engagement
+community health
+community-acquired pneumonia
+community-based participatory research (cbpr)
+community-engagement
+comorbidities
+comorbidity burden
+companion diagnostics
+comparative genomics
+comparative review
+comparison
+compensated cirrhosis
+competence
+competency
+competing risk
+competing risks
+complement
+complete pathological response
+complex disease
+complex phenotypes
+complex trait
+complex traits
+complications
+composite biomarkers
+compound
+comprehensive cancer center
+comprehensive care
+comprehensive genomic profiling
+comprehensive health care
+comprehensive testing
+compulsory
+computable phenotypes
+computation analysis
+computation medicine
+computational analyses
+computational approaches
+computational cancer subtyping
+computational phenotype
+computational phenotyping
+computational power
+computed tomography
+computer-assisted diagnosis
+computerized decision support systems
+computerized patient records
+computerized prescriber order entry
+computing cluster
+concept recognition
+concordance
+concurrent controls
+conditional heritability
+conditional inference forests (cif)
+conditionally reprogrammed cells
+confusion assessment method
+congenital bilateral central blindness
+congenital cranial malformation
+congenital disorders
+congenital heart disease
+congenital hepatic fibrosis
+congo
+conjunctival melanoma
+conjunctival melanoma in situ
+conn syndrome
+connected devices
+connectivity map
+consensus conference
+consensus data standards
+consensus guidelines
+consensus statement
+consent
+consent form
+consent management
+consent models
+conservation
+conservation genetics
+conservation genomics
+consistency
+consolidation
+consortium
+consumer health informatics
+consumer involvement
+consumer participation
+consumption
+content extraction and recognition
+continuous shrinkage
+contractile function
+contralateral breast cancer
+contralateral breast cancer risk
+control definition
+controlled clinical trials
+controlled terminology
+controlled vocabularies
+controlled vocabulary
+controller
+contrôle glycémique
+conventional radiography
+convergence
+convolutional neural networks (cnn)
+cooperation
+coordination
+copd
+copy number (cn) variations
+copy number aberrations (cna)
+copy number alteration
+copy number amplification
+copy number variation
+copy number variations
+copy-number variation
+cord blood
+core data element
+coronary artery bypass graft
+coronary artery bypass graft surgery
+coronary artery diseases
+coronary artery revascularization
+coronary atherosclerosis
+coronary heart disease
+coronary revascularization
+coronavirus
+coronavirus disease
+coronavirus disease 2019
+coronavirus disease 2019 (covid-19)
+cortical surface area
+cortical thickness
+corticosteroids
+corticostriatal connectivity
+cost
+cost action
+cost analysis
+cost recovery
+cost-analysis
+cost-effective
+cost-effectiveness
+cost-utility
+costing tool
+coti-2
+covid-19 information management
+covid-19 pandemic
+covid-19 related mortality
+covid-19 vaccination
+covid-19 vaccine
+covid-19, coronavirus disease 2019
+cox regression
+coxpd10
+cplx3 gene
+cpsp
+cpt
+cql
+craniofacial
+craniopharyngioma
+craniosynostosis
+crc
+credit scorecard model
+crispr
+crispr screening
+crispr screens
+crispr-cas9
+crispr/cas9
+critical care outcome prediction
+critical nodes
+crohn's disease
+crohn’s disease
+crohn’s’ disease
+cross sectional study
+cross-ancestry
+cross-disciplinary
+cross-institutional interoperability
+cross-trait
+cross-trait genetic analysis
+cross-trait linkage disequilibrium regression
+crpc
+cryoconserved biopsies
+cryotherapy
+cryptosporidium hominis
+ct
+ct, threshold cycle
+ctc
+ctc clusters
+ctcs
+ctdna mutation testing
+ctos
+ctsa
+ctse
+cul7
+culture-expanded mscs
+curation
+curative precision oncology
+current status data
+cushing disease
+cushing's disease
+custodianship of biological samples
+cutaneous
+cvd
+cvd, cardiocascular disease
+cvh prediction
+cxcr6
+cybersecurity
+cyclin‐dependent kinase 4
+cyp2c19
+cyp2c9
+cyp2d6
+cyp450
+cystathionine
+cytochrome p450
+cytokine
+cytology
+cytor
+d. melanogaster
+dabigatran
+dairy supply chain
+damp
+danish gynecologic cancer database
+danish rheumatologic biobank
+dansk cancerbiobank
+darwin eu
+das28
+dash diet
+data
+data access
+data access consent
+data and biosample sharing
+data architecture
+data bank
+data breach
+data catalogue
+data categorization
+data commons
+data definitions
+data dictionary
+data discovery
+data ecosystem
+data engineering
+data ethics
+data governance
+data governance frameworks
+data harmonisation
+data harmonization
+data hub
+data infrastructure
+data integration
+data integration centers
+data linkage
+data market
+data medicine (dm)
+data model
+data modeling
+data models
+data network
+data pooling
+data privacy
+data protection
+data protection and privacy
+data protection law
+data protection.
+data quality
+data regulation
+data repositories
+data representation
+data reuse
+data security
+data security sharing
+data set
+data sharing
+data sharing policy
+data standardization
+data standards
+data storage
+data transcription
+data use agreements
+data variables
+data warehouse
+data-linkage infrastructure
+data-sharing
+data: types and structure > massive data
+database
+database curation
+database research
+databases
+databases- genetic
+datasets
+dce
+ddx3x
+de novo mutations
+de novo variant
+de novo variant analysis
+debiased inference
+decellularization
+decentralized biobanking
+decidualization
+decision aid
+decision support
+decision support service
+decision support systems
+decision support tools
+decision tree
+decolonial
+decolonial politics of care
+decolonization
+deep learning (dl)
+deep learning algorithms
+deep machine learning
+deep mutational scanning
+deep phenotyping
+degenerative cervical myelopathy
+deglycosylation
+dei
+deidentified biospecimens
+deletion index
+deliberation
+deliberative community engagement
+delphi survey
+demand
+dementia with lewy bodies
+democratic deliberation
+demographics
+dengue
+dental
+dependence
+depressive symptoms
+dermal epithelium
+dermal fibroblasts
+dermatological tumours
+dermatopathology
+design
+desmoplastic
+desmosome
+detailed clinical model
+detailed clinical model (dcm)
+detection
+detection biomarker
+detection of therapeutic targets
+deubiquitinase
+deubiquitylation
+develop
+developing and developed countries
+developing brain
+developing country
+developing world
+development
+developmental age
+developmental and epileptic encephalopathy
+developmental delay
+developmental disorders
+developments
+df4/df5, data freeze 4/5
+dgat2
+diabetes
+diabetes & endocrinology
+diabetes cardiovascular complications
+diabetes mellitus (dm)
+diabetes, type 2
+diabetic complication
+diabetic complications
+diabetic kidney disease
+diabetic kidney disease (dkd)
+diabetic nephropathy
+diabète sucré
+diagnosis records
+diagnostic
+diagnostic algorithm
+diagnostic assays
+diagnostic equity
+diagnostic odyssey
+diagnostic testing
+diagnostics
+diastolic dysfunction
+dicer1
+dicer1 syndrome
+diclofenac
+diet quality
+diet therapy
+dietary compositions-gut microbiota interactions
+dietary fibre
+dietary habits
+dietary habits-gut microbiota interactions
+dietary habits–gut microbiota interactions
+dietary inflammatory index
+dietary intake
+dietary pattern
+dietary patterns
+dietary risks
+dietary supplement
+dietology
+different outcomes
+differential effect
+differentially expressed genes
+diffuse intrinsic pontine glioma
+digestion
+digestive system
+digital
+digital applications
+digital biobank
+digital biobanking
+digital biomarkers
+digital divide
+digital health
+digital health interventions
+digital ledger
+digital pathology
+digital phenotype
+digital platform
+digital research
+digital rna quantification
+digital screening
+digital services
+digital technology
+digital twins
+digital updates
+digitalization
+dii
+dilated cardiomyopathy
+dimethyl fumarate
+disability adjusted life years
+disaster and risk management
+discharge recommendation
+discharge summaries
+discovery of disease types
+disease advocacy organization
+disease aggressiveness
+disease association
+disease biobank
+disease biomarkers
+disease burden
+disease burden simulation models
+disease disparity
+disease genetics
+disease impact
+disease interaction network
+disease model
+disease modeling
+disease modeling.
+disease modelling
+disease prediction
+disease progression biomarker
+disease risk
+disease severity
+disease surveillance
+disease trajectories
+disease-modifying therapies
+disease-specific database
+diseases
+diseases modeling
+diseasome
+disparities
+disparities(2)
+disparity
+distal radial access
+distant metastasis
+distributed research networks
+diverse population
+diverse racial and ethnic populations
+diverse sub-populations
+diversity
+dktk
+dlbcl
+dlpfc
+dn
+dna analysis
+dna banking
+dna damage response
+dna integrity
+dna isolation
+dna mutation
+dna population statistical database
+dna sequencing
+dna storage
+dna-friendly collection
+dnajb4
+dnmt3a
+dntp synthesis
+dog
+dog patients
+domain adaptation
+doman analysis model
+domestic animals
+dominance variance
+donation
+donation willingness
+donors and donation: donation after brain death (dbd)
+dor, diagnostic odds ratio
+dormancy
+dorsolateral prefrontal cortex
+dosage sensitivity
+dose-escalated planning
+dpd(5)
+dppiv
+drc
+driver genes
+driver mutation
+drug development and alzheimer's disease
+drug development tools
+drug evaluation
+drug hypersensitivity.
+drug repurposing
+drug resistance evolution
+drug responce
+drug response
+drug screening
+drug sensitivity
+drug supply chain
+drug target validation
+drug targets
+drug transporter genes
+drug treatment outcomes
+druggable
+druggable genome
+drugs
+drugs of abuse
+drug–diagnostic co-development
+drup-trial
+dsp, disease surveillance points
+dspace
+dual antiplatelet therapy
+dual disease burden
+dual mtor inhibitor
+duchenne muscular dystrophy
+ductal cells
+dural cells
+duration
+duration of prophylaxis
+dxa
+dxa traits
+dynamic consent
+dysfunction
+dyskinesias
+dyslipidemia
+e-consent
+e-health
+e-science
+e. coli
+e6/e7 mrna testing
+e6/e7 mrna/ transcripts
+eapc
+early breast cancer
+early childhood
+early embryo
+early embryogenesis
+early onset
+early reoperation
+early-onset
+east africa
+east asians
+eat-lancet diet
+ebola
+ebola virus disease
+ebv genome
+ecg
+eclinical
+economic
+economic evaluation
+economics
+economy
+ectopic expression
+eda
+edc
+edible mushrooms
+edip
+editorial policy
+editorials
+edna
+edoxaban
+educational attainment
+efemp1 rs2009262
+effect modification
+effective heritability
+effectiveness
+effector genes
+effectors
+efficacy-effectiveness gap
+efficient
+egfr
+egfr mutation
+egfr pathway
+egfr resistance
+egfr tyrosine kinase inhibitors
+eggless/setdb1
+ehds
+ehealth
+ehealth implementation
+ehr
+ehr data
+ehr data linkage
+ehr databases
+ehr implementation
+ehr linkage
+ehr, electronic health record
+ehrs
+elderly
+elderly persons
+electrical health records (ehr)
+electronic clinical outcome assessment
+electronic consent
+electronic data
+electronic data capture
+electronic health
+electronic health record
+electronic health record (ehr)
+electronic health record data
+electronic health record studies
+electronic health record systems
+electronic health records (ehr)
+electronic health records (ehrs)
+electronic health records and systems
+electronic health records/standards
+electronic healthcare records
+electronic informed consent
+electronic informed consent (e-ic)
+electronic medical record
+electronic medical record (emr)
+electronic medical record analysis
+electronic medical record and genomics
+electronic medical records
+electronic patient-reported outcome
+electronic phenotyping
+electronic phenotyping algorithms
+electrophoretic integrity
+elevated blood pressure
+eligibility criteria
+elispot
+elosztott
+elsi
+embedded research
+emerge
+emergency
+emergency medical services
+emergency medicine
+emergency plan
+emergency response
+emerging diseases
+emerging infection
+emerging model
+employment status
+empowerment
+empowerment pr
+emr
+emr integration
+emt
+en13606
+end-stage kidney disease
+end-stage renal disease
+endometrial cancer
+endometrial polyp
+endometrioid ovarian carcinoma
+endophenotype
+endopredict (epclin)
+endoscopy
+endothelial cell
+endothelial dysfunction
+endothelial protein c receptor
+endotypes
+endovascular aortic repair
+engagement
+enigma
+enriched node embeddings
+enrichment
+enrollment
+enteric diseases
+enteric fever
+enterobacterales
+enteropathy
+enterprise imaging
+environmental epidemiology
+environmental exposures
+environmental hygiene
+environmental impact
+enzalutamide resistance
+eosinophilia and neutrophilia
+eosinophils–tumor infiltration
+ependymoma
+epic
+epic cohort
+epidemic
+epidemic management/response
+epidemiology
+epidemiology/public health
+epidermal growth factor receptor
+epigenetic
+epigenetic age acceleration
+epigenetic biomarkers
+epigenetic clock
+epigenetic clocks
+epigenetic modifications in pca
+epigenetics
+epistasis
+epitopes
+eplacebo
+eplacebo database
+epstein-barr virus
+epstein–barr virus (ebv)
+eqtl
+eqtm
+equitable reimbursement
+equity
+equity(6)
+erbb2
+erbb4
+ercc2
+erenumab
+erosive esophagitis
+erythronic acid
+esbl
+escc
+escc (esophageal squamous cell carcinoma)
+escrt
+esophageal adenocarcinoma
+esophageal cancer
+esophageal cancer (ec)
+esophageal carcinoma
+esource
+esource record
+esrd
+essential biodiversity variables
+estimated annual percentage change
+estimated annual percentage change importance
+estimated glomerular filtration rate
+estimated glomerular filtration rate (egfr)
+estimating equations
+estimation equation
+estrogen
+etec
+etec vaccine
+etec vaccines
+ethic
+ethical
+ethical considerations
+ethical frameworks
+ethical guidelines
+ethical issues
+ethical legal and societal issues (elsi)
+ethical legal social implications
+ethical, legal and social implications (elsi)
+ethical, legal and social issues
+ethico-legal framework
+ethics
+ethics (see medical ethics)
+ethics and governance
+ethics and legal issue
+ethics consultation meeting
+ethics in biobanking
+ethics review
+ethics- medical
+ethnic difference
+ethnic differences
+ethnic diversity
+ethnic groups
+etiologic heterogeneity
+etiological diagnosis
+etiology
+etv6-ntrk3
+eu initiatives
+eunethta
+euracan
+euroheart
+european alliance for personalised medicine
+european commission
+european health data space
+european policy
+european registry for idiopathic pulmonary fibrosis (euripfreg)
+europe’s beating cancer plan
+eus-fna
+evaluation
+evidence base
+evidence generation
+evidence-based practices
+evidence-based programs
+evidence-based tobacco treatment
+evolution
+ewas
+ewing’s sarcoma
+ex vivo ischemic time
+exacerbations
+excellence
+exercise tolerance
+exercise, exercise stress testing
+exhaled breath condensate
+exhaustion
+exogram
+exome chip
+exome sequence
+exome-sequencing
+exon 14 mutation
+exon sequencing
+exosome
+expectations
+experimental models
+expert and lay knowledge
+expert centers
+expert consultation
+exploitation
+exposome-wide association study (exwas)
+expression
+expression profiling
+expression quantitative trait loci
+expression quantitative trait loci (eqtl)
+extended specimen
+extended-spectrum beta-lactamases
+extensive whole-genome sequencing
+extensive-drug resistance
+externalizing behaviours
+externalizing disorders
+extracardiac malformations
+extracellular matrix remodeling
+extracorporeal membrane oxygenation
+extracorporeal treatment
+extracting salient information
+extraction
+extractive summarization
+extraneural metastasis
+extravasation
+extreme discordant phenotypes
+eye care
+f. nucleatum
+facial analysis
+facilitators and barriers
+facility
+factor v leiden
+factor xa inhibitors
+factores biológicos
+factores psicológicos
+factores sociales
+factual
+facultative heterochromatin
+fair
+fair data
+fair data principles
+fair data sharing
+fair inclusion
+fair principles
+fairness
+falls prevention
+false discovery rate
+familial adenomatous polyposis
+familial hypercholesterolemia
+familial hypercholesterolemia (fh)
+family health history
+family history
+family history of cardiovascular disease
+family relations
+family screening
+fancm ptvs spectrum
+fast healthcare interoperability resource
+fast healthcare interoperability resources
+fast healthcare interoperability resources (fhir)
+fatty acid oxidation disorder
+fatty acids, nonesterified
+fatty liver index
+fda
+fda faers
+feasibility
+feasibility search
+feature tracking
+federal policy
+federally qualified health center
+federated analysis
+federated learning
+federated model
+federated system
+federated systems
+fee-for-service
+feedback of results
+feeding
+feline
+fetal alcohol spectrum disorder
+fetal effects
+fetal growth
+fetal sex
+fetal transition
+ffpe
+ffpe material
+ffpe tissue
+ffpe, formalin-fixed paraffin-embedded
+ffpe, formalin-fixed, paraffin embedded
+fgfr3
+fhir
+fibroblast
+fibroblast growth factor receptor 3
+fibrocystin
+fibrogenesis
+fibrosis-4 score
+fiduciary duties
+filamins
+file management
+filipinos
+financial sustainability
+finger millet
+finngen
+fish
+fish farming
+fish oil
+fisheries management
+fit-for-purpose registries
+fitness trackers
+flavivirus infections
+flexible sigmoidoscopy
+flipped classroom
+fluid responsiveness
+fluorescence in situ hybridization
+fluorescent probe
+fmri
+focal segmental glomerulosclerosis
+follow-up
+follow-up study
+food and drug administration
+food consumption survey
+food environment
+food supply chain
+foodborne pathogens
+forensic research
+forensic science
+forensics
+formal concept analysis
+formalin fixation
+formalin-fixed paraffin-embedded (ffpe) samples
+foundational research
+fourth dose
+foxo3a
+fqhcs
+fractal dimension
+fragmented
+frailty index (fi)
+frailty phenotype (fp)
+frailty syndrome
+framework
+framework conditions
+framing
+frantz fanon
+free androgen index
+free circulating dna
+free-text search
+freeze-thaw cycles
+frequency
+frequentist
+fresh frozen tissue
+friedewald equation
+frozen tissue
+fsgs (focal segmental glomerulosclerosis)
+fto
+function enrichment analysis
+functional annotation
+functional assay
+functional characterization
+functional connectivity
+functional dyspepsia
+functional genetics
+functional genomics
+functional modeling
+functional network connectivity
+functional precision medicine
+functional principle component analysis
+functional screening
+functional screening assays
+functional validation
+funding
+fungal infection
+fusion
+fusobacteria
+future healthcare professionals
+future health care
+future prospects
+future strategy
+future use, biological samples and trust
+fvii
+g-card
+g-protein-coupled receptor
+g-protein-coupled receptor 44 (gpr44)
+g-send
+gain-of-function
+gait speed
+gallbladder and biliary tract cancer
+gallstone
+ganglioneuroma
+gankyrin
+garbled circuit
+gasdermin
+gastric cancer
+gastric cancer, anti-pd-1 therapy, chemotherapy, ramucirumab, taxanes, irinotecan
+gastroesophageal reflux disease
+gastrointestinal cancer
+gastrointestinal cancers
+gastrointestinal disease
+gastrointestinal organoids
+gastrointestinal/colorectal
+gata3
+gata6
+gaucher disease
+gaucher earlier diagnosis consensus point-scoring system
+gaussian processes
+gaza
+gba
+gba1/gba, β-glucocerebrosidase gene
+gbm
+gc gene
+gc-ms metabolomics
+gd, gaucher disease
+gdf15
+gdpr
+ged-c, gaucher earlier diagnosis consensus
+gel electrophoresis
+gemcitabine resistance
+genbank
+gender
+gender differences
+gender disparity
+gender-specific effect
+gender‐common
+gender‐specific
+gene coexpression analysis
+gene coexpression network
+gene environment interaction
+gene expression in the brain
+gene expression pattern
+gene expression profile
+gene expression signature
+gene flow
+gene mutation
+gene sequencing
+gene set enrichment analysis
+gene therapy
+gene-diet interaction
+gene-drug associations
+gene-environment
+gene-environment interactions
+gene-gene fusion
+gene-gene interaction
+genepi
+general
+general consent
+general data protection regulation
+general data protection regulation (gdpr)
+general dermatology
+general diabetes
+general endocrinology
+generalized linear model network (glmnet)
+generation r
+generation scotland
+generative adversarial network
+generative models
+genetic
+genetic alteration
+genetic analysis
+genetic ancestry
+genetic architecture
+genetic association
+genetic association study
+genetic biobank of china medical university hospital
+genetic correlation
+genetic counseling master
+genetic data
+genetic databanks
+genetic diagnosis
+genetic diagnostics
+genetic discovery
+genetic disease
+genetic diseases
+genetic diversity
+genetic education
+genetic epidemiology
+genetic evidence
+genetic factors
+genetic information
+genetic information nondiscrimination act
+genetic interaction
+genetic interactions
+genetic kidney disease
+genetic medicine
+genetic modeling
+genetic network
+genetic obesity
+genetic prediction
+genetic predisposition
+genetic relatedness
+genetic research results
+genetic risk
+genetic risk scores
+genetic screening
+genetic screening model
+genetic screening tool
+genetic sequencing
+genetic study
+genetic susceptibility
+genetic susceptibility loci
+genetic test data representation in turkey’s ehr
+genetic test results
+genetic tests
+genetic variant
+genetic variants
+genetic variations
+genetics and genomics
+genetics research
+genetics services
+genetics testing
+gene–environment interaction
+gene–environment interaction (g × e)
+gene–gene interaction
+genie
+genitourinary
+genome assembly
+genome editing
+genome editing/crispr
+genome engineering
+genome first
+genome partnership
+genome sequencing
+genome structure
+genome wide association study
+genome wide association study (gwas)
+genome-first
+genome-wide
+genome-wide association
+genome-wide association analyses
+genome-wide association analysis
+genome-wide association analysis (gwas)
+genome-wide association scan
+genome-wide association studies
+genome-wide association study (gwas)
+genome-wide complex trait analysis
+genome-wide complex trait analysis (gcta)
+genome-wide epigenetic profiling
+genome-wide gene-environment interaction study
+genome-wide interaction study
+genome-wide polygenic risk score
+genome‐wide association study
+genome‑wide association study
+genomic
+genomic aberrations
+genomic alterations
+genomic biobanking research
+genomic biomarkers
+genomic characteristics
+genomic data
+genomic data management
+genomic data quality
+genomic data utilization
+genomic education
+genomic indicators
+genomic prediction
+genomic research
+genomic research feedback of findings
+genomic selection
+genomic sem
+genomic sequencing
+genomic signatures
+genomic sovereignty
+genomic studies
+genomic surveillance
+genomic testing
+genomics implementation
+genomics research
+genomics technology
+genotype data
+genotype imputation
+genotype-phenotype, whole exome sequencing
+genotypes
+genotype–phenotype
+genotype–phenotype correlations
+genotyping
+genotyping array
+geranyl dihydrochalcone
+geriatric nephrology
+geriatric patients
+german cancer consortium
+germline
+germline findings
+germline genetics
+germline mutation
+germline pathogenic variants
+germline tp53 mutation
+geroscience
+gerosciences
+gestation
+gestational diabetes
+gestational trophoblastic neoplasia
+gfap
+giant cell arteritis
+gift giving
+gigantism
+gina
+glccer, β-glucosylceramide
+glccerase, β-glucosylceramidase
+glcsph/lyso-gb1, β-glucosylsphingosine
+gle/pib
+gleason score
+glif
+glioma-propagating cells
+gliomas
+gln metabolism
+global
+global health informatics
+global oncology
+global outreach
+global south
+global warming
+global-biobank meta-analysis initiative
+globalisation
+globalization of clinical trials
+globe score
+glomerular biology and disease
+glomerulonephritis
+glucagon-like peptide-1 receptor agonists
+glucose metabolism
+glucose-6-phosphate dehydrogenase
+glucuronic acid
+glutamatergic neurotransmission
+glutathione synthetase
+glycaemic control
+glycaemic traits
+glycated haemoglobin
+glycerophospholipid metabolism
+glycogen metabolism
+glycosylated hemoglobin
+gmp
+golfig
+golgi
+goserelin
+governance
+governance framework
+government support
+grace-pcr
+graduates
+grain phytic acid
+grant
+graph algorithm
+graph convolution
+graves’ disease
+graves’ orbitopathy
+grey matter atrophy
+grey matter volume
+grip strength
+gross pathology
+ground glass
+group 2 innate lymphoid cells
+group a streptococcus
+group harm
+growth
+grs
+gscs
+guidance
+guideline-directed management and therapy
+guidelines
+gut bacteria
+gut fungi
+gut microbiome
+gut microbiota
+guthrie
+gwas
+gwas meta-analysis
+gwas, genome-wide association studies
+gxe
+gxe interaction
+gynaecological cancer
+gynecologic cancer
+gynecologic pathology
+gynecologic surgery
+gynecological cancer
+h. pylori infection
+h2snp
+h3africa
+h3africa consortium
+h3k14ac
+h3k27me3
+haemoglobinopathies
+haemolysis
+han chinese
+hand surgery
+handedness
+handgrip strength
+harmonisation
+harmonization
+harmony
+havcr1 protein
+hba1c
+hbb, helsinki biobank
+hbm4eu
+hcc
+hcpcs
+hcv
+hcv elimination
+hdac inhibitor (hdaci)
+hdl
+head & neck tumours
+head and neck cancer
+heal
+health behaviour change
+health care
+health care and ict
+health care data
+health care delivery
+health care equity
+health care interoperability
+health care outcome assessments
+health care provider training and education
+health care quality control
+health care services
+health care system implementation
+health care utilisation
+health care visits
+health centers
+health conditions
+health data
+health data protection
+health data science
+health data standards
+health disparities
+health economics
+health economy
+health ecosystem
+health inequity
+health informatics
+health information
+health information disparities
+health information interoperability/standards
+health information technology
+health information technology (hit)
+health insurance
+health insurance id
+health it
+health level seven (hl7)
+health literacy
+health management information systems (hmis)
+health monitoring
+health privacy
+health professionals
+health record
+health research data infrastructure
+health rights
+health sciences
+health survey
+health system
+health systems
+health technology
+health technology assessment
+health trajectory
+health-care data
+health-data repository research
+health/racial disparities
+healthcare
+healthcare administrative claims
+healthcare applications
+healthcare artificial intelligence
+healthcare costs
+healthcare data interoperability
+healthcare dynamics
+healthcare industry
+healthcare informatics
+healthcare information systems architecture
+healthcare integrated biobanking (hib)
+healthcare interoperability
+healthcare outcomes
+healthcare population
+healthcare reform
+healthcare resource utilization
+healthcare system
+healthcare systems
+healthcare technology
+healthcare utilization
+healthcare workers
+healthcare workforce
+healthy ageing
+healthy control
+healthy controls
+healthy reference ranges
+heart valve diseases
+hedgehog
+height
+helminth genomics
+hematological abnormalities
+hematological traits
+hematopoietic stem cell
+hemicyanine
+hemodialysis
+hemoglobin a1c
+hep-g2
+hepatic carcinoma
+hepatic fat
+hepatic fat accumulation
+hepatic fat content
+hepatic fibrosis
+hepatic leukemia factor (hlf)
+hepatitis a virus cellular receptor 1
+hepatocarcinogenesis
+hepatocellular apoptosis
+hepatocellular cancer (hcc)
+hepatocellular carcinoma
+hepatocellular carcinoma (hcc)
+hepatocellular injury
+her2
+her2-low
+her2-positive breast cancer
+her2amplification
+hereditary amyloidosis
+hereditary breast and ovarian cancer (hboc)
+hereditary colorectal cancer
+hereditary pancreatic cancer
+heritability
+heritable thoracic aortic disease
+hetero-identification
+heterogeneity
+heterogeneous data
+heterogeneous knowledge resources
+heterogeneous treatment effect estimation
+heterologous vaccination
+heteromodal association cortex
+heterozygotes
+heuristic
+hexagonal grid
+hf, heart failure
+hfpef
+hfref
+hgpps
+hhip
+hidden markov model
+hif signaling pathway
+hif1a
+high bone mass
+high dimensionality
+high grade glioma
+high performance computing
+high throughput
+high throughput drug screening
+high-density lipoprotein particles
+high-density lipoprotein subclasses
+high-grade conjunctival melanocytic intraepithelial lesions
+high-grade serous ovarian cancer
+high-quality samples
+high-throughput
+high-throughput analysis
+high-throughput genetic analysis
+high-throughput phenotyping
+high-throughput proteomics
+high-throughput workflow
+highsensitive c reactive protein
+high‐income countries
+hip fracture
+hipaa
+hipanic/latino
+hippo pathway
+hispanic
+hispanic peoples
+hispanic/latino
+hispanic/latinx
+histological analysis
+histone deacetylase (hdac)
+histone h3 acetylation
+histone postranslational modifications
+histopathology
+historical controls database
+history of medicine
+hiv/aids
+hl7
+hl7 fhir
+hl7® fhir® standard
+hla
+hlj1
+hnf4a rs1800961
+home care
+home visit
+homologs
+honest broker
+horizon 2020
+horizontal gene transfer
+horizontal integration
+hormone replacement therapy
+hormone-sensitive cancers
+hospital care
+hospital-acquired infections
+hospital-based biobank
+hospitalisation
+hospitalization for heart failure (hhf)
+host defence
+host genetic effect
+host genomics
+host glycosylation
+host-microbe interaction
+housing and health
+hoxc10
+hpc
+hplm
+hptn
+hptn 071
+hpv
+hpv associated cancers
+hpv genotyping
+hpv testing
+hr, hazard ratio
+hrt
+hsa-mir-1248
+hssp
+huh, helsinki university hospital
+human
+human antibody-based therapy
+human biobanking
+human biological material
+human biological samples
+human biomonitoring
+human biospecimen sample
+human biospecimens
+human breast milk
+human dignity
+human dura mater
+human epidermal growth factor receptor 2
+human ethnic/ancestry diversity
+human explanted heart
+human genome
+human genomics
+human health
+human immunodeficiency virus
+human induced pluripotent stem cell (hipsc)
+human induced pluripotent stem cells (ipscs)
+human leukocyte antigen
+human leukocyte antigen genotypes
+human leukocyte antigen imputation
+human lung fibroblasts
+human metapneumovirus
+human milk
+human myocardium
+human organoid
+human pancreatic islets
+human papillomavirus
+human papillomavirus (hpv)
+human papillomavirus vaccination
+human periodontal ligament fibroblast heterogeneity
+human phenotype ontology
+human precision-cut lung slices
+human research ethics
+human resources
+human rhinovirus
+human subjects protection
+human subjects research
+human subjects research regulation
+human tissue
+human tissue availability
+human tissues
+human-ai interaction
+human-centered design
+human-environment interphase
+humanized mice
+humanized model
+human–computer interaction
+humoral immunity
+humoral response
+hus, hospital district of helsinki and uusimaa
+hybrid models
+hydrogen therapy
+hyperlipidaemia
+hypertension control
+hypertension detection
+hyperthrombosis
+hyperthyroidism
+hypertriglyceridemia-associated acute pancreatitis
+hypertrophic cardiomyopathy
+hypertrophic obstructive cardiomyopathy
+hyperuricaemia
+hypervirulence genetic determinants
+hypoglycaemia
+hypohidrotic ectodermal dysplasia
+hypotonia
+hypoxia
+hypoxic-ischaemic encephalopathy
+hypoxic–ischemic encephalopathy
+i2b2
+i744m mutation
+ibd
+icd codes
+icd, international statistical classification of diseases
+icd-10
+icd-10 billing codes
+icd-10, international statistical classification of diseases and related health problems 10th revision
+icd-9
+icos
+icp-ms
+ict tools
+icu
+idarucizumab
+idb
+idiopathic inflammatory myopathy
+idiopathic nephrotic syndrome
+idiopathic pulmonary fibrosis (ipf)
+idiopathic scoliosis
+idiosyncratic
+idna
+ifn-free antivirals
+ifnγ response
+iga nephropathy
+ige
+igg n-glycans
+ignite network
+ihc
+il-21
+il-32
+il-4
+ilc2
+illumina
+image analysis
+image harmonization
+image identification
+imagen
+imaging
+imaging biobank
+imaging biobanks
+imaging biomarkers
+imaging data
+imaging genetics
+imaging mass cytometry
+imaging phenotypes
+imaging sequences
+imbalanced data
+imd
+immanuel wallerstein
+immune
+immune cells
+immune checkpoint
+immune checkpoint inhibition
+immune checkpoint inhibitor
+immune checkpoint molecules
+immune escape
+immune infiltration
+immune microenvironment
+immune monitoring
+immune oncology
+immune response
+immune system
+immune-metabolism disorder
+immune-oncology
+immuno-oncology
+immunoassays
+immunocompromised mice
+immunogenomics
+immunoglobulin g1 protein
+immunohistopathology
+immunological monitoring
+immunology
+immunophenotype
+immunoscore
+immunosenescence
+immunosuppression
+immunosurveillance
+immunotherapeutic
+immunotherapy and targeted therapy responder
+impact assessment
+impact-data
+impetigo
+implantable cardioverter defibrillator
+implementation
+implementation and deployment
+implementation challenges
+implementation science
+imprinting
+imputation
+impute2
+impute5
+in situ hybridisation
+in vitro models
+incidence phenotyping
+incidence rate
+incident pancreatic cancer
+inclusive
+inclusive research practices
+independent component analysis (ica)
+independent risk
+independent vector analysis
+index of multiple deprivation
+indian cohort
+indicative summarization
+indicators
+indigenous
+indigenous australians
+indigenous communities
+indigenous data sovereignty
+indigenous populations
+individual participant data
+individual research results
+individualized antitumor therapy
+individualized care
+individualized medicine
+individualized prediction
+individualized therapy
+individualized treatment rule
+indo-pacific rim (ipr) biobank
+inequalites
+inequality
+inequity
+infant diarrhea
+infant feeding
+infection
+infection burden
+infection fatality rate
+infection prevention and control
+infectious disease
+infectious diseases
+infertility
+inflammation biomarkers
+inflammation introduction
+inflammation.
+inflammatory bowel disease
+inflammatory factors
+inflammatory polyneuropathy
+inflammatory response
+inflammatory rheumatic disease
+influenza
+influenza-like illness
+informatics management
+information science
+information security
+information sheet
+information systems design
+information technologies
+information technology (it) infrastructure
+informed consent form
+infrastructure
+inguinal hernia
+inhaled corticosteroids
+inherited blood disorders
+inherited cardiomyopathy
+inhibitors
+injuries
+injury
+innate immune cells
+innate immunity
+innovation
+innovation creation
+innovation governance
+innovation management
+innovations
+innovative biotechnologies
+innxchange innovation wheel
+inositol 1,4
+inpatient stay
+inr
+insomnia
+insr
+instant coffee
+institutional review board
+institutional review board (irb)
+institutional review boards
+instrumental variable (iv)
+insulin use
+insulin-like growth factor-i
+integrated biobanking
+integrated care
+integrated data
+integrated ehr data
+integrated knowledge environment
+integrated management of childhood illness
+integration
+integrative genomics initiative
+integrative information system
+integrative research
+integrins
+integrity
+intellectual property rights
+intelligent algorithm network
+intensity
+intensity gradient
+intensive care
+intensive care unit
+interaction
+interactions
+interactive network analysis
+interactome
+interactomics
+interdisciplinary
+interfaces and usability
+interferon
+interferons
+intergenerational
+interleukin
+interleukin 10
+interleukin 6
+intermediate query format
+intermittent calorie restriction
+internal mammary artery graft
+internal thoracic artery graft
+international collaboration
+international consensus classification
+international consortia
+international data sharing
+international exchange
+international governance
+international health regulations
+international initiatives
+internet cohort
+internet-based intervention
+interoperability
+interoperability and reproducibility
+interoperable
+interpandemic interval
+interpretable machine learning
+interstitial lung disease
+interstitial lung diseases (ild)
+interstitial nephritis
+intertumor heterogeneity
+intervention
+intra-block
+intra-case
+intracellular calcium
+intracranial therapy
+intramural hematoma
+intraoperative complications
+intraoperative period
+intratumor heterogeneity
+intratumor variability
+intrinsic brain networks
+intrinsic capacity
+intrinsic resistance
+intussusceptive angiogenesis
+invasion
+invasive non-typhoidal salmonella
+invasive nontyphoidal salmonella disease
+involvement
+in vitro models
+in vivo ischemic time
+ipsc-derived neuron
+ipscs
+iqr, interquartile range
+iquitos
+irbs
+iressa
+iron absorption
+iron deficiency anemia (ida)
+irregularly sampled time series
+ischaemic heart disease
+ischemic heart disease
+ischemic time
+islet imaging
+islets
+iso
+iso 20387
+isoform
+isoform-ratio quantitative trait loci (irqtl)
+isolation
+isolation and purification
+it
+it infrastructure
+itmig
+j-pdx
+janus kinase
+japonica array
+jdp2
+joint
+joint changes
+journal requirements
+json
+just-in-time biobanking
+justice
+juvenile dermatomyositis
+juvenile idiopathic arthritis
+kabuki syndrome
+kaiser permanente
+kallikrein-related peptidase 3/klk3
+kegg pathway
+keloids
+kick it california (kic)
+kidney (allograft) function/dysfunction
+kidney cancer
+kidney disease
+kidney failure
+kidney failure/injury
+kidney function
+kidney organoids
+kidney replacement therapy
+kidney stone risk
+kidney tissue
+kidney transplantation/nephrology
+killer cell immunoglobulin-like receptor
+kinase regulation
+kir
+klf14
+kmt2d
+knee
+knockdown
+knowledge
+knowledge base
+knowledge capture
+knowledge engineering
+knowledge exchange
+knowledge graph
+knowledge integration
+knowledge representation
+korea biobank network
+korean reference genome
+krt5
+ktn1
+kunming-montreal global biodiversity framework
+l-tryptophan
+l. innocua
+l. monocytogenes
+l1 regression
+label deficiency
+laboratory capacities
+laboratory developed tests
+laboratory inflammatory markers
+laboratory information management system (lims)
+laboratory information management systems (lims)
+laboratory of molecular medicine
+laboratory safety
+laboratory tests
+laboratory training
+laboratory values
+laboratory–physician collaborations
+lactation stage
+lamp3+ dendritic cells
+language modelling
+large language models
+large-artery atherosclerotic stroke
+large-scale datasets
+large-scale genomics initiatives
+lasso
+lasso regression
+lassosum
+late onset
+late sequelae of covid-19
+late-onset parkinson's disease
+latent class
+latin american populations
+latino community
+latino population
+law
+lc-ms/ms
+lda
+ldh, lactate dehydrogenase
+ldl cholesterol
+ldlr, low density lipoprotein receptor
+leaf
+learning health care system
+learning health systems
+learning healthcare system
+left atrial appendage occlusion
+left ventricular dysfunction
+left ventricular outflow tract obstruction
+legal
+legal and social implications
+legal and social issues (elsi)
+legal infrastructure
+legal issues
+legumes
+leicester
+lenvatinib resistance
+lepr
+leptin-melanocortin pathway
+leucemia linfoblástica aguda
+leukemia biobank
+leukocyte
+leukocytes purification
+leukotriene
+lgr6
+lhs
+liberty
+lic
+lif
+life traits
+lifecourse
+lifestyle
+lifestyle behaviors
+lifestyle factors
+likelihood ratio
+limitations
+lims
+linc00173.v1
+linkage
+linkage disequilibrium score regression
+linkage disequilibrium score regression (ldsc)
+linked data
+lip and oral cavity cancer
+lipid control
+lipid droplets
+lipid lowering treatment
+lipid signalling
+lipid traits
+lipid-protein interaction
+lipoprotein
+lipoprotein composition
+lipoprotein lipids
+lipoprotein subclasses
+liquid biobank
+liquid biopsy database
+liquid-based cytology
+lithium
+liver biopsy
+liver cancer
+liver disease
+liver fibrosis
+liver injury
+liver metastases
+liver metastasis
+living biobank
+living biobanks
+living cell biobanking
+living organoid biobank
+living tissue bank
+lmic
+lmic (low- and middle-income countries)
+lmics
+lmics, low-to-middle income countries
+lncrna
+loc101926933 rp11-298i3.1 al132780.1 ensg00000257285
+local chicken ecotypes
+local control
+local heritability
+loeys-dietz syndrome
+log analysis
+logistic regression (lr)
+logistic regression analysis
+loinc
+long covid
+long haul covid
+long non-coding rna
+long-read technology
+long-term covid-19
+long-term follow-up
+long-term maintenance
+long-term survey
+longitudinal
+longitudinal analysis
+longitudinal cohort
+longitudinal cohort studies
+longitudinal cohort study
+longitudinal data
+longitudinal strain
+longitudinal study
+loss of y chromosome
+loss-of-function variants
+low and middle income countries
+low and middle income countries (lmic)
+low and middle income country
+low and middle-income countries
+low birthweight
+low middle-income countries (lmics)
+low to middle income countries
+low- and medium-income countries
+low- and middle- income countries
+low- and middle-income
+low- and middle-income countries
+low- and middle-income countries (lmic)
+low- and middle-income countries (lmics)
+low- or middle-income countries (lmics)
+low-and middle-income country
+low-and-middle income countries
+low-carbohydrate diet
+low-density lipoprotein cholesterol
+low-grade conjunctival melanocytic intraepithelial lesions
+low-income countries
+low-income populations
+low-middle income countries
+low-middle income country
+low-middle-income countries
+low-pass sequencing
+low-resource settings
+lower urinary tract symptoms
+low‐ and middle‐income countries
+lpa
+lstm models
+ltpa, leisure-time physical activity
+luad
+luminal
+lung adenocarcinoma
+lung cancer
+lung cancer organoids
+lung cancer screening
+lung cancer, small cell lung cancer, pathology, molecular genetics, in vitro models
+lung development
+lung developmental disease
+lung disease
+lung function
+lung metastasis
+lung non-adenocarcinoma
+lung squamous cell carcinoma
+lurbinectedin
+lymph node metastasis
+lymphadenectomy
+lymphatic system
+lymphoblastoid cell line
+lymphoblastoid cell lines (lcls)
+lymphocyte
+lymphocyte separation medium
+lymphoma patients
+lynch syndrome
+lysophosphatidylethanolamine
+lysosomotropism
+lyssavirus
+m1a, metastasis to skin, subcutaneous (below the skin) tissue, or lymph nodes in distant parts of the body, with a normal blood ldh level
+m1b, metastasis to the lungs, with a normal blood ldh level
+m1c, metastasis to any other organs, or distant spread to any site along with an elevated blood ldh level
+m5c modification
+m6a
+m6a regulatory protein
+machine learning (ml)
+machine learning
+macro-environment
+macroecology
+macrophage
+macropinocytosis
+macula
+mafld
+magnetic resonance
+magnetic resonance imaging (mri)
+magnetic resonance imaging proton density fat fraction
+maintenance
+major adverse cardiovascular events
+major depressive disorder
+maladie cardiovasculaire
+malaria diagnosis
+malaria molecular surveillance
+malaysia
+maldi-tof ms
+malignant melanoma
+malignant neoplasms
+malignant pleural mesothelioma
+malperfusion syndrome
+maltreatment
+mammaliicocci
+mammaprint
+mammary gland
+mammography descriptors
+management
+management of clinical data
+mapk signaling pathway
+mapquantdx
+marginal heritability
+marker
+marker-assisted breeding
+marrow
+marsdenia tenacissima extract
+mass cytometry
+mass general brigham biobank
+mass spectrometry imaging
+massively parallel sequencing
+mast1 gene
+masters
+maternal and child health
+maternal and neonatal health (mnh)
+maternal child health
+maternal effects
+maternal factors
+maternal fasting plasma glucose
+maternal immune activation
+maternal mental health
+maternal stress
+maternal-fetal interface
+mathematical modelling
+matrix metalloproteinase
+matrix metalloproteinase patterns
+maturity
+mcc
+mdc
+me/cfs
+measles vector
+mechanical stretching
+mechanistic target of rapamycin
+mechanoresponsive
+medicaid
+medical care
+medical chart
+medical comorbidities
+medical data transformation
+medical demand
+medical dermatology
+medical devie registry
+medical genetics
+medical genomics
+medical informatics initiative
+medical knowledge curation
+medical narrative
+medical ontologies
+medical record
+medical record systems
+medical research
+medical research ethics
+medical students
+medical treatment algorithm
+medically actionable
+medication therapy management
+medicine/clinical issues
+mediterranean diet
+medullary thyroid carcinoma
+medulloblastoma, neuropathology, neurosurgery, radiation oncologists, brain neoplasms, paediatricians, morbidity, genomics
+mega-corpus-callosum syndrome
+melanoma cancer
+membrane
+membrane pores
+mendelian disorders
+mendelian randomisation
+mendelian randomization
+mendelian randomization (mr)
+meningioma
+meningitis
+mental illness
+mental model
+mental status and dementia tests
+merative research databases
+mertk
+mervl
+mesures préventives
+met
+meta consent
+meta matching
+meta-analysis
+meta-consent
+meta-imputation
+metabolic associated fatty liver disease
+metabolic biomarkers
+metabolic change
+metabolic disease
+metabolic health
+metabolic pathways
+metabolic profiling
+metabolic reprogramming
+metabolic signatures
+metabolic subgroup profile
+metabolic traits
+metabolic trajectory
+metabolism
+metabolites
+metabolomic age
+metabonomics
+metagenomic next-generation sequencing(mngs)
+metagenomics 16s
+metagenomics next-generation sequencing
+metal−organic framework
+metaplastic breast cancer
+metastases
+metastasis
+metastatic
+metastatic breast cancer
+metastatic cascade
+metastatic colorectal cancer
+metastatic dissemination
+metastatic melanoma
+metasynchronous metastases
+methodology
+methods
+methods development
+methylation
+mettl3
+mexican
+mhc iii region
+mhealth
+mhealth app
+mia, melanoma institute of australia
+micro-computed tomography
+microarray
+microarrays
+microbiome
+microenvironment
+microglial inflammation
+microgravity
+micropapillary breast cancer
+microrna
+microrna-375
+microsampling
+microscopic colitis
+microvascular complications
+microvascular invasion
+microwell-seq
+middle-income countries
+migraine
+migrants
+migration
+mild cognitive impairment
+military metaphors
+million veteran program
+mini-fluid challenge
+minimal change disease
+minimal residual disease
+minorities
+minority
+mir, microrna
+mir-130a-3p
+mir-135a
+mir-223-3p
+mir-33a-3p
+mir-511-5p
+mirna
+mirna, microrna
+mirnas
+misclassification
+misexpression
+mismatch repair
+mismatch repair, microsatellite instability
+missense variants
+missing values
+missingness
+mitochondrial copy number
+mitochondrial dna
+mitochondrial genome
+mitochondrial health
+mitochondrion
+mitraclip
+mitral annular disjunction
+mix up samples
+mixture models
+mlkl
+mlst sequence types
+mmanhattan plot
+mobile devices
+mobile health
+mobile phone
+mobile phone app
+model
+model performance evaluation
+modeling
+modelling pandemic preparedness
+moderate
+modular application
+modules
+molecular analyses
+molecular cancer registries
+molecular classification
+molecular diagnosis
+molecular diagnostics
+molecular enriched phase i/ii
+molecular genetics
+molecular genetics information
+molecular genomics
+molecular landscape
+molecular markers
+molecular mechanism
+molecular pathology
+molecular pathways
+molecular profiling
+molecular quantitative trait loci
+molecular subtype
+molecular subtyping
+molecular target
+molecular testing
+molecular tumor board
+molecular tumor board (mtb)
+molecular tumor registry
+molecular-glue degrader
+molecularly guided treatment options
+molecularly targeted therapy
+monitoring
+monoclonal antibody
+monogenic
+monogenic diseases
+monogenic disorders
+monogenic obesity
+mononucleotide microsatellite markers
+mood disorder
+mood disorders
+moonlighting
+moral perspectives
+morbid obesity
+more
+moroccan patients' knowledge
+morphological (qualitative and quantitative) traits
+morphology
+morphometry
+mortality analysis
+mortality prediction
+motor delay
+motor fluctuations
+mouse model
+movement behaviours
+mrd
+mri
+mri (magnetic resonance imaging)
+mrna vaccine
+mrna-1273 (spikevax®)
+ms disability
+msc
+msh2 gene
+msx1
+mtb biofilm
+mtbp
+mthfs
+mto1
+mtor
+muc2
+mucosal
+mucosal lesions
+mucous barrier
+multi indicator text summarization algorithm
+multi-ancestry
+multi-ancestry genetic prediction
+multi-ancestry sample
+multi-cancer early detection
+multi-disciplinary
+multi-gene
+multi-gene panel test
+multi-omic study
+multi-omics
+multi-omics analysis
+multi-omics data
+multi-omics feature analysis
+multi-omics research
+multi-polygenic risk scores
+multi-prs
+multi-site
+multi-trait analysis
+multi-trait analysis of gwas
+multicenter studies
+multidisciplinary
+multidisciplinary genomic studies
+multidrug resistance
+multidrug-resistant (mdr) pseudomonas aeruginosa
+multifocality
+multilayer disease module
+multimodal
+multimodal data
+multimodal data integration
+multimodal neuroimaging
+multiomics data integration
+multiparametric flow cytometry
+multiple correspondence analysis (mca)
+multiple gastric cancer
+multiple imputation
+multiple indicators
+multiple metastases
+multiple myeloma registry
+multiple omics
+multiple organ dysfunction syndrome
+multiple phenotypes
+multiplex ihc
+multiplex lectin assay
+multiplex proteomics
+multiplex serology
+multiplexed immunohistochemistry
+multiplexed ion beam imaging
+multiplexing
+multivariate time series
+multivessel pci
+mung bean
+mural cells
+muscle
+muscle invasive bladder cancer
+muscle mass
+muscle wasting
+muscle-invasive bladder cancer
+musculoskeletal pain
+mushroom body
+mutagenicity
+mutational profile
+mutational signatures
+mutations
+mvd
+mvmr
+mvpa, moderate to vigorous physical activity
+myalgic encephalomyelitis
+mycn amplification
+mycologically-confirmed
+myeloid-derived suppressor cells
+myocardial protection
+myofibroblasts
+myositis autoantibodies
+myotonic dystrophy type 1
+n stage, nodal or number of lymph nodes stage
+n-of-1 trials
+na + /h + exchanger 6
+na, not applicable
+nafld
+nail
+nanocatalyst
+nanoparticle isolation
+nanopore
+nanostring
+nanostring ncounter
+napabucasin
+narrative review
+nasal polyps
+nash
+nasopharyngeal swab
+nat2
+national biobank
+national biobank of korea
+national genomic projects
+national health
+national health insurance
+national mesothelioma virtual bank
+nationwide
+native hawaiians
+natriuretic peptide
+natural language process
+natural language processing (nlp)
+natural molecules
+naturally occurring autoantibodies
+naturally occurring disease
+ncds
+necropsy
+necroptosis
+neglect
+neglected tropical diseases
+nek7
+neoadjuvant chemoradiotherapy
+neoadjuvant chemotherapy
+neoadjuvant immunochemotherapy
+neonatal
+neonatal intensive care unit (nicu)
+neonate
+nephronophthisis-related ciliopathies
+nephropathy
+nervous system
+nested case-control study
+network
+network analysis
+network evolution
+network medicine
+networked research
+networks
+neural disorders
+neural embedding models
+neural network
+neural networks
+neuro-related human complex traits
+neuro-urology
+neurobiobanking
+neurobiology
+neurocognitive
+neurocognitive testing
+neurocognitivo
+neurodegeneration
+neurodegenerative disease
+neurodegenerative disorder
+neurodevelopment
+neurodevelopmental disorder
+neurodevelopmental outcome
+neuroendocine tumors
+neuroendocrin
+neuroendocrine neoplasm
+neurofilament light chain
+neurogenic lower urinary tract dysfunction
+neurogenomics
+neuroimmunology
+neurologic biomarkers
+neurological disorders
+neurological pain
+neuromark
+neuromuscular disorder
+neuropathic pain
+neuropathology. biomarkers
+neuropsychiatric disorder
+neuroscience
+neurotrophic tyrosine receptor kinase (ntrk) fusions
+neutralising antibodies
+neutralizing antibodies
+neutralizing humoral response
+neutrophil extracellular traps
+new drug application
+new generation sequencing
+newborn screening
+newcastle disease
+newsletters
+next generation sequencing
+next generation sequencing (ngs)
+next-generation sequencing
+next-generation sequencing (ngs)
+next-generation sequencing data
+next-generation sequencing platforms
+next-generation whole-genome sequencing
+nf-κb
+nf-κb pathway
+nfkb1
+ngs
+ngs, next-generation sequencing
+nhanes
+niclosamide
+nicotine
+nicu
+niddk
+nitroreductase
+niños
+nkx2-1
+nlp
+nm, nodular melanoma
+nmda
+nmr spectroscopy
+no
+no known kidney disease (nkd)
+nociception
+noise reduction
+nomenclature
+nomogram
+non-alcoholic steatohepatitis
+non-anxiety
+non-canonical splicing-site
+non-caucasian
+non-coding rna
+non-colorectal cancer
+non-communicable disease
+non-communicable diseases
+non-departmental public body
+non-fungible tokens
+non-hematological disease
+non-human primate
+non-invasive glioblastoma testing
+non-invasive tests
+non-linear association
+non-physician clinician
+non-small cell lung cancer
+non-small cell lung cancer (nsclc)
+non-small-cell lung cancer
+non-suicidal self-injury
+non-typhoid salmonella
+non-viral genital pathogens
+nonalbuminuric dkd
+nonalcoholic fatty liver disease
+nonalcoholic fatty liver disease (nafld)
+noncanonical splicing site
+noncardiac surgery
+none
+noninvasive assay
+noninvasive risk prediction
+nonoily fish
+nonsmall cell lung cancer
+nonsyndromic clefting
+nontyphoidal salmonella
+non‐suicidal self‐injury
+non–small cell lung cancer
+non–small-cell lung cancer
+non–st-segment–elevated myocardial infarction
+nordic collaboration
+nordic countries
+normal brain aging
+normal control
+normal genomic variation
+normal glucose tolerance
+normal pancreas
+normalisation process theory
+normative values
+norms
+north africa
+north african population
+novel brca mutations
+novel drug discovery
+novel mechanism
+novel taxoids
+novel therapies
+novel variants
+nrf2
+nsclc
+nsun2
+ntf
+ntrk gene fusion
+ntrk1
+ntrk2
+ntrk3
+nucleic acid test reagents
+nucleic acids
+nucleotide metabolism
+nucleotide synthesis
+nurse informaticists
+nurses
+nursing
+nursing competencies
+nursing practice
+nutrient deficiencies
+nutrient intake
+nutrient starvation tolerance
+nutrition
+nutritional epidemiology
+nxph4
+o-glcnacylation
+oasis
+obesity risk
+observational data
+observational health data sciences and informatics
+observational studies
+observational study
+obstetrical ultrasound
+obstructive sleep apnoea
+obtima
+occult
+occupation
+occupational attainment
+occupational healthcare
+ocd
+ocular tumor
+odad2
+odm
+oesophageal cancer
+oesophagus
+oestrogen
+offspring effects
+ohdsi
+oily fish
+old patients
+older adults
+olfactory learning
+omaha system
+omega-3 polyunsaturated fatty acid
+omics
+omics and systems biology
+omics techniques
+omics-grade biospecimens
+omim
+omop
+omop cdm
+omop-cdm
+on-demand reagent synthesis
+onc
+oncogene addiction
+oncogene fusions
+oncogenes
+oncogenomics
+oncology
+oncotargets
+oncotypedx
+ontokbcf
+ontologies
+ontology
+opa, occupational physical activity
+opa1
+open data standards
+open source
+open source software
+open targets
+open-source
+open-source software
+openmrs
+ophthalmic malignancies
+ophthalmic oncology
+opinion
+opioid use disorder
+opportunistic sampling
+or, odds ratio
+oral
+oral bio-bank
+oral cancer
+oral clefts
+oral diseases
+oral hygiene
+oral medicine
+oral microbiome
+oral oncology
+oral squamous cell carcinoma
+oral vaccine
+oral-gut axis
+orange-fleshed sweetpotato
+order sets
+ordered multinomial regression
+organ crosstalk
+organ donor
+organ transplant recipients
+organ transplantation in general
+organ-on-chip
+organization of oncological care
+organoid
+organoid applications
+organoid biobank
+organoid culture
+organoid cultures
+organoid factory
+organoid models
+organoid technology
+organoids biobank
+organoids manufacturing
+organoids-on-a-chip
+organoids-on-chips
+organs-on-chips
+ornithine metabolism
+oropharyngeal
+oropharynx
+orphan drug
+orthologs
+orthotopic mouse models
+osbpl3
+oscc
+osteoanabolic
+osteoarthritis treatment
+other behavioral/social science
+other pharyngeal cancer
+otitis media
+otorhinolaryngologic diseases
+ototoxicity
+ouh, oulu university hospital
+outbreak
+outcome measurement tools
+outcome prediction
+outcomes
+outcomes and process assessment
+outcomes research, clinical epidemiology, population health
+outdoor temperature
+outpatient
+ovarian cancer
+ovarian endometriosis
+ovarian function reserve
+ovarian neoplasm
+overall survival
+overarching challenges
+overexpression
+oxytocin pathway gene
+p-biobank wrapper
+p-biospre
+p16 immunostaining
+p21
+p4 medicine
+p53 loss of heterozygosity
+p53 reactivators
+pacific islander subgroups
+paediatric
+paediatric biobanking
+paediatric cancers
+paediatric clinical trials
+paediatric neurology
+paediatric relapsed refractory cancer
+paediatrics
+palestine
+pamp
+pan-cancer
+pan-cancer analysis
+pan-cancer incidence
+pan-pi3k inhibitor
+pan-shared
+pan-trk ihc
+pancreatic cancer
+pancreatic cancer risk
+pancreatic cancer(3)
+pancreatic duct adenocarcinoma
+pancreatic ductal adenocarcinoma
+pandemic
+pandemic impact
+panel sequencing
+panomics
+papillary thyroid cancer
+parachute research
+paraffin processing
+parasite
+parenclitic
+parent-child relations
+parental autonomy
+parental permission
+parkin
+parkinson's disease
+parkinson’s disease
+parp inhibitor
+parp inhibitor access in latin america
+parp inhibitors for prostate cancer
+participant contact
+participant engagement
+participant information
+participant information leaflet
+participant preferences
+participant survey
+participant uptake
+participant views
+participant-focused
+participation
+participation des communautés et des familles
+participatory crop improvement
+participatory epidemiology
+participatory medicine
+participatory research
+partners biobank
+partners healthcare
+partners healthcare biobank
+partners personalized medicine
+partnership in research
+partnerships
+pasc
+passive leg raising test
+patent.
+pathogen genomic data
+pathogen genomics
+pathogenic variant
+pathogenic variants
+pathogenicity islands
+pathogenwatch
+pathological genomic variation
+pathologist's perspective
+pathology archive
+pathology record
+pathomics
+pathophysiology
+pathway analysis
+patient
+patient benefits
+patient blood management
+patient data repository
+patient derived xenograft
+patient engagement
+patient engagement in research
+patient health information protection
+patient id
+patient individuality
+patient pathway
+patient perspective
+patient portal
+patient privacy
+patient recruitment
+patient registry
+patient reported outcome (pro)
+patient reported outcomes
+patient safety
+patient scenario
+patient security
+patient similarity
+patient stratification
+patient subgroups
+patient survey
+patient-centered outcomes
+patient-centric research
+patient-derived
+patient-derived brain cells
+patient-derived cancer model
+patient-derived cancer models
+patient-derived cells
+patient-derived models
+patient-derived organoid
+patient-derived organoids
+patient-derived tumor models
+patient-derived tumor organoids
+patient-derived xenograft
+patient-derived xenograft models
+patient-derived xenografts
+patient-facing tools
+patient-generated data
+patient-generated health data
+patient-relevant outcome
+patient-reported outcome
+patient/participant perspectives
+pattern
+pattern correlation
+pattern recognition image analysis
+patterns
+payment for research participation
+pbx3
+pce
+pcsk9, proprotein convertase subtilisin/kexin type 9
+pd-1
+pd-1 inhibitors
+pd-1/pd-l1
+pd-l1
+pd-l1.
+pd0332991
+pd1, programmed cell death protein
+pdcd1
+pdgfra
+pdto biobank
+pdx
+pdxs
+pe-pgrs
+pediatric
+pediatric cancer
+pediatric cancers
+pediatric disease prediction
+pediatric genetics
+pediatric genomics
+pediatric heart diseases
+pediatric leukemia
+pediatric oncology
+pedsnet
+penetrating atherosclerotic ulcer
+penile cancer
+peptic ulcer disease
+peptidylglycine α-amidating monooxygenase
+perceptions
+percutaneous coronary procedures
+percutaneous transluminal coronary angioplasty
+performance measures
+performance outcome measures
+perilipin
+perilla frutescens
+perilla leaf
+perinatal asphyxia
+perinatal hiv
+perinatal morbidity and mortality
+perinatal.
+periodontal disease
+perioperative complications
+perioperative genomics
+perioperative management
+peripartum depression
+peripheral blood mononuclear cell
+peripheral neuroblastic tumors
+peripheral neuropathy
+peripheral t-cell lymphoma
+peripheral vascular intervention
+peritoneal lavages
+permanent cell line
+permed-01 trial
+persian
+persistent graves’ disease
+persistent infections
+personal genome
+personal genome data
+personal health data
+personal health management
+personal health record
+personal identifies
+personal medicine
+personalised interventions
+personalised medicine
+personalised therapy
+personalised treatment
+personalised treatment algorithms
+personality traits
+personalized
+personalized anti-cancer therapy
+personalized care
+personalized diagnosis
+personalized drug response
+personalized genomics laboratory
+personalized healthcare
+personalized medicine
+personalized medicine it
+personalized screening
+personalized test selection
+personalized therapeutics
+personalized therapy
+personalized therapy biomarker
+personalized treatment
+personalized treatment pathway
+pessary
+pgl
+pgrn
+pguess
+pgx
+phage display
+pharmaceutical research
+pharmaceuticals
+pharmacoepidemiology
+pharmacogenenomics and personalised medicine
+pharmacogenetics(1)
+pharmacogenomic
+pharmacogenomic risk assessment
+pharmacogenomics
+pharmacogenomics (pgx)
+pharmacogenomics clinical implementation
+pharmacogenomics research network
+pharmacometabolomics
+pharmacometabonomics
+pharmacometrics
+pharmacomicrobiomics
+pharmacy
+pharyngitis
+phase 2 clinical trial
+phase i
+phase i trials
+phase ii
+phase ii trial
+phase iii
+phase iii clinical trial
+phb
+phecodes
+pheneplate
+phenoageaccel
+phenome
+phenome-wide association analysis
+phenome-wide association studies
+phenome-wide association studies (phewas)
+phenome-wide association study
+phenome-wide association study (phewas)
+phenome‑wide association study
+phenopackets schema
+phenotype harmonization
+phenotype prediction
+phenotyped specimen data
+phenotyped specimens
+phenotypes
+phenotypic big data
+phenotypic data
+phenotypic evolution
+phenotypic relevance detection
+phenotypic similarity
+phenotyping
+phenotyping algorithms
+phenylketonuria
+phers
+phewas
+phgdh
+philadelphia neurodevelopmental cohort
+phlebotomy
+phosphatidylinositols
+phosphocreatine
+phospholipase c
+phosphorescence
+phuse
+phylloquinone intake
+phylogenetic analysis
+phylogenetics
+phylogenomics
+physical activity
+physical activity intensity
+physical activity recommendations
+physical activity volume
+physical disease
+physical fitness
+physical function
+physical illness
+physician-patient relationship
+physiological monitoring
+physiological time series
+physiology
+pi3k inhibitors
+pi3k/akt/mtor pathway
+picture archiving and communication system
+pig model
+pik3ca
+pik3ca mutation
+pilot
+pilot study
+pipeline
+pituitary adenoma
+pituitary tumors
+pkhd1
+pkm1
+pkm2
+pku
+pku biobank
+placental growth factor
+placental registry
+planetary health
+planetary health genomics
+plant-based nutrition
+plasma cell neoplasm
+plasma egfr
+plasma fatty acids
+plasma protein
+plasma proteomics
+plasmapheresis
+plasmin
+plasminogen activator inhibitor-1
+plasmon-enhanced fluoroimmunoassay
+plasmonic-fluor
+platinum-based therapy
+pleiotropy
+pleomorphic lobular breast cancer
+pleural disease
+plp
+plwh
+pmbb
+pmda
+pneumococcal carriage
+pneumococcal conjugate vaccine
+pneumococcal genomics
+pneumococci
+pnpla3
+podoconiosis
+point process
+poison control
+polarization
+policy issues
+policy recommendations
+pollutants/exposomics
+polycomb repressive complex
+polycystic kidney disease
+polycystic kidney disease outcomes consortium (pkdoc)
+polygenetic risk score
+polygenic
+polygenic adaptation
+polygenic analysis
+polygenic inheritance
+polygenic risk
+polygenic risk score
+polygenic risk score (prs)
+polygenic risk scores
+polygenic risk scoring
+polygenic score
+polygenic scores
+polymorphism
+polymorphisms
+polymyalgia rheumatica
+polyomic model
+polyposis
+polysocial risk score
+pooled cohort equations
+popart
+popia
+population attributable fractions
+population based
+population biobank
+population characteristics
+population cohorts
+population diversity
+population genetics
+population genome programs
+population genomics
+population health science
+population pharmacokinetics
+population sampling
+population screening
+population stratification
+population structure
+population studies
+population study
+population surveys
+population-based
+population-based and preventative services
+population-based biobank
+population-based cohort
+population-based project
+population-scale sequencing
+portability
+portal
+portals
+positive selection
+post covid syndrome
+post-acute covid-19
+post-acute sequelae sars-cov-2 infection
+post-bypass
+post-covid
+post-marketing requirements
+post-translational modifications
+post-traumatic
+post-viral syndrome
+posterior spinal fusion
+postmortem
+postmortem interval
+postmortem tissue
+postnatal development
+postoperative chemotherapy
+postpartum depression
+postsynaptic density
+posttraumatic stress disorder
+potato
+power
+ppargamma
+pparα
+pparγ
+pqtl
+practical considerations
+practice guidelines
+practices
+pragmatic clinical trials
+pragmatic research
+prc1.6
+pre-analysis
+pre-analytical phase
+pre-clinical
+pre-clinical models
+pre-pregnancy bmi
+pre-surgery cancer patient
+preanalytic phase
+preanalytical phase
+preanalytical variables
+preanalytical variation
+preanalytics
+prebiotics
+precision
+precision biobanking
+precision cancer medicine
+precision health
+precision healthcare
+precision medicine clinical trial
+precision medicine cohorts modeling
+precision medicine diagnostic tests
+precision medicine it
+precision medicine program
+precision medicine research
+precision medicine sudden cardiac death
+precision oncology
+precision phenotyping
+precision population medicine
+precision psychiatry
+preclinical
+preclinical cancer models
+preclinical model
+preclinical models
+preclinical models, next generation sequencing
+preclinical study
+preclinical tumor models
+precíziós medicina
+prediction
+prediction algorithms
+prediction modeling
+predictive
+predictive alghoritm
+predictive algorithms
+predictive analytics
+predictive biomarker
+predictive biomarkers
+predictive functional assays
+predictive genetic testing
+predictive marker
+predictive model
+predictive modeling
+predictive models
+predictive neuroimaging
+predictive preventive personalised medicine
+predictive preventive personalised medicine (pppm/3pm)
+predictive preventive personalized medicine
+predictive preventive personalized medicine (pppm / 3pm)
+predictive preventive personalised medicine
+predictor
+predictors
+predictors of treatment outcomes
+predisposing gene
+predisposition
+preeclampsia
+preemptive pharmacogenetic testing
+preference
+pregnancy outcomes
+premature contractions
+prenatal eqtl
+prenatal phenotypes
+prenatal risk factors
+preoperative evaluation
+preservation
+preserved ejection fraction
+pressure cycling technology
+pressure injuries
+presumed germline pathogenic variants (pgpv)
+preterm
+preterm birth
+prevalent cohort
+preventative medicine
+prevention
+prevention medicine, precision health
+prevention strategies
+preventive measures
+preventive program
+pre‐emptive action
+prfi
+primary aldosteronism
+primary biliary cholangitis
+primary breast cancer
+primary care
+primary care records
+primary care strengthening
+primary cells
+primary cilia
+primary culture
+primary health center
+primary healthcare practitioner
+primary healthcare system
+primary hiv infection
+primary liver cancer
+primary open-angle glaucoma
+primary sclerosing cholangitis
+prior weight
+priority
+privacy law
+privacy preserving
+privacy violation risk
+privacy-preserving federated learning
+privacy-preserving protocols
+prmt
+prmt5
+probabilistic models
+probabilistic prediction
+probiotics
+process automation
+process mining
+processor
+productive efficiency
+professional
+professional activities
+professional-family relations
+prognosis prediction
+prognostic
+prognostic and predictive biomarkers
+prognostic biomarker
+prognostic classifier
+prognostic marker
+prognostic model
+prognostic modelling
+prognostic relevance
+prognostic scores
+prognostic signatures
+prognostication
+programmed cell death 4
+programmed death ligand 1 (pd-l1)
+progress in anesthesiology
+progression
+progressive
+progressive web app
+project proposal
+proliferation
+promega panel
+prophylactic treatment
+proportional odds model
+prosigna
+prospective
+prospective analysis
+prospective cohort
+prospective cohort study
+prospective design
+prospective observational study
+prospective precision oncology trial
+prospective registry
+prospective study
+prostate cancer
+prostate cancer in latin america
+prostate cancer treatment
+prostate-specific antigen/psa
+protac
+protease
+proteasome
+proteasome deubiquitinase inhibitors
+protection of personal information act
+protein
+protein expression pattern in long and short survival
+protein extraction
+protein metabolism
+protein o-glcnacylation
+protein quantitative trait loci
+protein truncating variants
+protein-altering variants
+protein-truncating variant
+proteome-wide association study
+proteomic subtyping
+proto-oncogenes
+protocol
+protocols & guidelines
+proton pump inhibitor
+prototype design
+provider engagement
+prs
+prs-cs
+prsbils
+ps4
+psi
+psmd10
+psoriatic arthritis
+psrc1
+pss, point-scoring system
+psychencode
+psychiatric comorbidities
+psychiatric diagnosis
+psychiatric disorder
+psychiatric disorders
+psychiatric emergency services
+psychiatric genetics
+psychiatric genomics consortium
+psychological and social impact
+psychological factors
+psychometrics
+psychosis
+psychosocial profiles
+psychotic disorder
+psychotropic drug
+ptsd
+ptsd coach
+ptvs
+public
+public and patient involvement
+public attitude
+public attitudes
+public benefit
+public engagement
+public health data
+public health emergency of international concern
+public health informatics infrastructure
+public health policy
+public health preparedness/response
+public health registries
+public private partnership
+public private relationships
+public value
+publich health care
+public–private partnerships
+pulmonary
+pulmonary embolism
+pulmonary function
+pulmonary microbiome
+pulmonary microenvironment
+pulmonary pressure
+pulmonary vein isolation
+pulmonology
+pulses
+pygm
+pyoderma
+pyroptosis
+qatar biobank
+qbb
+qgp
+qms
+qsox1
+qt interval
+quadrivalent human papillomavirus vaccine
+qualification
+qualitative
+qualitative interview study
+qualitative study
+quality
+quality assurance
+quality controls
+quality development
+quality indicators
+quality management
+quality management system
+quality measures
+quality of care
+quality registry
+quality scores
+quantitative disease progression
+quantitative imaging biomarkers
+quantitative models
+quantitative pathology
+quantitative pharmacology
+quasi-experimental design
+quasi-monomorphic variation range
+queries
+query
+questionnaire
+quiescence
+quod biobank
+ra
+race
+race/ethnicity
+racial disparity
+racialization
+radial strain
+radiation
+radiation risk
+radiation therapy
+radical cystectomy
+radical prostatectomy
+radiology information system
+radiology standards q000592
+radiology statistics & numerical data q000706
+radiology trends q000639
+radiology workflow
+radiomics
+radioresistance
+random forest (rf)
+random forest model
+random optimization
+randomisation
+randomized clinical trial
+randomized controlled trial
+randomized controlled trials
+rapid autopsy
+rapid diagnostic test
+rapid diagnostic test (rdt)
+rapid whole genome sequencing
+rapid whole-exome sequencing
+rapid whole-genome sequencing
+rare disease
+rare disease biobanking
+rare disease challenges
+rare egfr mutation
+rare genetic disease
+rare genetic variants
+rare gynecologic tumors
+rare neoplasms
+rare pediatric disease
+rare placentas
+rare tumors
+rare variant
+rare variant analysis
+rare variants
+ras oncogene
+rathke's cleft cyst
+rb1
+rct
+rd-connect
+rdf
+rdf knowledge graphs
+re-consent
+re-evaluation
+reactive oxygen species
+real life
+real world data
+real world evidence
+real-time
+real-time identification
+real-time monitoring of therapeutic efficacy
+real-world challenges
+real-world data
+real-world data (rwd)
+real-world data analysis
+real-world evidence
+real-world medicine
+real-world study
+real‐world data
+real‐world data (rwd)
+real‐world evidence
+reasoh classification
+reassortment
+recall-by-genotype
+recanalization
+recent hiv infection
+receptors
+recidivism
+reciprocity
+recombination
+recommendations
+reconsent
+record linkage
+recovery
+recruitment
+rectal cancer
+recurrent neural networks (rnn)
+recurrent otitis media
+recurrent spontaneous miscarriage
+red blood cell lysis buffer
+redcap
+redox homeostasis
+reference range
+referral
+refractory and recurrent solid tumors
+refractory graves’ disease
+regimen and duration recommendation
+register data
+registry
+registry data
+registry study
+registry-based randomised clinical trials
+regulation
+regulatory
+regulatory framework
+regulatory issues
+regulatory network
+regulatory networks
+regulatory qualification
+regulatory science
+regulatory submission
+regulatory submissions
+regulatory t cell
+rehabilitation medicine
+reimbursement
+relapsed acute lymphoblastic leukemia
+relative effectiveness assessment
+relative risk
+relaxed eligibility criteria (rec)
+reliability
+remote access
+remote monitoring
+renal aging
+renal cancer
+renal cell carcinoma (rcc)
+renal data shaper
+renal pathology
+repeatability
+replication
+reporting
+repositioning
+repositories
+repository
+representation
+representativeness
+reproducibility
+reproductive medicine
+repurposing
+requirement specification
+research and technology
+research autopsy
+research biobanks
+research communication
+research contribution
+research data
+research data management
+research data platform
+research environment
+research ethics
+research ethics committee
+research ethics committees
+research informatics
+research infrastructure
+research infrastructures
+research initiation
+research innovative methodologies
+research integrity
+research methodology
+research methods
+research network
+research networks
+research operations
+research paradigm
+research participation
+research partnerships
+research policies
+research priorities
+research recruitment
+research resource
+research resources
+research risks
+research study
+research topics
+research trends
+research use of health data
+researcher responsibilities
+researchers
+research ethics
+residual dried blood spots
+residual risk
+resilience
+resistance
+resistance profile
+resource allocation
+resource-constrained setting
+respect for persons
+respiratory
+respiratory disease
+respiratory infection
+respiratory infections
+respiratory medicine (see thoracic medicine)
+respiratory mucosa
+respiratory syncytial virus
+response
+response-adaptive randomization
+responsible research and innovation (rri)
+resting-state functional connectivity
+resting‐state fmri
+restricted and repetitive behaviors and interests
+ret
+ret fusions
+retinopathy
+retrospective longitudinal study
+retrospective study
+return of individual research results
+return of research results
+return of results
+returning research results
+revascularization
+reverse innovations
+review
+review methodology
+review methods
+revised common rule
+revision rate
+rhebl1
+rheumatic and musculoskeletal disease
+rheumatic heart disease
+rheumatoid arthritis
+rhinevit
+rho gtpase activating protein 5
+rho guanine nucleotide exchange factor
+rhoa mutations
+rhobtb2
+rhythm monitoring
+ribosomal protein
+ribosome
+rif1
+right
+right heart function
+right to science
+risk assessment model
+risk calibration
+risk factor
+risk locus
+risk modeling
+risk prediction
+risk prediction modeling
+risk profile
+risk profiles
+risk stratification
+risk-based approach
+risk-stratification
+risk-stratification model
+risk-stratified approaches
+risks
+rivaroxaban
+rmd
+rn486
+rna 5-methylcytosinine
+rna analysis
+rna extraction
+rna integrity
+rna integrity number
+rna integrity number (rin)
+rna polymerase ii
+rna quantification methods
+rna sequencing
+rna virus
+rna, ribonucleic acid
+rna-sequencing
+rnalater
+rnascope hpv-test®
+rnautophagy
+roadmap
+robo3
+roc analysis
+rodam study
+rodent models
+room temperature
+ros1 fusion
+routine data
+routine health data
+routinely collected health data
+routinely recorded health data
+roux-en-y gastric bypass surgery
+rpe
+rs-fmri
+rt-pcr
+rtpa
+rule-based
+rule-based etl
+rule-based phenotyping
+rules and regulations about genetic testing in turkey
+rural and regional health
+rwd
+rwe
+rxnorm
+résection infralobaire
+s100b, s100 calcium-binding protein b
+saarc nations
+safe haven
+safety
+saliva samples
+salivary microbiome
+salmonella durban
+salmonella paratyphi
+salmonella paratyphi a
+salmonella typhi h58
+salmonellosis
+sample
+sample management
+sample quality
+sample sharing
+sample storage
+sample tagging
+sample tracking
+samples
+saphenous vein graft
+sarcomere
+sarcomeric genes
+sarcopenic obesity
+sars
+sars-cov-2 infection
+sars-cov-2, severe acute respiratory syndrome coronavirus 2
+sars‐cov‐2
+sars–cov-2
+satisfaction
+scaffolds
+scalability
+scenario-based approach
+schema mapping
+science development
+scientific collaboration
+scientific research
+scleroderma
+scoping review
+score
+screening
+screening strategy
+scrna-seq
+sdgs
+season
+seasonality
+second hit
+secondary contact
+secondary data analysis
+secondary prevention
+secondary use
+secondary use of biomaterial and personal data
+secondary use of ehr data
+secondary use of genomic data
+secondary uses of materials
+secretion
+secular change
+secure multi-party computation
+security policy
+sedentary behaviour
+seeds for needs
+seer
+seer‐medicare
+segmental duplication
+seizures
+selective breeding
+selenocysteine
+self-care
+self-collection
+self-controlled case series
+self-harm
+self-organizing map
+self-reported symptoms
+sema3e
+semantic embedding
+semantic interoperability
+semantic querying and data integration
+semantic similarity
+semantic web technologies
+semi-structured interviews
+semi-supervised learning
+semiparametric estimation
+semisupervised learning
+send
+senescence
+senescence-associated secretory profile
+sensitive data
+sensitivity
+sensitivity biomarker
+sensory system
+sentence extraction and ranking
+sepsis prediction
+septal alcohol ablation
+septal reduction therapy
+sequence typing
+sequencing
+sequencing data
+sequential pattern mining
+serial blood sampling
+serious mental health conditions
+sero-prevalence
+serodiagnosis
+serology
+seropositivity
+seroprevalence
+serotonin
+serum 25-hydroxyvitamin d levels
+serum direct detection
+serum metabolites
+service
+services
+severe acute pancreatitis
+severe and very severe copd
+severe asthma
+severe asthma prevalence
+severe inflammatory response syndrome
+severe mental illness
+severe mental illnesses
+severe pneumonia
+severely increased albuminuria
+severity
+severity prediction
+sex
+sex differences
+sex specific
+sexual and reproductive health
+sexual behavior
+sexual health
+sexually transmitted diseases
+sflt-1
+sglt2 inhibitors
+sgpals, saltin-grimby physical activity level scale
+sh2b1
+shap
+shape expressions (shex)
+shared decision-making
+shared value
+shaukat khanum memorial cancer hospital & research centre
+shbg
+short-chain acyl-coa dehydrogenase deficiency
+short-read sequencing
+shutdown
+sick leaves
+sickle cell disease
+siglec5
+signaling pathway
+simple fully convolutional network-based regression
+simple repeats
+simulation
+simulation modelling
+single atom catalyst, catalytic therapy
+single cell
+single nucleotide polymorphism
+single surgeon – cohort
+single-cell
+single-cell mrna sequencing
+single-cell omics
+single-cell rna sequencing
+single-cell rna-sequencing
+single-cell sequencing
+single-molecule real-time sequencing
+single-nucleotide polymorphism
+single-nucleotide polymorphism (snp)
+single-nucleotide variations
+single-nucleus rna sequencing
+sirt
+sirt1 signaling pathway
+sirt2 loss
+site-specific cancers
+size-based diagnostics
+skcm
+skills
+skin autofluorescence
+skin gene expression
+skin thickness
+skirt size
+slaughterhouse worker
+slc12a1
+slc28a2
+slc35a2
+slc3a2
+slc44a3
+slc9a6 gene
+sleep apnea
+sleep disorders
+sleep disturbances
+sleep pattern
+sleep score
+sleep traits
+sleep-disordered breathing
+sleepiness
+sliding window
+sma
+smad9
+small cell lung cancer
+small nucleotide polymorphism chip genotype data
+small vulnerable newborns
+smallholder farmers
+smart
+smart card
+smart on fhir
+smarter
+smm, superficial spreading melanoma
+smn1
+smn2
+smoking intervention
+snomed ct
+snp
+snp array
+snp array design
+snp, small nucleotide polymorphism
+snps
+social
+social conditions and disease
+social determinants
+social ecological model (sem)
+social environmental deprivations
+social factors
+social genomic biorepository
+social health care
+social implications
+social issues
+social issues (elsi) in medical genetics
+social participation
+social science
+societal impact
+society
+society publishing
+socio-economic analysis
+socio-economic factors
+socio-economic impact
+sociocultural factors
+socioeconomic deprivation
+socioeconomic status
+sociology
+sociotechnical imaginaries
+sod2
+sodium-glucose cotransporter 2 inhibitors
+soft tissue sarcoma
+soft tissue tumours
+software evaluation
+software tools
+software/instrumentation
+sog
+solid tumors
+solidarity
+soluble interleukin-6 receptor
+somatic copy number variation
+somatic disease
+somatic driver alteration
+somatic mutations
+somatic single nucleotide variation
+sops
+source attribution
+source-based morphometry (sbm)
+sources of human tissues
+south africa biobanking
+south asia
+south asian
+south tyrol
+southeast asia
+sovereignty
+sp263
+space exploration
+space mission
+space radiation
+space travel
+spanish national security scheme
+spatial biology
+specialist
+speciation
+species range
+specificity
+specimen
+specimen management
+specimens
+spheroid cultures
+spheroids
+sphingomyelinase
+spine
+spontaneous coronary artery dissection
+spontaneous preterm birth
+sporadic synchronous crc
+sports genomics
+sports, sudden cardiac death
+sputum
+squamous carcinoma
+squamous cell carcinoma
+src
+src/fak signaling
+ssc
+ssr marker
+st-segment elevation myocardial infarction
+st131
+st20
+stab2
+stability
+stable isotope
+stable isotopes
+stacked generalization
+stacking
+stage i lung cancer
+staging
+stakeholder awareness and education
+stakeholders
+standard data structure
+standard operating procedures
+standardization
+standardized
+standardized definitions
+standardized laboratory procedures
+standards
+staphylococci
+stat3
+state-of-art techniques
+statin
+statin-associated muscle symptoms
+statins
+statistical genetics
+statistical modeling
+statistical models > linear models
+statistics
+stem cell
+stemness
+stereotactic radiosurgery
+sterilisation
+stigma
+stoml2
+stool consistency
+storage conditions
+storage duration
+strain
+strategy for patient-oriented research
+stratification
+stratified medicine
+strength
+streptococcus agalactiae
+stress
+string of pearls initiative
+stroke registry
+stroma
+stromal heterogeneity
+structural heart disease
+structural informatics
+structural magnetic resonance imaging
+structural magnetic resonance imaging (smri)
+structural mri
+structural variants
+structural variation
+structure information
+structure-function coherence
+structured reporting
+study data tabulation model
+study protocol
+sub-saharan africa
+subclinical atherosclerosis
+subcortical brain asymmetry
+sublobar resections
+substance use disorders
+subtractive genomic analysis
+success criteria
+sudden cardiac death
+sugar intake
+suicidal behavior
+suicide attempt
+suicide risk prediction
+sulfonylureas
+summary statistics resources
+sumoylation
+supervised
+supplement–drug interactions
+surgeon-led
+surgery
+surgical ablation
+surgical morbidity
+surgical myectomy
+surgical site infections
+surrogate broodstock
+surrogate models
+surveillance
+surveillance studies
+survey
+survey research
+survival
+survival outcomes
+survivals
+susceptibility
+susceptibility variants
+sustainability
+sustainable biobanking
+sustainable development goal (sdgs)
+swath mass spectrometer
+swedeheart
+sweet taste
+symbolic legislation
+symptom
+symptoms
+synapse to nucleus communication
+synaptic plasticity
+syndrome coronavirus 2 (sars-cov-2)
+syndromic diabetes
+systematic early dialog
+systematic review
+systemic inflammation
+systemic lupus erythematosus
+systemic sclerosis
+systemic treatment
+systems nephrology
+systolic dysfunction
+systolic pressure
+személyes adatvédelmet biztosító eljárások
+t cell
+t cell receptor sequencing
+t cells
+t stage
+t-cell lymphoma
+t-follicular helper
+t-ngs
+t790m
+taabo hdss
+taiwan biobank
+taiwanese
+taiwanese population
+takayasu arteritis
+tandem-mass-tag (tmt)
+target prioritization
+target sequencing
+target therapy
+target-enrichment sequencing
+targeted lipidomics
+targeted metabolomics
+targeted next-generation sequencing
+targeted ngs
+targeted sequencing
+targeted therapies
+targeted therapies for prostate cancer
+targeted therapy
+taste receptor
+tau
+tbl1xr1
+tbx4
+tcga
+tdm (therapeutic drug monitoring)
+teaming
+techniques
+technological advances
+technology development
+tecnological platform
+telegenetics
+telehealth
+telomere length
+temperature mapping
+temporal analysis
+temporal bipartite network
+temporal data representation
+temporal phenotypes
+temporal trend
+tensor decomposition
+tept
+teriflunomide
+terminology
+testicle
+testing
+testing and evaluation
+testing infrastructure
+tet2
+tetrapods
+text mining
+text-based
+tgfbeta
+th2 cytokines
+thai
+the cancer genome atlas
+the cancer human biobank
+the european convention on bioethics
+the gambia
+the guideline advantage (tga)
+the republic of kazakhstan
+the right drug, right dose, right time—using genomic data to individualize treatment
+the trans-omics for precision medicine (topmed) program
+thematic text analysis
+theory of change
+theragnosis
+theranostics
+therapeutic antibody
+therapeutic area standards
+therapeutic area user guide
+therapeutic hypothesis
+therapeutic interventions
+therapeutic misconception
+therapeutic target
+therapeutic targets
+therapeutic use
+therapy
+therapy cost and access
+thiosemicarbazide
+third dose
+thoracic aortic aneurysm
+thoracic endovascular aortic repair
+thoracic radiotherapy
+thoracoabdominal aortic aneurysm
+three-dimensional platform
+thrombolysis
+thrombolytic agents
+thymic carcinoma
+thymic epithelial tumors
+thymoma
+thyroid autoimmunity
+thyroid cancer
+tiered consent
+tiered informed consent
+tilapia
+time trends
+time-dependent modeling
+time-restricted eating
+time-series pattern marker
+timing of prophylaxis
+tissue
+tissue bank
+tissue banking
+tissue biobank
+tissue biobanking
+tissue biomarkers
+tissue biopsy
+tissue factor
+tissue factor pathway inhibitor
+tissue handling
+tissue microarrays
+tissue processing
+tissue quality
+tissue repository
+tissue samples
+tissue specimens
+tissues
+tiwi island
+tki resistance
+tme
+tnbc
+tnf-alpha
+tnfrsf1a protein
+tobacco
+tohoku medical megabank project
+toll-like receptor
+tongue coating
+tooth agenesis
+topic modelling
+topmed imputation
+tore
+total kidney volume (tkv)
+total knee arthroplasty
+totipotency
+toxicology
+tp53
+tp53i13
+traditional chinese medicine
+traditional chinese medicine (tcm)
+traditional radial access
+traditional sequencing.
+train-the-trainer
+training
+trait mapping
+trans-ethnic
+trans-omics
+trans-signaling pathway
+transaminase
+transcatheter mitral valve intervention
+transcript fusion
+transcription
+transcription factor binding site
+transcriptional pausing
+transcriptional readthrough
+transcriptome sequencing
+transcriptome-wide association study (twas)
+transcriptomic
+transcriptomic outlier
+transcriptomic panel
+transcriptomics
+transdiagnostic approach
+transfer learning
+transformation
+transformation and loading
+transgender
+transitional cell carcinoma
+transitional research
+translatability
+translation
+translation to population health
+translational
+translational bioinformatics
+translational diagnostics
+translational genomics
+translational medical research
+translational medicine
+translational models
+translational research
+translational research information technology infrastructure
+translational research on aging
+translational research services
+translational research/science
+translational roadmap
+translational science
+translational studies
+translational usage
+transmisión vertical
+transmission events
+transmission modelling
+transoral outlet reduction
+transparency
+transplant
+transplantation
+transport
+transport medium
+transthoracic echocardiography
+trastuzumab emtansine (t-dm1)
+trastuzumab plus pertuzumab
+trauma
+traumatic arthritis
+traumatic brain injury
+traumatic spinal cord injury
+treatment
+treatment lines
+treatment patterns
+treatment resistance
+treatment response
+treatment-emergent severe adverse events
+treatments
+trem1
+treponema pallidum (tp)
+triage test
+trial biomaterial manager
+trial concepts
+trial design
+trial readiness
+trials
+triple negative
+triple negative breast cancer
+triple negative breast cancer (tnbc)
+triple-negative breast cancer
+triplosensitivity
+trophoblast apoptosis
+troponin
+troubles du spectre de l’alcoolisation fœtale
+trust in science
+tsne
+tubeimu
+tumor annotation
+tumor biobanks
+tumor biology
+tumor biomarkers
+tumor collection
+tumor diagnostic
+tumor ecosystem
+tumor evolution
+tumor heterogeneity
+tumor immunity
+tumor model
+tumor models
+tumor mutation burden
+tumor necrosis factor
+tumor necrosis factors
+tumor organoids
+tumor research
+tumor research models
+tumor resource
+tumor response, retrospective analysis
+tumor specimens
+tumor therapy
+tumor tissues
+tumor volume
+tumor-infiltrating lymphocyte
+tumor-infiltrating lymphocytes
+tumor-infiltrating myeloid cells
+tumoroid
+tumoroids
+tumour analysis
+tumour biomarkers
+tumour heterogeneity
+tumour hybrid cell
+tumour invasion
+tumour microenvironment
+tumour necrosis factor-α
+tumour progression
+tumour response
+tumour-infiltrating lymphocytes
+tunisian reference genome
+turkish ehr
+twas
+twin pregnancy
+two-phase design
+two-sample
+tyk2
+type 2
+type 2 diabetes
+type 2 diabetes (t2d)
+type 2 diabetes mellitus
+type 2 immunity
+type i
+type i ifns
+type i interferon
+type iii secretion system
+type iv secretion system
+type vi secretion system
+typhoid
+técnicas ómicas
+t‐wave morphology
+u-shaped distribution
+ubilim
+ubuntu philosophy
+uchl5
+ugt1a1(4)
+uhc
+uk
+uk, united kingdom
+uk-biobank
+uk-pbc risk score
+uk10k
+ukctocs
+ukraine
+ulcerative colitis
+ulmfit
+ultra-processed food
+ultra-processed foods
+ultrasound
+ultrasound network architecture
+ultrasound order
+umbilical cord blood
+umls
+unbalanced classification
+unconscious bias
+under-represented populations
+under-vacuum
+undercarboxylated osteocalcin
+underdiagnosis
+undergraduates
+undernutrition
+underrepresented
+underrepresented in biomedical research
+underrepresented populations
+underrepresented trainees
+underserved
+underserved population
+underserved populations
+understanding
+unimodal cortex
+universal exchange language
+unstable angina
+unstable angina
+unstructured data
+unsupervised
+unsupervised learning
+urate
+urbanization
+urinalysis
+urinary albumin-creatinine ratio (uacr)
+urinary incontinence
+urine
+urine albumin–creatinine ratio
+uro-oncology
+urologic/prostate
+urothelial cancer
+urothelial carcinoma
+usa, united states of america
+usability
+usd, united states dollars
+use in research
+user-system interaction
+usp14
+usp44
+uterine contraction
+utrition
+uv exposed
+uveal
+v1–v9 region
+va
+vaccelerate
+vaccination records
+vaccination status
+vaccine
+vaccine research
+vaccine-associated symptoms
+val
+validation
+validation rules
+validation studies
+value-based care
+valvular calcification
+valvular heart disease
+vandetanib
+variability
+variant
+variant actionability
+variant annotation
+variant assessment
+variant calling
+variant classification
+variant effect prediction
+variant histology
+variant information
+variant of unknown significance
+variants
+variants of concern
+variants of uncertain significance
+vascular biology
+vascular dementia
+vascular density
+vascular risk factors
+vascular surgery
+vasculitis
+vats
+vector
+vegf-a
+vegfa
+vein graft lesions
+venous thromobemolism
+ventricular arrhythmias
+ventricular assist device
+vertical integration
+vertical transmission
+veterinary
+viability
+viable freeze
+vibiba
+video
+vigorous
+vih
+vih perinatal
+village poultry systems
+viral evolution
+viral genomes
+viral genomics
+viral hemorrhagic
+viral hepatitis
+viral infection
+viral sequencing
+virtopsy
+virtual biobank
+virtual biobanking
+virtual data warehouse
+virtual knowledge graphs
+virtual management guidance
+virtual workflow
+virulence genes
+virulome
+virus cycle
+virus stability
+vistusertib
+visual inspection with acetic acid
+visualization
+visualization in ehealth
+vitamin c
+vitamin d binding protein
+vitamin d supplement use
+vitamin d supplementation
+vitamin k status
+vkorc1
+vmat
+voc
+volume
+vulnerabilities
+vulnerability
+vulnerable population
+vus
+vus, variant of uncertain significance
+walking pace
+walking-pace
+warburg effect
+water pollution
+waterborne bacteria
+watson
+wbc
+wbrt
+wdr19
+wearable device
+wearable ecg
+wearables
+web 2.0
+web-server
+web3
+webtool
+weight recurrence
+well-being
+wes
+west africa
+wgbs
+wgs
+wharton's jelly
+white blood cell
+white european
+white matter hyperintensities
+white matter hyperintensities (wmh)
+whole brain radiotherapy
+whole exome sequencing
+whole genome bisulfite sequencing
+whole slide imaging
+whole-exome sequencing
+whole-genome based surveillance
+whole-genome reference panel
+whole-genome sequence association analyses
+whole-genome sequencing
+whole-genome sequencing (wgs)
+wildlife
+willingness
+willingness to donate
+within-host diversity
+within-sibship
+wnt
+wnt/beta-catenin pathway
+wnt/β-catenin
+wnt/β-catenin signaling
+women
+women’s mental health
+word2vec
+workflow orchestration
+workflows and human interactions
+working impairment
+workplace
+workshop
+world health organization classification
+world-systems theory
+wound healing
+wt1 rs3809060
+wwtr1
+x-chromosome wide association study
+xdr
+xenograft
+xenografts
+xenotransplantation
+xgboost
+ybx1
+years of life lost
+yeats4
+yellow fever
+young adults
+youth peer education
+ythdf1
+yy1
+zeb2
+zebrafish modeling
+zic2
+zika infection
+zoonotic helminths
+éthique et gouvernance
+études translationnelles
+α-ketoglutarate
+γδ t cells
+ε4/ε4
+‘omics’
+“right-to-try” experimental drugs
+≥75 years

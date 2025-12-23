@@ -1,0 +1,221 @@
+{
+  "metadata": {
+    "analysis_date": "2025-09-06T18:07:00.046552",
+    "total_papers": 14655,
+    "total_biobanks": 5,
+    "year_range": "2003-2024"
+  },
+  "summary_statistics": {
+    "population_stratification": {
+      "name": "Population Stratification",
+      "papers_mentioning": 5737,
+      "prevalence_percentage": 39.15,
+      "average_confidence": 0.519,
+      "severity_distribution": {
+        "medium": 2104,
+        "mentioned": 1908,
+        "low": 1069,
+        "high": 656
+      }
+    },
+    "batch_effects": {
+      "name": "Batch Effects",
+      "papers_mentioning": 47,
+      "prevalence_percentage": 0.32,
+      "average_confidence": 0.355,
+      "severity_distribution": {
+        "mentioned": 47
+      }
+    },
+    "missing_data": {
+      "name": "Missing Data Patterns",
+      "papers_mentioning": 5500,
+      "prevalence_percentage": 37.53,
+      "average_confidence": 0.34,
+      "severity_distribution": {
+        "mentioned": 5500
+      }
+    },
+    "sampling_bias": {
+      "name": "Sampling Bias",
+      "papers_mentioning": 1003,
+      "prevalence_percentage": 6.84,
+      "average_confidence": 0.373,
+      "severity_distribution": {
+        "mentioned": 998,
+        "high": 5
+      }
+    },
+    "technical_variation": {
+      "name": "Technical Variation",
+      "papers_mentioning": 270,
+      "prevalence_percentage": 1.84,
+      "average_confidence": 0.341,
+      "severity_distribution": {
+        "mentioned": 268,
+        "high": 2
+      }
+    }
+  },
+  "temporal_trends": {
+    "population_stratification": [
+      {
+        "Year": 2019,
+        "population_stratification_percentage": 39.903069466882066
+      },
+      {
+        "Year": 2020,
+        "population_stratification_percentage": 37.03319502074689
+      },
+      {
+        "Year": 2021,
+        "population_stratification_percentage": 38.76262626262626
+      },
+      {
+        "Year": 2022,
+        "population_stratification_percentage": 37.3746581586144
+      },
+      {
+        "Year": 2023,
+        "population_stratification_percentage": 38.84848484848485
+      },
+      {
+        "Year": 2024,
+        "population_stratification_percentage": 41.4541072504519
+      }
+    ],
+    "batch_effects": [
+      {
+        "Year": 2019,
+        "batch_effects_percentage": 0.16155088852988692
+      },
+      {
+        "Year": 2020,
+        "batch_effects_percentage": 0.3112033195020747
+      },
+      {
+        "Year": 2021,
+        "batch_effects_percentage": 0.1893939393939394
+      },
+      {
+        "Year": 2022,
+        "batch_effects_percentage": 0.27347310847766637
+      },
+      {
+        "Year": 2023,
+        "batch_effects_percentage": 0.21212121212121215
+      },
+      {
+        "Year": 2024,
+        "batch_effects_percentage": 0.4619401486242217
+      }
+    ],
+    "missing_data": [
+      {
+        "Year": 2019,
+        "missing_data_percentage": 28.109854604200322
+      },
+      {
+        "Year": 2020,
+        "missing_data_percentage": 29.564315352697097
+      },
+      {
+        "Year": 2021,
+        "missing_data_percentage": 33.45959595959596
+      },
+      {
+        "Year": 2022,
+        "missing_data_percentage": 36.73655423883318
+      },
+      {
+        "Year": 2023,
+        "missing_data_percentage": 37.54545454545454
+      },
+      {
+        "Year": 2024,
+        "missing_data_percentage": 43.763807993573
+      }
+    ],
+    "sampling_bias": [
+      {
+        "Year": 2019,
+        "sampling_bias_percentage": 5.654281098546042
+      },
+      {
+        "Year": 2020,
+        "sampling_bias_percentage": 7.468879668049793
+      },
+      {
+        "Year": 2021,
+        "sampling_bias_percentage": 7.2601010101010095
+      },
+      {
+        "Year": 2022,
+        "sampling_bias_percentage": 7.247037374658159
+      },
+      {
+        "Year": 2023,
+        "sampling_bias_percentage": 7.2727272727272725
+      },
+      {
+        "Year": 2024,
+        "sampling_bias_percentage": 6.005221932114883
+      }
+    ],
+    "technical_variation": [
+      {
+        "Year": 2019,
+        "technical_variation_percentage": 3.392568659127625
+      },
+      {
+        "Year": 2020,
+        "technical_variation_percentage": 1.970954356846473
+      },
+      {
+        "Year": 2021,
+        "technical_variation_percentage": 1.7045454545454544
+      },
+      {
+        "Year": 2022,
+        "technical_variation_percentage": 1.504102096627165
+      },
+      {
+        "Year": 2023,
+        "technical_variation_percentage": 1.9393939393939394
+      },
+      {
+        "Year": 2024,
+        "technical_variation_percentage": 1.6268326973287808
+      }
+    ]
+  },
+  "biobank_analysis": {
+    "top_aware_biobanks": [
+      {
+        "Biobank": "FinnGen",
+        "Total_Papers": 1840,
+        "Overall_Bias_Awareness": 24.173913043478258
+      },
+      {
+        "Biobank": "Million Veteran Program",
+        "Total_Papers": 430,
+        "Overall_Bias_Awareness": 21.44186046511628
+      },
+      {
+        "Biobank": "All of Us",
+        "Total_Papers": 583,
+        "Overall_Bias_Awareness": 17.221269296740992
+      },
+      {
+        "Biobank": "UK Biobank",
+        "Total_Papers": 11123,
+        "Overall_Bias_Awareness": 15.92196349905601
+      },
+      {
+        "Biobank": "Estonian Biobank",
+        "Total_Papers": 679,
+        "Overall_Bias_Awareness": 15.169366715758468
+      }
+    ]
+  }
+}
