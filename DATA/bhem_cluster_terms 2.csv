@@ -1,0 +1,821 @@
+biobank_id,biobank_name,cluster_id,cluster_size,cluster_theme,term,cdf_ipf
+uk_biobank,UK Biobank,0,3827,Epidemiology & Risk Factors,Adult,0.6294
+uk_biobank,UK Biobank,0,3827,Epidemiology & Risk Factors,Aged,0.6201
+uk_biobank,UK Biobank,0,3827,Epidemiology & Risk Factors,Prospective Studies,0.602
+uk_biobank,UK Biobank,0,3827,Epidemiology & Risk Factors,Middle Aged,0.5699
+uk_biobank,UK Biobank,0,3827,Epidemiology & Risk Factors,Middle Aged Humans,0.5538
+uk_biobank,UK Biobank,1,2132,General Research,Humans Biological Specimen Banks,1.4177
+uk_biobank,UK Biobank,1,2132,General Research,Biological Specimen Banks,1.2798
+uk_biobank,UK Biobank,1,2132,General Research,Uk Biobank,0.9899
+uk_biobank,UK Biobank,1,2132,General Research,Middle Aged Uk Biobank,0.834
+uk_biobank,UK Biobank,1,2132,General Research,Female United Kingdom,0.7199
+uk_biobank,UK Biobank,2,1734,Genomics & GWAS,Mendelian Randomization Analysis Humans,1.6537
+uk_biobank,UK Biobank,2,1734,Genomics & GWAS,Mendelian Randomization Analysis,1.5637
+uk_biobank,UK Biobank,2,1734,Genomics & GWAS,Polymorphism Single Nucleotide Mendelian Randomization Analysis,1.145
+uk_biobank,UK Biobank,2,1734,Genomics & GWAS,Genome Wide Association Study,0.865
+uk_biobank,UK Biobank,2,1734,Genomics & GWAS,Polymorphism Single Nucleotide,0.8048
+uk_biobank,UK Biobank,3,3030,Genomics & GWAS,Genome Wide Association Study,0.6691
+uk_biobank,UK Biobank,3,3030,Genomics & GWAS,Polymorphism Single Nucleotide,0.6146
+uk_biobank,UK Biobank,3,3030,Genomics & GWAS,Polymorphism Single Nucleotide Humans,0.5999
+uk_biobank,UK Biobank,3,3030,Genomics & GWAS,Genetic Predisposition To Disease,0.5712
+uk_biobank,UK Biobank,3,3030,Genomics & GWAS,Phenotype,0.5567
+mvp,Million Veteran Program,0,16,Cardiovascular Research,Alcohol Drinking,1.5719
+mvp,Million Veteran Program,0,16,Cardiovascular Research,Male Alcohol Drinking,1.5008
+mvp,Million Veteran Program,0,16,Cardiovascular Research,Ischemic Stroke,1.1088
+mvp,Million Veteran Program,0,16,Cardiovascular Research,Male Ischemic Stroke,1.0603
+mvp,Million Veteran Program,0,16,Cardiovascular Research,Alcoholism,1.0062
+mvp,Million Veteran Program,1,30,Mendelian Randomization,Mendelian Randomization Analysis,1.134
+mvp,Million Veteran Program,1,30,Mendelian Randomization,Covid 19,1.0476
+mvp,Million Veteran Program,1,30,Mendelian Randomization,Covid 19 Humans,0.9148
+mvp,Million Veteran Program,1,30,Mendelian Randomization,Sars Cov 2,0.7363
+mvp,Million Veteran Program,1,30,Mendelian Randomization,Biomarkers,0.6136
+mvp,Million Veteran Program,2,43,Genomics & GWAS,Phenotype,1.1061
+mvp,Million Veteran Program,2,43,Genomics & GWAS,Humans Phenotype,0.9523
+mvp,Million Veteran Program,2,43,Genomics & GWAS,Genetic Loci,0.9035
+mvp,Million Veteran Program,2,43,Genomics & GWAS,Polymorphism Single Nucleotide Genetic Predisposition To Disease,0.8693
+mvp,Million Veteran Program,2,43,Genomics & GWAS,Genetic Predisposition To Disease,0.8229
+mvp,Million Veteran Program,3,17,Cardiovascular Research,Cardiovascular Diseases,2.0173
+mvp,Million Veteran Program,3,17,Cardiovascular Research,Veterans Cardiovascular Diseases,1.8487
+mvp,Million Veteran Program,3,17,Cardiovascular Research,Cardiovascular Diseases Female,1.7603
+mvp,Million Veteran Program,3,17,Cardiovascular Research,Prospective Studies,1.4794
+mvp,Million Veteran Program,3,17,Cardiovascular Research,Atherosclerosis Humans,0.998
+mvp,Million Veteran Program,4,11,General Research,Mutation,1.5423
+mvp,Million Veteran Program,4,11,General Research,Renal Insufficiency Chronic,1.0959
+mvp,Million Veteran Program,4,11,General Research,Kidney,1.0461
+mvp,Million Veteran Program,4,11,General Research,Humans Black People,1.0461
+mvp,Million Veteran Program,4,11,General Research,Black People,0.9757
+mvp,Million Veteran Program,5,43,General Research,Veterans Female,1.0182
+mvp,Million Veteran Program,5,43,General Research,Humans Middle Aged,0.8367
+mvp,Million Veteran Program,5,43,General Research,United States,0.8169
+mvp,Million Veteran Program,5,43,General Research,Female Adult,0.8134
+mvp,Million Veteran Program,5,43,General Research,Adult,0.7017
+mvp,Million Veteran Program,6,31,Genomics & GWAS,Humans Veterans,1.4165
+mvp,Million Veteran Program,6,31,Genomics & GWAS,Veterans Genome Wide Association Study,1.0451
+mvp,Million Veteran Program,6,31,Genomics & GWAS,Veterans,0.6687
+mvp,Million Veteran Program,6,31,Genomics & GWAS,Polymorphism Single Nucleotide Risk Factors,0.4709
+mvp,Million Veteran Program,6,31,Genomics & GWAS,Veterans Aortic Aneurysm Abdominal,0.4383
+mvp,Million Veteran Program,7,20,Cardiovascular Research,Humans White People,1.2419
+mvp,Million Veteran Program,7,20,Cardiovascular Research,White People,1.2248
+mvp,Million Veteran Program,7,20,Cardiovascular Research,Blood Pressure,1.0291
+mvp,Million Veteran Program,7,20,Cardiovascular Research,Hypertension,0.959
+mvp,Million Veteran Program,7,20,Cardiovascular Research,Black Or African American,0.7749
+mvp,Million Veteran Program,8,17,Mental Health & Psychiatry,Brain Injuries Traumatic,1.8891
+mvp,Million Veteran Program,8,17,Mental Health & Psychiatry,Humans Brain Injuries Traumatic,1.4125
+mvp,Million Veteran Program,8,17,Mental Health & Psychiatry,Iraq War 2003 2011,1.3538
+mvp,Million Veteran Program,8,17,Mental Health & Psychiatry,Iraq War 2003 2011 Humans,0.998
+mvp,Million Veteran Program,8,17,Mental Health & Psychiatry,Neuropsychological Tests,0.998
+mvp,Million Veteran Program,9,14,Metabolic & Diabetes,Cholesterol Hdl,1.9602
+mvp,Million Veteran Program,9,14,Metabolic & Diabetes,Cholesterol Ldl,1.8354
+mvp,Million Veteran Program,9,14,Metabolic & Diabetes,Triglycerides,1.6439
+mvp,Million Veteran Program,9,14,Metabolic & Diabetes,Mendelian Randomization Analysis,1.62
+mvp,Million Veteran Program,9,14,Metabolic & Diabetes,Diabetes Mellitus Type 2 Male,1.2672
+mvp,Million Veteran Program,10,19,Genomics & GWAS,Male Polymorphism Single Nucleotide,1.4444
+mvp,Million Veteran Program,10,19,Genomics & GWAS,Genome Wide Association Study Female,1.1718
+mvp,Million Veteran Program,10,19,Genomics & GWAS,Gene Frequency,0.8929
+mvp,Million Veteran Program,10,19,Genomics & GWAS,Polymorphism Single Nucleotide Aged,0.8929
+mvp,Million Veteran Program,10,19,Genomics & GWAS,Gene Frequency Humans,0.7151
+mvp,Million Veteran Program,11,17,Cancer & Oncology,Prostatic Neoplasms,2.2854
+mvp,Million Veteran Program,11,17,Cancer & Oncology,Male Prostatic Neoplasms,1.1818
+mvp,Million Veteran Program,11,17,Cancer & Oncology,Prostatic Neoplasms Risk Factors,0.998
+mvp,Million Veteran Program,11,17,Cancer & Oncology,Risk Factors Humans,0.9243
+mvp,Million Veteran Program,11,17,Cancer & Oncology,Prostate Specific Antigen,0.7992
+finngen,FinnGen,0,36,Mendelian Randomization,Arthritis Rheumatoid Humans,3.8381
+finngen,FinnGen,0,36,Mendelian Randomization,Mendelian Randomization Analysis Arthritis Rheumatoid,3.5185
+finngen,FinnGen,0,36,Mendelian Randomization,Arthritis Rheumatoid,3.5087
+finngen,FinnGen,0,36,Mendelian Randomization,Spondylitis Ankylosing,0.8425
+finngen,FinnGen,0,36,Mendelian Randomization,Lupus Erythematosus Systemic,0.7965
+finngen,FinnGen,1,187,General Research,Humans Male,1.3605
+finngen,FinnGen,1,187,General Research,Aged,1.3374
+finngen,FinnGen,1,187,General Research,Middle Aged,1.2979
+finngen,FinnGen,1,187,General Research,Female Middle Aged,1.071
+finngen,FinnGen,1,187,General Research,Male,1.0391
+finngen,FinnGen,2,82,Mendelian Randomization,Pregnancy,2.2355
+finngen,FinnGen,2,82,Mendelian Randomization,Female Mendelian Randomization Analysis,1.1711
+finngen,FinnGen,2,82,Mendelian Randomization,Pre Eclampsia,1.1209
+finngen,FinnGen,2,82,Mendelian Randomization,Hypertension Pregnancy Induced,1.0993
+finngen,FinnGen,2,82,Mendelian Randomization,Diabetes Gestational,0.9861
+finngen,FinnGen,3,239,Genomics & GWAS,Risk Factors,0.7827
+finngen,FinnGen,3,239,Genomics & GWAS,Genetic Predisposition To Disease Mendelian Randomization Analysis,0.7398
+finngen,FinnGen,3,239,Genomics & GWAS,Risk Factors Polymorphism Single Nucleotide,0.6531
+finngen,FinnGen,3,239,Genomics & GWAS,Polymorphism Single Nucleotide,0.5902
+finngen,FinnGen,3,239,Genomics & GWAS,Mendelian Randomization Analysis Humans,0.576
+finngen,FinnGen,4,56,Genomics & GWAS,Quantitative Trait Loci,2.3368
+finngen,FinnGen,4,56,Genomics & GWAS,Multiomics,2.3135
+finngen,FinnGen,4,56,Genomics & GWAS,Dna Methylation,1.9552
+finngen,FinnGen,4,56,Genomics & GWAS,Dna Methylation Quantitative Trait Loci,1.7524
+finngen,FinnGen,4,56,Genomics & GWAS,Quantitative Trait Loci Polymorphism Single Nucleotide,1.1578
+finngen,FinnGen,5,130,Mendelian Randomization,Genome Wide Association Study Male,1.6126
+finngen,FinnGen,5,130,Mendelian Randomization,Male,1.0772
+finngen,FinnGen,5,130,Mendelian Randomization,Female Mendelian Randomization Analysis,0.9189
+finngen,FinnGen,5,130,Mendelian Randomization,Female,0.7316
+finngen,FinnGen,5,130,Mendelian Randomization,Male Risk Factors,0.6239
+finngen,FinnGen,6,517,Genomics & GWAS,Mendelian Randomization Analysis Humans,0.4974
+finngen,FinnGen,6,517,Genomics & GWAS,Humans Genome Wide Association Study,0.3197
+finngen,FinnGen,6,517,Genomics & GWAS,Causality,0.2647
+finngen,FinnGen,6,517,Genomics & GWAS,Diabetes Mellitus Type 2,0.2107
+finngen,FinnGen,6,517,Genomics & GWAS,Polymorphism Single Nucleotide,0.2085
+finngen,FinnGen,7,247,Genomics & GWAS,Genetic Predisposition To Disease Humans,1.662
+finngen,FinnGen,7,247,Genomics & GWAS,Mendelian Randomization Analysis Genetic Predisposition To Disease,1.6023
+finngen,FinnGen,7,247,Genomics & GWAS,Genetic Predisposition To Disease,1.1531
+finngen,FinnGen,7,247,Genomics & GWAS,Polymorphism Single Nucleotide,0.6064
+finngen,FinnGen,7,247,Genomics & GWAS,Risk Factors Polymorphism Single Nucleotide,0.5209
+finngen,FinnGen,8,147,Mendelian Randomization,Gastrointestinal Microbiome,2.4218
+finngen,FinnGen,8,147,Mendelian Randomization,Mendelian Randomization Analysis Gastrointestinal Microbiome,2.3633
+finngen,FinnGen,8,147,Mendelian Randomization,Gastrointestinal Microbiome Humans,2.3473
+finngen,FinnGen,8,147,Mendelian Randomization,Humans Genome Wide Association Study,0.3681
+finngen,FinnGen,8,147,Mendelian Randomization,Clostridiales,0.3506
+finngen,FinnGen,9,138,Mendelian Randomization,Female Middle Aged,1.7946
+finngen,FinnGen,9,138,Mendelian Randomization,Middle Aged,1.7587
+finngen,FinnGen,9,138,Mendelian Randomization,Middle Aged Mendelian Randomization Analysis,1.6654
+finngen,FinnGen,9,138,Mendelian Randomization,Middle Aged Adult,1.1219
+finngen,FinnGen,9,138,Mendelian Randomization,Male,1.0541
+finngen,FinnGen,10,86,Mendelian Randomization,Female Adult,2.8453
+finngen,FinnGen,10,86,Mendelian Randomization,Adult,2.2484
+finngen,FinnGen,10,86,Mendelian Randomization,Adult Mendelian Randomization Analysis,1.2061
+finngen,FinnGen,10,86,Mendelian Randomization,Adult Middle Aged,0.9897
+finngen,FinnGen,10,86,Mendelian Randomization,Pregnancy,0.9282
+finngen,FinnGen,11,39,Mendelian Randomization,Crohn Disease,3.6629
+finngen,FinnGen,11,39,Mendelian Randomization,Inflammatory Bowel Diseases,3.2845
+finngen,FinnGen,11,39,Mendelian Randomization,Colitis Ulcerative,3.2791
+finngen,FinnGen,11,39,Mendelian Randomization,Crohn Disease Mendelian Randomization Analysis,2.7775
+finngen,FinnGen,11,39,Mendelian Randomization,Colitis Ulcerative Crohn Disease,2.2446
+all_of_us,All of Us Research Program,0,254,General Research,United States Middle Aged,0.6091
+all_of_us,All of Us Research Program,0,254,General Research,Aged,0.5778
+all_of_us,All of Us Research Program,0,254,General Research,Male Aged,0.5614
+all_of_us,All of Us Research Program,0,254,General Research,Female Male,0.5253
+all_of_us,All of Us Research Program,0,254,General Research,Middle Aged,0.5126
+all_of_us,All of Us Research Program,1,140,General Research,Population Health,1.0005
+all_of_us,All of Us Research Program,1,140,General Research,Humans Population Health,0.9849
+all_of_us,All of Us Research Program,1,140,General Research,Population Health Case Control Studies,0.3942
+all_of_us,All of Us Research Program,1,140,General Research,Case Control Studies,0.3797
+all_of_us,All of Us Research Program,1,140,General Research,Cross Sectional Studies,0.2825
+all_of_us,All of Us Research Program,2,43,General Research,Biomedical Research,2.2333
+all_of_us,All of Us Research Program,2,43,General Research,Humans Biomedical Research,1.9454
+all_of_us,All of Us Research Program,2,43,General Research,Precision Medicine,0.8832
+all_of_us,All of Us Research Program,2,43,General Research,Research Personnel,0.7357
+all_of_us,All of Us Research Program,2,43,General Research,Biomedical Research United States,0.5983
+estonian_biobank,Estonian Biobank,0,30,General Research,Biological Specimen Banks,0.6395
+estonian_biobank,Estonian Biobank,0,30,General Research,Estonia Female,0.5006
+estonian_biobank,Estonian Biobank,0,30,General Research,Electronic Health Records,0.5006
+estonian_biobank,Estonian Biobank,0,30,General Research,Estonia,0.4929
+estonian_biobank,Estonian Biobank,0,30,General Research,Male Humans,0.4209
+estonian_biobank,Estonian Biobank,1,36,Genomics & GWAS,Male Genome Wide Association Study,0.7805
+estonian_biobank,Estonian Biobank,1,36,Genomics & GWAS,Genome Wide Association Study,0.7385
+estonian_biobank,Estonian Biobank,1,36,Genomics & GWAS,Genome Wide Association Study Humans,0.6886
+estonian_biobank,Estonian Biobank,1,36,Genomics & GWAS,Polymorphism Single Nucleotide,0.6779
+estonian_biobank,Estonian Biobank,1,36,Genomics & GWAS,Polymorphism Single Nucleotide Genetic Predisposition To Disease,0.6394
+estonian_biobank,Estonian Biobank,2,28,Epidemiology & Risk Factors,Cohort Studies,0.8221
+estonian_biobank,Estonian Biobank,2,28,Epidemiology & Risk Factors,Risk Factors,0.7128
+estonian_biobank,Estonian Biobank,2,28,Epidemiology & Risk Factors,Humans Cohort Studies,0.6896
+estonian_biobank,Estonian Biobank,2,28,Epidemiology & Risk Factors,Aged,0.6735
+estonian_biobank,Estonian Biobank,2,28,Epidemiology & Risk Factors,Adult,0.617
+biobank_japan,BioBank Japan,0,40,General Research,Japan Middle Aged,1.0468
+biobank_japan,BioBank Japan,0,40,General Research,Adult,0.9338
+biobank_japan,BioBank Japan,0,40,General Research,Aged,0.9292
+biobank_japan,BioBank Japan,0,40,General Research,Biological Specimen Banks,0.903
+biobank_japan,BioBank Japan,0,40,General Research,Middle Aged,0.9018
+biobank_japan,BioBank Japan,1,65,General Research,Case Control Studies,0.7191
+biobank_japan,BioBank Japan,1,65,General Research,Humans Case Control Studies,0.5974
+biobank_japan,BioBank Japan,1,65,General Research,Genetic Predisposition To Disease,0.5653
+biobank_japan,BioBank Japan,1,65,General Research,Female Aged,0.5307
+biobank_japan,BioBank Japan,1,65,General Research,Middle Aged,0.518
+biobank_japan,BioBank Japan,2,40,Mendelian Randomization,Genome Wide Association Study Humans,0.8939
+biobank_japan,BioBank Japan,2,40,Mendelian Randomization,Mendelian Randomization Analysis,0.7377
+biobank_japan,BioBank Japan,2,40,Mendelian Randomization,Humans Mendelian Randomization Analysis,0.7191
+biobank_japan,BioBank Japan,2,40,Mendelian Randomization,Mendelian Randomization Analysis Diabetes Mellitus Type 2,0.4102
+biobank_japan,BioBank Japan,2,40,Mendelian Randomization,Genome Wide Association Study,0.3649
+biobank_japan,BioBank Japan,3,49,Genomics & GWAS,Mendelian Randomization Analysis Polymorphism Single Nucleotide,1.0111
+biobank_japan,BioBank Japan,3,49,Genomics & GWAS,East Asian People,0.9334
+biobank_japan,BioBank Japan,3,49,Genomics & GWAS,Polymorphism Single Nucleotide East Asian People,0.8983
+biobank_japan,BioBank Japan,3,49,Genomics & GWAS,Mendelian Randomization Analysis,0.7891
+biobank_japan,BioBank Japan,3,49,Genomics & GWAS,Female Mendelian Randomization Analysis,0.6667
+biobank_japan,BioBank Japan,4,19,General Research,Multifactorial Inheritance,1.9273
+biobank_japan,BioBank Japan,4,19,General Research,Multifactorial Inheritance Humans,1.9075
+biobank_japan,BioBank Japan,4,19,General Research,Genome Wide Association Study Multifactorial Inheritance,1.4037
+biobank_japan,BioBank Japan,4,19,General Research,Genetic Predisposition To Disease Genome Wide Association Study,0.8049
+biobank_japan,BioBank Japan,4,19,General Research,Phenotype,0.6097
+china_kadoorie,China Kadoorie Biobank,0,112,Cardiovascular Research,Humans Risk Factors,0.7024
+china_kadoorie,China Kadoorie Biobank,0,112,Cardiovascular Research,Humans China,0.4922
+china_kadoorie,China Kadoorie Biobank,0,112,Cardiovascular Research,Stroke,0.4716
+china_kadoorie,China Kadoorie Biobank,0,112,Cardiovascular Research,Cardiovascular Diseases,0.4557
+china_kadoorie,China Kadoorie Biobank,0,112,Cardiovascular Research,Adult Humans,0.4299
+china_kadoorie,China Kadoorie Biobank,1,59,Epidemiology & Risk Factors,Prevalence,1.2464
+china_kadoorie,China Kadoorie Biobank,1,59,Epidemiology & Risk Factors,Middle Aged Prevalence,1.2075
+china_kadoorie,China Kadoorie Biobank,1,59,Epidemiology & Risk Factors,Cross Sectional Studies,1.0606
+china_kadoorie,China Kadoorie Biobank,1,59,Epidemiology & Risk Factors,Rural Population,0.9106
+china_kadoorie,China Kadoorie Biobank,1,59,Epidemiology & Risk Factors,Logistic Models,0.8341
+china_kadoorie,China Kadoorie Biobank,2,112,Epidemiology & Risk Factors,Proportional Hazards Models Prospective Studies,0.8754
+china_kadoorie,China Kadoorie Biobank,2,112,Epidemiology & Risk Factors,Proportional Hazards Models,0.866
+china_kadoorie,China Kadoorie Biobank,2,112,Epidemiology & Risk Factors,Incidence,0.6939
+china_kadoorie,China Kadoorie Biobank,2,112,Epidemiology & Risk Factors,Risk Assessment,0.6876
+china_kadoorie,China Kadoorie Biobank,2,112,Epidemiology & Risk Factors,Male Proportional Hazards Models,0.6257
+china_kadoorie,China Kadoorie Biobank,3,124,Epidemiology & Risk Factors,China Aged,0.7961
+china_kadoorie,China Kadoorie Biobank,3,124,Epidemiology & Risk Factors,Aged Male,0.6758
+china_kadoorie,China Kadoorie Biobank,3,124,Epidemiology & Risk Factors,Middle Aged Humans,0.6314
+china_kadoorie,China Kadoorie Biobank,3,124,Epidemiology & Risk Factors,Male Prospective Studies,0.5834
+china_kadoorie,China Kadoorie Biobank,3,124,Epidemiology & Risk Factors,Female Risk Factors,0.5422
+china_kadoorie,China Kadoorie Biobank,4,48,Metabolic & Diabetes,Body Mass Index,1.7162
+china_kadoorie,China Kadoorie Biobank,4,48,Metabolic & Diabetes,Waist Circumference,1.5305
+china_kadoorie,China Kadoorie Biobank,4,48,Metabolic & Diabetes,Obesity,1.5278
+china_kadoorie,China Kadoorie Biobank,4,48,Metabolic & Diabetes,Body Mass Index Obesity,1.368
+china_kadoorie,China Kadoorie Biobank,4,48,Metabolic & Diabetes,Adult Waist Circumference,1.2622
+taiwan_biobank,Taiwan Biobank,0,27,Metabolic & Diabetes,Body Mass Index,2.1444
+taiwan_biobank,Taiwan Biobank,0,27,Metabolic & Diabetes,Obesity,2.0783
+taiwan_biobank,Taiwan Biobank,0,27,Metabolic & Diabetes,Obesity Female,1.7517
+taiwan_biobank,Taiwan Biobank,0,27,Metabolic & Diabetes,Body Mass Index Humans,1.7077
+taiwan_biobank,Taiwan Biobank,0,27,Metabolic & Diabetes,Waist Hip Ratio,1.3695
+taiwan_biobank,Taiwan Biobank,1,72,Genomics & GWAS,Genotype,0.9809
+taiwan_biobank,Taiwan Biobank,1,72,Genomics & GWAS,Polymorphism Single Nucleotide Humans,0.7998
+taiwan_biobank,Taiwan Biobank,1,72,Genomics & GWAS,Genetic Predisposition To Disease,0.7359
+taiwan_biobank,Taiwan Biobank,1,72,Genomics & GWAS,Genotype Polymorphism Single Nucleotide,0.7005
+taiwan_biobank,Taiwan Biobank,1,72,Genomics & GWAS,Polymorphism Single Nucleotide,0.6934
+taiwan_biobank,Taiwan Biobank,2,59,Genomics & GWAS,Genome Wide Association Study Humans,1.4891
+taiwan_biobank,Taiwan Biobank,2,59,Genomics & GWAS,Polymorphism Single Nucleotide Genome Wide Association Study,1.4167
+taiwan_biobank,Taiwan Biobank,2,59,Genomics & GWAS,Genome Wide Association Study,1.4038
+taiwan_biobank,Taiwan Biobank,2,59,Genomics & GWAS,Polymorphism Single Nucleotide,0.8296
+taiwan_biobank,Taiwan Biobank,2,59,Genomics & GWAS,Genetic Predisposition To Disease,0.696
+taiwan_biobank,Taiwan Biobank,3,37,Epidemiology & Risk Factors,Follow Up Studies,0.9525
+taiwan_biobank,Taiwan Biobank,3,37,Epidemiology & Risk Factors,Longitudinal Studies,0.9412
+taiwan_biobank,Taiwan Biobank,3,37,Epidemiology & Risk Factors,Air Pollutants,0.862
+taiwan_biobank,Taiwan Biobank,3,37,Epidemiology & Risk Factors,Particulate Matter,0.8475
+taiwan_biobank,Taiwan Biobank,3,37,Epidemiology & Risk Factors,Air Pollutants Particulate Matter,0.8145
+taiwan_biobank,Taiwan Biobank,4,66,Epidemiology & Risk Factors,Humans Risk Factors,0.9196
+taiwan_biobank,Taiwan Biobank,4,66,Epidemiology & Risk Factors,Risk Factors Male,0.6945
+taiwan_biobank,Taiwan Biobank,4,66,Epidemiology & Risk Factors,Risk Factors,0.6351
+taiwan_biobank,Taiwan Biobank,4,66,Epidemiology & Risk Factors,Uric Acid,0.5123
+taiwan_biobank,Taiwan Biobank,4,66,Epidemiology & Risk Factors,Uric Acid Humans,0.5093
+taiwan_biobank,Taiwan Biobank,5,85,General Research,Humans Aged,0.8036
+taiwan_biobank,Taiwan Biobank,5,85,General Research,Aged Male,0.7636
+taiwan_biobank,Taiwan Biobank,5,85,General Research,Middle Aged Taiwan,0.6718
+taiwan_biobank,Taiwan Biobank,5,85,General Research,Aged,0.664
+taiwan_biobank,Taiwan Biobank,5,85,General Research,Taiwan Female,0.6183
+hunt,HUNT Study,0,121,General Research,Aged 80 And Over,1.3396
+hunt,HUNT Study,0,121,General Research,Aged 80 And Over Adult,1.1342
+hunt,HUNT Study,0,121,General Research,Norway Aged,1.0856
+hunt,HUNT Study,0,121,General Research,Male Aged 80 And Over,1.0654
+hunt,HUNT Study,0,121,General Research,Aged Male,0.8509
+hunt,HUNT Study,1,218,Epidemiology & Risk Factors,Norway Adult,0.4632
+hunt,HUNT Study,1,218,Epidemiology & Risk Factors,Incidence,0.4625
+hunt,HUNT Study,1,218,Epidemiology & Risk Factors,Humans Aged,0.3791
+hunt,HUNT Study,1,218,Epidemiology & Risk Factors,Prevalence,0.3621
+hunt,HUNT Study,1,218,Epidemiology & Risk Factors,Diabetes Mellitus Type 2,0.3507
+hunt,HUNT Study,2,70,Mental Health & Psychiatry,Depression,1.6022
+hunt,HUNT Study,2,70,Mental Health & Psychiatry,Depression Anxiety,1.4461
+hunt,HUNT Study,2,70,Mental Health & Psychiatry,Anxiety,1.3195
+hunt,HUNT Study,2,70,Mental Health & Psychiatry,Aged Prospective Studies,0.8417
+hunt,HUNT Study,2,70,Mental Health & Psychiatry,Prospective Studies Male,0.8043
+hunt,HUNT Study,3,102,Cardiovascular Research,Cardiovascular Diseases,1.3961
+hunt,HUNT Study,3,102,Cardiovascular Research,Cardiovascular Diseases Humans,0.9508
+hunt,HUNT Study,3,102,Cardiovascular Research,Proportional Hazards Models,0.8819
+hunt,HUNT Study,3,102,Cardiovascular Research,Risk Factors Middle Aged,0.8656
+hunt,HUNT Study,3,102,Cardiovascular Research,Risk Assessment,0.8174
+hunt,HUNT Study,4,100,Genomics & GWAS,Cohort Studies,1.487
+hunt,HUNT Study,4,100,Genomics & GWAS,Aged Cohort Studies,1.3198
+hunt,HUNT Study,4,100,Genomics & GWAS,Cohort Studies Male,1.2402
+hunt,HUNT Study,4,100,Genomics & GWAS,Polymorphism Single Nucleotide,0.6337
+hunt,HUNT Study,4,100,Genomics & GWAS,Middle Aged Male,0.5206
+hunt,HUNT Study,5,51,Cardiovascular Research,Hypertension,1.837
+hunt,HUNT Study,5,51,Cardiovascular Research,Humans Hypertension,1.6065
+hunt,HUNT Study,5,51,Cardiovascular Research,Blood Pressure,1.2451
+hunt,HUNT Study,5,51,Cardiovascular Research,Male Blood Pressure,1.129
+hunt,HUNT Study,5,51,Cardiovascular Research,Blood Pressure Norway,0.8379
+hunt,HUNT Study,6,46,General Research,Pregnancy,2.784
+hunt,HUNT Study,6,46,General Research,Humans Pregnancy,1.3171
+hunt,HUNT Study,6,46,General Research,Pre Eclampsia,1.3058
+hunt,HUNT Study,6,46,General Research,Infant Newborn,1.1193
+hunt,HUNT Study,6,46,General Research,Registries,1.1029
+hunt,HUNT Study,7,141,General Research,Adolescent,1.2593
+hunt,HUNT Study,7,141,General Research,Surveys And Questionnaires,0.7534
+hunt,HUNT Study,7,141,General Research,Young Adult,0.656
+hunt,HUNT Study,7,141,General Research,Socioeconomic Factors,0.5895
+hunt,HUNT Study,7,141,General Research,Health Status,0.5597
+hunt,HUNT Study,8,54,General Research,Headache,2.4981
+hunt,HUNT Study,8,54,General Research,Headache Humans,2.2204
+hunt,HUNT Study,8,54,General Research,Migraine Disorders,2.0117
+hunt,HUNT Study,8,54,General Research,Migraine Disorders Adult,1.616
+hunt,HUNT Study,8,54,General Research,Norway Migraine Disorders,1.1726
+hunt,HUNT Study,9,85,Metabolic & Diabetes,Body Mass Index,1.8814
+hunt,HUNT Study,9,85,Metabolic & Diabetes,Obesity,1.7722
+hunt,HUNT Study,9,85,Metabolic & Diabetes,Body Mass Index Humans,1.1809
+hunt,HUNT Study,9,85,Metabolic & Diabetes,Overweight,0.9311
+hunt,HUNT Study,9,85,Metabolic & Diabetes,Middle Aged Obesity,0.8481
+hunt,HUNT Study,10,34,Neurological Disorders,Cognitive Dysfunction,1.6688
+hunt,HUNT Study,10,34,Neurological Disorders,Dementia,1.6197
+hunt,HUNT Study,10,34,Neurological Disorders,Cognitive Dysfunction Aged,1.2527
+hunt,HUNT Study,10,34,Neurological Disorders,Cognition,1.2248
+hunt,HUNT Study,10,34,Neurological Disorders,Norway Female,0.9513
+decode,deCODE Genetics,0,148,General Research,Rna Transfer,2.3854
+decode,deCODE Genetics,0,148,General Research,Protein Biosynthesis,1.9138
+decode,deCODE Genetics,0,148,General Research,Codon,1.8947
+decode,deCODE Genetics,0,148,General Research,Ribosomes,1.4363
+decode,deCODE Genetics,0,148,General Research,Escherichia Coli,1.1174
+decode,deCODE Genetics,1,216,Neuroimaging,Humans Magnetic Resonance Imaging,2.0164
+decode,deCODE Genetics,1,216,Neuroimaging,Magnetic Resonance Imaging,1.6743
+decode,deCODE Genetics,1,216,Neuroimaging,Brain Mapping,1.3833
+decode,deCODE Genetics,1,216,Neuroimaging,Brain,1.2606
+decode,deCODE Genetics,1,216,Neuroimaging,Image Processing Computer Assisted,0.6385
+decode,deCODE Genetics,2,504,General Research,Young Adult,1.5961
+decode,deCODE Genetics,2,504,General Research,Adult,1.5468
+decode,deCODE Genetics,2,504,General Research,Female,1.3421
+decode,deCODE Genetics,2,504,General Research,Adult Female,1.2969
+decode,deCODE Genetics,2,504,General Research,Male,1.2182
+decode,deCODE Genetics,3,131,General Research,Child,2.9898
+decode,deCODE Genetics,3,131,General Research,Child Preschool,1.5818
+decode,deCODE Genetics,3,131,General Research,Reading,1.3676
+decode,deCODE Genetics,3,131,General Research,Adolescent,1.0219
+decode,deCODE Genetics,3,131,General Research,Female,0.981
+decode,deCODE Genetics,4,641,General Research,Animals,1.2717
+decode,deCODE Genetics,4,641,General Research,Humans Animals,0.9945
+decode,deCODE Genetics,4,641,General Research,Mice,0.8512
+decode,deCODE Genetics,4,641,General Research,Signal Transduction,0.4332
+decode,deCODE Genetics,4,641,General Research,Rats,0.3223
+decode,deCODE Genetics,5,295,General Research,Neurons,2.1181
+decode,deCODE Genetics,5,295,General Research,Action Potentials,1.4857
+decode,deCODE Genetics,5,295,General Research,Models Neurological,1.3534
+decode,deCODE Genetics,5,295,General Research,Animals,1.0734
+decode,deCODE Genetics,5,295,General Research,Male Animals,0.7382
+decode,deCODE Genetics,6,1454,Cancer & Oncology,Humans,0.2281
+decode,deCODE Genetics,6,1454,Cancer & Oncology,Algorithms,0.2045
+decode,deCODE Genetics,6,1454,Cancer & Oncology,Computational Biology,0.2038
+decode,deCODE Genetics,6,1454,Cancer & Oncology,Neoplasms,0.1981
+decode,deCODE Genetics,6,1454,Cancer & Oncology,Signal Transduction,0.1867
+decode,deCODE Genetics,7,197,General Research,Middle Aged,2.6598
+decode,deCODE Genetics,7,197,General Research,Aged,2.1047
+decode,deCODE Genetics,7,197,General Research,Middle Aged Male,1.476
+decode,deCODE Genetics,7,197,General Research,Female,1.2473
+decode,deCODE Genetics,7,197,General Research,Adult,1.1681
+decode,deCODE Genetics,8,225,General Research,Humans Brain Computer Interfaces,2.3965
+decode,deCODE Genetics,8,225,General Research,Brain Computer Interfaces,2.3054
+decode,deCODE Genetics,8,225,General Research,Electroencephalography,1.6932
+decode,deCODE Genetics,8,225,General Research,Algorithms Humans,1.0226
+decode,deCODE Genetics,8,225,General Research,Imagination,0.9335
+decode,deCODE Genetics,9,128,Genomics & GWAS,Genome Wide Association Study,2.9255
+decode,deCODE Genetics,9,128,Genomics & GWAS,Mendelian Randomization Analysis,2.6487
+decode,deCODE Genetics,9,128,Genomics & GWAS,Polymorphism Single Nucleotide,1.8969
+decode,deCODE Genetics,9,128,Genomics & GWAS,Genetic Predisposition To Disease,1.5341
+decode,deCODE Genetics,9,128,Genomics & GWAS,Polymorphism Single Nucleotide Genome Wide Association Study,1.5232
+decode,deCODE Genetics,10,252,Physical Activity,Movement,1.7754
+decode,deCODE Genetics,10,252,Physical Activity,Electromyography,1.4625
+decode,deCODE Genetics,10,252,Physical Activity,Motor Cortex,1.1652
+decode,deCODE Genetics,10,252,Physical Activity,Electromyography Humans,1.0367
+decode,deCODE Genetics,10,252,Physical Activity,Hand,1.0017
+swedish_twin,Swedish Twin Registry,0,33,Neurological Disorders,Dementia,1.1319
+swedish_twin,Swedish Twin Registry,0,33,Neurological Disorders,Longitudinal Studies,0.9464
+swedish_twin,Swedish Twin Registry,0,33,Neurological Disorders,Longitudinal Studies Female,0.7548
+swedish_twin,Swedish Twin Registry,0,33,Neurological Disorders,Aged 80 And Over Humans,0.7457
+swedish_twin,Swedish Twin Registry,0,33,Neurological Disorders,Female Aged,0.7232
+swedish_twin,Swedish Twin Registry,1,24,Epidemiology & Risk Factors,Sweden Humans,1.2002
+swedish_twin,Swedish Twin Registry,1,24,Epidemiology & Risk Factors,Models Genetic,1.1058
+swedish_twin,Swedish Twin Registry,1,24,Epidemiology & Risk Factors,Female Models Genetic,0.9865
+swedish_twin,Swedish Twin Registry,1,24,Epidemiology & Risk Factors,Prevalence Twins Dizygotic,0.9517
+swedish_twin,Swedish Twin Registry,1,24,Epidemiology & Risk Factors,Age Of Onset,0.9081
+swedish_twin,Swedish Twin Registry,2,30,Metabolic & Diabetes,Aging,0.9888
+swedish_twin,Swedish Twin Registry,2,30,Metabolic & Diabetes,Obesity Male,0.91
+swedish_twin,Swedish Twin Registry,2,30,Metabolic & Diabetes,Obesity,0.9027
+swedish_twin,Swedish Twin Registry,2,30,Metabolic & Diabetes,Aged 80 And Over Aging,0.8523
+swedish_twin,Swedish Twin Registry,2,30,Metabolic & Diabetes,Aged Middle Aged,0.8303
+swedish_twin,Swedish Twin Registry,3,29,Cardiovascular Research,Socioeconomic Factors,0.7955
+swedish_twin,Swedish Twin Registry,3,29,Cardiovascular Research,Pregnancy,0.7281
+swedish_twin,Swedish Twin Registry,3,29,Cardiovascular Research,Pregnancy Female,0.6878
+swedish_twin,Swedish Twin Registry,3,29,Cardiovascular Research,Coronary Disease,0.6563
+swedish_twin,Swedish Twin Registry,3,29,Cardiovascular Research,Cohort Studies,0.6517
+swedish_twin,Swedish Twin Registry,4,31,General Research,Sweden Adult,1.1884
+swedish_twin,Swedish Twin Registry,4,31,General Research,Adolescent,1.0171
+swedish_twin,Swedish Twin Registry,4,31,General Research,Adult Humans,0.9814
+swedish_twin,Swedish Twin Registry,4,31,General Research,Registries Middle Aged,0.9389
+swedish_twin,Swedish Twin Registry,4,31,General Research,Female Sweden,0.9116
+swedish_twin,Swedish Twin Registry,5,32,General Research,Sex Factors,1.0623
+swedish_twin,Swedish Twin Registry,5,32,General Research,Male Adult,0.9556
+swedish_twin,Swedish Twin Registry,5,32,General Research,Sex Factors Female,0.9236
+swedish_twin,Swedish Twin Registry,5,32,General Research,Fatigue Syndrome Chronic,0.799
+swedish_twin,Swedish Twin Registry,5,32,General Research,Humans Fatigue Syndrome Chronic,0.7137
+swedish_twin,Swedish Twin Registry,6,25,General Research,Humans Adult,0.9707
+swedish_twin,Swedish Twin Registry,6,25,General Research,Registries Sweden,0.9681
+swedish_twin,Swedish Twin Registry,6,25,General Research,Male Humans,0.9027
+swedish_twin,Swedish Twin Registry,6,25,General Research,Comorbidity,0.8494
+swedish_twin,Swedish Twin Registry,6,25,General Research,Middle Aged Registries,0.7978
+swedish_twin,Swedish Twin Registry,7,37,General Research,Registries Twins Dizygotic,1.3553
+swedish_twin,Swedish Twin Registry,7,37,General Research,Twins Dizygotic Middle Aged,1.3083
+swedish_twin,Swedish Twin Registry,7,37,General Research,Twins Dizygotic,1.2405
+swedish_twin,Swedish Twin Registry,7,37,General Research,Twins Monozygotic,1.2117
+swedish_twin,Swedish Twin Registry,7,37,General Research,Twins Monozygotic Diseases In Twins,1.0398
+swedish_twin,Swedish Twin Registry,8,29,Epidemiology & Risk Factors,Aged 80 And Over Humans,1.0076
+swedish_twin,Swedish Twin Registry,8,29,Epidemiology & Risk Factors,Humans Risk Factors,0.8348
+swedish_twin,Swedish Twin Registry,8,29,Epidemiology & Risk Factors,Female Aged,0.7681
+swedish_twin,Swedish Twin Registry,8,29,Epidemiology & Risk Factors,Aged 80 And Over,0.7271
+swedish_twin,Swedish Twin Registry,8,29,Epidemiology & Risk Factors,Male Aged 80 And Over,0.6563
+generation_scotland,Generation Scotland,0,18,Multi-omics & Biomarkers,Dna Methylation,1.1904
+generation_scotland,Generation Scotland,0,18,Multi-omics & Biomarkers,Cpg Islands,1.1111
+generation_scotland,Generation Scotland,0,18,Multi-omics & Biomarkers,Epigenesis Genetic,0.9554
+generation_scotland,Generation Scotland,0,18,Multi-omics & Biomarkers,Dna Methylation Epigenesis Genetic,0.9134
+generation_scotland,Generation Scotland,0,18,Multi-omics & Biomarkers,Female Dna Methylation,0.6902
+generation_scotland,Generation Scotland,1,22,Genomics & GWAS,United Kingdom,1.124
+generation_scotland,Generation Scotland,1,22,Genomics & GWAS,Male Depressive Disorder Major,0.9871
+generation_scotland,Generation Scotland,1,22,Genomics & GWAS,Female Genome Wide Association Study,0.8395
+generation_scotland,Generation Scotland,1,22,Genomics & GWAS,Polymorphism Single Nucleotide,0.6803
+generation_scotland,Generation Scotland,1,22,Genomics & GWAS,Depressive Disorder Major,0.6654
+generation_scotland,Generation Scotland,2,26,Genomics & GWAS,Middle Aged Male,0.6435
+generation_scotland,Generation Scotland,2,26,Genomics & GWAS,Female Middle Aged,0.6324
+generation_scotland,Generation Scotland,2,26,Genomics & GWAS,Genotype Humans,0.5193
+generation_scotland,Generation Scotland,2,26,Genomics & GWAS,Genotype,0.5053
+generation_scotland,Generation Scotland,2,26,Genomics & GWAS,Scotland,0.4435
+generation_scotland,Generation Scotland,3,24,General Research,Adolescent,1.1749
+generation_scotland,Generation Scotland,3,24,General Research,Male Young Adult,1.1664
+generation_scotland,Generation Scotland,3,24,General Research,Young Adult,1.1395
+generation_scotland,Generation Scotland,3,24,General Research,Female Male,1.0949
+generation_scotland,Generation Scotland,3,24,General Research,Aged 80 And Over,0.9511
+generation_scotland,Generation Scotland,4,9,Neuroimaging,Depressive Disorder Major,1.3012
+generation_scotland,Generation Scotland,4,9,Neuroimaging,Depression,1.1534
+generation_scotland,Generation Scotland,4,9,Neuroimaging,Magnetic Resonance Imaging,1.0354
+generation_scotland,Generation Scotland,4,9,Neuroimaging,Adverse Childhood Experiences,0.9344
+generation_scotland,Generation Scotland,4,9,Neuroimaging,Brain Humans,0.8443
+generation_scotland,Generation Scotland,5,9,Cardiovascular Research,Troponin I,2.2959
+generation_scotland,Generation Scotland,5,9,Cardiovascular Research,Troponin T,2.2959
+generation_scotland,Generation Scotland,5,9,Cardiovascular Research,Biomarkers,1.8352
+generation_scotland,Generation Scotland,5,9,Cardiovascular Research,Humans Troponin I,1.8269
+generation_scotland,Generation Scotland,5,9,Cardiovascular Research,Cardiovascular Diseases,1.3889
+generation_scotland,Generation Scotland,6,15,Genomics & GWAS,Cognition,1.2047
+generation_scotland,Generation Scotland,6,15,Genomics & GWAS,Genetic Predisposition To Disease Scotland,1.1274
+generation_scotland,Generation Scotland,6,15,Genomics & GWAS,Scotland Polymorphism Single Nucleotide,1.0354
+generation_scotland,Generation Scotland,6,15,Genomics & GWAS,Humans Cognition,0.8769
+generation_scotland,Generation Scotland,6,15,Genomics & GWAS,Neuropsychological Tests,0.8769
+generation_scotland,Generation Scotland,7,11,Multi-omics & Biomarkers,Dna Methylation Middle Aged,1.4947
+generation_scotland,Generation Scotland,7,11,Multi-omics & Biomarkers,Dna Methylation,1.3914
+generation_scotland,Generation Scotland,7,11,Multi-omics & Biomarkers,Genome Wide Association Study Dna Methylation,1.3418
+generation_scotland,Generation Scotland,7,11,Multi-omics & Biomarkers,Epigenesis Genetic,1.2508
+generation_scotland,Generation Scotland,7,11,Multi-omics & Biomarkers,Aged Cohort Studies,1.1958
+lifelines,LifeLines,0,186,Infectious Diseases,Covid 19,0.5316
+lifelines,LifeLines,0,186,Infectious Diseases,Pandemics,0.4049
+lifelines,LifeLines,0,186,Infectious Diseases,Cohort Studies,0.4039
+lifelines,LifeLines,0,186,Infectious Diseases,Humans Covid 19,0.3926
+lifelines,LifeLines,0,186,Infectious Diseases,Humans Cohort Studies,0.3708
+lifelines,LifeLines,1,85,General Research,Adolescent,1.6277
+lifelines,LifeLines,1,85,General Research,Young Adult,1.4984
+lifelines,LifeLines,1,85,General Research,Aged 80 And Over,1.1646
+lifelines,LifeLines,1,85,General Research,Adolescent Humans,1.1004
+lifelines,LifeLines,1,85,General Research,Young Adult Aged,0.9912
+lifelines,LifeLines,2,9,General Research,Bioreactors,4.213
+lifelines,LifeLines,2,9,General Research,Computer Simulation Models Biological,1.7705
+lifelines,LifeLines,2,9,General Research,Computer Simulation,1.5395
+lifelines,LifeLines,2,9,General Research,Models Biological,1.4881
+lifelines,LifeLines,2,9,General Research,Oxygen,1.1803
+lifelines,LifeLines,3,21,General Research,Animals,3.3191
+lifelines,LifeLines,3,21,General Research,Animals Humans,0.9569
+lifelines,LifeLines,3,21,General Research,Milk,0.7588
+lifelines,LifeLines,3,21,General Research,Mice,0.7588
+lifelines,LifeLines,3,21,General Research,Dairy Products,0.6858
+lifelines,LifeLines,4,258,General Research,Humans Middle Aged,0.5778
+lifelines,LifeLines,4,258,General Research,Middle Aged,0.5222
+lifelines,LifeLines,4,258,General Research,Adult Male,0.5036
+lifelines,LifeLines,4,258,General Research,Aged,0.4864
+lifelines,LifeLines,4,258,General Research,Netherlands,0.4691
+lifelines,LifeLines,5,8,General Research,Suicide Prevention,3.9062
+lifelines,LifeLines,5,8,General Research,Hotlines Humans,3.9062
+lifelines,LifeLines,5,8,General Research,Hotlines,3.9062
+lifelines,LifeLines,5,8,General Research,Crisis Intervention,3.4638
+lifelines,LifeLines,5,8,General Research,Suicidal Ideation,2.8865
+lifelines,LifeLines,6,41,Genomics & GWAS,Genome Wide Association Study,2.1047
+lifelines,LifeLines,6,41,Genomics & GWAS,Genetic Predisposition To Disease,1.7614
+lifelines,LifeLines,6,41,Genomics & GWAS,Polymorphism Single Nucleotide,1.7471
+lifelines,LifeLines,6,41,Genomics & GWAS,Genotype,0.9786
+lifelines,LifeLines,6,41,Genomics & GWAS,Middle Aged Polymorphism Single Nucleotide,0.8807
+constances,CONSTANCES,0,9,Epidemiology & Risk Factors,Risk Factors Humans,1.9254
+constances,CONSTANCES,0,9,Epidemiology & Risk Factors,Non Alcoholic Fatty Liver Disease,1.5403
+constances,CONSTANCES,0,9,Epidemiology & Risk Factors,Fibrosis,1.3863
+constances,CONSTANCES,0,9,Epidemiology & Risk Factors,Risk Factors,1.1442
+constances,CONSTANCES,0,9,Epidemiology & Risk Factors,Liver Cirrhosis Non Alcoholic Fatty Liver Disease,1.0143
+constances,CONSTANCES,1,8,Nutrition & Diet,Substance Related Disorders,2.28
+constances,CONSTANCES,1,8,Nutrition & Diet,Alcohol Drinking,2.0697
+constances,CONSTANCES,1,8,Nutrition & Diet,Cannabis,1.824
+constances,CONSTANCES,1,8,Nutrition & Diet,Cannabis Humans,1.5596
+constances,CONSTANCES,1,8,Nutrition & Diet,Tobacco Use,1.4517
+constances,CONSTANCES,2,56,Epidemiology & Risk Factors,Risk Factors Female,0.8124
+constances,CONSTANCES,2,56,Epidemiology & Risk Factors,Female France,0.7847
+constances,CONSTANCES,2,56,Epidemiology & Risk Factors,Young Adult,0.7102
+constances,CONSTANCES,2,56,Epidemiology & Risk Factors,France Humans,0.6768
+constances,CONSTANCES,2,56,Epidemiology & Risk Factors,Male Young Adult,0.6577
+constances,CONSTANCES,3,17,Environmental Health,Occupational Exposure,1.9994
+constances,CONSTANCES,3,17,Environmental Health,Male Occupational Exposure,1.9494
+constances,CONSTANCES,3,17,Environmental Health,Occupational Exposure Adult,1.794
+constances,CONSTANCES,3,17,Environmental Health,Occupational Diseases,1.4255
+constances,CONSTANCES,3,17,Environmental Health,Occupational Diseases Middle Aged,1.073
+constances,CONSTANCES,4,22,Metabolic & Diabetes,Odds Ratio,1.0745
+constances,CONSTANCES,4,22,Metabolic & Diabetes,Odds Ratio Female,1.0745
+constances,CONSTANCES,4,22,Metabolic & Diabetes,Middle Aged Adolescent,1.0712
+constances,CONSTANCES,4,22,Metabolic & Diabetes,Obesity,1.0082
+constances,CONSTANCES,4,22,Metabolic & Diabetes,Risk Factors France,0.9452
+constances,CONSTANCES,5,24,Mental Health & Psychiatry,Covid 19,1.3863
+constances,CONSTANCES,5,24,Mental Health & Psychiatry,Sars Cov 2,1.1476
+constances,CONSTANCES,5,24,Mental Health & Psychiatry,Middle Aged Covid 19,0.9659
+constances,CONSTANCES,5,24,Mental Health & Psychiatry,Depression,0.9164
+constances,CONSTANCES,5,24,Mental Health & Psychiatry,Covid 19 Sars Cov 2,0.8664
+constances,CONSTANCES,6,35,Respiratory Diseases,Female Humans,0.8318
+constances,CONSTANCES,6,35,Respiratory Diseases,Asthma,0.5237
+constances,CONSTANCES,6,35,Respiratory Diseases,Cross Sectional Studies,0.5057
+constances,CONSTANCES,6,35,Respiratory Diseases,Asthma Female,0.454
+constances,CONSTANCES,6,35,Respiratory Diseases,Electronic Nicotine Delivery Systems,0.4424
+constances,CONSTANCES,7,11,Neurological Disorders,Cognition,1.7335
+constances,CONSTANCES,7,11,Neurological Disorders,Cognition Aged,1.4077
+constances,CONSTANCES,7,11,Neurological Disorders,Educational Status,1.391
+constances,CONSTANCES,7,11,Neurological Disorders,Neuropsychological Tests,1.2603
+constances,CONSTANCES,7,11,Neurological Disorders,Memory,0.8299
+constances,CONSTANCES,8,10,Cancer & Oncology,Retrospective Studies,2.0684
+constances,CONSTANCES,8,10,Cancer & Oncology,Unemployment,1.8329
+constances,CONSTANCES,8,10,Cancer & Oncology,Employment,1.5301
+constances,CONSTANCES,8,10,Cancer & Oncology,Neoplasms,1.2477
+constances,CONSTANCES,8,10,Cancer & Oncology,Male Adult,0.9451
+nako,German National Cohort (NAKO),0,10,Physical Activity,Exercise,2.1981
+nako,German National Cohort (NAKO),0,10,Physical Activity,Accelerometry,1.9593
+nako,German National Cohort (NAKO),0,10,Physical Activity,Exercise Aged,1.3435
+nako,German National Cohort (NAKO),0,10,Physical Activity,Germany Accelerometry,1.0939
+nako,German National Cohort (NAKO),0,10,Physical Activity,Exercise Adult,1.0939
+nako,German National Cohort (NAKO),1,16,Epidemiology & Risk Factors,Self Report,1.2739
+nako,German National Cohort (NAKO),1,16,Epidemiology & Risk Factors,Humans Self Report,1.2739
+nako,German National Cohort (NAKO),1,16,Epidemiology & Risk Factors,Surveys And Questionnaires Cohort Studies,0.9554
+nako,German National Cohort (NAKO),1,16,Epidemiology & Risk Factors,Surveys And Questionnaires,0.9303
+nako,German National Cohort (NAKO),1,16,Epidemiology & Risk Factors,Prospective Studies,0.9159
+nako,German National Cohort (NAKO),2,42,General Research,Aged Adult,0.6673
+nako,German National Cohort (NAKO),2,42,General Research,Adult,0.5704
+nako,German National Cohort (NAKO),2,42,General Research,Female Germany,0.5672
+nako,German National Cohort (NAKO),2,42,General Research,Young Adult,0.552
+nako,German National Cohort (NAKO),2,42,General Research,Aged,0.5444
+nako,German National Cohort (NAKO),3,13,Mental Health & Psychiatry,Pandemics,1.5072
+nako,German National Cohort (NAKO),3,13,Mental Health & Psychiatry,Covid 19,1.3718
+nako,German National Cohort (NAKO),3,13,Mental Health & Psychiatry,Depression,1.2638
+nako,German National Cohort (NAKO),3,13,Mental Health & Psychiatry,Mental Health,1.1358
+nako,German National Cohort (NAKO),3,13,Mental Health & Psychiatry,Anxiety,1.0765
+nako,German National Cohort (NAKO),4,13,Neuroimaging,Magnetic Resonance Imaging,1.7004
+nako,German National Cohort (NAKO),4,13,Neuroimaging,Whole Body Imaging,1.6403
+nako,German National Cohort (NAKO),4,13,Neuroimaging,Female Magnetic Resonance Imaging,1.5678
+nako,German National Cohort (NAKO),4,13,Neuroimaging,Magnetic Resonance Imaging Whole Body Imaging,1.206
+nako,German National Cohort (NAKO),4,13,Neuroimaging,Retrospective Studies,1.206
+nako,German National Cohort (NAKO),5,4,General Research,Language,2.7347
+nako,German National Cohort (NAKO),5,4,General Research,Cognition,2.3516
+nako,German National Cohort (NAKO),5,4,General Research,Humans Language,2.0259
+nako,German National Cohort (NAKO),5,4,General Research,Emotions,1.0129
+nako,German National Cohort (NAKO),5,4,General Research,Phenotype,1.0129
+nako,German National Cohort (NAKO),6,3,Metabolic & Diabetes,Body Mass Index,3.6463
+nako,German National Cohort (NAKO),6,3,Metabolic & Diabetes,Waist Circumference,2.7012
+nako,German National Cohort (NAKO),6,3,Metabolic & Diabetes,Anthropometry,2.7012
+nako,German National Cohort (NAKO),6,3,Metabolic & Diabetes,Health Status Female,1.3506
+nako,German National Cohort (NAKO),6,3,Metabolic & Diabetes,Male Obesity,1.3506
+nako,German National Cohort (NAKO),7,6,Neuroimaging,Biological Specimen Banks,2.461
+nako,German National Cohort (NAKO),7,6,Neuroimaging,Humans Biological Specimen Banks,1.8232
+nako,German National Cohort (NAKO),7,6,Neuroimaging,Magnetic Resonance Imaging United Kingdom,1.8232
+nako,German National Cohort (NAKO),7,6,Neuroimaging,United Kingdom,1.8232
+nako,German National Cohort (NAKO),7,6,Neuroimaging,Abdomen,1.3506
+nako,German National Cohort (NAKO),8,8,General Research,Cohort Studies Germany,1.2595
+nako,German National Cohort (NAKO),8,8,General Research,Phosphatidylserines,1.0129
+nako,German National Cohort (NAKO),8,8,General Research,Humans Calcium,1.0129
+nako,German National Cohort (NAKO),8,8,General Research,Eryptosis,1.0129
+nako,German National Cohort (NAKO),8,8,General Research,Calcium,1.0129
+biovu,BioVU,0,46,Genomics & GWAS,Aged,0.7467
+biovu,BioVU,0,46,Genomics & GWAS,Middle Aged,0.7
+biovu,BioVU,0,46,Genomics & GWAS,Adult Middle Aged,0.6742
+biovu,BioVU,0,46,Genomics & GWAS,Aged 80 And Over,0.6572
+biovu,BioVU,0,46,Genomics & GWAS,Genotype,0.6436
+biovu,BioVU,1,44,Genomics & GWAS,Genome Wide Association Study Male,0.7013
+biovu,BioVU,1,44,Genomics & GWAS,Genome Wide Association Study,0.5608
+biovu,BioVU,1,44,Genomics & GWAS,Polymorphism Single Nucleotide,0.5357
+biovu,BioVU,1,44,Genomics & GWAS,Polymorphism Single Nucleotide Adult,0.4684
+biovu,BioVU,1,44,Genomics & GWAS,Adult,0.4575
+biovu,BioVU,2,43,General Research,Genome Wide Association Study Genetic Predisposition To Disease,0.7388
+biovu,BioVU,2,43,General Research,Genetic Predisposition To Disease,0.5514
+biovu,BioVU,2,43,General Research,Humans Genome Wide Association Study,0.4384
+biovu,BioVU,2,43,General Research,Phenotype,0.4156
+biovu,BioVU,2,43,General Research,Genome Wide Association Study,0.4073
+geisinger_mycode,Geisinger MyCode,0,35,General Research,Aged,0.6668
+geisinger_mycode,Geisinger MyCode,0,35,General Research,Male Middle Aged,0.6278
+geisinger_mycode,Geisinger MyCode,0,35,General Research,Adult Humans,0.6062
+geisinger_mycode,Geisinger MyCode,0,35,General Research,Middle Aged Aged,0.5889
+geisinger_mycode,Geisinger MyCode,0,35,General Research,Adult,0.5744
+geisinger_mycode,Geisinger MyCode,1,20,Genomics & GWAS,Genome Wide Association Study,1.3197
+geisinger_mycode,Geisinger MyCode,1,20,Genomics & GWAS,Polymorphism Single Nucleotide,1.0751
+geisinger_mycode,Geisinger MyCode,1,20,Genomics & GWAS,Female Genome Wide Association Study,1.0271
+geisinger_mycode,Geisinger MyCode,1,20,Genomics & GWAS,Case Control Studies,0.7835
+geisinger_mycode,Geisinger MyCode,1,20,Genomics & GWAS,Polymorphism Single Nucleotide Adult,0.5941
+geisinger_mycode,Geisinger MyCode,2,23,General Research,Genetic Testing,0.6624
+geisinger_mycode,Geisinger MyCode,2,23,General Research,Hyperlipoproteinemia Type Ii,0.5576
+geisinger_mycode,Geisinger MyCode,2,23,General Research,Delivery Of Health Care,0.5166
+geisinger_mycode,Geisinger MyCode,2,23,General Research,Genomics,0.4674
+geisinger_mycode,Geisinger MyCode,2,23,General Research,Metagenomics,0.425
+mgb_biobank,Mass General Brigham Biobank,0,19,Cardiovascular Research,Middle Aged Aged,0.943
+mgb_biobank,Mass General Brigham Biobank,0,19,Cardiovascular Research,Risk Factors,0.8351
+mgb_biobank,Mass General Brigham Biobank,0,19,Cardiovascular Research,Cardiovascular Diseases,0.7847
+mgb_biobank,Mass General Brigham Biobank,0,19,Cardiovascular Research,Aged,0.7743
+mgb_biobank,Mass General Brigham Biobank,0,19,Cardiovascular Research,Humans Middle Aged,0.7179
+mgb_biobank,Mass General Brigham Biobank,1,18,Genomics & GWAS,Genome Wide Association Study,1.1637
+mgb_biobank,Mass General Brigham Biobank,1,18,Genomics & GWAS,Polymorphism Single Nucleotide,1.1411
+mgb_biobank,Mass General Brigham Biobank,1,18,Genomics & GWAS,Genome Wide Association Study Polymorphism Single Nucleotide,0.9064
+mgb_biobank,Mass General Brigham Biobank,1,18,Genomics & GWAS,Genetic Predisposition To Disease,0.8356
+mgb_biobank,Mass General Brigham Biobank,1,18,Genomics & GWAS,Polymorphism Single Nucleotide Genome Wide Association Study,0.7409
+mgb_biobank,Mass General Brigham Biobank,2,35,Musculoskeletal,Biological Specimen Banks,0.4753
+mgb_biobank,Mass General Brigham Biobank,2,35,Musculoskeletal,Electronic Health Records,0.4662
+mgb_biobank,Mass General Brigham Biobank,2,35,Musculoskeletal,Case Control Studies,0.4394
+mgb_biobank,Mass General Brigham Biobank,2,35,Musculoskeletal,Arthritis Rheumatoid,0.3767
+mgb_biobank,Mass General Brigham Biobank,2,35,Musculoskeletal,Clonal Hematopoiesis,0.3303
+qatar_biobank,Qatar Biobank,0,8,Genomics & GWAS,Genome Wide Association Study,2.4338
+qatar_biobank,Qatar Biobank,0,8,Genomics & GWAS,Humans Genome Wide Association Study,2.2017
+qatar_biobank,Qatar Biobank,0,8,Genomics & GWAS,Polymorphism Single Nucleotide,2.0861
+qatar_biobank,Qatar Biobank,0,8,Genomics & GWAS,Multifactorial Inheritance,1.6705
+qatar_biobank,Qatar Biobank,0,8,Genomics & GWAS,Genetic Predisposition To Disease Male,1.6705
+qatar_biobank,Qatar Biobank,1,16,Multi-omics & Biomarkers,Insulin Resistance,1.3515
+qatar_biobank,Qatar Biobank,1,16,Multi-omics & Biomarkers,Insulin Resistance Humans,1.3515
+qatar_biobank,Qatar Biobank,1,16,Multi-omics & Biomarkers,Metabolomics,1.2651
+qatar_biobank,Qatar Biobank,1,16,Multi-omics & Biomarkers,Adult Metabolomics,1.1009
+qatar_biobank,Qatar Biobank,1,16,Multi-omics & Biomarkers,Biomarkers,0.9949
+qatar_biobank,Qatar Biobank,2,9,Cardiovascular Research,Pilot Projects,1.2096
+qatar_biobank,Qatar Biobank,2,9,Cardiovascular Research,Blood Pressure,0.9785
+qatar_biobank,Qatar Biobank,2,9,Cardiovascular Research,Rna Ribosomal 16S,0.8965
+qatar_biobank,Qatar Biobank,2,9,Cardiovascular Research,Humans Rna Ribosomal 16S,0.8965
+qatar_biobank,Qatar Biobank,2,9,Cardiovascular Research,Life Style,0.8965
+qatar_biobank,Qatar Biobank,3,8,General Research,Waist Circumference,1.7384
+qatar_biobank,Qatar Biobank,3,8,General Research,Middle Aged Waist Hip Ratio,1.6705
+qatar_biobank,Qatar Biobank,3,8,General Research,Waist Hip Ratio Humans,1.6705
+qatar_biobank,Qatar Biobank,3,8,General Research,Waist Hip Ratio,1.6705
+qatar_biobank,Qatar Biobank,3,8,General Research,Waist Circumference Adult,1.6705
+qatar_biobank,Qatar Biobank,4,17,Metabolic & Diabetes,Cohort Studies,1.0028
+qatar_biobank,Qatar Biobank,4,17,Metabolic & Diabetes,Female Cohort Studies,0.893
+qatar_biobank,Qatar Biobank,4,17,Metabolic & Diabetes,Middle Aged Humans,0.8334
+qatar_biobank,Qatar Biobank,4,17,Metabolic & Diabetes,Diabetes Mellitus Type 2,0.8074
+qatar_biobank,Qatar Biobank,4,17,Metabolic & Diabetes,Humans Obesity,0.6907
+qatar_biobank,Qatar Biobank,5,8,General Research,Inflammation,1.559
+qatar_biobank,Qatar Biobank,5,8,General Research,Uric Acid Female,1.3608
+qatar_biobank,Qatar Biobank,5,8,General Research,Uric Acid,1.3608
+qatar_biobank,Qatar Biobank,5,8,General Research,Prediabetic State,1.1009
+qatar_biobank,Qatar Biobank,5,8,General Research,Triglycerides,1.1009
+qatar_biobank,Qatar Biobank,6,19,Metabolic & Diabetes,Humans Diabetes Mellitus,0.9808
+qatar_biobank,Qatar Biobank,6,19,Metabolic & Diabetes,Young Adult Adolescent,0.9322
+qatar_biobank,Qatar Biobank,6,19,Metabolic & Diabetes,Cross Sectional Studies Adult,0.8972
+qatar_biobank,Qatar Biobank,6,19,Metabolic & Diabetes,Diabetes Mellitus,0.8793
+qatar_biobank,Qatar Biobank,6,19,Metabolic & Diabetes,Adolescent,0.8793
+qatar_biobank,Qatar Biobank,7,4,General Research,Deep Learning,2.9356
+qatar_biobank,Qatar Biobank,7,4,General Research,Fundus Oculi,2.7216
+qatar_biobank,Qatar Biobank,7,4,General Research,Optic Disk,2.0171
+qatar_biobank,Qatar Biobank,7,4,General Research,Retina,1.8144
+qatar_biobank,Qatar Biobank,7,4,General Research,Algorithms Humans,1.0086
+qatar_biobank,Qatar Biobank,8,7,General Research,Proprotein Convertase 9,1.1526
+qatar_biobank,Qatar Biobank,8,7,General Research,Genetic Variation,1.1526
+qatar_biobank,Qatar Biobank,8,7,General Research,Mutation,1.0368
+qatar_biobank,Qatar Biobank,8,7,General Research,Aged Qatar,0.7641
+qatar_biobank,Qatar Biobank,8,7,General Research,Humans Male,0.7212
+qatar_biobank,Qatar Biobank,9,6,Musculoskeletal,Bone Density,2.3179
+qatar_biobank,Qatar Biobank,9,6,Musculoskeletal,Absorptiometry Photon,1.7653
+qatar_biobank,Qatar Biobank,9,6,Musculoskeletal,Absorptiometry Photon Aged,1.6705
+qatar_biobank,Qatar Biobank,9,6,Musculoskeletal,Male Absorptiometry Photon,1.559
+qatar_biobank,Qatar Biobank,9,6,Musculoskeletal,Machine Learning,1.4678
+qatar_biobank,Qatar Biobank,10,3,General Research,Zebrafish,2.6895
+qatar_biobank,Qatar Biobank,10,3,General Research,Animals,2.6895
+qatar_biobank,Qatar Biobank,10,3,General Research,Humans Genetic Predisposition To Disease,2.6895
+qatar_biobank,Qatar Biobank,10,3,General Research,Genetic Predisposition To Disease,1.9571
+qatar_biobank,Qatar Biobank,10,3,General Research,Micrornas,1.3447
+qatar_biobank,Qatar Biobank,11,8,General Research,Evidence Based Practice,1.3608
+qatar_biobank,Qatar Biobank,11,8,General Research,Qatar Evidence Based Practice,1.3608
+qatar_biobank,Qatar Biobank,11,8,General Research,Humans Qatar,1.3608
+qatar_biobank,Qatar Biobank,11,8,General Research,Delivery Of Health Care,1.0086
+qatar_biobank,Qatar Biobank,11,8,General Research,Biological Specimen Banks Delivery Of Health Care,1.0086
+h3africa,H3Africa,0,48,General Research,Biological Specimen Banks,0.5965
+h3africa,H3Africa,0,48,General Research,Africa Genomics,0.5646
+h3africa,H3Africa,0,48,General Research,Genetic Research,0.5614
+h3africa,H3Africa,0,48,General Research,Africa,0.5434
+h3africa,H3Africa,0,48,General Research,Informed Consent,0.5024
+h3africa,H3Africa,1,34,General Research,Male,0.9451
+h3africa,H3Africa,1,34,General Research,Female,0.9451
+h3africa,H3Africa,1,34,General Research,Adult,0.8707
+h3africa,H3Africa,1,34,General Research,Middle Aged,0.8235
+h3africa,H3Africa,1,34,General Research,Male Female,0.797
+h3africa,H3Africa,2,15,General Research,Computational Biology,1.7415
+h3africa,H3Africa,2,15,General Research,Africa Computational Biology,1.5148
+h3africa,H3Africa,2,15,General Research,Computational Biology Genomics,0.9277
+h3africa,H3Africa,2,15,General Research,User Computer Interface,0.8502
+h3africa,H3Africa,2,15,General Research,Genomics Humans,0.7421
+awigen,AWI-Gen,0,8,Genomics & GWAS,Polymorphism Single Nucleotide,1.7707
+awigen,AWI-Gen,0,8,Genomics & GWAS,Genome Wide Association Study,1.3541
+awigen,AWI-Gen,0,8,Genomics & GWAS,Genetic Predisposition To Disease,1.2319
+awigen,AWI-Gen,0,8,Genomics & GWAS,Humans Black People,1.1901
+awigen,AWI-Gen,0,8,Genomics & GWAS,Black People,1.0892
+awigen,AWI-Gen,1,24,Epidemiology & Risk Factors,Prevalence,0.678
+awigen,AWI-Gen,1,24,Epidemiology & Risk Factors,Africa South Of The Sahara,0.6656
+awigen,AWI-Gen,1,24,Epidemiology & Risk Factors,Prevalence Middle Aged,0.6448
+awigen,AWI-Gen,1,24,Epidemiology & Risk Factors,Rural Population,0.551
+awigen,AWI-Gen,1,24,Epidemiology & Risk Factors,Humans Male,0.5446
+awigen,AWI-Gen,2,15,Cardiovascular Research,Carotid Intima Media Thickness,0.8234
+awigen,AWI-Gen,2,15,Cardiovascular Research,Kenya,0.7714
+awigen,AWI-Gen,2,15,Cardiovascular Research,Cardiovascular Diseases,0.6777
+awigen,AWI-Gen,2,15,Cardiovascular Research,Atherosclerosis,0.657
+awigen,AWI-Gen,2,15,Cardiovascular Research,South Africa,0.6371
+mexico_city,Mexico City Prospective Study,0,7,Cancer & Oncology,Exercise Adult,0.9255
+mexico_city,Mexico City Prospective Study,0,7,Cancer & Oncology,Neoplasms,0.7328
+mexico_city,Mexico City Prospective Study,0,7,Cancer & Oncology,Follow Up Studies Female,0.7328
+mexico_city,Mexico City Prospective Study,0,7,Cancer & Oncology,Mortality Premature,0.7328
+mexico_city,Mexico City Prospective Study,0,7,Cancer & Oncology,Adult Follow Up Studies,0.7328
+mexico_city,Mexico City Prospective Study,1,13,Metabolic & Diabetes,Proportional Hazards Models Middle Aged,0.6341
+mexico_city,Mexico City Prospective Study,1,13,Metabolic & Diabetes,Risk Factors Humans,0.6341
+mexico_city,Mexico City Prospective Study,1,13,Metabolic & Diabetes,Diabetes Mellitus,0.5759
+mexico_city,Mexico City Prospective Study,1,13,Metabolic & Diabetes,Female Proportional Hazards Models,0.564
+mexico_city,Mexico City Prospective Study,1,13,Metabolic & Diabetes,Proportional Hazards Models,0.564
+mexico_city,Mexico City Prospective Study,2,6,Metabolic & Diabetes,Obesity,1.2219
+mexico_city,Mexico City Prospective Study,2,6,Metabolic & Diabetes,Obesity Humans,1.2219
+mexico_city,Mexico City Prospective Study,2,6,Metabolic & Diabetes,Waist Circumference Mexico,0.855
+mexico_city,Mexico City Prospective Study,2,6,Metabolic & Diabetes,Prospective Studies Obesity Abdominal,0.855
+mexico_city,Mexico City Prospective Study,2,6,Metabolic & Diabetes,Adiposity Adult,0.855
+emerge,eMERGE Network,0,6563,General Research,Models Biological,0.3656
+emerge,eMERGE Network,0,6563,General Research,Computer Simulation,0.3597
+emerge,eMERGE Network,0,6563,General Research,Models Theoretical,0.2934
+emerge,eMERGE Network,0,6563,General Research,Algorithms,0.2814
+emerge,eMERGE Network,0,6563,General Research,Ecosystem,0.2286
+emerge,eMERGE Network,1,2109,General Research,Mice,2.6195
+emerge,eMERGE Network,1,2109,General Research,Animals,1.2315
+emerge,eMERGE Network,1,2109,General Research,Mice Inbred C57Bl,1.1221
+emerge,eMERGE Network,1,2109,General Research,Mice Inbred C57Bl Animals,0.6699
+emerge,eMERGE Network,1,2109,General Research,Disease Models Animal,0.6046
+emerge,eMERGE Network,2,843,Cancer & Oncology,Neoplasms,3.5849
+emerge,eMERGE Network,2,843,Cancer & Oncology,Antineoplastic Agents,0.7926
+emerge,eMERGE Network,2,843,Cancer & Oncology,Neoplasms Animals,0.7382
+emerge,eMERGE Network,2,843,Cancer & Oncology,Tumor Microenvironment,0.6747
+emerge,eMERGE Network,2,843,Cancer & Oncology,Neoplasms Humans,0.534
+emerge,eMERGE Network,3,6146,General Research,Animals,1.2313
+emerge,eMERGE Network,3,6146,General Research,Rats,0.263
+emerge,eMERGE Network,3,6146,General Research,Neurons,0.2301
+emerge,eMERGE Network,3,6146,General Research,Signal Transduction,0.2289
+emerge,eMERGE Network,3,6146,General Research,Models Biological,0.2006
+emerge,eMERGE Network,4,4424,General Research,Adult,1.2465
+emerge,eMERGE Network,4,4424,General Research,Female,1.181
+emerge,eMERGE Network,4,4424,General Research,Male,1.0909
+emerge,eMERGE Network,4,4424,General Research,Young Adult,1.0134
+emerge,eMERGE Network,4,4424,General Research,Female Humans,0.8477
+emerge,eMERGE Network,5,1936,General Research,Child,2.5655
+emerge,eMERGE Network,5,1936,General Research,Child Humans,1.886
+emerge,eMERGE Network,5,1936,General Research,Child Preschool,1.4286
+emerge,eMERGE Network,5,1936,General Research,Adolescent,1.2082
+emerge,eMERGE Network,5,1936,General Research,Female Child Preschool,1.024
+emerge,eMERGE Network,6,2009,General Research,Aged,2.6643
+emerge,eMERGE Network,6,2009,General Research,Middle Aged Aged,2.2665
+emerge,eMERGE Network,6,2009,General Research,Middle Aged,2.0362
+emerge,eMERGE Network,6,2009,General Research,Aged 80 And Over,1.3673
+emerge,eMERGE Network,6,2009,General Research,Male,1.1728
+emerge,eMERGE Network,7,788,General Research,Male Animals,3.6605
+emerge,eMERGE Network,7,788,General Research,Male,1.3707
+emerge,eMERGE Network,7,788,General Research,Animals,1.2315
+emerge,eMERGE Network,7,788,General Research,Female,0.8362
+emerge,eMERGE Network,7,788,General Research,Rats,0.7668
+emerge,eMERGE Network,8,1153,Infectious Diseases,Covid 19,3.2394
+emerge,eMERGE Network,8,1153,Infectious Diseases,Sars Cov 2,2.7469
+emerge,eMERGE Network,8,1153,Infectious Diseases,Pandemics,1.8418
+emerge,eMERGE Network,8,1153,Infectious Diseases,Covid 19 Pandemics,1.2456
+emerge,eMERGE Network,8,1153,Infectious Diseases,Pandemics Sars Cov 2,1.0776
+emerge,eMERGE Network,9,8384,General Research,Humans,0.3215
+emerge,eMERGE Network,9,8384,General Research,United States,0.1729
+emerge,eMERGE Network,9,8384,General Research,Brain,0.1491
+emerge,eMERGE Network,9,8384,General Research,Treatment Outcome,0.138
+emerge,eMERGE Network,9,8384,General Research,Delivery Of Health Care,0.1312
+topmed,TOPMed,0,18,Genomics & GWAS,Haplotypes,1.5145
+topmed,TOPMed,0,18,Genomics & GWAS,Genome Human,1.3936
+topmed,TOPMed,0,18,Genomics & GWAS,Humans Genome Human,1.2425
+topmed,TOPMed,0,18,Genomics & GWAS,Polymorphism Single Nucleotide Haplotypes,1.1107
+topmed,TOPMed,0,18,Genomics & GWAS,Genotype,1.0735
+topmed,TOPMed,1,7,Genomics & GWAS,Quantitative Trait Loci,1.7749
+topmed,TOPMed,1,7,Genomics & GWAS,Alternative Splicing,1.7252
+topmed,TOPMed,1,7,Genomics & GWAS,Polymorphism Single Nucleotide Quantitative Trait Loci,1.6724
+topmed,TOPMed,1,7,Genomics & GWAS,Humans Black Or African American,1.2659
+topmed,TOPMed,1,7,Genomics & GWAS,Quantitative Trait Loci Proteins,1.2659
+topmed,TOPMed,2,23,Genomics & GWAS,Genome Wide Association Study Whole Genome Sequencing,1.7847
+topmed,TOPMed,2,23,Genomics & GWAS,Whole Genome Sequencing,1.2953
+topmed,TOPMed,2,23,Genomics & GWAS,Gene Frequency,0.6626
+topmed,TOPMed,2,23,Genomics & GWAS,Genetic Variation,0.5827
+topmed,TOPMed,2,23,Genomics & GWAS,Humans Polymorphism Single Nucleotide,0.5686
+topmed,TOPMed,3,13,Multi-omics & Biomarkers,Mutation,1.5748
+topmed,TOPMed,3,13,Multi-omics & Biomarkers,Clonal Hematopoiesis,1.4668
+topmed,TOPMed,3,13,Multi-omics & Biomarkers,Clonal Hematopoiesis Female,1.1501
+topmed,TOPMed,3,13,Multi-omics & Biomarkers,Dna Methylation,0.9289
+topmed,TOPMed,3,13,Multi-omics & Biomarkers,Epigenesis Genetic,0.9289
+topmed,TOPMed,4,22,General Research,Adult,1.3059
+topmed,TOPMed,4,22,General Research,Adult Female,1.1499
+topmed,TOPMed,4,22,General Research,Middle Aged,0.8877
+topmed,TOPMed,4,22,General Research,United States,0.7926
+topmed,TOPMed,4,22,General Research,Aged,0.6327
+topmed,TOPMed,5,27,General Research,Genomics,0.888
+topmed,TOPMed,5,27,General Research,Humans Phenotype,0.8484
+topmed,TOPMed,5,27,General Research,Phenotype,0.7511
+topmed,TOPMed,5,27,General Research,Humans Genomics,0.5638
+topmed,TOPMed,5,27,General Research,Female Male,0.4887
+topmed,TOPMed,6,11,Respiratory Diseases,Transcriptome,1.4446
+topmed,TOPMed,6,11,Respiratory Diseases,Quantitative Trait Loci,1.3554
+topmed,TOPMed,6,11,Respiratory Diseases,Transcriptome Polymorphism Single Nucleotide,1.0978
+topmed,TOPMed,6,11,Respiratory Diseases,Linkage Disequilibrium,0.9913
+topmed,TOPMed,6,11,Respiratory Diseases,Pulmonary Disease Chronic Obstructive,0.9585
+topmed,TOPMed,7,16,General Research,Child,1.8144
+topmed,TOPMed,7,16,General Research,Adolescent,1.4107
+topmed,TOPMed,7,16,General Research,Humans Child,1.2496
+topmed,TOPMed,7,16,General Research,Anemia Sickle Cell,1.0983
+topmed,TOPMed,7,16,General Research,Child Preschool,1.0983
+topmed,TOPMed,8,12,Genomics & GWAS,Fibrinogen,1.0063
+topmed,TOPMed,8,12,Genomics & GWAS,Female Gene Frequency,1.0063
+topmed,TOPMed,8,12,Genomics & GWAS,Gene Frequency,0.9525
+topmed,TOPMed,8,12,Genomics & GWAS,Humans Genetics Population,0.9344
+topmed,TOPMed,8,12,Genomics & GWAS,Humans Polymorphism Single Nucleotide,0.9081
+topmed,TOPMed,9,19,Mendelian Randomization,Male Middle Aged,1.3133
+topmed,TOPMed,9,19,Mendelian Randomization,Aged,1.2559
+topmed,TOPMed,9,19,Mendelian Randomization,Middle Aged,1.1992
+topmed,TOPMed,9,19,Mendelian Randomization,Mendelian Randomization Analysis,0.9249
+topmed,TOPMed,9,19,Mendelian Randomization,Male,0.8496

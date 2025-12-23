@@ -1,0 +1,559 @@
+{
+  "diseases": [
+    {
+      "id": "malaria",
+      "name": "Malaria",
+      "category": "Infectious",
+      "burden": {
+        "dalys": 62.5,
+        "deaths": 0.62,
+        "prevalence": 247.0,
+        "score": 86.19
+      },
+      "research": {
+        "publications": 160,
+        "intensity": 1.8564
+      },
+      "gap": {
+        "score": 50,
+        "severity": "Moderate"
+      },
+      "globalSouthPriority": true
+    },
+    {
+      "id": "tuberculosis",
+      "name": "Tuberculosis",
+      "category": "Infectious",
+      "burden": {
+        "dalys": 38.1,
+        "deaths": 1.3,
+        "prevalence": 10.6,
+        "score": 94.69
+      },
+      "research": {
+        "publications": 170,
+        "intensity": 1.7953
+      },
+      "gap": {
+        "score": 50,
+        "severity": "Moderate"
+      },
+      "globalSouthPriority": true
+    },
+    {
+      "id": "diarrheal_diseases",
+      "name": "Diarrheal Diseases",
+      "category": "Infectious",
+      "burden": {
+        "dalys": 44.2,
+        "deaths": 1.53,
+        "prevalence": 1700.0,
+        "score": 130.91
+      },
+      "research": {
+        "publications": 220,
+        "intensity": 1.6805
+      },
+      "gap": {
+        "score": 50,
+        "severity": "Moderate"
+      },
+      "globalSouthPriority": true
+    },
+    {
+      "id": "road_traffic",
+      "name": "Road Traffic Injuries",
+      "category": "Injuries",
+      "burden": {
+        "dalys": 85.5,
+        "deaths": 1.35,
+        "prevalence": 50.0,
+        "score": 127.33
+      },
+      "research": {
+        "publications": 208,
+        "intensity": 1.6336
+      },
+      "gap": {
+        "score": 40,
+        "severity": "Moderate"
+      },
+      "globalSouthPriority": true
+    },
+    {
+      "id": "copd",
+      "name": "Chronic Obstructive Pulmonary Disease",
+      "category": "Respiratory",
+      "burden": {
+        "dalys": 81.0,
+        "deaths": 3.23,
+        "prevalence": 212.0,
+        "score": 225.28
+      },
+      "research": {
+        "publications": 423,
+        "intensity": 1.8777
+      },
+      "gap": {
+        "score": 35,
+        "severity": "Moderate"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "hiv_aids",
+      "name": "HIV/AIDS",
+      "category": "Infectious",
+      "burden": {
+        "dalys": 42.0,
+        "deaths": 0.68,
+        "prevalence": 38.4,
+        "score": 70.95
+      },
+      "research": {
+        "publications": 645,
+        "intensity": 9.0909
+      },
+      "gap": {
+        "score": 25,
+        "severity": "Low"
+      },
+      "globalSouthPriority": true
+    },
+    {
+      "id": "ntds",
+      "name": "Neglected Tropical Diseases",
+      "category": "Neglected",
+      "burden": {
+        "dalys": 28.3,
+        "deaths": 0.17,
+        "prevalence": 1500.0,
+        "score": 54.41
+      },
+      "research": {
+        "publications": 408,
+        "intensity": 7.4986
+      },
+      "gap": {
+        "score": 25,
+        "severity": "Low"
+      },
+      "globalSouthPriority": true
+    },
+    {
+      "id": "neonatal_disorders",
+      "name": "Neonatal Disorders",
+      "category": "Maternal",
+      "burden": {
+        "dalys": 75.0,
+        "deaths": 2.4,
+        "prevalence": 0.0,
+        "score": 157.5
+      },
+      "research": {
+        "publications": 1365,
+        "intensity": 8.6667
+      },
+      "gap": {
+        "score": 25,
+        "severity": "Low"
+      },
+      "globalSouthPriority": true
+    },
+    {
+      "id": "preterm_birth",
+      "name": "Preterm Birth Complications",
+      "category": "Maternal",
+      "burden": {
+        "dalys": 23.0,
+        "deaths": 0.9,
+        "prevalence": 15.0,
+        "score": 68.54
+      },
+      "research": {
+        "publications": 1053,
+        "intensity": 15.3633
+      },
+      "gap": {
+        "score": 25,
+        "severity": "Low"
+      },
+      "globalSouthPriority": true
+    },
+    {
+      "id": "ischemic_heart_disease",
+      "name": "Ischemic Heart Disease",
+      "category": "Cardiovascular",
+      "burden": {
+        "dalys": 185.0,
+        "deaths": 9.44,
+        "prevalence": 197.0,
+        "score": 587.47
+      },
+      "research": {
+        "publications": 1687,
+        "intensity": 2.8716
+      },
+      "gap": {
+        "score": 20,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "stroke",
+      "name": "Stroke",
+      "category": "Cardiovascular",
+      "burden": {
+        "dalys": 143.0,
+        "deaths": 6.55,
+        "prevalence": 101.0,
+        "score": 419.09
+      },
+      "research": {
+        "publications": 3800,
+        "intensity": 9.0673
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "asthma",
+      "name": "Asthma",
+      "category": "Respiratory",
+      "burden": {
+        "dalys": 22.0,
+        "deaths": 0.46,
+        "prevalence": 262.0,
+        "score": 58.2
+      },
+      "research": {
+        "publications": 404,
+        "intensity": 6.9416
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "diabetes",
+      "name": "Type 2 Diabetes",
+      "category": "Metabolic",
+      "burden": {
+        "dalys": 67.0,
+        "deaths": 1.5,
+        "prevalence": 462.0,
+        "score": 135.16
+      },
+      "research": {
+        "publications": 2454,
+        "intensity": 18.1563
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "alzheimers",
+      "name": "Alzheimer's Disease",
+      "category": "Neurological",
+      "burden": {
+        "dalys": 30.0,
+        "deaths": 1.62,
+        "prevalence": 55.0,
+        "score": 113.48
+      },
+      "research": {
+        "publications": 1876,
+        "intensity": 16.5315
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "epilepsy",
+      "name": "Epilepsy",
+      "category": "Neurological",
+      "burden": {
+        "dalys": 15.0,
+        "deaths": 0.13,
+        "prevalence": 50.0,
+        "score": 31.08
+      },
+      "research": {
+        "publications": 439,
+        "intensity": 14.1248
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "parkinsons",
+      "name": "Parkinson's Disease",
+      "category": "Neurological",
+      "burden": {
+        "dalys": 6.0,
+        "deaths": 0.33,
+        "prevalence": 8.5,
+        "score": 29.28
+      },
+      "research": {
+        "publications": 518,
+        "intensity": 17.6913
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "depression",
+      "name": "Depression",
+      "category": "Mental Health",
+      "burden": {
+        "dalys": 50.0,
+        "deaths": 0.0,
+        "prevalence": 280.0,
+        "score": 49.49
+      },
+      "research": {
+        "publications": 1632,
+        "intensity": 32.9764
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "anxiety",
+      "name": "Anxiety Disorders",
+      "category": "Mental Health",
+      "burden": {
+        "dalys": 28.0,
+        "deaths": 0.0,
+        "prevalence": 301.0,
+        "score": 38.8
+      },
+      "research": {
+        "publications": 880,
+        "intensity": 22.6804
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "bipolar",
+      "name": "Bipolar Disorder",
+      "category": "Mental Health",
+      "burden": {
+        "dalys": 12.0,
+        "deaths": 0.0,
+        "prevalence": 40.0,
+        "score": 22.13
+      },
+      "research": {
+        "publications": 302,
+        "intensity": 13.6466
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "schizophrenia",
+      "name": "Schizophrenia",
+      "category": "Mental Health",
+      "burden": {
+        "dalys": 17.0,
+        "deaths": 0.0,
+        "prevalence": 24.0,
+        "score": 22.48
+      },
+      "research": {
+        "publications": 545,
+        "intensity": 24.2438
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "lung_cancer",
+      "name": "Lung Cancer",
+      "category": "Cancer",
+      "burden": {
+        "dalys": 45.0,
+        "deaths": 1.8,
+        "prevalence": 2.2,
+        "score": 117.55
+      },
+      "research": {
+        "publications": 2342,
+        "intensity": 19.9234
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "breast_cancer",
+      "name": "Breast Cancer",
+      "category": "Cancer",
+      "burden": {
+        "dalys": 18.0,
+        "deaths": 0.68,
+        "prevalence": 7.8,
+        "score": 52.44
+      },
+      "research": {
+        "publications": 2195,
+        "intensity": 41.8574
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "chronic_kidney",
+      "name": "Chronic Kidney Disease",
+      "category": "Renal",
+      "burden": {
+        "dalys": 35.0,
+        "deaths": 1.4,
+        "prevalence": 843.0,
+        "score": 116.76
+      },
+      "research": {
+        "publications": 713,
+        "intensity": 6.1065
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "cirrhosis",
+      "name": "Cirrhosis",
+      "category": "Hepatic",
+      "burden": {
+        "dalys": 25.0,
+        "deaths": 1.32,
+        "prevalence": 112.0,
+        "score": 99.03
+      },
+      "research": {
+        "publications": 982,
+        "intensity": 9.9162
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    },
+    {
+      "id": "low_back_pain",
+      "name": "Low Back Pain",
+      "category": "Musculoskeletal",
+      "burden": {
+        "dalys": 63.0,
+        "deaths": 0.0,
+        "prevalence": 568.0,
+        "score": 59.05
+      },
+      "research": {
+        "publications": 307,
+        "intensity": 5.199
+      },
+      "gap": {
+        "score": 10,
+        "severity": "Low"
+      },
+      "globalSouthPriority": false
+    }
+  ],
+  "categories": {
+    "Infectious": [
+      "malaria",
+      "tuberculosis",
+      "diarrheal_diseases",
+      "hiv_aids"
+    ],
+    "Injuries": [
+      "road_traffic"
+    ],
+    "Respiratory": [
+      "copd",
+      "asthma"
+    ],
+    "Neglected": [
+      "ntds"
+    ],
+    "Maternal": [
+      "neonatal_disorders",
+      "preterm_birth"
+    ],
+    "Cardiovascular": [
+      "ischemic_heart_disease",
+      "stroke"
+    ],
+    "Metabolic": [
+      "diabetes"
+    ],
+    "Neurological": [
+      "alzheimers",
+      "epilepsy",
+      "parkinsons"
+    ],
+    "Mental Health": [
+      "depression",
+      "anxiety",
+      "bipolar",
+      "schizophrenia"
+    ],
+    "Cancer": [
+      "lung_cancer",
+      "breast_cancer"
+    ],
+    "Renal": [
+      "chronic_kidney"
+    ],
+    "Hepatic": [
+      "cirrhosis"
+    ],
+    "Musculoskeletal": [
+      "low_back_pain"
+    ]
+  },
+  "totalCount": 25,
+  "generated": "2025-12-23T19:10:12.567758"
+}
