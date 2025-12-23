@@ -1,0 +1,28 @@
+biobank_id,name,country,region,total_publications,diseases_covered,critical_gap_count,research_opportunity_score,global_south_percentage
+uk_biobank,UK Biobank,United Kingdom,EUR,13341,25,0,0.0,1.6
+mvp,Million Veteran Program,United States,AMR,327,18,0,0.0,1.2
+finngen,FinnGen,Finland,EUR,2683,23,0,0.0,2.4
+all_of_us,All of Us Research Program,United States,AMR,613,21,0,0.0,1.5
+estonian_biobank,Estonian Biobank,Estonia,EUR,116,11,0,0.0,0.0
+biobank_japan,BioBank Japan,Japan,WPR,271,19,0,0.0,2.6
+china_kadoorie,China Kadoorie Biobank,China,WPR,516,16,0,0.0,1.0
+taiwan_biobank,Taiwan Biobank,Taiwan,WPR,482,16,0,0.0,0.2
+hunt,HUNT Study,Norway,EUR,1152,21,0,0.0,2.7
+decode,deCODE Genetics,Iceland,EUR,5604,25,0,0.0,2.3
+danish_national,Danish National Biobank,Denmark,EUR,9,2,0,0.0,22.2
+swedish_twin,Swedish Twin Registry,Sweden,EUR,289,19,0,0.0,5.2
+generation_scotland,Generation Scotland,United Kingdom,EUR,161,13,0,0.0,1.2
+lifelines,LifeLines,Netherlands,EUR,730,21,0,0.0,2.5
+constances,CONSTANCES,France,EUR,222,17,0,0.0,3.6
+nako,German National Cohort (NAKO),Germany,EUR,138,15,0,0.0,1.4
+biovu,BioVU,United States,AMR,155,18,0,0.0,4.5
+geisinger_mycode,Geisinger MyCode,United States,AMR,96,15,0,0.0,4.2
+mgb_biobank,Mass General Brigham Biobank,United States,AMR,92,17,0,0.0,2.2
+qatar_biobank,Qatar Biobank,Qatar,EMR,174,11,0,0.0,0.0
+h3africa,H3Africa,Pan-African,AFR,139,9,0,0.0,5.8
+uganda_genome,Uganda Genome Resource,Uganda,AFR,5,1,0,0.0,0.0
+awigen,AWI-Gen,Pan-African,AFR,60,9,0,0.0,15.0
+mexico_city,Mexico City Prospective Study,Mexico,AMR,29,6,0,0.0,0.0
+epigen_brazil,EPIGEN-Brazil,Brazil,AMR,1,0,0,0.0,0.0
+emerge,eMERGE Network,United States,AMR,47755,25,0,0.0,5.1
+topmed,TOPMed,United States,AMR,196,14,0,0.0,1.0

@@ -1,0 +1,2851 @@
+{
+  "biobanks": [
+    {
+      "id": "emerge",
+      "name": "eMERGE Network",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "totalPublications": 47755,
+        "diseasesCovered": 25,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 5.1
+      },
+      "topDiseases": [
+        {
+          "id": "stroke",
+          "count": 1793
+        },
+        {
+          "id": "lung_cancer",
+          "count": 1338
+        },
+        {
+          "id": "breast_cancer",
+          "count": 1300
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 1026
+        },
+        {
+          "id": "preterm_birth",
+          "count": 909
+        },
+        {
+          "id": "alzheimers",
+          "count": 824
+        },
+        {
+          "id": "depression",
+          "count": 595
+        },
+        {
+          "id": "hiv_aids",
+          "count": 577
+        },
+        {
+          "id": "diabetes",
+          "count": 572
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 488
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2008,
+          "count": 1
+        },
+        {
+          "year": 2009,
+          "count": 1440
+        },
+        {
+          "year": 2010,
+          "count": 1570
+        },
+        {
+          "year": 2011,
+          "count": 1613
+        },
+        {
+          "year": 2012,
+          "count": 1964
+        },
+        {
+          "year": 2013,
+          "count": 2111
+        },
+        {
+          "year": 2014,
+          "count": 2162
+        },
+        {
+          "year": 2015,
+          "count": 2256
+        },
+        {
+          "year": 2016,
+          "count": 2394
+        },
+        {
+          "year": 2017,
+          "count": 2450
+        },
+        {
+          "year": 2018,
+          "count": 2611
+        },
+        {
+          "year": 2019,
+          "count": 2811
+        },
+        {
+          "year": 2020,
+          "count": 3134
+        },
+        {
+          "year": 2021,
+          "count": 3669
+        },
+        {
+          "year": 2022,
+          "count": 3828
+        },
+        {
+          "year": 2023,
+          "count": 3655
+        },
+        {
+          "year": 2024,
+          "count": 4603
+        },
+        {
+          "year": 2025,
+          "count": 5413
+        },
+        {
+          "year": 2026,
+          "count": 70
+        }
+      ]
+    },
+    {
+      "id": "uk_biobank",
+      "name": "UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 13341,
+        "diseasesCovered": 25,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 1.6
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 1147
+        },
+        {
+          "id": "stroke",
+          "count": 1136
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 795
+        },
+        {
+          "id": "alzheimers",
+          "count": 786
+        },
+        {
+          "id": "lung_cancer",
+          "count": 593
+        },
+        {
+          "id": "depression",
+          "count": 575
+        },
+        {
+          "id": "breast_cancer",
+          "count": 550
+        },
+        {
+          "id": "cirrhosis",
+          "count": 393
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 308
+        },
+        {
+          "id": "copd",
+          "count": 175
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2012,
+          "count": 8
+        },
+        {
+          "year": 2013,
+          "count": 7
+        },
+        {
+          "year": 2014,
+          "count": 19
+        },
+        {
+          "year": 2015,
+          "count": 27
+        },
+        {
+          "year": 2016,
+          "count": 77
+        },
+        {
+          "year": 2017,
+          "count": 135
+        },
+        {
+          "year": 2018,
+          "count": 265
+        },
+        {
+          "year": 2019,
+          "count": 444
+        },
+        {
+          "year": 2020,
+          "count": 745
+        },
+        {
+          "year": 2021,
+          "count": 1156
+        },
+        {
+          "year": 2022,
+          "count": 1549
+        },
+        {
+          "year": 2023,
+          "count": 2114
+        },
+        {
+          "year": 2024,
+          "count": 2849
+        },
+        {
+          "year": 2025,
+          "count": 3894
+        },
+        {
+          "year": 2026,
+          "count": 52
+        }
+      ]
+    },
+    {
+      "id": "decode",
+      "name": "deCODE Genetics",
+      "country": "Iceland",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 5604,
+        "diseasesCovered": 25,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 2.3
+      },
+      "topDiseases": [
+        {
+          "id": "stroke",
+          "count": 589
+        },
+        {
+          "id": "lung_cancer",
+          "count": 131
+        },
+        {
+          "id": "breast_cancer",
+          "count": 121
+        },
+        {
+          "id": "epilepsy",
+          "count": 82
+        },
+        {
+          "id": "diabetes",
+          "count": 62
+        },
+        {
+          "id": "alzheimers",
+          "count": 55
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 38
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 37
+        },
+        {
+          "id": "road_traffic",
+          "count": 35
+        },
+        {
+          "id": "preterm_birth",
+          "count": 32
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2000,
+          "count": 30
+        },
+        {
+          "year": 2001,
+          "count": 40
+        },
+        {
+          "year": 2002,
+          "count": 33
+        },
+        {
+          "year": 2003,
+          "count": 53
+        },
+        {
+          "year": 2004,
+          "count": 64
+        },
+        {
+          "year": 2005,
+          "count": 58
+        },
+        {
+          "year": 2006,
+          "count": 68
+        },
+        {
+          "year": 2007,
+          "count": 56
+        },
+        {
+          "year": 2008,
+          "count": 87
+        },
+        {
+          "year": 2009,
+          "count": 107
+        },
+        {
+          "year": 2010,
+          "count": 95
+        },
+        {
+          "year": 2011,
+          "count": 120
+        },
+        {
+          "year": 2012,
+          "count": 144
+        },
+        {
+          "year": 2013,
+          "count": 138
+        },
+        {
+          "year": 2014,
+          "count": 183
+        },
+        {
+          "year": 2015,
+          "count": 199
+        },
+        {
+          "year": 2016,
+          "count": 222
+        },
+        {
+          "year": 2017,
+          "count": 225
+        },
+        {
+          "year": 2018,
+          "count": 271
+        },
+        {
+          "year": 2019,
+          "count": 281
+        },
+        {
+          "year": 2020,
+          "count": 367
+        },
+        {
+          "year": 2021,
+          "count": 399
+        },
+        {
+          "year": 2022,
+          "count": 473
+        },
+        {
+          "year": 2023,
+          "count": 466
+        },
+        {
+          "year": 2024,
+          "count": 536
+        },
+        {
+          "year": 2025,
+          "count": 876
+        },
+        {
+          "year": 2026,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "id": "finngen",
+      "name": "FinnGen",
+      "country": "Finland",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 2683,
+        "diseasesCovered": 23,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 2.4
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 201
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 98
+        },
+        {
+          "id": "depression",
+          "count": 79
+        },
+        {
+          "id": "lung_cancer",
+          "count": 77
+        },
+        {
+          "id": "stroke",
+          "count": 76
+        },
+        {
+          "id": "cirrhosis",
+          "count": 72
+        },
+        {
+          "id": "breast_cancer",
+          "count": 61
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 61
+        },
+        {
+          "id": "alzheimers",
+          "count": 55
+        },
+        {
+          "id": "asthma",
+          "count": 48
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2020,
+          "count": 15
+        },
+        {
+          "year": 2021,
+          "count": 62
+        },
+        {
+          "year": 2022,
+          "count": 147
+        },
+        {
+          "year": 2023,
+          "count": 399
+        },
+        {
+          "year": 2024,
+          "count": 993
+        },
+        {
+          "year": 2025,
+          "count": 1047
+        },
+        {
+          "year": 2026,
+          "count": 20
+        }
+      ]
+    },
+    {
+      "id": "hunt",
+      "name": "HUNT Study",
+      "country": "Norway",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 1152,
+        "diseasesCovered": 21,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 2.7
+      },
+      "topDiseases": [
+        {
+          "id": "depression",
+          "count": 121
+        },
+        {
+          "id": "anxiety",
+          "count": 107
+        },
+        {
+          "id": "diabetes",
+          "count": 90
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 68
+        },
+        {
+          "id": "lung_cancer",
+          "count": 38
+        },
+        {
+          "id": "low_back_pain",
+          "count": 36
+        },
+        {
+          "id": "alzheimers",
+          "count": 35
+        },
+        {
+          "id": "stroke",
+          "count": 28
+        },
+        {
+          "id": "asthma",
+          "count": 27
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 23
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2000,
+          "count": 4
+        },
+        {
+          "year": 2001,
+          "count": 5
+        },
+        {
+          "year": 2002,
+          "count": 9
+        },
+        {
+          "year": 2003,
+          "count": 14
+        },
+        {
+          "year": 2004,
+          "count": 7
+        },
+        {
+          "year": 2005,
+          "count": 13
+        },
+        {
+          "year": 2006,
+          "count": 20
+        },
+        {
+          "year": 2007,
+          "count": 31
+        },
+        {
+          "year": 2008,
+          "count": 34
+        },
+        {
+          "year": 2009,
+          "count": 34
+        },
+        {
+          "year": 2010,
+          "count": 28
+        },
+        {
+          "year": 2011,
+          "count": 47
+        },
+        {
+          "year": 2012,
+          "count": 62
+        },
+        {
+          "year": 2013,
+          "count": 79
+        },
+        {
+          "year": 2014,
+          "count": 52
+        },
+        {
+          "year": 2015,
+          "count": 61
+        },
+        {
+          "year": 2016,
+          "count": 59
+        },
+        {
+          "year": 2017,
+          "count": 68
+        },
+        {
+          "year": 2018,
+          "count": 71
+        },
+        {
+          "year": 2019,
+          "count": 70
+        },
+        {
+          "year": 2020,
+          "count": 65
+        },
+        {
+          "year": 2021,
+          "count": 51
+        },
+        {
+          "year": 2022,
+          "count": 47
+        },
+        {
+          "year": 2023,
+          "count": 67
+        },
+        {
+          "year": 2024,
+          "count": 75
+        },
+        {
+          "year": 2025,
+          "count": 76
+        },
+        {
+          "year": 2026,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "id": "lifelines",
+      "name": "LifeLines",
+      "country": "Netherlands",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 730,
+        "diseasesCovered": 21,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 2.5
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 53
+        },
+        {
+          "id": "depression",
+          "count": 48
+        },
+        {
+          "id": "anxiety",
+          "count": 32
+        },
+        {
+          "id": "lung_cancer",
+          "count": 31
+        },
+        {
+          "id": "copd",
+          "count": 20
+        },
+        {
+          "id": "breast_cancer",
+          "count": 16
+        },
+        {
+          "id": "asthma",
+          "count": 15
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 14
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 14
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 13
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2010,
+          "count": 5
+        },
+        {
+          "year": 2012,
+          "count": 2
+        },
+        {
+          "year": 2013,
+          "count": 9
+        },
+        {
+          "year": 2014,
+          "count": 8
+        },
+        {
+          "year": 2015,
+          "count": 28
+        },
+        {
+          "year": 2016,
+          "count": 23
+        },
+        {
+          "year": 2017,
+          "count": 45
+        },
+        {
+          "year": 2018,
+          "count": 26
+        },
+        {
+          "year": 2019,
+          "count": 42
+        },
+        {
+          "year": 2020,
+          "count": 60
+        },
+        {
+          "year": 2021,
+          "count": 86
+        },
+        {
+          "year": 2022,
+          "count": 100
+        },
+        {
+          "year": 2023,
+          "count": 102
+        },
+        {
+          "year": 2024,
+          "count": 97
+        },
+        {
+          "year": 2025,
+          "count": 95
+        },
+        {
+          "year": 2026,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "all_of_us",
+      "name": "All of Us Research Program",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "totalPublications": 613,
+        "diseasesCovered": 21,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 1.5
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 26
+        },
+        {
+          "id": "depression",
+          "count": 26
+        },
+        {
+          "id": "lung_cancer",
+          "count": 24
+        },
+        {
+          "id": "breast_cancer",
+          "count": 23
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 17
+        },
+        {
+          "id": "anxiety",
+          "count": 17
+        },
+        {
+          "id": "stroke",
+          "count": 12
+        },
+        {
+          "id": "alzheimers",
+          "count": 10
+        },
+        {
+          "id": "asthma",
+          "count": 8
+        },
+        {
+          "id": "hiv_aids",
+          "count": 5
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2019,
+          "count": 12
+        },
+        {
+          "year": 2020,
+          "count": 10
+        },
+        {
+          "year": 2021,
+          "count": 14
+        },
+        {
+          "year": 2022,
+          "count": 46
+        },
+        {
+          "year": 2023,
+          "count": 80
+        },
+        {
+          "year": 2024,
+          "count": 161
+        },
+        {
+          "year": 2025,
+          "count": 286
+        },
+        {
+          "year": 2026,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "id": "china_kadoorie",
+      "name": "China Kadoorie Biobank",
+      "country": "China",
+      "region": "WPR",
+      "stats": {
+        "totalPublications": 516,
+        "diseasesCovered": 16,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 1.0
+      },
+      "topDiseases": [
+        {
+          "id": "stroke",
+          "count": 75
+        },
+        {
+          "id": "diabetes",
+          "count": 70
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 55
+        },
+        {
+          "id": "lung_cancer",
+          "count": 39
+        },
+        {
+          "id": "copd",
+          "count": 30
+        },
+        {
+          "id": "breast_cancer",
+          "count": 29
+        },
+        {
+          "id": "depression",
+          "count": 11
+        },
+        {
+          "id": "cirrhosis",
+          "count": 9
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 8
+        },
+        {
+          "id": "parkinsons",
+          "count": 4
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2011,
+          "count": 1
+        },
+        {
+          "year": 2012,
+          "count": 2
+        },
+        {
+          "year": 2013,
+          "count": 5
+        },
+        {
+          "year": 2014,
+          "count": 10
+        },
+        {
+          "year": 2015,
+          "count": 17
+        },
+        {
+          "year": 2016,
+          "count": 13
+        },
+        {
+          "year": 2017,
+          "count": 33
+        },
+        {
+          "year": 2018,
+          "count": 34
+        },
+        {
+          "year": 2019,
+          "count": 40
+        },
+        {
+          "year": 2020,
+          "count": 39
+        },
+        {
+          "year": 2021,
+          "count": 48
+        },
+        {
+          "year": 2022,
+          "count": 74
+        },
+        {
+          "year": 2023,
+          "count": 65
+        },
+        {
+          "year": 2024,
+          "count": 62
+        },
+        {
+          "year": 2025,
+          "count": 73
+        }
+      ]
+    },
+    {
+      "id": "taiwan_biobank",
+      "name": "Taiwan Biobank",
+      "country": "Taiwan",
+      "region": "WPR",
+      "stats": {
+        "totalPublications": 482,
+        "diseasesCovered": 16,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 0.2
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 45
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 23
+        },
+        {
+          "id": "depression",
+          "count": 19
+        },
+        {
+          "id": "alzheimers",
+          "count": 17
+        },
+        {
+          "id": "lung_cancer",
+          "count": 11
+        },
+        {
+          "id": "cirrhosis",
+          "count": 9
+        },
+        {
+          "id": "breast_cancer",
+          "count": 7
+        },
+        {
+          "id": "asthma",
+          "count": 6
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 6
+        },
+        {
+          "id": "schizophrenia",
+          "count": 6
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2014,
+          "count": 2
+        },
+        {
+          "year": 2015,
+          "count": 1
+        },
+        {
+          "year": 2016,
+          "count": 2
+        },
+        {
+          "year": 2017,
+          "count": 11
+        },
+        {
+          "year": 2018,
+          "count": 5
+        },
+        {
+          "year": 2019,
+          "count": 28
+        },
+        {
+          "year": 2020,
+          "count": 39
+        },
+        {
+          "year": 2021,
+          "count": 70
+        },
+        {
+          "year": 2022,
+          "count": 79
+        },
+        {
+          "year": 2023,
+          "count": 64
+        },
+        {
+          "year": 2024,
+          "count": 82
+        },
+        {
+          "year": 2025,
+          "count": 97
+        },
+        {
+          "year": 2026,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "mvp",
+      "name": "Million Veteran Program",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "totalPublications": 327,
+        "diseasesCovered": 18,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 1.2
+      },
+      "topDiseases": [
+        {
+          "id": "ischemic_heart_disease",
+          "count": 31
+        },
+        {
+          "id": "diabetes",
+          "count": 21
+        },
+        {
+          "id": "stroke",
+          "count": 18
+        },
+        {
+          "id": "cirrhosis",
+          "count": 10
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 10
+        },
+        {
+          "id": "alzheimers",
+          "count": 9
+        },
+        {
+          "id": "depression",
+          "count": 8
+        },
+        {
+          "id": "anxiety",
+          "count": 6
+        },
+        {
+          "id": "breast_cancer",
+          "count": 6
+        },
+        {
+          "id": "schizophrenia",
+          "count": 5
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2016,
+          "count": 3
+        },
+        {
+          "year": 2018,
+          "count": 10
+        },
+        {
+          "year": 2019,
+          "count": 13
+        },
+        {
+          "year": 2020,
+          "count": 19
+        },
+        {
+          "year": 2021,
+          "count": 34
+        },
+        {
+          "year": 2022,
+          "count": 56
+        },
+        {
+          "year": 2023,
+          "count": 61
+        },
+        {
+          "year": 2024,
+          "count": 66
+        },
+        {
+          "year": 2025,
+          "count": 63
+        },
+        {
+          "year": 2026,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "swedish_twin",
+      "name": "Swedish Twin Registry",
+      "country": "Sweden",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 289,
+        "diseasesCovered": 19,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 5.2
+      },
+      "topDiseases": [
+        {
+          "id": "alzheimers",
+          "count": 37
+        },
+        {
+          "id": "depression",
+          "count": 31
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 14
+        },
+        {
+          "id": "diabetes",
+          "count": 14
+        },
+        {
+          "id": "breast_cancer",
+          "count": 14
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 13
+        },
+        {
+          "id": "anxiety",
+          "count": 11
+        },
+        {
+          "id": "lung_cancer",
+          "count": 10
+        },
+        {
+          "id": "stroke",
+          "count": 9
+        },
+        {
+          "id": "low_back_pain",
+          "count": 9
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 1993,
+          "count": 1
+        },
+        {
+          "year": 1994,
+          "count": 3
+        },
+        {
+          "year": 1995,
+          "count": 4
+        },
+        {
+          "year": 1996,
+          "count": 1
+        },
+        {
+          "year": 1997,
+          "count": 6
+        },
+        {
+          "year": 1998,
+          "count": 6
+        },
+        {
+          "year": 1999,
+          "count": 5
+        },
+        {
+          "year": 2000,
+          "count": 2
+        },
+        {
+          "year": 2001,
+          "count": 5
+        },
+        {
+          "year": 2002,
+          "count": 8
+        },
+        {
+          "year": 2003,
+          "count": 9
+        },
+        {
+          "year": 2004,
+          "count": 4
+        },
+        {
+          "year": 2005,
+          "count": 10
+        },
+        {
+          "year": 2006,
+          "count": 17
+        },
+        {
+          "year": 2007,
+          "count": 15
+        },
+        {
+          "year": 2008,
+          "count": 9
+        },
+        {
+          "year": 2009,
+          "count": 12
+        },
+        {
+          "year": 2010,
+          "count": 12
+        },
+        {
+          "year": 2011,
+          "count": 14
+        },
+        {
+          "year": 2012,
+          "count": 14
+        },
+        {
+          "year": 2013,
+          "count": 13
+        },
+        {
+          "year": 2014,
+          "count": 8
+        },
+        {
+          "year": 2015,
+          "count": 11
+        },
+        {
+          "year": 2016,
+          "count": 13
+        },
+        {
+          "year": 2017,
+          "count": 7
+        },
+        {
+          "year": 2018,
+          "count": 9
+        },
+        {
+          "year": 2019,
+          "count": 10
+        },
+        {
+          "year": 2020,
+          "count": 8
+        },
+        {
+          "year": 2021,
+          "count": 13
+        },
+        {
+          "year": 2022,
+          "count": 10
+        },
+        {
+          "year": 2023,
+          "count": 9
+        },
+        {
+          "year": 2024,
+          "count": 10
+        },
+        {
+          "year": 2025,
+          "count": 11
+        }
+      ]
+    },
+    {
+      "id": "biobank_japan",
+      "name": "BioBank Japan",
+      "country": "Japan",
+      "region": "WPR",
+      "stats": {
+        "totalPublications": 271,
+        "diseasesCovered": 19,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 2.6
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 26
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 20
+        },
+        {
+          "id": "breast_cancer",
+          "count": 16
+        },
+        {
+          "id": "lung_cancer",
+          "count": 14
+        },
+        {
+          "id": "cirrhosis",
+          "count": 8
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 7
+        },
+        {
+          "id": "stroke",
+          "count": 7
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 5
+        },
+        {
+          "id": "asthma",
+          "count": 5
+        },
+        {
+          "id": "copd",
+          "count": 4
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2005,
+          "count": 1
+        },
+        {
+          "year": 2007,
+          "count": 1
+        },
+        {
+          "year": 2008,
+          "count": 2
+        },
+        {
+          "year": 2009,
+          "count": 2
+        },
+        {
+          "year": 2010,
+          "count": 1
+        },
+        {
+          "year": 2011,
+          "count": 5
+        },
+        {
+          "year": 2013,
+          "count": 1
+        },
+        {
+          "year": 2016,
+          "count": 1
+        },
+        {
+          "year": 2017,
+          "count": 17
+        },
+        {
+          "year": 2018,
+          "count": 3
+        },
+        {
+          "year": 2019,
+          "count": 3
+        },
+        {
+          "year": 2020,
+          "count": 15
+        },
+        {
+          "year": 2021,
+          "count": 31
+        },
+        {
+          "year": 2022,
+          "count": 37
+        },
+        {
+          "year": 2023,
+          "count": 43
+        },
+        {
+          "year": 2024,
+          "count": 61
+        },
+        {
+          "year": 2025,
+          "count": 47
+        }
+      ]
+    },
+    {
+      "id": "constances",
+      "name": "CONSTANCES",
+      "country": "France",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 222,
+        "diseasesCovered": 17,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 3.6
+      },
+      "topDiseases": [
+        {
+          "id": "depression",
+          "count": 28
+        },
+        {
+          "id": "asthma",
+          "count": 15
+        },
+        {
+          "id": "breast_cancer",
+          "count": 9
+        },
+        {
+          "id": "diabetes",
+          "count": 7
+        },
+        {
+          "id": "cirrhosis",
+          "count": 7
+        },
+        {
+          "id": "anxiety",
+          "count": 5
+        },
+        {
+          "id": "lung_cancer",
+          "count": 5
+        },
+        {
+          "id": "stroke",
+          "count": 5
+        },
+        {
+          "id": "alzheimers",
+          "count": 5
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 4
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2015,
+          "count": 1
+        },
+        {
+          "year": 2016,
+          "count": 4
+        },
+        {
+          "year": 2017,
+          "count": 3
+        },
+        {
+          "year": 2018,
+          "count": 10
+        },
+        {
+          "year": 2019,
+          "count": 27
+        },
+        {
+          "year": 2020,
+          "count": 22
+        },
+        {
+          "year": 2021,
+          "count": 20
+        },
+        {
+          "year": 2022,
+          "count": 29
+        },
+        {
+          "year": 2023,
+          "count": 32
+        },
+        {
+          "year": 2024,
+          "count": 36
+        },
+        {
+          "year": 2025,
+          "count": 38
+        }
+      ]
+    },
+    {
+      "id": "topmed",
+      "name": "TOPMed",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "totalPublications": 196,
+        "diseasesCovered": 14,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 1.0
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 14
+        },
+        {
+          "id": "stroke",
+          "count": 11
+        },
+        {
+          "id": "asthma",
+          "count": 9
+        },
+        {
+          "id": "alzheimers",
+          "count": 6
+        },
+        {
+          "id": "copd",
+          "count": 6
+        },
+        {
+          "id": "lung_cancer",
+          "count": 6
+        },
+        {
+          "id": "cirrhosis",
+          "count": 6
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 6
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 2
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 2
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2016,
+          "count": 1
+        },
+        {
+          "year": 2017,
+          "count": 1
+        },
+        {
+          "year": 2018,
+          "count": 3
+        },
+        {
+          "year": 2019,
+          "count": 12
+        },
+        {
+          "year": 2020,
+          "count": 11
+        },
+        {
+          "year": 2021,
+          "count": 29
+        },
+        {
+          "year": 2022,
+          "count": 39
+        },
+        {
+          "year": 2023,
+          "count": 29
+        },
+        {
+          "year": 2024,
+          "count": 33
+        },
+        {
+          "year": 2025,
+          "count": 38
+        }
+      ]
+    },
+    {
+      "id": "qatar_biobank",
+      "name": "Qatar Biobank",
+      "country": "Qatar",
+      "region": "EMR",
+      "stats": {
+        "totalPublications": 174,
+        "diseasesCovered": 11,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 0.0
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 53
+        },
+        {
+          "id": "depression",
+          "count": 3
+        },
+        {
+          "id": "alzheimers",
+          "count": 3
+        },
+        {
+          "id": "lung_cancer",
+          "count": 2
+        },
+        {
+          "id": "breast_cancer",
+          "count": 2
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 2
+        },
+        {
+          "id": "asthma",
+          "count": 2
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 1
+        },
+        {
+          "id": "schizophrenia",
+          "count": 1
+        },
+        {
+          "id": "low_back_pain",
+          "count": 1
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2015,
+          "count": 1
+        },
+        {
+          "year": 2017,
+          "count": 2
+        },
+        {
+          "year": 2018,
+          "count": 3
+        },
+        {
+          "year": 2019,
+          "count": 12
+        },
+        {
+          "year": 2020,
+          "count": 14
+        },
+        {
+          "year": 2021,
+          "count": 21
+        },
+        {
+          "year": 2022,
+          "count": 22
+        },
+        {
+          "year": 2023,
+          "count": 30
+        },
+        {
+          "year": 2024,
+          "count": 28
+        },
+        {
+          "year": 2025,
+          "count": 41
+        }
+      ]
+    },
+    {
+      "id": "generation_scotland",
+      "name": "Generation Scotland",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 161,
+        "diseasesCovered": 13,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 1.2
+      },
+      "topDiseases": [
+        {
+          "id": "depression",
+          "count": 38
+        },
+        {
+          "id": "stroke",
+          "count": 15
+        },
+        {
+          "id": "diabetes",
+          "count": 11
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 7
+        },
+        {
+          "id": "alzheimers",
+          "count": 6
+        },
+        {
+          "id": "anxiety",
+          "count": 3
+        },
+        {
+          "id": "schizophrenia",
+          "count": 3
+        },
+        {
+          "id": "copd",
+          "count": 2
+        },
+        {
+          "id": "bipolar",
+          "count": 2
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 1
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2010,
+          "count": 1
+        },
+        {
+          "year": 2012,
+          "count": 3
+        },
+        {
+          "year": 2013,
+          "count": 4
+        },
+        {
+          "year": 2014,
+          "count": 4
+        },
+        {
+          "year": 2015,
+          "count": 7
+        },
+        {
+          "year": 2016,
+          "count": 12
+        },
+        {
+          "year": 2017,
+          "count": 15
+        },
+        {
+          "year": 2018,
+          "count": 17
+        },
+        {
+          "year": 2019,
+          "count": 14
+        },
+        {
+          "year": 2020,
+          "count": 11
+        },
+        {
+          "year": 2021,
+          "count": 21
+        },
+        {
+          "year": 2022,
+          "count": 13
+        },
+        {
+          "year": 2023,
+          "count": 11
+        },
+        {
+          "year": 2024,
+          "count": 10
+        },
+        {
+          "year": 2025,
+          "count": 18
+        }
+      ]
+    },
+    {
+      "id": "biovu",
+      "name": "BioVU",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "totalPublications": 155,
+        "diseasesCovered": 18,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 4.5
+      },
+      "topDiseases": [
+        {
+          "id": "ischemic_heart_disease",
+          "count": 14
+        },
+        {
+          "id": "diabetes",
+          "count": 9
+        },
+        {
+          "id": "cirrhosis",
+          "count": 7
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 7
+        },
+        {
+          "id": "alzheimers",
+          "count": 5
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 4
+        },
+        {
+          "id": "lung_cancer",
+          "count": 4
+        },
+        {
+          "id": "copd",
+          "count": 4
+        },
+        {
+          "id": "breast_cancer",
+          "count": 3
+        },
+        {
+          "id": "ntds",
+          "count": 3
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2010,
+          "count": 5
+        },
+        {
+          "year": 2011,
+          "count": 3
+        },
+        {
+          "year": 2012,
+          "count": 5
+        },
+        {
+          "year": 2013,
+          "count": 8
+        },
+        {
+          "year": 2014,
+          "count": 9
+        },
+        {
+          "year": 2015,
+          "count": 10
+        },
+        {
+          "year": 2016,
+          "count": 7
+        },
+        {
+          "year": 2017,
+          "count": 15
+        },
+        {
+          "year": 2018,
+          "count": 6
+        },
+        {
+          "year": 2019,
+          "count": 7
+        },
+        {
+          "year": 2020,
+          "count": 9
+        },
+        {
+          "year": 2021,
+          "count": 18
+        },
+        {
+          "year": 2022,
+          "count": 10
+        },
+        {
+          "year": 2023,
+          "count": 13
+        },
+        {
+          "year": 2024,
+          "count": 12
+        },
+        {
+          "year": 2025,
+          "count": 18
+        }
+      ]
+    },
+    {
+      "id": "h3africa",
+      "name": "H3Africa",
+      "country": "Pan-African",
+      "region": "AFR",
+      "stats": {
+        "totalPublications": 139,
+        "diseasesCovered": 9,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 5.8
+      },
+      "topDiseases": [
+        {
+          "id": "chronic_kidney",
+          "count": 7
+        },
+        {
+          "id": "preterm_birth",
+          "count": 5
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 5
+        },
+        {
+          "id": "stroke",
+          "count": 3
+        },
+        {
+          "id": "hiv_aids",
+          "count": 2
+        },
+        {
+          "id": "diabetes",
+          "count": 2
+        },
+        {
+          "id": "tuberculosis",
+          "count": 1
+        },
+        {
+          "id": "lung_cancer",
+          "count": 1
+        },
+        {
+          "id": "ntds",
+          "count": 1
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2013,
+          "count": 4
+        },
+        {
+          "year": 2014,
+          "count": 7
+        },
+        {
+          "year": 2015,
+          "count": 9
+        },
+        {
+          "year": 2016,
+          "count": 11
+        },
+        {
+          "year": 2017,
+          "count": 13
+        },
+        {
+          "year": 2018,
+          "count": 14
+        },
+        {
+          "year": 2019,
+          "count": 15
+        },
+        {
+          "year": 2020,
+          "count": 7
+        },
+        {
+          "year": 2021,
+          "count": 13
+        },
+        {
+          "year": 2022,
+          "count": 15
+        },
+        {
+          "year": 2023,
+          "count": 12
+        },
+        {
+          "year": 2024,
+          "count": 9
+        },
+        {
+          "year": 2025,
+          "count": 10
+        }
+      ]
+    },
+    {
+      "id": "nako",
+      "name": "German National Cohort (NAKO)",
+      "country": "Germany",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 138,
+        "diseasesCovered": 15,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 1.4
+      },
+      "topDiseases": [
+        {
+          "id": "depression",
+          "count": 12
+        },
+        {
+          "id": "anxiety",
+          "count": 9
+        },
+        {
+          "id": "diabetes",
+          "count": 5
+        },
+        {
+          "id": "preterm_birth",
+          "count": 2
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 2
+        },
+        {
+          "id": "lung_cancer",
+          "count": 2
+        },
+        {
+          "id": "asthma",
+          "count": 2
+        },
+        {
+          "id": "cirrhosis",
+          "count": 1
+        },
+        {
+          "id": "copd",
+          "count": 1
+        },
+        {
+          "id": "low_back_pain",
+          "count": 1
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2016,
+          "count": 7
+        },
+        {
+          "year": 2017,
+          "count": 5
+        },
+        {
+          "year": 2018,
+          "count": 3
+        },
+        {
+          "year": 2019,
+          "count": 6
+        },
+        {
+          "year": 2020,
+          "count": 21
+        },
+        {
+          "year": 2021,
+          "count": 5
+        },
+        {
+          "year": 2022,
+          "count": 14
+        },
+        {
+          "year": 2023,
+          "count": 19
+        },
+        {
+          "year": 2024,
+          "count": 22
+        },
+        {
+          "year": 2025,
+          "count": 36
+        }
+      ]
+    },
+    {
+      "id": "estonian_biobank",
+      "name": "Estonian Biobank",
+      "country": "Estonia",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 116,
+        "diseasesCovered": 11,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 0.0
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 7
+        },
+        {
+          "id": "breast_cancer",
+          "count": 5
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 5
+        },
+        {
+          "id": "depression",
+          "count": 4
+        },
+        {
+          "id": "asthma",
+          "count": 3
+        },
+        {
+          "id": "stroke",
+          "count": 2
+        },
+        {
+          "id": "schizophrenia",
+          "count": 2
+        },
+        {
+          "id": "cirrhosis",
+          "count": 2
+        },
+        {
+          "id": "parkinsons",
+          "count": 1
+        },
+        {
+          "id": "alzheimers",
+          "count": 1
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2012,
+          "count": 1
+        },
+        {
+          "year": 2014,
+          "count": 3
+        },
+        {
+          "year": 2015,
+          "count": 5
+        },
+        {
+          "year": 2016,
+          "count": 4
+        },
+        {
+          "year": 2017,
+          "count": 4
+        },
+        {
+          "year": 2018,
+          "count": 2
+        },
+        {
+          "year": 2019,
+          "count": 11
+        },
+        {
+          "year": 2020,
+          "count": 2
+        },
+        {
+          "year": 2021,
+          "count": 4
+        },
+        {
+          "year": 2022,
+          "count": 17
+        },
+        {
+          "year": 2023,
+          "count": 14
+        },
+        {
+          "year": 2024,
+          "count": 18
+        },
+        {
+          "year": 2025,
+          "count": 31
+        }
+      ]
+    },
+    {
+      "id": "geisinger_mycode",
+      "name": "Geisinger MyCode",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "totalPublications": 96,
+        "diseasesCovered": 15,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 4.2
+      },
+      "topDiseases": [
+        {
+          "id": "breast_cancer",
+          "count": 7
+        },
+        {
+          "id": "lung_cancer",
+          "count": 6
+        },
+        {
+          "id": "stroke",
+          "count": 4
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 4
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 3
+        },
+        {
+          "id": "diabetes",
+          "count": 2
+        },
+        {
+          "id": "preterm_birth",
+          "count": 2
+        },
+        {
+          "id": "alzheimers",
+          "count": 1
+        },
+        {
+          "id": "copd",
+          "count": 1
+        },
+        {
+          "id": "ntds",
+          "count": 1
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2013,
+          "count": 1
+        },
+        {
+          "year": 2016,
+          "count": 2
+        },
+        {
+          "year": 2018,
+          "count": 8
+        },
+        {
+          "year": 2019,
+          "count": 4
+        },
+        {
+          "year": 2020,
+          "count": 9
+        },
+        {
+          "year": 2021,
+          "count": 11
+        },
+        {
+          "year": 2022,
+          "count": 15
+        },
+        {
+          "year": 2023,
+          "count": 12
+        },
+        {
+          "year": 2024,
+          "count": 10
+        },
+        {
+          "year": 2025,
+          "count": 24
+        }
+      ]
+    },
+    {
+      "id": "mgb_biobank",
+      "name": "Mass General Brigham Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "totalPublications": 92,
+        "diseasesCovered": 17,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 2.2
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 7
+        },
+        {
+          "id": "cirrhosis",
+          "count": 5
+        },
+        {
+          "id": "alzheimers",
+          "count": 4
+        },
+        {
+          "id": "depression",
+          "count": 4
+        },
+        {
+          "id": "ischemic_heart_disease",
+          "count": 4
+        },
+        {
+          "id": "copd",
+          "count": 3
+        },
+        {
+          "id": "stroke",
+          "count": 3
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 2
+        },
+        {
+          "id": "asthma",
+          "count": 2
+        },
+        {
+          "id": "preterm_birth",
+          "count": 1
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2016,
+          "count": 6
+        },
+        {
+          "year": 2017,
+          "count": 1
+        },
+        {
+          "year": 2018,
+          "count": 1
+        },
+        {
+          "year": 2019,
+          "count": 2
+        },
+        {
+          "year": 2020,
+          "count": 3
+        },
+        {
+          "year": 2021,
+          "count": 8
+        },
+        {
+          "year": 2022,
+          "count": 18
+        },
+        {
+          "year": 2023,
+          "count": 13
+        },
+        {
+          "year": 2024,
+          "count": 14
+        },
+        {
+          "year": 2025,
+          "count": 26
+        }
+      ]
+    },
+    {
+      "id": "awigen",
+      "name": "AWI-Gen",
+      "country": "Pan-African",
+      "region": "AFR",
+      "stats": {
+        "totalPublications": 60,
+        "diseasesCovered": 9,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 15.0
+      },
+      "topDiseases": [
+        {
+          "id": "hiv_aids",
+          "count": 7
+        },
+        {
+          "id": "diabetes",
+          "count": 4
+        },
+        {
+          "id": "tuberculosis",
+          "count": 1
+        },
+        {
+          "id": "breast_cancer",
+          "count": 1
+        },
+        {
+          "id": "depression",
+          "count": 1
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 1
+        },
+        {
+          "id": "malaria",
+          "count": 1
+        },
+        {
+          "id": "preterm_birth",
+          "count": 1
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 1
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2016,
+          "count": 1
+        },
+        {
+          "year": 2017,
+          "count": 1
+        },
+        {
+          "year": 2018,
+          "count": 8
+        },
+        {
+          "year": 2019,
+          "count": 5
+        },
+        {
+          "year": 2020,
+          "count": 5
+        },
+        {
+          "year": 2021,
+          "count": 7
+        },
+        {
+          "year": 2022,
+          "count": 5
+        },
+        {
+          "year": 2023,
+          "count": 7
+        },
+        {
+          "year": 2024,
+          "count": 8
+        },
+        {
+          "year": 2025,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "id": "mexico_city",
+      "name": "Mexico City Prospective Study",
+      "country": "Mexico",
+      "region": "AMR",
+      "stats": {
+        "totalPublications": 29,
+        "diseasesCovered": 6,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 0.0
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 5
+        },
+        {
+          "id": "alzheimers",
+          "count": 2
+        },
+        {
+          "id": "lung_cancer",
+          "count": 2
+        },
+        {
+          "id": "breast_cancer",
+          "count": 2
+        },
+        {
+          "id": "chronic_kidney",
+          "count": 1
+        },
+        {
+          "id": "stroke",
+          "count": 1
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2006,
+          "count": 1
+        },
+        {
+          "year": 2017,
+          "count": 1
+        },
+        {
+          "year": 2021,
+          "count": 1
+        },
+        {
+          "year": 2022,
+          "count": 1
+        },
+        {
+          "year": 2023,
+          "count": 3
+        },
+        {
+          "year": 2024,
+          "count": 7
+        },
+        {
+          "year": 2025,
+          "count": 15
+        }
+      ]
+    },
+    {
+      "id": "danish_national",
+      "name": "Danish National Biobank",
+      "country": "Denmark",
+      "region": "EUR",
+      "stats": {
+        "totalPublications": 9,
+        "diseasesCovered": 2,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 22.2
+      },
+      "topDiseases": [
+        {
+          "id": "preterm_birth",
+          "count": 2
+        },
+        {
+          "id": "neonatal_disorders",
+          "count": 2
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2017,
+          "count": 1
+        },
+        {
+          "year": 2019,
+          "count": 1
+        },
+        {
+          "year": 2021,
+          "count": 2
+        },
+        {
+          "year": 2022,
+          "count": 1
+        },
+        {
+          "year": 2023,
+          "count": 3
+        },
+        {
+          "year": 2025,
+          "count": 1
+        }
+      ]
+    },
+    {
+      "id": "uganda_genome",
+      "name": "Uganda Genome Resource",
+      "country": "Uganda",
+      "region": "AFR",
+      "stats": {
+        "totalPublications": 5,
+        "diseasesCovered": 1,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 0.0
+      },
+      "topDiseases": [
+        {
+          "id": "diabetes",
+          "count": 1
+        }
+      ],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2019,
+          "count": 1
+        },
+        {
+          "year": 2022,
+          "count": 1
+        },
+        {
+          "year": 2023,
+          "count": 1
+        },
+        {
+          "year": 2025,
+          "count": 2
+        }
+      ]
+    },
+    {
+      "id": "epigen_brazil",
+      "name": "EPIGEN-Brazil",
+      "country": "Brazil",
+      "region": "AMR",
+      "stats": {
+        "totalPublications": 1,
+        "diseasesCovered": 0,
+        "criticalGaps": 0,
+        "ros": 0.0,
+        "globalSouthPct": 0.0
+      },
+      "topDiseases": [],
+      "criticalGapDiseases": [],
+      "yearTrend": [
+        {
+          "year": 2018,
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "totalCount": 27,
+  "generated": "2025-12-23T19:10:12.566016"
+}
