@@ -1,0 +1,23 @@
+
+AUTHOR DATA FETCHING SUMMARY REPORT
+==================================
+Input: /Users/Admin/Library/Mobile Documents/com~apple~CloudDocs/PUBLICATIONS/07-EHR/DATA/biobank_research_data.csv
+Output Directory: /Users/Admin/Library/Mobile Documents/com~apple~CloudDocs/PUBLICATIONS/07-EHR/ANALYSIS/01-00-FETCH-AUTHOR-DATA
+Processing Date: 2025-07-03 20:37
+
+DATASET STATISTICS:
+- Total publications processed: 14,655
+- Publications with author data: 14,610
+- Publications with affiliations: 14,385
+- Publications with institutions: 14,224
+- Average authors per publication: 13.2
+- Average institutions per publication: 5.4
+
+OUTPUTS GENERATED:
+1. biobank_research_data_with_authors.csv - Main augmented dataset
+2. raw_author_data.csv - Raw author data from PubMed
+3. author_data_summary_report.txt - This summary report
+
+NEXT STEP:
+Run the collaboration network analysis:
+python3 PYTHON/01-01-collaboration-network-analysis-updated.py

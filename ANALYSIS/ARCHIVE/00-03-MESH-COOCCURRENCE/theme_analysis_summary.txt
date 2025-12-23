@@ -1,0 +1,47 @@
+# MeSH Co-occurrence Theme Analysis Summary
+
+## Biobank Clusters
+
+### Cluster 1 (5 biobanks)
+Biobanks: UK Biobank, Million Veteran Program, FinnGen, All of Us, Estonian Biobank
+
+Common research themes: optic disk, rare diseases, allied health personnel, carotid intima-media thickness, clonal hematopoiesis, blood chemical analysis, urine, specimen handling, urinalysis, cryopreservation
+
+
+## Biobank-Specific Themes
+
+### UK Biobank
+Theme 1: optic disk, carotid intima-media thickness, rare diseases, clonal hematopoiesis, allied health personnel
+Theme 2: specimen handling, urine, blood chemical analysis, urinalysis, cryopreservation
+Theme 3: cannabis, cannabinoid receptor agonists, hallucinogens, white matter, receptor, cannabinoid, cb1
+Theme 4: circadian clocks, alveolar epithelial cells, regeneration, circadian rhythm, influenza a virus
+Theme 5: natural language processing, health information exchange, health information interoperability, systematized nomenclature of medicine, semantics
+
+### Million Veteran Program
+Theme 1: vault ribonucleoprotein particles, recombinant proteins, rna, small interfering, molecular sequence data, transfection
+Theme 2: mitral valve prolapse, mitral valve, echocardiography, heart valve prosthesis implantation, mitral valve insufficiency
+Theme 3: kinetics, minute virus of mice, escherichia coli, protein structure, secondary, plasmids
+Theme 4: rotation, electric stimulation, vestibule, labyrinth, prosthesis implantation, prosthesis design
+Theme 5: urination, reflex, rats, wistar, rats, rats, sprague-dawley
+
+### FinnGen
+Theme 1: mendelian randomization analysis, clostridiales, hernias, diaphragmatic, congenital, iga vasculitis, respiratory tract infections
+Theme 2: cytomegalovirus infections, herpes simplex, herpesviridae, puberty, precocious, eukaryotic initiation factor-4g
+Theme 3: primary immunodeficiency diseases, varicella zoster virus infection, immunologic deficiency syndromes, virus activation, herpes zoster
+Theme 4: regulatory factor x transcription factors, mice, inbred nod, insulin-secreting cells, narcolepsy, mice, scid
+Theme 5: exotropia, esotropia, polymorphism, genetic, strabismus, blood coagulation factors
+
+### All of Us
+Theme 1: nursing research, science, philosophy, burns, chemical, caustics
+Theme 2: cementation, dental prosthesis design, dental casting technique, crowns, gold alloys
+Theme 3: history, 20th century, history, 21st century, psychoanalytic theory, psychoanalysis, practice management, dental
+Theme 4: consumer product safety, biotechnology, food, genetically modified, organisms, genetically modified, food technology
+Theme 5: disaster planning, personnel, hospital, health facility closure, reimbursement mechanisms, gatekeeping
+
+### Estonian Biobank
+Theme 1: s-adenosylmethionine, purines, mercaptopurine, methyltransferases, gene expression profiling
+Theme 2: prophylactic mastectomy, brca2 protein, truth disclosure, hereditary breast and ovarian cancer syndrome, attitude
+Theme 3: ccaat-enhancer-binding proteins, gata2 transcription factor, enhancer elements, genetic, basophils, base sequence
+Theme 4: ixodes, lyme disease, borrelia burgdorferi, secretoglobins, candidiasis, vulvovaginal
+Theme 5: estonia, alphapapillomavirus, cd59 antigens, gene dosage, polymerase chain reaction
+

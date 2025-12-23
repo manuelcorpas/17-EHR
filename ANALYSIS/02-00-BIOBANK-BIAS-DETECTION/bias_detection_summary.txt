@@ -1,0 +1,55 @@
+
+BIOBANK BIAS DETECTION REPORT
+=============================
+Generated: 2025-09-06T18:07:00.046552
+
+DATASET OVERVIEW:
+- Total papers analyzed: 14,655
+- Biobanks included: 5
+- Time period: 2003-2024
+
+BIAS PREVALENCE SUMMARY:
+
+POPULATION STRATIFICATION:
+- Papers mentioning: 5,737 (39.1%)
+- Average confidence: 0.52
+- Severity: {'medium': 2104, 'mentioned': 1908, 'low': 1069, 'high': 656}
+
+BATCH EFFECTS:
+- Papers mentioning: 47 (0.3%)
+- Average confidence: 0.35
+- Severity: {'mentioned': 47}
+
+MISSING DATA PATTERNS:
+- Papers mentioning: 5,500 (37.5%)
+- Average confidence: 0.34
+- Severity: {'mentioned': 5500}
+
+SAMPLING BIAS:
+- Papers mentioning: 1,003 (6.8%)
+- Average confidence: 0.37
+- Severity: {'mentioned': 998, 'high': 5}
+
+TECHNICAL VARIATION:
+- Papers mentioning: 270 (1.8%)
+- Average confidence: 0.34
+- Severity: {'mentioned': 268, 'high': 2}
+
+TOP BIOBANKS BY BIAS AWARENESS:
+• FinnGen: 24.2% awareness
+• Million Veteran Program: 21.4% awareness
+• All of Us: 17.2% awareness
+• UK Biobank: 15.9% awareness
+• Estonian Biobank: 15.2% awareness
+
+KEY FINDINGS:
+- Most discussed bias: Population Stratification (39.1%)
+- Least discussed bias: Batch Effects (0.3%)
+- Gap in awareness: 38.8 percentage points
+
+RECOMMENDATIONS:
+1. Increase awareness of underrepresented bias types, especially Batch Effects
+2. Standardize bias reporting across all biobanks
+3. Implement systematic bias assessment protocols
+4. Enhance diversity and inclusion in recruitment strategies
+5. Develop bias mitigation guidelines specific to biobank research

@@ -1,0 +1,257 @@
+BIOBANK RESEARCH ANALYSIS - ANNUAL REVIEW
+============================================================
+
+NOTE: Citation analysis shows the top 10 articles by citation count
+for each biobank (including articles with 0 citations if necessary).
+Articles are ranked by citation count, with publication year as tiebreaker.
+
+1. SUBJECT OF MOST COMMONLY OCCURRING KEYWORDS BY BIOBANK
+------------------------------------------------------------
+
+FINNGEN:
+  Genetic Research: Mendelian randomization (1537); GWAS (Genome-wide association studies) (235); Genetics (73)
+  Clinical Applications: Cardiovascular disease (65); Inflammatory Bowel Disease (40)
+  Disease Focus: Depression (44); Type 2 diabetes (35)
+  Methodology: Meta-analysis (41)
+
+UK BIOBANK:
+  Genetic Research: Mendelian randomization (1780); GWAS (Genome-wide association studies) (682); Genetics (535); Polygenic risk score (234)
+  Clinical Applications: Cardiovascular disease (540)
+  Disease Focus: Dementia (407); Depression (309); Type 2 diabetes (240)
+  Methodology: Cohort study (334)
+
+MILLION VETERAN PROGRAM:
+  Genetic Research: GWAS (Genome-wide association studies) (37); Mendelian randomization (36); Genetics (36)
+  Clinical Applications: Cardiovascular disease (30)
+
+ALL OF US:
+  Genetic Research: Genetics (29)
+  Disease Focus: Depression (21)
+
+ESTONIAN BIOBANK:
+  Genetic Research: GWAS (Genome-wide association studies) (14); Polygenic risk score (14); Genetics (10); Mendelian randomization (6)
+  Clinical Applications: Cardiovascular disease (4); Non-alcoholic Fatty Liver Disease (3)
+  Disease Focus: Cancer (3)
+
+
+2. SUBJECT OF MOST CITED PAPERS BY BIOBANK (TOP 10 BY CITATION COUNT)
+------------------------------------------------------------
+
+UK BIOBANK (Top 10 articles by citation count):
+  Most cited article (3566 citations):
+    Associations of socioeconomic status with infectious diseases mediated by lifestyle, environmental p...
+    Authors: Ye X; Wang Y; Zou Y et al.
+    Journal: Infectious diseases of poverty (2023.0)
+  Citation range: 115 - 3566
+  Publication years: 2023 - 2024
+
+MILLION VETERAN PROGRAM (Top 10 articles by citation count):
+  Most cited article (1711 citations):
+    Secondary leaflet tethering in patients with severe degenerative mitral regurgitation and its associ...
+    Authors: Ge Z; Hu C; Zhao Y et al.
+    Journal: Echocardiography (Mount Kisco, N.Y.) (2023.0)
+  Citation range: 0 - 1711
+  Publication years: 2023 - 2025
+
+FINNGEN (Top 10 articles by citation count):
+  Most cited article (85 citations):
+    Unraveling the causative connection between urticaria, inflammatory cytokines, and mental disorders:...
+    Authors: Liu Z; Wang Y; Wang S et al.
+    Journal: Skin research and technology : official journal of International Society for Bioengineering and the Skin (ISBS) [and] International Society for Digital Imaging of Skin (ISDIS) [and] International Society for Skin Imaging (ISSI) (2024.0)
+  Citation range: 0 - 85
+  Publication years: 2024 - 2025
+
+ALL OF US (Top 10 articles by citation count):
+  Most cited article (715 citations):
+    Enhancing study designs of disease prevalence investigations conducted with the All of Us Research P...
+    Authors: Patil MK
+    Journal: Journal of the American Academy of Dermatology (2024.0)
+  Citation range: 0 - 715
+  Publication years: 2024 - 2025
+
+ESTONIAN BIOBANK (Top 10 articles by citation count):
+  Most cited article (437 citations):
+    Variability of polygenic prediction for body mass index in Africa....
+    Authors: Chikowore T; Läll K; Micklesfield LK et al.
+    Journal: Genome medicine (2024.0)
+  Citation range: 0 - 437
+  Publication years: 2024 - 2025
+
+
+3. TOP 20 MOST PROLIFIC AUTHORS BY BIOBANK
+------------------------------------------------------------
+
+FINNGEN:
+   1. Zhang Y: 130 publications
+   2. Wang Y: 123 publications
+   3. Li J: 102 publications
+   4. Li X: 99 publications
+   5. Li Y: 97 publications
+   6. Liu Y: 97 publications
+   7. Wang J: 92 publications
+   8. Wang X: 90 publications
+   9. Chen Y: 83 publications
+  10. Zhang X: 71 publications
+  11. Wang Z: 70 publications
+  12. Zhang J: 68 publications
+  13. Chen J: 67 publications
+  14. Larsson SC: 67 publications
+  15. Liu J: 60 publications
+  16. Wang L: 58 publications
+  17. Yuan S: 58 publications
+  18. Wang W: 55 publications
+  19. Liu Z: 54 publications
+  20. Palotie A: 52 publications
+
+UK BIOBANK:
+   1. Zhang Y: 518 publications
+   2. Wang Y: 433 publications
+   3. Li Y: 325 publications
+   4. Wang X: 321 publications
+   5. Li X: 303 publications
+   6. Zhang J: 284 publications
+   7. Zhang X: 266 publications
+   8. Liu Y: 254 publications
+   9. Wang J: 247 publications
+  10. Chen Y: 240 publications
+  11. Li J: 230 publications
+  12. Chen X: 211 publications
+  13. Chen J: 193 publications
+  14. Chen L: 182 publications
+  15. Wang W: 179 publications
+  16. Pell JP: 178 publications
+  17. Zhang L: 176 publications
+  18. Wang Z: 176 publications
+  19. Sun Y: 174 publications
+  20. Zhang H: 172 publications
+
+MILLION VETERAN PROGRAM:
+   1. Gaziano JM: 113 publications
+   2. Cho K: 87 publications
+   3. Tsao PS: 65 publications
+   4. Gelernter J: 52 publications
+   5. Pyarajan S: 46 publications
+   6. Li Y: 44 publications
+   7. Wilson PWF: 43 publications
+   8. O'Donnell CJ: 43 publications
+   9. Ho YL: 42 publications
+  10. Sun YV: 41 publications
+  11. Assimes TL: 41 publications
+  12. Polimanti R: 40 publications
+  13. Damrauer SM: 39 publications
+  14. Chang KM: 39 publications
+  15. Huffman JE: 35 publications
+  16. Wang Y: 34 publications
+  17. Liu Y: 34 publications
+  18. Levine RA: 33 publications
+  19. Stein MB: 30 publications
+  20. Lynch JA: 30 publications
+
+ALL OF US:
+   1. Cohen JM: 47 publications
+   2. Denny JC: 25 publications
+   3. Baxter SL: 24 publications
+   4. Leasure AC: 23 publications
+   5. Master H: 18 publications
+   6. Joshi TP: 17 publications
+   7. Fan R: 17 publications
+   8. Ohno-Machado L: 16 publications
+   9. Damsky W: 16 publications
+  10. Wang X: 15 publications
+  11. Lipner SR: 14 publications
+  12. Roden DM: 14 publications
+  13. Weinreb RN: 14 publications
+  14. Boerwinkle E: 14 publications
+  15. Clark CR: 14 publications
+  16. Cohn E: 13 publications
+  17. Sheth KN: 13 publications
+  18. Chen GF: 13 publications
+  19. Radha Saseendrakumar B: 13 publications
+  20. Smoller JW: 12 publications
+
+ESTONIAN BIOBANK:
+   1. Mägi R: 30 publications
+   2. Esko T: 26 publications
+   3. Metspalu A: 24 publications
+   4. Fischer K: 21 publications
+   5. Läll K: 17 publications
+   6. Milani L: 13 publications
+   7. Reigo A: 13 publications
+   8. Laisk T: 13 publications
+   9. Võsa U: 11 publications
+  10. Palta P: 11 publications
+  11. Kals M: 11 publications
+  12. Nikopensius T: 10 publications
+  13. Tõnisson N: 10 publications
+  14. Haller T: 9 publications
+  15. Krebs K: 8 publications
+  16. Lehto K: 8 publications
+  17. Abner E: 7 publications
+  18. Alver M: 7 publications
+  19. Leitsalu L: 7 publications
+  20. Nõukas M: 7 publications
+
+
+4. TOP 10 LEADING INSTITUTIONS BY BIOBANK
+------------------------------------------------------------
+
+FINNGEN:
+   1. University of Helsinki: 323 publications
+   2. Central South University: 272 publications
+   3. Sichuan University: 175 publications
+   4. Xiangya Hospital: 158 publications
+   5. Massachusetts General Hospital: 130 publications
+   6. West China Hospital: 129 publications
+   7. Zhejiang University School of Medicine: 125 publications
+   8. Karolinska Institutet: 122 publications
+   9. Fudan University: 109 publications
+  10. University of Cambridge: 105 publications
+
+UK BIOBANK:
+   1. University of Oxford: 1800 publications
+   2. University of Cambridge: 1221 publications
+   3. Massachusetts General Hospital: 1116 publications
+   4. Fudan University: 1111 publications
+   5. University of Bristol: 1004 publications
+   6. University of Edinburgh: 997 publications
+   7. University of Glasgow: 903 publications
+   8. Imperial College London: 843 publications
+   9. Central South University: 782 publications
+  10. University College London: 753 publications
+
+MILLION VETERAN PROGRAM:
+   1. Massachusetts General Hospital: 187 publications
+   2. Vanderbilt University Medical Center: 187 publications
+   3. Brigham and Women's Hospital: 184 publications
+   4. University of California San Diego: 175 publications
+   5. Stanford University School of Medicine: 152 publications
+   6. University of Pennsylvania: 150 publications
+   7. University of California: 146 publications
+   8. University of Pennsylvania Perelman School of Medicine: 114 publications
+   9. Yale University School of Medicine: 94 publications
+  10. Massachusetts Veterans Epidemiology Research and Information Center (MAVERIC): 83 publications
+
+ALL OF US:
+   1. Vanderbilt University Medical Center: 256 publications
+   2. University of California: 158 publications
+   3. National Institutes of Health: 149 publications
+   4. Massachusetts General Hospital: 134 publications
+   5. Baylor College of Medicine: 95 publications
+   6. University of California San Diego: 79 publications
+   7. Brigham and Women's Hospital: 66 publications
+   8. University of Pennsylvania: 56 publications
+   9. University of Michigan: 47 publications
+  10. Broad Institute of MIT and Harvard: 46 publications
+
+ESTONIAN BIOBANK:
+   1. University of Tartu: 222 publications
+   2. Institute of Genomics: 115 publications
+   3. Estonian Genome Center: 48 publications
+   4. Estonian Genome Centre: 46 publications
+   5. University of Helsinki: 42 publications
+   6. Tartu University Hospital: 26 publications
+   7. Institute of Molecular and Cell Biology: 22 publications
+   8. University of Oulu: 22 publications
+   9. University of Lausanne: 20 publications
+  10. University of Edinburgh: 20 publications
+

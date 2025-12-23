@@ -1,0 +1,31 @@
+
+BIOBANK RESEARCH ANALYSIS SUMMARY
+Generated: 2025-07-01 11:13:55
+============================================================
+
+DATASET OVERVIEW:
+  Total Papers: 17,856
+  Year Range: 2003-2025
+  Unique Journals: 1,769
+  Unique MeSH Terms: 5,114
+
+PAPERS BY BIOBANK:
+  UK Biobank: 13,304 papers (74.5%)
+  FinnGen: 2,483 papers (13.9%)
+  All of Us: 842 papers (4.7%)
+  Estonian Biobank: 728 papers (4.1%)
+  Million Veteran Program: 499 papers (2.8%)
+
+TOP 5 JOURNALS (Overall):
+  medRxiv : the preprint server for health sciences: 479 papers
+  Scientific reports: 455 papers
+  Nature communications: 406 papers
+  Nature genetics: 273 papers
+  PloS one: 252 papers
+
+TOP 5 MeSH TERMS (Overall):
+  Humans: 13,622 papers
+  Female: 7,262 papers
+  Male: 6,809 papers
+  Middle Aged: 5,511 papers
+  Genome-Wide Association Study: 5,191 papers
