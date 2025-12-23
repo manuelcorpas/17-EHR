@@ -83,3 +83,5 @@ config.local.py
 # - ANALYSIS/**/*.pdf (figures)
 # - FIGS/* (publication figures)
 # - PRODUCTION/* (final outputs)
+DATA/bhem_publications*.csv
+DATA/bhem_fetch_progress.csv
