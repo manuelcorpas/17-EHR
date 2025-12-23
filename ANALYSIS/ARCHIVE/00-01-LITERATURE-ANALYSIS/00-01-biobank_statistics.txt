@@ -1,0 +1,502 @@
+===============================================
+BIOBANK EHR LITERATURE DESCRIPTIVE STATISTICS
+===============================================
+
+Total papers analyzed: 17976
+Papers by biobank:
+  - FinnGen: 2067 papers
+  - UK Biobank: 11312 papers
+  - Million Veteran Program: 2443 papers
+  - All of Us: 1493 papers
+  - Estonian Biobank: 96 papers
+
+
+==================================================
+FinnGen STATISTICS
+==================================================
+
+1. MOST COMMON MeSH TERMS
+----------------------
+  Humans: 1402 occurrences
+  Mendelian randomization: 1170 occurrences
+  GWAS (Genome-wide association studies): 1068 occurrences
+  Polymorphism, Single Nucleotide: 652 occurrences
+  Female: 506 occurrences
+  Genetic Predisposition To Disease: 427 occurrences
+  Risk Factors: 411 occurrences
+  Male: 389 occurrences
+  Middle Aged: 192 occurrences
+  Gastrointestinal Microbiome: 128 occurrences
+  Aged: 127 occurrences
+  Adult: 124 occurrences
+  Diabetes Mellitus, Type 2: 109 occurrences
+  Pregnancy: 82 occurrences
+  Phenotype: 79 occurrences
+  Biomarkers: 72 occurrences
+  Causality and causal inference: 71 occurrences
+  Quantitative Trait Loci: 67 occurrences
+  United Kingdom: 65 occurrences
+  Cardiovascular disease: 62 occurrences
+
+2. MOST COMMON AUTHOR KEYWORDS
+----------------------------
+  Mendelian randomization: 1537 occurrences
+  Causality and causal inference: 415 occurrences
+  GWAS (Genome-wide association studies): 235 occurrences
+  Gut microbiota: 175 occurrences
+  Genetics: 73 occurrences
+  Cardiovascular disease: 65 occurrences
+  Finngen: 64 occurrences
+  Depression: 44 occurrences
+  Meta-analysis: 41 occurrences
+  Inflammatory Bowel Disease: 40 occurrences
+  Epidemiology: 36 occurrences
+  Type 2 Diabetes: 35 occurrences
+  Drug Target: 34 occurrences
+  UK Biobank: 33 occurrences
+  Hypertension: 33 occurrences
+  Rheumatoid Arthritis: 32 occurrences
+  Ulcerative Colitis: 31 occurrences
+  Obesity: 30 occurrences
+  Alzheimer’s Disease: 28 occurrences
+  Asthma: 28 occurrences
+
+3. MOST PROLIFIC AUTHORS
+-----------------------
+  Zhang Y: 130 publications
+  Wang Y: 123 publications
+  Li J: 102 publications
+  Li X: 99 publications
+  Li Y: 97 publications
+  Liu Y: 97 publications
+  Wang J: 92 publications
+  Wang X: 90 publications
+  Chen Y: 83 publications
+  Zhang X: 71 publications
+  Wang Z: 70 publications
+  Zhang J: 68 publications
+  Chen J: 67 publications
+  Larsson SC: 67 publications
+  Liu J: 60 publications
+  Wang L: 58 publications
+  Yuan S: 58 publications
+  Wang W: 55 publications
+  Liu Z: 54 publications
+  Palotie A: 52 publications
+
+4. LEADING INSTITUTIONS
+----------------------
+  1. University of Helsinki: 323 publications
+  2. Central South University: 272 publications
+  3. Sichuan University: 175 publications
+  4. Xiangya Hospital: 158 publications
+  5. Massachusetts General Hospital: 130 publications
+  6. West China Hospital: 129 publications
+  7. Zhejiang University School of Medicine: 125 publications
+  8. Karolinska Institutet: 122 publications
+  9. Fudan University: 109 publications
+  10. University of Cambridge: 105 publications
+  11. Southern Medical University: 103 publications
+  12. Capital Medical University: 99 publications
+  13. Institute of Environmental Medicine: 94 publications
+  14. Huazhong University of Science and Technology: 93 publications
+  15. Tongji Medical College: 86 publications
+  16. Broad Institute of MIT and Harvard: 82 publications
+  17. Institute for Molecular Medicine Finland (FIMM): 82 publications
+  18. Shanghai Jiao Tong University School of Medicine: 79 publications
+  19. Institute for Molecular Medicine Finland: 75 publications
+  20. Sun Yat-sen University: 75 publications
+
+
+
+==================================================
+UK Biobank STATISTICS
+==================================================
+
+1. MOST COMMON MeSH TERMS
+----------------------
+  Humans: 8717 occurrences
+  Female: 4794 occurrences
+  Male: 4555 occurrences
+  Middle Aged: 3875 occurrences
+  United Kingdom: 3776 occurrences
+  Aged: 3296 occurrences
+  Risk Factors: 3116 occurrences
+  GWAS (Genome-wide association studies): 2867 occurrences
+  Adult: 2698 occurrences
+  Biological Specimen Banks: 2505 occurrences
+  Polymorphism, Single Nucleotide: 2027 occurrences
+  Mendelian randomization: 1817 occurrences
+  Genetic Predisposition To Disease: 1704 occurrences
+  Prospective Studies: 1690 occurrences
+  Cohort Studies: 1092 occurrences
+  Cardiovascular disease: 958 occurrences
+  Phenotype: 863 occurrences
+  UK Biobank: 816 occurrences
+  Incidence: 727 occurrences
+  Diabetes Mellitus, Type 2: 713 occurrences
+
+2. MOST COMMON AUTHOR KEYWORDS
+----------------------------
+  Mendelian randomization: 1780 occurrences
+  UK Biobank: 1411 occurrences
+  GWAS (Genome-wide association studies): 682 occurrences
+  Cardiovascular disease: 540 occurrences
+  Genetics: 535 occurrences
+  Epidemiology: 469 occurrences
+  Dementia: 407 occurrences
+  Mortality: 402 occurrences
+  Causality and causal inference: 341 occurrences
+  Cohort study: 334 occurrences
+  Depression: 309 occurrences
+  Physical activity: 260 occurrences
+  Type 2 Diabetes: 240 occurrences
+  Polygenic Risk Score: 234 occurrences
+  Obesity: 227 occurrences
+  COVID-19: 179 occurrences
+  Stroke: 176 occurrences
+  Air Pollution: 165 occurrences
+  Risk Factors: 162 occurrences
+  Machine Learning: 157 occurrences
+
+3. MOST PROLIFIC AUTHORS
+-----------------------
+  Zhang Y: 518 publications
+  Wang Y: 433 publications
+  Li Y: 325 publications
+  Wang X: 321 publications
+  Li X: 303 publications
+  Zhang J: 284 publications
+  Zhang X: 266 publications
+  Liu Y: 254 publications
+  Wang J: 247 publications
+  Chen Y: 240 publications
+  Li J: 230 publications
+  Chen X: 211 publications
+  Chen J: 193 publications
+  Chen L: 182 publications
+  Wang W: 179 publications
+  Pell JP: 178 publications
+  Zhang L: 176 publications
+  Wang Z: 176 publications
+  Sun Y: 174 publications
+  Zhang H: 172 publications
+
+4. LEADING INSTITUTIONS
+----------------------
+  1. University of Oxford: 1800 publications
+  2. University of Cambridge: 1221 publications
+  3. Massachusetts General Hospital: 1116 publications
+  4. Fudan University: 1111 publications
+  5. University of Bristol: 1004 publications
+  6. University of Edinburgh: 997 publications
+  7. University of Glasgow: 903 publications
+  8. Imperial College London: 843 publications
+  9. Central South University: 782 publications
+  10. University College London: 753 publications
+  11. Huazhong University of Science and Technology: 702 publications
+  12. Sichuan University: 698 publications
+  13. King's College London: 685 publications
+  14. Tongji Medical College: 680 publications
+  15. Southern Medical University: 674 publications
+  16. University of California: 616 publications
+  17. Sun Yat-sen University: 614 publications
+  18. Karolinska Institutet: 575 publications
+  19. Broad Institute of MIT and Harvard: 541 publications
+  20. Xiangya Hospital: 523 publications
+
+
+
+==================================================
+Million Veteran Program STATISTICS
+==================================================
+
+1. MOST COMMON MeSH TERMS
+----------------------
+  Humans: 1732 occurrences
+  Female: 1025 occurrences
+  Male: 970 occurrences
+  Middle Aged: 696 occurrences
+  Aged: 548 occurrences
+  Adult: 515 occurrences
+  Mitral valve prolapse: 465 occurrences
+  Animals: 290 occurrences
+  Retrospective Studies: 254 occurrences
+  Mitral Valve: 242 occurrences
+  Risk Factors: 227 occurrences
+  Treatment Outcome: 226 occurrences
+  Mitral Valve Insufficiency: 217 occurrences
+  Vault Ribonucleoprotein Particles: 186 occurrences
+  Echocardiography: 173 occurrences
+  Adolescent: 163 occurrences
+  GWAS (Genome-wide association studies): 155 occurrences
+  Prospective Studies: 150 occurrences
+  Veterans: 122 occurrences
+  Genetic Predisposition To Disease: 118 occurrences
+
+2. MOST COMMON AUTHOR KEYWORDS
+----------------------------
+  Mitral valve prolapse: 298 occurrences
+  Million Veteran Program (MVP): 161 occurrences
+  Physical activity: 85 occurrences
+  Mitral Regurgitation: 70 occurrences
+  Echocardiography: 59 occurrences
+  Mitral annular disjunction: 52 occurrences
+  Sudden Cardiac Death: 48 occurrences
+  Mitral Valve: 41 occurrences
+  GWAS (Genome-wide association studies): 37 occurrences
+  Mendelian randomization: 36 occurrences
+  Genetics: 36 occurrences
+  Atrial Fibrillation: 33 occurrences
+  Mitral Valve Repair: 30 occurrences
+  Epidemiology: 30 occurrences
+  Cardiovascular disease: 30 occurrences
+  Ventricular Arrhythmias: 27 occurrences
+  Mortality: 25 occurrences
+  Major Vault Protein: 22 occurrences
+  Accelerometer: 21 occurrences
+  Ventricular Tachycardia: 19 occurrences
+
+3. MOST PROLIFIC AUTHORS
+-----------------------
+  Gaziano JM: 113 publications
+  Cho K: 87 publications
+  Tsao PS: 65 publications
+  Gelernter J: 52 publications
+  Pyarajan S: 46 publications
+  Li Y: 44 publications
+  Wilson PWF: 43 publications
+  O'Donnell CJ: 43 publications
+  Ho YL: 42 publications
+  Sun YV: 41 publications
+  Assimes TL: 41 publications
+  Polimanti R: 40 publications
+  Damrauer SM: 39 publications
+  Chang KM: 39 publications
+  Huffman JE: 35 publications
+  Wang Y: 34 publications
+  Liu Y: 34 publications
+  Levine RA: 33 publications
+  Stein MB: 30 publications
+  Lynch JA: 30 publications
+
+4. LEADING INSTITUTIONS
+----------------------
+  1. Massachusetts General Hospital: 187 publications
+  2. Vanderbilt University Medical Center: 187 publications
+  3. Brigham and Women's Hospital: 184 publications
+  4. University of California San Diego: 175 publications
+  5. Stanford University School of Medicine: 152 publications
+  6. University of Pennsylvania: 150 publications
+  7. University of California: 146 publications
+  8. University of Pennsylvania Perelman School of Medicine: 114 publications
+  9. Yale University School of Medicine: 94 publications
+  10. Massachusetts Veterans Epidemiology Research and Information Center (MAVERIC): 83 publications
+  11. Boston University School of Public Health: 70 publications
+  12. University of Washington: 65 publications
+  13. Emory University School of Medicine: 65 publications
+  14. University of Michigan: 61 publications
+  15. College of Medicine: 61 publications
+  16. University of Cambridge: 60 publications
+  17. Stanford University: 59 publications
+  18. Corporal Michael J. Crescenz VA Medical Center: 58 publications
+  19. Boston University School of Medicine: 52 publications
+  20. Fudan University: 49 publications
+
+
+
+==================================================
+All of Us STATISTICS
+==================================================
+
+1. MOST COMMON MeSH TERMS
+----------------------
+  Humans: 1018 occurrences
+  Female: 366 occurrences
+  United States: 352 occurrences
+  Male: 333 occurrences
+  Population Health: 296 occurrences
+  Adult: 274 occurrences
+  Middle Aged: 265 occurrences
+  Aged: 221 occurrences
+  Cross-sectional Studies: 107 occurrences
+  Risk Factors: 99 occurrences
+  Young Adult: 92 occurrences
+  Adolescent: 90 occurrences
+  COVID-19: 77 occurrences
+  Case-control Studies: 64 occurrences
+  Genetic Predisposition To Disease: 59 occurrences
+  Biomedical Research: 55 occurrences
+  Electronic Health Records: 52 occurrences
+  Databases, Factual: 52 occurrences
+  GWAS (Genome-wide association studies): 51 occurrences
+  Prevalence: 51 occurrences
+
+2. MOST COMMON AUTHOR KEYWORDS
+----------------------------
+  All Of Us: 82 occurrences
+  Epidemiology: 49 occurrences
+  All Of Us Research Program: 47 occurrences
+  Electronic Health Records: 42 occurrences
+  COVID-19: 36 occurrences
+  Precision Medicine: 34 occurrences
+  Social Determinants Of Health: 34 occurrences
+  Genetics: 29 occurrences
+  Health Disparities: 26 occurrences
+  Depression: 21 occurrences
+  Machine Learning: 20 occurrences
+  Psoriasis: 16 occurrences
+  Mental Health: 15 occurrences
+  Atopic Dermatitis: 15 occurrences
+  Health Equity: 15 occurrences
+  Comorbidities: 15 occurrences
+  Public Health: 14 occurrences
+  Diabetes: 14 occurrences
+  Diversity: 14 occurrences
+  Big Data: 13 occurrences
+
+3. MOST PROLIFIC AUTHORS
+-----------------------
+  Cohen JM: 47 publications
+  Denny JC: 25 publications
+  Baxter SL: 24 publications
+  Leasure AC: 23 publications
+  Master H: 18 publications
+  Joshi TP: 17 publications
+  Fan R: 17 publications
+  Ohno-Machado L: 16 publications
+  Damsky W: 16 publications
+  Wang X: 15 publications
+  Lipner SR: 14 publications
+  Roden DM: 14 publications
+  Weinreb RN: 14 publications
+  Boerwinkle E: 14 publications
+  Clark CR: 14 publications
+  Cohn E: 13 publications
+  Sheth KN: 13 publications
+  Chen GF: 13 publications
+  Radha Saseendrakumar B: 13 publications
+  Smoller JW: 12 publications
+
+4. LEADING INSTITUTIONS
+----------------------
+  1. Vanderbilt University Medical Center: 256 publications
+  2. University of California: 158 publications
+  3. National Institutes of Health: 149 publications
+  4. Massachusetts General Hospital: 134 publications
+  5. Baylor College of Medicine: 95 publications
+  6. University of California San Diego: 79 publications
+  7. Brigham and Women's Hospital: 66 publications
+  8. University of Pennsylvania: 56 publications
+  9. University of Michigan: 47 publications
+  10. Broad Institute of MIT and Harvard: 46 publications
+  11. University of Washington: 45 publications
+  12. College of Medicine: 45 publications
+  13. Johns Hopkins University School of Medicine: 37 publications
+  14. Viterbi Family Department of Ophthalmology and Shiley Eye Institute: 35 publications
+  15. Columbia University: 32 publications
+  16. University of Alabama at Birmingham: 31 publications
+  17. University of South Carolina: 31 publications
+  18. University of North Carolina at Chapel Hill: 30 publications
+  19. Vanderbilt University: 27 publications
+  20. Columbia University Irving Medical Center: 27 publications
+
+
+
+==================================================
+Estonian Biobank STATISTICS
+==================================================
+
+1. MOST COMMON MeSH TERMS
+----------------------
+  Humans: 70 occurrences
+  Female: 43 occurrences
+  Estonia: 34 occurrences
+  GWAS (Genome-wide association studies): 33 occurrences
+  Male: 25 occurrences
+  Polymorphism, Single Nucleotide: 23 occurrences
+  Middle Aged: 21 occurrences
+  Genetic Predisposition To Disease: 20 occurrences
+  Aged: 19 occurrences
+  Adult: 19 occurrences
+  Risk Factors: 19 occurrences
+  Biological Specimen Banks: 13 occurrences
+  Electronic Health Records: 11 occurrences
+  Cohort Studies: 11 occurrences
+  Genotype: 10 occurrences
+  Multifactorial Inheritance: 9 occurrences
+  Adolescent: 8 occurrences
+  Genomics: 7 occurrences
+  United Kingdom: 7 occurrences
+  Cardiovascular disease: 7 occurrences
+
+2. MOST COMMON AUTHOR KEYWORDS
+----------------------------
+  Biobank: 14 occurrences
+  GWAS (Genome-wide association studies): 14 occurrences
+  Polygenic Risk Score: 10 occurrences
+  Genetics: 10 occurrences
+  Mendelian randomization: 6 occurrences
+  Electronic Health Records: 4 occurrences
+  Cardiovascular disease: 4 occurrences
+  Estonia: 3 occurrences
+  Causality and causal inference: 3 occurrences
+  Metabolomics: 3 occurrences
+  Breast Cancer: 3 occurrences
+  Non-alcoholic Fatty Liver Disease: 3 occurrences
+  Polycystic Ovary Syndrome: 3 occurrences
+  Risk Prediction: 3 occurrences
+  Obesity: 3 occurrences
+  Hypertension: 2 occurrences
+  Polygenic Score: 2 occurrences
+  BMI: 2 occurrences
+  Polygenic Risk Scores: 2 occurrences
+  Atopic Dermatitis: 2 occurrences
+
+3. MOST PROLIFIC AUTHORS
+-----------------------
+  Mägi R: 30 publications
+  Esko T: 26 publications
+  Metspalu A: 24 publications
+  Fischer K: 21 publications
+  Läll K: 17 publications
+  Milani L: 13 publications
+  Reigo A: 13 publications
+  Laisk T: 13 publications
+  Võsa U: 11 publications
+  Palta P: 11 publications
+  Kals M: 11 publications
+  Nikopensius T: 10 publications
+  Tõnisson N: 10 publications
+  Haller T: 9 publications
+  Krebs K: 8 publications
+  Lehto K: 8 publications
+  Abner E: 7 publications
+  Alver M: 7 publications
+  Leitsalu L: 7 publications
+  Nõukas M: 7 publications
+
+4. LEADING INSTITUTIONS
+----------------------
+  1. University of Tartu: 222 publications
+  2. Institute of Genomics: 115 publications
+  3. Estonian Genome Center: 48 publications
+  4. Estonian Genome Centre: 46 publications
+  5. University of Helsinki: 42 publications
+  6. Tartu University Hospital: 26 publications
+  7. Institute of Molecular and Cell Biology: 22 publications
+  8. University of Oulu: 22 publications
+  9. University of Lausanne: 20 publications
+  10. University of Edinburgh: 20 publications
+  11. Institute for Molecular Medicine Finland: 19 publications
+  12. Institute of Mathematics and Statistics: 18 publications
+  13. Institute of Clinical Medicine: 18 publications
+  14. Karolinska Institutet: 15 publications
+  15. University of Oxford: 15 publications
+  16. Massachusetts General Hospital: 14 publications
+  17. Institute of Computer Science: 10 publications
+  18. University of Padova: 10 publications
+  19. Broad Institute of MIT and Harvard: 9 publications
+  20. Oulu University Hospital: 9 publications
+
+

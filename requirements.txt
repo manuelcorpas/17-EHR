@@ -1,0 +1,34 @@
+# EHR-Linked Biobank Analysis - Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core data science
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Machine learning & clustering
+scikit-learn>=1.2.0
+
+# Dimensionality reduction
+umap-learn>=0.5.3
+
+# PubMed data retrieval
+biopython>=1.81
+
+# Network analysis (optional, for archived scripts)
+# networkx>=3.0
+
+# Progress bars (optional)
+tqdm>=4.65.0
+
+# Logging
+logging
+
+# Note: Standard library modules used:
+# - os, sys, re, json, time, datetime
+# - collections, warnings, math
+# - xml.etree.ElementTree

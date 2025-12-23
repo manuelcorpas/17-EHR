@@ -1,0 +1,61 @@
+
+BIOBANK RESEARCH ANALYSIS SUMMARY (PUBLISHED PAPERS ONLY)
+Generated: 2025-07-02 07:29:35
+======================================================================
+
+COUNT VERIFICATION:
+  ✅ All filtering counts verified and consistent
+  ✅ Published + Preprints = Total filtered papers: 14,142 + 513 = 14,655
+  ✅ Biobank distribution sums correctly: 14,142 = 14,142
+
+DATASET OVERVIEW:
+  Year Range Analyzed: 2003-2024 (2025 excluded as incomplete)
+  Total Papers (2000-2024): 14,655
+  Published Papers (Analysis): 14,142 (96.5%)
+  Preprints (Excluded): 513 (3.5%)
+  Unique Journals (Published): 1,537
+  Unique MeSH Terms (Published): 4,857
+
+PUBLISHED PAPERS BY BIOBANK:
+  UK Biobank: 10,752 papers (76.0%)
+  FinnGen: 1,806 papers (12.8%)
+  Estonian Biobank: 663 papers (4.7%)
+  All of Us: 535 papers (3.8%)
+  Million Veteran Program: 386 papers (2.7%)
+
+TOP 5 JOURNALS (Published Papers Only):
+  Scientific reports: 367 papers
+  Nature communications: 356 papers
+  Nature genetics: 251 papers
+  PloS one: 244 papers
+  Frontiers in endocrinology: 222 papers
+
+TOP 5 MeSH TERMS (Published Papers Only):
+  Humans: 11,520 papers
+  Female: 5,518 papers
+  Male: 5,086 papers
+  Genome-Wide Association Study: 4,460 papers
+  Middle Aged: 4,020 papers
+
+PREPRINT SOURCES (EXCLUDED FROM ANALYSIS):
+  medRxiv : the preprint server for health sciences: 384 papers
+  bioRxiv : the preprint server for biology: 84 papers
+  Research square: 34 papers
+  ArXiv: 9 papers
+  F1000Research: 2 papers
+
+QUALITY ASSURANCE:
+  ✅ All count verifications passed
+  ✅ Preprints excluded from all analyses (513 papers)
+  ✅ 2025 data excluded (incomplete year)
+  ✅ Publication-quality visualizations generated
+  ✅ MeSH terms and journal names cleaned
+  ✅ Year range validated (2000-2024)
+  ✅ Consistent filtering applied throughout
+  
+TECHNICAL NOTES:
+  - All visualizations and statistics are based on published papers only
+  - Preprints were identified and excluded to ensure research quality
+  - 2025 data excluded to avoid bias from incomplete year
+  - Deduplicated datasets used for global analyses where available
+  - Count verification implemented at each step

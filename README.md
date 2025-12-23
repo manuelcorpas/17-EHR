@@ -1,272 +1,191 @@
-# EHR-Linked Biobanks Research Analysis Framework
+# EHR-Linked Biobank Expansion Reveals Global Health Inequities
 
-This repository provides a comprehensive analytical framework for systematically examining the global research landscape of Electronic Health Record (EHR)-linked biobanks. The framework combines bibliometric analysis, semantic clustering, and research gap discovery to understand research themes, temporal trends, and alignment with global health priorities.
+[![DOI](https://img.shields.io/badge/DOI-10.xxxx/xxxxx-blue.svg)](https://doi.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 
-## 🎯 Framework Overview
+## Overview
 
-This multi-component framework supports the analysis presented in **"The Research Footprint of Global EHR-Linked Biobanks"**, providing both the analytical pipeline and research gap discovery tools for understanding biobank research landscapes and their alignment with global disease burden.
+This repository contains the code, data, and analysis pipeline for the paper:
 
-### Target Biobanks
-* **UK Biobank** (United Kingdom)
-* **All of Us Research Program** (United States)
-* **FinnGen** (Finland)
-* **Estonian Biobank** (Estonia)
-* **Million Veteran Program (MVP)** (United States)
+> **EHR-Linked Biobank Expansion Reveals Global Health Inequities**  
+> Corpas M, Ojewunmi O, Guio H, Fatumo S (2025)  
+> *Annual Review of Biomedical Data Science*
 
-### Framework Components
-
-**Component 1: Biobank Literature Analysis**
-- Systematic PubMed data retrieval for biobank-linked publications
-- MeSH-based semantic clustering and thematic analysis
-- Publication trends and biobank-specific research profiling
-- Cross-biobank comparative analysis
-
-**Component 2: Research Gap Discovery**
-- Global disease burden analysis using GBD 2021 data (25 diseases)
-- Research effort quantification via publication mapping
-- Burden-adjusted gap scoring and opportunity identification
-- Global health equity assessment
-
-**Component 3: Data-Driven Visualization**
-- Publication-quality figures for academic publication
-- Interactive research gap visualizations
-- Comprehensive equity and priority analysis dashboards
-
-## 🔍 Methodology
-
-### Biobank Literature Retrieval
-
-**PubMed Query Strategy**: Systematic search of peer-reviewed literature (2000-2024)
-
-**Search Methodology**:
-- **Biobank-Specific Searches**: Exact names and validated aliases for each target biobank
-- **Comprehensive Coverage**: No thematic filtering - captures all research domains
-- **Quality Assurance**: Systematic preprint exclusion and data validation
-
-**Search Terms by Biobank**:
-- **UK Biobank**: "UK Biobank", "United Kingdom Biobank", "U.K. Biobank"
-- **Million Veteran Program**: "Million Veteran Program", "MVP biobank", "Veterans Affairs Million Veteran Program"
-- **FinnGen**: "FinnGen", "FinnGen biobank", "FinnGen study", "FinnGen consortium"
-- **All of Us**: "All of Us Research Program", "All of Us cohort", "AoU Research Program"
-- **Estonian Biobank**: "Estonian Biobank", "Estonian Genome Center", "Tartu Biobank"
-
-**Data Quality Standards**:
-- ✅ **Published Papers Only**: Systematic preprint exclusion (medRxiv, bioRxiv, Research Square, etc.)
-- ✅ **Complete Temporal Coverage**: 2000-2024 (2025 excluded as incomplete)
-- ✅ **API Compliance**: NCBI rate limiting and batch processing
-- ✅ **Deduplication**: PMID-based unique paper identification
-
-**Final Dataset**: 14,142 peer-reviewed publications with MeSH annotations
-
-### Research Gap Analysis Methodology
-
-**Global Disease Burden Integration**:
-- **Data Source**: Global Burden of Disease Study 2021 (IHME)
-- **Coverage**: 25 high-priority diseases across major health domains
-- **Metrics**: DALYs, mortality, and prevalence data
-- **Scope**: Global estimates (both sexes, all ages, 2021)
-
-**25-Disease Analytical Framework**:
-```
-Cardiovascular: Ischemic Heart Disease, Stroke
-Mental Health: Depression, Anxiety Disorders, Bipolar Disorder
-Infectious: Tuberculosis, HIV/AIDS, Malaria, Diarrheal Diseases
-Neoplasms: Lung Cancer, Breast Cancer, Colorectal Cancer
-Metabolic: Diabetes Mellitus Type 2
-Neurological: Alzheimer Disease
-Respiratory: COPD, Asthma
-Musculoskeletal: Low Back Pain, Rheumatoid Arthritis
-Kidney: Chronic Kidney Disease
-Digestive: Cirrhosis
-Maternal/Child: Preterm Birth Complications
-Sensory: Cataracts
-Injuries: Road Traffic Accidents
-Neglected: Neglected Tropical Diseases
-Endocrine: Thyroid Disorders
-```
-
-**Gap Scoring Algorithm**:
-- **Composite Burden Score**: `(0.5 × DALYs) + (50 × Deaths) + [10 × log₁₀(Prevalence)]`
-- **Research Intensity**: Publications per million DALYs
-- **Gap Classification**: Critical (>70), High (50-70), Moderate (30-50), Low (<30)
-- **Opportunity Scoring**: Biobank-specific unrealized research potential
-
-### Semantic Clustering Pipeline
-
-**MeSH-Based Analysis**:
-- **TF-IDF Vectorization**: MeSH terms converted to semantic vectors
-- **Per-Biobank Clustering**: Independent analysis preserving biobank research identities
-- **Bootstrap K-Selection**: Optimal cluster number via silhouette scoring (50 iterations)
-- **c-DF-IPF Scoring**: Cluster characterization using term importance weighting
-
-**Dimensionality Reduction**:
-- **PCA Projections**: Variance-preserving 2D cluster visualization
-- **UMAP Projections**: Non-linear manifold learning for semantic similarity
-
-## 📊 Analytical Outputs
-
-### Biobank Research Analysis
-- **Publication Trends**: Temporal patterns and growth trajectories (2000-2024)
-- **Thematic Profiling**: MeSH frequency analysis and research specializations
-- **Semantic Clustering**: Research theme identification within each biobank
-- **Cross-Biobank Comparison**: Convergent and divergent research patterns
-
-### Research Gap Discovery
-- **Burden vs Effort Analysis**: Disease burden plotted against research investment
-- **Critical Gap Identification**: High-burden, low-research disease areas
-- **Biobank Opportunity Scores**: Unrealized research potential quantification
-- **Global Health Equity Assessment**: Resource allocation disparities
+We present a comprehensive, semantics-based benchmark of the research footprint of five globally established EHR-linked biobanks: **UK Biobank**, **Million Veteran Program (MVP)**, **FinnGen**, **All of Us Research Program**, and **Estonian Biobank**.
 
 ### Key Findings
-- **Research Imbalance**: Profound misalignment between disease burden and research attention
-- **Critical Gaps**: Diseases affecting Global South populations severely underrepresented
-- **Biobank Specialization**: Distinct research signatures reflecting institutional mandates
-- **Methodological Contribution**: Scalable framework for research priority assessment
 
-## 🗂️ Repository Structure
-
-```
-├── PYTHON/
-│   ├── 00-00-biobank-data-retrieval.py      # PubMed systematic retrieval
-│   ├── 00-01-biobank-analysis.py            # Publication analysis & visualization
-│   ├── 00-02-biobank-mesh-clustering.py     # MeSH semantic clustering
-│   ├── 01-00-research-gap-discovery.py      # 25-disease gap analysis
-│   └── 01-01-data-driven-viz.py             # Advanced visualization suite
-├── DATA/
-│   ├── biobank_research_data.csv            # Raw publication dataset
-│   ├── biobank_research_data_deduplicated.csv
-│   └── IHMEGBD_2021_DATA*.csv               # GBD 2021 disease burden data
-├── ANALYSIS/
-│   ├── 00-01-BIOBANK-ANALYSIS/             # Publication analysis outputs
-│   ├── 00-02-BIOBANK-MESH-CLUSTERING/      # Semantic clustering results
-│   ├── 01-00-RESEARCH-GAP-DISCOVERY/       # Gap analysis results
-│   └── 01-01-DATA-VIZ/                     # Advanced visualizations
-└── README.md                                # This framework documentation
-```
-
-## 🚀 Usage Pipeline
-
-### 1. Data Retrieval
-```bash
-# Retrieve all biobank-linked publications from PubMed (2000-2024)
-python PYTHON/00-00-biobank-data-retrieval.py
-```
-
-### 2. Biobank Literature Analysis
-```bash
-# Generate publication trends, MeSH analysis, and quality-assured statistics
-python PYTHON/00-01-biobank-analysis.py
-```
-
-### 3. Semantic Clustering
-```bash
-# Perform MeSH-based clustering within each biobank
-python PYTHON/00-02-biobank-mesh-clustering.py
-```
-
-### 4. Research Gap Discovery
-```bash
-# Analyze disease burden vs research effort (25 diseases)
-python PYTHON/01-00-research-gap-discovery.py
-```
-
-### 5. Advanced Visualization
-```bash
-# Generate publication-quality research gap visualizations
-python PYTHON/01-01-data-driven-viz.py
-```
-
-## 📈 Key Visualizations
-
-### Biobank Analysis Suite
-- **Publication Growth Trajectories**: Annual publication trends by biobank
-- **Research Theme Profiles**: Top MeSH terms and specialization patterns
-- **Semantic Cluster Maps**: PCA/UMAP projections of research themes
-- **Cross-Biobank Comparisons**: Integrated research landscape analysis
-
-### Research Gap Analysis Suite
-- **Disease Burden vs Research Matrix**: 25-disease priority mapping
-- **Critical Gap Identification**: High-burden, low-research visualization
-- **Biobank Opportunity Heatmaps**: Unrealized research potential by institution
-- **Global Health Equity Dashboard**: Resource allocation disparity analysis
-
-### Publication-Quality Standards
-- **Resolution**: 300 DPI for academic publication
-- **Formats**: PNG and PDF outputs
-- **Typography**: Professional academic formatting
-- **Color Palettes**: Accessibility-compliant scientific visualization
-
-## 🔬 Technical Requirements
-
-### Core Dependencies
-```bash
-# Data retrieval and analysis
-pip install pandas numpy matplotlib seaborn scipy biopython
-
-# Machine learning and clustering
-pip install scikit-learn umap-learn
-
-# Statistical analysis
-pip install statsmodels
-```
-
-### System Requirements
-- **Python**: 3.8+ recommended
-- **Memory**: 4GB+ for large dataset processing
-- **Storage**: 1GB for full dataset and outputs
-- **Network**: Stable connection for PubMed API access
-
-## 📊 Output Highlights
-
-### Research Gap Discovery Results
-- **Critical Gaps Identified**: Malaria, tuberculosis, diarrheal diseases, neglected tropical diseases
-- **Research Opportunity Scores**: Quantified potential by biobank
-- **Global Health Equity Metrics**: 175M+ DALYs in underrepresented conditions
-- **Burden-Adjusted Recommendations**: Data-driven priority identification
-
-### Biobank Research Signatures
-- **UK Biobank**: Broadest thematic diversity, environmental epidemiology leadership
-- **FinnGen**: Mendelian randomization and registry-based phenotyping focus
-- **All of Us**: Diversity, equity, and population health emphasis
-- **Million Veteran Program**: Veteran-specific health conditions specialization
-- **Estonian Biobank**: Regulatory genomics and cardiometabolic traits
-
-### Methodological Innovations
-- **Semantic Clustering Framework**: MeSH-based biobank research profiling
-- **Burden-Adjusted Gap Scoring**: Objective research priority quantification
-- **Cross-Biobank Comparative Analysis**: Institutional research signature characterization
-- **Real-Time Data Integration**: GBD 2021 authoritative burden data utilization
-
-## 📚 Scientific Impact
-
-### Research Applications
-- **Funding Priority Setting**: Evidence-based resource allocation guidance
-- **Biobank Strategic Planning**: Research portfolio diversification recommendations
-- **Global Health Policy**: Equity-informed research investment strategies
-- **Academic Research**: Comprehensive biobank landscape characterization
-
-### Methodological Contributions
-- **Scalable Gap Analysis**: Reproducible framework for research priority assessment
-- **Semantic Research Profiling**: MeSH-based institutional characterization methodology
-- **Burden-Research Alignment**: Quantitative equity assessment tools
-- **Publication-Quality Automation**: Standardized academic visualization pipeline
-
-## ✍️ Citation and Acknowledgments
-
-This framework supports the research presented in **"The Research Footprint of Global EHR-Linked Biobanks"** and provides reproducible tools for biobank research landscape analysis and global health research gap discovery.
-
-**Data Sources**:
-- PubMed/MEDLINE (National Library of Medicine)
-- Global Burden of Disease Study 2021 (IHME)
-- Medical Subject Headings (MeSH) Thesaurus
-
-**Methodological Framework**: Transparent, reproducible, and academically rigorous approach to biobank research analysis with systematic quality assurance and global health equity assessment.
+- Analysis of **14,142 peer-reviewed publications** (2000-2024)
+- Identification of distinct thematic profiles for each biobank using MeSH term clustering
+- Burden-adjusted gap scores reveal **critical underrepresentation** of conditions like malaria, tuberculosis, and diarrheal diseases
+- Development of **Research Opportunity Scores** to quantify unrealized potential for each biobank
 
 ---
 
-**Principal Investigator**: Dr. Manuel Corpas  
-**Institution**: University of Westminster, London  
-**Contact**: [m.corpas@westminster.ac.uk](mailto:m.corpas@westminster.ac.uk)  
-**Repository**: [https://github.com/manuelcorpas/17-EHR](https://github.com/manuelcorpas/17-EHR)
+## Repository Structure
 
-**Quality Standards**: Published papers only (2000-2024) | Systematic preprint exclusion | Authoritative disease burden data | Reproducible analytical pipeline
+```
+17-EHR/
+├── PYTHON/                          # Analysis scripts (run in order)
+│   ├── 00-00-biobank-data-retrieval.py    # Step 1: PubMed data retrieval
+│   ├── 00-01-biobank-analysis.py          # Step 2: Publication analysis & figures
+│   ├── 00-02-biobank-mesh-clustering.py   # Step 3: MeSH term clustering (Fig 3)
+│   ├── 01-00-research-gap-discovery.py    # Step 4: Disease burden gap analysis
+│   ├── 01-01-data-driven-viz.py           # Step 5: Gap visualization (Fig 4-5)
+│   └── ARCHIVE/                           # Deprecated/exploratory scripts
+│
+├── DATA/                            # Input data
+│   ├── biobank_research_data.csv          # Main dataset (14,655 records)
+│   ├── biobank_research_data_deduplicated.csv
+│   ├── IHMEGBD_2021_DATA*.csv             # GBD 2021 disease burden data
+│   └── README.md                          # Data documentation
+│
+├── ANALYSIS/                        # Generated outputs
+│   ├── 00-01-BIOBANK-ANALYSIS/            # Publication trends & MeSH frequencies
+│   ├── 00-02-BIOBANK-MESH-CLUSTERING/     # Semantic clustering results
+│   ├── 01-00-RESEARCH-GAP-DISCOVERY/      # Gap analysis & heatmaps
+│   ├── 01-01-DATA-VIZ/                    # Final gap visualizations
+│   └── ARCHIVE/                           # Superseded analysis outputs
+│
+├── FIGS/                            # Publication-ready figures
+│   ├── FIG-1-*.png                        # Overview combined plot
+│   ├── FIG-2-*.png                        # MeSH terms by biobank
+│   ├── FIG-3-*.png                        # Semantic cluster PCA
+│   ├── FIG-4-*.png                        # Disease-biobank heatmap
+│   ├── FIG-5-*.png                        # Research gap summary
+│   └── SUPPL-*.png/csv                    # Supplementary materials
+│
+├── PRODUCTION/                      # Print-ready PDFs for journal
+│   └── *.pdf
+│
+├── DOCX/                            # Manuscript versions
+│   └── EHR-Linked-biobanks_v6.docx        # Submitted manuscript
+│
+├── REVISION_1/                      # Revision materials
+│   ├── EHR-Linked-biobanks_v7.docx        # Revised manuscript
+│   ├── Response-To-Reviewers_v1.docx
+│   └── BD9_Fatumo_ReviewerComments.docx
+│
+└── CONTEXT/                         # Reference literature
+```
+
+---
+
+## Quick Start
+
+### Prerequisites
+
+```bash
+# Clone the repository
+git clone https://github.com/manuelcorpas/17-EHR.git
+cd 17-EHR
+
+# Create virtual environment (recommended)
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### Running the Pipeline
+
+Execute scripts in numerical order from the repository root:
+
+```bash
+# Step 1: Retrieve PubMed data (requires internet, ~30 min)
+python PYTHON/00-00-biobank-data-retrieval.py
+
+# Step 2: Generate publication analysis figures
+python PYTHON/00-01-biobank-analysis.py
+
+# Step 3: Perform MeSH term clustering
+python PYTHON/00-02-biobank-mesh-clustering.py
+
+# Step 4: Run research gap discovery analysis
+python PYTHON/01-00-research-gap-discovery.py
+
+# Step 5: Create final gap visualizations
+python PYTHON/01-01-data-driven-viz.py
+```
+
+> **Note**: Step 1 queries PubMed and may take 20-30 minutes. Pre-computed data is available in `DATA/`.
+
+---
+
+## Reproducibility
+
+### Data Sources
+
+| Source | Description | Access |
+|--------|-------------|--------|
+| PubMed | 14,142 biobank-linked publications | Via Entrez API |
+| GBD 2021 | DALYs, deaths, prevalence for 25 diseases | [IHME GBD Results Tool](https://vizhub.healthdata.org/gbd-results/) |
+| WHO GHO | Global health indicators | [WHO Data Portal](https://www.who.int/data/gho) |
+
+### Key Parameters
+
+- **Year range**: 2000-2024 (2025 excluded as incomplete)
+- **Preprint exclusion**: medRxiv, bioRxiv, Research Square, etc.
+- **Disease set**: 25 priority diseases based on DALYs, mortality, and prevalence
+- **Burden Score formula**: `(0.5 × DALYs) + (50 × Deaths) + [10 × log₁₀(Prevalence)]`
+
+### Validated Outputs
+
+All figures and tables in the manuscript can be reproduced by running the pipeline. Expected outputs:
+
+| Script | Key Outputs | Manuscript Location |
+|--------|-------------|---------------------|
+| `00-01-biobank-analysis.py` | Publication trends, MeSH frequencies | Fig 1, Fig 2 |
+| `00-02-biobank-mesh-clustering.py` | Semantic cluster PCA | Fig 3 |
+| `01-00-research-gap-discovery.py` | Disease-biobank heatmap | Fig 4 |
+| `01-01-data-driven-viz.py` | Gap summary visualization | Fig 5 |
+
+---
+
+## Citation
+
+If you use this code or data, please cite:
+
+```bibtex
+@article{corpas2025ehrlinked,
+  title={EHR-Linked Biobank Expansion Reveals Global Health Inequities},
+  author={Corpas, Manuel and Ojewunmi, Oyesola and Guio, Heinner and Fatumo, Segun},
+  journal={Annual Review of Biomedical Data Science},
+  year={2025},
+  doi={10.xxxx/xxxxx}
+}
+```
+
+---
+
+## Authors
+
+- **Manuel Corpas** - University of Westminster, Alan Turing Institute, Cambridge Precision Medicine
+- **Oyesola Ojewunmi** - Queen Mary University of London
+- **Heinner Guio** - UTEC Lima, INBIOMEDIC
+- **Segun Fatumo** - Queen Mary University of London, MRC/UVRI Uganda
+
+**Corresponding authors**: m.corpas@westminster.ac.uk, s.fatumo@qmul.ac.uk
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Acknowledgments
+
+- UK Biobank, Million Veteran Program, FinnGen, All of Us Research Program, Estonian Biobank
+- Global Burden of Disease Study 2021 collaborators
+- NCBI PubMed for data access
+
+---
+
+## Version History
+
+- **v1.0.0** (2025-XX-XX): Initial release accompanying publication
+- See [CHANGELOG.md](CHANGELOG.md) for full version history

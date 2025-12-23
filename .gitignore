@@ -1,32 +1,85 @@
-# Large generated data files (users will regenerate with scripts)
-DATA/biobank_research_data*.csv
-
-# Large archive directory
-DATA/ARCHIVE/
-
-# Temporary files
-DATA/~$*.xlsx
-DATA/.DS_Store
-**/~$*
-
-# Analysis outputs (preserve structure only)
-ANALYSIS/*/
-!ANALYSIS/*/.gitkeep
-!ANALYSIS/*/README.md
-!ANALYSIS/*/*.txt
+# EHR-Linked Biobank Analysis - Git Ignore
 
 # Python
 __pycache__/
-*.pyc
-.env
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
 
 # OS files
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
 
-DOCX/*
-FIGS/*
-PYTHON/ARCHIVE/*
-CONTEXT/*
-REVISION_1
-PRODUCTION
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Large data files (keep in DATA/ but don't track raw downloads)
+DATA/cache/
+DATA/*.tmp
+
+# Binary analysis outputs (regenerate from scripts)
+ANALYSIS/**/*.npy
+
+# Local configuration
+.env
+.env.local
+config.local.py
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Note: We DO track:
+# - DATA/*.csv (curated datasets)
+# - ANALYSIS/**/*.csv (tabular results)
+# - ANALYSIS/**/*.png (figures)
+# - ANALYSIS/**/*.pdf (figures)
+# - FIGS/* (publication figures)
+# - PRODUCTION/* (final outputs)

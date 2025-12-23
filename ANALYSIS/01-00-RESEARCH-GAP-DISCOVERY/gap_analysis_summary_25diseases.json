@@ -1,0 +1,14 @@
+{
+  "total_diseases_analyzed": 25,
+  "disease_categories": 15,
+  "critical_gaps": 4,
+  "high_gaps": 3,
+  "zero_research_areas": 0,
+  "total_dalys_analyzed": 1415.37,
+  "total_deaths_analyzed": 37.63,
+  "total_publications_analyzed": 6238,
+  "data_sources_count": 1,
+  "analysis_date": "2025-07-07 07:35:12",
+  "expansion_note": "25-disease expansion with real GBD 2021 CSV data",
+  "data_source_type": "Real GBD 2021 CSV data"
+}

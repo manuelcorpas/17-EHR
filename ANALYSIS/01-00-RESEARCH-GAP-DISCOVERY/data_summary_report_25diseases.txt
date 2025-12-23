@@ -1,0 +1,188 @@
+
+BIOBANK RESEARCH GAP ANALYSIS - DATA SUMMARY REPORT (25 DISEASES)
+Generated: 2025-07-07 07:35:12
+================================================================================
+
+EXPANDED ANALYSIS WITH REAL GBD 2021 CSV DATA:
+This report covers 25 diseases for comprehensive global health coverage.
+NOW USING REAL GBD 2021 DATA from uploaded CSV file.
+
+DATA SOURCES:
+1 authoritative sources integrated:
+
+• GBD 2021 (from uploaded CSV): 25 diseases
+
+================================================================================
+DATASET OVERVIEW (25 DISEASES WITH REAL GBD 2021 DATA)
+================================================================================
+
+Total Diseases Analyzed: 25
+Disease Categories: 15
+Total Disease Burden: 1415.4 million DALYs
+Total Deaths: 37.6 million annually
+Total Publications Mapped: 6,238
+Publication Mapping Rate: 44.1% of biobank literature
+
+DATA SOURCE UPGRADE:
+• Real GBD 2021 data extracted from user-provided CSV
+• Global, both sexes, all ages, 2021 data
+• Direct extraction from authoritative IHME dataset
+• No estimates or approximations - actual GBD values used
+
+EXPANDED COVERAGE INCLUDES:
+• Cardiovascular Diseases: 2 diseases
+• Mental Disorders: 3 diseases (expanded)
+• Infectious Diseases: 5 diseases (expanded)
+• Neoplasms: 3 diseases (expanded)
+• Respiratory Diseases: 2 diseases (expanded)
+• Musculoskeletal Diseases: 2 diseases (expanded)
+• New Categories: Kidney, Injuries, Digestive, Maternal/Child, Sensory
+
+================================================================================
+GAP SEVERITY DISTRIBUTION (25 DISEASES)
+================================================================================
+
+Critical Gaps: 4 diseases (16.0%)
+High Gaps: 3 diseases (12.0%)
+Moderate Gaps: 2 diseases
+Low Gaps: 16 diseases
+
+Zero Research Areas: 0 diseases (0.0%)
+
+================================================================================
+RESEARCH EFFORT DISTRIBUTION
+================================================================================
+
+Most Researched Diseases (by publication count):
+
+1. Stroke: 1177 publications   Burden: 160.5M DALYs, 7.2M deaths
+2. Alzheimer Disease: 742 publications   Burden: 36.3M DALYs, 1.9M deaths
+3. Depression: 650 publications   Burden: 56.3M DALYs, 0.0M deaths
+4. Lung Cancer: 588 publications   Burden: 46.5M DALYs, 2.0M deaths
+5. Asthma: 572 publications   Burden: 21.4M DALYs, 0.4M deaths
+
+Least Researched Diseases (by publication count):
+
+1. Malaria: 1 publications   Burden: 55.2M DALYs, 0.8M deaths
+2. Road Traffic Accidents: 1 publications   Burden: 65.1M DALYs, 1.2M deaths
+3. Diarrheal Diseases: 2 publications   Burden: 59.0M DALYs, 1.2M deaths
+4. Neglected Tropical Diseases: 2 publications   Burden: 4.2M DALYs, 0.0M deaths
+5. Chronic Obstructive Pulmonary Disease: 13 publications   Burden: 79.8M DALYs, 3.7M deaths
+
+================================================================================
+BURDEN VS RESEARCH ANALYSIS (25 DISEASES)
+================================================================================
+
+High Burden + Low Research Diseases: 7
+(Above median burden: >46.4M DALYs, Below median research: <141 publications)
+
+
+• Chronic Obstructive Pulmonary Disease: 79.8M DALYs, 13 publications  Research Intensity: 0.163 pubs/M DALYs
+• Low Back Pain: 70.2M DALYs, 68 publications  Research Intensity: 0.969 pubs/M DALYs
+• Malaria: 55.2M DALYs, 1 publications  Research Intensity: 0.018 pubs/M DALYs
+• Diarrheal Diseases: 59.0M DALYs, 2 publications  Research Intensity: 0.034 pubs/M DALYs
+• Tuberculosis: 47.0M DALYs, 14 publications  Research Intensity: 0.298 pubs/M DALYs
+• Road Traffic Accidents: 65.1M DALYs, 1 publications  Research Intensity: 0.015 pubs/M DALYs
+• Preterm Birth Complications: 186.4M DALYs, 72 publications  Research Intensity: 0.386 pubs/M DALYs
+
+================================================================================
+BIOBANK-SPECIFIC RESEARCH DISTRIBUTION (25 DISEASES)
+================================================================================
+
+
+UK Biobank:
+  Total Publications: 5185
+  Disease Areas Covered: 23/25
+  Top areas: Stroke(1056), Alzheimer Disease(682), Depression(538)
+Million Veteran Program:
+  Total Publications: 140
+  Disease Areas Covered: 15/25
+  Top areas: Stroke(31), Chronic Kidney Disease(20), Alzheimer Disease(13)
+FinnGen:
+  Total Publications: 586
+  Disease Areas Covered: 22/25
+  Top areas: Stroke(61), Depression(57), Thyroid Disorders(51)
+All of Us:
+  Total Publications: 166
+  Disease Areas Covered: 20/25
+  Top areas: HIV/AIDS(40), Lung Cancer(24), Depression(21)
+Estonian Biobank:
+  Total Publications: 161
+  Disease Areas Covered: 19/25
+  Top areas: Depression(22), Ischemic Heart Disease(18), Stroke(16)
+
+================================================================================
+RESEARCH INTENSITY METRICS (25 DISEASES)
+================================================================================
+
+Publications per Million DALYs (Research Intensity):
+
+Highest Intensity:
+• Thyroid Disorders: 94.400 publications/M DALYs
+• Rheumatoid Arthritis: 42.208 publications/M DALYs
+• Asthma: 26.704 publications/M DALYs
+• Alzheimer Disease: 20.424 publications/M DALYs
+• Bipolar Disorder: 17.603 publications/M DALYs
+Lowest Intensity:
+• Tuberculosis: 0.298 publications/M DALYs
+• Chronic Obstructive Pulmonary Disease: 0.163 publications/M DALYs
+• Diarrheal Diseases: 0.034 publications/M DALYs
+• Malaria: 0.018 publications/M DALYs
+• Road Traffic Accidents: 0.015 publications/M DALYs
+
+================================================================================
+REAL GBD 2021 CSV DATA INTEGRATION
+================================================================================
+
+DATA SOURCE UPGRADE:
+• Previous version used estimated/approximated disease burden values
+• Current version uses REAL GBD 2021 data from user-provided CSV
+• All 25 diseases successfully mapped to authoritative GBD data
+• Extraction: Global, Both sexes, All ages, Number metric, 2021
+
+KEY IMPROVEMENTS:
+• Deaths data: Direct from GBD 2021 (not WHO estimates)
+• DALYs data: Direct from GBD 2021 (most current available)
+• Prevalence data: Direct from GBD 2021 (actual counts)
+• Data currency: 2021 (most recent complete GBD dataset)
+
+DISEASE MAPPING ACCURACY:
+• 25/25 diseases successfully mapped from script names to GBD names
+• Examples: "Lung Cancer" → "Tracheal, bronchus, and lung cancer"
+• Examples: "Road Traffic Accidents" → "Road injuries"
+• Examples: "Alzheimer Disease" → "Alzheimer's disease and other dementias"
+
+================================================================================
+DATA QUALITY METRICS (25 DISEASES)
+================================================================================
+
+Real Data Validation:
+• All 25 diseases use real GBD 2021 CSV data
+• MeSH terms: Curated from established medical literature
+• Publication mapping: 6,238 publications successfully mapped
+• Coverage: 15 disease categories represented
+• Data source: User-provided GBD 2021 authoritative dataset
+
+Methodology Notes:
+• Year range: 2000-2024 (excluding incomplete 2025 data)
+• Preprints excluded: 513 identified and filtered
+• Total biobank papers analyzed: 14,142
+• Disease burden data: REAL GBD 2021 from uploaded CSV
+• MeSH terms: Professional curation from medical literature
+• 25-disease expansion with authoritative data source
+
+================================================================================
+END OF DATA SUMMARY (25 DISEASES WITH REAL GBD 2021 DATA)
+================================================================================
+
+Raw data files generated:
+• research_gaps_comprehensive_25diseases.csv - Complete gap analysis
+• research_effort_by_disease_25diseases.csv - Publication counts by disease  
+• gap_analysis_summary_25diseases.json - Summary statistics
+• Visualizations: biobank_research_heatmap_25diseases.png, research_gap_discovery_matrix_25diseases.png, research_gap_summary_25diseases.png
+
+EXPANSION IMPACT WITH REAL DATA:
+• 67% increase in disease coverage (15→25 diseases)
+• Real GBD 2021 data integration for all diseases
+• Enhanced accuracy through authoritative data source
+• Comprehensive global health equity analysis with verified burden data
