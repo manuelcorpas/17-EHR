@@ -1,88 +1,162 @@
 {
-  "totals": {
-    "publications": 75356,
-    "biobanks": 27,
-    "diseases": 25,
-    "countries": 19,
-    "yearsCovered": 34
+  "version": "HEIM-Biobank v1.0",
+  "versionDate": "2025-12-24",
+  "generated": "2025-12-24T08:59:39.258721",
+  "overview": {
+    "totalBiobanks": 27,
+    "totalPublications": 75356,
+    "totalDiseases": 25,
+    "totalCountries": 19,
+    "equityRatio": 322.22
   },
-  "equity": {
-    "ratio": 70.82,
-    "hicPublications": 73709,
-    "globalSouthPublications": 378
+  "gapDistribution": {
+    "Moderate": 6,
+    "Low": 12,
+    "Critical": 3,
+    "High": 4
   },
-  "gaps": {
-    "distribution": {
-      "Low": 20,
-      "Moderate": 5
+  "easDistribution": {
+    "Strong": 4,
+    "Weak": 9,
+    "Poor": 14
+  },
+  "regionStats": [
+    {
+      "region": "AFR",
+      "name": "Africa",
+      "biobanks": 3,
+      "publications": 204
     },
-    "criticalCount": 0,
-    "topGaps": [
-      {
-        "id": "malaria",
-        "name": "Malaria",
-        "score": 50
-      },
-      {
-        "id": "tuberculosis",
-        "name": "Tuberculosis",
-        "score": 50
-      },
-      {
-        "id": "diarrheal_diseases",
-        "name": "Diarrheal Diseases",
-        "score": 50
-      },
-      {
-        "id": "road_traffic",
-        "name": "Road Traffic Injuries",
-        "score": 40
-      },
-      {
-        "id": "copd",
-        "name": "Chronic Obstructive Pulmonary Disease",
-        "score": 35
-      }
-    ]
-  },
+    {
+      "region": "AMR",
+      "name": "Americas",
+      "biobanks": 9,
+      "publications": 49264
+    },
+    {
+      "region": "EMR",
+      "name": "Eastern Mediterranean",
+      "biobanks": 1,
+      "publications": 174
+    },
+    {
+      "region": "EUR",
+      "name": "Europe",
+      "biobanks": 11,
+      "publications": 24445
+    },
+    {
+      "region": "WPR",
+      "name": "Western Pacific",
+      "biobanks": 3,
+      "publications": 1269
+    }
+  ],
+  "criticalGaps": [
+    {
+      "id": "type2_diabetes",
+      "name": "Type 2 Diabetes Mellitus",
+      "gapScore": 95.0,
+      "dalys": 67.0,
+      "publications": 0
+    },
+    {
+      "id": "chronic_kidney_disease",
+      "name": "Chronic Kidney Disease",
+      "gapScore": 95.0,
+      "dalys": 35.0,
+      "publications": 0
+    },
+    {
+      "id": "road_traffic_injuries",
+      "name": "Road Traffic Injuries",
+      "gapScore": 95.0,
+      "dalys": 85.5,
+      "publications": 0
+    }
+  ],
   "topBiobanks": [
     {
       "id": "emerge",
       "name": "eMERGE Network",
-      "publications": 47755,
-      "ros": 0.0
-    },
-    {
-      "id": "uk_biobank",
-      "name": "UK Biobank",
-      "publications": 13341,
-      "ros": 0.0
+      "eas": 90.7,
+      "category": "Strong",
+      "publications": 47755
     },
     {
       "id": "decode",
       "name": "deCODE Genetics",
-      "publications": 5604,
-      "ros": 0.0
+      "eas": 88.3,
+      "category": "Strong",
+      "publications": 5604
+    },
+    {
+      "id": "uk_biobank",
+      "name": "UK Biobank",
+      "eas": 87.6,
+      "category": "Strong",
+      "publications": 13341
     },
     {
       "id": "finngen",
       "name": "FinnGen",
-      "publications": 2683,
-      "ros": 0.0
+      "eas": 83.4,
+      "category": "Strong",
+      "publications": 2683
     },
     {
       "id": "hunt",
       "name": "HUNT Study",
-      "publications": 1152,
-      "ros": 0.0
+      "eas": 59.3,
+      "category": "Weak",
+      "publications": 1152
+    },
+    {
+      "id": "lifelines",
+      "name": "LifeLines",
+      "eas": 53.3,
+      "category": "Weak",
+      "publications": 730
+    },
+    {
+      "id": "swedish_twin",
+      "name": "Swedish Twin Registry",
+      "eas": 47.0,
+      "category": "Weak",
+      "publications": 289
+    },
+    {
+      "id": "all_of_us",
+      "name": "All of Us Research Program",
+      "eas": 46.9,
+      "category": "Weak",
+      "publications": 613
+    },
+    {
+      "id": "constances",
+      "name": "CONSTANCES",
+      "eas": 43.0,
+      "category": "Weak",
+      "publications": 222
+    },
+    {
+      "id": "taiwan_biobank",
+      "name": "Taiwan Biobank",
+      "eas": 42.6,
+      "category": "Weak",
+      "publications": 482
     }
   ],
-  "regions": {
-    "AMR": 49264,
-    "EUR": 24445,
-    "WPR": 1269,
-    "AFR": 204,
-    "EMR": 174
+  "averages": {
+    "eas": 37.6,
+    "ros": 1660.31,
+    "gapScore": 43.8
   },
-  "lastUpdate": "2025-12-23T19:10:12.751603"
+  "methodology": {
+    "burden_score": "0.5 \u00d7 DALYs + 50 \u00d7 Deaths + 10 \u00d7 log\u2081\u2080(Prevalence)",
+    "gap_score": "Three-tier: zero-pub penalty, category thresholds, burden-normalized intensity",
+    "ros": "\u03a3 Burden_Score for diseases with \u22642 publications",
+    "eas": "100 - (0.4 \u00d7 Gap_Severity + 0.3 \u00d7 Burden_Miss + 0.3 \u00d7 Capacity_Penalty)",
+    "source": "Corpas et al. 2025, Annual Review of Biomedical Data Science"
+  }
 }
