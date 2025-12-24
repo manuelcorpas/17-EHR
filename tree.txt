@@ -39,38 +39,52 @@
 │   │   ├── clustering_results_finngen.csv
 │   │   ├── clustering_results_million_veteran_program.csv
 │   │   ├── clustering_results_uk_biobank.csv
+│   │   ├── composite_pca_all_biobanks 2.pdf
 │   │   ├── composite_pca_all_biobanks.pdf
 │   │   ├── composite_pca_all_biobanks.png
+│   │   ├── composite_umap_all_biobanks 2.pdf
 │   │   ├── composite_umap_all_biobanks.pdf
 │   │   ├── composite_umap_all_biobanks.png
+│   │   ├── pca_clusters_all_of_us 2.pdf
 │   │   ├── pca_clusters_all_of_us.pdf
 │   │   ├── pca_clusters_all_of_us.png
+│   │   ├── pca_clusters_estonian_biobank 2.pdf
 │   │   ├── pca_clusters_estonian_biobank.pdf
 │   │   ├── pca_clusters_estonian_biobank.png
+│   │   ├── pca_clusters_finngen 2.pdf
+│   │   ├── pca_clusters_finngen 2.png
 │   │   ├── pca_clusters_finngen.pdf
 │   │   ├── pca_clusters_finngen.png
+│   │   ├── pca_clusters_million_veteran_program 2.pdf
 │   │   ├── pca_clusters_million_veteran_program.pdf
 │   │   ├── pca_clusters_million_veteran_program.png
+│   │   ├── pca_clusters_uk_biobank 2.pdf
 │   │   ├── pca_clusters_uk_biobank.pdf
 │   │   ├── pca_clusters_uk_biobank.png
-│   │   ├── pca_explained_variance.npy
 │   │   ├── supplementary_cluster_characteristics_table.csv
+│   │   ├── umap_clusters_all_of_us 2.pdf
+│   │   ├── umap_clusters_all_of_us 2.png
 │   │   ├── umap_clusters_all_of_us.pdf
 │   │   ├── umap_clusters_all_of_us.png
+│   │   ├── umap_clusters_estonian_biobank 2.pdf
 │   │   ├── umap_clusters_estonian_biobank.pdf
 │   │   ├── umap_clusters_estonian_biobank.png
+│   │   ├── umap_clusters_finngen 2.pdf
+│   │   ├── umap_clusters_finngen 2.png
 │   │   ├── umap_clusters_finngen.pdf
 │   │   ├── umap_clusters_finngen.png
+│   │   ├── umap_clusters_million_veteran_program 2.pdf
 │   │   ├── umap_clusters_million_veteran_program.pdf
 │   │   ├── umap_clusters_million_veteran_program.png
+│   │   ├── umap_clusters_uk_biobank 2.pdf
 │   │   ├── umap_clusters_uk_biobank.pdf
 │   │   ├── umap_clusters_uk_biobank.png
+│   │   ├── unified_pca_all_clusters 2.pdf
 │   │   ├── unified_pca_all_clusters.pdf
 │   │   ├── unified_pca_all_clusters.png
-│   │   ├── unified_pca_coordinates.npy
+│   │   ├── unified_umap_all_clusters 2.pdf
 │   │   ├── unified_umap_all_clusters.pdf
-│   │   ├── unified_umap_all_clusters.png
-│   │   └── unified_umap_coordinates.npy
+│   │   └── unified_umap_all_clusters.png
 │   ├── 01-00-RESEARCH-GAP-DISCOVERY
 │   │   ├── ARCHIVE
 │   │   │   ├── biobank_research_effort.csv
@@ -142,23 +156,35 @@
 │       ├── 00-02-STAT-VISUALIZATION
 │       │   ├── All_of_Us_top_cited_articles.csv
 │       │   ├── All_of_Us_top_cited_articles.png
+│       │   ├── All_of_Us_top_institutions_bar 2.png
 │       │   ├── All_of_Us_top_institutions_bar.png
 │       │   ├── ARCHIVE
+│       │   ├── ARCHIVE 2
+│       │   ├── citation_data_summary 2.txt
 │       │   ├── citation_data_summary.txt
+│       │   ├── Estonian_Biobank_top_cited_articles 2.csv
 │       │   ├── Estonian_Biobank_top_cited_articles.csv
 │       │   ├── Estonian_Biobank_top_cited_articles.png
+│       │   ├── Estonian_Biobank_top_institutions_bar 2.png
 │       │   ├── Estonian_Biobank_top_institutions_bar.png
+│       │   ├── FinnGen_top_cited_articles 2.csv
+│       │   ├── FinnGen_top_cited_articles 2.png
 │       │   ├── FinnGen_top_cited_articles.csv
 │       │   ├── FinnGen_top_cited_articles.png
 │       │   ├── FinnGen_top_institutions_bar.png
+│       │   ├── Million_Veteran_Program_top_cited_articles 2.csv
 │       │   ├── Million_Veteran_Program_top_cited_articles.csv
 │       │   ├── Million_Veteran_Program_top_cited_articles.png
+│       │   ├── Million_Veteran_Program_top_institutions_bar 2.png
 │       │   ├── Million_Veteran_Program_top_institutions_bar.png
 │       │   ├── research_keywords_heatmap.png
+│       │   ├── research_keywords_matrix 2.csv
 │       │   ├── research_keywords_matrix.csv
 │       │   ├── research_questions_analysis.txt
+│       │   ├── UK_Biobank_top_cited_articles 2.csv
 │       │   ├── UK_Biobank_top_cited_articles.csv
 │       │   ├── UK_Biobank_top_cited_articles.png
+│       │   ├── UK_Biobank_top_institutions_bar 2.png
 │       │   └── UK_Biobank_top_institutions_bar.png
 │       ├── 00-02-THEMATIC-ANALYSIS-BIOBANKS
 │       │   ├── All of Us_themes_visualization.png
@@ -198,6 +224,7 @@
 │       │   ├── UK_Biobank_cooccurrence_network.png
 │       │   ├── UK_Biobank_themes.png
 │       │   ├── wordclouds
+│       │   ├── wordclouds 2
 │       │   └── wordclouds.zip
 │       ├── 01-00-FETCH-AUTHOR-DATA
 │       │   ├── author_data_summary_report.txt
@@ -254,6 +281,8 @@
 │           ├── cluster_centroids_umap.png
 │           ├── clustered_articles.csv
 │           └── top_terms_by_cluster.csv
+├── CHANGELOG 2.md
+├── CHANGELOG.md
 ├── CONTEXT
 │   └── s41588-025-02298-9.pdf
 ├── DATA
@@ -262,15 +291,45 @@
 │   │   ├── 00-00-ehr_biobank_articles.csv
 │   │   ├── biobank_script.log
 │   │   ├── cache
+│   │   │   ├── institutions 2.json
 │   │   │   ├── institutions.json
+│   │   │   ├── scholar_citations 2.json
 │   │   │   └── scholar_citations.json
 │   │   ├── citation_script.log
 │   │   └── global_ehr_biobank_results.csv
+│   ├── bhem_biobank_metrics.csv
+│   ├── bhem_biobank_profiles.csv
+│   ├── bhem_cluster_terms.csv
+│   ├── bhem_disease_metrics.csv
+│   ├── bhem_fetch_progress.csv
+│   ├── bhem_metrics.json
+│   ├── bhem_publications_mapped.csv
+│   ├── bhem_publications.csv
+│   ├── bhem_theme_overlap.csv
+│   ├── bhem_themes.json
 │   ├── biobank_research_data_deduplicated.csv
 │   ├── biobank_research_data.csv
+│   ├── disease_registry 2.json
+│   ├── disease_registry.json
 │   ├── GBD-Results-tool-citation.txt
 │   ├── IHMEGBD_2021_DATA075d3ae61.csv
 │   └── README.md
+├── docs
+│   ├── css
+│   │   └── style.css
+│   ├── css 2
+│   ├── data
+│   │   ├── biobanks.json
+│   │   ├── diseases.json
+│   │   ├── matrix.json
+│   │   ├── summary.json
+│   │   └── trends.json
+│   ├── index 2.html
+│   ├── index.html
+│   ├── js
+│   │   ├── app.js
+│   │   └── charts.js
+│   └── js 2
 ├── DOCX
 │   ├── ARCHIVE
 │   │   ├── EHR-Linked-biobanks_v2.docx
@@ -294,6 +353,8 @@
 │   ├── SUPPL-FIG-S3-biobank_journals_published.png
 │   ├── SUPPL-FIG-S4-research_gap_complete_labeled_fixed.png
 │   └── SUPPL-TABLE-S1-semantic-cluster_characteristics.csv
+├── LICENSE
+├── LICENSE 2
 ├── PRODUCTION
 │   ├── 00-biobank_overview_combined_published.pdf
 │   ├── 01-biobank_mesh_terms_published.pdf
@@ -325,12 +386,19 @@
 │   ├── 00-02-biobank-mesh-clustering.py
 │   ├── 01-00-research-gap-discovery.py
 │   ├── 01-01-data-driven-viz.py
+│   ├── 02-00-00-README.md
+│   ├── 02-00-bhem-fetch-pubmed.py
+│   ├── 02-01-bhem-map-diseases.py
+│   ├── 02-02-bhem-analyze-themes.py
+│   ├── 02-04-bhem-build-site.py
+│   ├── 02-05-bhem-generate-json.py
 │   └── ARCHIVE
 │       ├── 00-00-extract-ehr-biobank-literature.py
 │       ├── 00-00-retrieve-publications-save-csv.py
 │       ├── 00-01-analyze-ehr-biobank-literature.py
 │       ├── 00-01-analyze-publications.py
 │       ├── 00-01-publication-analysis.py
+│       ├── 00-02-biobank-mesh-clustering 2.py
 │       ├── 00-02-biobank-mesh-clustering.py
 │       ├── 00-02-cluster-mesh-per-biobank.py
 │       ├── 00-02-stat-visualization.py
@@ -348,10 +416,13 @@
 │       └── ANALYSIS
 │           └── BIOBANK-RESULTS
 ├── README.md
+├── requirements 2.txt
+├── requirements.txt
 ├── REVISION_1
 │   ├── BD9_Fatumo_ReviewerComments.docx
 │   ├── EHR-Linked-biobanks_v7.docx
 │   └── Response-To-Reviewers_v1.docx
+├── tree 2.txt
 └── tree.txt
 
-51 directories, 304 files
+59 directories, 367 files
