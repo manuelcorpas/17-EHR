@@ -1,0 +1,321 @@
+{
+  "version": "HEIM-Biobank v1.0",
+  "generated": "2025-12-24T08:59:39.323299",
+  "equityRatio": 322.22,
+  "equityInterpretation": "HIC-biased",
+  "summary": {
+    "hic": {
+      "biobanks": 20,
+      "publications": 74432,
+      "publicationShare": 98.8,
+      "averageEas": 46.4
+    },
+    "lmic": {
+      "biobanks": 7,
+      "publications": 924,
+      "publicationShare": 1.2,
+      "averageEas": 12.4
+    }
+  },
+  "globalSouthDiseases": [
+    {
+      "id": "road_traffic_injuries",
+      "name": "Road Traffic Injuries",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 85.5
+    },
+    {
+      "id": "malaria",
+      "name": "Malaria",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 160,
+      "dalys": 62.5
+    },
+    {
+      "id": "tuberculosis",
+      "name": "Tuberculosis",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 170,
+      "dalys": 38.1
+    },
+    {
+      "id": "diarrheal_diseases",
+      "name": "Diarrheal Diseases",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 220,
+      "dalys": 44.2
+    },
+    {
+      "id": "hiv_aids",
+      "name": "HIV/AIDS",
+      "gapScore": 40.0,
+      "severity": "Moderate",
+      "publications": 645,
+      "dalys": 42.0
+    },
+    {
+      "id": "ntds",
+      "name": "Neglected Tropical Diseases",
+      "gapScore": 40.0,
+      "severity": "Moderate",
+      "publications": 408,
+      "dalys": 28.3
+    },
+    {
+      "id": "neonatal_disorders",
+      "name": "Neonatal Disorders",
+      "gapScore": 40.0,
+      "severity": "Moderate",
+      "publications": 1365,
+      "dalys": 75.0
+    },
+    {
+      "id": "preterm_birth",
+      "name": "Preterm Birth Complications",
+      "gapScore": 30.0,
+      "severity": "Low",
+      "publications": 1053,
+      "dalys": 23.0
+    }
+  ],
+  "byRegion": [
+    {
+      "region": "AMR",
+      "name": "Americas",
+      "incomeCategory": "Mixed",
+      "biobanks": 9,
+      "publications": 49264,
+      "averageEas": 35.0
+    },
+    {
+      "region": "EUR",
+      "name": "Europe",
+      "incomeCategory": "HIC",
+      "biobanks": 11,
+      "publications": 24445,
+      "averageEas": 48.5
+    },
+    {
+      "region": "WPR",
+      "name": "Western Pacific",
+      "incomeCategory": "HIC",
+      "biobanks": 3,
+      "publications": 1269,
+      "averageEas": 41.9
+    },
+    {
+      "region": "AFR",
+      "name": "Africa",
+      "incomeCategory": "LMIC",
+      "biobanks": 3,
+      "publications": 204,
+      "averageEas": 8.6
+    },
+    {
+      "region": "EMR",
+      "name": "Eastern Mediterranean",
+      "incomeCategory": "LMIC",
+      "biobanks": 1,
+      "publications": 174,
+      "averageEas": 15.2
+    }
+  ],
+  "hicBiobanks": [
+    {
+      "id": "emerge",
+      "name": "eMERGE Network",
+      "country": "United States",
+      "publications": 47755,
+      "eas": 90.7
+    },
+    {
+      "id": "uk_biobank",
+      "name": "UK Biobank",
+      "country": "United Kingdom",
+      "publications": 13341,
+      "eas": 87.6
+    },
+    {
+      "id": "decode",
+      "name": "deCODE Genetics",
+      "country": "Iceland",
+      "publications": 5604,
+      "eas": 88.3
+    },
+    {
+      "id": "finngen",
+      "name": "FinnGen",
+      "country": "Finland",
+      "publications": 2683,
+      "eas": 83.4
+    },
+    {
+      "id": "hunt",
+      "name": "HUNT Study",
+      "country": "Norway",
+      "publications": 1152,
+      "eas": 59.3
+    },
+    {
+      "id": "lifelines",
+      "name": "LifeLines",
+      "country": "Netherlands",
+      "publications": 730,
+      "eas": 53.3
+    },
+    {
+      "id": "all_of_us",
+      "name": "All of Us Research Program",
+      "country": "United States",
+      "publications": 613,
+      "eas": 46.9
+    },
+    {
+      "id": "taiwan_biobank",
+      "name": "Taiwan Biobank",
+      "country": "Taiwan",
+      "publications": 482,
+      "eas": 42.6
+    },
+    {
+      "id": "mvp",
+      "name": "Million Veteran Program",
+      "country": "United States",
+      "publications": 327,
+      "eas": 42.2
+    },
+    {
+      "id": "swedish_twin",
+      "name": "Swedish Twin Registry",
+      "country": "Sweden",
+      "publications": 289,
+      "eas": 47.0
+    },
+    {
+      "id": "biobank_japan",
+      "name": "BioBank Japan",
+      "country": "Japan",
+      "publications": 271,
+      "eas": 42.0
+    },
+    {
+      "id": "constances",
+      "name": "CONSTANCES",
+      "country": "France",
+      "publications": 222,
+      "eas": 43.0
+    },
+    {
+      "id": "topmed",
+      "name": "TOPMed",
+      "country": "United States",
+      "publications": 196,
+      "eas": 31.2
+    },
+    {
+      "id": "generation_scotland",
+      "name": "Generation Scotland",
+      "country": "United Kingdom",
+      "publications": 161,
+      "eas": 29.3
+    },
+    {
+      "id": "biovu",
+      "name": "BioVU",
+      "country": "United States",
+      "publications": 155,
+      "eas": 35.4
+    },
+    {
+      "id": "nako",
+      "name": "German National Cohort (NAKO)",
+      "country": "Germany",
+      "publications": 138,
+      "eas": 19.5
+    },
+    {
+      "id": "estonian_biobank",
+      "name": "Estonian Biobank",
+      "country": "Estonia",
+      "publications": 116,
+      "eas": 20.8
+    },
+    {
+      "id": "geisinger_mycode",
+      "name": "Geisinger MyCode",
+      "country": "United States",
+      "publications": 96,
+      "eas": 29.2
+    },
+    {
+      "id": "mgb_biobank",
+      "name": "Mass General Brigham Biobank",
+      "country": "United States",
+      "publications": 92,
+      "eas": 33.9
+    },
+    {
+      "id": "danish_national",
+      "name": "Danish National Biobank",
+      "country": "Denmark",
+      "publications": 9,
+      "eas": 2.5
+    }
+  ],
+  "lmicBiobanks": [
+    {
+      "id": "china_kadoorie",
+      "name": "China Kadoorie Biobank",
+      "country": "China",
+      "publications": 516,
+      "eas": 41.0
+    },
+    {
+      "id": "qatar_biobank",
+      "name": "Qatar Biobank",
+      "country": "Qatar",
+      "publications": 174,
+      "eas": 15.2
+    },
+    {
+      "id": "h3africa",
+      "name": "H3Africa",
+      "country": "Pan-African",
+      "publications": 139,
+      "eas": 16.3
+    },
+    {
+      "id": "awigen",
+      "name": "AWI-Gen",
+      "country": "Pan-African",
+      "publications": 60,
+      "eas": 9.3
+    },
+    {
+      "id": "mexico_city",
+      "name": "Mexico City Prospective Study",
+      "country": "Mexico",
+      "publications": 29,
+      "eas": 5.1
+    },
+    {
+      "id": "uganda_genome",
+      "name": "Uganda Genome Resource",
+      "country": "Uganda",
+      "publications": 5,
+      "eas": 0.1
+    },
+    {
+      "id": "epigen_brazil",
+      "name": "EPIGEN-Brazil",
+      "country": "Brazil",
+      "publications": 1,
+      "eas": 0.0
+    }
+  ]
+}

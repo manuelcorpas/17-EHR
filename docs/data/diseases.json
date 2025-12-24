@@ -1,559 +1,1149 @@
 {
+  "version": "HEIM-Biobank v1.0",
+  "generated": "2025-12-24T08:59:39.259932",
+  "count": 25,
   "diseases": [
+    {
+      "id": "type2_diabetes",
+      "name": "Type 2 Diabetes Mellitus",
+      "category": "Metabolic",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 67.0,
+        "deathsMillions": 1.5,
+        "prevalenceMillions": 462.0,
+        "burdenScore": 135.15
+      },
+      "research": {
+        "globalPublications": 0,
+        "biobanksEngaged": 0,
+        "researchIntensity": 0.0
+      },
+      "gap": {
+        "score": 95.0,
+        "severity": "Critical",
+        "color": "#dc3545"
+      },
+      "topBiobanks": []
+    },
+    {
+      "id": "chronic_kidney_disease",
+      "name": "Chronic Kidney Disease",
+      "category": "Other NCD",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 35.0,
+        "deathsMillions": 1.3,
+        "prevalenceMillions": 697.0,
+        "burdenScore": 110.93
+      },
+      "research": {
+        "globalPublications": 0,
+        "biobanksEngaged": 0,
+        "researchIntensity": 0.0
+      },
+      "gap": {
+        "score": 95.0,
+        "severity": "Critical",
+        "color": "#dc3545"
+      },
+      "topBiobanks": []
+    },
+    {
+      "id": "road_traffic_injuries",
+      "name": "Road Traffic Injuries",
+      "category": "Injuries",
+      "globalSouthPriority": true,
+      "burden": {
+        "dalysMillions": 85.5,
+        "deathsMillions": 1.35,
+        "prevalenceMillions": 50.0,
+        "burdenScore": 127.24
+      },
+      "research": {
+        "globalPublications": 0,
+        "biobanksEngaged": 0,
+        "researchIntensity": 0.0
+      },
+      "gap": {
+        "score": 95.0,
+        "severity": "Critical",
+        "color": "#dc3545"
+      },
+      "topBiobanks": []
+    },
     {
       "id": "malaria",
       "name": "Malaria",
       "category": "Infectious",
+      "globalSouthPriority": true,
       "burden": {
-        "dalys": 62.5,
-        "deaths": 0.62,
-        "prevalence": 247.0,
-        "score": 86.19
+        "dalysMillions": 62.5,
+        "deathsMillions": 0.62,
+        "prevalenceMillions": 247.0,
+        "burdenScore": 86.18
       },
       "research": {
-        "publications": 160,
-        "intensity": 1.8564
+        "globalPublications": 160,
+        "biobanksEngaged": 4,
+        "researchIntensity": 2.56
       },
       "gap": {
-        "score": 50,
-        "severity": "Moderate"
+        "score": 60.0,
+        "severity": "High",
+        "color": "#fd7e14"
       },
-      "globalSouthPriority": true
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 151
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 7
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 1
+        },
+        {
+          "id": "awigen",
+          "name": "AWI-Gen",
+          "publications": 1
+        }
+      ]
     },
     {
       "id": "tuberculosis",
       "name": "Tuberculosis",
       "category": "Infectious",
+      "globalSouthPriority": true,
       "burden": {
-        "dalys": 38.1,
-        "deaths": 1.3,
-        "prevalence": 10.6,
-        "score": 94.69
+        "dalysMillions": 38.1,
+        "deathsMillions": 1.3,
+        "prevalenceMillions": 23.0,
+        "burdenScore": 97.67
       },
       "research": {
-        "publications": 170,
-        "intensity": 1.7953
+        "globalPublications": 170,
+        "biobanksEngaged": 9,
+        "researchIntensity": 4.462
       },
       "gap": {
-        "score": 50,
-        "severity": "Moderate"
+        "score": 60.0,
+        "severity": "High",
+        "color": "#fd7e14"
       },
-      "globalSouthPriority": true
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 141
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 10
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 7
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 7
+        },
+        {
+          "id": "all_of_us",
+          "name": "All of Us Research Program",
+          "publications": 1
+        }
+      ]
     },
     {
       "id": "diarrheal_diseases",
       "name": "Diarrheal Diseases",
       "category": "Infectious",
+      "globalSouthPriority": true,
       "burden": {
-        "dalys": 44.2,
-        "deaths": 1.53,
-        "prevalence": 1700.0,
-        "score": 130.91
+        "dalysMillions": 44.2,
+        "deathsMillions": 1.53,
+        "prevalenceMillions": 1500.0,
+        "burdenScore": 130.36
       },
       "research": {
-        "publications": 220,
-        "intensity": 1.6805
+        "globalPublications": 220,
+        "biobanksEngaged": 6,
+        "researchIntensity": 4.977
       },
       "gap": {
-        "score": 50,
-        "severity": "Moderate"
-      },
-      "globalSouthPriority": true
-    },
-    {
-      "id": "road_traffic",
-      "name": "Road Traffic Injuries",
-      "category": "Injuries",
-      "burden": {
-        "dalys": 85.5,
-        "deaths": 1.35,
-        "prevalence": 50.0,
-        "score": 127.33
-      },
-      "research": {
-        "publications": 208,
-        "intensity": 1.6336
-      },
-      "gap": {
-        "score": 40,
-        "severity": "Moderate"
-      },
-      "globalSouthPriority": true
-    },
-    {
-      "id": "copd",
-      "name": "Chronic Obstructive Pulmonary Disease",
-      "category": "Respiratory",
-      "burden": {
-        "dalys": 81.0,
-        "deaths": 3.23,
-        "prevalence": 212.0,
-        "score": 225.28
-      },
-      "research": {
-        "publications": 423,
-        "intensity": 1.8777
-      },
-      "gap": {
-        "score": 35,
-        "severity": "Moderate"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "hiv_aids",
-      "name": "HIV/AIDS",
-      "category": "Infectious",
-      "burden": {
-        "dalys": 42.0,
-        "deaths": 0.68,
-        "prevalence": 38.4,
-        "score": 70.95
-      },
-      "research": {
-        "publications": 645,
-        "intensity": 9.0909
-      },
-      "gap": {
-        "score": 25,
-        "severity": "Low"
-      },
-      "globalSouthPriority": true
-    },
-    {
-      "id": "ntds",
-      "name": "Neglected Tropical Diseases",
-      "category": "Neglected",
-      "burden": {
-        "dalys": 28.3,
-        "deaths": 0.17,
-        "prevalence": 1500.0,
-        "score": 54.41
-      },
-      "research": {
-        "publications": 408,
-        "intensity": 7.4986
-      },
-      "gap": {
-        "score": 25,
-        "severity": "Low"
-      },
-      "globalSouthPriority": true
-    },
-    {
-      "id": "neonatal_disorders",
-      "name": "Neonatal Disorders",
-      "category": "Maternal",
-      "burden": {
-        "dalys": 75.0,
-        "deaths": 2.4,
-        "prevalence": 0.0,
-        "score": 157.5
-      },
-      "research": {
-        "publications": 1365,
-        "intensity": 8.6667
-      },
-      "gap": {
-        "score": 25,
-        "severity": "Low"
-      },
-      "globalSouthPriority": true
-    },
-    {
-      "id": "preterm_birth",
-      "name": "Preterm Birth Complications",
-      "category": "Maternal",
-      "burden": {
-        "dalys": 23.0,
-        "deaths": 0.9,
-        "prevalence": 15.0,
-        "score": 68.54
-      },
-      "research": {
-        "publications": 1053,
-        "intensity": 15.3633
-      },
-      "gap": {
-        "score": 25,
-        "severity": "Low"
-      },
-      "globalSouthPriority": true
-    },
-    {
-      "id": "ischemic_heart_disease",
-      "name": "Ischemic Heart Disease",
-      "category": "Cardiovascular",
-      "burden": {
-        "dalys": 185.0,
-        "deaths": 9.44,
-        "prevalence": 197.0,
-        "score": 587.47
-      },
-      "research": {
-        "publications": 1687,
-        "intensity": 2.8716
-      },
-      "gap": {
-        "score": 20,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "stroke",
-      "name": "Stroke",
-      "category": "Cardiovascular",
-      "burden": {
-        "dalys": 143.0,
-        "deaths": 6.55,
-        "prevalence": 101.0,
-        "score": 419.09
-      },
-      "research": {
-        "publications": 3800,
-        "intensity": 9.0673
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "asthma",
-      "name": "Asthma",
-      "category": "Respiratory",
-      "burden": {
-        "dalys": 22.0,
-        "deaths": 0.46,
-        "prevalence": 262.0,
-        "score": 58.2
-      },
-      "research": {
-        "publications": 404,
-        "intensity": 6.9416
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "diabetes",
-      "name": "Type 2 Diabetes",
-      "category": "Metabolic",
-      "burden": {
-        "dalys": 67.0,
-        "deaths": 1.5,
-        "prevalence": 462.0,
-        "score": 135.16
-      },
-      "research": {
-        "publications": 2454,
-        "intensity": 18.1563
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "alzheimers",
-      "name": "Alzheimer's Disease",
-      "category": "Neurological",
-      "burden": {
-        "dalys": 30.0,
-        "deaths": 1.62,
-        "prevalence": 55.0,
-        "score": 113.48
-      },
-      "research": {
-        "publications": 1876,
-        "intensity": 16.5315
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "epilepsy",
-      "name": "Epilepsy",
-      "category": "Neurological",
-      "burden": {
-        "dalys": 15.0,
-        "deaths": 0.13,
-        "prevalence": 50.0,
-        "score": 31.08
-      },
-      "research": {
-        "publications": 439,
-        "intensity": 14.1248
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "parkinsons",
-      "name": "Parkinson's Disease",
-      "category": "Neurological",
-      "burden": {
-        "dalys": 6.0,
-        "deaths": 0.33,
-        "prevalence": 8.5,
-        "score": 29.28
-      },
-      "research": {
-        "publications": 518,
-        "intensity": 17.6913
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "depression",
-      "name": "Depression",
-      "category": "Mental Health",
-      "burden": {
-        "dalys": 50.0,
-        "deaths": 0.0,
-        "prevalence": 280.0,
-        "score": 49.49
-      },
-      "research": {
-        "publications": 1632,
-        "intensity": 32.9764
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "anxiety",
-      "name": "Anxiety Disorders",
-      "category": "Mental Health",
-      "burden": {
-        "dalys": 28.0,
-        "deaths": 0.0,
-        "prevalence": 301.0,
-        "score": 38.8
-      },
-      "research": {
-        "publications": 880,
-        "intensity": 22.6804
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "bipolar",
-      "name": "Bipolar Disorder",
-      "category": "Mental Health",
-      "burden": {
-        "dalys": 12.0,
-        "deaths": 0.0,
-        "prevalence": 40.0,
-        "score": 22.13
-      },
-      "research": {
-        "publications": 302,
-        "intensity": 13.6466
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "schizophrenia",
-      "name": "Schizophrenia",
-      "category": "Mental Health",
-      "burden": {
-        "dalys": 17.0,
-        "deaths": 0.0,
-        "prevalence": 24.0,
-        "score": 22.48
-      },
-      "research": {
-        "publications": 545,
-        "intensity": 24.2438
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "lung_cancer",
-      "name": "Lung Cancer",
-      "category": "Cancer",
-      "burden": {
-        "dalys": 45.0,
-        "deaths": 1.8,
-        "prevalence": 2.2,
-        "score": 117.55
-      },
-      "research": {
-        "publications": 2342,
-        "intensity": 19.9234
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "breast_cancer",
-      "name": "Breast Cancer",
-      "category": "Cancer",
-      "burden": {
-        "dalys": 18.0,
-        "deaths": 0.68,
-        "prevalence": 7.8,
-        "score": 52.44
-      },
-      "research": {
-        "publications": 2195,
-        "intensity": 41.8574
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "chronic_kidney",
-      "name": "Chronic Kidney Disease",
-      "category": "Renal",
-      "burden": {
-        "dalys": 35.0,
-        "deaths": 1.4,
-        "prevalence": 843.0,
-        "score": 116.76
-      },
-      "research": {
-        "publications": 713,
-        "intensity": 6.1065
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
-    },
-    {
-      "id": "cirrhosis",
-      "name": "Cirrhosis",
-      "category": "Hepatic",
-      "burden": {
-        "dalys": 25.0,
-        "deaths": 1.32,
-        "prevalence": 112.0,
-        "score": 99.03
-      },
-      "research": {
-        "publications": 982,
-        "intensity": 9.9162
-      },
-      "gap": {
-        "score": 10,
-        "severity": "Low"
-      },
-      "globalSouthPriority": false
+        "score": 60.0,
+        "severity": "High",
+        "color": "#fd7e14"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 193
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 11
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 11
+        },
+        {
+          "id": "all_of_us",
+          "name": "All of Us Research Program",
+          "publications": 2
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 2
+        }
+      ]
     },
     {
       "id": "low_back_pain",
       "name": "Low Back Pain",
       "category": "Musculoskeletal",
+      "globalSouthPriority": false,
       "burden": {
-        "dalys": 63.0,
-        "deaths": 0.0,
-        "prevalence": 568.0,
-        "score": 59.05
+        "dalysMillions": 63.0,
+        "deathsMillions": 0.0,
+        "prevalenceMillions": 568.0,
+        "burdenScore": 59.04
       },
       "research": {
-        "publications": 307,
-        "intensity": 5.199
+        "globalPublications": 307,
+        "biobanksEngaged": 13,
+        "researchIntensity": 4.873
       },
       "gap": {
-        "score": 10,
-        "severity": "Low"
+        "score": 60.0,
+        "severity": "High",
+        "color": "#fd7e14"
       },
-      "globalSouthPriority": false
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 137
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 56
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 37
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 36
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 16
+        }
+      ]
+    },
+    {
+      "id": "ischemic_heart_disease",
+      "name": "Ischemic Heart Disease",
+      "category": "Cardiovascular",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 185.0,
+        "deathsMillions": 9.44,
+        "prevalenceMillions": 244.0,
+        "burdenScore": 588.37
+      },
+      "research": {
+        "globalPublications": 1687,
+        "biobanksEngaged": 21,
+        "researchIntensity": 9.119
+      },
+      "gap": {
+        "score": 50.0,
+        "severity": "Moderate",
+        "color": "#ffc107"
+      },
+      "topBiobanks": [
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 795
+        },
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 488
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 98
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 68
+        },
+        {
+          "id": "china_kadoorie",
+          "name": "China Kadoorie Biobank",
+          "publications": 55
+        }
+      ]
+    },
+    {
+      "id": "copd",
+      "name": "Chronic Obstructive Pulmonary Disease",
+      "category": "Respiratory",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 81.0,
+        "deathsMillions": 3.28,
+        "prevalenceMillions": 212.0,
+        "burdenScore": 227.76
+      },
+      "research": {
+        "globalPublications": 423,
+        "biobanksEngaged": 19,
+        "researchIntensity": 5.222
+      },
+      "gap": {
+        "score": 50.0,
+        "severity": "Moderate",
+        "color": "#ffc107"
+      },
+      "topBiobanks": [
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 175
+        },
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 98
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 36
+        },
+        {
+          "id": "china_kadoorie",
+          "name": "China Kadoorie Biobank",
+          "publications": 30
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 20
+        }
+      ]
+    },
+    {
+      "id": "asthma",
+      "name": "Asthma",
+      "category": "Respiratory",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 22.0,
+        "deathsMillions": 0.46,
+        "prevalenceMillions": 262.0,
+        "burdenScore": 58.18
+      },
+      "research": {
+        "globalPublications": 404,
+        "biobanksEngaged": 18,
+        "researchIntensity": 18.364
+      },
+      "gap": {
+        "score": 40.0,
+        "severity": "Moderate",
+        "color": "#ffc107"
+      },
+      "topBiobanks": [
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 163
+        },
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 88
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 48
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 27
+        },
+        {
+          "id": "lifelines",
+          "name": "LifeLines",
+          "publications": 15
+        }
+      ]
+    },
+    {
+      "id": "hiv_aids",
+      "name": "HIV/AIDS",
+      "category": "Infectious",
+      "globalSouthPriority": true,
+      "burden": {
+        "dalysMillions": 42.0,
+        "deathsMillions": 0.68,
+        "prevalenceMillions": 38.4,
+        "burdenScore": 70.84
+      },
+      "research": {
+        "globalPublications": 645,
+        "biobanksEngaged": 14,
+        "researchIntensity": 15.357
+      },
+      "gap": {
+        "score": 40.0,
+        "severity": "Moderate",
+        "color": "#ffc107"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 577
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 19
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 18
+        },
+        {
+          "id": "awigen",
+          "name": "AWI-Gen",
+          "publications": 7
+        },
+        {
+          "id": "all_of_us",
+          "name": "All of Us Research Program",
+          "publications": 5
+        }
+      ]
+    },
+    {
+      "id": "ntds",
+      "name": "Neglected Tropical Diseases",
+      "category": "Neglected",
+      "globalSouthPriority": true,
+      "burden": {
+        "dalysMillions": 28.3,
+        "deathsMillions": 0.2,
+        "prevalenceMillions": 1700.0,
+        "burdenScore": 56.45
+      },
+      "research": {
+        "globalPublications": 408,
+        "biobanksEngaged": 15,
+        "researchIntensity": 14.417
+      },
+      "gap": {
+        "score": 40.0,
+        "severity": "Moderate",
+        "color": "#ffc107"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 344
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 25
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 21
+        },
+        {
+          "id": "biobank_japan",
+          "name": "BioBank Japan",
+          "publications": 3
+        },
+        {
+          "id": "biovu",
+          "name": "BioVU",
+          "publications": 3
+        }
+      ]
+    },
+    {
+      "id": "neonatal_disorders",
+      "name": "Neonatal Disorders",
+      "category": "Maternal/Child",
+      "globalSouthPriority": true,
+      "burden": {
+        "dalysMillions": 75.0,
+        "deathsMillions": 2.4,
+        "prevalenceMillions": 30.0,
+        "burdenScore": 172.27
+      },
+      "research": {
+        "globalPublications": 1365,
+        "biobanksEngaged": 21,
+        "researchIntensity": 18.2
+      },
+      "gap": {
+        "score": 40.0,
+        "severity": "Moderate",
+        "color": "#ffc107"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 1026
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 168
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 40
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 38
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 23
+        }
+      ]
+    },
+    {
+      "id": "stroke",
+      "name": "Stroke",
+      "category": "Cardiovascular",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 143.0,
+        "deathsMillions": 7.08,
+        "prevalenceMillions": 101.0,
+        "burdenScore": 445.54
+      },
+      "research": {
+        "globalPublications": 3800,
+        "biobanksEngaged": 23,
+        "researchIntensity": 26.573
+      },
+      "gap": {
+        "score": 30.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 1793
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 1136
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 589
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 76
+        },
+        {
+          "id": "china_kadoorie",
+          "name": "China Kadoorie Biobank",
+          "publications": 75
+        }
+      ]
+    },
+    {
+      "id": "epilepsy",
+      "name": "Epilepsy",
+      "category": "Neurological",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 15.0,
+        "deathsMillions": 0.13,
+        "prevalenceMillions": 46.0,
+        "burdenScore": 30.63
+      },
+      "research": {
+        "globalPublications": 439,
+        "biobanksEngaged": 9,
+        "researchIntensity": 29.267
+      },
+      "gap": {
+        "score": 30.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 294
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 82
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 38
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 20
+        },
+        {
+          "id": "biobank_japan",
+          "name": "BioBank Japan",
+          "publications": 1
+        }
+      ]
+    },
+    {
+      "id": "depression",
+      "name": "Depressive Disorders",
+      "category": "Mental Health",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 50.0,
+        "deathsMillions": 0.0,
+        "prevalenceMillions": 280.0,
+        "burdenScore": 49.47
+      },
+      "research": {
+        "globalPublications": 1632,
+        "biobanksEngaged": 20,
+        "researchIntensity": 32.64
+      },
+      "gap": {
+        "score": 30.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 595
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 575
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 121
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 79
+        },
+        {
+          "id": "lifelines",
+          "name": "LifeLines",
+          "publications": 48
+        }
+      ]
+    },
+    {
+      "id": "anxiety",
+      "name": "Anxiety Disorders",
+      "category": "Mental Health",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 28.0,
+        "deathsMillions": 0.0,
+        "prevalenceMillions": 301.0,
+        "burdenScore": 38.79
+      },
+      "research": {
+        "globalPublications": 880,
+        "biobanksEngaged": 15,
+        "researchIntensity": 31.429
+      },
+      "gap": {
+        "score": 30.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 462
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 169
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 107
+        },
+        {
+          "id": "lifelines",
+          "name": "LifeLines",
+          "publications": 32
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 30
+        }
+      ]
+    },
+    {
+      "id": "bipolar",
+      "name": "Bipolar Disorder",
+      "category": "Mental Health",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 12.0,
+        "deathsMillions": 0.0,
+        "prevalenceMillions": 40.0,
+        "burdenScore": 22.02
+      },
+      "research": {
+        "globalPublications": 302,
+        "biobanksEngaged": 13,
+        "researchIntensity": 25.167
+      },
+      "gap": {
+        "score": 30.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 150
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 106
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 14
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 11
+        },
+        {
+          "id": "swedish_twin",
+          "name": "Swedish Twin Registry",
+          "publications": 7
+        }
+      ]
+    },
+    {
+      "id": "schizophrenia",
+      "name": "Schizophrenia",
+      "category": "Mental Health",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 17.0,
+        "deathsMillions": 0.0,
+        "prevalenceMillions": 24.0,
+        "burdenScore": 22.3
+      },
+      "research": {
+        "globalPublications": 545,
+        "biobanksEngaged": 16,
+        "researchIntensity": 32.059
+      },
+      "gap": {
+        "score": 30.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 328
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 153
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 22
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 10
+        },
+        {
+          "id": "taiwan_biobank",
+          "name": "Taiwan Biobank",
+          "publications": 6
+        }
+      ]
+    },
+    {
+      "id": "cirrhosis",
+      "name": "Cirrhosis and Liver Disease",
+      "category": "Other NCD",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 25.0,
+        "deathsMillions": 1.32,
+        "prevalenceMillions": 112.0,
+        "burdenScore": 98.99
+      },
+      "research": {
+        "globalPublications": 982,
+        "biobanksEngaged": 19,
+        "researchIntensity": 39.28
+      },
+      "gap": {
+        "score": 30.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 411
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 393
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 72
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 28
+        },
+        {
+          "id": "mvp",
+          "name": "Million Veteran Program",
+          "publications": 10
+        }
+      ]
+    },
+    {
+      "id": "preterm_birth",
+      "name": "Preterm Birth Complications",
+      "category": "Maternal/Child",
+      "globalSouthPriority": true,
+      "burden": {
+        "dalysMillions": 23.0,
+        "deathsMillions": 0.9,
+        "prevalenceMillions": 15.0,
+        "burdenScore": 68.26
+      },
+      "research": {
+        "globalPublications": 1053,
+        "biobanksEngaged": 19,
+        "researchIntensity": 45.783
+      },
+      "gap": {
+        "score": 30.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 909
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 50
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 32
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 22
+        },
+        {
+          "id": "lifelines",
+          "name": "LifeLines",
+          "publications": 7
+        }
+      ]
+    },
+    {
+      "id": "alzheimers",
+      "name": "Alzheimer's Disease and Dementia",
+      "category": "Neurological",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 30.0,
+        "deathsMillions": 1.8,
+        "prevalenceMillions": 55.0,
+        "burdenScore": 122.4
+      },
+      "research": {
+        "globalPublications": 1876,
+        "biobanksEngaged": 22,
+        "researchIntensity": 62.533
+      },
+      "gap": {
+        "score": 20.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 824
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 786
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 55
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 55
+        },
+        {
+          "id": "swedish_twin",
+          "name": "Swedish Twin Registry",
+          "publications": 37
+        }
+      ]
+    },
+    {
+      "id": "parkinsons",
+      "name": "Parkinson's Disease",
+      "category": "Neurological",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 6.0,
+        "deathsMillions": 0.33,
+        "prevalenceMillions": 8.5,
+        "burdenScore": 28.79
+      },
+      "research": {
+        "globalPublications": 518,
+        "biobanksEngaged": 15,
+        "researchIntensity": 86.333
+      },
+      "gap": {
+        "score": 20.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 294
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 147
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 30
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 18
+        },
+        {
+          "id": "swedish_twin",
+          "name": "Swedish Twin Registry",
+          "publications": 7
+        }
+      ]
+    },
+    {
+      "id": "lung_cancer",
+      "name": "Lung Cancer",
+      "category": "Cancer",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 45.0,
+        "deathsMillions": 1.8,
+        "prevalenceMillions": 2.2,
+        "burdenScore": 115.92
+      },
+      "research": {
+        "globalPublications": 2342,
+        "biobanksEngaged": 23,
+        "researchIntensity": 52.044
+      },
+      "gap": {
+        "score": 20.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 1338
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 593
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 131
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 77
+        },
+        {
+          "id": "china_kadoorie",
+          "name": "China Kadoorie Biobank",
+          "publications": 39
+        }
+      ]
+    },
+    {
+      "id": "breast_cancer",
+      "name": "Breast Cancer",
+      "category": "Cancer",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 18.0,
+        "deathsMillions": 0.68,
+        "prevalenceMillions": 7.8,
+        "burdenScore": 51.92
+      },
+      "research": {
+        "globalPublications": 2195,
+        "biobanksEngaged": 21,
+        "researchIntensity": 121.944
+      },
+      "gap": {
+        "score": 10.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "emerge",
+          "name": "eMERGE Network",
+          "publications": 1300
+        },
+        {
+          "id": "uk_biobank",
+          "name": "UK Biobank",
+          "publications": 550
+        },
+        {
+          "id": "decode",
+          "name": "deCODE Genetics",
+          "publications": 121
+        },
+        {
+          "id": "finngen",
+          "name": "FinnGen",
+          "publications": 61
+        },
+        {
+          "id": "china_kadoorie",
+          "name": "China Kadoorie Biobank",
+          "publications": 29
+        }
+      ]
     }
-  ],
-  "categories": {
-    "Infectious": [
-      "malaria",
-      "tuberculosis",
-      "diarrheal_diseases",
-      "hiv_aids"
-    ],
-    "Injuries": [
-      "road_traffic"
-    ],
-    "Respiratory": [
-      "copd",
-      "asthma"
-    ],
-    "Neglected": [
-      "ntds"
-    ],
-    "Maternal": [
-      "neonatal_disorders",
-      "preterm_birth"
-    ],
-    "Cardiovascular": [
-      "ischemic_heart_disease",
-      "stroke"
-    ],
-    "Metabolic": [
-      "diabetes"
-    ],
-    "Neurological": [
-      "alzheimers",
-      "epilepsy",
-      "parkinsons"
-    ],
-    "Mental Health": [
-      "depression",
-      "anxiety",
-      "bipolar",
-      "schizophrenia"
-    ],
-    "Cancer": [
-      "lung_cancer",
-      "breast_cancer"
-    ],
-    "Renal": [
-      "chronic_kidney"
-    ],
-    "Hepatic": [
-      "cirrhosis"
-    ],
-    "Musculoskeletal": [
-      "low_back_pain"
-    ]
-  },
-  "totalCount": 25,
-  "generated": "2025-12-23T19:10:12.567758"
+  ]
 }

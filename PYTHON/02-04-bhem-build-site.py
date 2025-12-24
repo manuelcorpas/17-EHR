@@ -2,21 +2,32 @@
 """
 02-04-bhem-build-site.py
 ========================
-BHEM Step 5: Build static HTML/CSS/JS site for GitHub Pages
+HEIM-Biobank v1.0: Build Static Dashboard Site
 
-Creates a complete static website with interactive dashboard.
-The site loads JSON data files and renders visualizations client-side.
+Generates a complete static HTML/CSS/JS dashboard for GitHub Pages deployment.
 
-INPUT:  docs/data/*.json (from previous step)
-OUTPUT: docs/index.html
-        docs/css/style.css
-        docs/js/app.js
-        docs/js/charts.js
+OUTPUT (docs/):
+    index.html      - Main dashboard with 8 tabs
+    css/style.css   - Responsive styling
+    js/app.js       - Tab navigation and data loading
+    js/charts.js    - Chart.js visualizations
+    .nojekyll       - Bypass Jekyll processing
+
+DASHBOARD TABS:
+    1. Overview   - Global statistics, key metrics, critical gaps
+    2. Biobanks   - Per-biobank details, sortable table
+    3. Diseases   - Per-disease analysis, gap severity
+    4. Matrix     - Biobank × Disease heatmap
+    5. Trends     - Publication trends over time
+    6. Themes     - MeSH research theme analysis
+    7. Compare    - Side-by-side biobank comparison
+    8. Equity     - HIC vs LMIC analysis
 
 USAGE:
     python 02-04-bhem-build-site.py
 
-After running, push to GitHub and enable Pages on the docs/ folder.
+VERSION: HEIM-Biobank v1.0
+DATE: 2025-12-24
 """
 
 import logging
@@ -33,1113 +44,1246 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+VERSION = "HEIM-Biobank v1.0"
+VERSION_DATE = "2025-12-24"
+
 # Paths
-BASE_DIR = Path(__file__).parent.parent
+BASE_DIR = Path(__file__).parent.parent if Path(__file__).parent.name == "PYTHON" else Path(__file__).parent
 DOCS_DIR = BASE_DIR / "docs"
-CSS_DIR = DOCS_DIR / "css"
-JS_DIR = DOCS_DIR / "js"
-
-# Create directories
-CSS_DIR.mkdir(parents=True, exist_ok=True)
-JS_DIR.mkdir(parents=True, exist_ok=True)
-
 
 # =============================================================================
 # HTML TEMPLATE
 # =============================================================================
 
-INDEX_HTML = '''<!DOCTYPE html>
+HTML_TEMPLATE = '''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHEM - Biobank Health Equity Monitor</title>
+    <title>HEIM-Biobank v1.0 | Global Equity Index for Biobank Research</title>
+    <meta name="description" content="Health Equity Informative Metrics for Biobank research - measuring alignment between research output and global disease burden">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>🏥 BHEM</h1>
-            <p class="subtitle">Biobank Health Equity Monitor</p>
-            <p class="tagline">Tracking global biobank research alignment with disease burden</p>
+    <!-- Header Banner -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-title">
+                <h1>HEIM-Biobank <span class="version">v1.0</span></h1>
+                <p class="tagline">Global equity index for biobank-linked research vs disease burden</p>
+            </div>
+            <div class="header-meta">
+                <span class="framework-badge">Part of HEIM Framework</span>
+            </div>
         </div>
     </header>
-
-    <nav>
-        <div class="container">
-            <button class="nav-btn active" data-view="overview">Overview</button>
-            <button class="nav-btn" data-view="biobanks">Biobanks</button>
-            <button class="nav-btn" data-view="diseases">Diseases</button>
-            <button class="nav-btn" data-view="matrix">Matrix</button>
-            <button class="nav-btn" data-view="trends">Trends</button>
-        </div>
+    
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <button class="tab-btn active" data-tab="overview">Overview</button>
+        <button class="tab-btn" data-tab="biobanks">Biobanks</button>
+        <button class="tab-btn" data-tab="diseases">Diseases</button>
+        <button class="tab-btn" data-tab="matrix">Matrix</button>
+        <button class="tab-btn" data-tab="trends">Trends</button>
+        <button class="tab-btn" data-tab="themes">Themes</button>
+        <button class="tab-btn" data-tab="compare">Compare</button>
+        <button class="tab-btn" data-tab="equity">Equity</button>
     </nav>
-
-    <main>
-        <div class="container">
-            <!-- Overview View -->
-            <section id="view-overview" class="view active">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-value" id="stat-publications">-</span>
-                        <span class="stat-label">Publications</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-value" id="stat-biobanks">-</span>
-                        <span class="stat-label">Biobanks</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-value" id="stat-diseases">-</span>
-                        <span class="stat-label">Diseases Tracked</span>
-                    </div>
-                    <div class="stat-card alert">
-                        <span class="stat-value" id="stat-critical">-</span>
-                        <span class="stat-label">Critical Gaps</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-value" id="stat-equity">-</span>
-                        <span class="stat-label">Equity Ratio</span>
-                    </div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Tab 1: Overview -->
+        <section id="overview" class="tab-content active">
+            <div class="section-header">
+                <h2>Global Overview</h2>
+                <p>Key metrics and critical research gaps across all biobanks</p>
+            </div>
+            
+            <!-- Summary Cards -->
+            <div class="summary-cards">
+                <div class="card summary-card">
+                    <div class="card-icon">🏛️</div>
+                    <div class="card-value" id="stat-biobanks">--</div>
+                    <div class="card-label">Biobanks Scored</div>
                 </div>
-
-                <div class="chart-row">
+                <div class="card summary-card">
+                    <div class="card-icon">📚</div>
+                    <div class="card-value" id="stat-publications">--</div>
+                    <div class="card-label">Publications Mapped</div>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-icon">🌍</div>
+                    <div class="card-value" id="stat-countries">--</div>
+                    <div class="card-label">Countries Represented</div>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-icon">⚠️</div>
+                    <div class="card-value" id="stat-critical">--</div>
+                    <div class="card-label">Critical Gap Diseases</div>
+                </div>
+            </div>
+            
+            <!-- Charts Row -->
+            <div class="charts-row">
+                <div class="card chart-card">
+                    <h3>Equity Alignment Distribution</h3>
                     <div class="chart-container">
-                        <h3>Research Gap Distribution</h3>
-                        <canvas id="chart-gaps"></canvas>
+                        <canvas id="chart-eas-distribution"></canvas>
                     </div>
+                </div>
+                <div class="card chart-card">
+                    <h3>Critical Research Gaps</h3>
                     <div class="chart-container">
-                        <h3>Publications by Region</h3>
-                        <canvas id="chart-regions"></canvas>
+                        <canvas id="chart-critical-gaps"></canvas>
                     </div>
                 </div>
-
-                <div class="chart-container full-width">
-                    <h3>Top Critical Gap Diseases</h3>
-                    <canvas id="chart-top-gaps"></canvas>
+            </div>
+            
+            <!-- Top Biobanks Table -->
+            <div class="card">
+                <h3>Top Biobanks by Equity Alignment</h3>
+                <div class="table-container">
+                    <table class="data-table" id="table-top-biobanks">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Biobank</th>
+                                <th>EAS</th>
+                                <th>Category</th>
+                                <th>Publications</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
-
-                <div class="info-box">
-                    <h3>About This Dashboard</h3>
-                    <p>The Biobank Health Equity Monitor (BHEM) tracks research publications from 50+ global biobanks 
-                    and evaluates their alignment with the global disease burden. Higher gap scores indicate 
-                    diseases that are under-researched relative to their public health impact.</p>
-                    <p><strong>Equity Ratio:</strong> Compares research intensity between high-income countries (HIC) 
-                    and the Global South. A ratio > 1 indicates HIC-focused research.</p>
-                    <p><strong>Data source:</strong> PubMed publications (2000-2025) linked to major biobanks.</p>
+            </div>
+            
+            <!-- Methodology Note -->
+            <div class="card info-card">
+                <h3>About HEIM-Biobank</h3>
+                <p>The <strong>Equity Alignment Score (0-100)</strong> measures how well a biobank's research portfolio 
+                matches global disease burden. Higher scores indicate better alignment between research output and 
+                health needs.</p>
+                <p>The <strong>Research Gap Score (0-100)</strong> quantifies the mismatch between a disease's global 
+                burden and research attention. Categories: <span class="badge badge-critical">Critical (&gt;70)</span> 
+                <span class="badge badge-high">High (50-70)</span> 
+                <span class="badge badge-moderate">Moderate (30-50)</span> 
+                <span class="badge badge-low">Low (&lt;30)</span></p>
+                <p class="methodology-source">Methodology: Corpas et al. (2025), Annual Review of Biomedical Data Science</p>
+            </div>
+        </section>
+        
+        <!-- Tab 2: Biobanks -->
+        <section id="biobanks" class="tab-content">
+            <div class="section-header">
+                <h2>Biobank Analysis</h2>
+                <p>Detailed equity metrics for each biobank in the registry</p>
+            </div>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <input type="text" id="biobank-search" class="search-input" placeholder="Search biobanks...">
+                <select id="biobank-region-filter" class="filter-select">
+                    <option value="">All Regions</option>
+                    <option value="AFR">Africa</option>
+                    <option value="AMR">Americas</option>
+                    <option value="EMR">Eastern Mediterranean</option>
+                    <option value="EUR">Europe</option>
+                    <option value="SEAR">South-East Asia</option>
+                    <option value="WPR">Western Pacific</option>
+                </select>
+                <select id="biobank-category-filter" class="filter-select">
+                    <option value="">All Categories</option>
+                    <option value="Strong">Strong Alignment</option>
+                    <option value="Moderate">Moderate Alignment</option>
+                    <option value="Weak">Weak Alignment</option>
+                    <option value="Poor">Poor Alignment</option>
+                </select>
+            </div>
+            
+            <!-- Biobanks Table -->
+            <div class="card">
+                <div class="table-container">
+                    <table class="data-table sortable" id="table-biobanks">
+                        <thead>
+                            <tr>
+                                <th data-sort="name">Biobank ↕</th>
+                                <th data-sort="country">Country ↕</th>
+                                <th data-sort="region">Region ↕</th>
+                                <th data-sort="eas">EAS ↕</th>
+                                <th data-sort="category">Category ↕</th>
+                                <th data-sort="publications">Publications ↕</th>
+                                <th data-sort="diseases">Diseases ↕</th>
+                                <th data-sort="gaps">Critical Gaps ↕</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
-            </section>
-
-            <!-- Biobanks View -->
-            <section id="view-biobanks" class="view">
-                <div class="controls">
-                    <input type="text" id="biobank-search" placeholder="Search biobanks...">
-                    <select id="biobank-sort">
-                        <option value="publications">Sort by Publications</option>
-                        <option value="ros">Sort by Research Opportunity</option>
-                        <option value="gaps">Sort by Critical Gaps</option>
-                        <option value="name">Sort by Name</option>
+            </div>
+            
+            <!-- Download Button -->
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadBiobanksCSV()">Download CSV</button>
+            </div>
+        </section>
+        
+        <!-- Tab 3: Diseases -->
+        <section id="diseases" class="tab-content">
+            <div class="section-header">
+                <h2>Disease Analysis</h2>
+                <p>Research gaps by disease relative to global burden</p>
+            </div>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <input type="text" id="disease-search" class="search-input" placeholder="Search diseases...">
+                <select id="disease-category-filter" class="filter-select">
+                    <option value="">All Categories</option>
+                    <option value="Cardiovascular">Cardiovascular</option>
+                    <option value="Respiratory">Respiratory</option>
+                    <option value="Metabolic">Metabolic</option>
+                    <option value="Infectious">Infectious</option>
+                    <option value="Neglected">Neglected</option>
+                    <option value="Neurological">Neurological</option>
+                    <option value="Mental Health">Mental Health</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Maternal/Child">Maternal/Child</option>
+                    <option value="Injuries">Injuries</option>
+                </select>
+                <select id="disease-severity-filter" class="filter-select">
+                    <option value="">All Severities</option>
+                    <option value="Critical">Critical</option>
+                    <option value="High">High</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+            
+            <!-- Disease Chart -->
+            <div class="card chart-card">
+                <h3>Research Gap vs Disease Burden</h3>
+                <div class="chart-container chart-large">
+                    <canvas id="chart-disease-burden"></canvas>
+                </div>
+            </div>
+            
+            <!-- Diseases Table -->
+            <div class="card">
+                <div class="table-container">
+                    <table class="data-table sortable" id="table-diseases">
+                        <thead>
+                            <tr>
+                                <th data-sort="name">Disease ↕</th>
+                                <th data-sort="category">Category ↕</th>
+                                <th data-sort="dalys">DALYs (M) ↕</th>
+                                <th data-sort="publications">Publications ↕</th>
+                                <th data-sort="gap">Gap Score ↕</th>
+                                <th data-sort="severity">Severity ↕</th>
+                                <th data-sort="biobanks">Biobanks ↕</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tab 4: Matrix -->
+        <section id="matrix" class="tab-content">
+            <div class="section-header">
+                <h2>Publication Matrix</h2>
+                <p>Biobank × Disease publication counts heatmap</p>
+            </div>
+            
+            <div class="card">
+                <div class="matrix-legend">
+                    <span class="legend-item"><span class="legend-color" style="background:#dc3545"></span> Critical (0 pubs)</span>
+                    <span class="legend-item"><span class="legend-color" style="background:#fd7e14"></span> High (1-2 pubs)</span>
+                    <span class="legend-item"><span class="legend-color" style="background:#ffc107"></span> Moderate (3-10 pubs)</span>
+                    <span class="legend-item"><span class="legend-color" style="background:#28a745"></span> Low (&gt;10 pubs)</span>
+                </div>
+                <div class="matrix-container" id="matrix-container">
+                    <!-- Matrix rendered by JS -->
+                    <p class="loading">Loading matrix data...</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tab 5: Trends -->
+        <section id="trends" class="tab-content">
+            <div class="section-header">
+                <h2>Publication Trends</h2>
+                <p>How biobank research has grown over time</p>
+            </div>
+            
+            <div class="card chart-card">
+                <h3>Global Publication Growth</h3>
+                <div class="chart-container chart-large">
+                    <canvas id="chart-trends-global"></canvas>
+                </div>
+            </div>
+            
+            <div class="card chart-card">
+                <h3>Trends by Biobank</h3>
+                <div class="filters">
+                    <select id="trends-biobank-select" class="filter-select">
+                        <option value="">Select biobank...</option>
                     </select>
                 </div>
-                <div id="biobank-list" class="card-grid"></div>
-            </section>
-
-            <!-- Diseases View -->
-            <section id="view-diseases" class="view">
-                <div class="controls">
-                    <select id="disease-category">
-                        <option value="all">All Categories</option>
-                    </select>
-                    <select id="disease-sort">
-                        <option value="gap">Sort by Gap Score</option>
-                        <option value="burden">Sort by Burden</option>
-                        <option value="publications">Sort by Publications</option>
-                    </select>
+                <div class="chart-container chart-large">
+                    <canvas id="chart-trends-biobank"></canvas>
                 </div>
-                <div id="disease-list" class="card-grid"></div>
-            </section>
-
-            <!-- Matrix View -->
-            <section id="view-matrix" class="view">
-                <h3>Disease-Biobank Publication Matrix</h3>
-                <p class="hint">Darker cells indicate more publications. Hover for details.</p>
-                <div id="matrix-container" class="matrix-scroll">
-                    <div id="matrix-heatmap"></div>
-                </div>
-            </section>
-
-            <!-- Trends View -->
-            <section id="view-trends" class="view">
-                <div class="chart-container full-width">
-                    <h3>Publication Growth Over Time</h3>
-                    <canvas id="chart-trends"></canvas>
-                </div>
-                <div class="chart-row">
+            </div>
+        </section>
+        
+        <!-- Tab 6: Themes -->
+        <section id="themes" class="tab-content">
+            <div class="section-header">
+                <h2>Research Themes</h2>
+                <p>MeSH-based thematic analysis of biobank research</p>
+            </div>
+            
+            <div class="charts-row">
+                <div class="card chart-card">
+                    <h3>Theme Distribution</h3>
                     <div class="chart-container">
-                        <h3>Cumulative Publications</h3>
-                        <canvas id="chart-cumulative"></canvas>
-                    </div>
-                    <div class="chart-container">
-                        <h3>Global South Priority Research</h3>
-                        <canvas id="chart-gs-trend"></canvas>
+                        <canvas id="chart-theme-dist"></canvas>
                     </div>
                 </div>
-            </section>
-        </div>
+                <div class="card chart-card">
+                    <h3>Publications by Theme</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-theme-pubs"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Theme Table -->
+            <div class="card">
+                <h3>Theme Coverage Across Biobanks</h3>
+                <div class="table-container">
+                    <table class="data-table" id="table-themes">
+                        <thead>
+                            <tr>
+                                <th>Theme</th>
+                                <th>Publications</th>
+                                <th>Disease Count</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tab 7: Compare -->
+        <section id="compare" class="tab-content">
+            <div class="section-header">
+                <h2>Compare Biobanks</h2>
+                <p>Side-by-side comparison of biobank metrics</p>
+            </div>
+            
+            <!-- Biobank Selectors -->
+            <div class="compare-selectors">
+                <div class="selector-group">
+                    <label>Biobank 1:</label>
+                    <select id="compare-biobank1" class="filter-select"></select>
+                </div>
+                <div class="selector-group">
+                    <label>Biobank 2:</label>
+                    <select id="compare-biobank2" class="filter-select"></select>
+                </div>
+            </div>
+            
+            <!-- Comparison Cards -->
+            <div class="compare-cards">
+                <div class="card compare-card" id="compare-card1">
+                    <h3 id="compare-name1">Select a biobank</h3>
+                    <div class="compare-stats" id="compare-stats1"></div>
+                </div>
+                <div class="card compare-card" id="compare-card2">
+                    <h3 id="compare-name2">Select a biobank</h3>
+                    <div class="compare-stats" id="compare-stats2"></div>
+                </div>
+            </div>
+            
+            <!-- Radar Chart -->
+            <div class="card chart-card">
+                <h3>Metric Comparison</h3>
+                <div class="chart-container">
+                    <canvas id="chart-compare-radar"></canvas>
+                </div>
+            </div>
+            
+            <!-- Similar Pairs -->
+            <div class="card">
+                <h3>Similar Biobank Pairs</h3>
+                <div class="table-container">
+                    <table class="data-table" id="table-similar">
+                        <thead>
+                            <tr>
+                                <th>Biobank 1</th>
+                                <th>Biobank 2</th>
+                                <th>Similarity</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tab 8: Equity -->
+        <section id="equity" class="tab-content">
+            <div class="section-header">
+                <h2>Global Health Equity</h2>
+                <p>HIC vs LMIC research distribution analysis</p>
+            </div>
+            
+            <!-- Equity Summary -->
+            <div class="summary-cards">
+                <div class="card summary-card">
+                    <div class="card-value" id="equity-ratio">--</div>
+                    <div class="card-label">Equity Ratio</div>
+                    <div class="card-sublabel" id="equity-interpretation">--</div>
+                </div>
+                <div class="card summary-card hic-card">
+                    <div class="card-value" id="hic-biobanks">--</div>
+                    <div class="card-label">HIC Biobanks</div>
+                    <div class="card-sublabel" id="hic-pubs">-- publications</div>
+                </div>
+                <div class="card summary-card lmic-card">
+                    <div class="card-value" id="lmic-biobanks">--</div>
+                    <div class="card-label">LMIC Biobanks</div>
+                    <div class="card-sublabel" id="lmic-pubs">-- publications</div>
+                </div>
+            </div>
+            
+            <!-- Charts -->
+            <div class="charts-row">
+                <div class="card chart-card">
+                    <h3>Publication Share: HIC vs LMIC</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-equity-share"></canvas>
+                    </div>
+                </div>
+                <div class="card chart-card">
+                    <h3>Publications by WHO Region</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-equity-region"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Global South Priority Diseases -->
+            <div class="card">
+                <h3>Global South Priority Diseases</h3>
+                <p class="card-description">Diseases disproportionately affecting low- and middle-income countries</p>
+                <div class="table-container">
+                    <table class="data-table" id="table-gs-diseases">
+                        <thead>
+                            <tr>
+                                <th>Disease</th>
+                                <th>DALYs (M)</th>
+                                <th>Publications</th>
+                                <th>Gap Score</th>
+                                <th>Severity</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
     </main>
-
-    <footer>
-        <div class="container">
-            <p>BHEM - Biobank Health Equity Monitor</p>
-            <p>Data updated: <span id="last-update">-</span></p>
-            <p><a href="https://github.com/manuelcorpas/17-EHR" target="_blank">GitHub Repository</a></p>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>
+                <strong>HEIM-Biobank v1.0</strong> | 
+                Specification date: {version_date} | 
+                Data: GBD 2021, PubMed | 
+                Part of <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">HEIM Framework</a>
+            </p>
+            <p class="footer-methodology">
+                Methodology: Corpas et al. (2025), Annual Review of Biomedical Data Science
+            </p>
         </div>
     </footer>
-
-    <script src="js/charts.js"></script>
+    
+    <!-- Scripts -->
     <script src="js/app.js"></script>
+    <script src="js/charts.js"></script>
 </body>
 </html>
 '''
 
-
 # =============================================================================
-# CSS STYLES
+# CSS STYLESHEET
 # =============================================================================
 
-STYLE_CSS = '''/* BHEM Dashboard Styles */
+CSS_TEMPLATE = '''/* HEIM-Biobank v1.0 Dashboard Styles */
+
 :root {
     --primary: #2563eb;
     --primary-dark: #1d4ed8;
-    --danger: #dc2626;
-    --warning: #f59e0b;
-    --success: #10b981;
-    --gray-50: #f9fafb;
-    --gray-100: #f3f4f6;
-    --gray-200: #e5e7eb;
-    --gray-300: #d1d5db;
-    --gray-600: #4b5563;
-    --gray-800: #1f2937;
-    --gray-900: #111827;
+    --secondary: #64748b;
+    --success: #28a745;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --info: #17a2b8;
+    
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --bg-dark: #1e293b;
+    
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-light: #94a3b8;
+    
+    --border: #e2e8f0;
+    --shadow: 0 1px 3px rgba(0,0,0,0.1);
+    --shadow-lg: 0 4px 6px rgba(0,0,0,0.1);
+    
+    --critical: #dc3545;
+    --high: #fd7e14;
+    --moderate: #ffc107;
+    --low: #28a745;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
-    background: var(--gray-50);
-    color: var(--gray-800);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
     line-height: 1.6;
 }
 
-.container {
+/* Header */
+.header {
+    background: linear-gradient(135deg, var(--bg-dark) 0%, #334155 100%);
+    color: white;
+    padding: 1.5rem 2rem;
+}
+
+.header-content {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Header */
-header {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
+.header-title h1 {
+    font-size: 1.75rem;
+    font-weight: 700;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+.header-title .version {
+    font-weight: 400;
+    opacity: 0.8;
 }
 
-.subtitle {
-    font-size: 1.2rem;
-    opacity: 0.9;
-}
-
-.tagline {
+.header-title .tagline {
     font-size: 0.9rem;
     opacity: 0.7;
-    margin-top: 0.5rem;
+    margin-top: 0.25rem;
 }
 
-/* Navigation */
-nav {
-    background: white;
-    border-bottom: 1px solid var(--gray-200);
-    padding: 0.5rem 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.framework-badge {
+    background: rgba(255,255,255,0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
 }
 
-nav .container {
+/* Navigation Tabs */
+.nav-tabs {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
     display: flex;
-    gap: 0.5rem;
+    gap: 0;
+    max-width: 100%;
     overflow-x: auto;
 }
 
-.nav-btn {
-    padding: 0.75rem 1.5rem;
+.tab-btn {
+    background: none;
     border: none;
-    background: transparent;
-    color: var(--gray-600);
-    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-secondary);
     cursor: pointer;
-    border-radius: 0.5rem;
+    border-bottom: 3px solid transparent;
     transition: all 0.2s;
     white-space: nowrap;
 }
 
-.nav-btn:hover {
-    background: var(--gray-100);
+.tab-btn:hover {
+    color: var(--primary);
+    background: rgba(37, 99, 235, 0.05);
 }
 
-.nav-btn.active {
-    background: var(--primary);
-    color: white;
+.tab-btn.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
 }
 
 /* Main Content */
-main {
-    padding: 2rem 0;
-    min-height: calc(100vh - 300px);
+.main-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-.view {
+.tab-content {
     display: none;
 }
 
-.view.active {
+.tab-content.active {
     display: block;
 }
 
-/* Stats Grid */
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    margin-bottom: 2rem;
+.section-header {
+    margin-bottom: 1.5rem;
 }
 
-.stat-card {
-    background: white;
+.section-header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+}
+
+/* Cards */
+.card {
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
     padding: 1.5rem;
-    border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+/* Summary Cards */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.summary-card {
     text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    padding: 1.5rem;
 }
 
-.stat-card.alert {
-    border-left: 4px solid var(--danger);
-}
-
-.stat-value {
-    display: block;
+.summary-card .card-icon {
     font-size: 2rem;
-    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.summary-card .card-value {
+    font-size: 2rem;
+    font-weight: 700;
     color: var(--primary);
 }
 
-.stat-card.alert .stat-value {
-    color: var(--danger);
+.summary-card .card-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-top: 0.25rem;
 }
 
-.stat-label {
-    color: var(--gray-600);
-    font-size: 0.875rem;
+.summary-card .card-sublabel {
+    font-size: 0.8rem;
+    color: var(--text-light);
 }
+
+.hic-card .card-value { color: var(--info); }
+.lmic-card .card-value { color: var(--success); }
 
 /* Charts */
-.chart-row {
+.charts-row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     gap: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
+.chart-card {
+    min-height: 350px;
+}
+
 .chart-container {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+    height: 280px;
 }
 
-.chart-container.full-width {
-    margin-bottom: 1.5rem;
+.chart-container.chart-large {
+    height: 400px;
 }
 
-.chart-container h3 {
-    margin-bottom: 1rem;
-    color: var(--gray-800);
-    font-size: 1.1rem;
+/* Tables */
+.table-container {
+    overflow-x: auto;
 }
 
-.chart-container canvas {
-    max-height: 300px;
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
 }
 
-/* Info Box */
-.info-box {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    border-left: 4px solid var(--primary);
-    margin-top: 2rem;
-}
-
-.info-box h3 {
-    margin-bottom: 0.75rem;
-}
-
-.info-box p {
-    color: var(--gray-600);
-    margin-bottom: 0.5rem;
-}
-
-/* Controls */
-.controls {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-}
-
-.controls input,
-.controls select {
+.data-table th,
+.data-table td {
     padding: 0.75rem 1rem;
-    border: 1px solid var(--gray-300);
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    min-width: 200px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
 }
 
-.controls input:focus,
-.controls select:focus {
-    outline: none;
-    border-color: var(--primary);
-}
-
-/* Card Grid */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 1rem;
-}
-
-.card {
-    background: white;
-    border-radius: 0.75rem;
-    padding: 1.25rem;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 0.75rem;
-}
-
-.card-title {
+.data-table th {
+    background: var(--bg-primary);
     font-weight: 600;
-    color: var(--gray-800);
+    color: var(--text-secondary);
+    cursor: pointer;
+    user-select: none;
 }
 
-.card-subtitle {
-    font-size: 0.85rem;
-    color: var(--gray-600);
+.data-table th:hover {
+    background: #e2e8f0;
 }
 
-.card-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    text-align: center;
-    font-size: 0.85rem;
+.data-table tbody tr:hover {
+    background: var(--bg-primary);
 }
 
-.card-stat-value {
-    font-weight: 600;
-    color: var(--primary);
-}
-
-.card-stat-label {
-    color: var(--gray-600);
-    font-size: 0.75rem;
-}
-
-/* Severity Badges */
+/* Badges */
 .badge {
     display: inline-block;
     padding: 0.25rem 0.5rem;
-    border-radius: 0.25rem;
+    border-radius: 4px;
     font-size: 0.75rem;
     font-weight: 600;
 }
 
-.badge-critical {
-    background: #fef2f2;
-    color: var(--danger);
+.badge-critical { background: var(--critical); color: white; }
+.badge-high { background: var(--high); color: white; }
+.badge-moderate { background: var(--moderate); color: #000; }
+.badge-low { background: var(--low); color: white; }
+.badge-strong { background: var(--success); color: white; }
+.badge-weak { background: var(--warning); color: #000; }
+.badge-poor { background: var(--danger); color: white; }
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
-.badge-high {
-    background: #fffbeb;
-    color: var(--warning);
+.search-input,
+.filter-select {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 0.9rem;
+    background: var(--bg-secondary);
 }
 
-.badge-moderate {
-    background: #f0f9ff;
-    color: var(--primary);
+.search-input {
+    min-width: 250px;
 }
 
-.badge-low {
-    background: #ecfdf5;
-    color: var(--success);
+.filter-select {
+    min-width: 150px;
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+}
+
+.actions {
+    margin-top: 1rem;
 }
 
 /* Matrix */
-.matrix-scroll {
-    overflow-x: auto;
-    background: white;
-    border-radius: 0.75rem;
-    padding: 1rem;
+.matrix-container {
+    overflow: auto;
+    max-height: 600px;
 }
 
-#matrix-heatmap {
-    display: grid;
-    gap: 2px;
-    font-size: 0.7rem;
+.matrix-legend {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
 }
 
-.matrix-cell {
-    width: 40px;
-    height: 40px;
+.legend-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 2px;
+    gap: 0.5rem;
+    font-size: 0.85rem;
 }
 
-.matrix-cell:hover {
-    outline: 2px solid var(--primary);
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
 }
 
-.matrix-header {
+.matrix-table {
+    border-collapse: collapse;
+    font-size: 0.75rem;
+}
+
+.matrix-table th,
+.matrix-table td {
+    padding: 0.25rem 0.5rem;
+    border: 1px solid var(--border);
+    text-align: center;
+    min-width: 40px;
+}
+
+.matrix-table th {
+    background: var(--bg-primary);
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+}
+
+.matrix-table th:first-child {
+    left: 0;
+    z-index: 2;
+}
+
+.matrix-table td:first-child {
+    background: var(--bg-primary);
+    font-weight: 500;
+    position: sticky;
+    left: 0;
+}
+
+.matrix-cell-critical { background: var(--critical); color: white; }
+.matrix-cell-high { background: var(--high); color: white; }
+.matrix-cell-moderate { background: var(--moderate); color: #000; }
+.matrix-cell-low { background: var(--low); color: white; }
+
+/* Compare */
+.compare-selectors {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.selector-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.selector-group label {
+    font-weight: 500;
+}
+
+.compare-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.compare-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--primary);
+}
+
+.compare-stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+}
+
+.stat-item {
+    padding: 0.5rem;
+    background: var(--bg-primary);
+    border-radius: 4px;
+}
+
+.stat-item .stat-label {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+.stat-item .stat-value {
+    font-size: 1.1rem;
     font-weight: 600;
-    background: var(--gray-100);
-    color: var(--gray-800);
 }
 
-.hint {
-    color: var(--gray-600);
-    font-size: 0.875rem;
+/* Info Card */
+.info-card {
+    background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+    border-left: 4px solid var(--primary);
+}
+
+.info-card p {
+    margin-bottom: 0.75rem;
+}
+
+.methodology-source {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.card-description {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
     margin-bottom: 1rem;
 }
 
 /* Footer */
-footer {
-    background: var(--gray-800);
-    color: white;
-    padding: 2rem 0;
-    text-align: center;
+.footer {
+    background: var(--bg-dark);
+    color: rgba(255,255,255,0.7);
+    padding: 1.5rem 2rem;
     margin-top: 2rem;
 }
 
-footer p {
-    margin-bottom: 0.5rem;
-    opacity: 0.8;
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
 }
 
-footer a {
+.footer a {
     color: var(--primary);
+    text-decoration: none;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.75rem;
-    }
-    
-    .chart-row {
-        grid-template-columns: 1fr;
-    }
-    
-    .stats-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-    
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.footer-methodology {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    opacity: 0.8;
 }
 
 /* Loading State */
 .loading {
     text-align: center;
-    padding: 3rem;
-    color: var(--gray-600);
+    padding: 2rem;
+    color: var(--text-secondary);
 }
 
-.loading::after {
-    content: '';
-    display: inline-block;
-    width: 1.5rem;
-    height: 1.5rem;
-    border: 2px solid var(--gray-300);
-    border-top-color: var(--primary);
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-    margin-left: 0.5rem;
-    vertical-align: middle;
-}
-
-@keyframes spin {
-    to { transform: rotate(360deg); }
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .charts-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .compare-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .compare-selectors {
+        flex-direction: column;
+    }
+    
+    .nav-tabs {
+        padding: 0 1rem;
+    }
+    
+    .tab-btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .main-content {
+        padding: 1rem;
+    }
 }
 '''
 
-
 # =============================================================================
-# JAVASCRIPT - CHARTS
+# JAVASCRIPT - APP.JS
 # =============================================================================
 
-CHARTS_JS = '''// Chart.js configuration and helpers
-Chart.defaults.font.family = "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
-Chart.defaults.color = '#4b5563';
+APP_JS_TEMPLATE = '''// HEIM-Biobank v1.0 Dashboard Application
 
-const COLORS = {
-    primary: '#2563eb',
-    danger: '#dc2626',
-    warning: '#f59e0b',
-    success: '#10b981',
-    gray: '#6b7280',
-    
-    // Gap severity
-    critical: '#dc2626',
-    high: '#f59e0b',
-    moderate: '#3b82f6',
-    low: '#10b981',
-    
-    // Regions
-    EUR: '#3b82f6',
-    AMR: '#10b981',
-    WPR: '#8b5cf6',
-    AFR: '#f59e0b',
-    EMR: '#ef4444',
-    SEAR: '#ec4899',
-    INTL: '#6b7280'
+// Global data store
+let DATA = {
+    summary: null,
+    biobanks: null,
+    diseases: null,
+    matrix: null,
+    trends: null,
+    themes: null,
+    comparison: null,
+    equity: null
 };
 
-const chartInstances = {};
-
-function destroyChart(id) {
-    if (chartInstances[id]) {
-        chartInstances[id].destroy();
-        delete chartInstances[id];
-    }
-}
-
-function createGapDistributionChart(data) {
-    destroyChart('chart-gaps');
-    const ctx = document.getElementById('chart-gaps').getContext('2d');
+// Initialize application
+document.addEventListener('DOMContentLoaded', async () => {
+    console.log('HEIM-Biobank v1.0 Dashboard initializing...');
     
-    const distribution = data.gaps.distribution;
+    // Setup tab navigation
+    setupTabs();
     
-    chartInstances['chart-gaps'] = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: ['Critical', 'High', 'Moderate', 'Low'],
-            datasets: [{
-                data: [
-                    distribution.Critical || 0,
-                    distribution.High || 0,
-                    distribution.Moderate || 0,
-                    distribution.Low || 0
-                ],
-                backgroundColor: [
-                    COLORS.critical,
-                    COLORS.high,
-                    COLORS.moderate,
-                    COLORS.low
-                ]
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: {
-                    position: 'bottom'
-                }
-            }
-        }
-    });
-}
-
-function createRegionChart(data) {
-    destroyChart('chart-regions');
-    const ctx = document.getElementById('chart-regions').getContext('2d');
+    // Load all data
+    await loadAllData();
     
-    const regions = data.regions;
-    const labels = Object.keys(regions);
-    const values = Object.values(regions);
+    // Render initial view
+    renderOverview();
     
-    chartInstances['chart-regions'] = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: labels,
-            datasets: [{
-                label: 'Publications',
-                data: values,
-                backgroundColor: labels.map(l => COLORS[l] || COLORS.gray)
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: { display: false }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: v => v.toLocaleString()
-                    }
-                }
-            }
-        }
-    });
-}
-
-function createTopGapsChart(data) {
-    destroyChart('chart-top-gaps');
-    const ctx = document.getElementById('chart-top-gaps').getContext('2d');
+    // Setup filters and interactions
+    setupFilters();
     
-    const topGaps = data.gaps.topGaps.slice(0, 8);
+    console.log('Dashboard ready');
+});
+
+// Tab Navigation
+function setupTabs() {
+    const tabBtns = document.querySelectorAll('.tab-btn');
     
-    chartInstances['chart-top-gaps'] = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: topGaps.map(d => d.name),
-            datasets: [{
-                label: 'Gap Score',
-                data: topGaps.map(d => d.score),
-                backgroundColor: topGaps.map(d => 
-                    d.score > 70 ? COLORS.critical :
-                    d.score > 50 ? COLORS.high :
-                    d.score > 30 ? COLORS.moderate : COLORS.low
-                )
-            }]
-        },
-        options: {
-            indexAxis: 'y',
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: { display: false }
-            },
-            scales: {
-                x: {
-                    beginAtZero: true,
-                    max: 100,
-                    title: {
-                        display: true,
-                        text: 'Gap Score (0-100)'
-                    }
-                }
-            }
-        }
-    });
-}
-
-function createTrendsChart(data) {
-    destroyChart('chart-trends');
-    const ctx = document.getElementById('chart-trends').getContext('2d');
-    
-    const yearly = data.yearly;
-    
-    chartInstances['chart-trends'] = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: yearly.map(d => d.year),
-            datasets: [{
-                label: 'Publications',
-                data: yearly.map(d => d.count),
-                borderColor: COLORS.primary,
-                backgroundColor: COLORS.primary + '20',
-                fill: true,
-                tension: 0.3
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: { display: false }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: v => v.toLocaleString()
-                    }
-                }
-            }
-        }
-    });
-}
-
-function createCumulativeChart(data) {
-    destroyChart('chart-cumulative');
-    const ctx = document.getElementById('chart-cumulative').getContext('2d');
-    
-    const yearly = data.yearly;
-    
-    chartInstances['chart-cumulative'] = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: yearly.map(d => d.year),
-            datasets: [{
-                label: 'Cumulative Publications',
-                data: yearly.map(d => d.cumulative),
-                borderColor: COLORS.success,
-                backgroundColor: COLORS.success + '20',
-                fill: true,
-                tension: 0.3
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: { display: false }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true,
-                    ticks: {
-                        callback: v => v.toLocaleString()
-                    }
-                }
-            }
-        }
-    });
-}
-
-function createGlobalSouthTrendChart(data) {
-    destroyChart('chart-gs-trend');
-    const ctx = document.getElementById('chart-gs-trend').getContext('2d');
-    
-    const gsTrend = data.globalSouth;
-    
-    chartInstances['chart-gs-trend'] = new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: gsTrend.map(d => d.year),
-            datasets: [{
-                label: 'Global South Priority Publications',
-                data: gsTrend.map(d => d.count),
-                backgroundColor: COLORS.warning
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: true,
-            plugins: {
-                legend: { display: false }
-            },
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-}
-'''
-
-
-# =============================================================================
-# JAVASCRIPT - APP
-# =============================================================================
-
-APP_JS = '''// BHEM Dashboard Application
-const DATA_PATH = 'data/';
-
-let summaryData = null;
-let biobanksData = null;
-let diseasesData = null;
-let matrixData = null;
-let trendsData = null;
-
-// Initialize
-document.addEventListener('DOMContentLoaded', init);
-
-async function init() {
-    try {
-        // Load all data
-        [summaryData, biobanksData, diseasesData, matrixData, trendsData] = await Promise.all([
-            fetch(DATA_PATH + 'summary.json').then(r => r.json()),
-            fetch(DATA_PATH + 'biobanks.json').then(r => r.json()),
-            fetch(DATA_PATH + 'diseases.json').then(r => r.json()),
-            fetch(DATA_PATH + 'matrix.json').then(r => r.json()),
-            fetch(DATA_PATH + 'trends.json').then(r => r.json())
-        ]);
-        
-        // Setup navigation
-        setupNavigation();
-        
-        // Render overview
-        renderOverview();
-        
-        // Setup controls
-        setupControls();
-        
-        // Update last update timestamp
-        document.getElementById('last-update').textContent = 
-            new Date(summaryData.lastUpdate).toLocaleDateString();
-            
-    } catch (error) {
-        console.error('Error loading data:', error);
-        document.querySelector('main .container').innerHTML = 
-            '<div class="info-box"><h3>Error Loading Data</h3><p>Could not load dashboard data. Please try refreshing the page.</p></div>';
-    }
-}
-
-function setupNavigation() {
-    document.querySelectorAll('.nav-btn').forEach(btn => {
+    tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             // Update active button
-            document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+            tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
-            // Show corresponding view
-            const viewId = 'view-' + btn.dataset.view;
-            document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
-            document.getElementById(viewId).classList.add('active');
+            // Update active content
+            const tabId = btn.dataset.tab;
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
             
-            // Render view content
-            switch(btn.dataset.view) {
-                case 'overview': renderOverview(); break;
-                case 'biobanks': renderBiobanks(); break;
-                case 'diseases': renderDiseases(); break;
-                case 'matrix': renderMatrix(); break;
-                case 'trends': renderTrends(); break;
-            }
+            // Render tab-specific content
+            renderTab(tabId);
         });
     });
 }
 
-function setupControls() {
-    // Biobank search
-    document.getElementById('biobank-search').addEventListener('input', renderBiobanks);
-    document.getElementById('biobank-sort').addEventListener('change', renderBiobanks);
-    
-    // Disease filters
-    const categorySelect = document.getElementById('disease-category');
-    const categories = Object.keys(diseasesData.categories);
-    categories.forEach(cat => {
-        const option = document.createElement('option');
-        option.value = cat;
-        option.textContent = cat;
-        categorySelect.appendChild(option);
-    });
-    categorySelect.addEventListener('change', renderDiseases);
-    document.getElementById('disease-sort').addEventListener('change', renderDiseases);
+function renderTab(tabId) {
+    switch(tabId) {
+        case 'overview': renderOverview(); break;
+        case 'biobanks': renderBiobanks(); break;
+        case 'diseases': renderDiseases(); break;
+        case 'matrix': renderMatrix(); break;
+        case 'trends': renderTrends(); break;
+        case 'themes': renderThemes(); break;
+        case 'compare': renderCompare(); break;
+        case 'equity': renderEquity(); break;
+    }
 }
 
+// Data Loading
+async function loadAllData() {
+    const files = ['summary', 'biobanks', 'diseases', 'matrix', 'trends', 'themes', 'comparison', 'equity'];
+    
+    const promises = files.map(async (file) => {
+        try {
+            const response = await fetch(`data/${file}.json`);
+            if (response.ok) {
+                DATA[file] = await response.json();
+                console.log(`Loaded ${file}.json`);
+            } else {
+                console.warn(`Failed to load ${file}.json`);
+            }
+        } catch (err) {
+            console.warn(`Error loading ${file}.json:`, err);
+        }
+    });
+    
+    await Promise.all(promises);
+}
+
+// Overview Tab
 function renderOverview() {
-    // Stats
-    document.getElementById('stat-publications').textContent = 
-        summaryData.totals.publications.toLocaleString();
-    document.getElementById('stat-biobanks').textContent = 
-        summaryData.totals.biobanks;
-    document.getElementById('stat-diseases').textContent = 
-        summaryData.totals.diseases;
-    document.getElementById('stat-critical').textContent = 
-        summaryData.gaps.criticalCount;
-    document.getElementById('stat-equity').textContent = 
-        summaryData.equity.ratio.toFixed(1) + 'x';
+    if (!DATA.summary) return;
     
-    // Charts
-    createGapDistributionChart(summaryData);
-    createRegionChart(summaryData);
-    createTopGapsChart(summaryData);
+    const s = DATA.summary;
+    
+    // Update summary stats
+    document.getElementById('stat-biobanks').textContent = s.overview?.totalBiobanks || '--';
+    document.getElementById('stat-publications').textContent = formatNumber(s.overview?.totalPublications);
+    document.getElementById('stat-countries').textContent = s.overview?.totalCountries || '--';
+    document.getElementById('stat-critical').textContent = s.gapDistribution?.Critical || '--';
+    
+    // Render charts
+    renderEASDistributionChart();
+    renderCriticalGapsChart();
+    
+    // Render top biobanks table
+    renderTopBiobanksTable();
 }
 
+function renderTopBiobanksTable() {
+    const tbody = document.querySelector('#table-top-biobanks tbody');
+    if (!tbody || !DATA.summary?.topBiobanks) return;
+    
+    tbody.innerHTML = DATA.summary.topBiobanks.map((b, i) => `
+        <tr>
+            <td>${i + 1}</td>
+            <td>${b.name}</td>
+            <td>${b.eas?.toFixed(1) || '--'}</td>
+            <td><span class="badge badge-${b.category?.toLowerCase().replace(' ', '-')}">${b.category}</span></td>
+            <td>${formatNumber(b.publications)}</td>
+        </tr>
+    `).join('');
+}
+
+// Biobanks Tab
 function renderBiobanks() {
-    const search = document.getElementById('biobank-search').value.toLowerCase();
-    const sortBy = document.getElementById('biobank-sort').value;
+    if (!DATA.biobanks?.biobanks) return;
     
-    let biobanks = [...biobanksData.biobanks];
+    const tbody = document.querySelector('#table-biobanks tbody');
+    if (!tbody) return;
     
-    // Filter
-    if (search) {
-        biobanks = biobanks.filter(b => 
-            b.name.toLowerCase().includes(search) ||
-            b.country.toLowerCase().includes(search)
-        );
-    }
+    const biobanks = filterBiobanks(DATA.biobanks.biobanks);
     
-    // Sort
-    switch(sortBy) {
-        case 'publications':
-            biobanks.sort((a, b) => b.stats.totalPublications - a.stats.totalPublications);
-            break;
-        case 'ros':
-            biobanks.sort((a, b) => b.stats.ros - a.stats.ros);
-            break;
-        case 'gaps':
-            biobanks.sort((a, b) => b.stats.criticalGaps - a.stats.criticalGaps);
-            break;
-        case 'name':
-            biobanks.sort((a, b) => a.name.localeCompare(b.name));
-            break;
-    }
-    
-    // Render
-    const container = document.getElementById('biobank-list');
-    container.innerHTML = biobanks.map(b => `
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <div class="card-title">${b.name}</div>
-                    <div class="card-subtitle">${b.country} (${b.region})</div>
-                </div>
-            </div>
-            <div class="card-stats">
-                <div>
-                    <div class="card-stat-value">${b.stats.totalPublications.toLocaleString()}</div>
-                    <div class="card-stat-label">Publications</div>
-                </div>
-                <div>
-                    <div class="card-stat-value">${b.stats.diseasesCovered}</div>
-                    <div class="card-stat-label">Diseases</div>
-                </div>
-                <div>
-                    <div class="card-stat-value">${b.stats.ros.toFixed(0)}</div>
-                    <div class="card-stat-label">ROS</div>
-                </div>
-            </div>
-            ${b.stats.criticalGaps > 0 ? 
-                `<div style="margin-top: 0.75rem; font-size: 0.85rem; color: #dc2626;">
-                    ⚠️ ${b.stats.criticalGaps} critical gap${b.stats.criticalGaps > 1 ? 's' : ''}
-                </div>` : ''
-            }
-        </div>
+    tbody.innerHTML = biobanks.map(b => `
+        <tr>
+            <td>${b.name}</td>
+            <td>${b.country}</td>
+            <td>${b.regionName}</td>
+            <td>${b.scores?.equityAlignment?.toFixed(1) || '--'}</td>
+            <td><span class="badge badge-${getCategoryClass(b.scores?.equityCategory)}">${b.scores?.equityCategory || '--'}</span></td>
+            <td>${formatNumber(b.stats?.totalPublications)}</td>
+            <td>${b.stats?.diseasesCovered || '--'}/25</td>
+            <td>${b.stats?.criticalGaps || '--'}</td>
+        </tr>
     `).join('');
 }
 
-function renderDiseases() {
-    const category = document.getElementById('disease-category').value;
-    const sortBy = document.getElementById('disease-sort').value;
+function filterBiobanks(biobanks) {
+    const search = document.getElementById('biobank-search')?.value.toLowerCase() || '';
+    const region = document.getElementById('biobank-region-filter')?.value || '';
+    const category = document.getElementById('biobank-category-filter')?.value || '';
     
-    let diseases = [...diseasesData.diseases];
-    
-    // Filter by category
-    if (category !== 'all') {
-        diseases = diseases.filter(d => d.category === category);
-    }
-    
-    // Sort
-    switch(sortBy) {
-        case 'gap':
-            diseases.sort((a, b) => b.gap.score - a.gap.score);
-            break;
-        case 'burden':
-            diseases.sort((a, b) => b.burden.score - a.burden.score);
-            break;
-        case 'publications':
-            diseases.sort((a, b) => b.research.publications - a.research.publications);
-            break;
-    }
-    
-    // Render
-    const container = document.getElementById('disease-list');
-    container.innerHTML = diseases.map(d => `
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <div class="card-title">${d.name}</div>
-                    <div class="card-subtitle">${d.category}</div>
-                </div>
-                <span class="badge badge-${d.gap.severity.toLowerCase()}">${d.gap.severity}</span>
-            </div>
-            <div class="card-stats">
-                <div>
-                    <div class="card-stat-value">${d.gap.score.toFixed(0)}</div>
-                    <div class="card-stat-label">Gap Score</div>
-                </div>
-                <div>
-                    <div class="card-stat-value">${d.research.publications.toLocaleString()}</div>
-                    <div class="card-stat-label">Publications</div>
-                </div>
-                <div>
-                    <div class="card-stat-value">${d.burden.dalys.toFixed(0)}M</div>
-                    <div class="card-stat-label">DALYs</div>
-                </div>
-            </div>
-            ${d.globalSouthPriority ? 
-                '<div style="margin-top: 0.75rem; font-size: 0.85rem; color: #f59e0b;">🌍 Global South Priority</div>' : ''
-            }
-        </div>
-    `).join('');
-}
-
-function renderMatrix() {
-    const container = document.getElementById('matrix-heatmap');
-    
-    // Get top 15 biobanks and all diseases
-    const topBiobanks = matrixData.matrix.slice(0, 15);
-    const diseases = matrixData.diseases;
-    
-    // Find max value for color scaling
-    let maxVal = 0;
-    topBiobanks.forEach(row => {
-        Object.values(row.values).forEach(v => {
-            if (v > maxVal) maxVal = v;
-        });
+    return biobanks.filter(b => {
+        if (search && !b.name.toLowerCase().includes(search)) return false;
+        if (region && b.region !== region) return false;
+        if (category && b.scores?.equityCategory !== category) return false;
+        return true;
     });
+}
+
+// Diseases Tab
+function renderDiseases() {
+    if (!DATA.diseases?.diseases) return;
     
-    // Build grid
-    let html = '<table style="border-collapse: collapse; font-size: 0.7rem;">';
+    const tbody = document.querySelector('#table-diseases tbody');
+    if (!tbody) return;
+    
+    const diseases = filterDiseases(DATA.diseases.diseases);
+    
+    tbody.innerHTML = diseases.map(d => `
+        <tr>
+            <td>${d.name}</td>
+            <td>${d.category}</td>
+            <td>${d.burden?.dalysMillions?.toFixed(1) || '--'}</td>
+            <td>${formatNumber(d.research?.globalPublications)}</td>
+            <td>${d.gap?.score?.toFixed(0) || '--'}</td>
+            <td><span class="badge badge-${d.gap?.severity?.toLowerCase()}">${d.gap?.severity || '--'}</span></td>
+            <td>${d.research?.biobanksEngaged || '--'}</td>
+        </tr>
+    `).join('');
+    
+    // Render burden chart
+    renderDiseaseBurdenChart();
+}
+
+function filterDiseases(diseases) {
+    const search = document.getElementById('disease-search')?.value.toLowerCase() || '';
+    const category = document.getElementById('disease-category-filter')?.value || '';
+    const severity = document.getElementById('disease-severity-filter')?.value || '';
+    
+    return diseases.filter(d => {
+        if (search && !d.name.toLowerCase().includes(search)) return false;
+        if (category && d.category !== category) return false;
+        if (severity && d.gap?.severity !== severity) return false;
+        return true;
+    });
+}
+
+// Matrix Tab
+function renderMatrix() {
+    if (!DATA.matrix) return;
+    
+    const container = document.getElementById('matrix-container');
+    if (!container) return;
+    
+    const m = DATA.matrix;
+    
+    // Build matrix table
+    let html = '<table class="matrix-table">';
     
     // Header row
-    html += '<tr><th style="padding: 4px; min-width: 120px;"></th>';
-    diseases.forEach(d => {
-        const disease = diseasesData.diseases.find(x => x.id === d);
-        const name = disease ? disease.name.substring(0, 12) : d;
-        html += `<th style="padding: 4px; writing-mode: vertical-rl; text-orientation: mixed; height: 100px;">${name}</th>`;
+    html += '<tr><th></th>';
+    m.diseases.forEach(d => {
+        html += `<th title="${d.name}">${d.name.substring(0, 8)}</th>`;
     });
     html += '</tr>';
     
     // Data rows
-    topBiobanks.forEach(row => {
-        const biobank = biobanksData.biobanks.find(b => b.id === row.biobank);
-        const name = biobank ? biobank.name.substring(0, 20) : row.biobank;
-        
-        html += `<tr><td style="padding: 4px; font-weight: 600;">${name}</td>`;
-        diseases.forEach(d => {
-            const val = row.values[d] || 0;
-            const intensity = maxVal > 0 ? val / maxVal : 0;
-            const bg = val === 0 ? '#f9fafb' : 
-                `rgba(37, 99, 235, ${0.1 + intensity * 0.9})`;
-            const color = intensity > 0.5 ? 'white' : '#1f2937';
-            
-            html += `<td style="padding: 4px; text-align: center; background: ${bg}; color: ${color}; min-width: 40px;" title="${name}: ${val} publications for ${d}">${val || ''}</td>`;
+    m.biobanks.forEach((b, bi) => {
+        html += `<tr><td title="${b.name}">${b.name.substring(0, 15)}</td>`;
+        m.matrix.values[bi].forEach((val, di) => {
+            const cat = m.matrix.gapCategories[bi][di];
+            html += `<td class="matrix-cell-${cat}" title="${b.name} / ${m.diseases[di].name}: ${val} pubs">${val}</td>`;
         });
         html += '</tr>';
     });
@@ -1148,66 +1292,685 @@ function renderMatrix() {
     container.innerHTML = html;
 }
 
+// Trends Tab
 function renderTrends() {
-    createTrendsChart(trendsData);
-    createCumulativeChart(trendsData);
-    createGlobalSouthTrendChart(trendsData);
+    if (!DATA.trends) return;
+    
+    renderGlobalTrendsChart();
+    populateTrendsBiobankSelect();
+}
+
+function populateTrendsBiobankSelect() {
+    const select = document.getElementById('trends-biobank-select');
+    if (!select || !DATA.trends?.byBiobank) return;
+    
+    const options = Object.entries(DATA.trends.byBiobank).map(([id, data]) => 
+        `<option value="${id}">${data.name}</option>`
+    );
+    
+    select.innerHTML = '<option value="">Select biobank...</option>' + options.join('');
+    
+    select.addEventListener('change', () => {
+        const biobank = select.value;
+        if (biobank) {
+            renderBiobankTrendsChart(biobank);
+        }
+    });
+}
+
+// Themes Tab
+function renderThemes() {
+    if (!DATA.themes) return;
+    
+    renderThemeDistributionChart();
+    renderThemePublicationsChart();
+    renderThemesTable();
+}
+
+function renderThemesTable() {
+    const tbody = document.querySelector('#table-themes tbody');
+    if (!tbody || !DATA.themes?.themes) return;
+    
+    tbody.innerHTML = DATA.themes.themes.map(t => `
+        <tr>
+            <td>${t.name}</td>
+            <td>${formatNumber(t.publications)}</td>
+            <td>${t.diseaseCount || '--'}</td>
+        </tr>
+    `).join('');
+}
+
+// Compare Tab
+function renderCompare() {
+    if (!DATA.comparison) return;
+    
+    populateCompareSelects();
+    renderSimilarPairsTable();
+}
+
+function populateCompareSelects() {
+    const select1 = document.getElementById('compare-biobank1');
+    const select2 = document.getElementById('compare-biobank2');
+    if (!select1 || !select2 || !DATA.comparison?.biobanks) return;
+    
+    const options = DATA.comparison.biobanks.map(b => 
+        `<option value="${b.id}">${b.name}</option>`
+    );
+    
+    select1.innerHTML = '<option value="">Select biobank...</option>' + options.join('');
+    select2.innerHTML = '<option value="">Select biobank...</option>' + options.join('');
+    
+    select1.addEventListener('change', updateComparison);
+    select2.addEventListener('change', updateComparison);
+}
+
+function updateComparison() {
+    const id1 = document.getElementById('compare-biobank1')?.value;
+    const id2 = document.getElementById('compare-biobank2')?.value;
+    
+    if (id1) renderCompareCard(id1, 1);
+    if (id2) renderCompareCard(id2, 2);
+    if (id1 && id2) renderComparisonRadar(id1, id2);
+}
+
+function renderCompareCard(biobankId, cardNum) {
+    const biobank = DATA.comparison?.biobanks?.find(b => b.id === biobankId);
+    if (!biobank) return;
+    
+    document.getElementById(`compare-name${cardNum}`).textContent = biobank.name;
+    
+    const statsDiv = document.getElementById(`compare-stats${cardNum}`);
+    statsDiv.innerHTML = `
+        <div class="stat-item">
+            <div class="stat-label">Publications</div>
+            <div class="stat-value">${formatNumber(biobank.stats?.publications)}</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">Diseases</div>
+            <div class="stat-value">${biobank.stats?.diseases}/25</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">EAS</div>
+            <div class="stat-value">${biobank.stats?.eas?.toFixed(1)}</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">ROS</div>
+            <div class="stat-value">${biobank.stats?.ros?.toFixed(0)}</div>
+        </div>
+    `;
+}
+
+function renderSimilarPairsTable() {
+    const tbody = document.querySelector('#table-similar tbody');
+    if (!tbody || !DATA.comparison?.similarPairs) return;
+    
+    const biobanks = DATA.comparison.biobanks || [];
+    const getName = (id) => biobanks.find(b => b.id === id)?.name || id;
+    
+    tbody.innerHTML = DATA.comparison.similarPairs.slice(0, 10).map(p => `
+        <tr>
+            <td>${getName(p.biobank1)}</td>
+            <td>${getName(p.biobank2)}</td>
+            <td>${p.similarity?.toFixed(1)}%</td>
+        </tr>
+    `).join('');
+}
+
+// Equity Tab
+function renderEquity() {
+    if (!DATA.equity) return;
+    
+    const e = DATA.equity;
+    
+    // Update summary
+    document.getElementById('equity-ratio').textContent = e.equityRatio?.toFixed(2) || '--';
+    document.getElementById('equity-interpretation').textContent = e.equityInterpretation || '--';
+    document.getElementById('hic-biobanks').textContent = e.summary?.hic?.biobanks || '--';
+    document.getElementById('hic-pubs').textContent = formatNumber(e.summary?.hic?.publications) + ' publications';
+    document.getElementById('lmic-biobanks').textContent = e.summary?.lmic?.biobanks || '--';
+    document.getElementById('lmic-pubs').textContent = formatNumber(e.summary?.lmic?.publications) + ' publications';
+    
+    // Render charts
+    renderEquityShareChart();
+    renderEquityRegionChart();
+    
+    // Render GS diseases table
+    renderGSDiseasesTable();
+}
+
+function renderGSDiseasesTable() {
+    const tbody = document.querySelector('#table-gs-diseases tbody');
+    if (!tbody || !DATA.equity?.globalSouthDiseases) return;
+    
+    tbody.innerHTML = DATA.equity.globalSouthDiseases.map(d => `
+        <tr>
+            <td>${d.name}</td>
+            <td>${d.dalys?.toFixed(1) || '--'}</td>
+            <td>${formatNumber(d.publications)}</td>
+            <td>${d.gapScore?.toFixed(0) || '--'}</td>
+            <td><span class="badge badge-${d.severity?.toLowerCase()}">${d.severity || '--'}</span></td>
+        </tr>
+    `).join('');
+}
+
+// Filters Setup
+function setupFilters() {
+    // Biobank filters
+    document.getElementById('biobank-search')?.addEventListener('input', renderBiobanks);
+    document.getElementById('biobank-region-filter')?.addEventListener('change', renderBiobanks);
+    document.getElementById('biobank-category-filter')?.addEventListener('change', renderBiobanks);
+    
+    // Disease filters
+    document.getElementById('disease-search')?.addEventListener('input', renderDiseases);
+    document.getElementById('disease-category-filter')?.addEventListener('change', renderDiseases);
+    document.getElementById('disease-severity-filter')?.addEventListener('change', renderDiseases);
+}
+
+// Utility Functions
+function formatNumber(num) {
+    if (num === undefined || num === null) return '--';
+    return num.toLocaleString();
+}
+
+function getCategoryClass(category) {
+    if (!category) return '';
+    const cat = category.toLowerCase();
+    if (cat.includes('strong')) return 'strong';
+    if (cat.includes('moderate')) return 'moderate';
+    if (cat.includes('weak')) return 'weak';
+    if (cat.includes('poor')) return 'poor';
+    return cat;
+}
+
+// CSV Download
+function downloadBiobanksCSV() {
+    if (!DATA.biobanks?.biobanks) return;
+    
+    const headers = ['Name', 'Country', 'Region', 'EAS', 'Category', 'Publications', 'Diseases', 'Critical Gaps'];
+    const rows = DATA.biobanks.biobanks.map(b => [
+        b.name,
+        b.country,
+        b.region,
+        b.scores?.equityAlignment?.toFixed(1),
+        b.scores?.equityCategory,
+        b.stats?.totalPublications,
+        b.stats?.diseasesCovered,
+        b.stats?.criticalGaps
+    ]);
+    
+    let csv = headers.join(',') + '\\n';
+    csv += rows.map(r => r.map(v => `"${v || ''}"`).join(',')).join('\\n');
+    
+    const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'heim-biobank-data.csv';
+    a.click();
+    URL.revokeObjectURL(url);
 }
 '''
 
+# =============================================================================
+# JAVASCRIPT - CHARTS.JS
+# =============================================================================
+
+CHARTS_JS_TEMPLATE = '''// HEIM-Biobank v1.0 Chart Visualizations
+
+// Color palettes
+const COLORS = {
+    primary: '#2563eb',
+    critical: '#dc3545',
+    high: '#fd7e14',
+    moderate: '#ffc107',
+    low: '#28a745',
+    hic: '#17a2b8',
+    lmic: '#28a745'
+};
+
+const CHART_COLORS = [
+    '#2563eb', '#dc3545', '#28a745', '#ffc107', '#17a2b8',
+    '#6f42c1', '#fd7e14', '#20c997', '#e83e8c', '#6c757d'
+];
+
+// Chart instances for cleanup
+let chartInstances = {};
+
+function destroyChart(id) {
+    if (chartInstances[id]) {
+        chartInstances[id].destroy();
+        delete chartInstances[id];
+    }
+}
+
+// EAS Distribution Chart (Overview)
+function renderEASDistributionChart() {
+    const canvas = document.getElementById('chart-eas-distribution');
+    if (!canvas || !DATA.summary?.easDistribution) return;
+    
+    destroyChart('eas-dist');
+    
+    const dist = DATA.summary.easDistribution;
+    const labels = ['Strong', 'Moderate', 'Weak', 'Poor'];
+    const values = labels.map(l => dist[l] || 0);
+    const colors = [COLORS.low, COLORS.moderate, COLORS.high, COLORS.critical];
+    
+    chartInstances['eas-dist'] = new Chart(canvas, {
+        type: 'doughnut',
+        data: {
+            labels: labels,
+            datasets: [{
+                data: values,
+                backgroundColor: colors
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom' }
+            }
+        }
+    });
+}
+
+// Critical Gaps Chart (Overview)
+function renderCriticalGapsChart() {
+    const canvas = document.getElementById('chart-critical-gaps');
+    if (!canvas || !DATA.summary?.criticalGaps) return;
+    
+    destroyChart('critical-gaps');
+    
+    const gaps = DATA.summary.criticalGaps.slice(0, 8);
+    
+    chartInstances['critical-gaps'] = new Chart(canvas, {
+        type: 'bar',
+        data: {
+            labels: gaps.map(g => g.name.substring(0, 15)),
+            datasets: [{
+                label: 'Gap Score',
+                data: gaps.map(g => g.gapScore),
+                backgroundColor: COLORS.critical
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                x: { 
+                    max: 100,
+                    title: { display: true, text: 'Gap Score' }
+                }
+            }
+        }
+    });
+}
+
+// Disease Burden Chart (Diseases Tab)
+function renderDiseaseBurdenChart() {
+    const canvas = document.getElementById('chart-disease-burden');
+    if (!canvas || !DATA.diseases?.diseases) return;
+    
+    destroyChart('disease-burden');
+    
+    const diseases = DATA.diseases.diseases.slice(0, 15);
+    
+    chartInstances['disease-burden'] = new Chart(canvas, {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'Diseases',
+                data: diseases.map(d => ({
+                    x: d.burden?.dalysMillions || 0,
+                    y: d.gap?.score || 0
+                })),
+                backgroundColor: diseases.map(d => {
+                    const sev = d.gap?.severity?.toLowerCase();
+                    return COLORS[sev] || COLORS.primary;
+                }),
+                pointRadius: 8
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: (ctx) => {
+                            const d = diseases[ctx.dataIndex];
+                            return `${d.name}: ${d.burden?.dalysMillions?.toFixed(1)}M DALYs, Gap: ${d.gap?.score?.toFixed(0)}`;
+                        }
+                    }
+                }
+            },
+            scales: {
+                x: { 
+                    title: { display: true, text: 'Disease Burden (Million DALYs)' }
+                },
+                y: { 
+                    title: { display: true, text: 'Research Gap Score' },
+                    max: 100
+                }
+            }
+        }
+    });
+}
+
+// Global Trends Chart (Trends Tab)
+function renderGlobalTrendsChart() {
+    const canvas = document.getElementById('chart-trends-global');
+    if (!canvas || !DATA.trends?.global?.yearly) return;
+    
+    destroyChart('trends-global');
+    
+    const yearly = DATA.trends.global.yearly;
+    const years = Object.keys(yearly).sort();
+    const values = years.map(y => yearly[y]);
+    
+    chartInstances['trends-global'] = new Chart(canvas, {
+        type: 'line',
+        data: {
+            labels: years,
+            datasets: [{
+                label: 'Publications',
+                data: values,
+                borderColor: COLORS.primary,
+                backgroundColor: COLORS.primary + '20',
+                fill: true,
+                tension: 0.3
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                y: { 
+                    beginAtZero: true,
+                    title: { display: true, text: 'Publications' }
+                }
+            }
+        }
+    });
+}
+
+// Biobank Trends Chart
+function renderBiobankTrendsChart(biobankId) {
+    const canvas = document.getElementById('chart-trends-biobank');
+    if (!canvas || !DATA.trends?.byBiobank?.[biobankId]) return;
+    
+    destroyChart('trends-biobank');
+    
+    const biobank = DATA.trends.byBiobank[biobankId];
+    const yearly = biobank.yearly || {};
+    const years = Object.keys(yearly).sort();
+    const values = years.map(y => yearly[y]);
+    
+    chartInstances['trends-biobank'] = new Chart(canvas, {
+        type: 'bar',
+        data: {
+            labels: years,
+            datasets: [{
+                label: biobank.name,
+                data: values,
+                backgroundColor: COLORS.primary
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'top' }
+            },
+            scales: {
+                y: { 
+                    beginAtZero: true,
+                    title: { display: true, text: 'Publications' }
+                }
+            }
+        }
+    });
+}
+
+// Theme Distribution Chart
+function renderThemeDistributionChart() {
+    const canvas = document.getElementById('chart-theme-dist');
+    if (!canvas || !DATA.themes?.themes) return;
+    
+    destroyChart('theme-dist');
+    
+    const themes = DATA.themes.themes.slice(0, 8);
+    
+    chartInstances['theme-dist'] = new Chart(canvas, {
+        type: 'pie',
+        data: {
+            labels: themes.map(t => t.name),
+            datasets: [{
+                data: themes.map(t => t.publications),
+                backgroundColor: CHART_COLORS
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'right' }
+            }
+        }
+    });
+}
+
+// Theme Publications Chart
+function renderThemePublicationsChart() {
+    const canvas = document.getElementById('chart-theme-pubs');
+    if (!canvas || !DATA.themes?.themes) return;
+    
+    destroyChart('theme-pubs');
+    
+    const themes = DATA.themes.themes.slice(0, 8);
+    
+    chartInstances['theme-pubs'] = new Chart(canvas, {
+        type: 'bar',
+        data: {
+            labels: themes.map(t => t.name.substring(0, 12)),
+            datasets: [{
+                label: 'Publications',
+                data: themes.map(t => t.publications),
+                backgroundColor: CHART_COLORS
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                y: { beginAtZero: true }
+            }
+        }
+    });
+}
+
+// Comparison Radar Chart
+function renderComparisonRadar(id1, id2) {
+    const canvas = document.getElementById('chart-compare-radar');
+    if (!canvas || !DATA.comparison?.biobanks) return;
+    
+    destroyChart('compare-radar');
+    
+    const b1 = DATA.comparison.biobanks.find(b => b.id === id1);
+    const b2 = DATA.comparison.biobanks.find(b => b.id === id2);
+    if (!b1 || !b2) return;
+    
+    const dims = DATA.comparison.radarDimensions || [];
+    const labels = dims.map(d => d.label);
+    
+    chartInstances['compare-radar'] = new Chart(canvas, {
+        type: 'radar',
+        data: {
+            labels: labels,
+            datasets: [
+                {
+                    label: b1.name,
+                    data: dims.map(d => b1.radar?.[d.key] || 0),
+                    borderColor: COLORS.primary,
+                    backgroundColor: COLORS.primary + '40'
+                },
+                {
+                    label: b2.name,
+                    data: dims.map(d => b2.radar?.[d.key] || 0),
+                    borderColor: COLORS.critical,
+                    backgroundColor: COLORS.critical + '40'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    max: 100
+                }
+            }
+        }
+    });
+}
+
+// Equity Share Chart
+function renderEquityShareChart() {
+    const canvas = document.getElementById('chart-equity-share');
+    if (!canvas || !DATA.equity?.summary) return;
+    
+    destroyChart('equity-share');
+    
+    const s = DATA.equity.summary;
+    
+    chartInstances['equity-share'] = new Chart(canvas, {
+        type: 'doughnut',
+        data: {
+            labels: ['HIC', 'LMIC'],
+            datasets: [{
+                data: [s.hic?.publicationShare || 0, s.lmic?.publicationShare || 0],
+                backgroundColor: [COLORS.hic, COLORS.lmic]
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { position: 'bottom' }
+            }
+        }
+    });
+}
+
+// Equity Region Chart
+function renderEquityRegionChart() {
+    const canvas = document.getElementById('chart-equity-region');
+    if (!canvas || !DATA.equity?.byRegion) return;
+    
+    destroyChart('equity-region');
+    
+    const regions = DATA.equity.byRegion;
+    
+    chartInstances['equity-region'] = new Chart(canvas, {
+        type: 'bar',
+        data: {
+            labels: regions.map(r => r.name),
+            datasets: [{
+                label: 'Publications',
+                data: regions.map(r => r.publications),
+                backgroundColor: regions.map(r => 
+                    r.incomeCategory === 'LMIC' ? COLORS.lmic : 
+                    r.incomeCategory === 'HIC' ? COLORS.hic : COLORS.moderate
+                )
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false }
+            },
+            scales: {
+                y: { 
+                    beginAtZero: true,
+                    title: { display: true, text: 'Publications' }
+                }
+            }
+        }
+    });
+}
+'''
 
 # =============================================================================
 # MAIN
 # =============================================================================
 
+def create_file(path: Path, content: str) -> None:
+    """Create file with content."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, 'w') as f:
+        f.write(content)
+    logger.info(f"Created: {path}")
+
+
 def main():
     print("=" * 70)
-    print("BHEM STEP 5: Build Static HTML Site")
+    print(f"HEIM-Biobank v1.0: Build Static Dashboard Site")
     print("=" * 70)
     
-    # Check for data files
-    data_files = ['summary.json', 'biobanks.json', 'diseases.json', 'matrix.json', 'trends.json']
-    missing = [f for f in data_files if not (DOCS_DIR / "data" / f).exists()]
+    # Create directory structure
+    print(f"\n📁 Creating site structure...")
+    (DOCS_DIR / "css").mkdir(parents=True, exist_ok=True)
+    (DOCS_DIR / "js").mkdir(parents=True, exist_ok=True)
+    (DOCS_DIR / "data").mkdir(parents=True, exist_ok=True)
     
-    if missing:
-        print(f"⚠️  Warning: Missing data files: {missing}")
-        print(f"   Run 02-03-bhem-generate-json.py first for full functionality")
+    # Generate HTML (with version date substitution)
+    html_content = HTML_TEMPLATE.replace('{version_date}', VERSION_DATE)
+    create_file(DOCS_DIR / "index.html", html_content)
     
-    # Write files
-    print(f"\n📝 Generating site files...")
+    # Generate CSS
+    create_file(DOCS_DIR / "css" / "style.css", CSS_TEMPLATE)
     
-    # HTML
-    with open(DOCS_DIR / "index.html", 'w') as f:
-        f.write(INDEX_HTML)
-    print(f"   ✅ index.html")
-    
-    # CSS
-    with open(CSS_DIR / "style.css", 'w') as f:
-        f.write(STYLE_CSS)
-    print(f"   ✅ css/style.css")
-    
-    # JavaScript
-    with open(JS_DIR / "charts.js", 'w') as f:
-        f.write(CHARTS_JS)
-    print(f"   ✅ js/charts.js")
-    
-    with open(JS_DIR / "app.js", 'w') as f:
-        f.write(APP_JS)
-    print(f"   ✅ js/app.js")
+    # Generate JavaScript
+    create_file(DOCS_DIR / "js" / "app.js", APP_JS_TEMPLATE)
+    create_file(DOCS_DIR / "js" / "charts.js", CHARTS_JS_TEMPLATE)
     
     # Create .nojekyll for GitHub Pages
-    (DOCS_DIR / ".nojekyll").touch()
-    print(f"   ✅ .nojekyll")
+    create_file(DOCS_DIR / ".nojekyll", "")
     
-    print(f"\n📁 Site generated in: {DOCS_DIR}")
-    print(f"\n✅ COMPLETE!")
-    print(f"\n📋 Next steps:")
-    print(f"   1. Commit and push to GitHub")
-    print(f"   2. Go to repository Settings > Pages")
-    print(f"   3. Set Source to 'Deploy from a branch'")
-    print(f"   4. Select 'main' branch and '/docs' folder")
-    print(f"   5. Save and wait for deployment")
-    print(f"\n🌐 Your site will be at: https://[username].github.io/[repo]/")
+    # Summary
+    print(f"\n" + "=" * 70)
+    print(f"✅ SITE BUILD COMPLETE")
+    print(f"=" * 70)
+    
+    print(f"\n📁 Output Files:")
+    for f in DOCS_DIR.rglob("*"):
+        if f.is_file():
+            size = f.stat().st_size
+            rel_path = f.relative_to(DOCS_DIR)
+            print(f"   {rel_path}: {size:,} bytes")
+    
+    print(f"\n🚀 Deployment:")
+    print(f"   1. Ensure JSON files exist in docs/data/")
+    print(f"   2. git add docs/")
+    print(f"   3. git commit -m 'Update HEIM-Biobank dashboard'")
+    print(f"   4. git push")
+    print(f"   5. Enable GitHub Pages: Settings → Pages → Branch: main, Folder: /docs")
+    
+    print(f"\n🌐 Your dashboard will be at:")
+    print(f"   https://[username].github.io/[repo]/")
 
 
 if __name__ == "__main__":

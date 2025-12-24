@@ -1,28 +1,28 @@
-biobank_id,name,country,region,total_publications,diseases_covered,critical_gap_count,research_opportunity_score,global_south_percentage
-uk_biobank,UK Biobank,United Kingdom,EUR,13341,25,0,0.0,1.6
-mvp,Million Veteran Program,United States,AMR,327,18,0,0.0,1.2
-finngen,FinnGen,Finland,EUR,2683,23,0,0.0,2.4
-all_of_us,All of Us Research Program,United States,AMR,613,21,0,0.0,1.5
-estonian_biobank,Estonian Biobank,Estonia,EUR,116,11,0,0.0,0.0
-biobank_japan,BioBank Japan,Japan,WPR,271,19,0,0.0,2.6
-china_kadoorie,China Kadoorie Biobank,China,WPR,516,16,0,0.0,1.0
-taiwan_biobank,Taiwan Biobank,Taiwan,WPR,482,16,0,0.0,0.2
-hunt,HUNT Study,Norway,EUR,1152,21,0,0.0,2.7
-decode,deCODE Genetics,Iceland,EUR,5604,25,0,0.0,2.3
-danish_national,Danish National Biobank,Denmark,EUR,9,2,0,0.0,22.2
-swedish_twin,Swedish Twin Registry,Sweden,EUR,289,19,0,0.0,5.2
-generation_scotland,Generation Scotland,United Kingdom,EUR,161,13,0,0.0,1.2
-lifelines,LifeLines,Netherlands,EUR,730,21,0,0.0,2.5
-constances,CONSTANCES,France,EUR,222,17,0,0.0,3.6
-nako,German National Cohort (NAKO),Germany,EUR,138,15,0,0.0,1.4
-biovu,BioVU,United States,AMR,155,18,0,0.0,4.5
-geisinger_mycode,Geisinger MyCode,United States,AMR,96,15,0,0.0,4.2
-mgb_biobank,Mass General Brigham Biobank,United States,AMR,92,17,0,0.0,2.2
-qatar_biobank,Qatar Biobank,Qatar,EMR,174,11,0,0.0,0.0
-h3africa,H3Africa,Pan-African,AFR,139,9,0,0.0,5.8
-uganda_genome,Uganda Genome Resource,Uganda,AFR,5,1,0,0.0,0.0
-awigen,AWI-Gen,Pan-African,AFR,60,9,0,0.0,15.0
-mexico_city,Mexico City Prospective Study,Mexico,AMR,29,6,0,0.0,0.0
-epigen_brazil,EPIGEN-Brazil,Brazil,AMR,1,0,0,0.0,0.0
-emerge,eMERGE Network,United States,AMR,47755,25,0,0.0,5.1
-topmed,TOPMed,United States,AMR,196,14,0,0.0,1.0
+biobank_id,name,country,region,is_global_south,total_publications,diseases_covered,research_opportunity_score,equity_alignment_score,equity_alignment_category,critical_gap_count,global_south_percentage,gap_severity_component,burden_miss_component,capacity_penalty
+emerge,eMERGE Network,United States,AMR,False,47755,25,373.32,90.7,Strong,3,5.1,12.0,15.11,0.0
+decode,deCODE Genetics,Iceland,EUR,False,5604,25,373.32,88.3,Strong,3,2.3,18.0,15.11,0.0
+uk_biobank,UK Biobank,United Kingdom,EUR,False,13341,25,459.5,87.6,Strong,3,1.6,16.0,20.15,0.0
+finngen,FinnGen,Finland,EUR,False,2683,23,646.31,83.4,Strong,4,2.4,22.0,26.0,0.0
+hunt,HUNT Study,Norway,EUR,False,1152,21,918.56,59.3,Weak,7,2.7,34.0,36.48,53.92
+lifelines,LifeLines,Netherlands,EUR,False,730,21,906.76,53.3,Weak,7,2.5,35.0,38.18,70.8
+swedish_twin,Swedish Twin Registry,Sweden,EUR,False,289,19,1002.62,47.0,Weak,8,5.2,38.0,37.45,88.44
+all_of_us,All of Us Research Program,United States,AMR,False,613,21,1415.0,46.9,Weak,6,1.5,39.0,49.54,75.48
+constances,CONSTANCES,France,EUR,False,222,17,915.98,43.0,Weak,10,3.6,48.0,34.95,91.12
+taiwan_biobank,Taiwan Biobank,Taiwan,WPR,False,482,16,1145.02,42.6,Weak,11,0.2,48.0,46.64,80.72
+mvp,Million Veteran Program,United States,AMR,False,327,18,1228.44,42.2,Weak,10,1.2,46.0,44.3,86.92
+biobank_japan,BioBank Japan,Japan,WPR,False,271,19,1048.88,42.0,Weak,8,2.6,43.0,46.94,89.16
+china_kadoorie,China Kadoorie Biobank,China,WPR,True,516,16,1236.44,41.0,Weak,11,1.0,51.0,49.38,79.36
+biovu,BioVU,United States,AMR,False,155,18,1552.6,35.4,Poor,9,4.5,46.0,60.24,93.8
+mgb_biobank,Mass General Brigham Biobank,United States,AMR,False,92,17,1482.94,33.9,Poor,9,2.2,49.0,58.57,96.32
+topmed,TOPMed,United States,AMR,False,196,14,1358.31,31.2,Poor,13,1.0,60.0,57.2,92.16
+generation_scotland,Generation Scotland,United Kingdom,EUR,False,161,13,1748.6,29.3,Poor,13,1.2,59.0,63.49,93.56
+geisinger_mycode,Geisinger MyCode,United States,AMR,False,96,15,1641.45,29.2,Poor,12,4.2,58.0,62.44,96.16
+estonian_biobank,Estonian Biobank,Estonia,EUR,False,116,11,2267.53,20.8,Poor,15,0.0,68.0,77.83,95.36
+nako,German National Cohort (NAKO),Germany,EUR,False,138,15,2927.21,19.5,Poor,12,1.4,60.0,93.71,94.48
+h3africa,H3Africa,Pan-African,AFR,True,139,9,2329.4,16.3,Poor,18,5.8,78.0,80.57,94.44
+qatar_biobank,Qatar Biobank,Qatar,EMR,True,174,11,2843.6,15.2,Poor,16,0.0,72.0,93.55,93.04
+awigen,AWI-Gen,Pan-African,AFR,True,60,9,2944.63,9.3,Poor,18,15.0,81.0,96.61,97.6
+mexico_city,Mexico City Prospective Study,Mexico,AMR,True,29,6,3015.47,5.1,Poor,21,0.0,88.0,100.0,98.84
+danish_national,Danish National Biobank,Denmark,EUR,False,9,2,3015.47,2.5,Poor,23,22.2,94.0,100.0,99.64
+uganda_genome,Uganda Genome Resource,Uganda,AFR,True,5,1,3015.47,0.1,Poor,25,0.0,100.0,100.0,99.8
+epigen_brazil,EPIGEN-Brazil,Brazil,AMR,True,1,0,3015.47,0.0,Poor,25,0.0,100.0,100.0,99.96
