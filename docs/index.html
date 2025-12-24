@@ -3,151 +3,468 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BHEM - Biobank Health Equity Monitor</title>
+    <title>HEIM-Biobank v1.0 | Global Equity Index for Biobank Research</title>
+    <meta name="description" content="Health Equity Informative Metrics for Biobank research - measuring alignment between research output and global disease burden">
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    
+    <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <h1>🏥 BHEM</h1>
-            <p class="subtitle">Biobank Health Equity Monitor</p>
-            <p class="tagline">Tracking global biobank research alignment with disease burden</p>
+    <!-- Header Banner -->
+    <header class="header">
+        <div class="header-content">
+            <div class="header-title">
+                <h1>HEIM-Biobank <span class="version">v1.0</span></h1>
+                <p class="tagline">Global equity index for biobank-linked research vs disease burden</p>
+            </div>
+            <div class="header-meta">
+                <span class="framework-badge">Part of HEIM Framework</span>
+            </div>
         </div>
     </header>
-
-    <nav>
-        <div class="container">
-            <button class="nav-btn active" data-view="overview">Overview</button>
-            <button class="nav-btn" data-view="biobanks">Biobanks</button>
-            <button class="nav-btn" data-view="diseases">Diseases</button>
-            <button class="nav-btn" data-view="matrix">Matrix</button>
-            <button class="nav-btn" data-view="trends">Trends</button>
-        </div>
+    
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs">
+        <button class="tab-btn active" data-tab="overview">Overview</button>
+        <button class="tab-btn" data-tab="biobanks">Biobanks</button>
+        <button class="tab-btn" data-tab="diseases">Diseases</button>
+        <button class="tab-btn" data-tab="matrix">Matrix</button>
+        <button class="tab-btn" data-tab="trends">Trends</button>
+        <button class="tab-btn" data-tab="themes">Themes</button>
+        <button class="tab-btn" data-tab="compare">Compare</button>
+        <button class="tab-btn" data-tab="equity">Equity</button>
     </nav>
-
-    <main>
-        <div class="container">
-            <!-- Overview View -->
-            <section id="view-overview" class="view active">
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-value" id="stat-publications">-</span>
-                        <span class="stat-label">Publications</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-value" id="stat-biobanks">-</span>
-                        <span class="stat-label">Biobanks</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-value" id="stat-diseases">-</span>
-                        <span class="stat-label">Diseases Tracked</span>
-                    </div>
-                    <div class="stat-card alert">
-                        <span class="stat-value" id="stat-critical">-</span>
-                        <span class="stat-label">Critical Gaps</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-value" id="stat-equity">-</span>
-                        <span class="stat-label">Equity Ratio</span>
-                    </div>
+    
+    <!-- Main Content -->
+    <main class="main-content">
+        
+        <!-- Tab 1: Overview -->
+        <section id="overview" class="tab-content active">
+            <div class="section-header">
+                <h2>Global Overview</h2>
+                <p>Key metrics and critical research gaps across all biobanks</p>
+            </div>
+            
+            <!-- Summary Cards -->
+            <div class="summary-cards">
+                <div class="card summary-card">
+                    <div class="card-icon">🏛️</div>
+                    <div class="card-value" id="stat-biobanks">--</div>
+                    <div class="card-label">Biobanks Scored</div>
                 </div>
-
-                <div class="chart-row">
+                <div class="card summary-card">
+                    <div class="card-icon">📚</div>
+                    <div class="card-value" id="stat-publications">--</div>
+                    <div class="card-label">Publications Mapped</div>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-icon">🌍</div>
+                    <div class="card-value" id="stat-countries">--</div>
+                    <div class="card-label">Countries Represented</div>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-icon">⚠️</div>
+                    <div class="card-value" id="stat-critical">--</div>
+                    <div class="card-label">Critical Gap Diseases</div>
+                </div>
+            </div>
+            
+            <!-- Charts Row -->
+            <div class="charts-row">
+                <div class="card chart-card">
+                    <h3>Equity Alignment Distribution</h3>
                     <div class="chart-container">
-                        <h3>Research Gap Distribution</h3>
-                        <canvas id="chart-gaps"></canvas>
+                        <canvas id="chart-eas-distribution"></canvas>
                     </div>
+                </div>
+                <div class="card chart-card">
+                    <h3>Critical Research Gaps</h3>
                     <div class="chart-container">
-                        <h3>Publications by Region</h3>
-                        <canvas id="chart-regions"></canvas>
+                        <canvas id="chart-critical-gaps"></canvas>
                     </div>
                 </div>
-
-                <div class="chart-container full-width">
-                    <h3>Top Critical Gap Diseases</h3>
-                    <canvas id="chart-top-gaps"></canvas>
+            </div>
+            
+            <!-- Top Biobanks Table -->
+            <div class="card">
+                <h3>Top Biobanks by Equity Alignment</h3>
+                <div class="table-container">
+                    <table class="data-table" id="table-top-biobanks">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Biobank</th>
+                                <th>EAS</th>
+                                <th>Category</th>
+                                <th>Publications</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
-
-                <div class="info-box">
-                    <h3>About This Dashboard</h3>
-                    <p>The Biobank Health Equity Monitor (BHEM) tracks research publications from 50+ global biobanks 
-                    and evaluates their alignment with the global disease burden. Higher gap scores indicate 
-                    diseases that are under-researched relative to their public health impact.</p>
-                    <p><strong>Equity Ratio:</strong> Compares research intensity between high-income countries (HIC) 
-                    and the Global South. A ratio > 1 indicates HIC-focused research.</p>
-                    <p><strong>Data source:</strong> PubMed publications (2000-2025) linked to major biobanks.</p>
+            </div>
+            
+            <!-- Methodology Note -->
+            <div class="card info-card">
+                <h3>About HEIM-Biobank</h3>
+                <p>The <strong>Equity Alignment Score (0-100)</strong> measures how well a biobank's research portfolio 
+                matches global disease burden. Higher scores indicate better alignment between research output and 
+                health needs.</p>
+                <p>The <strong>Research Gap Score (0-100)</strong> quantifies the mismatch between a disease's global 
+                burden and research attention. Categories: <span class="badge badge-critical">Critical (&gt;70)</span> 
+                <span class="badge badge-high">High (50-70)</span> 
+                <span class="badge badge-moderate">Moderate (30-50)</span> 
+                <span class="badge badge-low">Low (&lt;30)</span></p>
+                <p class="methodology-source">Methodology: Corpas et al. (2025), Annual Review of Biomedical Data Science</p>
+            </div>
+        </section>
+        
+        <!-- Tab 2: Biobanks -->
+        <section id="biobanks" class="tab-content">
+            <div class="section-header">
+                <h2>Biobank Analysis</h2>
+                <p>Detailed equity metrics for each biobank in the registry</p>
+            </div>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <input type="text" id="biobank-search" class="search-input" placeholder="Search biobanks...">
+                <select id="biobank-region-filter" class="filter-select">
+                    <option value="">All Regions</option>
+                    <option value="AFR">Africa</option>
+                    <option value="AMR">Americas</option>
+                    <option value="EMR">Eastern Mediterranean</option>
+                    <option value="EUR">Europe</option>
+                    <option value="SEAR">South-East Asia</option>
+                    <option value="WPR">Western Pacific</option>
+                </select>
+                <select id="biobank-category-filter" class="filter-select">
+                    <option value="">All Categories</option>
+                    <option value="Strong">Strong Alignment</option>
+                    <option value="Moderate">Moderate Alignment</option>
+                    <option value="Weak">Weak Alignment</option>
+                    <option value="Poor">Poor Alignment</option>
+                </select>
+            </div>
+            
+            <!-- Biobanks Table -->
+            <div class="card">
+                <div class="table-container">
+                    <table class="data-table sortable" id="table-biobanks">
+                        <thead>
+                            <tr>
+                                <th data-sort="name">Biobank ↕</th>
+                                <th data-sort="country">Country ↕</th>
+                                <th data-sort="region">Region ↕</th>
+                                <th data-sort="eas">EAS ↕</th>
+                                <th data-sort="category">Category ↕</th>
+                                <th data-sort="publications">Publications ↕</th>
+                                <th data-sort="diseases">Diseases ↕</th>
+                                <th data-sort="gaps">Critical Gaps ↕</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
                 </div>
-            </section>
-
-            <!-- Biobanks View -->
-            <section id="view-biobanks" class="view">
-                <div class="controls">
-                    <input type="text" id="biobank-search" placeholder="Search biobanks...">
-                    <select id="biobank-sort">
-                        <option value="publications">Sort by Publications</option>
-                        <option value="ros">Sort by Research Opportunity</option>
-                        <option value="gaps">Sort by Critical Gaps</option>
-                        <option value="name">Sort by Name</option>
+            </div>
+            
+            <!-- Download Button -->
+            <div class="actions">
+                <button class="btn btn-primary" onclick="downloadBiobanksCSV()">Download CSV</button>
+            </div>
+        </section>
+        
+        <!-- Tab 3: Diseases -->
+        <section id="diseases" class="tab-content">
+            <div class="section-header">
+                <h2>Disease Analysis</h2>
+                <p>Research gaps by disease relative to global burden</p>
+            </div>
+            
+            <!-- Filters -->
+            <div class="filters">
+                <input type="text" id="disease-search" class="search-input" placeholder="Search diseases...">
+                <select id="disease-category-filter" class="filter-select">
+                    <option value="">All Categories</option>
+                    <option value="Cardiovascular">Cardiovascular</option>
+                    <option value="Respiratory">Respiratory</option>
+                    <option value="Metabolic">Metabolic</option>
+                    <option value="Infectious">Infectious</option>
+                    <option value="Neglected">Neglected</option>
+                    <option value="Neurological">Neurological</option>
+                    <option value="Mental Health">Mental Health</option>
+                    <option value="Cancer">Cancer</option>
+                    <option value="Maternal/Child">Maternal/Child</option>
+                    <option value="Injuries">Injuries</option>
+                </select>
+                <select id="disease-severity-filter" class="filter-select">
+                    <option value="">All Severities</option>
+                    <option value="Critical">Critical</option>
+                    <option value="High">High</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+            
+            <!-- Disease Chart -->
+            <div class="card chart-card">
+                <h3>Research Gap vs Disease Burden</h3>
+                <div class="chart-container chart-large">
+                    <canvas id="chart-disease-burden"></canvas>
+                </div>
+            </div>
+            
+            <!-- Diseases Table -->
+            <div class="card">
+                <div class="table-container">
+                    <table class="data-table sortable" id="table-diseases">
+                        <thead>
+                            <tr>
+                                <th data-sort="name">Disease ↕</th>
+                                <th data-sort="category">Category ↕</th>
+                                <th data-sort="dalys">DALYs (M) ↕</th>
+                                <th data-sort="publications">Publications ↕</th>
+                                <th data-sort="gap">Gap Score ↕</th>
+                                <th data-sort="severity">Severity ↕</th>
+                                <th data-sort="biobanks">Biobanks ↕</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tab 4: Matrix -->
+        <section id="matrix" class="tab-content">
+            <div class="section-header">
+                <h2>Publication Matrix</h2>
+                <p>Biobank × Disease publication counts heatmap</p>
+            </div>
+            
+            <div class="card">
+                <div class="matrix-legend">
+                    <span class="legend-item"><span class="legend-color" style="background:#dc3545"></span> Critical (0 pubs)</span>
+                    <span class="legend-item"><span class="legend-color" style="background:#fd7e14"></span> High (1-2 pubs)</span>
+                    <span class="legend-item"><span class="legend-color" style="background:#ffc107"></span> Moderate (3-10 pubs)</span>
+                    <span class="legend-item"><span class="legend-color" style="background:#28a745"></span> Low (&gt;10 pubs)</span>
+                </div>
+                <div class="matrix-container" id="matrix-container">
+                    <!-- Matrix rendered by JS -->
+                    <p class="loading">Loading matrix data...</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tab 5: Trends -->
+        <section id="trends" class="tab-content">
+            <div class="section-header">
+                <h2>Publication Trends</h2>
+                <p>How biobank research has grown over time</p>
+            </div>
+            
+            <div class="card chart-card">
+                <h3>Global Publication Growth</h3>
+                <div class="chart-container chart-large">
+                    <canvas id="chart-trends-global"></canvas>
+                </div>
+            </div>
+            
+            <div class="card chart-card">
+                <h3>Trends by Biobank</h3>
+                <div class="filters">
+                    <select id="trends-biobank-select" class="filter-select">
+                        <option value="">Select biobank...</option>
                     </select>
                 </div>
-                <div id="biobank-list" class="card-grid"></div>
-            </section>
-
-            <!-- Diseases View -->
-            <section id="view-diseases" class="view">
-                <div class="controls">
-                    <select id="disease-category">
-                        <option value="all">All Categories</option>
-                    </select>
-                    <select id="disease-sort">
-                        <option value="gap">Sort by Gap Score</option>
-                        <option value="burden">Sort by Burden</option>
-                        <option value="publications">Sort by Publications</option>
-                    </select>
+                <div class="chart-container chart-large">
+                    <canvas id="chart-trends-biobank"></canvas>
                 </div>
-                <div id="disease-list" class="card-grid"></div>
-            </section>
-
-            <!-- Matrix View -->
-            <section id="view-matrix" class="view">
-                <h3>Disease-Biobank Publication Matrix</h3>
-                <p class="hint">Darker cells indicate more publications. Hover for details.</p>
-                <div id="matrix-container" class="matrix-scroll">
-                    <div id="matrix-heatmap"></div>
-                </div>
-            </section>
-
-            <!-- Trends View -->
-            <section id="view-trends" class="view">
-                <div class="chart-container full-width">
-                    <h3>Publication Growth Over Time</h3>
-                    <canvas id="chart-trends"></canvas>
-                </div>
-                <div class="chart-row">
+            </div>
+        </section>
+        
+        <!-- Tab 6: Themes -->
+        <section id="themes" class="tab-content">
+            <div class="section-header">
+                <h2>Research Themes</h2>
+                <p>MeSH-based thematic analysis of biobank research</p>
+            </div>
+            
+            <div class="charts-row">
+                <div class="card chart-card">
+                    <h3>Theme Distribution</h3>
                     <div class="chart-container">
-                        <h3>Cumulative Publications</h3>
-                        <canvas id="chart-cumulative"></canvas>
-                    </div>
-                    <div class="chart-container">
-                        <h3>Global South Priority Research</h3>
-                        <canvas id="chart-gs-trend"></canvas>
+                        <canvas id="chart-theme-dist"></canvas>
                     </div>
                 </div>
-            </section>
-        </div>
+                <div class="card chart-card">
+                    <h3>Publications by Theme</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-theme-pubs"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Theme Table -->
+            <div class="card">
+                <h3>Theme Coverage Across Biobanks</h3>
+                <div class="table-container">
+                    <table class="data-table" id="table-themes">
+                        <thead>
+                            <tr>
+                                <th>Theme</th>
+                                <th>Publications</th>
+                                <th>Disease Count</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tab 7: Compare -->
+        <section id="compare" class="tab-content">
+            <div class="section-header">
+                <h2>Compare Biobanks</h2>
+                <p>Side-by-side comparison of biobank metrics</p>
+            </div>
+            
+            <!-- Biobank Selectors -->
+            <div class="compare-selectors">
+                <div class="selector-group">
+                    <label>Biobank 1:</label>
+                    <select id="compare-biobank1" class="filter-select"></select>
+                </div>
+                <div class="selector-group">
+                    <label>Biobank 2:</label>
+                    <select id="compare-biobank2" class="filter-select"></select>
+                </div>
+            </div>
+            
+            <!-- Comparison Cards -->
+            <div class="compare-cards">
+                <div class="card compare-card" id="compare-card1">
+                    <h3 id="compare-name1">Select a biobank</h3>
+                    <div class="compare-stats" id="compare-stats1"></div>
+                </div>
+                <div class="card compare-card" id="compare-card2">
+                    <h3 id="compare-name2">Select a biobank</h3>
+                    <div class="compare-stats" id="compare-stats2"></div>
+                </div>
+            </div>
+            
+            <!-- Radar Chart -->
+            <div class="card chart-card">
+                <h3>Metric Comparison</h3>
+                <div class="chart-container">
+                    <canvas id="chart-compare-radar"></canvas>
+                </div>
+            </div>
+            
+            <!-- Similar Pairs -->
+            <div class="card">
+                <h3>Similar Biobank Pairs</h3>
+                <div class="table-container">
+                    <table class="data-table" id="table-similar">
+                        <thead>
+                            <tr>
+                                <th>Biobank 1</th>
+                                <th>Biobank 2</th>
+                                <th>Similarity</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Tab 8: Equity -->
+        <section id="equity" class="tab-content">
+            <div class="section-header">
+                <h2>Global Health Equity</h2>
+                <p>HIC vs LMIC research distribution analysis</p>
+            </div>
+            
+            <!-- Equity Summary -->
+            <div class="summary-cards">
+                <div class="card summary-card">
+                    <div class="card-value" id="equity-ratio">--</div>
+                    <div class="card-label">Equity Ratio</div>
+                    <div class="card-sublabel" id="equity-interpretation">--</div>
+                </div>
+                <div class="card summary-card hic-card">
+                    <div class="card-value" id="hic-biobanks">--</div>
+                    <div class="card-label">HIC Biobanks</div>
+                    <div class="card-sublabel" id="hic-pubs">-- publications</div>
+                </div>
+                <div class="card summary-card lmic-card">
+                    <div class="card-value" id="lmic-biobanks">--</div>
+                    <div class="card-label">LMIC Biobanks</div>
+                    <div class="card-sublabel" id="lmic-pubs">-- publications</div>
+                </div>
+            </div>
+            
+            <!-- Charts -->
+            <div class="charts-row">
+                <div class="card chart-card">
+                    <h3>Publication Share: HIC vs LMIC</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-equity-share"></canvas>
+                    </div>
+                </div>
+                <div class="card chart-card">
+                    <h3>Publications by WHO Region</h3>
+                    <div class="chart-container">
+                        <canvas id="chart-equity-region"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Global South Priority Diseases -->
+            <div class="card">
+                <h3>Global South Priority Diseases</h3>
+                <p class="card-description">Diseases disproportionately affecting low- and middle-income countries</p>
+                <div class="table-container">
+                    <table class="data-table" id="table-gs-diseases">
+                        <thead>
+                            <tr>
+                                <th>Disease</th>
+                                <th>DALYs (M)</th>
+                                <th>Publications</th>
+                                <th>Gap Score</th>
+                                <th>Severity</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+        
     </main>
-
-    <footer>
-        <div class="container">
-            <p>BHEM - Biobank Health Equity Monitor</p>
-            <p>Data updated: <span id="last-update">-</span></p>
-            <p><a href="https://github.com/manuelcorpas/17-EHR" target="_blank">GitHub Repository</a></p>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>
+                <strong>HEIM-Biobank v1.0</strong> | 
+                Specification date: 2025-12-24 | 
+                Data: GBD 2021, PubMed | 
+                Part of <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">HEIM Framework</a>
+            </p>
+            <p class="footer-methodology">
+                Methodology: Corpas et al. (2025), Annual Review of Biomedical Data Science
+            </p>
         </div>
     </footer>
-
-    <script src="js/charts.js"></script>
+    
+    <!-- Scripts -->
     <script src="js/app.js"></script>
+    <script src="js/charts.js"></script>
 </body>
 </html>

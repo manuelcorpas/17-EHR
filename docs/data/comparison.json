@@ -1,0 +1,1135 @@
+{
+  "version": "HEIM-Biobank v1.0",
+  "generated": "2025-12-24T08:59:39.322482",
+  "biobanks": [
+    {
+      "id": "uk_biobank",
+      "name": "UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "stats": {
+        "publications": 13341,
+        "diseases": 25,
+        "eas": 87.6,
+        "ros": 459.5,
+        "criticalGaps": 3
+      },
+      "radar": {
+        "coverage": 100,
+        "volume": 27.936341744319964,
+        "equity": 87.6,
+        "depth": 100,
+        "gsEngagement": 1.6
+      },
+      "diseasePublications": {
+        "alzheimers": 786,
+        "depression": 575,
+        "bipolar": 106,
+        "schizophrenia": 153,
+        "epilepsy": 38,
+        "anxiety": 169,
+        "ischemic_heart_disease": 795,
+        "stroke": 1136,
+        "copd": 175,
+        "lung_cancer": 593,
+        "breast_cancer": 550,
+        "chronic_kidney": 308,
+        "diabetes": 1147,
+        "cirrhosis": 393,
+        "low_back_pain": 56,
+        "preterm_birth": 50,
+        "neonatal_disorders": 168,
+        "parkinsons": 147,
+        "asthma": 163,
+        "ntds": 25,
+        "malaria": 1,
+        "road_traffic": 1,
+        "hiv_aids": 18,
+        "diarrheal_diseases": 11,
+        "tuberculosis": 7
+      }
+    },
+    {
+      "id": "mvp",
+      "name": "Million Veteran Program",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "publications": 327,
+        "diseases": 18,
+        "eas": 42.2,
+        "ros": 1228.44,
+        "criticalGaps": 10
+      },
+      "radar": {
+        "coverage": 72.0,
+        "volume": 0.6847450528740446,
+        "equity": 42.2,
+        "depth": 13.079999999999998,
+        "gsEngagement": 1.2
+      },
+      "diseasePublications": {
+        "diabetes": 21,
+        "ischemic_heart_disease": 31,
+        "depression": 8,
+        "cirrhosis": 10,
+        "stroke": 18,
+        "chronic_kidney": 10,
+        "anxiety": 6,
+        "breast_cancer": 6,
+        "bipolar": 3,
+        "schizophrenia": 5,
+        "lung_cancer": 5,
+        "alzheimers": 9,
+        "preterm_birth": 1,
+        "neonatal_disorders": 3,
+        "road_traffic": 1,
+        "low_back_pain": 4,
+        "copd": 2,
+        "hiv_aids": 1
+      }
+    },
+    {
+      "id": "finngen",
+      "name": "FinnGen",
+      "country": "Finland",
+      "region": "EUR",
+      "stats": {
+        "publications": 2683,
+        "diseases": 23,
+        "eas": 83.4,
+        "ros": 646.31,
+        "criticalGaps": 4
+      },
+      "radar": {
+        "coverage": 92.0,
+        "volume": 5.618259868076641,
+        "equity": 83.4,
+        "depth": 100,
+        "gsEngagement": 2.4
+      },
+      "diseasePublications": {
+        "diabetes": 201,
+        "ischemic_heart_disease": 98,
+        "diarrheal_diseases": 1,
+        "epilepsy": 20,
+        "depression": 79,
+        "anxiety": 30,
+        "asthma": 48,
+        "hiv_aids": 3,
+        "breast_cancer": 61,
+        "stroke": 76,
+        "preterm_birth": 22,
+        "low_back_pain": 37,
+        "cirrhosis": 72,
+        "lung_cancer": 77,
+        "chronic_kidney": 61,
+        "neonatal_disorders": 40,
+        "tuberculosis": 7,
+        "alzheimers": 55,
+        "copd": 36,
+        "parkinsons": 18,
+        "bipolar": 11,
+        "schizophrenia": 10,
+        "ntds": 2
+      }
+    },
+    {
+      "id": "all_of_us",
+      "name": "All of Us Research Program",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "publications": 613,
+        "diseases": 21,
+        "eas": 46.9,
+        "ros": 1415.0,
+        "criticalGaps": 6
+      },
+      "radar": {
+        "coverage": 84.0,
+        "volume": 1.2836352214427809,
+        "equity": 46.9,
+        "depth": 24.519999999999996,
+        "gsEngagement": 1.5
+      },
+      "diseasePublications": {
+        "lung_cancer": 24,
+        "breast_cancer": 23,
+        "diabetes": 26,
+        "chronic_kidney": 4,
+        "ischemic_heart_disease": 17,
+        "bipolar": 2,
+        "anxiety": 17,
+        "depression": 26,
+        "stroke": 12,
+        "alzheimers": 10,
+        "copd": 2,
+        "ntds": 1,
+        "cirrhosis": 2,
+        "neonatal_disorders": 1,
+        "parkinsons": 1,
+        "asthma": 8,
+        "diarrheal_diseases": 2,
+        "hiv_aids": 5,
+        "tuberculosis": 1,
+        "low_back_pain": 4,
+        "schizophrenia": 1
+      }
+    },
+    {
+      "id": "estonian_biobank",
+      "name": "Estonian Biobank",
+      "country": "Estonia",
+      "region": "EUR",
+      "stats": {
+        "publications": 116,
+        "diseases": 11,
+        "eas": 20.8,
+        "ros": 2267.53,
+        "criticalGaps": 15
+      },
+      "radar": {
+        "coverage": 44.0,
+        "volume": 0.24290650193696997,
+        "equity": 20.8,
+        "depth": 4.640000000000001,
+        "gsEngagement": 0.0
+      },
+      "diseasePublications": {
+        "depression": 4,
+        "breast_cancer": 5,
+        "ischemic_heart_disease": 5,
+        "parkinsons": 1,
+        "diabetes": 7,
+        "stroke": 2,
+        "schizophrenia": 2,
+        "asthma": 3,
+        "alzheimers": 1,
+        "cirrhosis": 2,
+        "lung_cancer": 1
+      }
+    },
+    {
+      "id": "biobank_japan",
+      "name": "BioBank Japan",
+      "country": "Japan",
+      "region": "WPR",
+      "stats": {
+        "publications": 271,
+        "diseases": 19,
+        "eas": 42.0,
+        "ros": 1048.88,
+        "criticalGaps": 8
+      },
+      "radar": {
+        "coverage": 76.0,
+        "volume": 0.5674798450424039,
+        "equity": 42.0,
+        "depth": 10.840000000000003,
+        "gsEngagement": 2.6
+      },
+      "diseasePublications": {
+        "lung_cancer": 14,
+        "diabetes": 26,
+        "breast_cancer": 16,
+        "ischemic_heart_disease": 20,
+        "schizophrenia": 2,
+        "bipolar": 1,
+        "chronic_kidney": 7,
+        "cirrhosis": 8,
+        "stroke": 7,
+        "alzheimers": 3,
+        "copd": 4,
+        "ntds": 3,
+        "neonatal_disorders": 5,
+        "parkinsons": 4,
+        "asthma": 5,
+        "depression": 1,
+        "preterm_birth": 2,
+        "tuberculosis": 1,
+        "epilepsy": 1
+      }
+    },
+    {
+      "id": "china_kadoorie",
+      "name": "China Kadoorie Biobank",
+      "country": "China",
+      "region": "WPR",
+      "stats": {
+        "publications": 516,
+        "diseases": 16,
+        "eas": 41.0,
+        "ros": 1236.44,
+        "criticalGaps": 11
+      },
+      "radar": {
+        "coverage": 64.0,
+        "volume": 1.0805151293058317,
+        "equity": 41.0,
+        "depth": 20.64,
+        "gsEngagement": 1.0
+      },
+      "diseasePublications": {
+        "stroke": 75,
+        "ischemic_heart_disease": 55,
+        "lung_cancer": 39,
+        "breast_cancer": 29,
+        "copd": 30,
+        "diabetes": 70,
+        "chronic_kidney": 8,
+        "cirrhosis": 9,
+        "depression": 11,
+        "tuberculosis": 1,
+        "parkinsons": 4,
+        "neonatal_disorders": 4,
+        "anxiety": 1,
+        "asthma": 2,
+        "alzheimers": 1,
+        "ntds": 1
+      }
+    },
+    {
+      "id": "taiwan_biobank",
+      "name": "Taiwan Biobank",
+      "country": "Taiwan",
+      "region": "WPR",
+      "stats": {
+        "publications": 482,
+        "diseases": 16,
+        "eas": 42.6,
+        "ros": 1145.02,
+        "criticalGaps": 11
+      },
+      "radar": {
+        "coverage": 64.0,
+        "volume": 1.0093183959794785,
+        "equity": 42.6,
+        "depth": 19.28,
+        "gsEngagement": 0.2
+      },
+      "diseasePublications": {
+        "alzheimers": 17,
+        "diabetes": 45,
+        "depression": 19,
+        "cirrhosis": 9,
+        "lung_cancer": 11,
+        "breast_cancer": 7,
+        "chronic_kidney": 23,
+        "parkinsons": 3,
+        "asthma": 6,
+        "ischemic_heart_disease": 6,
+        "bipolar": 3,
+        "anxiety": 3,
+        "schizophrenia": 6,
+        "copd": 5,
+        "ntds": 1,
+        "stroke": 6
+      }
+    },
+    {
+      "id": "hunt",
+      "name": "HUNT Study",
+      "country": "Norway",
+      "region": "EUR",
+      "stats": {
+        "publications": 1152,
+        "diseases": 21,
+        "eas": 59.3,
+        "ros": 918.56,
+        "criticalGaps": 7
+      },
+      "radar": {
+        "coverage": 84.0,
+        "volume": 2.412312846822322,
+        "equity": 59.3,
+        "depth": 46.08,
+        "gsEngagement": 2.7
+      },
+      "diseasePublications": {
+        "copd": 20,
+        "diabetes": 90,
+        "low_back_pain": 36,
+        "breast_cancer": 21,
+        "depression": 121,
+        "anxiety": 107,
+        "neonatal_disorders": 23,
+        "ischemic_heart_disease": 68,
+        "alzheimers": 35,
+        "lung_cancer": 38,
+        "chronic_kidney": 12,
+        "stroke": 28,
+        "asthma": 27,
+        "hiv_aids": 2,
+        "preterm_birth": 6,
+        "parkinsons": 2,
+        "epilepsy": 1,
+        "road_traffic": 1,
+        "cirrhosis": 3,
+        "schizophrenia": 2,
+        "diarrheal_diseases": 2
+      }
+    },
+    {
+      "id": "decode",
+      "name": "deCODE Genetics",
+      "country": "Iceland",
+      "region": "EUR",
+      "stats": {
+        "publications": 5604,
+        "diseases": 25,
+        "eas": 88.3,
+        "ros": 373.32,
+        "criticalGaps": 3
+      },
+      "radar": {
+        "coverage": 100,
+        "volume": 11.734896869437755,
+        "equity": 88.3,
+        "depth": 100,
+        "gsEngagement": 2.3
+      },
+      "diseasePublications": {
+        "stroke": 589,
+        "epilepsy": 82,
+        "bipolar": 14,
+        "schizophrenia": 22,
+        "ischemic_heart_disease": 37,
+        "alzheimers": 55,
+        "chronic_kidney": 15,
+        "preterm_birth": 32,
+        "neonatal_disorders": 38,
+        "cirrhosis": 28,
+        "lung_cancer": 131,
+        "breast_cancer": 121,
+        "tuberculosis": 10,
+        "diabetes": 62,
+        "depression": 26,
+        "anxiety": 24,
+        "low_back_pain": 16,
+        "hiv_aids": 19,
+        "ntds": 21,
+        "road_traffic": 35,
+        "parkinsons": 30,
+        "diarrheal_diseases": 11,
+        "copd": 7,
+        "malaria": 7,
+        "asthma": 5
+      }
+    },
+    {
+      "id": "danish_national",
+      "name": "Danish National Biobank",
+      "country": "Denmark",
+      "region": "EUR",
+      "stats": {
+        "publications": 9,
+        "diseases": 2,
+        "eas": 2.5,
+        "ros": 3015.47,
+        "criticalGaps": 23
+      },
+      "radar": {
+        "coverage": 8.0,
+        "volume": 0.01884619411579939,
+        "equity": 2.5,
+        "depth": 0.35999999999999943,
+        "gsEngagement": 22.2
+      },
+      "diseasePublications": {
+        "preterm_birth": 2,
+        "neonatal_disorders": 2
+      }
+    },
+    {
+      "id": "swedish_twin",
+      "name": "Swedish Twin Registry",
+      "country": "Sweden",
+      "region": "EUR",
+      "stats": {
+        "publications": 289,
+        "diseases": 19,
+        "eas": 47.0,
+        "ros": 1002.62,
+        "criticalGaps": 8
+      },
+      "radar": {
+        "coverage": 76.0,
+        "volume": 0.6051722332740027,
+        "equity": 47.0,
+        "depth": 11.560000000000002,
+        "gsEngagement": 5.2
+      },
+      "diseasePublications": {
+        "depression": 31,
+        "stroke": 9,
+        "ischemic_heart_disease": 13,
+        "neonatal_disorders": 14,
+        "alzheimers": 37,
+        "low_back_pain": 9,
+        "diabetes": 14,
+        "parkinsons": 7,
+        "anxiety": 11,
+        "copd": 4,
+        "lung_cancer": 10,
+        "breast_cancer": 14,
+        "bipolar": 7,
+        "schizophrenia": 6,
+        "asthma": 2,
+        "preterm_birth": 5,
+        "ntds": 1,
+        "chronic_kidney": 3,
+        "cirrhosis": 1
+      }
+    },
+    {
+      "id": "generation_scotland",
+      "name": "Generation Scotland",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "stats": {
+        "publications": 161,
+        "diseases": 13,
+        "eas": 29.3,
+        "ros": 1748.6,
+        "criticalGaps": 13
+      },
+      "radar": {
+        "coverage": 52.0,
+        "volume": 0.33713747251596693,
+        "equity": 29.3,
+        "depth": 6.439999999999998,
+        "gsEngagement": 1.2
+      },
+      "diseasePublications": {
+        "depression": 38,
+        "stroke": 15,
+        "copd": 2,
+        "diabetes": 11,
+        "ischemic_heart_disease": 7,
+        "alzheimers": 6,
+        "neonatal_disorders": 1,
+        "preterm_birth": 1,
+        "bipolar": 2,
+        "anxiety": 3,
+        "schizophrenia": 3,
+        "lung_cancer": 1,
+        "breast_cancer": 1
+      }
+    },
+    {
+      "id": "lifelines",
+      "name": "LifeLines",
+      "country": "Netherlands",
+      "region": "EUR",
+      "stats": {
+        "publications": 730,
+        "diseases": 21,
+        "eas": 53.3,
+        "ros": 906.76,
+        "criticalGaps": 7
+      },
+      "radar": {
+        "coverage": 84.0,
+        "volume": 1.528635744948173,
+        "equity": 53.3,
+        "depth": 29.200000000000003,
+        "gsEngagement": 2.5
+      },
+      "diseasePublications": {
+        "lung_cancer": 31,
+        "breast_cancer": 16,
+        "alzheimers": 10,
+        "anxiety": 32,
+        "depression": 48,
+        "copd": 20,
+        "ischemic_heart_disease": 14,
+        "diabetes": 53,
+        "neonatal_disorders": 13,
+        "low_back_pain": 2,
+        "chronic_kidney": 14,
+        "cirrhosis": 7,
+        "asthma": 15,
+        "road_traffic": 3,
+        "preterm_birth": 7,
+        "stroke": 3,
+        "schizophrenia": 2,
+        "hiv_aids": 4,
+        "ntds": 2,
+        "bipolar": 1,
+        "epilepsy": 1
+      }
+    },
+    {
+      "id": "constances",
+      "name": "CONSTANCES",
+      "country": "France",
+      "region": "EUR",
+      "stats": {
+        "publications": 222,
+        "diseases": 17,
+        "eas": 43.0,
+        "ros": 915.98,
+        "criticalGaps": 10
+      },
+      "radar": {
+        "coverage": 68.0,
+        "volume": 0.4648727881897184,
+        "equity": 43.0,
+        "depth": 8.879999999999995,
+        "gsEngagement": 3.6
+      },
+      "diseasePublications": {
+        "depression": 28,
+        "ischemic_heart_disease": 4,
+        "neonatal_disorders": 4,
+        "hiv_aids": 4,
+        "ntds": 1,
+        "asthma": 15,
+        "anxiety": 5,
+        "lung_cancer": 5,
+        "breast_cancer": 9,
+        "stroke": 5,
+        "diabetes": 7,
+        "chronic_kidney": 3,
+        "cirrhosis": 7,
+        "alzheimers": 5,
+        "preterm_birth": 2,
+        "low_back_pain": 3,
+        "copd": 3
+      }
+    },
+    {
+      "id": "nako",
+      "name": "German National Cohort (NAKO)",
+      "country": "Germany",
+      "region": "EUR",
+      "stats": {
+        "publications": 138,
+        "diseases": 15,
+        "eas": 19.5,
+        "ros": 2927.21,
+        "criticalGaps": 12
+      },
+      "radar": {
+        "coverage": 60.0,
+        "volume": 0.28897497644225734,
+        "equity": 19.5,
+        "depth": 5.519999999999996,
+        "gsEngagement": 1.4
+      },
+      "diseasePublications": {
+        "depression": 12,
+        "cirrhosis": 1,
+        "copd": 1,
+        "diabetes": 5,
+        "anxiety": 9,
+        "preterm_birth": 2,
+        "neonatal_disorders": 2,
+        "lung_cancer": 2,
+        "low_back_pain": 1,
+        "chronic_kidney": 1,
+        "ischemic_heart_disease": 1,
+        "alzheimers": 1,
+        "breast_cancer": 1,
+        "stroke": 1,
+        "asthma": 2
+      }
+    },
+    {
+      "id": "biovu",
+      "name": "BioVU",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "publications": 155,
+        "diseases": 18,
+        "eas": 35.4,
+        "ros": 1552.6,
+        "criticalGaps": 9
+      },
+      "radar": {
+        "coverage": 72.0,
+        "volume": 0.324573343105434,
+        "equity": 35.4,
+        "depth": 6.200000000000003,
+        "gsEngagement": 4.5
+      },
+      "diseasePublications": {
+        "cirrhosis": 7,
+        "chronic_kidney": 4,
+        "diabetes": 9,
+        "lung_cancer": 4,
+        "breast_cancer": 3,
+        "copd": 4,
+        "ischemic_heart_disease": 14,
+        "stroke": 2,
+        "depression": 2,
+        "bipolar": 1,
+        "schizophrenia": 1,
+        "alzheimers": 5,
+        "preterm_birth": 2,
+        "neonatal_disorders": 7,
+        "asthma": 2,
+        "hiv_aids": 1,
+        "ntds": 3,
+        "parkinsons": 3
+      }
+    },
+    {
+      "id": "geisinger_mycode",
+      "name": "Geisinger MyCode",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "publications": 96,
+        "diseases": 15,
+        "eas": 29.2,
+        "ros": 1641.45,
+        "criticalGaps": 12
+      },
+      "radar": {
+        "coverage": 60.0,
+        "volume": 0.20102607056852687,
+        "equity": 29.2,
+        "depth": 3.8400000000000034,
+        "gsEngagement": 4.2
+      },
+      "diseasePublications": {
+        "diabetes": 2,
+        "breast_cancer": 7,
+        "stroke": 4,
+        "lung_cancer": 6,
+        "ischemic_heart_disease": 3,
+        "preterm_birth": 2,
+        "neonatal_disorders": 4,
+        "alzheimers": 1,
+        "copd": 1,
+        "ntds": 1,
+        "cirrhosis": 1,
+        "parkinsons": 1,
+        "schizophrenia": 1,
+        "chronic_kidney": 1,
+        "hiv_aids": 1
+      }
+    },
+    {
+      "id": "mgb_biobank",
+      "name": "Mass General Brigham Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "publications": 92,
+        "diseases": 17,
+        "eas": 33.9,
+        "ros": 1482.94,
+        "criticalGaps": 9
+      },
+      "radar": {
+        "coverage": 68.0,
+        "volume": 0.19264998429483823,
+        "equity": 33.9,
+        "depth": 3.680000000000007,
+        "gsEngagement": 2.2
+      },
+      "diseasePublications": {
+        "preterm_birth": 1,
+        "neonatal_disorders": 2,
+        "copd": 3,
+        "alzheimers": 4,
+        "stroke": 3,
+        "asthma": 2,
+        "cirrhosis": 5,
+        "lung_cancer": 1,
+        "diabetes": 7,
+        "depression": 4,
+        "low_back_pain": 1,
+        "ischemic_heart_disease": 4,
+        "ntds": 1,
+        "parkinsons": 1,
+        "anxiety": 1,
+        "bipolar": 1,
+        "epilepsy": 1
+      }
+    },
+    {
+      "id": "qatar_biobank",
+      "name": "Qatar Biobank",
+      "country": "Qatar",
+      "region": "EMR",
+      "stats": {
+        "publications": 174,
+        "diseases": 11,
+        "eas": 15.2,
+        "ros": 2843.6,
+        "criticalGaps": 16
+      },
+      "radar": {
+        "coverage": 44.0,
+        "volume": 0.36435975290545497,
+        "equity": 15.2,
+        "depth": 6.959999999999994,
+        "gsEngagement": 0.0
+      },
+      "diseasePublications": {
+        "diabetes": 53,
+        "ischemic_heart_disease": 1,
+        "depression": 3,
+        "lung_cancer": 2,
+        "breast_cancer": 2,
+        "schizophrenia": 1,
+        "low_back_pain": 1,
+        "chronic_kidney": 2,
+        "alzheimers": 3,
+        "asthma": 2,
+        "stroke": 1
+      }
+    },
+    {
+      "id": "h3africa",
+      "name": "H3Africa",
+      "country": "Pan-African",
+      "region": "AFR",
+      "stats": {
+        "publications": 139,
+        "diseases": 9,
+        "eas": 16.3,
+        "ros": 2329.4,
+        "criticalGaps": 18
+      },
+      "radar": {
+        "coverage": 36.0,
+        "volume": 0.2910689980106795,
+        "equity": 16.3,
+        "depth": 5.560000000000002,
+        "gsEngagement": 5.8
+      },
+      "diseasePublications": {
+        "hiv_aids": 2,
+        "tuberculosis": 1,
+        "preterm_birth": 5,
+        "neonatal_disorders": 5,
+        "lung_cancer": 1,
+        "chronic_kidney": 7,
+        "stroke": 3,
+        "diabetes": 2,
+        "ntds": 1
+      }
+    },
+    {
+      "id": "uganda_genome",
+      "name": "Uganda Genome Resource",
+      "country": "Uganda",
+      "region": "AFR",
+      "stats": {
+        "publications": 5,
+        "diseases": 1,
+        "eas": 0.1,
+        "ros": 3015.47,
+        "criticalGaps": 25
+      },
+      "radar": {
+        "coverage": 4.0,
+        "volume": 0.010470107842110775,
+        "equity": 0.1,
+        "depth": 0.20000000000000284,
+        "gsEngagement": 0.0
+      },
+      "diseasePublications": {
+        "diabetes": 1
+      }
+    },
+    {
+      "id": "awigen",
+      "name": "AWI-Gen",
+      "country": "Pan-African",
+      "region": "AFR",
+      "stats": {
+        "publications": 60,
+        "diseases": 9,
+        "eas": 9.3,
+        "ros": 2944.63,
+        "criticalGaps": 18
+      },
+      "radar": {
+        "coverage": 36.0,
+        "volume": 0.1256412941053293,
+        "equity": 9.3,
+        "depth": 2.4000000000000057,
+        "gsEngagement": 15.0
+      },
+      "diseasePublications": {
+        "diabetes": 4,
+        "hiv_aids": 7,
+        "tuberculosis": 1,
+        "breast_cancer": 1,
+        "depression": 1,
+        "chronic_kidney": 1,
+        "malaria": 1,
+        "preterm_birth": 1,
+        "neonatal_disorders": 1
+      }
+    },
+    {
+      "id": "mexico_city",
+      "name": "Mexico City Prospective Study",
+      "country": "Mexico",
+      "region": "AMR",
+      "stats": {
+        "publications": 29,
+        "diseases": 6,
+        "eas": 5.1,
+        "ros": 3015.47,
+        "criticalGaps": 21
+      },
+      "radar": {
+        "coverage": 24.0,
+        "volume": 0.06072662548424249,
+        "equity": 5.1,
+        "depth": 1.1599999999999966,
+        "gsEngagement": 0.0
+      },
+      "diseasePublications": {
+        "diabetes": 5,
+        "chronic_kidney": 1,
+        "alzheimers": 2,
+        "stroke": 1,
+        "lung_cancer": 2,
+        "breast_cancer": 2
+      }
+    },
+    {
+      "id": "epigen_brazil",
+      "name": "EPIGEN-Brazil",
+      "country": "Brazil",
+      "region": "AMR",
+      "stats": {
+        "publications": 1,
+        "diseases": 0,
+        "eas": 0.0,
+        "ros": 3015.47,
+        "criticalGaps": 25
+      },
+      "radar": {
+        "coverage": 0.0,
+        "volume": 0.0020940215684221546,
+        "equity": 0.0,
+        "depth": 0.04000000000000625,
+        "gsEngagement": 0.0
+      },
+      "diseasePublications": {}
+    },
+    {
+      "id": "emerge",
+      "name": "eMERGE Network",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "publications": 47755,
+        "diseases": 25,
+        "eas": 90.7,
+        "ros": 373.32,
+        "criticalGaps": 3
+      },
+      "radar": {
+        "coverage": 100,
+        "volume": 100,
+        "equity": 90.7,
+        "depth": 100,
+        "gsEngagement": 5.1
+      },
+      "diseasePublications": {
+        "preterm_birth": 909,
+        "neonatal_disorders": 1026,
+        "tuberculosis": 141,
+        "lung_cancer": 1338,
+        "breast_cancer": 1300,
+        "malaria": 151,
+        "cirrhosis": 411,
+        "hiv_aids": 577,
+        "stroke": 1793,
+        "depression": 595,
+        "bipolar": 150,
+        "parkinsons": 294,
+        "schizophrenia": 328,
+        "anxiety": 462,
+        "ischemic_heart_disease": 488,
+        "epilepsy": 294,
+        "alzheimers": 824,
+        "chronic_kidney": 226,
+        "ntds": 344,
+        "diabetes": 572,
+        "low_back_pain": 137,
+        "road_traffic": 167,
+        "copd": 98,
+        "asthma": 88,
+        "diarrheal_diseases": 193
+      }
+    },
+    {
+      "id": "topmed",
+      "name": "TOPMed",
+      "country": "United States",
+      "region": "AMR",
+      "stats": {
+        "publications": 196,
+        "diseases": 14,
+        "eas": 31.2,
+        "ros": 1358.31,
+        "criticalGaps": 13
+      },
+      "radar": {
+        "coverage": 56.00000000000001,
+        "volume": 0.4104282274107423,
+        "equity": 31.2,
+        "depth": 7.840000000000003,
+        "gsEngagement": 1.0
+      },
+      "diseasePublications": {
+        "stroke": 11,
+        "chronic_kidney": 2,
+        "alzheimers": 6,
+        "asthma": 9,
+        "copd": 6,
+        "lung_cancer": 6,
+        "diabetes": 14,
+        "cirrhosis": 6,
+        "ischemic_heart_disease": 6,
+        "neonatal_disorders": 2,
+        "hiv_aids": 1,
+        "epilepsy": 1,
+        "parkinsons": 2,
+        "preterm_birth": 1
+      }
+    }
+  ],
+  "similarPairs": [
+    {
+      "biobank1": "china_kadoorie",
+      "biobank2": "taiwan_biobank",
+      "similarity": 99.2
+    },
+    {
+      "biobank1": "uganda_genome",
+      "biobank2": "epigen_brazil",
+      "similarity": 99.1
+    },
+    {
+      "biobank1": "generation_scotland",
+      "biobank2": "topmed",
+      "similarity": 98.5
+    },
+    {
+      "biobank1": "mvp",
+      "biobank2": "biobank_japan",
+      "similarity": 98.4
+    },
+    {
+      "biobank1": "estonian_biobank",
+      "biobank2": "qatar_biobank",
+      "similarity": 98.4
+    },
+    {
+      "biobank1": "biobank_japan",
+      "biobank2": "swedish_twin",
+      "similarity": 98.3
+    },
+    {
+      "biobank1": "biovu",
+      "biobank2": "mgb_biobank",
+      "similarity": 97.9
+    },
+    {
+      "biobank1": "mvp",
+      "biobank2": "constances",
+      "similarity": 97.7
+    },
+    {
+      "biobank1": "biobank_japan",
+      "biobank2": "constances",
+      "similarity": 97.6
+    },
+    {
+      "biobank1": "all_of_us",
+      "biobank2": "lifelines",
+      "similarity": 97.5
+    },
+    {
+      "biobank1": "geisinger_mycode",
+      "biobank2": "topmed",
+      "similarity": 97.3
+    },
+    {
+      "biobank1": "generation_scotland",
+      "biobank2": "geisinger_mycode",
+      "similarity": 97.2
+    },
+    {
+      "biobank1": "mvp",
+      "biobank2": "swedish_twin",
+      "similarity": 97.1
+    },
+    {
+      "biobank1": "nako",
+      "biobank2": "geisinger_mycode",
+      "similarity": 97.1
+    },
+    {
+      "biobank1": "geisinger_mycode",
+      "biobank2": "mgb_biobank",
+      "similarity": 97.0
+    },
+    {
+      "biobank1": "constances",
+      "biobank2": "biovu",
+      "similarity": 96.9
+    },
+    {
+      "biobank1": "mvp",
+      "biobank2": "taiwan_biobank",
+      "similarity": 96.8
+    },
+    {
+      "biobank1": "constances",
+      "biobank2": "mgb_biobank",
+      "similarity": 96.8
+    },
+    {
+      "biobank1": "swedish_twin",
+      "biobank2": "constances",
+      "similarity": 96.7
+    },
+    {
+      "biobank1": "qatar_biobank",
+      "biobank2": "h3africa",
+      "similarity": 96.7
+    }
+  ],
+  "radarDimensions": [
+    {
+      "key": "coverage",
+      "label": "Disease Coverage",
+      "description": "Percentage of 25 diseases with publications"
+    },
+    {
+      "key": "volume",
+      "label": "Publication Volume",
+      "description": "Relative publication count"
+    },
+    {
+      "key": "equity",
+      "label": "Equity Alignment",
+      "description": "Equity Alignment Score (0-100)"
+    },
+    {
+      "key": "depth",
+      "label": "Research Depth",
+      "description": "Average publications per disease"
+    },
+    {
+      "key": "gsEngagement",
+      "label": "Global South Focus",
+      "description": "Percentage of Global South priority diseases"
+    }
+  ]
+}
