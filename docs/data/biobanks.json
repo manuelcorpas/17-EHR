@@ -1,6 +1,6 @@
 {
   "version": "HEIM-Biobank v1.0",
-  "generated": "2025-12-24T09:04:40.423512",
+  "generated": "2025-12-25T13:05:20.149905",
   "count": 27,
   "biobanks": [
     {
@@ -12,67 +12,29 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 47755,
-        "diseasesCovered": 25,
-        "criticalGaps": 3,
-        "highGaps": 0
+        "diseasesCovered": 177,
+        "criticalGaps": 2,
+        "highGaps": 1
       },
       "scores": {
-        "equityAlignment": 90.7,
+        "equityAlignment": 98.3,
         "equityCategory": "Strong",
-        "researchOpportunity": 373.32
+        "researchOpportunity": 199.11
       },
       "components": {
-        "gap_severity_component": 12.0,
-        "burden_miss_component": 15.11,
+        "gap_severity_component": 3.77,
+        "burden_miss_component": 0.75,
         "capacity_penalty": 0,
         "n_critical": 3,
-        "n_high": 0,
-        "n_moderate": 0,
-        "n_low": 22,
-        "diseases_covered": 22,
-        "missed_dalys": 187.5
+        "n_high": 5,
+        "n_moderate": 5,
+        "n_low": 166,
+        "diseases_covered": 177,
+        "missed_dalys": 21.14
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "chronic_kidney_disease",
-        "road_traffic_injuries"
-      ],
-      "dataSufficiency": "Adequate",
-      "color": "#28a745"
-    },
-    {
-      "id": "decode",
-      "name": "deCODE Genetics",
-      "country": "Iceland",
-      "region": "EUR",
-      "regionName": "Europe",
-      "isGlobalSouth": false,
-      "stats": {
-        "totalPublications": 5604,
-        "diseasesCovered": 25,
-        "criticalGaps": 3,
-        "highGaps": 0
-      },
-      "scores": {
-        "equityAlignment": 88.3,
-        "equityCategory": "Strong",
-        "researchOpportunity": 373.32
-      },
-      "components": {
-        "gap_severity_component": 18.0,
-        "burden_miss_component": 15.11,
-        "capacity_penalty": 0,
-        "n_critical": 3,
-        "n_high": 2,
-        "n_moderate": 2,
-        "n_low": 18,
-        "diseases_covered": 22,
-        "missed_dalys": 187.5
-      },
-      "criticalGapDiseases": [
-        "type2_diabetes",
-        "chronic_kidney_disease",
-        "road_traffic_injuries"
+        "Viral skin diseases",
+        "Drowning"
       ],
       "dataSufficiency": "Adequate",
       "color": "#28a745"
@@ -86,33 +48,74 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 13341,
-        "diseasesCovered": 25,
-        "criticalGaps": 3,
-        "highGaps": 1
+        "diseasesCovered": 163,
+        "criticalGaps": 16,
+        "highGaps": 6
       },
       "scores": {
-        "equityAlignment": 87.6,
+        "equityAlignment": 84.9,
         "equityCategory": "Strong",
-        "researchOpportunity": 459.5
+        "researchOpportunity": 2117.27
       },
       "components": {
-        "gap_severity_component": 16.0,
-        "burden_miss_component": 20.15,
-        "capacity_penalty": 0,
-        "n_critical": 3,
-        "n_high": 2,
-        "n_moderate": 0,
-        "n_low": 20,
-        "diseases_covered": 22,
-        "missed_dalys": 250.0
+        "gap_severity_component": 14.53,
+        "burden_miss_component": 5.66,
+        "capacity_penalty": 25.47,
+        "n_critical": 17,
+        "n_high": 8,
+        "n_moderate": 20,
+        "n_low": 134,
+        "diseases_covered": 163,
+        "missed_dalys": 158.68
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "chronic_kidney_disease",
-        "road_traffic_injuries"
+        "Dengue",
+        "Schistosomiasis",
+        "Lymphatic filariasis",
+        "Cysticercosis",
+        "Cystic echinococcosis"
       ],
       "dataSufficiency": "Adequate",
       "color": "#28a745"
+    },
+    {
+      "id": "decode",
+      "name": "deCODE Genetics",
+      "country": "Iceland",
+      "region": "EUR",
+      "regionName": "Europe",
+      "isGlobalSouth": false,
+      "stats": {
+        "totalPublications": 5604,
+        "diseasesCovered": 154,
+        "criticalGaps": 25,
+        "highGaps": 4
+      },
+      "scores": {
+        "equityAlignment": 69.4,
+        "equityCategory": "Moderate",
+        "researchOpportunity": 2493.01
+      },
+      "components": {
+        "gap_severity_component": 20.53,
+        "burden_miss_component": 6.03,
+        "capacity_penalty": 68.69,
+        "n_critical": 25,
+        "n_high": 10,
+        "n_moderate": 27,
+        "n_low": 117,
+        "diseases_covered": 154,
+        "missed_dalys": 169.16
+      },
+      "criticalGapDiseases": [
+        "Rabies",
+        "Lymphatic filariasis",
+        "Trachoma",
+        "Cysticercosis",
+        "Cystic echinococcosis"
+      ],
+      "dataSufficiency": "Adequate",
+      "color": "#17a2b8"
     },
     {
       "id": "finngen",
@@ -123,34 +126,35 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 2683,
-        "diseasesCovered": 23,
-        "criticalGaps": 4,
-        "highGaps": 1
+        "diseasesCovered": 144,
+        "criticalGaps": 35,
+        "highGaps": 4
       },
       "scores": {
-        "equityAlignment": 83.4,
-        "equityCategory": "Strong",
-        "researchOpportunity": 646.31
+        "equityAlignment": 60.3,
+        "equityCategory": "Moderate",
+        "researchOpportunity": 3258.75
       },
       "components": {
-        "gap_severity_component": 22.0,
-        "burden_miss_component": 26.0,
-        "capacity_penalty": 0,
-        "n_critical": 4,
-        "n_high": 2,
-        "n_moderate": 2,
-        "n_low": 17,
-        "diseases_covered": 21,
-        "missed_dalys": 322.5
+        "gap_severity_component": 25.56,
+        "burden_miss_component": 13.1,
+        "capacity_penalty": 85.01,
+        "n_critical": 37,
+        "n_high": 5,
+        "n_moderate": 25,
+        "n_low": 112,
+        "diseases_covered": 144,
+        "missed_dalys": 367.43
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "chronic_kidney_disease",
-        "road_traffic_injuries"
+        "Typhoid and paratyphoid",
+        "Invasive Non-typhoidal Salmonella (iNTS)",
+        "Malaria",
+        "Dengue",
+        "Yellow fever"
       ],
       "dataSufficiency": "Adequate",
-      "color": "#28a745"
+      "color": "#17a2b8"
     },
     {
       "id": "hunt",
@@ -161,32 +165,32 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 1152,
-        "diseasesCovered": 21,
-        "criticalGaps": 7,
-        "highGaps": 1
+        "diseasesCovered": 116,
+        "criticalGaps": 63,
+        "highGaps": 6
       },
       "scores": {
-        "equityAlignment": 59.3,
+        "equityAlignment": 48.2,
         "equityCategory": "Weak",
-        "researchOpportunity": 918.56
+        "researchOpportunity": 5448.72
       },
       "components": {
-        "gap_severity_component": 34.0,
-        "burden_miss_component": 36.48,
-        "capacity_penalty": 53.92,
-        "n_critical": 7,
-        "n_high": 1,
-        "n_moderate": 4,
-        "n_low": 13,
-        "diseases_covered": 18,
-        "missed_dalys": 452.6
+        "gap_severity_component": 41.34,
+        "burden_miss_component": 24.13,
+        "capacity_penalty": 93.56,
+        "n_critical": 64,
+        "n_high": 7,
+        "n_moderate": 26,
+        "n_low": 82,
+        "diseases_covered": 116,
+        "missed_dalys": 676.97
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "ntds",
-        "bipolar"
+        "Tuberculosis",
+        "Typhoid and paratyphoid",
+        "Malaria",
+        "Dengue",
+        "Yellow fever"
       ],
       "dataSufficiency": "Adequate",
       "color": "#ffc107"
@@ -200,73 +204,34 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 730,
-        "diseasesCovered": 21,
-        "criticalGaps": 7,
-        "highGaps": 1
+        "diseasesCovered": 119,
+        "criticalGaps": 60,
+        "highGaps": 3
       },
       "scores": {
-        "equityAlignment": 53.3,
+        "equityAlignment": 46.4,
         "equityCategory": "Weak",
-        "researchOpportunity": 906.76
+        "researchOpportunity": 5398.45
       },
       "components": {
-        "gap_severity_component": 35.0,
-        "burden_miss_component": 38.18,
-        "capacity_penalty": 70.8,
-        "n_critical": 7,
-        "n_high": 1,
-        "n_moderate": 5,
-        "n_low": 12,
-        "diseases_covered": 18,
-        "missed_dalys": 473.6
+        "gap_severity_component": 39.66,
+        "burden_miss_component": 30.0,
+        "capacity_penalty": 95.92,
+        "n_critical": 60,
+        "n_high": 5,
+        "n_moderate": 34,
+        "n_low": 80,
+        "diseases_covered": 119,
+        "missed_dalys": 841.62
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "diarrheal_diseases",
-        "parkinsons"
+        "Sexually transmitted infections excluding HIV",
+        "Otitis media",
+        "Tuberculosis",
+        "Diarrheal diseases",
+        "Typhoid and paratyphoid"
       ],
       "dataSufficiency": "Adequate",
-      "color": "#ffc107"
-    },
-    {
-      "id": "swedish_twin",
-      "name": "Swedish Twin Registry",
-      "country": "Sweden",
-      "region": "EUR",
-      "regionName": "Europe",
-      "isGlobalSouth": false,
-      "stats": {
-        "totalPublications": 289,
-        "diseasesCovered": 19,
-        "criticalGaps": 8,
-        "highGaps": 0
-      },
-      "scores": {
-        "equityAlignment": 47.0,
-        "equityCategory": "Weak",
-        "researchOpportunity": 1002.62
-      },
-      "components": {
-        "gap_severity_component": 38.0,
-        "burden_miss_component": 37.45,
-        "capacity_penalty": 88.44,
-        "n_critical": 8,
-        "n_high": 1,
-        "n_moderate": 4,
-        "n_low": 12,
-        "diseases_covered": 17,
-        "missed_dalys": 464.6
-      },
-      "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "hiv_aids",
-        "diarrheal_diseases"
-      ],
-      "dataSufficiency": "Moderate",
       "color": "#ffc107"
     },
     {
@@ -278,110 +243,71 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 613,
-        "diseasesCovered": 21,
-        "criticalGaps": 6,
-        "highGaps": 2
+        "diseasesCovered": 118,
+        "criticalGaps": 61,
+        "highGaps": 4
       },
       "scores": {
-        "equityAlignment": 46.9,
+        "equityAlignment": 42.0,
         "equityCategory": "Weak",
-        "researchOpportunity": 1415.0
+        "researchOpportunity": 6215.54
       },
       "components": {
-        "gap_severity_component": 39.0,
-        "burden_miss_component": 49.54,
-        "capacity_penalty": 75.48,
-        "n_critical": 6,
-        "n_high": 3,
-        "n_moderate": 9,
-        "n_low": 7,
-        "diseases_covered": 19,
-        "missed_dalys": 614.6
+        "gap_severity_component": 41.9,
+        "burden_miss_component": 40.79,
+        "capacity_penalty": 96.58,
+        "n_critical": 62,
+        "n_high": 5,
+        "n_moderate": 42,
+        "n_low": 70,
+        "diseases_covered": 118,
+        "missed_dalys": 1144.39
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "epilepsy",
-        "chronic_kidney_disease",
-        "road_traffic_injuries"
+        "Otitis media",
+        "Typhoid and paratyphoid",
+        "Invasive Non-typhoidal Salmonella (iNTS)",
+        "Malaria",
+        "Dengue"
       ],
       "dataSufficiency": "Adequate",
       "color": "#ffc107"
     },
     {
-      "id": "constances",
-      "name": "CONSTANCES",
-      "country": "France",
-      "region": "EUR",
-      "regionName": "Europe",
-      "isGlobalSouth": false,
-      "stats": {
-        "totalPublications": 222,
-        "diseasesCovered": 17,
-        "criticalGaps": 10,
-        "highGaps": 0
-      },
-      "scores": {
-        "equityAlignment": 43.0,
-        "equityCategory": "Weak",
-        "researchOpportunity": 915.98
-      },
-      "components": {
-        "gap_severity_component": 48.0,
-        "burden_miss_component": 34.95,
-        "capacity_penalty": 91.12,
-        "n_critical": 10,
-        "n_high": 1,
-        "n_moderate": 6,
-        "n_low": 8,
-        "diseases_covered": 15,
-        "missed_dalys": 433.6
-      },
-      "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "diarrheal_diseases",
-        "epilepsy"
-      ],
-      "dataSufficiency": "Moderate",
-      "color": "#ffc107"
-    },
-    {
-      "id": "taiwan_biobank",
-      "name": "Taiwan Biobank",
-      "country": "Taiwan",
+      "id": "biobank_japan",
+      "name": "BioBank Japan",
+      "country": "Japan",
       "region": "WPR",
       "regionName": "Western Pacific",
       "isGlobalSouth": false,
       "stats": {
-        "totalPublications": 482,
-        "diseasesCovered": 16,
-        "criticalGaps": 11,
-        "highGaps": 0
+        "totalPublications": 271,
+        "diseasesCovered": 108,
+        "criticalGaps": 71,
+        "highGaps": 2
       },
       "scores": {
-        "equityAlignment": 42.6,
+        "equityAlignment": 40.2,
         "equityCategory": "Weak",
-        "researchOpportunity": 1145.02
+        "researchOpportunity": 5803.35
       },
       "components": {
-        "gap_severity_component": 48.0,
-        "burden_miss_component": 46.64,
-        "capacity_penalty": 80.72,
-        "n_critical": 11,
-        "n_high": 0,
-        "n_moderate": 4,
-        "n_low": 10,
-        "diseases_covered": 14,
-        "missed_dalys": 578.6
+        "gap_severity_component": 44.41,
+        "burden_miss_component": 41.5,
+        "capacity_penalty": 98.49,
+        "n_critical": 71,
+        "n_high": 2,
+        "n_moderate": 30,
+        "n_low": 76,
+        "diseases_covered": 108,
+        "missed_dalys": 1164.41
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "hiv_aids",
-        "diarrheal_diseases"
+        "HIV/AIDS",
+        "Otitis media",
+        "Diarrheal diseases",
+        "Typhoid and paratyphoid",
+        "Invasive Non-typhoidal Salmonella (iNTS)"
       ],
       "dataSufficiency": "Moderate",
       "color": "#ffc107"
@@ -395,74 +321,35 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 327,
-        "diseasesCovered": 18,
-        "criticalGaps": 10,
+        "diseasesCovered": 99,
+        "criticalGaps": 80,
         "highGaps": 0
       },
       "scores": {
-        "equityAlignment": 42.2,
-        "equityCategory": "Weak",
-        "researchOpportunity": 1228.44
+        "equityAlignment": 38.9,
+        "equityCategory": "Poor",
+        "researchOpportunity": 7072.15
       },
       "components": {
-        "gap_severity_component": 46.0,
-        "burden_miss_component": 44.3,
-        "capacity_penalty": 86.92,
-        "n_critical": 10,
+        "gap_severity_component": 50.14,
+        "burden_miss_component": 38.78,
+        "capacity_penalty": 98.17,
+        "n_critical": 80,
         "n_high": 1,
-        "n_moderate": 4,
-        "n_low": 10,
-        "diseases_covered": 15,
-        "missed_dalys": 549.6
+        "n_moderate": 37,
+        "n_low": 61,
+        "diseases_covered": 99,
+        "missed_dalys": 1088.16
       },
       "criticalGapDiseases": [
-        "asthma",
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "diarrheal_diseases"
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media",
+        "Tuberculosis",
+        "Diarrheal diseases"
       ],
       "dataSufficiency": "Moderate",
-      "color": "#ffc107"
-    },
-    {
-      "id": "biobank_japan",
-      "name": "BioBank Japan",
-      "country": "Japan",
-      "region": "WPR",
-      "regionName": "Western Pacific",
-      "isGlobalSouth": false,
-      "stats": {
-        "totalPublications": 271,
-        "diseasesCovered": 19,
-        "criticalGaps": 8,
-        "highGaps": 1
-      },
-      "scores": {
-        "equityAlignment": 42.0,
-        "equityCategory": "Weak",
-        "researchOpportunity": 1048.88
-      },
-      "components": {
-        "gap_severity_component": 43.0,
-        "burden_miss_component": 46.94,
-        "capacity_penalty": 89.16,
-        "n_critical": 8,
-        "n_high": 1,
-        "n_moderate": 9,
-        "n_low": 7,
-        "diseases_covered": 17,
-        "missed_dalys": 582.3
-      },
-      "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "hiv_aids",
-        "diarrheal_diseases",
-        "anxiety"
-      ],
-      "dataSufficiency": "Moderate",
-      "color": "#ffc107"
+      "color": "#dc3545"
     },
     {
       "id": "china_kadoorie",
@@ -473,35 +360,74 @@
       "isGlobalSouth": true,
       "stats": {
         "totalPublications": 516,
-        "diseasesCovered": 16,
-        "criticalGaps": 11,
-        "highGaps": 1
+        "diseasesCovered": 109,
+        "criticalGaps": 70,
+        "highGaps": 2
       },
       "scores": {
-        "equityAlignment": 41.0,
-        "equityCategory": "Weak",
-        "researchOpportunity": 1236.44
+        "equityAlignment": 38.7,
+        "equityCategory": "Poor",
+        "researchOpportunity": 6862.28
       },
       "components": {
-        "gap_severity_component": 51.0,
-        "burden_miss_component": 49.38,
-        "capacity_penalty": 79.36,
-        "n_critical": 11,
-        "n_high": 1,
-        "n_moderate": 5,
-        "n_low": 8,
-        "diseases_covered": 14,
-        "missed_dalys": 612.6
+        "gap_severity_component": 45.53,
+        "burden_miss_component": 46.39,
+        "capacity_penalty": 97.12,
+        "n_critical": 70,
+        "n_high": 3,
+        "n_moderate": 40,
+        "n_low": 66,
+        "diseases_covered": 109,
+        "missed_dalys": 1301.6
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "hiv_aids",
-        "diarrheal_diseases",
-        "epilepsy"
+        "HIV/AIDS",
+        "Upper respiratory infections",
+        "Otitis media",
+        "Diarrheal diseases",
+        "Typhoid and paratyphoid"
       ],
       "dataSufficiency": "Adequate",
-      "color": "#ffc107"
+      "color": "#dc3545"
+    },
+    {
+      "id": "swedish_twin",
+      "name": "Swedish Twin Registry",
+      "country": "Sweden",
+      "region": "EUR",
+      "regionName": "Europe",
+      "isGlobalSouth": false,
+      "stats": {
+        "totalPublications": 289,
+        "diseasesCovered": 95,
+        "criticalGaps": 84,
+        "highGaps": 2
+      },
+      "scores": {
+        "equityAlignment": 37.4,
+        "equityCategory": "Poor",
+        "researchOpportunity": 6600.88
+      },
+      "components": {
+        "gap_severity_component": 51.96,
+        "burden_miss_component": 40.86,
+        "capacity_penalty": 98.39,
+        "n_critical": 84,
+        "n_high": 3,
+        "n_moderate": 30,
+        "n_low": 62,
+        "diseases_covered": 95,
+        "missed_dalys": 1146.37
+      },
+      "criticalGapDiseases": [
+        "HIV/AIDS",
+        "Sexually transmitted infections excluding HIV",
+        "Otitis media",
+        "COVID-19",
+        "Tuberculosis"
+      ],
+      "dataSufficiency": "Moderate",
+      "color": "#dc3545"
     },
     {
       "id": "biovu",
@@ -512,149 +438,110 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 155,
-        "diseasesCovered": 18,
-        "criticalGaps": 9,
-        "highGaps": 0
-      },
-      "scores": {
-        "equityAlignment": 35.4,
-        "equityCategory": "Poor",
-        "researchOpportunity": 1552.6
-      },
-      "components": {
-        "gap_severity_component": 46.0,
-        "burden_miss_component": 60.24,
-        "capacity_penalty": 93.8,
-        "n_critical": 9,
-        "n_high": 0,
-        "n_moderate": 10,
-        "n_low": 6,
-        "diseases_covered": 16,
-        "missed_dalys": 747.3
-      },
-      "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "diarrheal_diseases",
-        "epilepsy"
-      ],
-      "dataSufficiency": "Moderate",
-      "color": "#dc3545"
-    },
-    {
-      "id": "mgb_biobank",
-      "name": "Mass General Brigham Biobank",
-      "country": "United States",
-      "region": "AMR",
-      "regionName": "Americas",
-      "isGlobalSouth": false,
-      "stats": {
-        "totalPublications": 92,
-        "diseasesCovered": 17,
-        "criticalGaps": 9,
+        "diseasesCovered": 110,
+        "criticalGaps": 69,
         "highGaps": 1
       },
       "scores": {
-        "equityAlignment": 33.9,
+        "equityAlignment": 36.7,
         "equityCategory": "Poor",
-        "researchOpportunity": 1482.94
+        "researchOpportunity": 7601.41
       },
       "components": {
-        "gap_severity_component": 49.0,
-        "burden_miss_component": 58.57,
-        "capacity_penalty": 96.32,
-        "n_critical": 9,
+        "gap_severity_component": 47.07,
+        "burden_miss_component": 49.19,
+        "capacity_penalty": 99.13,
+        "n_critical": 69,
         "n_high": 1,
-        "n_moderate": 11,
-        "n_low": 4,
-        "diseases_covered": 16,
-        "missed_dalys": 726.6
+        "n_moderate": 59,
+        "n_low": 50,
+        "diseases_covered": 110,
+        "missed_dalys": 1380.05
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "hiv_aids",
-        "diarrheal_diseases"
+        "Otitis media",
+        "Tuberculosis",
+        "Diarrheal diseases",
+        "Typhoid and paratyphoid",
+        "Invasive Non-typhoidal Salmonella (iNTS)"
       ],
       "dataSufficiency": "Moderate",
       "color": "#dc3545"
     },
     {
-      "id": "topmed",
-      "name": "TOPMed",
-      "country": "United States",
-      "region": "AMR",
-      "regionName": "Americas",
+      "id": "taiwan_biobank",
+      "name": "Taiwan Biobank",
+      "country": "Taiwan",
+      "region": "WPR",
+      "regionName": "Western Pacific",
       "isGlobalSouth": false,
       "stats": {
-        "totalPublications": 196,
-        "diseasesCovered": 14,
-        "criticalGaps": 13,
+        "totalPublications": 482,
+        "diseasesCovered": 94,
+        "criticalGaps": 85,
         "highGaps": 0
       },
       "scores": {
-        "equityAlignment": 31.2,
+        "equityAlignment": 35.3,
         "equityCategory": "Poor",
-        "researchOpportunity": 1358.31
+        "researchOpportunity": 6699.42
       },
       "components": {
-        "gap_severity_component": 60.0,
-        "burden_miss_component": 57.2,
-        "capacity_penalty": 92.16,
-        "n_critical": 13,
+        "gap_severity_component": 51.82,
+        "burden_miss_component": 49.12,
+        "capacity_penalty": 97.31,
+        "n_critical": 85,
         "n_high": 0,
-        "n_moderate": 8,
-        "n_low": 4,
-        "diseases_covered": 12,
-        "missed_dalys": 709.6
+        "n_moderate": 31,
+        "n_low": 63,
+        "diseases_covered": 94,
+        "missed_dalys": 1378.17
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "diarrheal_diseases",
-        "ntds"
+        "HIV/AIDS",
+        "Sexually transmitted infections excluding HIV",
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media"
       ],
       "dataSufficiency": "Moderate",
       "color": "#dc3545"
     },
     {
-      "id": "generation_scotland",
-      "name": "Generation Scotland",
-      "country": "United Kingdom",
+      "id": "constances",
+      "name": "CONSTANCES",
+      "country": "France",
       "region": "EUR",
       "regionName": "Europe",
       "isGlobalSouth": false,
       "stats": {
-        "totalPublications": 161,
-        "diseasesCovered": 13,
-        "criticalGaps": 13,
-        "highGaps": 0
+        "totalPublications": 222,
+        "diseasesCovered": 83,
+        "criticalGaps": 96,
+        "highGaps": 1
       },
       "scores": {
-        "equityAlignment": 29.3,
+        "equityAlignment": 34.3,
         "equityCategory": "Poor",
-        "researchOpportunity": 1748.6
+        "researchOpportunity": 7552.2
       },
       "components": {
-        "gap_severity_component": 59.0,
-        "burden_miss_component": 63.49,
-        "capacity_penalty": 93.56,
-        "n_critical": 13,
-        "n_high": 0,
-        "n_moderate": 7,
-        "n_low": 5,
-        "diseases_covered": 12,
-        "missed_dalys": 787.6
+        "gap_severity_component": 58.38,
+        "burden_miss_component": 42.36,
+        "capacity_penalty": 98.76,
+        "n_critical": 96,
+        "n_high": 2,
+        "n_moderate": 30,
+        "n_low": 51,
+        "diseases_covered": 83,
+        "missed_dalys": 1188.57
       },
       "criticalGapDiseases": [
-        "asthma",
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "hiv_aids"
+        "Sexually transmitted infections excluding HIV",
+        "Otitis media",
+        "Tuberculosis",
+        "Diarrheal diseases",
+        "Typhoid and paratyphoid"
       ],
       "dataSufficiency": "Moderate",
       "color": "#dc3545"
@@ -668,71 +555,149 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 96,
-        "diseasesCovered": 15,
-        "criticalGaps": 12,
-        "highGaps": 0
+        "diseasesCovered": 93,
+        "criticalGaps": 86,
+        "highGaps": 2
       },
       "scores": {
-        "equityAlignment": 29.2,
+        "equityAlignment": 28.6,
         "equityCategory": "Poor",
-        "researchOpportunity": 1641.45
+        "researchOpportunity": 8449.04
       },
       "components": {
-        "gap_severity_component": 58.0,
-        "burden_miss_component": 62.44,
-        "capacity_penalty": 96.16,
-        "n_critical": 12,
-        "n_high": 0,
-        "n_moderate": 10,
-        "n_low": 3,
-        "diseases_covered": 13,
-        "missed_dalys": 774.6
+        "gap_severity_component": 55.17,
+        "burden_miss_component": 64.83,
+        "capacity_penalty": 99.46,
+        "n_critical": 86,
+        "n_high": 2,
+        "n_moderate": 47,
+        "n_low": 44,
+        "diseases_covered": 93,
+        "missed_dalys": 1818.92
       },
       "criticalGapDiseases": [
-        "asthma",
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "diarrheal_diseases"
+        "Otitis media",
+        "Tuberculosis",
+        "Diarrheal diseases",
+        "Typhoid and paratyphoid",
+        "Invasive Non-typhoidal Salmonella (iNTS)"
       ],
       "dataSufficiency": "Moderate",
       "color": "#dc3545"
     },
     {
-      "id": "estonian_biobank",
-      "name": "Estonian Biobank",
-      "country": "Estonia",
+      "id": "mgb_biobank",
+      "name": "Mass General Brigham Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "regionName": "Americas",
+      "isGlobalSouth": false,
+      "stats": {
+        "totalPublications": 92,
+        "diseasesCovered": 84,
+        "criticalGaps": 95,
+        "highGaps": 2
+      },
+      "scores": {
+        "equityAlignment": 24.0,
+        "equityCategory": "Poor",
+        "researchOpportunity": 9902.71
+      },
+      "components": {
+        "gap_severity_component": 61.73,
+        "burden_miss_component": 71.56,
+        "capacity_penalty": 99.49,
+        "n_critical": 95,
+        "n_high": 2,
+        "n_moderate": 58,
+        "n_low": 24,
+        "diseases_covered": 84,
+        "missed_dalys": 2007.78
+      },
+      "criticalGapDiseases": [
+        "HIV/AIDS",
+        "Otitis media",
+        "Tuberculosis",
+        "Diarrheal diseases",
+        "Typhoid and paratyphoid"
+      ],
+      "dataSufficiency": "Moderate",
+      "color": "#dc3545"
+    },
+    {
+      "id": "topmed",
+      "name": "TOPMed",
+      "country": "United States",
+      "region": "AMR",
+      "regionName": "Americas",
+      "isGlobalSouth": false,
+      "stats": {
+        "totalPublications": 196,
+        "diseasesCovered": 61,
+        "criticalGaps": 118,
+        "highGaps": 0
+      },
+      "scores": {
+        "equityAlignment": 24.0,
+        "equityCategory": "Poor",
+        "researchOpportunity": 9495.02
+      },
+      "components": {
+        "gap_severity_component": 70.95,
+        "burden_miss_component": 59.7,
+        "capacity_penalty": 98.91,
+        "n_critical": 118,
+        "n_high": 0,
+        "n_moderate": 36,
+        "n_low": 25,
+        "diseases_covered": 61,
+        "missed_dalys": 1674.98
+      },
+      "criticalGapDiseases": [
+        "Sexually transmitted infections excluding HIV",
+        "Upper respiratory infections",
+        "Otitis media",
+        "Tuberculosis",
+        "Diarrheal diseases"
+      ],
+      "dataSufficiency": "Moderate",
+      "color": "#dc3545"
+    },
+    {
+      "id": "generation_scotland",
+      "name": "Generation Scotland",
+      "country": "United Kingdom",
       "region": "EUR",
       "regionName": "Europe",
       "isGlobalSouth": false,
       "stats": {
-        "totalPublications": 116,
-        "diseasesCovered": 11,
-        "criticalGaps": 15,
+        "totalPublications": 161,
+        "diseasesCovered": 68,
+        "criticalGaps": 111,
         "highGaps": 0
       },
       "scores": {
-        "equityAlignment": 20.8,
+        "equityAlignment": 23.4,
         "equityCategory": "Poor",
-        "researchOpportunity": 2267.53
+        "researchOpportunity": 9978.65
       },
       "components": {
-        "gap_severity_component": 68.0,
-        "burden_miss_component": 77.83,
-        "capacity_penalty": 95.36,
-        "n_critical": 15,
+        "gap_severity_component": 68.3,
+        "burden_miss_component": 65.29,
+        "capacity_penalty": 99.1,
+        "n_critical": 111,
         "n_high": 0,
-        "n_moderate": 8,
-        "n_low": 2,
-        "diseases_covered": 10,
-        "missed_dalys": 965.6
+        "n_moderate": 45,
+        "n_low": 23,
+        "diseases_covered": 68,
+        "missed_dalys": 1831.98
       },
       "criticalGapDiseases": [
-        "copd",
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "hiv_aids"
+        "HIV/AIDS",
+        "Sexually transmitted infections excluding HIV",
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media"
       ],
       "dataSufficiency": "Moderate",
       "color": "#dc3545"
@@ -746,71 +711,71 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 138,
-        "diseasesCovered": 15,
-        "criticalGaps": 12,
+        "diseasesCovered": 72,
+        "criticalGaps": 107,
         "highGaps": 1
       },
       "scores": {
-        "equityAlignment": 19.5,
+        "equityAlignment": 21.2,
         "equityCategory": "Poor",
-        "researchOpportunity": 2927.21
+        "researchOpportunity": 10349.72
       },
       "components": {
-        "gap_severity_component": 60.0,
-        "burden_miss_component": 93.71,
-        "capacity_penalty": 94.48,
-        "n_critical": 12,
+        "gap_severity_component": 67.6,
+        "burden_miss_component": 73.4,
+        "capacity_penalty": 99.23,
+        "n_critical": 107,
         "n_high": 1,
-        "n_moderate": 10,
-        "n_low": 2,
-        "diseases_covered": 13,
-        "missed_dalys": 1162.6
+        "n_moderate": 54,
+        "n_low": 17,
+        "diseases_covered": 72,
+        "missed_dalys": 2059.32
       },
       "criticalGapDiseases": [
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "hiv_aids",
-        "diarrheal_diseases"
+        "HIV/AIDS",
+        "Sexually transmitted infections excluding HIV",
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media"
       ],
       "dataSufficiency": "Moderate",
       "color": "#dc3545"
     },
     {
-      "id": "h3africa",
-      "name": "H3Africa",
-      "country": "Pan-African",
-      "region": "AFR",
-      "regionName": "Africa",
-      "isGlobalSouth": true,
+      "id": "estonian_biobank",
+      "name": "Estonian Biobank",
+      "country": "Estonia",
+      "region": "EUR",
+      "regionName": "Europe",
+      "isGlobalSouth": false,
       "stats": {
-        "totalPublications": 139,
-        "diseasesCovered": 9,
-        "criticalGaps": 18,
+        "totalPublications": 116,
+        "diseasesCovered": 71,
+        "criticalGaps": 108,
         "highGaps": 1
       },
       "scores": {
-        "equityAlignment": 16.3,
+        "equityAlignment": 18.6,
         "equityCategory": "Poor",
-        "researchOpportunity": 2329.4
+        "researchOpportunity": 10439.74
       },
       "components": {
-        "gap_severity_component": 78.0,
-        "burden_miss_component": 80.57,
-        "capacity_penalty": 94.44,
-        "n_critical": 18,
+        "gap_severity_component": 68.16,
+        "burden_miss_component": 81.14,
+        "capacity_penalty": 99.35,
+        "n_critical": 108,
         "n_high": 1,
-        "n_moderate": 4,
-        "n_low": 2,
-        "diseases_covered": 7,
-        "missed_dalys": 999.6
+        "n_moderate": 54,
+        "n_low": 16,
+        "diseases_covered": 71,
+        "missed_dalys": 2276.62
       },
       "criticalGapDiseases": [
-        "ischemic_heart_disease",
-        "copd",
-        "asthma",
-        "type2_diabetes",
-        "malaria"
+        "HIV/AIDS",
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media",
+        "COVID-19"
       ],
       "dataSufficiency": "Moderate",
       "color": "#dc3545"
@@ -824,71 +789,71 @@
       "isGlobalSouth": true,
       "stats": {
         "totalPublications": 174,
-        "diseasesCovered": 11,
-        "criticalGaps": 16,
+        "diseasesCovered": 72,
+        "criticalGaps": 107,
         "highGaps": 1
       },
       "scores": {
-        "equityAlignment": 15.2,
+        "equityAlignment": 17.4,
         "equityCategory": "Poor",
-        "researchOpportunity": 2843.6
+        "researchOpportunity": 10516.85
       },
       "components": {
-        "gap_severity_component": 72.0,
-        "burden_miss_component": 93.55,
-        "capacity_penalty": 93.04,
-        "n_critical": 16,
+        "gap_severity_component": 67.74,
+        "burden_miss_component": 85.96,
+        "capacity_penalty": 99.03,
+        "n_critical": 107,
         "n_high": 1,
-        "n_moderate": 6,
-        "n_low": 2,
-        "diseases_covered": 9,
-        "missed_dalys": 1160.6
+        "n_moderate": 55,
+        "n_low": 16,
+        "diseases_covered": 72,
+        "missed_dalys": 2411.79
       },
       "criticalGapDiseases": [
-        "copd",
-        "type2_diabetes",
-        "malaria",
-        "tuberculosis",
-        "hiv_aids"
+        "HIV/AIDS",
+        "Sexually transmitted infections excluding HIV",
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media"
       ],
       "dataSufficiency": "Moderate",
       "color": "#dc3545"
     },
     {
-      "id": "awigen",
-      "name": "AWI-Gen",
+      "id": "h3africa",
+      "name": "H3Africa",
       "country": "Pan-African",
       "region": "AFR",
       "regionName": "Africa",
       "isGlobalSouth": true,
       "stats": {
-        "totalPublications": 60,
-        "diseasesCovered": 9,
-        "criticalGaps": 18,
-        "highGaps": 2
+        "totalPublications": 139,
+        "diseasesCovered": 43,
+        "criticalGaps": 136,
+        "highGaps": 3
       },
       "scores": {
-        "equityAlignment": 9.3,
+        "equityAlignment": 16.8,
         "equityCategory": "Poor",
-        "researchOpportunity": 2944.63
+        "researchOpportunity": 10313.9
       },
       "components": {
-        "gap_severity_component": 81.0,
-        "burden_miss_component": 96.61,
-        "capacity_penalty": 97.6,
-        "n_critical": 18,
-        "n_high": 2,
-        "n_moderate": 5,
-        "n_low": 0,
-        "diseases_covered": 7,
-        "missed_dalys": 1198.6
+        "gap_severity_component": 80.17,
+        "burden_miss_component": 71.32,
+        "capacity_penalty": 99.22,
+        "n_critical": 136,
+        "n_high": 3,
+        "n_moderate": 24,
+        "n_low": 16,
+        "diseases_covered": 43,
+        "missed_dalys": 2001.02
       },
       "criticalGapDiseases": [
-        "ischemic_heart_disease",
-        "stroke",
-        "copd",
-        "asthma",
-        "type2_diabetes"
+        "Sexually transmitted infections excluding HIV",
+        "Upper respiratory infections",
+        "Otitis media",
+        "Diarrheal diseases",
+        "Typhoid and paratyphoid"
       ],
       "dataSufficiency": "Moderate",
       "color": "#dc3545"
@@ -902,34 +867,73 @@
       "isGlobalSouth": true,
       "stats": {
         "totalPublications": 29,
-        "diseasesCovered": 6,
-        "criticalGaps": 21,
+        "diseasesCovered": 50,
+        "criticalGaps": 129,
         "highGaps": 0
       },
       "scores": {
-        "equityAlignment": 5.1,
+        "equityAlignment": 13.2,
         "equityCategory": "Poor",
-        "researchOpportunity": 3015.47
+        "researchOpportunity": 10858.64
       },
       "components": {
-        "gap_severity_component": 88.0,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 98.84,
-        "n_critical": 21,
+        "gap_severity_component": 77.37,
+        "burden_miss_component": 86.24,
+        "capacity_penalty": 99.84,
+        "n_critical": 129,
         "n_high": 0,
-        "n_moderate": 4,
-        "n_low": 0,
-        "diseases_covered": 4,
-        "missed_dalys": 1240.6
+        "n_moderate": 38,
+        "n_low": 12,
+        "diseases_covered": 50,
+        "missed_dalys": 2419.69
       },
       "criticalGapDiseases": [
-        "ischemic_heart_disease",
-        "copd",
-        "asthma",
-        "type2_diabetes",
-        "malaria"
+        "HIV/AIDS",
+        "Sexually transmitted infections excluding HIV",
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media"
       ],
       "dataSufficiency": "Low",
+      "color": "#dc3545"
+    },
+    {
+      "id": "awigen",
+      "name": "AWI-Gen",
+      "country": "Pan-African",
+      "region": "AFR",
+      "regionName": "Africa",
+      "isGlobalSouth": true,
+      "stats": {
+        "totalPublications": 60,
+        "diseasesCovered": 31,
+        "criticalGaps": 148,
+        "highGaps": 2
+      },
+      "scores": {
+        "equityAlignment": 11.0,
+        "equityCategory": "Poor",
+        "researchOpportunity": 10598.43
+      },
+      "components": {
+        "gap_severity_component": 85.34,
+        "burden_miss_component": 83.06,
+        "capacity_penalty": 99.66,
+        "n_critical": 148,
+        "n_high": 2,
+        "n_moderate": 15,
+        "n_low": 14,
+        "diseases_covered": 31,
+        "missed_dalys": 2330.45
+      },
+      "criticalGapDiseases": [
+        "Sexually transmitted infections excluding HIV",
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media",
+        "COVID-19"
+      ],
+      "dataSufficiency": "Moderate",
       "color": "#dc3545"
     },
     {
@@ -941,32 +945,32 @@
       "isGlobalSouth": false,
       "stats": {
         "totalPublications": 9,
-        "diseasesCovered": 2,
-        "criticalGaps": 23,
+        "diseasesCovered": 23,
+        "criticalGaps": 156,
         "highGaps": 0
       },
       "scores": {
-        "equityAlignment": 2.5,
+        "equityAlignment": 6.5,
         "equityCategory": "Poor",
-        "researchOpportunity": 3015.47
+        "researchOpportunity": 11361.99
       },
       "components": {
-        "gap_severity_component": 94.0,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 99.64,
-        "n_critical": 23,
+        "gap_severity_component": 89.8,
+        "burden_miss_component": 91.96,
+        "capacity_penalty": 99.95,
+        "n_critical": 156,
         "n_high": 0,
-        "n_moderate": 2,
-        "n_low": 0,
-        "diseases_covered": 2,
-        "missed_dalys": 1240.6
+        "n_moderate": 19,
+        "n_low": 4,
+        "diseases_covered": 23,
+        "missed_dalys": 2580.25
       },
       "criticalGapDiseases": [
-        "ischemic_heart_disease",
-        "stroke",
-        "copd",
-        "asthma",
-        "type2_diabetes"
+        "Sexually transmitted infections excluding HIV",
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media",
+        "COVID-19"
       ],
       "dataSufficiency": "Low",
       "color": "#dc3545"
@@ -980,32 +984,32 @@
       "isGlobalSouth": true,
       "stats": {
         "totalPublications": 5,
-        "diseasesCovered": 1,
-        "criticalGaps": 25,
+        "diseasesCovered": 13,
+        "criticalGaps": 166,
         "highGaps": 0
       },
       "scores": {
-        "equityAlignment": 0.1,
+        "equityAlignment": 2.7,
         "equityCategory": "Poor",
-        "researchOpportunity": 3015.47
+        "researchOpportunity": 11444.69
       },
       "components": {
-        "gap_severity_component": 100.0,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 99.8,
-        "n_critical": 25,
+        "gap_severity_component": 94.27,
+        "burden_miss_component": 98.61,
+        "capacity_penalty": 99.97,
+        "n_critical": 166,
         "n_high": 0,
-        "n_moderate": 0,
-        "n_low": 0,
-        "diseases_covered": 0,
-        "missed_dalys": 1240.6
+        "n_moderate": 11,
+        "n_low": 2,
+        "diseases_covered": 13,
+        "missed_dalys": 2766.62
       },
       "criticalGapDiseases": [
-        "ischemic_heart_disease",
-        "stroke",
-        "copd",
-        "asthma",
-        "type2_diabetes"
+        "HIV/AIDS",
+        "Sexually transmitted infections excluding HIV",
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media"
       ],
       "dataSufficiency": "Low",
       "color": "#dc3545"
@@ -1019,32 +1023,32 @@
       "isGlobalSouth": true,
       "stats": {
         "totalPublications": 1,
-        "diseasesCovered": 0,
-        "criticalGaps": 25,
+        "diseasesCovered": 1,
+        "criticalGaps": 178,
         "highGaps": 0
       },
       "scores": {
-        "equityAlignment": 0.0,
+        "equityAlignment": 0.2,
         "equityCategory": "Poor",
-        "researchOpportunity": 3015.47
+        "researchOpportunity": 11589.67
       },
       "components": {
-        "gap_severity_component": 100.0,
+        "gap_severity_component": 99.58,
         "burden_miss_component": 100.0,
-        "capacity_penalty": 99.96,
-        "n_critical": 25,
+        "capacity_penalty": 99.99,
+        "n_critical": 178,
         "n_high": 0,
-        "n_moderate": 0,
+        "n_moderate": 1,
         "n_low": 0,
-        "diseases_covered": 0,
-        "missed_dalys": 1240.6
+        "diseases_covered": 1,
+        "missed_dalys": 2805.71
       },
       "criticalGapDiseases": [
-        "ischemic_heart_disease",
-        "stroke",
-        "copd",
-        "asthma",
-        "type2_diabetes"
+        "HIV/AIDS",
+        "Sexually transmitted infections excluding HIV",
+        "Lower respiratory infections",
+        "Upper respiratory infections",
+        "Otitis media"
       ],
       "dataSufficiency": "Low",
       "color": "#dc3545"
