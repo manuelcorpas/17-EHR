@@ -1,24 +1,25 @@
 {
   "version": "HEIM-Biobank v1.0",
   "versionDate": "2025-12-24",
-  "generated": "2025-12-24T09:04:40.423001",
+  "generated": "2025-12-25T13:05:20.148091",
   "overview": {
     "totalBiobanks": 27,
     "totalPublications": 75356,
-    "totalDiseases": 25,
+    "totalDiseases": 179,
     "totalCountries": 19,
     "equityRatio": 322.22
   },
   "gapDistribution": {
-    "Moderate": 6,
-    "Low": 12,
-    "Critical": 3,
-    "High": 4
+    "Moderate": 48,
+    "Low": 108,
+    "High": 17,
+    "Critical": 6
   },
   "easDistribution": {
-    "Strong": 4,
-    "Weak": 9,
-    "Poor": 14
+    "Strong": 2,
+    "Poor": 19,
+    "Moderate": 2,
+    "Weak": 4
   },
   "regionStats": [
     {
@@ -54,109 +55,131 @@
   ],
   "criticalGaps": [
     {
-      "id": "type2_diabetes",
-      "name": "Type 2 Diabetes Mellitus",
+      "id": "Drowning",
+      "name": "Drowning",
       "gapScore": 95.0,
-      "dalys": 67.0,
+      "dalys": 15.7,
       "publications": 0
     },
     {
-      "id": "chronic_kidney_disease",
-      "name": "Chronic Kidney Disease",
-      "gapScore": 95.0,
-      "dalys": 35.0,
-      "publications": 0
+      "id": "Iodine deficiency",
+      "name": "Iodine deficiency",
+      "gapScore": 92.0,
+      "dalys": 2.25,
+      "publications": 10
     },
     {
-      "id": "road_traffic_injuries",
-      "name": "Road Traffic Injuries",
-      "gapScore": 95.0,
-      "dalys": 85.5,
-      "publications": 0
+      "id": "Viral skin diseases",
+      "name": "Viral skin diseases",
+      "gapScore": 85.0,
+      "dalys": 4.2,
+      "publications": 1
+    },
+    {
+      "id": "Cysticercosis",
+      "name": "Cysticercosis",
+      "gapScore": 80.0,
+      "dalys": 1.24,
+      "publications": 2
+    },
+    {
+      "id": "Paralytic ileus and intestinal obstruction",
+      "name": "Paralytic ileus and intestinal obstruction",
+      "gapScore": 80.0,
+      "dalys": 6.66,
+      "publications": 5
+    },
+    {
+      "id": "Scabies",
+      "name": "Scabies",
+      "gapScore": 80.0,
+      "dalys": 5.32,
+      "publications": 6
     }
   ],
   "topBiobanks": [
     {
       "id": "emerge",
       "name": "eMERGE Network",
-      "eas": 90.7,
+      "eas": 98.3,
       "category": "Strong",
       "publications": 47755
     },
     {
-      "id": "decode",
-      "name": "deCODE Genetics",
-      "eas": 88.3,
-      "category": "Strong",
-      "publications": 5604
-    },
-    {
       "id": "uk_biobank",
       "name": "UK Biobank",
-      "eas": 87.6,
+      "eas": 84.9,
       "category": "Strong",
       "publications": 13341
     },
     {
+      "id": "decode",
+      "name": "deCODE Genetics",
+      "eas": 69.4,
+      "category": "Moderate",
+      "publications": 5604
+    },
+    {
       "id": "finngen",
       "name": "FinnGen",
-      "eas": 83.4,
-      "category": "Strong",
+      "eas": 60.3,
+      "category": "Moderate",
       "publications": 2683
     },
     {
       "id": "hunt",
       "name": "HUNT Study",
-      "eas": 59.3,
+      "eas": 48.2,
       "category": "Weak",
       "publications": 1152
     },
     {
       "id": "lifelines",
       "name": "LifeLines",
-      "eas": 53.3,
+      "eas": 46.4,
       "category": "Weak",
       "publications": 730
     },
     {
-      "id": "swedish_twin",
-      "name": "Swedish Twin Registry",
-      "eas": 47.0,
-      "category": "Weak",
-      "publications": 289
-    },
-    {
       "id": "all_of_us",
       "name": "All of Us Research Program",
-      "eas": 46.9,
+      "eas": 42.0,
       "category": "Weak",
       "publications": 613
     },
     {
-      "id": "constances",
-      "name": "CONSTANCES",
-      "eas": 43.0,
+      "id": "biobank_japan",
+      "name": "BioBank Japan",
+      "eas": 40.2,
       "category": "Weak",
-      "publications": 222
+      "publications": 271
     },
     {
-      "id": "taiwan_biobank",
-      "name": "Taiwan Biobank",
-      "eas": 42.6,
-      "category": "Weak",
-      "publications": 482
+      "id": "mvp",
+      "name": "Million Veteran Program",
+      "eas": 38.9,
+      "category": "Poor",
+      "publications": 327
+    },
+    {
+      "id": "china_kadoorie",
+      "name": "China Kadoorie Biobank",
+      "eas": 38.7,
+      "category": "Poor",
+      "publications": 516
     }
   ],
   "averages": {
-    "eas": 37.6,
-    "ros": 1660.31,
-    "gapScore": 43.8
+    "eas": 34.0,
+    "ros": 7726.73,
+    "gapScore": 30.0
   },
   "methodology": {
-    "burden_score": "0.5 \u00d7 DALYs + 50 \u00d7 Deaths + 10 \u00d7 log\u2081\u2080(Prevalence)",
-    "gap_score": "Three-tier: zero-pub penalty, category thresholds, burden-normalized intensity",
+    "burden_score": "0.5 \u00d7 DALYs + 50 \u00d7 Deaths + 10 \u00d7 log\u2081\u2080(Prevalence) [or 10 \u00d7 log\u2081\u2080(DALYs) if Deaths/Prevalence unavailable]",
+    "gap_score": "Three-tier: zero-pub penalty (95), category thresholds (Infectious/Neglected), burden-normalized intensity",
     "ros": "\u03a3 Burden_Score for diseases with \u22642 publications",
     "eas": "100 - (0.4 \u00d7 Gap_Severity + 0.3 \u00d7 Burden_Miss + 0.3 \u00d7 Capacity_Penalty)",
+    "equity_ratio": "(Pubs_HIC / DALYs_HIC) / (Pubs_LMIC / DALYs_LMIC)",
     "source": "Corpas et al. 2025, Annual Review of Biomedical Data Science"
   }
 }

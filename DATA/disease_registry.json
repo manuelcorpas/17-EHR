@@ -10,7 +10,11 @@
       "Myocardial Infarction",
       "Acute Coronary Syndrome",
       "Coronary Stenosis",
-      "Heart Failure"
+      "Heart Failure",
+      "Coronary Heart Disease",
+      "Cardiovascular Diseases",
+      "Heart Diseases",
+      "Ischemic Heart"
     ],
     "dalys_millions": 185.0,
     "deaths_millions": 9.44,
@@ -28,7 +32,8 @@
       "Intracranial Hemorrhages",
       "Brain Ischemia",
       "Cerebral Hemorrhage",
-      "Subarachnoid Hemorrhage"
+      "Subarachnoid Hemorrhage",
+      "Ischemic Attack, Transient"
     ],
     "dalys_millions": 143.0,
     "deaths_millions": 6.55,
@@ -43,7 +48,8 @@
       "Chronic Bronchitis",
       "Emphysema",
       "Bronchitis, Chronic",
-      "Pulmonary Emphysema"
+      "Pulmonary Emphysema",
+      "Lung Diseases, Obstructive"
     ],
     "dalys_millions": 81.0,
     "deaths_millions": 3.23,
@@ -56,7 +62,8 @@
     "mesh_terms": [
       "Asthma",
       "Status Asthmaticus",
-      "Bronchial Hyperreactivity"
+      "Bronchial Hyperreactivity",
+      "Asthma, Bronchial"
     ],
     "dalys_millions": 22.0,
     "deaths_millions": 0.46,
@@ -64,17 +71,26 @@
     "global_south_priority": false
   },
   "diabetes": {
-    "name": "Type 2 Diabetes",
+    "name": "Type 2 Diabetes Mellitus",
     "category": "Metabolic",
     "mesh_terms": [
-      "Diabetes Mellitus, Type 2",
       "Diabetes Mellitus",
+      "Diabetes Mellitus, Type 2",
+      "Type 2 Diabetes",
       "Diabetic Complications",
-      "Hyperglycemia",
-      "Insulin Resistance",
       "Diabetic Nephropathies",
       "Diabetic Retinopathy",
-      "Diabetic Neuropathies"
+      "Diabetic Neuropathies",
+      "Diabetic Angiopathies",
+      "Diabetic Cardiomyopathies",
+      "Diabetic Foot",
+      "Diabetic Ketoacidosis",
+      "Hyperglycemia",
+      "Insulin Resistance",
+      "Glucose Intolerance",
+      "Prediabetic State",
+      "Hemoglobin A, Glycosylated",
+      "Blood Glucose"
     ],
     "dalys_millions": 67.0,
     "deaths_millions": 1.5,
@@ -90,7 +106,8 @@
       "Plasmodium vivax",
       "Malaria, Cerebral",
       "Antimalarials",
-      "Malaria, Falciparum"
+      "Malaria, Falciparum",
+      "Plasmodium"
     ],
     "dalys_millions": 62.5,
     "deaths_millions": 0.62,
@@ -105,7 +122,8 @@
       "Tuberculosis, Pulmonary",
       "Mycobacterium tuberculosis",
       "Tuberculosis, Multidrug-Resistant",
-      "Latent Tuberculosis"
+      "Latent Tuberculosis",
+      "Antitubercular Agents"
     ],
     "dalys_millions": 38.1,
     "deaths_millions": 1.3,
@@ -121,7 +139,8 @@
       "HIV",
       "HIV-1",
       "AIDS-Related Opportunistic Infections",
-      "Anti-HIV Agents"
+      "Anti-HIV Agents",
+      "HIV Seropositivity"
     ],
     "dalys_millions": 42.0,
     "deaths_millions": 0.68,
@@ -137,7 +156,6 @@
       "Cholera",
       "Rotavirus Infections",
       "Gastroenteritis",
-      "Dehydration",
       "Shigella",
       "Cryptosporidiosis"
     ],
@@ -158,7 +176,6 @@
       "Chagas Disease",
       "Dengue",
       "Trypanosomiasis",
-      "Soil-Transmitted Helminthiasis",
       "Trachoma",
       "Leprosy",
       "Rabies"
@@ -169,7 +186,7 @@
     "global_south_priority": true
   },
   "alzheimers": {
-    "name": "Alzheimer's Disease",
+    "name": "Alzheimer's Disease and Dementia",
     "category": "Neurological",
     "mesh_terms": [
       "Alzheimer Disease",
@@ -177,7 +194,9 @@
       "Cognitive Dysfunction",
       "Tauopathies",
       "Amyloid beta-Peptides",
-      "Dementia, Vascular"
+      "Dementia, Vascular",
+      "Cognitive Impairment",
+      "Memory Disorders"
     ],
     "dalys_millions": 30.0,
     "deaths_millions": 1.62,
@@ -213,7 +232,7 @@
     "global_south_priority": false
   },
   "depression": {
-    "name": "Depression",
+    "name": "Depressive Disorders",
     "category": "Mental Health",
     "mesh_terms": [
       "Depressive Disorder",
@@ -260,8 +279,7 @@
     "category": "Mental Health",
     "mesh_terms": [
       "Schizophrenia",
-      "Psychotic Disorders",
-      "Schizophrenia Spectrum and Other Psychotic Disorders"
+      "Psychotic Disorders"
     ],
     "dalys_millions": 17.0,
     "deaths_millions": 0.0,
@@ -300,10 +318,20 @@
     "name": "Chronic Kidney Disease",
     "category": "Renal",
     "mesh_terms": [
+      "Kidney Diseases",
       "Renal Insufficiency, Chronic",
       "Kidney Failure, Chronic",
       "Diabetic Nephropathies",
-      "Glomerulonephritis"
+      "Glomerulonephritis",
+      "Polycystic Kidney Diseases",
+      "Nephritis",
+      "Renal Dialysis",
+      "Kidney Transplantation",
+      "Glomerular Filtration Rate",
+      "Proteinuria",
+      "Albuminuria",
+      "Acute Kidney Injury",
+      "Renal Insufficiency"
     ],
     "dalys_millions": 35.0,
     "deaths_millions": 1.4,
@@ -315,8 +343,8 @@
     "category": "Hepatic",
     "mesh_terms": [
       "Liver Cirrhosis",
-      "Fibrosis",
       "Fatty Liver",
+      "Liver Fibrosis",
       "Non-alcoholic Fatty Liver Disease",
       "Hepatitis, Alcoholic"
     ],
@@ -345,9 +373,13 @@
     "category": "Injuries",
     "mesh_terms": [
       "Accidents, Traffic",
+      "Automobile Driving",
       "Wounds and Injuries",
       "Craniocerebral Trauma",
-      "Spinal Cord Injuries"
+      "Spinal Cord Injuries",
+      "Brain Injuries, Traumatic",
+      "Multiple Trauma",
+      "Fractures, Bone"
     ],
     "dalys_millions": 85.5,
     "deaths_millions": 1.35,

@@ -1,6 +1,6 @@
 {
   "version": "HEIM-Biobank v1.0",
-  "generated": "2025-12-24T09:04:40.488148",
+  "generated": "2025-12-25T13:05:20.223700",
   "equityRatio": 322.22,
   "equityInterpretation": "HIC-biased",
   "summary": {
@@ -8,79 +8,471 @@
       "biobanks": 20,
       "publications": 74432,
       "publicationShare": 98.8,
-      "averageEas": 46.4
+      "averageEas": 40.9
     },
     "lmic": {
       "biobanks": 7,
       "publications": 924,
       "publicationShare": 1.2,
-      "averageEas": 12.4
+      "averageEas": 14.3
     }
   },
   "globalSouthDiseases": [
     {
-      "id": "road_traffic_injuries",
-      "name": "Road Traffic Injuries",
+      "id": "Drowning",
+      "name": "Drowning",
       "gapScore": 95.0,
       "severity": "Critical",
       "publications": 0,
-      "dalys": 85.5
+      "dalys": 15.7
     },
     {
-      "id": "malaria",
-      "name": "Malaria",
+      "id": "Iodine deficiency",
+      "name": "Iodine deficiency",
+      "gapScore": 92.0,
+      "severity": "Critical",
+      "publications": 10,
+      "dalys": 2.25
+    },
+    {
+      "id": "Cysticercosis",
+      "name": "Cysticercosis",
+      "gapScore": 80.0,
+      "severity": "Critical",
+      "publications": 2,
+      "dalys": 1.24
+    },
+    {
+      "id": "Scabies",
+      "name": "Scabies",
+      "gapScore": 80.0,
+      "severity": "Critical",
+      "publications": 6,
+      "dalys": 5.32
+    },
+    {
+      "id": "Tetanus",
+      "name": "Tetanus",
+      "gapScore": 70.0,
+      "severity": "High",
+      "publications": 5,
+      "dalys": 1.34
+    },
+    {
+      "id": "Pertussis",
+      "name": "Pertussis",
+      "gapScore": 70.0,
+      "severity": "High",
+      "publications": 18,
+      "dalys": 4.61
+    },
+    {
+      "id": "Road injuries",
+      "name": "Road injuries",
+      "gapScore": 70.0,
+      "severity": "High",
+      "publications": 108,
+      "dalys": 65.14
+    },
+    {
+      "id": "Animal contact",
+      "name": "Animal contact",
+      "gapScore": 70.0,
+      "severity": "High",
+      "publications": 12,
+      "dalys": 4.89
+    },
+    {
+      "id": "Vitamin A deficiency",
+      "name": "Vitamin A deficiency",
+      "gapScore": 65.0,
+      "severity": "High",
+      "publications": 67,
+      "dalys": 1.1
+    },
+    {
+      "id": "Upper respiratory infections",
+      "name": "Upper respiratory infections",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 160,
-      "dalys": 62.5
+      "publications": 87,
+      "dalys": 5.68
     },
     {
-      "id": "tuberculosis",
+      "id": "Otitis media",
+      "name": "Otitis media",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 93,
+      "dalys": 2.48
+    },
+    {
+      "id": "Tuberculosis",
       "name": "Tuberculosis",
       "gapScore": 60.0,
       "severity": "High",
       "publications": 170,
-      "dalys": 38.1
+      "dalys": 46.98
     },
     {
-      "id": "diarrheal_diseases",
-      "name": "Diarrheal Diseases",
+      "id": "Diarrheal diseases",
+      "name": "Diarrheal diseases",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 220,
-      "dalys": 44.2
+      "publications": 251,
+      "dalys": 58.98
     },
     {
-      "id": "hiv_aids",
+      "id": "Typhoid and paratyphoid",
+      "name": "Typhoid and paratyphoid",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 65,
+      "dalys": 8.1
+    },
+    {
+      "id": "Malaria",
+      "name": "Malaria",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 173,
+      "dalys": 55.17
+    },
+    {
+      "id": "Lymphatic filariasis",
+      "name": "Lymphatic filariasis",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 8,
+      "dalys": 1.31
+    },
+    {
+      "id": "Measles",
+      "name": "Measles",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 25,
+      "dalys": 4.88
+    },
+    {
+      "id": "Lower respiratory infections",
+      "name": "Lower respiratory infections",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 723,
+      "dalys": 82.53
+    },
+    {
+      "id": "COVID-19",
+      "name": "COVID-19",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 1983,
+      "dalys": 212.01
+    },
+    {
+      "id": "Dengue",
+      "name": "Dengue",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 47,
+      "dalys": 2.08
+    },
+    {
+      "id": "Schistosomiasis",
+      "name": "Schistosomiasis",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 27,
+      "dalys": 1.75
+    },
+    {
+      "id": "Diphtheria",
+      "name": "Diphtheria",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 6,
+      "dalys": 0.32
+    },
+    {
+      "id": "Protein-energy malnutrition",
+      "name": "Protein-energy malnutrition",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 118,
+      "dalys": 11.83
+    },
+    {
+      "id": "Dietary iron deficiency",
+      "name": "Dietary iron deficiency",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 174,
+      "dalys": 32.32
+    },
+    {
+      "id": "Hemoglobinopathies and hemolytic anemias",
+      "name": "Hemoglobinopathies and hemolytic anemias",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 80,
+      "dalys": 11.92
+    },
+    {
+      "id": "Fire, heat, and hot substances",
+      "name": "Fire, heat, and hot substances",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 60,
+      "dalys": 8.47
+    },
+    {
+      "id": "Conflict and terrorism",
+      "name": "Conflict and terrorism",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 51,
+      "dalys": 8.73
+    },
+    {
+      "id": "HIV/AIDS",
       "name": "HIV/AIDS",
       "gapScore": 40.0,
       "severity": "Moderate",
-      "publications": 645,
-      "dalys": 42.0
+      "publications": 684,
+      "dalys": 40.27
     },
     {
-      "id": "ntds",
-      "name": "Neglected Tropical Diseases",
+      "id": "Onchocerciasis",
+      "name": "Onchocerciasis",
       "gapScore": 40.0,
       "severity": "Moderate",
-      "publications": 408,
-      "dalys": 28.3
+      "publications": 39,
+      "dalys": 1.26
     },
     {
-      "id": "neonatal_disorders",
-      "name": "Neonatal Disorders",
+      "id": "Cystic echinococcosis",
+      "name": "Cystic echinococcosis",
       "gapScore": 40.0,
       "severity": "Moderate",
-      "publications": 1365,
-      "dalys": 75.0
+      "publications": 4,
+      "dalys": 0.11
     },
     {
-      "id": "preterm_birth",
-      "name": "Preterm Birth Complications",
+      "id": "Encephalitis",
+      "name": "Encephalitis",
+      "gapScore": 40.0,
+      "severity": "Moderate",
+      "publications": 55,
+      "dalys": 4.95
+    },
+    {
+      "id": "Neonatal disorders",
+      "name": "Neonatal disorders",
+      "gapScore": 40.0,
+      "severity": "Moderate",
+      "publications": 1917,
+      "dalys": 186.37
+    },
+    {
+      "id": "Rheumatic heart disease",
+      "name": "Rheumatic heart disease",
+      "gapScore": 40.0,
+      "severity": "Moderate",
+      "publications": 263,
+      "dalys": 13.43
+    },
+    {
+      "id": "Sexually transmitted infections excluding HIV",
+      "name": "Sexually transmitted infections excluding HIV",
       "gapScore": 30.0,
       "severity": "Low",
-      "publications": 1053,
-      "dalys": 23.0
+      "publications": 243,
+      "dalys": 7.95
+    },
+    {
+      "id": "Invasive Non-typhoidal Salmonella (iNTS)",
+      "name": "Invasive Non-typhoidal Salmonella (iNTS)",
+      "gapScore": 30.0,
+      "severity": "Low",
+      "publications": 163,
+      "dalys": 4.74
+    },
+    {
+      "id": "Other neglected tropical diseases",
+      "name": "Other neglected tropical diseases",
+      "gapScore": 30.0,
+      "severity": "Low",
+      "publications": 109,
+      "dalys": 4.22
+    },
+    {
+      "id": "Meningitis",
+      "name": "Meningitis",
+      "gapScore": 30.0,
+      "severity": "Low",
+      "publications": 459,
+      "dalys": 14.51
+    },
+    {
+      "id": "Yellow fever",
+      "name": "Yellow fever",
+      "gapScore": 20.0,
+      "severity": "Low",
+      "publications": 35,
+      "dalys": 0.32
+    },
+    {
+      "id": "Intestinal nematode infections",
+      "name": "Intestinal nematode infections",
+      "gapScore": 20.0,
+      "severity": "Low",
+      "publications": 95,
+      "dalys": 1.38
+    },
+    {
+      "id": "Leishmaniasis",
+      "name": "Leishmaniasis",
+      "gapScore": 20.0,
+      "severity": "Low",
+      "publications": 67,
+      "dalys": 0.78
+    },
+    {
+      "id": "Trachoma",
+      "name": "Trachoma",
+      "gapScore": 20.0,
+      "severity": "Low",
+      "publications": 16,
+      "dalys": 0.12
+    },
+    {
+      "id": "Leprosy",
+      "name": "Leprosy",
+      "gapScore": 20.0,
+      "severity": "Low",
+      "publications": 26,
+      "dalys": 0.02
+    },
+    {
+      "id": "Guinea worm disease",
+      "name": "Guinea worm disease",
+      "gapScore": 20.0,
+      "severity": "Low",
+      "publications": 3,
+      "dalys": 0.0
+    },
+    {
+      "id": "Acute hepatitis",
+      "name": "Acute hepatitis",
+      "gapScore": 20.0,
+      "severity": "Low",
+      "publications": 235,
+      "dalys": 4.23
+    },
+    {
+      "id": "Exposure to forces of nature",
+      "name": "Exposure to forces of nature",
+      "gapScore": 20.0,
+      "severity": "Low",
+      "publications": 81,
+      "dalys": 1.09
+    },
+    {
+      "id": "Other intestinal infectious diseases",
+      "name": "Other intestinal infectious diseases",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 258,
+      "dalys": 0.11
+    },
+    {
+      "id": "Rabies",
+      "name": "Rabies",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 79,
+      "dalys": 0.57
+    },
+    {
+      "id": "Chagas disease",
+      "name": "Chagas disease",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 104,
+      "dalys": 0.24
+    },
+    {
+      "id": "African trypanosomiasis",
+      "name": "African trypanosomiasis",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 685,
+      "dalys": 0.06
+    },
+    {
+      "id": "Food-borne trematodiases",
+      "name": "Food-borne trematodiases",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 395,
+      "dalys": 1.0
+    },
+    {
+      "id": "Ebola",
+      "name": "Ebola",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 61,
+      "dalys": 0.0
+    },
+    {
+      "id": "Zika virus",
+      "name": "Zika virus",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 53,
+      "dalys": 0.0
+    },
+    {
+      "id": "Maternal disorders",
+      "name": "Maternal disorders",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 2099,
+      "dalys": 12.31
+    },
+    {
+      "id": "Other nutritional deficiencies",
+      "name": "Other nutritional deficiencies",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 451,
+      "dalys": 1.43
+    },
+    {
+      "id": "Cervical cancer",
+      "name": "Cervical cancer",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 1710,
+      "dalys": 9.91
+    },
+    {
+      "id": "Interpersonal violence",
+      "name": "Interpersonal violence",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 2787,
+      "dalys": 26.83
+    },
+    {
+      "id": "Police conflict and executions",
+      "name": "Police conflict and executions",
+      "gapScore": 10.0,
+      "severity": "Low",
+      "publications": 136,
+      "dalys": 1.01
     }
   ],
   "byRegion": [
@@ -90,7 +482,7 @@
       "incomeCategory": "Mixed",
       "biobanks": 9,
       "publications": 49264,
-      "averageEas": 35.0
+      "averageEas": 34.0
     },
     {
       "region": "EUR",
@@ -98,7 +490,7 @@
       "incomeCategory": "HIC",
       "biobanks": 11,
       "publications": 24445,
-      "averageEas": 48.5
+      "averageEas": 41.0
     },
     {
       "region": "WPR",
@@ -106,7 +498,7 @@
       "incomeCategory": "HIC",
       "biobanks": 3,
       "publications": 1269,
-      "averageEas": 41.9
+      "averageEas": 38.1
     },
     {
       "region": "AFR",
@@ -114,7 +506,7 @@
       "incomeCategory": "LMIC",
       "biobanks": 3,
       "publications": 204,
-      "averageEas": 8.6
+      "averageEas": 10.2
     },
     {
       "region": "EMR",
@@ -122,7 +514,7 @@
       "incomeCategory": "LMIC",
       "biobanks": 1,
       "publications": 174,
-      "averageEas": 15.2
+      "averageEas": 17.4
     }
   ],
   "hicBiobanks": [
@@ -131,140 +523,140 @@
       "name": "eMERGE Network",
       "country": "United States",
       "publications": 47755,
-      "eas": 90.7
+      "eas": 98.3
     },
     {
       "id": "uk_biobank",
       "name": "UK Biobank",
       "country": "United Kingdom",
       "publications": 13341,
-      "eas": 87.6
+      "eas": 84.9
     },
     {
       "id": "decode",
       "name": "deCODE Genetics",
       "country": "Iceland",
       "publications": 5604,
-      "eas": 88.3
+      "eas": 69.4
     },
     {
       "id": "finngen",
       "name": "FinnGen",
       "country": "Finland",
       "publications": 2683,
-      "eas": 83.4
+      "eas": 60.3
     },
     {
       "id": "hunt",
       "name": "HUNT Study",
       "country": "Norway",
       "publications": 1152,
-      "eas": 59.3
+      "eas": 48.2
     },
     {
       "id": "lifelines",
       "name": "LifeLines",
       "country": "Netherlands",
       "publications": 730,
-      "eas": 53.3
+      "eas": 46.4
     },
     {
       "id": "all_of_us",
       "name": "All of Us Research Program",
       "country": "United States",
       "publications": 613,
-      "eas": 46.9
+      "eas": 42.0
     },
     {
       "id": "taiwan_biobank",
       "name": "Taiwan Biobank",
       "country": "Taiwan",
       "publications": 482,
-      "eas": 42.6
+      "eas": 35.3
     },
     {
       "id": "mvp",
       "name": "Million Veteran Program",
       "country": "United States",
       "publications": 327,
-      "eas": 42.2
+      "eas": 38.9
     },
     {
       "id": "swedish_twin",
       "name": "Swedish Twin Registry",
       "country": "Sweden",
       "publications": 289,
-      "eas": 47.0
+      "eas": 37.4
     },
     {
       "id": "biobank_japan",
       "name": "BioBank Japan",
       "country": "Japan",
       "publications": 271,
-      "eas": 42.0
+      "eas": 40.2
     },
     {
       "id": "constances",
       "name": "CONSTANCES",
       "country": "France",
       "publications": 222,
-      "eas": 43.0
+      "eas": 34.3
     },
     {
       "id": "topmed",
       "name": "TOPMed",
       "country": "United States",
       "publications": 196,
-      "eas": 31.2
+      "eas": 24.0
     },
     {
       "id": "generation_scotland",
       "name": "Generation Scotland",
       "country": "United Kingdom",
       "publications": 161,
-      "eas": 29.3
+      "eas": 23.4
     },
     {
       "id": "biovu",
       "name": "BioVU",
       "country": "United States",
       "publications": 155,
-      "eas": 35.4
+      "eas": 36.7
     },
     {
       "id": "nako",
       "name": "German National Cohort (NAKO)",
       "country": "Germany",
       "publications": 138,
-      "eas": 19.5
+      "eas": 21.2
     },
     {
       "id": "estonian_biobank",
       "name": "Estonian Biobank",
       "country": "Estonia",
       "publications": 116,
-      "eas": 20.8
+      "eas": 18.6
     },
     {
       "id": "geisinger_mycode",
       "name": "Geisinger MyCode",
       "country": "United States",
       "publications": 96,
-      "eas": 29.2
+      "eas": 28.6
     },
     {
       "id": "mgb_biobank",
       "name": "Mass General Brigham Biobank",
       "country": "United States",
       "publications": 92,
-      "eas": 33.9
+      "eas": 24.0
     },
     {
       "id": "danish_national",
       "name": "Danish National Biobank",
       "country": "Denmark",
       "publications": 9,
-      "eas": 2.5
+      "eas": 6.5
     }
   ],
   "lmicBiobanks": [
@@ -273,49 +665,49 @@
       "name": "China Kadoorie Biobank",
       "country": "China",
       "publications": 516,
-      "eas": 41.0
+      "eas": 38.7
     },
     {
       "id": "qatar_biobank",
       "name": "Qatar Biobank",
       "country": "Qatar",
       "publications": 174,
-      "eas": 15.2
+      "eas": 17.4
     },
     {
       "id": "h3africa",
       "name": "H3Africa",
       "country": "Pan-African",
       "publications": 139,
-      "eas": 16.3
+      "eas": 16.8
     },
     {
       "id": "awigen",
       "name": "AWI-Gen",
       "country": "Pan-African",
       "publications": 60,
-      "eas": 9.3
+      "eas": 11.0
     },
     {
       "id": "mexico_city",
       "name": "Mexico City Prospective Study",
       "country": "Mexico",
       "publications": 29,
-      "eas": 5.1
+      "eas": 13.2
     },
     {
       "id": "uganda_genome",
       "name": "Uganda Genome Resource",
       "country": "Uganda",
       "publications": 5,
-      "eas": 0.1
+      "eas": 2.7
     },
     {
       "id": "epigen_brazil",
       "name": "EPIGEN-Brazil",
       "country": "Brazil",
       "publications": 1,
-      "eas": 0.0
+      "eas": 0.2
     }
   ]
 }
