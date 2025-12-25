@@ -1,4 +1,4 @@
-// HEIM-Biobank v1.0 Dashboard Application - FIXED VERSION
+// HEIM-Biobank v1.0 Dashboard Application
 
 // Global data store
 let DATA = {
@@ -37,13 +37,16 @@ function setupTabs() {
     
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
+            // Update active button
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             
+            // Update active content
             const tabId = btn.dataset.tab;
             document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
             
+            // Render tab-specific content
             renderTab(tabId);
         });
     });
@@ -68,16 +71,15 @@ async function loadAllData() {
     
     const promises = files.map(async (file) => {
         try {
-            const url = `data/${file}.json`;
-            const response = await fetch(url);
+            const response = await fetch(`data/${file}.json`);
             if (response.ok) {
                 DATA[file] = await response.json();
-                console.log(`✓ Loaded ${file}.json`);
+                console.log(`Loaded ${file}.json`);
             } else {
-                console.error(`✗ Failed: ${file}.json (${response.status})`);
+                console.warn(`Failed to load ${file}.json`);
             }
         } catch (err) {
-            console.error(`✗ Error: ${file}.json`, err);
+            console.warn(`Error loading ${file}.json:`, err);
         }
     });
     
@@ -90,14 +92,17 @@ function renderOverview() {
     
     const s = DATA.summary;
     
-    const el = (id) => document.getElementById(id);
-    if (el('stat-biobanks')) el('stat-biobanks').textContent = s.overview?.totalBiobanks || '--';
-    if (el('stat-publications')) el('stat-publications').textContent = formatNumber(s.overview?.totalPublications);
-    if (el('stat-countries')) el('stat-countries').textContent = s.overview?.totalCountries || '--';
-    if (el('stat-critical')) el('stat-critical').textContent = s.gapDistribution?.Critical || '--';
+    // Update summary stats
+    document.getElementById('stat-biobanks').textContent = s.overview?.totalBiobanks || '--';
+    document.getElementById('stat-publications').textContent = formatNumber(s.overview?.totalPublications);
+    document.getElementById('stat-countries').textContent = s.overview?.totalCountries || '--';
+    document.getElementById('stat-critical').textContent = s.gapDistribution?.Critical || '--';
     
+    // Render charts
     renderEASDistributionChart();
     renderCriticalGapsChart();
+    
+    // Render top biobanks table
     renderTopBiobanksTable();
 }
 
@@ -110,7 +115,7 @@ function renderTopBiobanksTable() {
             <td>${i + 1}</td>
             <td>${b.name}</td>
             <td>${b.eas?.toFixed(1) || '--'}</td>
-            <td><span class="badge badge-${(b.category || '').toLowerCase()}">${b.category || '--'}</span></td>
+            <td><span class="badge badge-${b.category?.toLowerCase().replace(' ', '-')}">${b.category}</span></td>
             <td>${formatNumber(b.publications)}</td>
         </tr>
     `).join('');
@@ -127,27 +132,25 @@ function renderBiobanks() {
     
     tbody.innerHTML = biobanks.map(b => `
         <tr>
-            <td>${b.name || '--'}</td>
-            <td>${b.country || '--'}</td>
-            <td>${b.regionName || '--'}</td>
+            <td>${b.name}</td>
+            <td>${b.country}</td>
+            <td>${b.regionName}</td>
             <td>${b.scores?.equityAlignment?.toFixed(1) || '--'}</td>
             <td><span class="badge badge-${getCategoryClass(b.scores?.equityCategory)}">${b.scores?.equityCategory || '--'}</span></td>
             <td>${formatNumber(b.stats?.totalPublications)}</td>
             <td>${b.stats?.diseasesCovered || '--'}/25</td>
-            <td>${b.stats?.criticalGaps ?? '--'}</td>
+            <td>${b.stats?.criticalGaps || '--'}</td>
         </tr>
     `).join('');
 }
 
 function filterBiobanks(biobanks) {
-    if (!Array.isArray(biobanks)) return [];
-    
-    const search = document.getElementById('biobank-search')?.value?.toLowerCase() || '';
+    const search = document.getElementById('biobank-search')?.value.toLowerCase() || '';
     const region = document.getElementById('biobank-region-filter')?.value || '';
     const category = document.getElementById('biobank-category-filter')?.value || '';
     
     return biobanks.filter(b => {
-        if (search && !b.name?.toLowerCase().includes(search)) return false;
+        if (search && !b.name.toLowerCase().includes(search)) return false;
         if (region && b.region !== region) return false;
         if (category && b.scores?.equityCategory !== category) return false;
         return true;
@@ -165,28 +168,27 @@ function renderDiseases() {
     
     tbody.innerHTML = diseases.map(d => `
         <tr>
-            <td>${d.name || '--'}</td>
-            <td>${d.category || '--'}</td>
+            <td>${d.name}</td>
+            <td>${d.category}</td>
             <td>${d.burden?.dalysMillions?.toFixed(1) || '--'}</td>
             <td>${formatNumber(d.research?.globalPublications)}</td>
             <td>${d.gap?.score?.toFixed(0) || '--'}</td>
-            <td><span class="badge badge-${(d.gap?.severity || '').toLowerCase()}">${d.gap?.severity || '--'}</span></td>
-            <td>${d.research?.biobanksEngaged ?? '--'}</td>
+            <td><span class="badge badge-${d.gap?.severity?.toLowerCase()}">${d.gap?.severity || '--'}</span></td>
+            <td>${d.research?.biobanksEngaged || '--'}</td>
         </tr>
     `).join('');
     
+    // Render burden chart
     renderDiseaseBurdenChart();
 }
 
 function filterDiseases(diseases) {
-    if (!Array.isArray(diseases)) return [];
-    
-    const search = document.getElementById('disease-search')?.value?.toLowerCase() || '';
+    const search = document.getElementById('disease-search')?.value.toLowerCase() || '';
     const category = document.getElementById('disease-category-filter')?.value || '';
     const severity = document.getElementById('disease-severity-filter')?.value || '';
     
     return diseases.filter(d => {
-        if (search && !d.name?.toLowerCase().includes(search)) return false;
+        if (search && !d.name.toLowerCase().includes(search)) return false;
         if (category && d.category !== category) return false;
         if (severity && d.gap?.severity !== severity) return false;
         return true;
@@ -201,29 +203,24 @@ function renderMatrix() {
     if (!container) return;
     
     const m = DATA.matrix;
-    if (!m.biobanks || !m.diseases || !m.matrix?.values) {
-        container.innerHTML = '<p>Matrix data not available</p>';
-        return;
-    }
     
+    // Build matrix table
     let html = '<table class="matrix-table">';
     
-    // Header
+    // Header row
     html += '<tr><th></th>';
     m.diseases.forEach(d => {
-        html += `<th title="${d.name}">${(d.name || '').substring(0, 8)}</th>`;
+        html += `<th title="${d.name}">${d.name.substring(0, 8)}</th>`;
     });
     html += '</tr>';
     
-    // Rows
+    // Data rows
     m.biobanks.forEach((b, bi) => {
-        html += `<tr><td title="${b.name}">${(b.name || '').substring(0, 15)}</td>`;
-        if (m.matrix.values[bi]) {
-            m.matrix.values[bi].forEach((val, di) => {
-                const cat = m.matrix.gapCategories?.[bi]?.[di] || 'none';
-                html += `<td class="matrix-cell-${cat}" title="${b.name} / ${m.diseases[di]?.name}: ${val}">${val}</td>`;
-            });
-        }
+        html += `<tr><td title="${b.name}">${b.name.substring(0, 15)}</td>`;
+        m.matrix.values[bi].forEach((val, di) => {
+            const cat = m.matrix.gapCategories[bi][di];
+            html += `<td class="matrix-cell-${cat}" title="${b.name} / ${m.diseases[di].name}: ${val} pubs">${val}</td>`;
+        });
         html += '</tr>';
     });
     
@@ -244,13 +241,16 @@ function populateTrendsBiobankSelect() {
     if (!select || !DATA.trends?.byBiobank) return;
     
     const options = Object.entries(DATA.trends.byBiobank).map(([id, data]) => 
-        `<option value="${id}">${data.name || id}</option>`
+        `<option value="${id}">${data.name}</option>`
     );
     
     select.innerHTML = '<option value="">Select biobank...</option>' + options.join('');
     
     select.addEventListener('change', () => {
-        if (select.value) renderBiobankTrendsChart(select.value);
+        const biobank = select.value;
+        if (biobank) {
+            renderBiobankTrendsChart(biobank);
+        }
     });
 }
 
@@ -265,33 +265,13 @@ function renderThemes() {
 
 function renderThemesTable() {
     const tbody = document.querySelector('#table-themes tbody');
-    if (!tbody || !DATA.themes?.theme_definitions) return;
+    if (!tbody || !DATA.themes?.themes) return;
     
-    const themeDefs = DATA.themes.theme_definitions;
-    const biobankThemes = DATA.themes.biobank_themes || {};
-    
-    // Aggregate themes
-    const agg = {};
-    for (const [id, def] of Object.entries(themeDefs)) {
-        agg[id] = { name: def.name, category: def.category, publications: 0, biobanks: 0 };
-    }
-    
-    for (const themes of Object.values(biobankThemes)) {
-        for (const [id, data] of Object.entries(themes)) {
-            if (agg[id]) {
-                agg[id].publications += data.count || 0;
-                agg[id].biobanks += 1;
-            }
-        }
-    }
-    
-    const arr = Object.values(agg).sort((a, b) => b.publications - a.publications);
-    
-    tbody.innerHTML = arr.map(t => `
+    tbody.innerHTML = DATA.themes.themes.map(t => `
         <tr>
-            <td>${t.name || '--'}</td>
+            <td>${t.name}</td>
             <td>${formatNumber(t.publications)}</td>
-            <td>${t.biobanks || '--'}</td>
+            <td>${t.diseaseCount || '--'}</td>
         </tr>
     `).join('');
 }
@@ -333,18 +313,27 @@ function renderCompareCard(biobankId, cardNum) {
     const biobank = DATA.comparison?.biobanks?.find(b => b.id === biobankId);
     if (!biobank) return;
     
-    const nameEl = document.getElementById(`compare-name${cardNum}`);
-    const statsDiv = document.getElementById(`compare-stats${cardNum}`);
+    document.getElementById(`compare-name${cardNum}`).textContent = biobank.name;
     
-    if (nameEl) nameEl.textContent = biobank.name;
-    if (statsDiv) {
-        statsDiv.innerHTML = `
-            <div class="stat-item"><div class="stat-label">Publications</div><div class="stat-value">${formatNumber(biobank.stats?.publications)}</div></div>
-            <div class="stat-item"><div class="stat-label">Diseases</div><div class="stat-value">${biobank.stats?.diseases || '--'}/25</div></div>
-            <div class="stat-item"><div class="stat-label">EAS</div><div class="stat-value">${biobank.stats?.eas?.toFixed(1) || '--'}</div></div>
-            <div class="stat-item"><div class="stat-label">ROS</div><div class="stat-value">${biobank.stats?.ros?.toFixed(0) || '--'}</div></div>
-        `;
-    }
+    const statsDiv = document.getElementById(`compare-stats${cardNum}`);
+    statsDiv.innerHTML = `
+        <div class="stat-item">
+            <div class="stat-label">Publications</div>
+            <div class="stat-value">${formatNumber(biobank.stats?.publications)}</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">Diseases</div>
+            <div class="stat-value">${biobank.stats?.diseases}/25</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">EAS</div>
+            <div class="stat-value">${biobank.stats?.eas?.toFixed(1)}</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-label">ROS</div>
+            <div class="stat-value">${biobank.stats?.ros?.toFixed(0)}</div>
+        </div>
+    `;
 }
 
 function renderSimilarPairsTable() {
@@ -358,7 +347,7 @@ function renderSimilarPairsTable() {
         <tr>
             <td>${getName(p.biobank1)}</td>
             <td>${getName(p.biobank2)}</td>
-            <td>${p.similarity?.toFixed(1) || '--'}%</td>
+            <td>${p.similarity?.toFixed(1)}%</td>
         </tr>
     `).join('');
 }
@@ -368,17 +357,20 @@ function renderEquity() {
     if (!DATA.equity) return;
     
     const e = DATA.equity;
-    const el = (id) => document.getElementById(id);
     
-    if (el('equity-ratio')) el('equity-ratio').textContent = e.equityRatio?.toFixed(2) || '--';
-    if (el('equity-interpretation')) el('equity-interpretation').textContent = e.equityInterpretation || '--';
-    if (el('hic-biobanks')) el('hic-biobanks').textContent = e.summary?.hic?.biobanks || '--';
-    if (el('hic-pubs')) el('hic-pubs').textContent = formatNumber(e.summary?.hic?.publications) + ' publications';
-    if (el('lmic-biobanks')) el('lmic-biobanks').textContent = e.summary?.lmic?.biobanks || '--';
-    if (el('lmic-pubs')) el('lmic-pubs').textContent = formatNumber(e.summary?.lmic?.publications) + ' publications';
+    // Update summary
+    document.getElementById('equity-ratio').textContent = e.equityRatio?.toFixed(2) || '--';
+    document.getElementById('equity-interpretation').textContent = e.equityInterpretation || '--';
+    document.getElementById('hic-biobanks').textContent = e.summary?.hic?.biobanks || '--';
+    document.getElementById('hic-pubs').textContent = formatNumber(e.summary?.hic?.publications) + ' publications';
+    document.getElementById('lmic-biobanks').textContent = e.summary?.lmic?.biobanks || '--';
+    document.getElementById('lmic-pubs').textContent = formatNumber(e.summary?.lmic?.publications) + ' publications';
     
+    // Render charts
     renderEquityShareChart();
     renderEquityRegionChart();
+    
+    // Render GS diseases table
     renderGSDiseasesTable();
 }
 
@@ -388,21 +380,23 @@ function renderGSDiseasesTable() {
     
     tbody.innerHTML = DATA.equity.globalSouthDiseases.map(d => `
         <tr>
-            <td>${d.name || '--'}</td>
+            <td>${d.name}</td>
             <td>${d.dalys?.toFixed(1) || '--'}</td>
             <td>${formatNumber(d.publications)}</td>
             <td>${d.gapScore?.toFixed(0) || '--'}</td>
-            <td><span class="badge badge-${(d.severity || '').toLowerCase()}">${d.severity || '--'}</span></td>
+            <td><span class="badge badge-${d.severity?.toLowerCase()}">${d.severity || '--'}</span></td>
         </tr>
     `).join('');
 }
 
 // Filters Setup
 function setupFilters() {
+    // Biobank filters
     document.getElementById('biobank-search')?.addEventListener('input', renderBiobanks);
     document.getElementById('biobank-region-filter')?.addEventListener('change', renderBiobanks);
     document.getElementById('biobank-category-filter')?.addEventListener('change', renderBiobanks);
     
+    // Disease filters
     document.getElementById('disease-search')?.addEventListener('input', renderDiseases);
     document.getElementById('disease-category-filter')?.addEventListener('change', renderDiseases);
     document.getElementById('disease-severity-filter')?.addEventListener('change', renderDiseases);
@@ -430,7 +424,9 @@ function downloadBiobanksCSV() {
     
     const headers = ['Name', 'Country', 'Region', 'EAS', 'Category', 'Publications', 'Diseases', 'Critical Gaps'];
     const rows = DATA.biobanks.biobanks.map(b => [
-        b.name, b.country, b.region,
+        b.name,
+        b.country,
+        b.region,
         b.scores?.equityAlignment?.toFixed(1),
         b.scores?.equityCategory,
         b.stats?.totalPublications,
@@ -442,8 +438,10 @@ function downloadBiobanksCSV() {
     csv += rows.map(r => r.map(v => `"${v || ''}"`).join(',')).join('\n');
     
     const blob = new Blob([csv], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
+    a.href = url;
     a.download = 'heim-biobank-data.csv';
     a.click();
+    URL.revokeObjectURL(url);
 }

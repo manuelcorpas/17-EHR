@@ -1,0 +1,19 @@
+.
+├── css
+│   └── style.css
+├── data
+│   ├── biobanks.json
+│   ├── comparison.json
+│   ├── diseases.json
+│   ├── equity.json
+│   ├── matrix.json
+│   ├── summary.json
+│   ├── themes.json
+│   └── trends.json
+├── index.html
+├── js
+│   ├── app.js
+│   └── charts.js
+└── tree.txt
+
+4 directories, 13 files
