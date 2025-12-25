@@ -515,27 +515,104 @@ def generate_themes_json(themes_data: Optional[Dict], metrics: Dict) -> Dict:
     """
     Generate themes.json - MeSH theme analysis.
     Used by: Themes tab
+    
+    Dashboard expects:
+    {
+        "themes": [{"id": ..., "name": ..., "publications": ..., "diseaseCount": ...}],
+        "byBiobank": {...}
+    }
+    
+    02-02 produces:
+    {
+        "theme_definitions": {...},
+        "biobank_themes": {...},
+        "knowledge_metrics": {...}
+    }
+    
+    This function transforms 02-02 format OR generates from disease categories.
     """
     logger.info("Generating themes.json...")
     
     biobanks = metrics.get('biobanks', {})
+    diseases = metrics.get('diseases', {})
     
-    # If we have themes data from analysis
-    if themes_data:
+    # Transform themes data from 02-02 format if available
+    if themes_data and 'theme_definitions' in themes_data:
+        logger.info("  Transforming 02-02 theme analysis format...")
+        
+        # Get theme definitions from 02-02
+        theme_defs = themes_data.get('theme_definitions', {})
+        biobank_themes = themes_data.get('biobank_themes', {})
+        knowledge_metrics = themes_data.get('knowledge_metrics', {})
+        
+        # Aggregate theme publications across all biobanks
+        # 02-02 structure: biobank_themes[biobank_id][theme_id] = {'name': ..., 'count': N, 'percentage': X}
+        theme_pubs_total = defaultdict(int)
+        theme_biobank_count = defaultdict(set)
+        
+        for biobank_id, themes_dict in biobank_themes.items():
+            # themes_dict is like: {'genomics_gwas': {'name': '...', 'count': 123, 'percentage': 45.2}, ...}
+            for theme_id, theme_info in themes_dict.items():
+                if isinstance(theme_info, dict):
+                    count = theme_info.get('count', 0)
+                    theme_pubs_total[theme_id] += count
+                    if count > 0:
+                        theme_biobank_count[theme_id].add(biobank_id)
+        
+        # Build themes array in dashboard format
+        themes = []
+        for theme_id, theme_info in theme_defs.items():
+            themes.append({
+                'id': theme_id,
+                'name': theme_info.get('name', theme_id),
+                'category': theme_info.get('category', 'unknown'),
+                'publications': theme_pubs_total.get(theme_id, 0),
+                'diseaseCount': len(theme_biobank_count.get(theme_id, set()))  # Number of biobanks covering this theme
+            })
+        
+        # Sort by publications
+        themes.sort(key=lambda x: x['publications'], reverse=True)
+        
+        # Build byBiobank coverage
+        biobank_theme_coverage = {}
+        for biobank_id, themes_dict in biobank_themes.items():
+            biobank_name = biobank_id
+            if biobank_id in knowledge_metrics:
+                biobank_name = knowledge_metrics[biobank_id].get('biobank_name', biobank_id)
+            
+            # Extract theme counts
+            theme_pubs = {}
+            for theme_id, theme_info in themes_dict.items():
+                if isinstance(theme_info, dict):
+                    theme_pubs[theme_id] = theme_info.get('count', 0)
+            
+            biobank_theme_coverage[biobank_id] = {
+                'name': biobank_name,
+                'themes': theme_pubs
+            }
+        
         return {
             'version': VERSION,
             'generated': datetime.now().isoformat(),
-            'source': 'bhem_themes.json',
-            **themes_data
+            'source': 'bhem_themes.json (transformed)',
+            'themes': themes,
+            'byBiobank': biobank_theme_coverage,
+            'raw': {
+                'theme_definitions': theme_defs,
+                'total_biobanks': len(biobank_themes)
+            }
         }
     
-    # Generate placeholder themes from disease categories
-    diseases = metrics.get('diseases', {})
+    # FALLBACK: Generate themes from disease categories
+    logger.info("  Generating themes from disease categories...")
     
     category_counts = defaultdict(int)
+    category_diseases = defaultdict(int)
+    
     for did, ddata in diseases.items():
         cat = ddata.get('category', 'Other')
         category_counts[cat] += ddata.get('publications', 0)
+        category_diseases[cat] += 1
     
     themes = []
     for cat, count in sorted(category_counts.items(), key=lambda x: x[1], reverse=True):
@@ -543,7 +620,7 @@ def generate_themes_json(themes_data: Optional[Dict], metrics: Dict) -> Dict:
             'id': cat.lower().replace(' ', '_').replace('/', '_'),
             'name': cat,
             'publications': count,
-            'diseaseCount': sum(1 for d in diseases.values() if d.get('category') == cat)
+            'diseaseCount': category_diseases[cat]
         })
     
     # Theme coverage by biobank
@@ -565,7 +642,7 @@ def generate_themes_json(themes_data: Optional[Dict], metrics: Dict) -> Dict:
     return {
         'version': VERSION,
         'generated': datetime.now().isoformat(),
-        'source': 'generated',
+        'source': 'generated_from_disease_categories',
         'themes': themes,
         'byBiobank': biobank_theme_coverage
     }
