@@ -1,59 +1,119 @@
 {
-  "version": "HEIM-Biobank v1.0",
-  "versionDate": "2025-12-24",
-  "generated": "2025-12-25T13:48:29.695884",
+  "version": "HEIM-Biobank v2.0 (IHCC)",
+  "versionDate": "2026-01-07",
+  "generated": "2026-01-07T08:37:08.390423",
   "overview": {
-    "totalBiobanks": 27,
-    "totalPublications": 75356,
+    "totalBiobanks": 273,
+    "totalPublications": 36416,
     "totalDiseases": 179,
-    "totalCountries": 19,
-    "equityRatio": 322.22
+    "totalCountries": 31,
+    "equityRatio": 55.07
   },
   "gapDistribution": {
-    "Moderate": 48,
-    "Low": 108,
-    "High": 17,
-    "Critical": 6
+    "High": 26,
+    "Moderate": 46,
+    "Critical": 23,
+    "Low": 84
   },
   "easDistribution": {
-    "Strong": 2,
-    "Poor": 19,
-    "Moderate": 2,
-    "Weak": 4
+    "Poor": 263,
+    "Weak": 9,
+    "Strong": 1
   },
   "regionStats": [
     {
       "region": "AFR",
       "name": "Africa",
-      "biobanks": 3,
-      "publications": 204
+      "biobanks": 12,
+      "publications": 278
     },
     {
       "region": "AMR",
       "name": "Americas",
-      "biobanks": 9,
-      "publications": 49264
+      "biobanks": 112,
+      "publications": 11133
     },
     {
       "region": "EMR",
       "name": "Eastern Mediterranean",
-      "biobanks": 1,
-      "publications": 174
+      "biobanks": 9,
+      "publications": 560
     },
     {
       "region": "EUR",
       "name": "Europe",
-      "biobanks": 11,
-      "publications": 24445
+      "biobanks": 85,
+      "publications": 20722
+    },
+    {
+      "region": "INT",
+      "name": "INT",
+      "biobanks": 1,
+      "publications": 1
+    },
+    {
+      "region": "SEAR",
+      "name": "South-East Asia",
+      "biobanks": 1,
+      "publications": 10
     },
     {
       "region": "WPR",
       "name": "Western Pacific",
-      "biobanks": 3,
-      "publications": 1269
+      "biobanks": 53,
+      "publications": 3712
     }
   ],
   "criticalGaps": [
+    {
+      "id": "Malaria",
+      "name": "Malaria",
+      "gapScore": 95.0,
+      "dalys": 55.17,
+      "publications": 17
+    },
+    {
+      "id": "Dengue",
+      "name": "Dengue",
+      "gapScore": 95.0,
+      "dalys": 2.08,
+      "publications": 0
+    },
+    {
+      "id": "Schistosomiasis",
+      "name": "Schistosomiasis",
+      "gapScore": 95.0,
+      "dalys": 1.75,
+      "publications": 0
+    },
+    {
+      "id": "Lymphatic filariasis",
+      "name": "Lymphatic filariasis",
+      "gapScore": 95.0,
+      "dalys": 1.31,
+      "publications": 0
+    },
+    {
+      "id": "Cysticercosis",
+      "name": "Cysticercosis",
+      "gapScore": 95.0,
+      "dalys": 1.24,
+      "publications": 0
+    },
+    {
+      "id": "Guinea worm disease",
+      "name": "Guinea worm disease",
+      "gapScore": 95.0,
+      "dalys": 0.0,
+      "publications": 0
+    },
+    {
+      "id": "Scabies",
+      "name": "Scabies",
+      "gapScore": 95.0,
+      "dalys": 5.32,
+      "publications": 1
+    },
     {
       "id": "Drowning",
       "name": "Drowning",
@@ -62,117 +122,96 @@
       "publications": 0
     },
     {
-      "id": "Iodine deficiency",
-      "name": "Iodine deficiency",
-      "gapScore": 92.0,
-      "dalys": 2.25,
-      "publications": 10
+      "id": "Animal contact",
+      "name": "Animal contact",
+      "gapScore": 95.0,
+      "dalys": 4.89,
+      "publications": 0
     },
     {
-      "id": "Viral skin diseases",
-      "name": "Viral skin diseases",
-      "gapScore": 85.0,
-      "dalys": 4.2,
-      "publications": 1
-    },
-    {
-      "id": "Cysticercosis",
-      "name": "Cysticercosis",
-      "gapScore": 80.0,
-      "dalys": 1.24,
-      "publications": 2
-    },
-    {
-      "id": "Paralytic ileus and intestinal obstruction",
-      "name": "Paralytic ileus and intestinal obstruction",
-      "gapScore": 80.0,
-      "dalys": 6.66,
-      "publications": 5
-    },
-    {
-      "id": "Scabies",
-      "name": "Scabies",
-      "gapScore": 80.0,
-      "dalys": 5.32,
-      "publications": 6
+      "id": "Typhoid and paratyphoid",
+      "name": "Typhoid and paratyphoid",
+      "gapScore": 90.0,
+      "dalys": 8.1,
+      "publications": 21
     }
   ],
   "topBiobanks": [
     {
-      "id": "emerge",
-      "name": "eMERGE Network",
-      "eas": 98.3,
-      "category": "Strong",
-      "publications": 47755
-    },
-    {
-      "id": "uk_biobank",
+      "id": "ukb",
       "name": "UK Biobank",
-      "eas": 84.9,
+      "eas": 83.3,
       "category": "Strong",
-      "publications": 13341
+      "publications": 13084
     },
     {
-      "id": "decode",
-      "name": "deCODE Genetics",
-      "eas": 69.4,
-      "category": "Moderate",
-      "publications": 5604
+      "id": "whi",
+      "name": "Women's Health Initiative",
+      "eas": 52.8,
+      "category": "Weak",
+      "publications": 3296
     },
     {
-      "id": "finngen",
-      "name": "FinnGen",
-      "eas": 60.3,
-      "category": "Moderate",
-      "publications": 2683
+      "id": "nhs",
+      "name": "Nurses' Health Study",
+      "eas": 49.1,
+      "category": "Weak",
+      "publications": 2093
+    },
+    {
+      "id": "aou",
+      "name": "All of Us Research Program",
+      "eas": 48.5,
+      "category": "Weak",
+      "publications": 777
     },
     {
       "id": "hunt",
       "name": "HUNT Study",
-      "eas": 48.2,
+      "eas": 48.0,
       "category": "Weak",
-      "publications": 1152
+      "publications": 1185
     },
     {
-      "id": "lifelines",
-      "name": "LifeLines",
-      "eas": 46.4,
+      "id": "estbb",
+      "name": "Estonian Biobank",
+      "eas": 47.8,
       "category": "Weak",
-      "publications": 730
+      "publications": 574
     },
     {
-      "id": "all_of_us",
-      "name": "All of Us Research Program",
-      "eas": 42.0,
+      "id": "epic",
+      "name": "European Prospective Investigation into Cancer and Nutrition",
+      "eas": 44.7,
       "category": "Weak",
-      "publications": 613
+      "publications": 1796
     },
     {
-      "id": "biobank_japan",
-      "name": "BioBank Japan",
-      "eas": 40.2,
+      "id": "dnbc",
+      "name": "Danish National Birth Cohort",
+      "eas": 43.5,
       "category": "Weak",
-      "publications": 271
+      "publications": 612
     },
     {
-      "id": "mvp",
-      "name": "Million Veteran Program",
-      "eas": 38.9,
-      "category": "Poor",
-      "publications": 327
+      "id": "gel",
+      "name": "Genomics England / 100,000 Genomes Project",
+      "eas": 43.0,
+      "category": "Weak",
+      "publications": 649
     },
     {
-      "id": "china_kadoorie",
-      "name": "China Kadoorie Biobank",
-      "eas": 38.7,
-      "category": "Poor",
-      "publications": 516
+      "id": "nhsii; nhs",
+      "name": "Nurses' Health Study II; Nurses' Health Study",
+      "eas": 42.3,
+      "category": "Weak",
+      "publications": 991
     }
   ],
   "averages": {
-    "eas": 34.0,
-    "ros": 7726.73,
-    "gapScore": 30.0
+    "eas": 7.7,
+    "ros": 10523.1,
+    "gapScore": 38.2
   },
   "methodology": {
     "burden_score": "0.5 \u00d7 DALYs + 50 \u00d7 Deaths + 10 \u00d7 log\u2081\u2080(Prevalence) [or 10 \u00d7 log\u2081\u2080(DALYs) if Deaths/Prevalence unavailable]",

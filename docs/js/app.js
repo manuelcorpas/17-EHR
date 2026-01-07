@@ -1,4 +1,4 @@
-// HEIM-Biobank v1.0 Dashboard Application
+// HEIM-Biobank v2.0 (IHCC) Dashboard Application
 
 // Global data store
 let DATA = {
@@ -14,7 +14,7 @@ let DATA = {
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('HEIM-Biobank v1.0 Dashboard initializing...');
+    console.log('HEIM-Biobank v2.0 (IHCC) Dashboard initializing...');
     
     // Setup tab navigation
     setupTabs();
