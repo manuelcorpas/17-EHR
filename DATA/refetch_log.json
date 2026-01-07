@@ -1,0 +1,111 @@
+{
+  "timestamp": "2026-01-06T17:02:16.715331",
+  "cohorts_refetched": 16,
+  "new_publications": 535,
+  "log": [
+    {
+      "cohort_id": "pgp",
+      "cohort_name": "Peruvian Genome Project",
+      "query": "(\"Peruvian Genome Project\"[All Fields] OR \"Peru genome\"[All Fields] OR \"Peruvian genetic\"[All Fields] OR \"Peru population genetic\"[All Fields] OR \"Lima genetic\"[All Fields] OR \"Andean genetic\"[All Fields] OR \"Peruvian genomic\"[All Fields] OR \"Peru indigenous genetic\"[All Fields])",
+      "status": "success",
+      "pmids_found": 4,
+      "new_pubs": 3
+    },
+    {
+      "cohort_id": "sgbb",
+      "cohort_name": "Singapore Biobank",
+      "query": "(\"Singapore Biobank\"[All Fields] OR \"SingHealth Tissue Repository\"[All Fields] OR \"National University Hospital Singapore biobank\"[All Fields] OR \"Singapore population genetic\"[All Fields] OR \"Singapore Health Study\"[All Fields])",
+      "status": "success",
+      "pmids_found": 6,
+      "new_pubs": 6
+    },
+    {
+      "cohort_id": "ethiopian",
+      "query": "(\"Ethiopian genome\"[All Fields] OR \"Ethiopia genetic\"[All Fields] OR \"Ethiopian population genetic\"[All Fields] OR \"Addis Ababa genetic\"[All Fields] OR \"Ethiopian genomic\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "ghana",
+      "query": "(\"Ghana genome\"[All Fields] OR \"Ghanaian genetic\"[All Fields] OR \"Ghana population genetic\"[All Fields] OR \"Accra genetic\"[All Fields] OR \"Ghana genomic\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "emirati",
+      "query": "(\"Emirati genome\"[All Fields] OR \"UAE genome\"[All Fields] OR \"United Arab Emirates genetic\"[All Fields] OR \"Emirati population genetic\"[All Fields] OR \"Abu Dhabi genetic\"[All Fields] OR \"Dubai genetic\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "kenyagenome",
+      "query": "(\"Kenya genome\"[All Fields] OR \"Kenyan genetic\"[All Fields] OR \"Kenya population genetic\"[All Fields] OR \"Kenya genomic\"[All Fields] OR \"East Africa genome Kenya\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "tanzaniagen",
+      "query": "(\"Tanzania genome\"[All Fields] OR \"Tanzanian genetic\"[All Fields] OR \"Tanzania population genetic\"[All Fields] OR \"Tanzania genomic\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "botswana",
+      "query": "(\"Botswana genome\"[All Fields] OR \"Botswana genetic\"[All Fields] OR \"Botswana population genetic\"[All Fields] OR \"Botswana genomic\"[All Fields] OR \"Botswana HIV genetic\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "indonesian",
+      "cohort_name": "Indonesian Genome Diversity Project",
+      "query": "(\"Indonesia genome\"[All Fields] OR \"Indonesian genetic\"[All Fields] OR \"Indonesia population genetic\"[All Fields] OR \"Indonesian genomic\"[All Fields] OR \"Eijkman genome\"[All Fields] OR \"Indonesian diversity\"[All Fields])",
+      "status": "success",
+      "pmids_found": 2,
+      "new_pubs": 1
+    },
+    {
+      "cohort_id": "bangladeshi",
+      "query": "(\"Bangladesh genome\"[All Fields] OR \"Bangladeshi genetic\"[All Fields] OR \"Bangladesh population genetic\"[All Fields] OR \"Dhaka genetic\"[All Fields] OR \"Bangladeshi genomic\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "colombian",
+      "query": "(\"Colombian genome\"[All Fields] OR \"Colombia genetic\"[All Fields] OR \"Colombian population genetic\"[All Fields] OR \"Bogota genetic\"[All Fields] OR \"Colombian genomic\"[All Fields] OR \"Colombia indigenous\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "argentine",
+      "query": "(\"Argentine genome\"[All Fields] OR \"Argentina genetic\"[All Fields] OR \"Argentine population genetic\"[All Fields] OR \"Buenos Aires genetic\"[All Fields] OR \"Argentine genomic\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "chilean",
+      "query": "(\"Chilean genome\"[All Fields] OR \"Chile genetic\"[All Fields] OR \"Chilean population genetic\"[All Fields] OR \"Santiago genetic\"[All Fields] OR \"Chilean genomic\"[All Fields] OR \"Chile biobank\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "rwandan",
+      "cohort_name": "Rwanda Biomedical Center Cohort",
+      "query": "(\"Rwanda genome\"[All Fields] OR \"Rwandan genetic\"[All Fields] OR \"Rwanda population genetic\"[All Fields] OR \"Kigali genetic\"[All Fields] OR \"Rwanda genomic\"[All Fields] OR \"Rwanda Biomedical\"[All Fields])",
+      "status": "success",
+      "pmids_found": 529,
+      "new_pubs": 525
+    },
+    {
+      "cohort_id": "zambian",
+      "query": "(\"Zambia genome\"[All Fields] OR \"Zambian genetic\"[All Fields] OR \"Zambia population genetic\"[All Fields] OR \"Lusaka genetic\"[All Fields] OR \"Zambia genomic\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    },
+    {
+      "cohort_id": "moroccan",
+      "query": "(\"Moroccan genome\"[All Fields] OR \"Morocco genetic\"[All Fields] OR \"Moroccan population genetic\"[All Fields] OR \"Rabat genetic\"[All Fields] OR \"Moroccan genomic\"[All Fields])",
+      "status": "no_new",
+      "new_pubs": 0
+    }
+  ]
+}
