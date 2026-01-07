@@ -1,0 +1,3531 @@
+{
+  "metadata": {
+    "model": "all-MiniLM-L6-v2",
+    "min_similarity": 0.65,
+    "our_keys_count": 174,
+    "ihme_causes_count": 175,
+    "confident_matches": 174,
+    "total_dalys_billions": 2.81
+  },
+  "mapping": {
+    "HIV/AIDS": {
+      "best_match": "HIV/AIDS",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "HIV/AIDS",
+          "score": 1.0000005960464478
+        },
+        {
+          "name": "Sexually transmitted infections excluding HIV",
+          "score": 0.6387137770652771
+        },
+        {
+          "name": "Other unspecified infectious diseases",
+          "score": 0.5029469728469849
+        }
+      ],
+      "manual_override": true,
+      "dalys": 40266791.7452044
+    },
+    "Sexually transmitted infections excluding HIV": {
+      "best_match": "Sexually transmitted infections excluding HIV",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Sexually transmitted infections excluding HIV",
+          "score": 0.9999995827674866
+        },
+        {
+          "name": "HIV/AIDS",
+          "score": 0.6387137770652771
+        },
+        {
+          "name": "Other unspecified infectious diseases",
+          "score": 0.5051743984222412
+        }
+      ],
+      "dalys": 7953311.087690656
+    },
+    "Lower respiratory infections": {
+      "best_match": "Lower respiratory infections",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Lower respiratory infections",
+          "score": 1.0
+        },
+        {
+          "name": "Upper respiratory infections",
+          "score": 0.8523009419441223
+        },
+        {
+          "name": "Other chronic respiratory diseases",
+          "score": 0.618098795413971
+        }
+      ],
+      "dalys": 82534840.53909253
+    },
+    "Upper respiratory infections": {
+      "best_match": "Upper respiratory infections",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Upper respiratory infections",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Lower respiratory infections",
+          "score": 0.8523009419441223
+        },
+        {
+          "name": "Other chronic respiratory diseases",
+          "score": 0.5569884181022644
+        }
+      ],
+      "dalys": 5678886.772827445
+    },
+    "Otitis media": {
+      "best_match": "Otitis media",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Otitis media",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Dermatitis",
+          "score": 0.39148515462875366
+        },
+        {
+          "name": "Meningitis",
+          "score": 0.3832116723060608
+        }
+      ],
+      "dalys": 2479622.897227385
+    },
+    "COVID-19": {
+      "best_match": "COVID-19",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "COVID-19",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Ebola",
+          "score": 0.4999522268772125
+        },
+        {
+          "name": "Other unspecified infectious diseases",
+          "score": 0.40881359577178955
+        }
+      ],
+      "manual_override": true,
+      "dalys": 212009595.96699756
+    },
+    "Tuberculosis": {
+      "best_match": "Tuberculosis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Tuberculosis",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Malaria",
+          "score": 0.5395976305007935
+        },
+        {
+          "name": "Ebola",
+          "score": 0.49498480558395386
+        }
+      ],
+      "manual_override": true,
+      "dalys": 46977462.561743826
+    },
+    "Diarrheal diseases": {
+      "best_match": "Diarrheal diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Diarrheal diseases",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Other intestinal infectious diseases",
+          "score": 0.6442204713821411
+        },
+        {
+          "name": "Other digestive diseases",
+          "score": 0.641506016254425
+        }
+      ],
+      "dalys": 58983816.792969696
+    },
+    "Typhoid and paratyphoid": {
+      "best_match": "Typhoid and paratyphoid",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Typhoid and paratyphoid",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Invasive Non-typhoidal Salmonella (iNTS)",
+          "score": 0.4121963679790497
+        },
+        {
+          "name": "Food-borne trematodiases",
+          "score": 0.3398919105529785
+        }
+      ],
+      "dalys": 8099574.463723717
+    },
+    "Invasive Non-typhoidal Salmonella (iNTS)": {
+      "best_match": "Invasive Non-typhoidal Salmonella (iNTS)",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Invasive Non-typhoidal Salmonella (iNTS)",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Other intestinal infectious diseases",
+          "score": 0.4754946827888489
+        },
+        {
+          "name": "Intestinal nematode infections",
+          "score": 0.4637492895126343
+        }
+      ],
+      "dalys": 4740234.700806706
+    },
+    "Other intestinal infectious diseases": {
+      "best_match": "Other intestinal infectious diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other intestinal infectious diseases",
+          "score": 0.9999997615814209
+        },
+        {
+          "name": "Other digestive diseases",
+          "score": 0.7508032321929932
+        },
+        {
+          "name": "Other unspecified infectious diseases",
+          "score": 0.7471315264701843
+        }
+      ],
+      "dalys": 105381.67496445322
+    },
+    "Malaria": {
+      "best_match": "Malaria",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Malaria",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Tuberculosis",
+          "score": 0.5395976305007935
+        },
+        {
+          "name": "Zika virus",
+          "score": 0.518230676651001
+        }
+      ],
+      "manual_override": true,
+      "dalys": 55174060.702019885
+    },
+    "Dengue": {
+      "best_match": "Dengue",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Dengue",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Zika virus",
+          "score": 0.5552470684051514
+        },
+        {
+          "name": "Malaria",
+          "score": 0.46908533573150635
+        }
+      ],
+      "manual_override": true,
+      "dalys": 2076524.690640326
+    },
+    "Yellow fever": {
+      "best_match": "Yellow fever",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Yellow fever",
+          "score": 0.9999995827674866
+        },
+        {
+          "name": "Other unspecified infectious diseases",
+          "score": 0.47994962334632874
+        },
+        {
+          "name": "Zika virus",
+          "score": 0.4499601423740387
+        }
+      ],
+      "dalys": 317791.9486190491
+    },
+    "Rabies": {
+      "best_match": "Rabies",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Rabies",
+          "score": 1.0
+        },
+        {
+          "name": "Measles",
+          "score": 0.5040134787559509
+        },
+        {
+          "name": "Pertussis",
+          "score": 0.4559061825275421
+        }
+      ],
+      "manual_override": true,
+      "dalys": 569550.281705966
+    },
+    "Intestinal nematode infections": {
+      "best_match": "Intestinal nematode infections",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Intestinal nematode infections",
+          "score": 1.0000005960464478
+        },
+        {
+          "name": "Other intestinal infectious diseases",
+          "score": 0.6612349152565002
+        },
+        {
+          "name": "Invasive Non-typhoidal Salmonella (iNTS)",
+          "score": 0.4637492895126343
+        }
+      ],
+      "dalys": 1381640.9735708872
+    },
+    "Schistosomiasis": {
+      "best_match": "Schistosomiasis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Schistosomiasis",
+          "score": 0.9999996423721313
+        },
+        {
+          "name": "Scabies",
+          "score": 0.6178919076919556
+        },
+        {
+          "name": "Guinea worm disease",
+          "score": 0.4495299756526947
+        }
+      ],
+      "manual_override": true,
+      "dalys": 1746333.3056925577
+    },
+    "Leishmaniasis": {
+      "best_match": "Leishmaniasis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Leishmaniasis",
+          "score": 0.9999997615814209
+        },
+        {
+          "name": "African trypanosomiasis",
+          "score": 0.4573279321193695
+        },
+        {
+          "name": "Malaria",
+          "score": 0.4482594132423401
+        }
+      ],
+      "manual_override": true,
+      "dalys": 781187.607463255
+    },
+    "Lymphatic filariasis": {
+      "best_match": "Lymphatic filariasis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Lymphatic filariasis",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Cysticercosis",
+          "score": 0.4329850375652313
+        },
+        {
+          "name": "Schistosomiasis",
+          "score": 0.40912511944770813
+        }
+      ],
+      "dalys": 1314563.3995424944
+    },
+    "Onchocerciasis": {
+      "best_match": "Onchocerciasis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Onchocerciasis",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Psoriasis",
+          "score": 0.4047304093837738
+        },
+        {
+          "name": "Schistosomiasis",
+          "score": 0.3894090950489044
+        }
+      ],
+      "manual_override": true,
+      "dalys": 1262988.1254184735
+    },
+    "Trachoma": {
+      "best_match": "Trachoma",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Trachoma",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Tetanus",
+          "score": 0.45009860396385193
+        },
+        {
+          "name": "Food-borne trematodiases",
+          "score": 0.36921414732933044
+        }
+      ],
+      "manual_override": true,
+      "dalys": 123190.23740696211
+    },
+    "Chagas disease": {
+      "best_match": "Chagas disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Chagas disease",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Other digestive diseases",
+          "score": 0.4823589622974396
+        },
+        {
+          "name": "Fungal skin diseases",
+          "score": 0.4748671352863312
+        }
+      ],
+      "dalys": 238589.28521429855
+    },
+    "African trypanosomiasis": {
+      "best_match": "African trypanosomiasis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "African trypanosomiasis",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Guinea worm disease",
+          "score": 0.49842381477355957
+        },
+        {
+          "name": "Malaria",
+          "score": 0.46833962202072144
+        }
+      ],
+      "dalys": 61962.48267660358
+    },
+    "Cysticercosis": {
+      "best_match": "Cysticercosis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Cysticercosis",
+          "score": 0.9999997615814209
+        },
+        {
+          "name": "Cystic echinococcosis",
+          "score": 0.6305638551712036
+        },
+        {
+          "name": "Guinea worm disease",
+          "score": 0.44592171907424927
+        }
+      ],
+      "manual_override": true,
+      "dalys": 1235938.9924628714
+    },
+    "Cystic echinococcosis": {
+      "best_match": "Cystic echinococcosis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Cystic echinococcosis",
+          "score": 1.0
+        },
+        {
+          "name": "Cysticercosis",
+          "score": 0.6305636763572693
+        },
+        {
+          "name": "Pneumoconiosis",
+          "score": 0.4585771858692169
+        }
+      ],
+      "dalys": 105071.5676044758
+    },
+    "Leprosy": {
+      "best_match": "Leprosy",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Leprosy",
+          "score": 0.9999997615814209
+        },
+        {
+          "name": "Dermatitis",
+          "score": 0.4278506934642792
+        },
+        {
+          "name": "Scabies",
+          "score": 0.4016651511192322
+        }
+      ],
+      "manual_override": true,
+      "dalys": 21427.508513152632
+    },
+    "Food-borne trematodiases": {
+      "best_match": "Food-borne trematodiases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Food-borne trematodiases",
+          "score": 0.9999997615814209
+        },
+        {
+          "name": "Schistosomiasis",
+          "score": 0.44682273268699646
+        },
+        {
+          "name": "Intestinal nematode infections",
+          "score": 0.4241810739040375
+        }
+      ],
+      "dalys": 998028.5173432152
+    },
+    "Other neglected tropical diseases": {
+      "best_match": "Other neglected tropical diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other neglected tropical diseases",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Other unspecified infectious diseases",
+          "score": 0.6249401569366455
+        },
+        {
+          "name": "Other intestinal infectious diseases",
+          "score": 0.5417107343673706
+        }
+      ],
+      "dalys": 4218302.247168106
+    },
+    "Ebola": {
+      "best_match": "Ebola",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Ebola",
+          "score": 1.0000004768371582
+        },
+        {
+          "name": "Other unspecified infectious diseases",
+          "score": 0.5003852248191833
+        },
+        {
+          "name": "COVID-19",
+          "score": 0.4999522268772125
+        }
+      ],
+      "manual_override": true,
+      "dalys": 2602.330849425826
+    },
+    "Zika virus": {
+      "best_match": "Zika virus",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Zika virus",
+          "score": 1.0
+        },
+        {
+          "name": "Dengue",
+          "score": 0.5552470684051514
+        },
+        {
+          "name": "Malaria",
+          "score": 0.518230676651001
+        }
+      ],
+      "dalys": 157.94729439990226
+    },
+    "Guinea worm disease": {
+      "best_match": "Guinea worm disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Guinea worm disease",
+          "score": 1.0000005960464478
+        },
+        {
+          "name": "Other neglected tropical diseases",
+          "score": 0.5223788022994995
+        },
+        {
+          "name": "Malaria",
+          "score": 0.5082711577415466
+        }
+      ],
+      "dalys": 0.8548760095735951
+    },
+    "Meningitis": {
+      "best_match": "Meningitis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Meningitis",
+          "score": 1.0
+        },
+        {
+          "name": "Dermatitis",
+          "score": 0.5148353576660156
+        },
+        {
+          "name": "Upper respiratory infections",
+          "score": 0.47908592224121094
+        }
+      ],
+      "manual_override": true,
+      "dalys": 14511046.482412158
+    },
+    "Encephalitis": {
+      "best_match": "Encephalitis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Encephalitis",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.5223200917243958
+        },
+        {
+          "name": "Idiopathic epilepsy",
+          "score": 0.5065924525260925
+        }
+      ],
+      "manual_override": true,
+      "dalys": 4952818.577897604
+    },
+    "Acute hepatitis": {
+      "best_match": "Acute hepatitis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Acute hepatitis",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Cirrhosis and other chronic liver diseases",
+          "score": 0.4298868477344513
+        },
+        {
+          "name": "Liver cancer",
+          "score": 0.42802000045776367
+        }
+      ],
+      "dalys": 4228048.1290571205
+    },
+    "Measles": {
+      "best_match": "Measles",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Measles",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Mesothelioma",
+          "score": 0.5669998526573181
+        },
+        {
+          "name": "Rabies",
+          "score": 0.5040134787559509
+        }
+      ],
+      "manual_override": true,
+      "dalys": 4878526.633494856
+    },
+    "Tetanus": {
+      "best_match": "Tetanus",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Tetanus",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Pruritus",
+          "score": 0.450153648853302
+        },
+        {
+          "name": "Trachoma",
+          "score": 0.45009860396385193
+        }
+      ],
+      "manual_override": true,
+      "dalys": 1341513.3705532718
+    },
+    "Pertussis": {
+      "best_match": "Pertussis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Pertussis",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Pruritus",
+          "score": 0.668863832950592
+        },
+        {
+          "name": "Measles",
+          "score": 0.48916563391685486
+        }
+      ],
+      "manual_override": true,
+      "dalys": 4614086.055527066
+    },
+    "Diphtheria": {
+      "best_match": "Diphtheria",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Diphtheria",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Urticaria",
+          "score": 0.37246599793434143
+        },
+        {
+          "name": "Tetanus",
+          "score": 0.36926233768463135
+        }
+      ],
+      "manual_override": true,
+      "dalys": 318203.8241430244
+    },
+    "Varicella and herpes zoster": {
+      "best_match": "Varicella and herpes zoster",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Varicella and herpes zoster",
+          "score": 1.0
+        },
+        {
+          "name": "Zika virus",
+          "score": 0.4505814015865326
+        },
+        {
+          "name": "Cysticercosis",
+          "score": 0.4336128234863281
+        }
+      ],
+      "dalys": 886066.5406654413
+    },
+    "Other unspecified infectious diseases": {
+      "best_match": "Other unspecified infectious diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other unspecified infectious diseases",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Other intestinal infectious diseases",
+          "score": 0.7471315264701843
+        },
+        {
+          "name": "Other neglected tropical diseases",
+          "score": 0.6249401569366455
+        }
+      ],
+      "dalys": 5851960.763236187
+    },
+    "Maternal disorders": {
+      "best_match": "Maternal disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Maternal disorders",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Neonatal disorders",
+          "score": 0.6651691198348999
+        },
+        {
+          "name": "Congenital birth defects",
+          "score": 0.5510972142219543
+        }
+      ],
+      "dalys": 12314021.231347067
+    },
+    "Neonatal disorders": {
+      "best_match": "Neonatal disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Neonatal disorders",
+          "score": 1.0
+        },
+        {
+          "name": "Maternal disorders",
+          "score": 0.6651691198348999
+        },
+        {
+          "name": "Congenital birth defects",
+          "score": 0.6506521105766296
+        }
+      ],
+      "dalys": 186366011.77438888
+    },
+    "Protein-energy malnutrition": {
+      "best_match": "Protein-energy malnutrition",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Protein-energy malnutrition",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Other nutritional deficiencies",
+          "score": 0.5196843147277832
+        },
+        {
+          "name": "Dietary iron deficiency",
+          "score": 0.422338604927063
+        }
+      ],
+      "dalys": 11826130.803078312
+    },
+    "Dietary iron deficiency": {
+      "best_match": "Dietary iron deficiency",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Dietary iron deficiency",
+          "score": 1.0000007152557373
+        },
+        {
+          "name": "Other nutritional deficiencies",
+          "score": 0.6775116920471191
+        },
+        {
+          "name": "Vitamin A deficiency",
+          "score": 0.5389112830162048
+        }
+      ],
+      "dalys": 32315750.897590935
+    },
+    "Iodine deficiency": {
+      "best_match": "Iodine deficiency",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Iodine deficiency",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Vitamin A deficiency",
+          "score": 0.4984401762485504
+        },
+        {
+          "name": "Dietary iron deficiency",
+          "score": 0.46923208236694336
+        }
+      ],
+      "dalys": 2246334.372497986
+    },
+    "Vitamin A deficiency": {
+      "best_match": "Vitamin A deficiency",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Vitamin A deficiency",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Other nutritional deficiencies",
+          "score": 0.6006114482879639
+        },
+        {
+          "name": "Dietary iron deficiency",
+          "score": 0.5389112830162048
+        }
+      ],
+      "dalys": 1104931.4906998908
+    },
+    "Other nutritional deficiencies": {
+      "best_match": "Other nutritional deficiencies",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other nutritional deficiencies",
+          "score": 1.0
+        },
+        {
+          "name": "Dietary iron deficiency",
+          "score": 0.6775116920471191
+        },
+        {
+          "name": "Vitamin A deficiency",
+          "score": 0.6006114482879639
+        }
+      ],
+      "dalys": 1426113.4944669786
+    },
+    "Breast cancer": {
+      "best_match": "Breast cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Breast cancer",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Prostate cancer",
+          "score": 0.59198397397995
+        },
+        {
+          "name": "Liver cancer",
+          "score": 0.5838455557823181
+        }
+      ],
+      "dalys": 20635718.17792674
+    },
+    "Cervical cancer": {
+      "best_match": "Cervical cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Cervical cancer",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Uterine cancer",
+          "score": 0.6567133665084839
+        },
+        {
+          "name": "Ovarian cancer",
+          "score": 0.5847055912017822
+        }
+      ],
+      "dalys": 9911653.091017734
+    },
+    "Uterine cancer": {
+      "best_match": "Uterine cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Uterine cancer",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Ovarian cancer",
+          "score": 0.68276447057724
+        },
+        {
+          "name": "Cervical cancer",
+          "score": 0.6567133665084839
+        }
+      ],
+      "dalys": 2562942.9808763117
+    },
+    "Ovarian cancer": {
+      "best_match": "Ovarian cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Ovarian cancer",
+          "score": 1.0
+        },
+        {
+          "name": "Uterine cancer",
+          "score": 0.68276447057724
+        },
+        {
+          "name": "Cervical cancer",
+          "score": 0.5847055912017822
+        }
+      ],
+      "dalys": 5163256.304643558
+    },
+    "Prostate cancer": {
+      "best_match": "Prostate cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Prostate cancer",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Bladder cancer",
+          "score": 0.6760130524635315
+        },
+        {
+          "name": "Testicular cancer",
+          "score": 0.6166489720344543
+        }
+      ],
+      "dalys": 8141561.072273841
+    },
+    "Testicular cancer": {
+      "best_match": "Testicular cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Testicular cancer",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Prostate cancer",
+          "score": 0.6166489720344543
+        },
+        {
+          "name": "Bladder cancer",
+          "score": 0.5309776067733765
+        }
+      ],
+      "dalys": 560921.4615696082
+    },
+    "Colon and rectum cancer": {
+      "best_match": "Colon and rectum cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Colon and rectum cancer",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Stomach cancer",
+          "score": 0.6255642175674438
+        },
+        {
+          "name": "Uterine cancer",
+          "score": 0.5731114149093628
+        }
+      ],
+      "dalys": 24401100.179965258
+    },
+    "Lip and oral cavity cancer": {
+      "best_match": "Lip and oral cavity cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Lip and oral cavity cancer",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Larynx cancer",
+          "score": 0.558803915977478
+        },
+        {
+          "name": "Stomach cancer",
+          "score": 0.5046800374984741
+        }
+      ],
+      "dalys": 5874069.625403691
+    },
+    "Nasopharynx cancer": {
+      "best_match": "Nasopharynx cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Nasopharynx cancer",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Other pharynx cancer",
+          "score": 0.5666418075561523
+        },
+        {
+          "name": "Stomach cancer",
+          "score": 0.5045839548110962
+        }
+      ],
+      "dalys": 2490191.448386309
+    },
+    "Other pharynx cancer": {
+      "best_match": "Other pharynx cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other pharynx cancer",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Larynx cancer",
+          "score": 0.6046299338340759
+        },
+        {
+          "name": "Other malignant neoplasms",
+          "score": 0.5966388583183289
+        }
+      ],
+      "dalys": 2843780.8510169946
+    },
+    "Esophageal cancer": {
+      "best_match": "Esophageal cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Esophageal cancer",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Stomach cancer",
+          "score": 0.6134644150733948
+        },
+        {
+          "name": "Larynx cancer",
+          "score": 0.5112232565879822
+        }
+      ],
+      "dalys": 12999264.904907202
+    },
+    "Stomach cancer": {
+      "best_match": "Stomach cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Stomach cancer",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Liver cancer",
+          "score": 0.647400438785553
+        },
+        {
+          "name": "Colon and rectum cancer",
+          "score": 0.6255642175674438
+        }
+      ],
+      "dalys": 22786633.095688548
+    },
+    "Liver cancer": {
+      "best_match": "Liver cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Liver cancer",
+          "score": 1.0000007152557373
+        },
+        {
+          "name": "Kidney cancer",
+          "score": 0.6562730073928833
+        },
+        {
+          "name": "Stomach cancer",
+          "score": 0.647400438785553
+        }
+      ],
+      "dalys": 12887652.414924735
+    },
+    "Gallbladder and biliary tract cancer": {
+      "best_match": "Gallbladder and biliary tract cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Gallbladder and biliary tract cancer",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Gallbladder and biliary diseases",
+          "score": 0.8606826663017273
+        },
+        {
+          "name": "Stomach cancer",
+          "score": 0.6010794043540955
+        }
+      ],
+      "dalys": 3732121.315072251
+    },
+    "Pancreatic cancer": {
+      "best_match": "Pancreatic cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Pancreatic cancer",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Pancreatitis",
+          "score": 0.7417541742324829
+        },
+        {
+          "name": "Stomach cancer",
+          "score": 0.6102905869483948
+        }
+      ],
+      "dalys": 11316963.350583198
+    },
+    "Larynx cancer": {
+      "best_match": "Larynx cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Larynx cancer",
+          "score": 1.0000005960464478
+        },
+        {
+          "name": "Other pharynx cancer",
+          "score": 0.6046299338340759
+        },
+        {
+          "name": "Lip and oral cavity cancer",
+          "score": 0.558803915977478
+        }
+      ],
+      "dalys": 3143308.765139411
+    },
+    "Tracheal, bronchus, and lung cancer": {
+      "best_match": "Tracheal, bronchus, and lung cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Tracheal, bronchus, and lung cancer",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Larynx cancer",
+          "score": 0.5462237596511841
+        },
+        {
+          "name": "Other chronic respiratory diseases",
+          "score": 0.48320624232292175
+        }
+      ],
+      "dalys": 46536272.12165932
+    },
+    "Malignant skin melanoma": {
+      "best_match": "Malignant skin melanoma",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Malignant skin melanoma",
+          "score": 1.0
+        },
+        {
+          "name": "Non-melanoma skin cancer",
+          "score": 0.8330479264259338
+        },
+        {
+          "name": "Other malignant neoplasms",
+          "score": 0.5620200037956238
+        }
+      ],
+      "dalys": 1678836.3114432057
+    },
+    "Non-melanoma skin cancer": {
+      "best_match": "Non-melanoma skin cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Non-melanoma skin cancer",
+          "score": 0.999999463558197
+        },
+        {
+          "name": "Malignant skin melanoma",
+          "score": 0.8330479264259338
+        },
+        {
+          "name": "Other malignant neoplasms",
+          "score": 0.5498214364051819
+        }
+      ],
+      "dalys": 1212872.3836802046
+    },
+    "Kidney cancer": {
+      "best_match": "Kidney cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Kidney cancer",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Bladder cancer",
+          "score": 0.685696005821228
+        },
+        {
+          "name": "Liver cancer",
+          "score": 0.6562730073928833
+        }
+      ],
+      "dalys": 4016362.117183706
+    },
+    "Bladder cancer": {
+      "best_match": "Bladder cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Bladder cancer",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Kidney cancer",
+          "score": 0.685696005821228
+        },
+        {
+          "name": "Prostate cancer",
+          "score": 0.6760130524635315
+        }
+      ],
+      "dalys": 4397066.632743376
+    },
+    "Brain and central nervous system cancer": {
+      "best_match": "Brain and central nervous system cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Brain and central nervous system cancer",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Neuroblastoma and other peripheral nervous cell tumors",
+          "score": 0.5907260775566101
+        },
+        {
+          "name": "Other pharynx cancer",
+          "score": 0.5286247134208679
+        }
+      ],
+      "dalys": 8912595.213850375
+    },
+    "Thyroid cancer": {
+      "best_match": "Thyroid cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Thyroid cancer",
+          "score": 1.0
+        },
+        {
+          "name": "Breast cancer",
+          "score": 0.5553557276725769
+        },
+        {
+          "name": "Larynx cancer",
+          "score": 0.5381028056144714
+        }
+      ],
+      "dalys": 1246484.7780890486
+    },
+    "Mesothelioma": {
+      "best_match": "Mesothelioma",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Mesothelioma",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Measles",
+          "score": 0.5669998526573181
+        },
+        {
+          "name": "Eye cancer",
+          "score": 0.45951998233795166
+        }
+      ],
+      "dalys": 689358.8282873848
+    },
+    "Hodgkin lymphoma": {
+      "best_match": "Hodgkin lymphoma",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Hodgkin lymphoma",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Non-Hodgkin lymphoma",
+          "score": 0.9248843789100647
+        },
+        {
+          "name": "Leukemia",
+          "score": 0.4281735420227051
+        }
+      ],
+      "dalys": 1196188.224062072
+    },
+    "Non-Hodgkin lymphoma": {
+      "best_match": "Non-Hodgkin lymphoma",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Non-Hodgkin lymphoma",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Hodgkin lymphoma",
+          "score": 0.9248843789100647
+        },
+        {
+          "name": "Leukemia",
+          "score": 0.41123396158218384
+        }
+      ],
+      "dalys": 7766063.220113368
+    },
+    "Multiple myeloma": {
+      "best_match": "Multiple myeloma",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Multiple myeloma",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Leukemia",
+          "score": 0.49601683020591736
+        },
+        {
+          "name": "Other malignant neoplasms",
+          "score": 0.4528438150882721
+        }
+      ],
+      "dalys": 2595594.988860918
+    },
+    "Leukemia": {
+      "best_match": "Leukemia",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Leukemia",
+          "score": 1.0000004768371582
+        },
+        {
+          "name": "Kidney cancer",
+          "score": 0.5094044208526611
+        },
+        {
+          "name": "Multiple myeloma",
+          "score": 0.49601683020591736
+        }
+      ],
+      "dalys": 10982836.18560453
+    },
+    "Other neoplasms": {
+      "best_match": "Other neoplasms",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other neoplasms",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Other malignant neoplasms",
+          "score": 0.8290983438491821
+        },
+        {
+          "name": "Other pharynx cancer",
+          "score": 0.5295050740242004
+        }
+      ],
+      "dalys": 1215448.6701364976
+    },
+    "Other malignant neoplasms": {
+      "best_match": "Other malignant neoplasms",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other malignant neoplasms",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Other neoplasms",
+          "score": 0.8290983438491821
+        },
+        {
+          "name": "Malignant neoplasm of bone and articular cartilage",
+          "score": 0.6238624453544617
+        }
+      ],
+      "dalys": 6454745.913878909
+    },
+    "Malignant neoplasm of bone and articular cartilage": {
+      "best_match": "Malignant neoplasm of bone and articular cartilage",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Malignant neoplasm of bone and articular cartilage",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Other malignant neoplasms",
+          "score": 0.6238624453544617
+        },
+        {
+          "name": "Other neoplasms",
+          "score": 0.48104730248451233
+        }
+      ],
+      "dalys": 2525827.79628869
+    },
+    "Soft tissue and other extraosseous sarcomas": {
+      "best_match": "Soft tissue and other extraosseous sarcomas",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Soft tissue and other extraosseous sarcomas",
+          "score": 1.0000008344650269
+        },
+        {
+          "name": "Other malignant neoplasms",
+          "score": 0.5136925578117371
+        },
+        {
+          "name": "Other neoplasms",
+          "score": 0.47663211822509766
+        }
+      ],
+      "dalys": 1677891.905736146
+    },
+    "Eye cancer": {
+      "best_match": "Eye cancer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Eye cancer",
+          "score": 1.0
+        },
+        {
+          "name": "Liver cancer",
+          "score": 0.5889976024627686
+        },
+        {
+          "name": "Breast cancer",
+          "score": 0.5339744091033936
+        }
+      ],
+      "manual_override": true,
+      "dalys": 468748.4871560018
+    },
+    "Neuroblastoma and other peripheral nervous cell tumors": {
+      "best_match": "Neuroblastoma and other peripheral nervous cell tumors",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Neuroblastoma and other peripheral nervous cell tumors",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Brain and central nervous system cancer",
+          "score": 0.5907260775566101
+        },
+        {
+          "name": "Other malignant neoplasms",
+          "score": 0.4963839650154114
+        }
+      ],
+      "dalys": 285478.6136708956
+    },
+    "Ischemic heart disease": {
+      "best_match": "Ischemic heart disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Ischemic heart disease",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Hypertensive heart disease",
+          "score": 0.5644180178642273
+        },
+        {
+          "name": "Rheumatic heart disease",
+          "score": 0.49517616629600525
+        }
+      ],
+      "dalys": 188360557.3226801
+    },
+    "Stroke": {
+      "best_match": "Stroke",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Stroke",
+          "score": 0.9999995231628418
+        },
+        {
+          "name": "Motor neuron disease",
+          "score": 0.4786343276500702
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.43865153193473816
+        }
+      ],
+      "manual_override": true,
+      "dalys": 160457220.63007683
+    },
+    "Hypertensive heart disease": {
+      "best_match": "Hypertensive heart disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Hypertensive heart disease",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Rheumatic heart disease",
+          "score": 0.6317844986915588
+        },
+        {
+          "name": "Other cardiovascular and circulatory diseases",
+          "score": 0.584728479385376
+        }
+      ],
+      "dalys": 25462184.707367495
+    },
+    "Rheumatic heart disease": {
+      "best_match": "Rheumatic heart disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Rheumatic heart disease",
+          "score": 1.0
+        },
+        {
+          "name": "Non-rheumatic valvular heart disease",
+          "score": 0.8264878988265991
+        },
+        {
+          "name": "Hypertensive heart disease",
+          "score": 0.6317844986915588
+        }
+      ],
+      "dalys": 13426369.18219696
+    },
+    "Non-rheumatic valvular heart disease": {
+      "best_match": "Non-rheumatic valvular heart disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Non-rheumatic valvular heart disease",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Rheumatic heart disease",
+          "score": 0.8264878988265991
+        },
+        {
+          "name": "Hypertensive heart disease",
+          "score": 0.5841038227081299
+        }
+      ],
+      "dalys": 3238184.620265596
+    },
+    "Cardiomyopathy and myocarditis": {
+      "best_match": "Cardiomyopathy and myocarditis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Cardiomyopathy and myocarditis",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Endocarditis",
+          "score": 0.653705358505249
+        },
+        {
+          "name": "Rheumatic heart disease",
+          "score": 0.5468433499336243
+        }
+      ],
+      "dalys": 11653957.527670862
+    },
+    "Atrial fibrillation and flutter": {
+      "best_match": "Atrial fibrillation and flutter",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Atrial fibrillation and flutter",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Cardiomyopathy and myocarditis",
+          "score": 0.31818559765815735
+        },
+        {
+          "name": "Ischemic heart disease",
+          "score": 0.3134192228317261
+        }
+      ],
+      "dalys": 8358893.711971431
+    },
+    "Aortic aneurysm": {
+      "best_match": "Aortic aneurysm",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Aortic aneurysm",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Rheumatic heart disease",
+          "score": 0.41630232334136963
+        },
+        {
+          "name": "Hypertensive heart disease",
+          "score": 0.391776442527771
+        }
+      ],
+      "dalys": 3107762.316075626
+    },
+    "Peripheral artery disease": {
+      "best_match": "Lower extremity peripheral arterial disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Lower extremity peripheral arterial disease",
+          "score": 0.7870354652404785
+        },
+        {
+          "name": "Other cardiovascular and circulatory diseases",
+          "score": 0.5196771025657654
+        },
+        {
+          "name": "Rheumatic heart disease",
+          "score": 0.5111837387084961
+        }
+      ],
+      "manual_override": true,
+      "dalys": 1558242.6857373822
+    },
+    "Endocarditis": {
+      "best_match": "Endocarditis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Endocarditis",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Cardiomyopathy and myocarditis",
+          "score": 0.653705358505249
+        },
+        {
+          "name": "Rheumatic heart disease",
+          "score": 0.5292292833328247
+        }
+      ],
+      "manual_override": true,
+      "dalys": 2076412.89062605
+    },
+    "Other cardiovascular and circulatory diseases": {
+      "best_match": "Other cardiovascular and circulatory diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other cardiovascular and circulatory diseases",
+          "score": 0.9999995231628418
+        },
+        {
+          "name": "Other chronic respiratory diseases",
+          "score": 0.5931532979011536
+        },
+        {
+          "name": "Hypertensive heart disease",
+          "score": 0.584728479385376
+        }
+      ],
+      "dalys": 9985522.400504963
+    },
+    "Chronic obstructive pulmonary disease": {
+      "best_match": "Chronic obstructive pulmonary disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Chronic obstructive pulmonary disease",
+          "score": 1.0
+        },
+        {
+          "name": "Other chronic respiratory diseases",
+          "score": 0.609241783618927
+        },
+        {
+          "name": "Pulmonary Arterial Hypertension",
+          "score": 0.5253716111183167
+        }
+      ],
+      "dalys": 79779695.05315077
+    },
+    "Asthma": {
+      "best_match": "Asthma",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Asthma",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Other chronic respiratory diseases",
+          "score": 0.5394264459609985
+        },
+        {
+          "name": "Upper respiratory infections",
+          "score": 0.4631566107273102
+        }
+      ],
+      "manual_override": true,
+      "dalys": 21422859.890543565
+    },
+    "Pneumoconiosis": {
+      "best_match": "Pneumoconiosis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Pneumoconiosis",
+          "score": 1.0
+        },
+        {
+          "name": "Pertussis",
+          "score": 0.46654191613197327
+        },
+        {
+          "name": "Cystic echinococcosis",
+          "score": 0.4585771858692169
+        }
+      ],
+      "dalys": 447064.5224412201
+    },
+    "Interstitial lung disease and pulmonary sarcoidosis": {
+      "best_match": "Interstitial lung disease and pulmonary sarcoidosis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Interstitial lung disease and pulmonary sarcoidosis",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Other chronic respiratory diseases",
+          "score": 0.494271457195282
+        },
+        {
+          "name": "Chronic obstructive pulmonary disease",
+          "score": 0.4514647424221039
+        }
+      ],
+      "dalys": 4042150.4889248433
+    },
+    "Other chronic respiratory diseases": {
+      "best_match": "Other chronic respiratory diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other chronic respiratory diseases",
+          "score": 1.0
+        },
+        {
+          "name": "Lower respiratory infections",
+          "score": 0.618098795413971
+        },
+        {
+          "name": "Chronic obstructive pulmonary disease",
+          "score": 0.609241783618927
+        }
+      ],
+      "dalys": 2811236.9270185316
+    },
+    "Cirrhosis and other chronic liver diseases": {
+      "best_match": "Cirrhosis and other chronic liver diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Cirrhosis and other chronic liver diseases",
+          "score": 0.9999997615814209
+        },
+        {
+          "name": "Liver cancer",
+          "score": 0.5595176815986633
+        },
+        {
+          "name": "Chronic kidney disease",
+          "score": 0.49034249782562256
+        }
+      ],
+      "dalys": 46417777.1594818
+    },
+    "Upper digestive system diseases": {
+      "best_match": "Upper digestive system diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Upper digestive system diseases",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Other digestive diseases",
+          "score": 0.770610511302948
+        },
+        {
+          "name": "Other intestinal infectious diseases",
+          "score": 0.5699105262756348
+        }
+      ],
+      "dalys": 15206382.808753757
+    },
+    "Appendicitis": {
+      "best_match": "Appendicitis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Appendicitis",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Inguinal, femoral, and abdominal hernia",
+          "score": 0.4943847060203552
+        },
+        {
+          "name": "Other unintentional injuries",
+          "score": 0.4582756757736206
+        }
+      ],
+      "manual_override": true,
+      "dalys": 1330162.7848715163
+    },
+    "Paralytic ileus and intestinal obstruction": {
+      "best_match": "Paralytic ileus and intestinal obstruction",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Paralytic ileus and intestinal obstruction",
+          "score": 1.0
+        },
+        {
+          "name": "Vascular intestinal disorders",
+          "score": 0.536273181438446
+        },
+        {
+          "name": "Other intestinal infectious diseases",
+          "score": 0.49455076456069946
+        }
+      ],
+      "dalys": 6664762.311523442
+    },
+    "Inguinal, femoral, and abdominal hernia": {
+      "best_match": "Inguinal, femoral, and abdominal hernia",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Inguinal, femoral, and abdominal hernia",
+          "score": 0.9999995827674866
+        },
+        {
+          "name": "Appendicitis",
+          "score": 0.4943847060203552
+        },
+        {
+          "name": "Paralytic ileus and intestinal obstruction",
+          "score": 0.4532877802848816
+        }
+      ],
+      "dalys": 2344644.5369550446
+    },
+    "Inflammatory bowel disease": {
+      "best_match": "Inflammatory bowel disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Inflammatory bowel disease",
+          "score": 1.0000008344650269
+        },
+        {
+          "name": "Vascular intestinal disorders",
+          "score": 0.5612190961837769
+        },
+        {
+          "name": "Diarrheal diseases",
+          "score": 0.5598737001419067
+        }
+      ],
+      "dalys": 1510783.814759216
+    },
+    "Vascular intestinal disorders": {
+      "best_match": "Vascular intestinal disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Vascular intestinal disorders",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Other digestive diseases",
+          "score": 0.5822386145591736
+        },
+        {
+          "name": "Inflammatory bowel disease",
+          "score": 0.5612190961837769
+        }
+      ],
+      "dalys": 1708446.8392166472
+    },
+    "Gallbladder and biliary diseases": {
+      "best_match": "Gallbladder and biliary diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Gallbladder and biliary diseases",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Gallbladder and biliary tract cancer",
+          "score": 0.8606826663017273
+        },
+        {
+          "name": "Other digestive diseases",
+          "score": 0.5549854636192322
+        }
+      ],
+      "dalys": 7734159.29912451
+    },
+    "Pancreatitis": {
+      "best_match": "Pancreatitis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Pancreatitis",
+          "score": 0.9999997615814209
+        },
+        {
+          "name": "Pancreatic cancer",
+          "score": 0.7417541742324829
+        },
+        {
+          "name": "Stomach cancer",
+          "score": 0.46565791964530945
+        }
+      ],
+      "manual_override": true,
+      "dalys": 4101153.965670044
+    },
+    "Other digestive diseases": {
+      "best_match": "Other digestive diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other digestive diseases",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Upper digestive system diseases",
+          "score": 0.7706104516983032
+        },
+        {
+          "name": "Other intestinal infectious diseases",
+          "score": 0.7508032321929932
+        }
+      ],
+      "dalys": 3001821.7809071476
+    },
+    "Alzheimer disease and other dementias": {
+      "best_match": "Alzheimer's disease and other dementias",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Alzheimer's disease and other dementias",
+          "score": 0.9816325902938843
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.540703535079956
+        },
+        {
+          "name": "Other mental disorders",
+          "score": 0.468750923871994
+        }
+      ],
+      "manual_override": true,
+      "dalys": 36332686.73680246
+    },
+    "Parkinson disease": {
+      "best_match": "Parkinson's disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Parkinson's disease",
+          "score": 0.9704989790916443
+        },
+        {
+          "name": "Motor neuron disease",
+          "score": 0.5764635801315308
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.5741627812385559
+        }
+      ],
+      "manual_override": true,
+      "dalys": 7471821.424322477
+    },
+    "Epilepsy": {
+      "best_match": "Idiopathic epilepsy",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Idiopathic epilepsy",
+          "score": 0.8513275980949402
+        },
+        {
+          "name": "Encephalitis",
+          "score": 0.5159748196601868
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.47663652896881104
+        }
+      ],
+      "manual_override": true,
+      "dalys": 13877827.484414238
+    },
+    "Multiple sclerosis": {
+      "best_match": "Multiple sclerosis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Multiple sclerosis",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.5386891961097717
+        },
+        {
+          "name": "Motor neuron disease",
+          "score": 0.5112631916999817
+        }
+      ],
+      "dalys": 973298.2653784076
+    },
+    "Motor neuron disease": {
+      "best_match": "Motor neuron disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Motor neuron disease",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.6864703297615051
+        },
+        {
+          "name": "Parkinson's disease",
+          "score": 0.5591071248054504
+        }
+      ],
+      "dalys": 1040565.9783974624
+    },
+    "Headache disorders": {
+      "best_match": "Headache disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Headache disorders",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.5797954201698303
+        },
+        {
+          "name": "Oral disorders",
+          "score": 0.5615633130073547
+        }
+      ],
+      "dalys": 47975675.06486085
+    },
+    "Other neurological disorders": {
+      "best_match": "Other neurological disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other neurological disorders",
+          "score": 1.0
+        },
+        {
+          "name": "Other mental disorders",
+          "score": 0.6996814012527466
+        },
+        {
+          "name": "Motor neuron disease",
+          "score": 0.6864703297615051
+        }
+      ],
+      "dalys": 4356968.89619153
+    },
+    "Schizophrenia": {
+      "best_match": "Schizophrenia",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Schizophrenia",
+          "score": 1.0
+        },
+        {
+          "name": "Other mental disorders",
+          "score": 0.5519980788230896
+        },
+        {
+          "name": "Bipolar disorder",
+          "score": 0.5340647101402283
+        }
+      ],
+      "manual_override": true,
+      "dalys": 14816611.183696533
+    },
+    "Depressive disorders": {
+      "best_match": "Depressive disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Depressive disorders",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Other mental disorders",
+          "score": 0.6690880656242371
+        },
+        {
+          "name": "Anxiety disorders",
+          "score": 0.6453911066055298
+        }
+      ],
+      "dalys": 56330361.14911696
+    },
+    "Bipolar disorder": {
+      "best_match": "Bipolar disorder",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Bipolar disorder",
+          "score": 1.0000005960464478
+        },
+        {
+          "name": "Depressive disorders",
+          "score": 0.6020029783248901
+        },
+        {
+          "name": "Other mental disorders",
+          "score": 0.5409552454948425
+        }
+      ],
+      "dalys": 8007783.132923044
+    },
+    "Anxiety disorders": {
+      "best_match": "Anxiety disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Anxiety disorders",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Depressive disorders",
+          "score": 0.6453911066055298
+        },
+        {
+          "name": "Other mental disorders",
+          "score": 0.6409869194030762
+        }
+      ],
+      "dalys": 42509645.27941539
+    },
+    "Eating disorders": {
+      "best_match": "Eating disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Eating disorders",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Oral disorders",
+          "score": 0.6139371991157532
+        },
+        {
+          "name": "Other mental disorders",
+          "score": 0.5722690224647522
+        }
+      ],
+      "dalys": 3403145.791933371
+    },
+    "Autism spectrum disorders": {
+      "best_match": "Autism spectrum disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Autism spectrum disorders",
+          "score": 1.0
+        },
+        {
+          "name": "Idiopathic developmental intellectual disability",
+          "score": 0.5606290102005005
+        },
+        {
+          "name": "Other mental disorders",
+          "score": 0.545755922794342
+        }
+      ],
+      "dalys": 11544038.080669444
+    },
+    "Attention-deficit/hyperactivity disorder": {
+      "best_match": "Attention-deficit/hyperactivity disorder",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Attention-deficit/hyperactivity disorder",
+          "score": 0.9999996423721313
+        },
+        {
+          "name": "Autism spectrum disorders",
+          "score": 0.5169073939323425
+        },
+        {
+          "name": "Idiopathic developmental intellectual disability",
+          "score": 0.48047807812690735
+        }
+      ],
+      "dalys": 1030941.3513749616
+    },
+    "Conduct disorder": {
+      "best_match": "Conduct disorder",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Conduct disorder",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Interpersonal violence",
+          "score": 0.49491605162620544
+        },
+        {
+          "name": "Other mental disorders",
+          "score": 0.46896812319755554
+        }
+      ],
+      "dalys": 5002614.360377089
+    },
+    "Idiopathic developmental intellectual disability": {
+      "best_match": "Idiopathic developmental intellectual disability",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Idiopathic developmental intellectual disability",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Autism spectrum disorders",
+          "score": 0.5606290102005005
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.5239273309707642
+        }
+      ],
+      "dalys": 3810634.655527162
+    },
+    "Other mental disorders": {
+      "best_match": "Other mental disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other mental disorders",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.6996814012527466
+        },
+        {
+          "name": "Depressive disorders",
+          "score": 0.6690880656242371
+        }
+      ],
+      "dalys": 8962343.979627114
+    },
+    "Alcohol use disorders": {
+      "best_match": "Alcohol use disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Alcohol use disorders",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Drug use disorders",
+          "score": 0.731015682220459
+        },
+        {
+          "name": "Other mental disorders",
+          "score": 0.5407483577728271
+        }
+      ],
+      "dalys": 16980984.234290704
+    },
+    "Drug use disorders": {
+      "best_match": "Drug use disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Drug use disorders",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Alcohol use disorders",
+          "score": 0.731015682220459
+        },
+        {
+          "name": "Depressive disorders",
+          "score": 0.5545310974121094
+        }
+      ],
+      "dalys": 15562161.528307352
+    },
+    "Diabetes mellitus": {
+      "best_match": "Diabetes mellitus",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Diabetes mellitus",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Pancreatitis",
+          "score": 0.4105977714061737
+        },
+        {
+          "name": "Chronic kidney disease",
+          "score": 0.3846020996570587
+        }
+      ],
+      "dalys": 78938587.05039968
+    },
+    "Chronic kidney disease": {
+      "best_match": "Chronic kidney disease",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Chronic kidney disease",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Kidney cancer",
+          "score": 0.586470365524292
+        },
+        {
+          "name": "Acute glomerulonephritis",
+          "score": 0.5040254592895508
+        }
+      ],
+      "dalys": 44453683.61051758
+    },
+    "Acute glomerulonephritis": {
+      "best_match": "Acute glomerulonephritis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Acute glomerulonephritis",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Chronic kidney disease",
+          "score": 0.5040254592895508
+        },
+        {
+          "name": "Acute hepatitis",
+          "score": 0.42491015791893005
+        }
+      ],
+      "dalys": 312303.17065783445
+    },
+    "Dermatitis": {
+      "best_match": "Dermatitis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Dermatitis",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Bacterial skin diseases",
+          "score": 0.6134594678878784
+        },
+        {
+          "name": "Other skin and subcutaneous diseases",
+          "score": 0.6096899509429932
+        }
+      ],
+      "dalys": 8177101.563788819
+    },
+    "Psoriasis": {
+      "best_match": "Psoriasis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Psoriasis",
+          "score": 1.0
+        },
+        {
+          "name": "Dermatitis",
+          "score": 0.5695324540138245
+        },
+        {
+          "name": "Fungal skin diseases",
+          "score": 0.5328225493431091
+        }
+      ],
+      "manual_override": true,
+      "dalys": 3689928.256191686
+    },
+    "Bacterial skin diseases": {
+      "best_match": "Bacterial skin diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Bacterial skin diseases",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Fungal skin diseases",
+          "score": 0.7314183712005615
+        },
+        {
+          "name": "Viral skin diseases",
+          "score": 0.669605553150177
+        }
+      ],
+      "dalys": 2269423.947498302
+    },
+    "Scabies": {
+      "best_match": "Scabies",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Scabies",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Schistosomiasis",
+          "score": 0.6178919076919556
+        },
+        {
+          "name": "Dermatitis",
+          "score": 0.5037720799446106
+        }
+      ],
+      "manual_override": true,
+      "dalys": 5315518.988184459
+    },
+    "Fungal skin diseases": {
+      "best_match": "Fungal skin diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Fungal skin diseases",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Bacterial skin diseases",
+          "score": 0.7314183712005615
+        },
+        {
+          "name": "Other skin and subcutaneous diseases",
+          "score": 0.6693123579025269
+        }
+      ],
+      "dalys": 3429496.8383021043
+    },
+    "Viral skin diseases": {
+      "best_match": "Viral skin diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Viral skin diseases",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Bacterial skin diseases",
+          "score": 0.669605553150177
+        },
+        {
+          "name": "Fungal skin diseases",
+          "score": 0.653076708316803
+        }
+      ],
+      "dalys": 4199075.027267598
+    },
+    "Acne vulgaris": {
+      "best_match": "Acne vulgaris",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Acne vulgaris",
+          "score": 1.0
+        },
+        {
+          "name": "Dermatitis",
+          "score": 0.5360096096992493
+        },
+        {
+          "name": "Bacterial skin diseases",
+          "score": 0.45716962218284607
+        }
+      ],
+      "dalys": 5125473.488867777
+    },
+    "Alopecia areata": {
+      "best_match": "Alopecia areata",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Alopecia areata",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Acne vulgaris",
+          "score": 0.4333662986755371
+        },
+        {
+          "name": "Urticaria",
+          "score": 0.40269455313682556
+        }
+      ],
+      "dalys": 571860.2706807873
+    },
+    "Pruritus": {
+      "best_match": "Pruritus",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Pruritus",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Pertussis",
+          "score": 0.668863832950592
+        },
+        {
+          "name": "Urticaria",
+          "score": 0.4639987349510193
+        }
+      ],
+      "manual_override": true,
+      "dalys": 851113.0503753112
+    },
+    "Urticaria": {
+      "best_match": "Urticaria",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Urticaria",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Dermatitis",
+          "score": 0.556430459022522
+        },
+        {
+          "name": "Psoriasis",
+          "score": 0.473341166973114
+        }
+      ],
+      "manual_override": true,
+      "dalys": 3980785.676250508
+    },
+    "Decubitus ulcer": {
+      "best_match": "Decubitus ulcer",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Decubitus ulcer",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Chagas disease",
+          "score": 0.4097350239753723
+        },
+        {
+          "name": "Stomach cancer",
+          "score": 0.40356072783470154
+        }
+      ],
+      "dalys": 803747.4037738226
+    },
+    "Other skin and subcutaneous diseases": {
+      "best_match": "Other skin and subcutaneous diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other skin and subcutaneous diseases",
+          "score": 0.9999996423721313
+        },
+        {
+          "name": "Fungal skin diseases",
+          "score": 0.6693123579025269
+        },
+        {
+          "name": "Viral skin diseases",
+          "score": 0.6519441604614258
+        }
+      ],
+      "dalys": 3530584.5483833007
+    },
+    "Blindness and vision loss": {
+      "best_match": "Blindness and vision loss",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Blindness and vision loss",
+          "score": 0.9999997615814209
+        },
+        {
+          "name": "Eye cancer",
+          "score": 0.43784523010253906
+        },
+        {
+          "name": "Age-related and other hearing loss",
+          "score": 0.3972559869289398
+        }
+      ],
+      "dalys": 29163992.73777044
+    },
+    "Age-related and other hearing loss": {
+      "best_match": "Age-related and other hearing loss",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Age-related and other hearing loss",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Blindness and vision loss",
+          "score": 0.3972559869289398
+        },
+        {
+          "name": "Otitis media",
+          "score": 0.36283135414123535
+        }
+      ],
+      "dalys": 44449944.07336713
+    },
+    "Other sense organ diseases": {
+      "best_match": "Other sense organ diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other sense organ diseases",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.5862236618995667
+        },
+        {
+          "name": "Other digestive diseases",
+          "score": 0.5422905087471008
+        }
+      ],
+      "dalys": 3713356.183090227
+    },
+    "Rheumatoid arthritis": {
+      "best_match": "Rheumatoid arthritis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Rheumatoid arthritis",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Osteoarthritis",
+          "score": 0.5517935156822205
+        },
+        {
+          "name": "Rheumatic heart disease",
+          "score": 0.5485178828239441
+        }
+      ],
+      "dalys": 3075303.1663426203
+    },
+    "Osteoarthritis": {
+      "best_match": "Osteoarthritis",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Osteoarthritis",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Rheumatoid arthritis",
+          "score": 0.5517935156822205
+        },
+        {
+          "name": "Other musculoskeletal disorders",
+          "score": 0.470716655254364
+        }
+      ],
+      "dalys": 21304565.816655383
+    },
+    "Low back pain": {
+      "best_match": "Low back pain",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Low back pain",
+          "score": 0.9999996423721313
+        },
+        {
+          "name": "Neck pain",
+          "score": 0.5116590857505798
+        },
+        {
+          "name": "Other musculoskeletal disorders",
+          "score": 0.37767156958580017
+        }
+      ],
+      "dalys": 70156962.18649575
+    },
+    "Neck pain": {
+      "best_match": "Neck pain",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Neck pain",
+          "score": 1.0
+        },
+        {
+          "name": "Low back pain",
+          "score": 0.5116590857505798
+        },
+        {
+          "name": "Headache disorders",
+          "score": 0.49752935767173767
+        }
+      ],
+      "dalys": 20415496.55499668
+    },
+    "Gout": {
+      "best_match": "Gout",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Gout",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Psoriasis",
+          "score": 0.35604128241539
+        },
+        {
+          "name": "Pruritus",
+          "score": 0.3372533917427063
+        }
+      ],
+      "manual_override": true,
+      "dalys": 1747546.2415835075
+    },
+    "Other musculoskeletal disorders": {
+      "best_match": "Other musculoskeletal disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other musculoskeletal disorders",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Other neurological disorders",
+          "score": 0.5898405313491821
+        },
+        {
+          "name": "Other cardiovascular and circulatory diseases",
+          "score": 0.4815995395183563
+        }
+      ],
+      "dalys": 45177825.367834285
+    },
+    "Congenital birth defects": {
+      "best_match": "Congenital birth defects",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Congenital birth defects",
+          "score": 1.0
+        },
+        {
+          "name": "Neonatal disorders",
+          "score": 0.6506521105766296
+        },
+        {
+          "name": "Maternal disorders",
+          "score": 0.5510972142219543
+        }
+      ],
+      "dalys": 52325332.69132468
+    },
+    "Urinary diseases and male infertility": {
+      "best_match": "Urinary diseases and male infertility",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Urinary diseases and male infertility",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Gynecological diseases",
+          "score": 0.49394476413726807
+        },
+        {
+          "name": "Prostate cancer",
+          "score": 0.4524376094341278
+        }
+      ],
+      "dalys": 11353107.892407538
+    },
+    "Gynecological diseases": {
+      "best_match": "Gynecological diseases",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Gynecological diseases",
+          "score": 0.9999997019767761
+        },
+        {
+          "name": "Uterine cancer",
+          "score": 0.5420158505439758
+        },
+        {
+          "name": "Cervical cancer",
+          "score": 0.5270277857780457
+        }
+      ],
+      "dalys": 27737635.893985625
+    },
+    "Hemoglobinopathies and hemolytic anemias": {
+      "best_match": "Hemoglobinopathies and hemolytic anemias",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Hemoglobinopathies and hemolytic anemias",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "African trypanosomiasis",
+          "score": 0.3477189242839813
+        },
+        {
+          "name": "Vitamin A deficiency",
+          "score": 0.34235021471977234
+        }
+      ],
+      "dalys": 11920415.820543597
+    },
+    "Endocrine, metabolic, blood, and immune disorders": {
+      "best_match": "Endocrine, metabolic, blood, and immune disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Endocrine, metabolic, blood, and immune disorders",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Other cardiovascular and circulatory diseases",
+          "score": 0.4512401521205902
+        },
+        {
+          "name": "Other nutritional deficiencies",
+          "score": 0.37852340936660767
+        }
+      ],
+      "dalys": 12862747.877879905
+    },
+    "Oral disorders": {
+      "best_match": "Oral disorders",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Oral disorders",
+          "score": 0.9999998211860657
+        },
+        {
+          "name": "Eating disorders",
+          "score": 0.6139371991157532
+        },
+        {
+          "name": "Headache disorders",
+          "score": 0.5615633130073547
+        }
+      ],
+      "dalys": 23239420.62383663
+    },
+    "Sudden infant death syndrome": {
+      "best_match": "Sudden infant death syndrome",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Sudden infant death syndrome",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Neonatal disorders",
+          "score": 0.6160423159599304
+        },
+        {
+          "name": "Congenital birth defects",
+          "score": 0.4716101884841919
+        }
+      ],
+      "dalys": 2746174.492763149
+    },
+    "Road injuries": {
+      "best_match": "Road injuries",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Road injuries",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Other transport injuries",
+          "score": 0.7055699825286865
+        },
+        {
+          "name": "Other unintentional injuries",
+          "score": 0.6863727569580078
+        }
+      ],
+      "manual_override": true,
+      "dalys": 65143646.66178717
+    },
+    "Other transport injuries": {
+      "best_match": "Other transport injuries",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other transport injuries",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Road injuries",
+          "score": 0.7055699825286865
+        },
+        {
+          "name": "Other unintentional injuries",
+          "score": 0.6895375847816467
+        }
+      ],
+      "dalys": 4485873.598196637
+    },
+    "Falls": {
+      "best_match": "Falls",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Falls",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Drowning",
+          "score": 0.3770200312137604
+        },
+        {
+          "name": "Road injuries",
+          "score": 0.3042106032371521
+        }
+      ],
+      "manual_override": true,
+      "dalys": 43804122.62423419
+    },
+    "Drowning": {
+      "best_match": "Drowning",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Drowning",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Poisonings",
+          "score": 0.44216614961624146
+        },
+        {
+          "name": "Self-harm",
+          "score": 0.38507166504859924
+        }
+      ],
+      "manual_override": true,
+      "dalys": 15697285.354853336
+    },
+    "Fire, heat, and hot substances": {
+      "best_match": "Fire, heat, and hot substances",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Fire, heat, and hot substances",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Environmental heat and cold exposure",
+          "score": 0.4377603232860565
+        },
+        {
+          "name": "Poisonings",
+          "score": 0.31435373425483704
+        }
+      ],
+      "dalys": 8470611.491859864
+    },
+    "Poisonings": {
+      "best_match": "Poisonings",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Poisonings",
+          "score": 0.9999995827674866
+        },
+        {
+          "name": "Self-harm",
+          "score": 0.45541322231292725
+        },
+        {
+          "name": "Drowning",
+          "score": 0.44216614961624146
+        }
+      ],
+      "manual_override": true,
+      "dalys": 2880957.559910405
+    },
+    "Exposure to mechanical forces": {
+      "best_match": "Exposure to mechanical forces",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Exposure to mechanical forces",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Exposure to forces of nature",
+          "score": 0.7800607681274414
+        },
+        {
+          "name": "Other transport injuries",
+          "score": 0.3712373673915863
+        }
+      ],
+      "dalys": 10315630.852825675
+    },
+    "Adverse effects of medical treatment": {
+      "best_match": "Adverse effects of medical treatment",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Adverse effects of medical treatment",
+          "score": 0.9999995827674866
+        },
+        {
+          "name": "Drug use disorders",
+          "score": 0.3977840542793274
+        },
+        {
+          "name": "Other unintentional injuries",
+          "score": 0.376223623752594
+        }
+      ],
+      "dalys": 4846980.934884624
+    },
+    "Animal contact": {
+      "best_match": "Animal contact",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Animal contact",
+          "score": 1.0000001192092896
+        },
+        {
+          "name": "Rabies",
+          "score": 0.4427095651626587
+        },
+        {
+          "name": "Scabies",
+          "score": 0.33902978897094727
+        }
+      ],
+      "dalys": 4888709.4560838705
+    },
+    "Foreign body": {
+      "best_match": "Foreign body",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Foreign body",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Urticaria",
+          "score": 0.35037297010421753
+        },
+        {
+          "name": "Other skin and subcutaneous diseases",
+          "score": 0.34425079822540283
+        }
+      ],
+      "dalys": 5666102.716358029
+    },
+    "Environmental heat and cold exposure": {
+      "best_match": "Environmental heat and cold exposure",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Environmental heat and cold exposure",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Fire, heat, and hot substances",
+          "score": 0.4377603232860565
+        },
+        {
+          "name": "Exposure to forces of nature",
+          "score": 0.25969451665878296
+        }
+      ],
+      "dalys": 1683247.504555038
+    },
+    "Exposure to forces of nature": {
+      "best_match": "Exposure to forces of nature",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Exposure to forces of nature",
+          "score": 1.0
+        },
+        {
+          "name": "Exposure to mechanical forces",
+          "score": 0.7800607681274414
+        },
+        {
+          "name": "Animal contact",
+          "score": 0.2686028778553009
+        }
+      ],
+      "dalys": 1092510.3723861952
+    },
+    "Other unintentional injuries": {
+      "best_match": "Other unintentional injuries",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Other unintentional injuries",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Other transport injuries",
+          "score": 0.6895375847816467
+        },
+        {
+          "name": "Road injuries",
+          "score": 0.6863727569580078
+        }
+      ],
+      "dalys": 8773812.091806827
+    },
+    "Self-harm": {
+      "best_match": "Self-harm",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Self-harm",
+          "score": 0.9999999403953552
+        },
+        {
+          "name": "Interpersonal violence",
+          "score": 0.5190206170082092
+        },
+        {
+          "name": "Poisonings",
+          "score": 0.45541322231292725
+        }
+      ],
+      "dalys": 33525091.29481815
+    },
+    "Interpersonal violence": {
+      "best_match": "Interpersonal violence",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Interpersonal violence",
+          "score": 0.9999998807907104
+        },
+        {
+          "name": "Self-harm",
+          "score": 0.5190206170082092
+        },
+        {
+          "name": "Conflict and terrorism",
+          "score": 0.5188596248626709
+        }
+      ],
+      "dalys": 26829606.60148959
+    },
+    "Conflict and terrorism": {
+      "best_match": "Conflict and terrorism",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Conflict and terrorism",
+          "score": 1.000000238418579
+        },
+        {
+          "name": "Interpersonal violence",
+          "score": 0.5188596248626709
+        },
+        {
+          "name": "Police conflict and executions",
+          "score": 0.4634019434452057
+        }
+      ],
+      "dalys": 8727823.186955787
+    },
+    "Police conflict and executions": {
+      "best_match": "Police conflict and executions",
+      "similarity": 1.0,
+      "confident": true,
+      "top_matches": [
+        {
+          "name": "Police conflict and executions",
+          "score": 1.0000003576278687
+        },
+        {
+          "name": "Conflict and terrorism",
+          "score": 0.4634019434452057
+        },
+        {
+          "name": "Interpersonal violence",
+          "score": 0.43325430154800415
+        }
+      ],
+      "dalys": 1011911.9797431168
+    }
+  }
+}

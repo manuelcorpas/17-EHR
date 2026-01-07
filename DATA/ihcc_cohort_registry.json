@@ -1,0 +1,882 @@
+{
+  "metadata": {
+    "version": "3.1",
+    "source": "IHCC Global Cohort Atlas (https://atlas.ihccglobal.org/)",
+    "reference": "Connolly et al. (2025) Communications Medicine 5:366",
+    "generated": "2025-01-07",
+    "total_cohorts": 87,
+    "notes": "Official IHCC member cohorts only"
+  },
+  "cohorts": [
+    {
+      "cohort_id": "23andme",
+      "name": "23andMe",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"23andMe\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "45andup",
+      "name": "45 and Up Study",
+      "country": "Australia",
+      "iso3": "AUS",
+      "region": "WPR",
+      "income_level": "HIC",
+      "pubmed_query": "\"45 and Up Study\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "awigen",
+      "name": "AWI-Gen",
+      "country": "South Africa",
+      "iso3": "ZAF",
+      "region": "AFR",
+      "income_level": "UMIC",
+      "pubmed_query": "(\"AWI-Gen\"[Title/Abstract] OR \"Africa Wits-INDEPTH\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "ahri",
+      "name": "Africa Health Research Institute Population Cohort",
+      "country": "South Africa",
+      "iso3": "ZAF",
+      "region": "AFR",
+      "income_level": "UMIC",
+      "pubmed_query": "(\"Africa Health Research Institute\"[Title/Abstract] OR \"AHRI Population Cohort\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "aou",
+      "name": "All of Us Research Program",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"All of Us Research Program\"[Title/Abstract] OR \"All of Us cohort\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "acscps3",
+      "name": "American Cancer Society Cancer Prevention Study-3",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Cancer Prevention Study-3\"[Title/Abstract] OR \"CPS-3\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "bgi",
+      "name": "BGI Research",
+      "country": "China",
+      "iso3": "CHN",
+      "region": "WPR",
+      "income_level": "UMIC",
+      "pubmed_query": "\"BGI Research\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "bandim",
+      "name": "Bandim Health Project",
+      "country": "Guinea-Bissau",
+      "iso3": "GNB",
+      "region": "AFR",
+      "income_level": "LIC",
+      "pubmed_query": "\"Bandim Health Project\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "biovu",
+      "name": "BioVU Vanderbilt",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"BioVU\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "bbj",
+      "name": "Biobank Japan",
+      "country": "Japan",
+      "iso3": "JPN",
+      "region": "WPR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Biobank Japan\"[Title/Abstract] OR \"BioBank Japan\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "c19genomnet",
+      "name": "C19-GenoNet",
+      "country": "International",
+      "iso3": "INT",
+      "region": "INT",
+      "income_level": "HIC",
+      "pubmed_query": "\"C19-GenoNet\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "constances",
+      "name": "CONSTANCES",
+      "country": "France",
+      "iso3": "FRA",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"CONSTANCES\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "cts",
+      "name": "California Teachers Study",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"California Teachers Study\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "cptp",
+      "name": "Canadian Partnership for Tomorrow's Health",
+      "country": "Canada",
+      "iso3": "CAN",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"CanPath\"[Title/Abstract] OR \"Canadian Partnership for Tomorrow\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "cpsii",
+      "name": "Cancer Prevention Study II Nutrition Cohort",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Cancer Prevention Study II\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "chop_cag",
+      "name": "Center for Applied Genomics, CHOP",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Center for Applied Genomics\"[Title/Abstract] AND \"Children's Hospital of Philadelphia\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "ckb",
+      "name": "China Kadoorie Biobank",
+      "country": "China",
+      "iso3": "CHN",
+      "region": "WPR",
+      "income_level": "UMIC",
+      "pubmed_query": "\"China Kadoorie Biobank\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "peace",
+      "name": "China PEACE Million Persons Project",
+      "country": "China",
+      "iso3": "CHN",
+      "region": "WPR",
+      "income_level": "UMIC",
+      "pubmed_query": "\"China PEACE\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "nepal_csh",
+      "name": "Civil Service Hospital Nepal",
+      "country": "Nepal",
+      "iso3": "NPL",
+      "region": "SEAR",
+      "income_level": "LMIC",
+      "pubmed_query": "(\"Civil Service Hospital\"[Title/Abstract] AND \"Nepal\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "coronagenes",
+      "name": "Coronagenes/University of Edinburgh",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Coronagenes\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "dnb",
+      "name": "Danish National Biobank",
+      "country": "Denmark",
+      "iso3": "DNK",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Danish National Biobank\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "dnbc",
+      "name": "Danish National Birth Cohort",
+      "country": "Denmark",
+      "iso3": "DNK",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Danish National Birth Cohort\"[Title/Abstract] OR \"DNBC\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "dpuk",
+      "name": "Dementias Platform UK",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Dementias Platform UK\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "elsa_brasil",
+      "name": "ELSA-Brasil",
+      "country": "Brazil",
+      "iso3": "BRA",
+      "region": "AMR",
+      "income_level": "UMIC",
+      "pubmed_query": "\"ELSA-Brasil\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "echo",
+      "name": "ECHO Cohort",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Environmental influences on Child Health Outcomes\"[Title/Abstract] OR \"ECHO cohort\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "epihealth",
+      "name": "EpiHealth",
+      "country": "Sweden",
+      "iso3": "SWE",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"EpiHealth\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "estbb",
+      "name": "Estonian Biobank",
+      "country": "Estonia",
+      "iso3": "EST",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Estonian Biobank\"[Title/Abstract] OR \"Estonian Genome Center\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "epic",
+      "name": "European Prospective Investigation into Cancer and Nutrition",
+      "country": "International",
+      "iso3": "INT",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"EPIC cohort\"[Title/Abstract] OR \"EPIC-Norfolk\"[Title/Abstract] OR \"European Prospective Investigation into Cancer\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "fmc",
+      "name": "Finnish Maternity Cohort Serum Bank",
+      "country": "Finland",
+      "iso3": "FIN",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Finnish Maternity Cohort\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "geisinger",
+      "name": "Geisinger MyCode Community Health Initiative",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Geisinger MyCode\"[Title/Abstract] OR \"MyCode Community Health Initiative\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "genv",
+      "name": "Generation Victoria",
+      "country": "Australia",
+      "iso3": "AUS",
+      "region": "WPR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Generation Victoria\"[Title/Abstract] OR \"GenV\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "generations",
+      "name": "Generations Study",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Generations Study\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "genes_health",
+      "name": "Genes & Health",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Genes and Health\"[Title/Abstract] OR \"Genes & Health\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "gel",
+      "name": "Genomics England / 100,000 Genomes Project",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Genomics England\"[Title/Abstract] OR \"100,000 Genomes Project\"[Title/Abstract] OR \"100000 Genomes\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "nako",
+      "name": "German National Cohort (NAKO)",
+      "country": "Germany",
+      "iso3": "DEU",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"German National Cohort\"[Title/Abstract] OR \"NAKO\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "golestan",
+      "name": "Golestan Cohort Study",
+      "country": "Iran",
+      "iso3": "IRN",
+      "region": "EMR",
+      "income_level": "LMIC",
+      "pubmed_query": "\"Golestan Cohort Study\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "hunt",
+      "name": "HUNT Study",
+      "country": "Norway",
+      "iso3": "NOR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"HUNT Study\"[Title/Abstract] OR \"HUNT 70+\"[Title/Abstract] OR \"Nord-Tr\u00f8ndelag Health Study\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "healthy_nevada",
+      "name": "Healthy Nevada",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Healthy Nevada Project\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "iganga_mayuge",
+      "name": "Iganga Mayuge HDSS",
+      "country": "Uganda",
+      "iso3": "UGA",
+      "region": "AFR",
+      "income_level": "LIC",
+      "pubmed_query": "(\"Iganga Mayuge\"[Title/Abstract] OR \"MUCHAP\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "langebio",
+      "name": "International Laboratory for Human Genome Research",
+      "country": "Mexico",
+      "iso3": "MEX",
+      "region": "AMR",
+      "income_level": "UMIC",
+      "pubmed_query": "(\"LANGEBIO\"[Title/Abstract] OR \"International Laboratory for Human Genome Research\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "israel_genome",
+      "name": "Israel Genome Project",
+      "country": "Israel",
+      "iso3": "ISR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Israel Genome Project\"[Title/Abstract] OR \"Israeli biobank\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "jphc",
+      "name": "JPHC Study",
+      "country": "Japan",
+      "iso3": "JPN",
+      "region": "WPR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"JPHC Study\"[Title/Abstract] OR \"Japan Public Health Center-based Prospective Study\"[Title/Abstract] OR \"JPHC-NEXT\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "jhu",
+      "name": "Johns Hopkins University Biobank",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Johns Hopkins\"[Title/Abstract] AND \"biobank\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "kemri",
+      "name": "KEMRI-Wellcome",
+      "country": "Kenya",
+      "iso3": "KEN",
+      "region": "AFR",
+      "income_level": "LMIC",
+      "pubmed_query": "\"KEMRI-Wellcome\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "kprb",
+      "name": "Kaiser Permanente Research Bank",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Kaiser Permanente Research Bank\"[Title/Abstract] OR \"KPRB\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "kcps",
+      "name": "Korean Cancer Prevention Study",
+      "country": "South Korea",
+      "iso3": "KOR",
+      "region": "WPR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Korean Cancer Prevention Study\"[Title/Abstract] OR \"KCPS-II\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "koges",
+      "name": "Korean Genome and Epidemiology Study",
+      "country": "South Korea",
+      "iso3": "KOR",
+      "region": "WPR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Korean Genome and Epidemiology Study\"[Title/Abstract] OR \"KoGES\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "lifepath",
+      "name": "LIFEPATH",
+      "country": "International",
+      "iso3": "INT",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"LIFEPATH consortium\"[Title/Abstract] OR \"LIFEPATH cohort\"[Title/Abstract] OR \"Lifecourse biological pathways\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "lifegene",
+      "name": "LifeGene",
+      "country": "Sweden",
+      "iso3": "SWE",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"LifeGene\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "mauco",
+      "name": "MAUCO",
+      "country": "Chile",
+      "iso3": "CHL",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"MAUCO\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "mvp",
+      "name": "Million Veteran Program",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Million Veteran Program\"[Title/Abstract] OR \"MVP cohort\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "mws",
+      "name": "Million Women Study",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Million Women Study\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "mec",
+      "name": "Multiethnic Cohort Study",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Multiethnic Cohort\"[Title/Abstract] OR \"Multi-ethnic Cohort\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "nhsii",
+      "name": "Nurses' Health Study II",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Nurses' Health Study II\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "niccc",
+      "name": "NICCC",
+      "country": "Israel",
+      "iso3": "ISR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"NICCC\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "unam",
+      "name": "National Autonomous University of Mexico",
+      "country": "Mexico",
+      "iso3": "MEX",
+      "region": "AMR",
+      "income_level": "UMIC",
+      "pubmed_query": "(\"UNAM\"[Title/Abstract] AND \"biobank\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "nbk",
+      "name": "National Biobank of Korea",
+      "country": "South Korea",
+      "iso3": "KOR",
+      "region": "WPR",
+      "income_level": "HIC",
+      "pubmed_query": "\"National Biobank of Korea\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "ntr",
+      "name": "Netherlands Twin Registry",
+      "country": "Netherlands",
+      "iso3": "NLD",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Netherlands Twin Registry\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "nshds",
+      "name": "Northern Sweden Health and Disease Study",
+      "country": "Sweden",
+      "iso3": "SWE",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Northern Sweden Health and Disease\"[Title/Abstract] OR \"NSHDS\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "nfbc",
+      "name": "Norwegian Family Based Life Course Study",
+      "country": "Norway",
+      "iso3": "NOR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Norwegian Family Based Life Course\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "moba",
+      "name": "Norwegian Mother and Child Cohort Study",
+      "country": "Norway",
+      "iso3": "NOR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Norwegian Mother and Child Cohort\"[Title/Abstract] OR \"MoBa\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "nhs",
+      "name": "Nurses' Health Study",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Nurses' Health Study\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "persian",
+      "name": "PERSIAN Cohort Study",
+      "country": "Iran",
+      "iso3": "IRN",
+      "region": "EMR",
+      "income_level": "LMIC",
+      "pubmed_query": "(\"PERSIAN Cohort\"[Title/Abstract] OR \"Prospective Epidemiological Research Studies in IrAN\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "pgr",
+      "name": "Pakistan Genomic Resource",
+      "country": "Pakistan",
+      "iso3": "PAK",
+      "region": "EMR",
+      "income_level": "LMIC",
+      "pubmed_query": "(\"Pakistan Genomic Resource\"[Title/Abstract] OR \"PGR cohort\"[Title/Abstract] OR \"Genes and Health Pakistan\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "niehs",
+      "name": "Personalized Genes and Environment Study",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Personalized Genes and Environment\"[Title/Abstract] OR \"NIEHS Environmental Polymorphisms\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "plco",
+      "name": "PLCO Cancer Screening Trial",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"PLCO\"[Title/Abstract] OR \"Prostate, Lung, Colorectal and Ovarian Cancer Screening Trial\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "qbb",
+      "name": "Qatar Biobank",
+      "country": "Qatar",
+      "iso3": "QAT",
+      "region": "EMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Qatar Biobank\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "qgp",
+      "name": "Qatar Genome Programme",
+      "country": "Qatar",
+      "iso3": "QAT",
+      "region": "EMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Qatar Genome Programme\"[Title/Abstract] OR \"Qatar Genome Program\"[Title/Abstract] OR \"QGP\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "saprin",
+      "name": "SAPRIN",
+      "country": "South Africa",
+      "iso3": "ZAF",
+      "region": "AFR",
+      "income_level": "UMIC",
+      "pubmed_query": "(\"SAPRIN\"[Title/Abstract] OR \"South African Population Research Infrastructure Network\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "sg100k",
+      "name": "SG100K",
+      "country": "Singapore",
+      "iso3": "SGP",
+      "region": "WPR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"SG100K\"[Title/Abstract] OR \"SG10K\"[Title/Abstract] OR \"Singapore 10K\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "simpler",
+      "name": "SIMPLER",
+      "country": "Sweden",
+      "iso3": "SWE",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Swedish Mammography Cohort\"[Title/Abstract] OR \"Cohort of Swedish Men\"[Title/Abstract] OR \"SIMPLER cohort\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "snb",
+      "name": "Saudi National Biobank",
+      "country": "Saudi Arabia",
+      "iso3": "SAU",
+      "region": "EMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Saudi National Biobank\"[Title/Abstract] OR \"Saudi Human Genome Program\"[Title/Abstract] OR \"SHGP\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "sequencebio",
+      "name": "Sequence Bio",
+      "country": "Canada",
+      "iso3": "CAN",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Sequence Bio\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "smwhs",
+      "name": "Shanghai Men and Women's Health Studies",
+      "country": "China",
+      "iso3": "CHN",
+      "region": "WPR",
+      "income_level": "UMIC",
+      "pubmed_query": "(\"Shanghai Men's Health Study\"[Title/Abstract] OR \"Shanghai Women's Health Study\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "sab",
+      "name": "South Asia Biobank",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"South Asia Biobank\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "seac",
+      "name": "South(east) Asian Cohorts",
+      "country": "International",
+      "iso3": "INT",
+      "region": "SEAR",
+      "income_level": "LMIC",
+      "pubmed_query": "\"Southeast Asian Cohorts\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "twb",
+      "name": "Taiwan Biobank",
+      "country": "Taiwan",
+      "iso3": "TWN",
+      "region": "WPR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Taiwan Biobank\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "myc",
+      "name": "The Malaysian Cohort",
+      "country": "Malaysia",
+      "iso3": "MYS",
+      "region": "WPR",
+      "income_level": "UMIC",
+      "pubmed_query": "(\"Malaysian Cohort\"[Title/Abstract] OR \"The Malaysian Cohort\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "tommo",
+      "name": "Tohoku Medical Megabank",
+      "country": "Japan",
+      "iso3": "JPN",
+      "region": "WPR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"Tohoku Medical Megabank\"[Title/Abstract] OR \"ToMMo\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "ucl",
+      "name": "UCL Biobank",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"UCL\"[Title/Abstract] AND \"biobank\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "ukb",
+      "name": "UK Biobank",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "\"UK Biobank\"[Title/Abstract]",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "ukbdc",
+      "name": "UK Blood Donor Cohorts",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"UK Blood Donor\"[Title/Abstract] OR \"INTERVAL study\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "uklwc",
+      "name": "UKCTOCS Longitudinal Women's Cohort",
+      "country": "United Kingdom",
+      "iso3": "GBR",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"UKCTOCS\"[Title/Abstract] OR \"UK Collaborative Trial of Ovarian Cancer Screening\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "usnih",
+      "name": "US NIH Biobank",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"NIH\"[Title/Abstract] AND \"biobank\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "ugr",
+      "name": "Uganda Genome Resource",
+      "country": "Uganda",
+      "iso3": "UGA",
+      "region": "AFR",
+      "income_level": "LIC",
+      "pubmed_query": "(\"Uganda Genome Resource\"[Title/Abstract] OR \"Uganda General Population Cohort\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "vhmpp",
+      "name": "VHM&PP",
+      "country": "Austria",
+      "iso3": "AUT",
+      "region": "EUR",
+      "income_level": "HIC",
+      "pubmed_query": "(\"VHM&PP\"[Title/Abstract] OR \"Vorarlberg Health Monitoring\"[Title/Abstract])",
+      "ihcc_member": true
+    },
+    {
+      "cohort_id": "whi",
+      "name": "Women's Health Initiative",
+      "country": "United States",
+      "iso3": "USA",
+      "region": "AMR",
+      "income_level": "HIC",
+      "pubmed_query": "\"Women's Health Initiative\"[Title/Abstract]",
+      "ihcc_member": true
+    }
+  ]
+}
