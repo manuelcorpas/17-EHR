@@ -1,23 +1,79 @@
 {
-  "version": "HEIM-Biobank v1.0",
-  "generated": "2025-12-25T13:48:29.757380",
-  "equityRatio": 322.22,
+  "version": "HEIM-Biobank v2.0 (IHCC)",
+  "generated": "2026-01-07T08:37:08.695652",
+  "equityRatio": 55.07,
   "equityInterpretation": "HIC-biased",
   "summary": {
     "hic": {
-      "biobanks": 20,
-      "publications": 74432,
-      "publicationShare": 98.8,
-      "averageEas": 40.9
+      "biobanks": 235,
+      "publications": 33950,
+      "publicationShare": 93.2,
+      "averageEas": 7.6
     },
     "lmic": {
-      "biobanks": 7,
-      "publications": 924,
-      "publicationShare": 1.2,
-      "averageEas": 14.3
+      "biobanks": 38,
+      "publications": 2466,
+      "publicationShare": 6.8,
+      "averageEas": 8.0
     }
   },
   "globalSouthDiseases": [
+    {
+      "id": "Malaria",
+      "name": "Malaria",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 17,
+      "dalys": 55.17
+    },
+    {
+      "id": "Dengue",
+      "name": "Dengue",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 2.08
+    },
+    {
+      "id": "Schistosomiasis",
+      "name": "Schistosomiasis",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 1.75
+    },
+    {
+      "id": "Lymphatic filariasis",
+      "name": "Lymphatic filariasis",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 1.31
+    },
+    {
+      "id": "Cysticercosis",
+      "name": "Cysticercosis",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 1.24
+    },
+    {
+      "id": "Guinea worm disease",
+      "name": "Guinea worm disease",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 0.0
+    },
+    {
+      "id": "Scabies",
+      "name": "Scabies",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 1,
+      "dalys": 5.32
+    },
     {
       "id": "Drowning",
       "name": "Drowning",
@@ -27,379 +83,355 @@
       "dalys": 15.7
     },
     {
+      "id": "Animal contact",
+      "name": "Animal contact",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 4.89
+    },
+    {
+      "id": "Typhoid and paratyphoid",
+      "name": "Typhoid and paratyphoid",
+      "gapScore": 90.0,
+      "severity": "Critical",
+      "publications": 21,
+      "dalys": 8.1
+    },
+    {
+      "id": "Encephalitis",
+      "name": "Encephalitis",
+      "gapScore": 90.0,
+      "severity": "Critical",
+      "publications": 4,
+      "dalys": 4.95
+    },
+    {
+      "id": "Conflict and terrorism",
+      "name": "Conflict and terrorism",
+      "gapScore": 90.0,
+      "severity": "Critical",
+      "publications": 6,
+      "dalys": 8.73
+    },
+    {
       "id": "Iodine deficiency",
       "name": "Iodine deficiency",
-      "gapScore": 92.0,
+      "gapScore": 82.0,
       "severity": "Critical",
-      "publications": 10,
+      "publications": 28,
       "dalys": 2.25
     },
     {
-      "id": "Cysticercosis",
-      "name": "Cysticercosis",
+      "id": "Otitis media",
+      "name": "Otitis media",
       "gapScore": 80.0,
       "severity": "Critical",
-      "publications": 2,
-      "dalys": 1.24
+      "publications": 31,
+      "dalys": 2.48
     },
     {
-      "id": "Scabies",
-      "name": "Scabies",
+      "id": "Tuberculosis",
+      "name": "Tuberculosis",
       "gapScore": 80.0,
       "severity": "Critical",
-      "publications": 6,
-      "dalys": 5.32
+      "publications": 42,
+      "dalys": 46.98
     },
     {
-      "id": "Tetanus",
-      "name": "Tetanus",
+      "id": "Diarrheal diseases",
+      "name": "Diarrheal diseases",
+      "gapScore": 80.0,
+      "severity": "Critical",
+      "publications": 46,
+      "dalys": 58.98
+    },
+    {
+      "id": "Invasive Non-typhoidal Salmonella (iNTS)",
+      "name": "Invasive Non-typhoidal Salmonella (iNTS)",
+      "gapScore": 80.0,
+      "severity": "Critical",
+      "publications": 31,
+      "dalys": 4.74
+    },
+    {
+      "id": "Leishmaniasis",
+      "name": "Leishmaniasis",
+      "gapScore": 80.0,
+      "severity": "Critical",
+      "publications": 1,
+      "dalys": 0.78
+    },
+    {
+      "id": "Meningitis",
+      "name": "Meningitis",
+      "gapScore": 80.0,
+      "severity": "Critical",
+      "publications": 29,
+      "dalys": 14.51
+    },
+    {
+      "id": "Road injuries",
+      "name": "Road injuries",
+      "gapScore": 80.0,
+      "severity": "Critical",
+      "publications": 53,
+      "dalys": 65.14
+    },
+    {
+      "id": "Measles",
+      "name": "Measles",
       "gapScore": 70.0,
       "severity": "High",
-      "publications": 5,
-      "dalys": 1.34
+      "publications": 18,
+      "dalys": 4.88
     },
     {
       "id": "Pertussis",
       "name": "Pertussis",
       "gapScore": 70.0,
       "severity": "High",
-      "publications": 18,
+      "publications": 21,
       "dalys": 4.61
     },
     {
-      "id": "Road injuries",
-      "name": "Road injuries",
+      "id": "Hemoglobinopathies and hemolytic anemias",
+      "name": "Hemoglobinopathies and hemolytic anemias",
       "gapScore": 70.0,
       "severity": "High",
-      "publications": 108,
-      "dalys": 65.14
+      "publications": 38,
+      "dalys": 11.92
     },
     {
-      "id": "Animal contact",
-      "name": "Animal contact",
+      "id": "Fire, heat, and hot substances",
+      "name": "Fire, heat, and hot substances",
       "gapScore": 70.0,
       "severity": "High",
-      "publications": 12,
-      "dalys": 4.89
+      "publications": 18,
+      "dalys": 8.47
+    },
+    {
+      "id": "Protein-energy malnutrition",
+      "name": "Protein-energy malnutrition",
+      "gapScore": 65.0,
+      "severity": "High",
+      "publications": 57,
+      "dalys": 11.83
     },
     {
       "id": "Vitamin A deficiency",
       "name": "Vitamin A deficiency",
       "gapScore": 65.0,
       "severity": "High",
-      "publications": 67,
+      "publications": 85,
       "dalys": 1.1
+    },
+    {
+      "id": "HIV/AIDS",
+      "name": "HIV/AIDS",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 157,
+      "dalys": 40.27
+    },
+    {
+      "id": "Lower respiratory infections",
+      "name": "Lower respiratory infections",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 167,
+      "dalys": 82.53
     },
     {
       "id": "Upper respiratory infections",
       "name": "Upper respiratory infections",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 87,
+      "publications": 63,
       "dalys": 5.68
-    },
-    {
-      "id": "Otitis media",
-      "name": "Otitis media",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 93,
-      "dalys": 2.48
-    },
-    {
-      "id": "Tuberculosis",
-      "name": "Tuberculosis",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 170,
-      "dalys": 46.98
-    },
-    {
-      "id": "Diarrheal diseases",
-      "name": "Diarrheal diseases",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 251,
-      "dalys": 58.98
-    },
-    {
-      "id": "Typhoid and paratyphoid",
-      "name": "Typhoid and paratyphoid",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 65,
-      "dalys": 8.1
-    },
-    {
-      "id": "Malaria",
-      "name": "Malaria",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 173,
-      "dalys": 55.17
-    },
-    {
-      "id": "Lymphatic filariasis",
-      "name": "Lymphatic filariasis",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 8,
-      "dalys": 1.31
-    },
-    {
-      "id": "Measles",
-      "name": "Measles",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 25,
-      "dalys": 4.88
-    },
-    {
-      "id": "Lower respiratory infections",
-      "name": "Lower respiratory infections",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 723,
-      "dalys": 82.53
     },
     {
       "id": "COVID-19",
       "name": "COVID-19",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 1983,
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 553,
       "dalys": 212.01
     },
     {
-      "id": "Dengue",
-      "name": "Dengue",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 47,
-      "dalys": 2.08
-    },
-    {
-      "id": "Schistosomiasis",
-      "name": "Schistosomiasis",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 27,
-      "dalys": 1.75
-    },
-    {
-      "id": "Diphtheria",
-      "name": "Diphtheria",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 6,
-      "dalys": 0.32
-    },
-    {
-      "id": "Protein-energy malnutrition",
-      "name": "Protein-energy malnutrition",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 118,
-      "dalys": 11.83
-    },
-    {
-      "id": "Dietary iron deficiency",
-      "name": "Dietary iron deficiency",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 174,
-      "dalys": 32.32
-    },
-    {
-      "id": "Hemoglobinopathies and hemolytic anemias",
-      "name": "Hemoglobinopathies and hemolytic anemias",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 80,
-      "dalys": 11.92
-    },
-    {
-      "id": "Fire, heat, and hot substances",
-      "name": "Fire, heat, and hot substances",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 60,
-      "dalys": 8.47
-    },
-    {
-      "id": "Conflict and terrorism",
-      "name": "Conflict and terrorism",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 51,
-      "dalys": 8.73
-    },
-    {
-      "id": "HIV/AIDS",
-      "name": "HIV/AIDS",
-      "gapScore": 40.0,
-      "severity": "Moderate",
-      "publications": 684,
-      "dalys": 40.27
+      "id": "Rabies",
+      "name": "Rabies",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 3,
+      "dalys": 0.57
     },
     {
       "id": "Onchocerciasis",
       "name": "Onchocerciasis",
-      "gapScore": 40.0,
-      "severity": "Moderate",
-      "publications": 39,
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 9,
       "dalys": 1.26
     },
     {
       "id": "Cystic echinococcosis",
       "name": "Cystic echinococcosis",
-      "gapScore": 40.0,
-      "severity": "Moderate",
-      "publications": 4,
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 1,
       "dalys": 0.11
     },
     {
-      "id": "Encephalitis",
-      "name": "Encephalitis",
-      "gapScore": 40.0,
+      "id": "Tetanus",
+      "name": "Tetanus",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 11,
+      "dalys": 1.34
+    },
+    {
+      "id": "Dietary iron deficiency",
+      "name": "Dietary iron deficiency",
+      "gapScore": 60.0,
+      "severity": "High",
+      "publications": 138,
+      "dalys": 32.32
+    },
+    {
+      "id": "Intestinal nematode infections",
+      "name": "Intestinal nematode infections",
+      "gapScore": 50.0,
       "severity": "Moderate",
-      "publications": 55,
-      "dalys": 4.95
+      "publications": 17,
+      "dalys": 1.38
     },
     {
       "id": "Neonatal disorders",
       "name": "Neonatal disorders",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 1599,
+      "dalys": 186.37
+    },
+    {
+      "id": "Police conflict and executions",
+      "name": "Police conflict and executions",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 21,
+      "dalys": 1.01
+    },
+    {
+      "id": "Exposure to forces of nature",
+      "name": "Exposure to forces of nature",
+      "gapScore": 50.0,
+      "severity": "Moderate",
+      "publications": 24,
+      "dalys": 1.09
+    },
+    {
+      "id": "Sexually transmitted infections excluding HIV",
+      "name": "Sexually transmitted infections excluding HIV",
       "gapScore": 40.0,
       "severity": "Moderate",
-      "publications": 1917,
-      "dalys": 186.37
+      "publications": 101,
+      "dalys": 7.95
+    },
+    {
+      "id": "Leprosy",
+      "name": "Leprosy",
+      "gapScore": 40.0,
+      "severity": "Moderate",
+      "publications": 1,
+      "dalys": 0.02
+    },
+    {
+      "id": "Other neglected tropical diseases",
+      "name": "Other neglected tropical diseases",
+      "gapScore": 40.0,
+      "severity": "Moderate",
+      "publications": 57,
+      "dalys": 4.22
+    },
+    {
+      "id": "Acute hepatitis",
+      "name": "Acute hepatitis",
+      "gapScore": 40.0,
+      "severity": "Moderate",
+      "publications": 73,
+      "dalys": 4.23
+    },
+    {
+      "id": "Diphtheria",
+      "name": "Diphtheria",
+      "gapScore": 40.0,
+      "severity": "Moderate",
+      "publications": 10,
+      "dalys": 0.32
     },
     {
       "id": "Rheumatic heart disease",
       "name": "Rheumatic heart disease",
       "gapScore": 40.0,
       "severity": "Moderate",
-      "publications": 263,
+      "publications": 151,
       "dalys": 13.43
-    },
-    {
-      "id": "Sexually transmitted infections excluding HIV",
-      "name": "Sexually transmitted infections excluding HIV",
-      "gapScore": 30.0,
-      "severity": "Low",
-      "publications": 243,
-      "dalys": 7.95
-    },
-    {
-      "id": "Invasive Non-typhoidal Salmonella (iNTS)",
-      "name": "Invasive Non-typhoidal Salmonella (iNTS)",
-      "gapScore": 30.0,
-      "severity": "Low",
-      "publications": 163,
-      "dalys": 4.74
-    },
-    {
-      "id": "Other neglected tropical diseases",
-      "name": "Other neglected tropical diseases",
-      "gapScore": 30.0,
-      "severity": "Low",
-      "publications": 109,
-      "dalys": 4.22
-    },
-    {
-      "id": "Meningitis",
-      "name": "Meningitis",
-      "gapScore": 30.0,
-      "severity": "Low",
-      "publications": 459,
-      "dalys": 14.51
     },
     {
       "id": "Yellow fever",
       "name": "Yellow fever",
-      "gapScore": 20.0,
+      "gapScore": 30.0,
       "severity": "Low",
-      "publications": 35,
+      "publications": 21,
       "dalys": 0.32
-    },
-    {
-      "id": "Intestinal nematode infections",
-      "name": "Intestinal nematode infections",
-      "gapScore": 20.0,
-      "severity": "Low",
-      "publications": 95,
-      "dalys": 1.38
-    },
-    {
-      "id": "Leishmaniasis",
-      "name": "Leishmaniasis",
-      "gapScore": 20.0,
-      "severity": "Low",
-      "publications": 67,
-      "dalys": 0.78
     },
     {
       "id": "Trachoma",
       "name": "Trachoma",
       "gapScore": 20.0,
       "severity": "Low",
-      "publications": 16,
+      "publications": 13,
       "dalys": 0.12
     },
     {
-      "id": "Leprosy",
-      "name": "Leprosy",
+      "id": "Ebola",
+      "name": "Ebola",
       "gapScore": 20.0,
       "severity": "Low",
-      "publications": 26,
-      "dalys": 0.02
-    },
-    {
-      "id": "Guinea worm disease",
-      "name": "Guinea worm disease",
-      "gapScore": 20.0,
-      "severity": "Low",
-      "publications": 3,
+      "publications": 18,
       "dalys": 0.0
     },
     {
-      "id": "Acute hepatitis",
-      "name": "Acute hepatitis",
+      "id": "Zika virus",
+      "name": "Zika virus",
       "gapScore": 20.0,
       "severity": "Low",
-      "publications": 235,
-      "dalys": 4.23
+      "publications": 2,
+      "dalys": 0.0
     },
     {
-      "id": "Exposure to forces of nature",
-      "name": "Exposure to forces of nature",
+      "id": "Interpersonal violence",
+      "name": "Interpersonal violence",
       "gapScore": 20.0,
       "severity": "Low",
-      "publications": 81,
-      "dalys": 1.09
+      "publications": 1399,
+      "dalys": 26.83
     },
     {
       "id": "Other intestinal infectious diseases",
       "name": "Other intestinal infectious diseases",
       "gapScore": 10.0,
       "severity": "Low",
-      "publications": 258,
+      "publications": 107,
       "dalys": 0.11
-    },
-    {
-      "id": "Rabies",
-      "name": "Rabies",
-      "gapScore": 10.0,
-      "severity": "Low",
-      "publications": 79,
-      "dalys": 0.57
     },
     {
       "id": "Chagas disease",
       "name": "Chagas disease",
       "gapScore": 10.0,
       "severity": "Low",
-      "publications": 104,
+      "publications": 50,
       "dalys": 0.24
     },
     {
@@ -407,7 +439,7 @@
       "name": "African trypanosomiasis",
       "gapScore": 10.0,
       "severity": "Low",
-      "publications": 685,
+      "publications": 560,
       "dalys": 0.06
     },
     {
@@ -415,31 +447,15 @@
       "name": "Food-borne trematodiases",
       "gapScore": 10.0,
       "severity": "Low",
-      "publications": 395,
+      "publications": 162,
       "dalys": 1.0
-    },
-    {
-      "id": "Ebola",
-      "name": "Ebola",
-      "gapScore": 10.0,
-      "severity": "Low",
-      "publications": 61,
-      "dalys": 0.0
-    },
-    {
-      "id": "Zika virus",
-      "name": "Zika virus",
-      "gapScore": 10.0,
-      "severity": "Low",
-      "publications": 53,
-      "dalys": 0.0
     },
     {
       "id": "Maternal disorders",
       "name": "Maternal disorders",
       "gapScore": 10.0,
       "severity": "Low",
-      "publications": 2099,
+      "publications": 3235,
       "dalys": 12.31
     },
     {
@@ -447,7 +463,7 @@
       "name": "Other nutritional deficiencies",
       "gapScore": 10.0,
       "severity": "Low",
-      "publications": 451,
+      "publications": 662,
       "dalys": 1.43
     },
     {
@@ -455,259 +471,2527 @@
       "name": "Cervical cancer",
       "gapScore": 10.0,
       "severity": "Low",
-      "publications": 1710,
+      "publications": 1350,
       "dalys": 9.91
-    },
-    {
-      "id": "Interpersonal violence",
-      "name": "Interpersonal violence",
-      "gapScore": 10.0,
-      "severity": "Low",
-      "publications": 2787,
-      "dalys": 26.83
-    },
-    {
-      "id": "Police conflict and executions",
-      "name": "Police conflict and executions",
-      "gapScore": 10.0,
-      "severity": "Low",
-      "publications": 136,
-      "dalys": 1.01
     }
   ],
   "byRegion": [
     {
-      "region": "AMR",
-      "name": "Americas",
-      "incomeCategory": "Mixed",
-      "biobanks": 9,
-      "publications": 49264,
-      "averageEas": 34.0
-    },
-    {
       "region": "EUR",
       "name": "Europe",
       "incomeCategory": "HIC",
-      "biobanks": 11,
-      "publications": 24445,
-      "averageEas": 41.0
+      "biobanks": 85,
+      "publications": 20722,
+      "averageEas": 9.4
+    },
+    {
+      "region": "AMR",
+      "name": "Americas",
+      "incomeCategory": "Mixed",
+      "biobanks": 112,
+      "publications": 11133,
+      "averageEas": 6.7
     },
     {
       "region": "WPR",
       "name": "Western Pacific",
       "incomeCategory": "HIC",
-      "biobanks": 3,
-      "publications": 1269,
-      "averageEas": 38.1
-    },
-    {
-      "region": "AFR",
-      "name": "Africa",
-      "incomeCategory": "LMIC",
-      "biobanks": 3,
-      "publications": 204,
-      "averageEas": 10.2
+      "biobanks": 53,
+      "publications": 3712,
+      "averageEas": 7.6
     },
     {
       "region": "EMR",
       "name": "Eastern Mediterranean",
       "incomeCategory": "LMIC",
+      "biobanks": 9,
+      "publications": 560,
+      "averageEas": 9.4
+    },
+    {
+      "region": "AFR",
+      "name": "Africa",
+      "incomeCategory": "LMIC",
+      "biobanks": 12,
+      "publications": 278,
+      "averageEas": 4.5
+    },
+    {
+      "region": "SEAR",
+      "name": "South-East Asia",
+      "incomeCategory": "LMIC",
       "biobanks": 1,
-      "publications": 174,
-      "averageEas": 17.4
+      "publications": 10,
+      "averageEas": 1.7
+    },
+    {
+      "region": "INT",
+      "name": "INT",
+      "incomeCategory": "HIC",
+      "biobanks": 1,
+      "publications": 1,
+      "averageEas": 1.0
     }
   ],
   "hicBiobanks": [
     {
-      "id": "emerge",
-      "name": "eMERGE Network",
-      "country": "United States",
-      "publications": 47755,
-      "eas": 98.3
-    },
-    {
-      "id": "uk_biobank",
+      "id": "ukb",
       "name": "UK Biobank",
       "country": "United Kingdom",
-      "publications": 13341,
-      "eas": 84.9
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 13084,
+      "eas": 83.3
     },
     {
-      "id": "decode",
-      "name": "deCODE Genetics",
-      "country": "Iceland",
-      "publications": 5604,
-      "eas": 69.4
+      "id": "whi",
+      "name": "Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 3296,
+      "eas": 52.8
     },
     {
-      "id": "finngen",
-      "name": "FinnGen",
-      "country": "Finland",
-      "publications": 2683,
-      "eas": 60.3
+      "id": "nhs",
+      "name": "Nurses' Health Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2093,
+      "eas": 49.1
+    },
+    {
+      "id": "epic",
+      "name": "European Prospective Investigation into Cancer and Nutrition",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1796,
+      "eas": 44.7
     },
     {
       "id": "hunt",
       "name": "HUNT Study",
       "country": "Norway",
-      "publications": 1152,
-      "eas": 48.2
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1185,
+      "eas": 48.0
     },
     {
-      "id": "lifelines",
-      "name": "LifeLines",
-      "country": "Netherlands",
-      "publications": 730,
-      "eas": 46.4
+      "id": "nhsii; nhs",
+      "name": "Nurses' Health Study II; Nurses' Health Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 991,
+      "eas": 42.3
     },
     {
-      "id": "all_of_us",
+      "id": "moba",
+      "name": "Norwegian Mother and Child Cohort Study",
+      "country": "Norway",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 934,
+      "eas": 38.6
+    },
+    {
+      "id": "plco",
+      "name": "PLCO Cancer Screening Trial",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 928,
+      "eas": 30.4
+    },
+    {
+      "id": "aou",
       "name": "All of Us Research Program",
       "country": "United States",
-      "publications": 613,
-      "eas": 42.0
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 777,
+      "eas": 48.5
     },
     {
-      "id": "taiwan_biobank",
+      "id": "koges",
+      "name": "Korean Genome and Epidemiology Study",
+      "country": "South Korea",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 710,
+      "eas": 34.7
+    },
+    {
+      "id": "gel",
+      "name": "Genomics England / 100,000 Genomes Project",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 649,
+      "eas": 43.0
+    },
+    {
+      "id": "dnbc",
+      "name": "Danish National Birth Cohort",
+      "country": "Denmark",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 612,
+      "eas": 43.5
+    },
+    {
+      "id": "estbb",
+      "name": "Estonian Biobank",
+      "country": "Estonia",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 574,
+      "eas": 47.8
+    },
+    {
+      "id": "twb",
       "name": "Taiwan Biobank",
       "country": "Taiwan",
-      "publications": 482,
-      "eas": 35.3
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 522,
+      "eas": 35.0
+    },
+    {
+      "id": "jphc",
+      "name": "JPHC Study",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 442,
+      "eas": 32.2
+    },
+    {
+      "id": "45andup",
+      "name": "45 and Up Study",
+      "country": "Australia",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 432,
+      "eas": 36.7
     },
     {
       "id": "mvp",
       "name": "Million Veteran Program",
       "country": "United States",
-      "publications": 327,
-      "eas": 38.9
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 324,
+      "eas": 37.9
     },
     {
-      "id": "swedish_twin",
-      "name": "Swedish Twin Registry",
+      "id": "mec",
+      "name": "Multiethnic Cohort Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 311,
+      "eas": 28.8
+    },
+    {
+      "id": "cpsii",
+      "name": "Cancer Prevention Study II Nutrition Cohort",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 293,
+      "eas": 27.7
+    },
+    {
+      "id": "simpler",
+      "name": "SIMPLER",
       "country": "Sweden",
-      "publications": 289,
-      "eas": 37.4
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 277,
+      "eas": 29.7
     },
     {
-      "id": "biobank_japan",
-      "name": "BioBank Japan",
+      "id": "echo",
+      "name": "ECHO Cohort",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 268,
+      "eas": 19.9
+    },
+    {
+      "id": "tommo",
+      "name": "Tohoku Medical Megabank",
       "country": "Japan",
-      "publications": 271,
-      "eas": 40.2
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 235,
+      "eas": 26.4
     },
     {
       "id": "constances",
       "name": "CONSTANCES",
       "country": "France",
-      "publications": 222,
-      "eas": 34.3
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 231,
+      "eas": 35.6
     },
     {
-      "id": "topmed",
-      "name": "TOPMed",
+      "id": "23andme",
+      "name": "23andMe",
       "country": "United States",
-      "publications": 196,
-      "eas": 24.0
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 226,
+      "eas": 34.7
     },
     {
-      "id": "generation_scotland",
-      "name": "Generation Scotland",
-      "country": "United Kingdom",
-      "publications": 161,
-      "eas": 23.4
-    },
-    {
-      "id": "biovu",
-      "name": "BioVU",
-      "country": "United States",
-      "publications": 155,
-      "eas": 36.7
+      "id": "bbj",
+      "name": "Biobank Japan",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 208,
+      "eas": 37.7
     },
     {
       "id": "nako",
       "name": "German National Cohort (NAKO)",
       "country": "Germany",
-      "publications": 138,
-      "eas": 21.2
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 163,
+      "eas": 38.2
     },
     {
-      "id": "estonian_biobank",
-      "name": "Estonian Biobank",
-      "country": "Estonia",
-      "publications": 116,
-      "eas": 18.6
+      "id": "ukbdc",
+      "name": "UK Blood Donor Cohorts",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 147,
+      "eas": 25.0
     },
     {
-      "id": "geisinger_mycode",
-      "name": "Geisinger MyCode",
+      "id": "mws",
+      "name": "Million Women Study",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 144,
+      "eas": 22.9
+    },
+    {
+      "id": "cts",
+      "name": "California Teachers Study",
       "country": "United States",
-      "publications": 96,
-      "eas": 28.6
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 141,
+      "eas": 20.6
     },
     {
-      "id": "mgb_biobank",
-      "name": "Mass General Brigham Biobank",
+      "id": "biovu",
+      "name": "BioVU Vanderbilt",
       "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 119,
+      "eas": 28.2
+    },
+    {
+      "id": "nshds",
+      "name": "Northern Sweden Health and Disease Study",
+      "country": "Sweden",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 99,
+      "eas": 22.4
+    },
+    {
+      "id": "acscps3",
+      "name": "American Cancer Society Cancer Prevention Study-3",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
       "publications": 92,
-      "eas": 24.0
+      "eas": 18.8
     },
     {
-      "id": "danish_national",
+      "id": "uklwc",
+      "name": "UKCTOCS Longitudinal Women's Cohort",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 90,
+      "eas": 10.8
+    },
+    {
+      "id": "bbj; ukb",
+      "name": "Biobank Japan; UK Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 86,
+      "eas": 18.1
+    },
+    {
+      "id": "mvp; ukb",
+      "name": "Million Veteran Program; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 78,
+      "eas": 22.0
+    },
+    {
+      "id": "23andme; ukb",
+      "name": "23andMe; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 69,
+      "eas": 12.5
+    },
+    {
+      "id": "generations",
+      "name": "Generations Study",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 69,
+      "eas": 11.7
+    },
+    {
+      "id": "estbb; ukb",
+      "name": "Estonian Biobank; UK Biobank",
+      "country": "Estonia",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 60,
+      "eas": 17.3
+    },
+    {
+      "id": "fmc",
+      "name": "Finnish Maternity Cohort Serum Bank",
+      "country": "Finland",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 56,
+      "eas": 14.3
+    },
+    {
+      "id": "mws; whi",
+      "name": "Million Women Study; Women's Health Initiative",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 55,
+      "eas": 11.3
+    },
+    {
+      "id": "geisinger",
+      "name": "Geisinger MyCode Community Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 50,
+      "eas": 23.4
+    },
+    {
+      "id": "epihealth",
+      "name": "EpiHealth",
+      "country": "Sweden",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 43,
+      "eas": 15.0
+    },
+    {
+      "id": "epic; ukb",
+      "name": "European Prospective Investigation into Cancer and Nutrition; UK Biobank",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 40,
+      "eas": 19.7
+    },
+    {
+      "id": "nhs; whi",
+      "name": "Nurses' Health Study; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 39,
+      "eas": 13.4
+    },
+    {
+      "id": "cpsii; kcps",
+      "name": "Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 38,
+      "eas": 14.1
+    },
+    {
+      "id": "lifepath",
+      "name": "LIFEPATH",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 38,
+      "eas": 4.8
+    },
+    {
+      "id": "aou; ukb",
+      "name": "All of Us Research Program; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 33,
+      "eas": 9.5
+    },
+    {
+      "id": "ntr",
+      "name": "Netherlands Twin Registry",
+      "country": "Netherlands",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 31,
+      "eas": 8.2
+    },
+    {
+      "id": "gel; ukb",
+      "name": "Genomics England / 100,000 Genomes Project; UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 30,
+      "eas": 8.9
+    },
+    {
+      "id": "vhmpp",
+      "name": "VHM&PP",
+      "country": "Austria",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 28,
+      "eas": 13.5
+    },
+    {
+      "id": "genes_health",
+      "name": "Genes & Health",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 26,
+      "eas": 6.6
+    },
+    {
+      "id": "lifegene",
+      "name": "LifeGene",
+      "country": "Sweden",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 26,
+      "eas": 8.6
+    },
+    {
+      "id": "biovu; ukb",
+      "name": "BioVU Vanderbilt; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 23,
+      "eas": 11.2
+    },
+    {
+      "id": "hunt; ukb",
+      "name": "HUNT Study; UK Biobank",
+      "country": "Norway",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 22,
+      "eas": 11.0
+    },
+    {
+      "id": "ukb; usnih",
+      "name": "UK Biobank; US NIH Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 22,
+      "eas": 5.0
+    },
+    {
+      "id": "kcps",
+      "name": "Korean Cancer Prevention Study",
+      "country": "South Korea",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 20,
+      "eas": 11.8
+    },
+    {
+      "id": "cptp",
+      "name": "Canadian Partnership for Tomorrow's Health",
+      "country": "Canada",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 19,
+      "eas": 8.7
+    },
+    {
+      "id": "dnbc; moba",
+      "name": "Danish National Birth Cohort; Norwegian Mother and Child Cohort Study",
+      "country": "Denmark",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 18,
+      "eas": 11.8
+    },
+    {
+      "id": "ukb; ukbdc",
+      "name": "UK Biobank; UK Blood Donor Cohorts",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 17,
+      "eas": 3.9
+    },
+    {
+      "id": "usnih",
+      "name": "US NIH Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 17,
+      "eas": 3.6
+    },
+    {
+      "id": "healthy_nevada",
+      "name": "Healthy Nevada",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 15,
+      "eas": 3.3
+    },
+    {
+      "id": "twb; ukb",
+      "name": "Taiwan Biobank; UK Biobank",
+      "country": "Taiwan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 15,
+      "eas": 4.4
+    },
+    {
+      "id": "dpuk",
+      "name": "Dementias Platform UK",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 14,
+      "eas": 5.1
+    },
+    {
+      "id": "genv",
+      "name": "Generation Victoria",
+      "country": "Australia",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 14,
+      "eas": 7.3
+    },
+    {
+      "id": "cpsii; plco",
+      "name": "Cancer Prevention Study II Nutrition Cohort; PLCO Cancer Screening Trial",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 13,
+      "eas": 6.0
+    },
+    {
+      "id": "estbb; mvp",
+      "name": "Estonian Biobank; Million Veteran Program",
+      "country": "Estonia",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 13,
+      "eas": 5.3
+    },
+    {
+      "id": "nbk",
+      "name": "National Biobank of Korea",
+      "country": "South Korea",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 13,
+      "eas": 2.1
+    },
+    {
+      "id": "nhs; ukb",
+      "name": "Nurses' Health Study; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 13,
+      "eas": 4.4
+    },
+    {
+      "id": "plco; ukb",
+      "name": "PLCO Cancer Screening Trial; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 12,
+      "eas": 8.5
+    },
+    {
+      "id": "geisinger; ukb",
+      "name": "Geisinger MyCode Community Health Initiative; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 11,
+      "eas": 7.7
+    },
+    {
+      "id": "ukb; whi",
+      "name": "UK Biobank; Women's Health Initiative",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 11,
+      "eas": 8.1
+    },
+    {
+      "id": "nhs; plco",
+      "name": "Nurses' Health Study; PLCO Cancer Screening Trial",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 10,
+      "eas": 8.3
+    },
+    {
+      "id": "plco; uklwc",
+      "name": "PLCO Cancer Screening Trial; UKCTOCS Longitudinal Women's Cohort",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 10,
+      "eas": 2.1
+    },
+    {
+      "id": "cpsii; nhs",
+      "name": "Cancer Prevention Study II Nutrition Cohort; Nurses' Health Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 9,
+      "eas": 3.5
+    },
+    {
+      "id": "epic; nhs",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 9,
+      "eas": 4.7
+    },
+    {
+      "id": "nako; ukb",
+      "name": "German National Cohort (NAKO); UK Biobank",
+      "country": "Germany",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 9,
+      "eas": 2.2
+    },
+    {
+      "id": "koges; ukb",
+      "name": "Korean Genome and Epidemiology Study; UK Biobank",
+      "country": "South Korea",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 9,
+      "eas": 3.1
+    },
+    {
+      "id": "chop_cag",
+      "name": "Center for Applied Genomics, CHOP",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 8,
+      "eas": 3.5
+    },
+    {
+      "id": "dnb",
       "name": "Danish National Biobank",
       "country": "Denmark",
-      "publications": 9,
-      "eas": 6.5
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 8,
+      "eas": 6.1
+    },
+    {
+      "id": "sab",
+      "name": "South Asia Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 8,
+      "eas": 2.5
+    },
+    {
+      "id": "kprb",
+      "name": "Kaiser Permanente Research Bank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 7,
+      "eas": 13.0
+    },
+    {
+      "id": "nhsii; nhs; whi",
+      "name": "Nurses' Health Study II; Nurses' Health Study; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 7,
+      "eas": 2.7
+    },
+    {
+      "id": "sg100k",
+      "name": "SG100K",
+      "country": "Singapore",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 7,
+      "eas": 1.1
+    },
+    {
+      "id": "bbj; mvp",
+      "name": "Biobank Japan; Million Veteran Program",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 5,
+      "eas": 2.1
+    },
+    {
+      "id": "cpsii; mec; nhs",
+      "name": "Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study; Nurses' Health Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 5,
+      "eas": 1.6
+    },
+    {
+      "id": "estbb; gel",
+      "name": "Estonian Biobank; Genomics England / 100,000 Genomes Project",
+      "country": "Estonia",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 5,
+      "eas": 1.9
+    },
+    {
+      "id": "jhu; ukb",
+      "name": "Johns Hopkins University Biobank; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 5,
+      "eas": 3.1
+    },
+    {
+      "id": "kprb; ukb",
+      "name": "Kaiser Permanente Research Bank; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 5,
+      "eas": 1.1
+    },
+    {
+      "id": "moba; ukb",
+      "name": "Norwegian Mother and Child Cohort Study; UK Biobank",
+      "country": "Norway",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 5,
+      "eas": 5.5
+    },
+    {
+      "id": "bbj; ckb",
+      "name": "Biobank Japan; China Kadoorie Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 4,
+      "eas": 0.8
+    },
+    {
+      "id": "bbj; tommo",
+      "name": "Biobank Japan; Tohoku Medical Megabank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 4,
+      "eas": 6.4
+    },
+    {
+      "id": "bbj; twb",
+      "name": "Biobank Japan; Taiwan Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 4,
+      "eas": 2.0
+    },
+    {
+      "id": "dnbc; nhsii; nhs",
+      "name": "Danish National Birth Cohort; Nurses' Health Study II; Nurses' Health Study",
+      "country": "Denmark",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 4,
+      "eas": 3.1
+    },
+    {
+      "id": "epic; nshds",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Northern Sweden Health and Disease Study",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 4,
+      "eas": 2.5
+    },
+    {
+      "id": "mws; ukb",
+      "name": "Million Women Study; UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 4,
+      "eas": 2.2
+    },
+    {
+      "id": "plco; whi",
+      "name": "PLCO Cancer Screening Trial; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 4,
+      "eas": 1.2
+    },
+    {
+      "id": "ucl",
+      "name": "UCL Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 4,
+      "eas": 0.9
+    },
+    {
+      "id": "23andme; estbb; ukb",
+      "name": "23andMe; Estonian Biobank; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 2.9
+    },
+    {
+      "id": "aou; biovu",
+      "name": "All of Us Research Program; BioVU Vanderbilt",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 2.1
+    },
+    {
+      "id": "aou; gel",
+      "name": "All of Us Research Program; Genomics England / 100,000 Genomes Project",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 0.3
+    },
+    {
+      "id": "biovu; mvp",
+      "name": "BioVU Vanderbilt; Million Veteran Program",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 1.7
+    },
+    {
+      "id": "bbj; koges",
+      "name": "Biobank Japan; Korean Genome and Epidemiology Study",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 0.0
+    },
+    {
+      "id": "bbj; twb; ukb",
+      "name": "Biobank Japan; Taiwan Biobank; UK Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 0.5
+    },
+    {
+      "id": "cpsii; kcps; koges",
+      "name": "Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 1.3
+    },
+    {
+      "id": "epihealth; lifegene",
+      "name": "EpiHealth; LifeGene",
+      "country": "Sweden",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 1.7
+    },
+    {
+      "id": "epic; plco",
+      "name": "European Prospective Investigation into Cancer and Nutrition; PLCO Cancer Screening Trial",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 7.0
+    },
+    {
+      "id": "genes_health; ukb",
+      "name": "Genes & Health; UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 1.2
+    },
+    {
+      "id": "gel; mvp",
+      "name": "Genomics England / 100,000 Genomes Project; Million Veteran Program",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 0.7
+    },
+    {
+      "id": "healthy_nevada; ukb",
+      "name": "Healthy Nevada; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 0.8
+    },
+    {
+      "id": "mec; whi",
+      "name": "Multiethnic Cohort Study; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 2.2
+    },
+    {
+      "id": "nhsii; nhs; ukb",
+      "name": "Nurses' Health Study II; Nurses' Health Study; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 2.4
+    },
+    {
+      "id": "45andup; plco",
+      "name": "45 and Up Study; PLCO Cancer Screening Trial",
+      "country": "Australia",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.2
+    },
+    {
+      "id": "aou; mvp",
+      "name": "All of Us Research Program; Million Veteran Program",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.0
+    },
+    {
+      "id": "aou; twb",
+      "name": "All of Us Research Program; Taiwan Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.0
+    },
+    {
+      "id": "aou; bbj; ukb",
+      "name": "All of Us Research Program; Biobank Japan; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.0
+    },
+    {
+      "id": "aou; whi",
+      "name": "All of Us Research Program; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 2.0
+    },
+    {
+      "id": "acscps3; cpsii",
+      "name": "American Cancer Society Cancer Prevention Study-3; Cancer Prevention Study II Nutrition Cohort",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.5
+    },
+    {
+      "id": "biovu; bbj; ukb",
+      "name": "BioVU Vanderbilt; Biobank Japan; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.5
+    },
+    {
+      "id": "bbj; ckb; ukb",
+      "name": "Biobank Japan; China Kadoorie Biobank; UK Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.8
+    },
+    {
+      "id": "bbj; estbb",
+      "name": "Biobank Japan; Estonian Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.5
+    },
+    {
+      "id": "bbj; ckb; estbb; mvp",
+      "name": "Biobank Japan; China Kadoorie Biobank; Estonian Biobank; Million Veteran Program",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.7
+    },
+    {
+      "id": "bbj; mvp; ukb",
+      "name": "Biobank Japan; Million Veteran Program; UK Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.2
+    },
+    {
+      "id": "cts; whi",
+      "name": "California Teachers Study; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.3
+    },
+    {
+      "id": "cpsii; epic",
+      "name": "Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.5
+    },
+    {
+      "id": "cpsii; kcps; ukb",
+      "name": "Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 5.7
+    },
+    {
+      "id": "cpsii; whi",
+      "name": "Cancer Prevention Study II Nutrition Cohort; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.7
+    },
+    {
+      "id": "cpsii; epic; nhs",
+      "name": "Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.0
+    },
+    {
+      "id": "cpsii; mec; nhs; whi",
+      "name": "Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study; Nurses' Health Study; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.8
+    },
+    {
+      "id": "dnb; dnbc",
+      "name": "Danish National Biobank; Danish National Birth Cohort",
+      "country": "Denmark",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.8
+    },
+    {
+      "id": "dpuk; ukb",
+      "name": "Dementias Platform UK; UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.5
+    },
+    {
+      "id": "epihealth; simpler",
+      "name": "EpiHealth; SIMPLER",
+      "country": "Sweden",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.8
+    },
+    {
+      "id": "estbb; hunt",
+      "name": "Estonian Biobank; HUNT Study",
+      "country": "Estonia",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.3
+    },
+    {
+      "id": "estbb; whi",
+      "name": "Estonian Biobank; Women's Health Initiative",
+      "country": "Estonia",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.7
+    },
+    {
+      "id": "estbb; gel; ukb",
+      "name": "Estonian Biobank; Genomics England / 100,000 Genomes Project; UK Biobank",
+      "country": "Estonia",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.5
+    },
+    {
+      "id": "epic; generations",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Generations Study",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.8
+    },
+    {
+      "id": "gel; mvp; ukb",
+      "name": "Genomics England / 100,000 Genomes Project; Million Veteran Program; UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.2
+    },
+    {
+      "id": "jphc; smwhs",
+      "name": "JPHC Study; Shanghai Men and Women's Health Studies",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.5
+    },
+    {
+      "id": "koges; nbk",
+      "name": "Korean Genome and Epidemiology Study; National Biobank of Korea",
+      "country": "South Korea",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.8
+    },
+    {
+      "id": "mec; plco",
+      "name": "Multiethnic Cohort Study; PLCO Cancer Screening Trial",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.3
+    },
+    {
+      "id": "mec; ukb",
+      "name": "Multiethnic Cohort Study; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.8
+    },
+    {
+      "id": "plco; smwhs",
+      "name": "PLCO Cancer Screening Trial; Shanghai Men and Women's Health Studies",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 1.0
+    },
+    {
+      "id": "tommo; ukb",
+      "name": "Tohoku Medical Megabank; UK Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.5
+    },
+    {
+      "id": "23andme; aou; ukb",
+      "name": "23andMe; All of Us Research Program; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.4
+    },
+    {
+      "id": "23andme; biovu; estbb",
+      "name": "23andMe; BioVU Vanderbilt; Estonian Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "23andme; mvp; ukb",
+      "name": "23andMe; Million Veteran Program; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "23andme; estbb",
+      "name": "23andMe; Estonian Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "23andme; gel; mvp; ukb",
+      "name": "23andMe; Genomics England / 100,000 Genomes Project; Million Veteran Program; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "23andme; genes_health; ukb",
+      "name": "23andMe; Genes & Health; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.5
+    },
+    {
+      "id": "23andme; bbj; ukb",
+      "name": "23andMe; Biobank Japan; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "23andme; moba",
+      "name": "23andMe; Norwegian Mother and Child Cohort Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "23andme; biovu",
+      "name": "23andMe; BioVU Vanderbilt",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.2
+    },
+    {
+      "id": "23andme; gel; whi",
+      "name": "23andMe; Genomics England / 100,000 Genomes Project; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.2
+    },
+    {
+      "id": "23andme; moba; usnih",
+      "name": "23andMe; Norwegian Mother and Child Cohort Study; US NIH Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.3
+    },
+    {
+      "id": "23andme; hunt; ukb",
+      "name": "23andMe; HUNT Study; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "aou; twb; ukb",
+      "name": "All of Us Research Program; Taiwan Biobank; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 5.5
+    },
+    {
+      "id": "aou; twb; ukb; usnih",
+      "name": "All of Us Research Program; Taiwan Biobank; UK Biobank; US NIH Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.2
+    },
+    {
+      "id": "aou; bbj",
+      "name": "All of Us Research Program; Biobank Japan",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.3
+    },
+    {
+      "id": "aou; usnih",
+      "name": "All of Us Research Program; US NIH Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "aou; biovu; ukb; usnih",
+      "name": "All of Us Research Program; BioVU Vanderbilt; UK Biobank; US NIH Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "aou; geisinger",
+      "name": "All of Us Research Program; Geisinger MyCode Community Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 6.9
+    },
+    {
+      "id": "aou; ckb; estbb; mvp; ukb",
+      "name": "All of Us Research Program; China Kadoorie Biobank; Estonian Biobank; Million Veteran Program; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "aou; mvp; ukb",
+      "name": "All of Us Research Program; Million Veteran Program; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "aou; gel; ukb",
+      "name": "All of Us Research Program; Genomics England / 100,000 Genomes Project; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.2
+    },
+    {
+      "id": "aou; tommo",
+      "name": "All of Us Research Program; Tohoku Medical Megabank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "aou; mvp; plco; ukb",
+      "name": "All of Us Research Program; Million Veteran Program; PLCO Cancer Screening Trial; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "aou; ukb; usnih",
+      "name": "All of Us Research Program; UK Biobank; US NIH Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "biovu; whi",
+      "name": "BioVU Vanderbilt; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "biovu; bbj",
+      "name": "BioVU Vanderbilt; Biobank Japan",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "biovu; bbj; ckb; estbb; hunt; qbb; twb; ukb; ugr",
+      "name": "BioVU Vanderbilt; Biobank Japan; China Kadoorie Biobank; Estonian Biobank; HUNT Study; Qatar Biobank; Taiwan Biobank; UK Biobank; Uganda Genome Resource",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "biovu; geisinger; moba",
+      "name": "BioVU Vanderbilt; Geisinger MyCode Community Health Initiative; Norwegian Mother and Child Cohort Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "biovu; mvp; ukb; usnih",
+      "name": "BioVU Vanderbilt; Million Veteran Program; UK Biobank; US NIH Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "biovu; geisinger",
+      "name": "BioVU Vanderbilt; Geisinger MyCode Community Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "biovu; bbj; mvp; ukb",
+      "name": "BioVU Vanderbilt; Biobank Japan; Million Veteran Program; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "biovu; usnih",
+      "name": "BioVU Vanderbilt; US NIH Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "biovu; mec; whi",
+      "name": "BioVU Vanderbilt; Multiethnic Cohort Study; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.5
+    },
+    {
+      "id": "bbj; koges; ukb",
+      "name": "Biobank Japan; Korean Genome and Epidemiology Study; UK Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "bbj; koges; twb",
+      "name": "Biobank Japan; Korean Genome and Epidemiology Study; Taiwan Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.3
+    },
+    {
+      "id": "bbj; nbk",
+      "name": "Biobank Japan; National Biobank of Korea",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "bbj; ckb; twb",
+      "name": "Biobank Japan; China Kadoorie Biobank; Taiwan Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "bbj; cpsii; kcps; koges",
+      "name": "Biobank Japan; Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.3
+    },
+    {
+      "id": "bbj; ckb; koges",
+      "name": "Biobank Japan; China Kadoorie Biobank; Korean Genome and Epidemiology Study",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 5.7
+    },
+    {
+      "id": "bbj; ckb; estbb; whi",
+      "name": "Biobank Japan; China Kadoorie Biobank; Estonian Biobank; Women's Health Initiative",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "bbj; tommo; ukb",
+      "name": "Biobank Japan; Tohoku Medical Megabank; UK Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "bbj; estbb; ukb",
+      "name": "Biobank Japan; Estonian Biobank; UK Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.5
+    },
+    {
+      "id": "bbj; ckb; tommo; ukb",
+      "name": "Biobank Japan; China Kadoorie Biobank; Tohoku Medical Megabank; UK Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "bbj; cpsii; kcps; koges; twb; ukb",
+      "name": "Biobank Japan; Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study; Taiwan Biobank; UK Biobank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "c19genomnet",
+      "name": "C19-GenoNet",
+      "country": "International",
+      "region": "INT",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "constances; nako; ukb",
+      "name": "CONSTANCES; German National Cohort (NAKO); UK Biobank",
+      "country": "France",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.2
+    },
+    {
+      "id": "constances; ukb",
+      "name": "CONSTANCES; UK Biobank",
+      "country": "France",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "constances; epic; hunt; plco",
+      "name": "CONSTANCES; European Prospective Investigation into Cancer and Nutrition; HUNT Study; PLCO Cancer Screening Trial",
+      "country": "France",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "cts; mec",
+      "name": "California Teachers Study; Multiethnic Cohort Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "cts; nhs",
+      "name": "California Teachers Study; Nurses' Health Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "cts; mec; nhs",
+      "name": "California Teachers Study; Multiethnic Cohort Study; Nurses' Health Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "cpsii; epic; nshds",
+      "name": "Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition; Northern Sweden Health and Disease Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "cpsii; mec",
+      "name": "Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "echo; whi",
+      "name": "ECHO Cohort; Women's Health Initiative",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.3
+    },
+    {
+      "id": "estbb; moba; ukb",
+      "name": "Estonian Biobank; Norwegian Mother and Child Cohort Study; UK Biobank",
+      "country": "Estonia",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "estbb; mvp; ukb",
+      "name": "Estonian Biobank; Million Veteran Program; UK Biobank",
+      "country": "Estonia",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "epic; mvp; ukb",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Million Veteran Program; UK Biobank",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.5
+    },
+    {
+      "id": "epic; nhs; simpler",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study; SIMPLER",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "epic; whi",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Women's Health Initiative",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "epic; hunt",
+      "name": "European Prospective Investigation into Cancer and Nutrition; HUNT Study",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "epic; nhs; smwhs",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study; Shanghai Men and Women's Health Studies",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "epic; mws; ukb",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Million Women Study; UK Biobank",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "epic; plco; whi",
+      "name": "European Prospective Investigation into Cancer and Nutrition; PLCO Cancer Screening Trial; Women's Health Initiative",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "epic; gel",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Genomics England / 100,000 Genomes Project",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.3
+    },
+    {
+      "id": "epic; mec",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Multiethnic Cohort Study",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "epic; nhsii; nhs",
+      "name": "European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study II; Nurses' Health Study",
+      "country": "International",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.3
+    },
+    {
+      "id": "fmc; hunt",
+      "name": "Finnish Maternity Cohort Serum Bank; HUNT Study",
+      "country": "Finland",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "generations; ukb",
+      "name": "Generations Study; UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "generations; nhsii; nhs",
+      "name": "Generations Study; Nurses' Health Study II; Nurses' Health Study",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "genes_health; gel; ukb",
+      "name": "Genes & Health; Genomics England / 100,000 Genomes Project; UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "gel; ucl; ukb",
+      "name": "Genomics England / 100,000 Genomes Project; UCL Biobank; UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "nako; twb; usnih",
+      "name": "German National Cohort (NAKO); Taiwan Biobank; US NIH Biobank",
+      "country": "Germany",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "hunt; nhs",
+      "name": "HUNT Study; Nurses' Health Study",
+      "country": "Norway",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.2
+    },
+    {
+      "id": "hunt; plco",
+      "name": "HUNT Study; PLCO Cancer Screening Trial",
+      "country": "Norway",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "hunt; nshds",
+      "name": "HUNT Study; Northern Sweden Health and Disease Study",
+      "country": "Norway",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "hunt; moba",
+      "name": "HUNT Study; Norwegian Mother and Child Cohort Study",
+      "country": "Norway",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "jphc; tommo",
+      "name": "JPHC Study; Tohoku Medical Megabank",
+      "country": "Japan",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 5.0
+    },
+    {
+      "id": "jhu",
+      "name": "Johns Hopkins University Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.2
+    },
+    {
+      "id": "kcps; koges",
+      "name": "Korean Cancer Prevention Study; Korean Genome and Epidemiology Study",
+      "country": "South Korea",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "mvp; ukb; usnih",
+      "name": "Million Veteran Program; UK Biobank; US NIH Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "mws; ukb; whi",
+      "name": "Million Women Study; UK Biobank; Women's Health Initiative",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "mws; plco",
+      "name": "Million Women Study; PLCO Cancer Screening Trial",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "mec; plco; smwhs",
+      "name": "Multiethnic Cohort Study; PLCO Cancer Screening Trial; Shanghai Men and Women's Health Studies",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.2
+    },
+    {
+      "id": "mec; nhs",
+      "name": "Multiethnic Cohort Study; Nurses' Health Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "nhsii; nshds; nhs",
+      "name": "Nurses' Health Study II; Northern Sweden Health and Disease Study; Nurses' Health Study",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "nbk; usnih",
+      "name": "National Biobank of Korea; US NIH Biobank",
+      "country": "South Korea",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "nshds; plco",
+      "name": "Northern Sweden Health and Disease Study; PLCO Cancer Screening Trial",
+      "country": "Sweden",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "nhs; smwhs",
+      "name": "Nurses' Health Study; Shanghai Men and Women's Health Studies",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "plco; ucl; ukb",
+      "name": "PLCO Cancer Screening Trial; UCL Biobank; UK Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "plco; ukb; usnih",
+      "name": "PLCO Cancer Screening Trial; UK Biobank; US NIH Biobank",
+      "country": "United States",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.3
+    },
+    {
+      "id": "sg100k; snb",
+      "name": "SG100K; Saudi National Biobank",
+      "country": "Singapore",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.2
+    },
+    {
+      "id": "ucl; uklwc",
+      "name": "UCL Biobank; UKCTOCS Longitudinal Women's Cohort",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "ucl; ukb",
+      "name": "UCL Biobank; UK Biobank",
+      "country": "United Kingdom",
+      "region": "EUR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.3
     }
   ],
   "lmicBiobanks": [
     {
-      "id": "china_kadoorie",
+      "id": "elsa_brasil",
+      "name": "ELSA-Brasil",
+      "country": "Brazil",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 649,
+      "eas": 38.0
+    },
+    {
+      "id": "ckb",
       "name": "China Kadoorie Biobank",
       "country": "China",
-      "publications": 516,
-      "eas": 38.7
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 527,
+      "eas": 38.9
     },
     {
-      "id": "qatar_biobank",
+      "id": "smwhs",
+      "name": "Shanghai Men and Women's Health Studies",
+      "country": "China",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 210,
+      "eas": 25.9
+    },
+    {
+      "id": "persian",
+      "name": "PERSIAN Cohort Study",
+      "country": "Iran",
+      "region": "EMR",
+      "incomeLevel": "",
+      "publications": 197,
+      "eas": 19.5
+    },
+    {
+      "id": "qbb",
       "name": "Qatar Biobank",
       "country": "Qatar",
-      "publications": 174,
-      "eas": 17.4
+      "region": "EMR",
+      "incomeLevel": "",
+      "publications": 191,
+      "eas": 20.4
     },
     {
-      "id": "h3africa",
-      "name": "H3Africa",
-      "country": "Pan-African",
-      "publications": 139,
-      "eas": 16.8
+      "id": "golestan",
+      "name": "Golestan Cohort Study",
+      "country": "Iran",
+      "region": "EMR",
+      "incomeLevel": "",
+      "publications": 130,
+      "eas": 23.5
+    },
+    {
+      "id": "myc",
+      "name": "The Malaysian Cohort",
+      "country": "Malaysia",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 86,
+      "eas": 19.2
+    },
+    {
+      "id": "bandim",
+      "name": "Bandim Health Project",
+      "country": "Guinea-Bissau",
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 80,
+      "eas": 14.0
+    },
+    {
+      "id": "peace",
+      "name": "China PEACE Million Persons Project",
+      "country": "China",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 78,
+      "eas": 8.1
     },
     {
       "id": "awigen",
       "name": "AWI-Gen",
-      "country": "Pan-African",
-      "publications": 60,
-      "eas": 11.0
+      "country": "South Africa",
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 70,
+      "eas": 10.6
     },
     {
-      "id": "mexico_city",
-      "name": "Mexico City Prospective Study",
-      "country": "Mexico",
-      "publications": 29,
-      "eas": 13.2
+      "id": "iganga_mayuge",
+      "name": "Iganga Mayuge HDSS",
+      "country": "Uganda",
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 54,
+      "eas": 11.1
     },
     {
-      "id": "uganda_genome",
+      "id": "ckb; ukb",
+      "name": "China Kadoorie Biobank; UK Biobank",
+      "country": "China",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 38,
+      "eas": 16.2
+    },
+    {
+      "id": "ahri",
+      "name": "Africa Health Research Institute Population Cohort",
+      "country": "South Africa",
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 33,
+      "eas": 4.6
+    },
+    {
+      "id": "kemri",
+      "name": "KEMRI-Wellcome",
+      "country": "Kenya",
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 27,
+      "eas": 5.7
+    },
+    {
+      "id": "mauco",
+      "name": "MAUCO",
+      "country": "Chile",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 16,
+      "eas": 3.0
+    },
+    {
+      "id": "qgp",
+      "name": "Qatar Genome Programme",
+      "country": "Qatar",
+      "region": "EMR",
+      "incomeLevel": "",
+      "publications": 14,
+      "eas": 4.3
+    },
+    {
+      "id": "snb",
+      "name": "Saudi National Biobank",
+      "country": "Saudi Arabia",
+      "region": "EMR",
+      "incomeLevel": "",
+      "publications": 13,
+      "eas": 7.9
+    },
+    {
+      "id": "qbb; qgp",
+      "name": "Qatar Biobank; Qatar Genome Programme",
+      "country": "Qatar",
+      "region": "EMR",
+      "incomeLevel": "",
+      "publications": 11,
+      "eas": 7.1
+    },
+    {
+      "id": "nepal_csh",
+      "name": "Civil Service Hospital Nepal",
+      "country": "Nepal",
+      "region": "SEAR",
+      "incomeLevel": "",
+      "publications": 10,
+      "eas": 1.7
+    },
+    {
+      "id": "elsa_brasil; ukb",
+      "name": "ELSA-Brasil; UK Biobank",
+      "country": "Brazil",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 6,
+      "eas": 1.8
+    },
+    {
+      "id": "ugr",
       "name": "Uganda Genome Resource",
       "country": "Uganda",
-      "publications": 5,
-      "eas": 2.7
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 4,
+      "eas": 2.2
     },
     {
-      "id": "epigen_brazil",
-      "name": "EPIGEN-Brazil",
-      "country": "Brazil",
+      "id": "ahri; saprin",
+      "name": "Africa Health Research Institute Population Cohort; SAPRIN",
+      "country": "South Africa",
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 2.3
+    },
+    {
+      "id": "saprin",
+      "name": "SAPRIN",
+      "country": "South Africa",
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 3,
+      "eas": 1.5
+    },
+    {
+      "id": "qbb; usnih",
+      "name": "Qatar Biobank; US NIH Biobank",
+      "country": "Qatar",
+      "region": "EMR",
+      "incomeLevel": "",
+      "publications": 2,
+      "eas": 0.8
+    },
+    {
+      "id": "awigen; mvp",
+      "name": "AWI-Gen; Million Veteran Program",
+      "country": "South Africa",
+      "region": "AFR",
+      "incomeLevel": "",
       "publications": 1,
-      "eas": 0.2
+      "eas": 0.7
+    },
+    {
+      "id": "awigen; estbb",
+      "name": "AWI-Gen; Estonian Biobank",
+      "country": "South Africa",
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "awigen; ukb",
+      "name": "AWI-Gen; UK Biobank",
+      "country": "South Africa",
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "awigen; ukb; ugr",
+      "name": "AWI-Gen; UK Biobank; Uganda Genome Resource",
+      "country": "South Africa",
+      "region": "AFR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "bgi",
+      "name": "BGI Research",
+      "country": "China",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "ckb; smwhs",
+      "name": "China Kadoorie Biobank; Shanghai Men and Women's Health Studies",
+      "country": "China",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.8
+    },
+    {
+      "id": "ckb; mws; ukb",
+      "name": "China Kadoorie Biobank; Million Women Study; UK Biobank",
+      "country": "China",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 5.7
+    },
+    {
+      "id": "ckb; qbb; ukb",
+      "name": "China Kadoorie Biobank; Qatar Biobank; UK Biobank",
+      "country": "China",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "ckb; estbb; ukb",
+      "name": "China Kadoorie Biobank; Estonian Biobank; UK Biobank",
+      "country": "China",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "golestan; jphc",
+      "name": "Golestan Cohort Study; JPHC Study",
+      "country": "Iran",
+      "region": "EMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.7
+    },
+    {
+      "id": "mauco; usnih",
+      "name": "MAUCO; US NIH Biobank",
+      "country": "Chile",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.5
+    },
+    {
+      "id": "unam",
+      "name": "National Autonomous University of Mexico",
+      "country": "Mexico",
+      "region": "AMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
+    },
+    {
+      "id": "qbb; ukb",
+      "name": "Qatar Biobank; UK Biobank",
+      "country": "Qatar",
+      "region": "EMR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 0.0
+    },
+    {
+      "id": "myc; ukb",
+      "name": "The Malaysian Cohort; UK Biobank",
+      "country": "Malaysia",
+      "region": "WPR",
+      "incomeLevel": "",
+      "publications": 1,
+      "eas": 1.0
     }
   ]
 }
