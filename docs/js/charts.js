@@ -1,4 +1,4 @@
-// HEIM-Biobank v1.0 Chart Visualizations
+// HEIM-Biobank v2.0 (IHCC) Chart Visualizations
 
 // Color palettes
 const COLORS = {
