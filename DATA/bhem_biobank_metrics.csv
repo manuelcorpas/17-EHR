@@ -1,28 +1,274 @@
 biobank_id,name,country,region,is_global_south,total_publications,diseases_covered,research_opportunity_score,equity_alignment_score,equity_alignment_category,critical_gap_count,global_south_percentage,gap_severity_component,burden_miss_component,capacity_penalty
-emerge,eMERGE Network,United States,AMR,False,47755,177,199.11,98.3,Strong,2,18.8,3.77,0.75,0.0
-uk_biobank,UK Biobank,United Kingdom,EUR,False,13341,163,2117.27,84.9,Strong,16,17.6,14.53,5.66,25.47
-decode,deCODE Genetics,Iceland,EUR,False,5604,154,2493.01,69.4,Moderate,25,8.0,20.53,6.03,68.69
-finngen,FinnGen,Finland,EUR,False,2683,144,3258.75,60.3,Moderate,35,14.6,25.56,13.1,85.01
-hunt,HUNT Study,Norway,EUR,False,1152,116,5448.72,48.2,Weak,63,19.4,41.34,24.13,93.56
-lifelines,LifeLines,Netherlands,EUR,False,730,119,5398.45,46.4,Weak,60,22.2,39.66,30.0,95.92
-all_of_us,All of Us Research Program,United States,AMR,False,613,118,6215.54,42.0,Weak,61,12.2,41.9,40.79,96.58
-biobank_japan,BioBank Japan,Japan,WPR,False,271,108,5803.35,40.2,Weak,71,15.1,44.41,41.5,98.49
-mvp,Million Veteran Program,United States,AMR,False,327,99,7072.15,38.9,Poor,80,11.6,50.14,38.78,98.17
-china_kadoorie,China Kadoorie Biobank,China,WPR,True,516,109,6862.28,38.7,Poor,70,23.1,45.53,46.39,97.12
-swedish_twin,Swedish Twin Registry,Sweden,EUR,False,289,95,6600.88,37.4,Poor,84,21.8,51.96,40.86,98.39
-biovu,BioVU,United States,AMR,False,155,110,7601.41,36.7,Poor,69,18.1,47.07,49.19,99.13
-taiwan_biobank,Taiwan Biobank,Taiwan,WPR,False,482,94,6699.42,35.3,Poor,85,9.8,51.82,49.12,97.31
-constances,CONSTANCES,France,EUR,False,222,83,7552.2,34.3,Poor,96,21.6,58.38,42.36,98.76
-geisinger_mycode,Geisinger MyCode,United States,AMR,False,96,93,8449.04,28.6,Poor,86,15.6,55.17,64.83,99.46
-mgb_biobank,Mass General Brigham Biobank,United States,AMR,False,92,84,9902.71,24.0,Poor,95,12.0,61.73,71.56,99.49
-topmed,TOPMed,United States,AMR,False,196,61,9495.02,24.0,Poor,118,13.3,70.95,59.7,98.91
-generation_scotland,Generation Scotland,United Kingdom,EUR,False,161,68,9978.65,23.4,Poor,111,9.9,68.3,65.29,99.1
-nako,German National Cohort (NAKO),Germany,EUR,False,138,72,10349.72,21.2,Poor,107,20.3,67.6,73.4,99.23
-estonian_biobank,Estonian Biobank,Estonia,EUR,False,116,71,10439.74,18.6,Poor,108,11.2,68.16,81.14,99.35
-qatar_biobank,Qatar Biobank,Qatar,EMR,True,174,72,10516.85,17.4,Poor,107,14.9,67.74,85.96,99.03
-h3africa,H3Africa,Pan-African,AFR,True,139,43,10313.9,16.8,Poor,136,46.0,80.17,71.32,99.22
-mexico_city,Mexico City Prospective Study,Mexico,AMR,True,29,50,10858.64,13.2,Poor,129,24.1,77.37,86.24,99.84
-awigen,AWI-Gen,Pan-African,AFR,True,60,31,10598.43,11.0,Poor,148,28.3,85.34,83.06,99.66
-danish_national,Danish National Biobank,Denmark,EUR,False,9,23,11361.99,6.5,Poor,156,66.7,89.8,91.96,99.95
-uganda_genome,Uganda Genome Resource,Uganda,AFR,True,5,13,11444.69,2.7,Poor,166,40.0,94.27,98.61,99.97
-epigen_brazil,EPIGEN-Brazil,Brazil,AMR,True,1,1,11589.67,0.2,Poor,178,0.0,99.58,100.0,99.99
+ukb,UK Biobank,United Kingdom,EUR,False,13084,163,2114.24,83.3,Strong,16,17.8,17.32,5.59,26.91
+whi,Women's Health Initiative,United States,AMR,False,3296,126,4835.55,52.8,Weak,53,15.2,38.41,24.59,81.59
+nhs,Nurses' Health Study,United States,AMR,False,2093,125,5168.95,49.1,Weak,54,17.3,38.69,29.67,88.31
+aou,All of Us Research Program,United States,AMR,False,777,128,5479.07,48.5,Weak,51,17.5,39.39,23.46,95.66
+hunt,HUNT Study,Norway,EUR,False,1185,118,5308.57,48.0,Weak,61,18.9,42.04,23.88,93.38
+estbb,Estonian Biobank,Estonia,EUR,False,574,131,4719.25,47.8,Weak,48,16.6,36.73,28.38,96.79
+epic,European Prospective Investigation into Cancer and Nutrition,International,EUR,False,1796,121,5478.95,44.7,Weak,58,23.9,39.8,41.27,89.97
+dnbc,Danish National Birth Cohort,Denmark,EUR,False,612,127,6524.99,43.5,Weak,52,85.5,43.3,34.07,96.58
+gel,"Genomics England / 100,000 Genomes Project",United Kingdom,EUR,False,649,114,5754.14,43.0,Weak,65,28.5,42.6,36.93,96.37
+nhsii; nhs,Nurses' Health Study II; Nurses' Health Study,United States,AMR,False,991,106,5844.02,42.3,Weak,73,33.8,47.63,34.44,94.46
+ckb,China Kadoorie Biobank,China,WPR,True,527,114,6715.26,38.9,Poor,65,23.3,45.81,45.57,97.06
+moba,Norwegian Mother and Child Cohort Study,Norway,EUR,False,934,107,7263.53,38.6,Poor,72,71.0,51.12,41.74,94.78
+nako,German National Cohort (NAKO),Germany,EUR,False,163,105,6695.09,38.2,Poor,74,24.5,50.0,40.21,99.09
+elsa_brasil,ELSA-Brasil,Brazil,AMR,True,649,91,6740.36,38.0,Poor,88,18.2,55.45,36.39,96.37
+mvp,Million Veteran Program,United States,AMR,False,324,103,7081.38,37.9,Poor,76,11.4,50.84,41.14,98.19
+bbj,Biobank Japan,Japan,WPR,False,208,103,5945.95,37.7,Poor,76,20.2,49.02,43.49,98.84
+45andup,45 and Up Study,Australia,WPR,False,432,95,6972.87,36.7,Poor,84,16.4,54.61,40.51,97.59
+constances,CONSTANCES,France,EUR,False,231,88,7270.95,35.6,Poor,91,22.5,57.4,39.45,98.71
+twb,Taiwan Biobank,Taiwan,WPR,False,522,98,6640.64,35.0,Poor,81,10.3,51.96,50.33,97.08
+23andme,23andMe,United States,AMR,False,226,112,7366.45,34.7,Poor,67,10.6,47.35,55.86,98.74
+koges,Korean Genome and Epidemiology Study,South Korea,WPR,False,710,85,6648.96,34.7,Poor,94,16.6,56.98,45.78,96.03
+jphc,JPHC Study,Japan,WPR,False,442,81,6988.32,32.2,Poor,98,23.8,59.92,48.48,97.53
+plco,PLCO Cancer Screening Trial,United States,AMR,False,928,85,7558.63,30.4,Poor,94,10.7,58.94,58.48,94.82
+simpler,SIMPLER,Sweden,EUR,False,277,80,7487.37,29.7,Poor,99,14.4,59.78,56.27,98.45
+mec,Multiethnic Cohort Study,United States,AMR,False,311,81,7715.72,28.8,Poor,98,18.0,59.78,59.28,98.26
+biovu,BioVU Vanderbilt,United States,AMR,False,119,100,8761.37,28.2,Poor,79,21.0,54.19,67.62,99.34
+cpsii,Cancer Prevention Study II Nutrition Cohort,United States,AMR,False,293,72,7570.9,27.7,Poor,107,24.2,62.71,59.16,98.36
+tommo,Tohoku Medical Megabank,Japan,WPR,False,235,81,8713.7,26.4,Poor,98,47.7,61.31,64.8,98.69
+smwhs,Shanghai Men and Women's Health Studies,China,WPR,True,210,74,7980.7,25.9,Poor,105,20.0,63.69,63.34,98.83
+ukbdc,UK Blood Donor Cohorts,United Kingdom,EUR,False,147,76,9596.29,25.0,Poor,103,29.3,67.88,60.42,99.18
+golestan,Golestan Cohort Study,Iran,EMR,True,130,68,8103.51,23.5,Poor,111,25.4,66.34,67.31,99.27
+geisinger,Geisinger MyCode Community Health Initiative,United States,AMR,False,50,85,8825.4,23.4,Poor,94,18.0,59.5,76.35,99.72
+mws,Million Women Study,United Kingdom,EUR,False,144,70,8395.18,22.9,Poor,109,13.9,65.22,70.68,99.2
+nshds,Northern Sweden Health and Disease Study,Sweden,EUR,False,99,65,8139.86,22.4,Poor,114,17.2,66.62,70.46,99.45
+mvp; ukb,Million Veteran Program; UK Biobank,United States,AMR,False,78,73,9662.61,22.0,Poor,106,15.4,66.62,71.72,99.56
+cts,California Teachers Study,United States,AMR,False,141,66,8228.57,20.6,Poor,113,21.3,66.06,77.42,99.21
+qbb,Qatar Biobank,Qatar,EMR,True,191,75,9886.67,20.4,Poor,104,18.3,66.76,77.42,98.93
+echo,ECHO Cohort,United States,AMR,False,268,49,9415.72,19.9,Poor,130,74.3,77.23,65.41,98.5
+epic; ukb,European Prospective Investigation into Cancer and Nutrition; UK Biobank,International,EUR,False,40,58,8752.42,19.7,Poor,121,22.5,70.39,73.9,99.78
+persian,PERSIAN Cohort Study,Iran,EMR,True,197,56,9551.26,19.5,Poor,123,20.3,74.3,70.37,98.9
+myc,The Malaysian Cohort,Malaysia,WPR,True,86,70,9684.73,19.2,Poor,109,12.8,68.44,78.5,99.52
+acscps3,American Cancer Society Cancer Prevention Study-3,United States,AMR,False,92,69,8730.39,18.8,Poor,110,40.2,66.76,82.33,99.49
+bbj; ukb,Biobank Japan; UK Biobank,Japan,WPR,False,86,74,10247.38,18.1,Poor,105,7.0,67.32,83.6,99.52
+estbb; ukb,Estonian Biobank; UK Biobank,Estonia,EUR,False,60,76,10597.95,17.3,Poor,103,10.0,67.88,85.42,99.66
+ckb; ukb,China Kadoorie Biobank; UK Biobank,China,WPR,True,38,57,10393.73,16.2,Poor,122,10.5,74.58,80.12,99.79
+epihealth,EpiHealth,Sweden,EUR,False,43,60,10431.54,15.0,Poor,119,27.9,73.6,85.39,99.76
+fmc,Finnish Maternity Cohort Serum Bank,Finland,EUR,False,56,53,10031.49,14.3,Poor,126,91.1,75.56,85.35,99.69
+cpsii; kcps,Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study,United States,AMR,False,38,48,9048.26,14.1,Poor,131,13.2,74.86,86.88,99.79
+bandim,Bandim Health Project,Guinea-Bissau,AFR,True,80,37,9770.02,14.0,Poor,142,92.5,83.52,75.73,99.55
+vhmpp,VHM&PP,Austria,EUR,False,28,46,10320.24,13.5,Poor,133,14.3,79.05,82.93,99.84
+nhs; whi,Nurses' Health Study; Women's Health Initiative,United States,AMR,False,39,52,10601.59,13.4,Poor,127,10.3,76.68,86.8,99.78
+kprb,Kaiser Permanente Research Bank,United States,AMR,False,7,37,9118.72,13.0,Poor,142,57.1,80.31,82.83,99.96
+23andme; ukb,23andMe; UK Biobank,United States,AMR,False,69,46,10289.36,12.5,Poor,133,23.2,79.33,86.22,99.61
+dnbc; moba,Danish National Birth Cohort; Norwegian Mother and Child Cohort Study,Denmark,EUR,False,18,43,10599.6,11.8,Poor,136,100.0,80.59,86.74,99.9
+kcps,Korean Cancer Prevention Study,South Korea,WPR,False,20,51,10467.24,11.8,Poor,128,30.0,77.09,91.36,99.89
+generations,Generations Study,United Kingdom,EUR,False,69,58,10555.73,11.7,Poor,121,13.0,74.3,95.52,99.61
+mws; whi,Million Women Study; Women's Health Initiative,United Kingdom,EUR,False,55,44,10549.54,11.3,Poor,135,5.5,80.17,89.11,99.69
+biovu; ukb,BioVU Vanderbilt; UK Biobank,United States,AMR,False,23,62,10974.45,11.2,Poor,117,8.7,73.6,98.11,99.87
+iganga_mayuge,Iganga Mayuge HDSS,Uganda,AFR,True,54,32,10150.29,11.1,Poor,147,75.9,85.75,82.26,99.7
+hunt; ukb,HUNT Study; UK Biobank,Norway,EUR,False,22,54,10891.24,11.0,Poor,125,22.7,76.26,95.07,99.88
+uklwc,UKCTOCS Longitudinal Women's Cohort,United Kingdom,EUR,False,90,45,10406.76,10.8,Poor,134,1.1,79.33,92.11,99.5
+awigen,AWI-Gen,South Africa,AFR,True,70,30,10320.75,10.6,Poor,149,28.6,86.87,82.71,99.61
+aou; ukb,All of Us Research Program; UK Biobank,United States,AMR,False,33,29,10944.13,9.5,Poor,150,0.0,87.01,85.87,99.82
+gel; ukb,"Genomics England / 100,000 Genomes Project; UK Biobank",United Kingdom,EUR,False,30,46,11032.45,8.9,Poor,133,6.7,80.17,96.96,99.83
+cptp,Canadian Partnership for Tomorrow's Health,Canada,AMR,False,19,46,10974.93,8.7,Poor,133,26.3,80.03,97.78,99.89
+lifegene,LifeGene,Sweden,EUR,False,26,34,10814.05,8.6,Poor,145,38.5,85.89,90.18,99.85
+plco; ukb,PLCO Cancer Screening Trial; UK Biobank,United States,AMR,False,12,38,10627.85,8.5,Poor,141,16.7,82.4,95.11,99.93
+nhs; plco,Nurses' Health Study; PLCO Cancer Screening Trial,United States,AMR,False,10,36,10624.05,8.3,Poor,143,20.0,83.38,94.62,99.94
+ntr,Netherlands Twin Registry,Netherlands,EUR,False,31,21,10466.22,8.2,Poor,158,45.2,89.94,86.12,99.83
+ukb; whi,UK Biobank; Women's Health Initiative,United Kingdom,EUR,False,11,44,11108.93,8.1,Poor,135,9.1,80.87,98.58,99.94
+peace,China PEACE Million Persons Project,China,WPR,True,78,15,10658.09,8.1,Poor,164,15.4,92.32,83.67,99.56
+snb,Saudi National Biobank,Saudi Arabia,EMR,True,13,40,11031.74,7.9,Poor,139,7.7,82.68,96.67,99.93
+geisinger; ukb,Geisinger MyCode Community Health Initiative; UK Biobank,United States,AMR,False,11,41,11048.08,7.7,Poor,138,9.1,81.98,98.53,99.94
+genv,Generation Victoria,Australia,WPR,False,14,21,10676.49,7.3,Poor,158,64.3,90.22,88.82,99.92
+qbb; qgp,Qatar Biobank; Qatar Genome Programme,Qatar,EMR,True,11,38,11108.93,7.1,Poor,141,18.2,83.38,98.58,99.94
+epic; plco,European Prospective Investigation into Cancer and Nutrition; PLCO Cancer Screening Trial,International,EUR,False,3,36,11041.95,7.0,Poor,143,33.3,84.5,97.25,99.98
+aou; geisinger,All of Us Research Program; Geisinger MyCode Community Health Initiative,United States,AMR,False,1,42,11253.91,6.9,Poor,137,100.0,82.82,100.0,99.99
+genes_health,Genes & Health,United Kingdom,EUR,False,26,20,10820.56,6.6,Poor,159,23.1,90.64,90.53,99.85
+bbj; tommo,Biobank Japan; Tohoku Medical Megabank,Japan,WPR,False,4,38,11253.91,6.4,Poor,141,25.0,83.94,100.0,99.98
+dnb,Danish National Biobank,Denmark,EUR,False,8,22,11026.23,6.1,Poor,157,62.5,90.92,91.79,99.96
+cpsii; plco,Cancer Prevention Study II Nutrition Cohort; PLCO Cancer Screening Trial,United States,AMR,False,13,27,10698.98,6.0,Poor,152,15.4,87.71,96.53,99.93
+cpsii; kcps; ukb,Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; UK Biobank,United States,AMR,False,2,34,11253.91,5.7,Poor,145,50.0,85.75,100.0,99.99
+kemri,KEMRI-Wellcome,Kenya,AFR,True,27,17,10884.42,5.7,Poor,162,33.3,93.72,89.68,99.85
+ckb; mws; ukb,China Kadoorie Biobank; Million Women Study; UK Biobank,China,WPR,True,1,34,11253.91,5.7,Poor,145,100.0,85.75,100.0,99.99
+bbj; ckb; koges,Biobank Japan; China Kadoorie Biobank; Korean Genome and Epidemiology Study,Japan,WPR,False,1,34,11253.91,5.7,Poor,145,100.0,85.75,100.0,99.99
+moba; ukb,Norwegian Mother and Child Cohort Study; UK Biobank,Norway,EUR,False,5,14,10884.6,5.5,Poor,165,100.0,93.3,90.59,99.97
+aou; twb; ukb,All of Us Research Program; Taiwan Biobank; UK Biobank,United States,AMR,False,1,33,11253.91,5.5,Poor,146,100.0,86.17,100.0,99.99
+estbb; mvp,Estonian Biobank; Million Veteran Program,Estonia,EUR,False,13,28,11108.93,5.3,Poor,151,23.1,87.99,98.58,99.93
+dpuk,Dementias Platform UK,United Kingdom,EUR,False,14,14,10890.99,5.1,Poor,165,7.1,93.02,92.25,99.92
+ukb; usnih,UK Biobank; US NIH Biobank,United Kingdom,EUR,False,22,26,11108.93,5.0,Poor,153,9.1,88.55,98.58,99.88
+jphc; tommo,JPHC Study; Tohoku Medical Megabank,Japan,WPR,False,1,30,11253.91,5.0,Poor,149,100.0,87.43,100.0,99.99
+lifepath,LIFEPATH,International,EUR,False,38,21,10902.73,4.8,Poor,158,18.4,90.08,97.3,99.79
+epic; nhs,European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study,International,EUR,False,9,18,10969.11,4.7,Poor,161,11.1,91.48,95.66,99.95
+ahri,Africa Health Research Institute Population Cohort,South Africa,AFR,True,33,17,10753.03,4.6,Poor,162,60.6,92.18,95.29,99.82
+twb; ukb,Taiwan Biobank; UK Biobank,Taiwan,WPR,False,15,17,11029.96,4.4,Poor,162,13.3,92.18,95.7,99.92
+nhs; ukb,Nurses' Health Study; UK Biobank,United States,AMR,False,13,20,10910.48,4.4,Poor,159,7.7,90.64,97.97,99.93
+qgp,Qatar Genome Programme,Qatar,EMR,True,14,12,11170.65,4.3,Poor,167,35.7,95.11,92.28,99.92
+ukb; ukbdc,UK Biobank; UK Blood Donor Cohorts,United Kingdom,EUR,False,17,19,11108.93,3.9,Poor,160,17.6,91.48,98.58,99.91
+usnih,US NIH Biobank,United States,AMR,False,17,18,11108.93,3.6,Poor,161,17.6,92.18,98.58,99.91
+cpsii; nhs,Cancer Prevention Study II Nutrition Cohort; Nurses' Health Study,United States,AMR,False,9,16,11048.08,3.5,Poor,163,0.0,92.32,98.53,99.95
+chop_cag,"Center for Applied Genomics, CHOP",United States,AMR,False,8,14,10967.65,3.5,Poor,165,100.0,93.3,97.42,99.96
+healthy_nevada,Healthy Nevada,United States,AMR,False,15,15,11048.08,3.3,Poor,164,13.3,93.02,98.53,99.92
+jhu; ukb,Johns Hopkins University Biobank; UK Biobank,United States,AMR,False,5,13,10978.97,3.1,Poor,166,0.0,93.72,98.24,99.97
+dnbc; nhsii; nhs,Danish National Birth Cohort; Nurses' Health Study II; Nurses' Health Study,Denmark,EUR,False,4,9,11029.61,3.1,Poor,170,100.0,95.53,95.67,99.98
+koges; ukb,Korean Genome and Epidemiology Study; UK Biobank,South Korea,WPR,False,9,14,11108.93,3.1,Poor,165,0.0,93.44,98.58,99.95
+mauco,MAUCO,Chile,AMR,True,16,14,11108.93,3.0,Poor,165,6.2,93.72,98.58,99.91
+23andme; estbb; ukb,23andMe; Estonian Biobank; UK Biobank,United States,AMR,False,3,14,11108.93,2.9,Poor,165,33.3,93.72,98.58,99.98
+nhsii; nhs; whi,Nurses' Health Study II; Nurses' Health Study; Women's Health Initiative,United States,AMR,False,7,13,11179.48,2.7,Poor,166,14.3,94.13,98.99,99.96
+epic; nshds,European Prospective Investigation into Cancer and Nutrition; Northern Sweden Health and Disease Study,International,EUR,False,4,11,11048.08,2.5,Poor,168,0.0,94.83,98.53,99.98
+sab,South Asia Biobank,United Kingdom,EUR,False,8,11,11108.93,2.5,Poor,168,12.5,94.97,98.58,99.96
+nhsii; nhs; ukb,Nurses' Health Study II; Nurses' Health Study; UK Biobank,United States,AMR,False,3,12,11179.48,2.4,Poor,167,33.3,94.69,98.99,99.98
+ahri; saprin,Africa Health Research Institute Population Cohort; SAPRIN,South Africa,AFR,True,3,12,11108.93,2.3,Poor,167,100.0,95.39,98.58,99.98
+ugr,Uganda Genome Resource,Uganda,AFR,True,4,10,11108.93,2.2,Poor,169,25.0,95.53,98.58,99.98
+nako; ukb,German National Cohort (NAKO); UK Biobank,Germany,EUR,False,9,9,11108.93,2.2,Poor,170,11.1,95.53,98.58,99.95
+mec; whi,Multiethnic Cohort Study; Women's Health Initiative,United States,AMR,False,3,10,11179.48,2.2,Poor,169,0.0,95.39,98.99,99.98
+mws; ukb,Million Women Study; UK Biobank,United Kingdom,EUR,False,4,10,11179.48,2.2,Poor,169,0.0,95.39,98.99,99.98
+plco; uklwc,PLCO Cancer Screening Trial; UKCTOCS Longitudinal Women's Cohort,United States,AMR,False,10,8,10983.4,2.1,Poor,171,0.0,95.81,98.52,99.94
+aou; biovu,All of Us Research Program; BioVU Vanderbilt,United States,AMR,False,3,9,11108.93,2.1,Poor,170,33.3,95.81,98.58,99.98
+nbk,National Biobank of Korea,South Korea,WPR,False,13,9,11108.93,2.1,Poor,170,7.7,95.81,98.58,99.93
+bbj; mvp,Biobank Japan; Million Veteran Program,Japan,WPR,False,5,12,11253.91,2.1,Poor,167,0.0,94.83,100.0,99.97
+aou; whi,All of Us Research Program; Women's Health Initiative,United States,AMR,False,2,12,11253.91,2.0,Poor,167,50.0,94.97,100.0,99.99
+bbj; twb,Biobank Japan; Taiwan Biobank,Japan,WPR,False,4,12,11253.91,2.0,Poor,167,25.0,94.97,100.0,99.98
+estbb; gel,"Estonian Biobank; Genomics England / 100,000 Genomes Project",Estonia,EUR,False,5,11,11253.91,1.9,Poor,168,40.0,95.25,100.0,99.97
+elsa_brasil; ukb,ELSA-Brasil; UK Biobank,Brazil,AMR,True,6,7,11108.93,1.8,Poor,172,0.0,96.51,98.58,99.97
+nepal_csh,Civil Service Hospital Nepal,Nepal,SEAR,True,10,10,11253.91,1.7,Poor,169,10.0,95.67,100.0,99.94
+biovu; mvp,BioVU Vanderbilt; Million Veteran Program,United States,AMR,False,3,10,11253.91,1.7,Poor,169,0.0,95.67,100.0,99.98
+cpsii; whi,Cancer Prevention Study II Nutrition Cohort; Women's Health Initiative,United States,AMR,False,2,10,11253.91,1.7,Poor,169,50.0,95.81,100.0,99.99
+epihealth; lifegene,EpiHealth; LifeGene,Sweden,EUR,False,3,6,11108.93,1.7,Poor,173,0.0,96.93,98.58,99.98
+cpsii; mec; nhs,Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study; Nurses' Health Study,United States,AMR,False,5,5,11048.76,1.6,Poor,174,0.0,97.21,98.54,99.97
+dpuk; ukb,Dementias Platform UK; UK Biobank,United Kingdom,EUR,False,2,9,11253.91,1.5,Poor,170,0.0,96.23,100.0,99.99
+estbb; gel; ukb,"Estonian Biobank; Genomics England / 100,000 Genomes Project; UK Biobank",Estonia,EUR,False,2,9,11253.91,1.5,Poor,170,50.0,96.23,100.0,99.99
+mauco; usnih,MAUCO; US NIH Biobank,Chile,AMR,True,1,9,11253.91,1.5,Poor,170,0.0,96.23,100.0,99.99
+epic; mvp; ukb,European Prospective Investigation into Cancer and Nutrition; Million Veteran Program; UK Biobank,International,EUR,False,1,9,11253.91,1.5,Poor,170,0.0,96.23,100.0,99.99
+cpsii; epic,Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition,United States,AMR,False,2,9,11253.91,1.5,Poor,170,50.0,96.23,100.0,99.99
+acscps3; cpsii,American Cancer Society Cancer Prevention Study-3; Cancer Prevention Study II Nutrition Cohort,United States,AMR,False,2,9,11253.91,1.5,Poor,170,50.0,96.23,100.0,99.99
+jphc; smwhs,JPHC Study; Shanghai Men and Women's Health Studies,Japan,WPR,False,2,9,11253.91,1.5,Poor,170,0.0,96.23,100.0,99.99
+saprin,SAPRIN,South Africa,AFR,True,3,9,11253.91,1.5,Poor,170,33.3,96.37,100.0,99.98
+biovu; bbj; ukb,BioVU Vanderbilt; Biobank Japan; UK Biobank,United States,AMR,False,2,9,11253.91,1.5,Poor,170,0.0,96.23,100.0,99.99
+23andme; moba; usnih,23andMe; Norwegian Mother and Child Cohort Study; US NIH Biobank,United States,AMR,False,1,8,11253.91,1.3,Poor,171,100.0,96.79,100.0,99.99
+plco; ukb; usnih,PLCO Cancer Screening Trial; UK Biobank; US NIH Biobank,United States,AMR,False,1,8,11253.91,1.3,Poor,171,0.0,96.65,100.0,99.99
+epic; gel,"European Prospective Investigation into Cancer and Nutrition; Genomics England / 100,000 Genomes Project",International,EUR,False,1,8,11253.91,1.3,Poor,171,100.0,96.65,100.0,99.99
+cts; whi,California Teachers Study; Women's Health Initiative,United States,AMR,False,2,8,11253.91,1.3,Poor,171,50.0,96.65,100.0,99.99
+cpsii; kcps; koges,Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study,United States,AMR,False,3,8,11253.91,1.3,Poor,171,0.0,96.65,100.0,99.98
+estbb; hunt,Estonian Biobank; HUNT Study,Estonia,EUR,False,2,8,11253.91,1.3,Poor,171,50.0,96.79,100.0,99.99
+mec; plco,Multiethnic Cohort Study; PLCO Cancer Screening Trial,United States,AMR,False,2,8,11253.91,1.3,Poor,171,0.0,96.65,100.0,99.99
+45andup; plco,45 and Up Study; PLCO Cancer Screening Trial,Australia,WPR,False,2,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.99
+mec; plco; smwhs,Multiethnic Cohort Study; PLCO Cancer Screening Trial; Shanghai Men and Women's Health Studies,United States,AMR,False,1,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.99
+hunt; nshds,HUNT Study; Northern Sweden Health and Disease Study,Norway,EUR,False,1,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.99
+genes_health; ukb,Genes & Health; UK Biobank,United Kingdom,EUR,False,3,7,11253.91,1.2,Poor,172,33.3,97.07,100.0,99.98
+generations; ukb,Generations Study; UK Biobank,United Kingdom,EUR,False,1,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.99
+23andme; gel; mvp; ukb,"23andMe; Genomics England / 100,000 Genomes Project; Million Veteran Program; UK Biobank",United States,AMR,False,1,7,11253.91,1.2,Poor,172,100.0,97.07,100.0,99.99
+bbj; ckb; estbb; whi,Biobank Japan; China Kadoorie Biobank; Estonian Biobank; Women's Health Initiative,Japan,WPR,False,1,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.99
+bbj; tommo; ukb,Biobank Japan; Tohoku Medical Megabank; UK Biobank,Japan,WPR,False,1,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.99
+constances; ukb,CONSTANCES; UK Biobank,France,EUR,False,1,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.99
+constances; epic; hunt; plco,CONSTANCES; European Prospective Investigation into Cancer and Nutrition; HUNT Study; PLCO Cancer Screening Trial,France,EUR,False,1,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.99
+cpsii; mec,Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study,United States,AMR,False,1,7,11253.91,1.2,Poor,172,100.0,97.07,100.0,99.99
+cts; mec; nhs,California Teachers Study; Multiethnic Cohort Study; Nurses' Health Study,United States,AMR,False,1,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.99
+aou; ukb; usnih,All of Us Research Program; UK Biobank; US NIH Biobank,United States,AMR,False,1,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.99
+gel; mvp; ukb,"Genomics England / 100,000 Genomes Project; Million Veteran Program; UK Biobank",United Kingdom,EUR,False,2,7,11253.91,1.2,Poor,172,50.0,97.07,100.0,99.99
+plco; whi,PLCO Cancer Screening Trial; Women's Health Initiative,United States,AMR,False,4,7,11253.91,1.2,Poor,172,0.0,97.07,100.0,99.98
+sg100k,SG100K,Singapore,WPR,False,7,6,11253.91,1.1,Poor,173,0.0,97.35,100.0,99.96
+kprb; ukb,Kaiser Permanente Research Bank; UK Biobank,United States,AMR,False,5,6,11253.91,1.1,Poor,173,0.0,97.35,100.0,99.97
+unam,National Autonomous University of Mexico,Mexico,AMR,True,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+plco; ucl; ukb,PLCO Cancer Screening Trial; UCL Biobank; UK Biobank,United States,AMR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+23andme; estbb,23andMe; Estonian Biobank,United States,AMR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+plco; smwhs,PLCO Cancer Screening Trial; Shanghai Men and Women's Health Studies,United States,AMR,False,2,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+hunt; moba,HUNT Study; Norwegian Mother and Child Cohort Study,Norway,EUR,False,1,6,11253.91,1.0,Poor,173,100.0,97.49,100.0,99.99
+mws; plco,Million Women Study; PLCO Cancer Screening Trial,United Kingdom,EUR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+myc; ukb,The Malaysian Cohort; UK Biobank,Malaysia,WPR,True,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+ucl; uklwc,UCL Biobank; UKCTOCS Longitudinal Women's Cohort,United Kingdom,EUR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+mws; ukb; whi,Million Women Study; UK Biobank; Women's Health Initiative,United Kingdom,EUR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+nbk; usnih,National Biobank of Korea; US NIH Biobank,South Korea,WPR,False,1,6,11253.91,1.0,Poor,173,100.0,97.49,100.0,99.99
+biovu; geisinger; moba,BioVU Vanderbilt; Geisinger MyCode Community Health Initiative; Norwegian Mother and Child Cohort Study,United States,AMR,False,1,6,11253.91,1.0,Poor,173,100.0,97.49,100.0,99.99
+fmc; hunt,Finnish Maternity Cohort Serum Bank; HUNT Study,Finland,EUR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+aou; mvp,All of Us Research Program; Million Veteran Program,United States,AMR,False,2,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+epic; whi,European Prospective Investigation into Cancer and Nutrition; Women's Health Initiative,International,EUR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+epic; hunt,European Prospective Investigation into Cancer and Nutrition; HUNT Study,International,EUR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+cts; mec,California Teachers Study; Multiethnic Cohort Study,United States,AMR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+cpsii; epic; nshds,Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition; Northern Sweden Health and Disease Study,United States,AMR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+cpsii; epic; nhs,Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study,United States,AMR,False,2,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+genes_health; gel; ukb,"Genes & Health; Genomics England / 100,000 Genomes Project; UK Biobank",United Kingdom,EUR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+c19genomnet,C19-GenoNet,International,INT,False,1,6,11253.91,1.0,Poor,173,100.0,97.63,100.0,99.99
+aou; tommo,All of Us Research Program; Tohoku Medical Megabank,United States,AMR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+biovu; bbj; mvp; ukb,BioVU Vanderbilt; Biobank Japan; Million Veteran Program; UK Biobank,United States,AMR,False,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
+ckb; estbb; ukb,China Kadoorie Biobank; Estonian Biobank; UK Biobank,China,WPR,True,1,6,11253.91,1.0,Poor,173,100.0,97.49,100.0,99.99
+ucl,UCL Biobank,United Kingdom,EUR,False,4,5,11253.91,0.9,Poor,174,25.0,97.77,100.0,99.98
+ckb; smwhs,China Kadoorie Biobank; Shanghai Men and Women's Health Studies,China,WPR,True,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+awigen; estbb,AWI-Gen; Estonian Biobank,South Africa,AFR,True,1,5,11253.91,0.8,Poor,174,100.0,97.91,100.0,99.99
+cpsii; mec; nhs; whi,Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study; Nurses' Health Study; Women's Health Initiative,United States,AMR,False,2,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+koges; nbk,Korean Genome and Epidemiology Study; National Biobank of Korea,South Korea,WPR,False,2,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+epihealth; simpler,EpiHealth; SIMPLER,Sweden,EUR,False,2,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+aou; mvp; ukb,All of Us Research Program; Million Veteran Program; UK Biobank,United States,AMR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+nhsii; nshds; nhs,Nurses' Health Study II; Northern Sweden Health and Disease Study; Nurses' Health Study,United States,AMR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+23andme; hunt; ukb,23andMe; HUNT Study; UK Biobank,United States,AMR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+cts; nhs,California Teachers Study; Nurses' Health Study,United States,AMR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+estbb; mvp; ukb,Estonian Biobank; Million Veteran Program; UK Biobank,Estonia,EUR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+biovu; bbj,BioVU Vanderbilt; Biobank Japan,United States,AMR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+generations; nhsii; nhs,Generations Study; Nurses' Health Study II; Nurses' Health Study,United Kingdom,EUR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+mec; ukb,Multiethnic Cohort Study; UK Biobank,United States,AMR,False,2,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+bbj; ckb; ukb,Biobank Japan; China Kadoorie Biobank; UK Biobank,Japan,WPR,False,2,5,11253.91,0.8,Poor,174,50.0,97.91,100.0,99.99
+epic; generations,European Prospective Investigation into Cancer and Nutrition; Generations Study,International,EUR,False,2,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+epic; nhs; smwhs,European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study; Shanghai Men and Women's Health Studies,International,EUR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+biovu; usnih,BioVU Vanderbilt; US NIH Biobank,United States,AMR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+qbb; usnih,Qatar Biobank; US NIH Biobank,Qatar,EMR,True,2,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+23andme; biovu; estbb,23andMe; BioVU Vanderbilt; Estonian Biobank,United States,AMR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+epic; mec,European Prospective Investigation into Cancer and Nutrition; Multiethnic Cohort Study,International,EUR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+dnb; dnbc,Danish National Biobank; Danish National Birth Cohort,Denmark,EUR,False,2,5,11253.91,0.8,Poor,174,50.0,97.91,100.0,99.99
+bbj; nbk,Biobank Japan; National Biobank of Korea,Japan,WPR,False,1,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.99
+healthy_nevada; ukb,Healthy Nevada; UK Biobank,United States,AMR,False,3,5,11253.91,0.8,Poor,174,0.0,97.91,100.0,99.98
+bbj; ckb,Biobank Japan; China Kadoorie Biobank,Japan,WPR,False,4,5,11253.91,0.8,Poor,174,25.0,97.91,100.0,99.98
+23andme; mvp; ukb,23andMe; Million Veteran Program; UK Biobank,United States,AMR,False,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+biovu; geisinger,BioVU Vanderbilt; Geisinger MyCode Community Health Initiative,United States,AMR,False,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+bbj; cpsii; kcps; koges; twb; ukb,Biobank Japan; Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study; Taiwan Biobank; UK Biobank,Japan,WPR,False,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+bbj; ckb; estbb; mvp,Biobank Japan; China Kadoorie Biobank; Estonian Biobank; Million Veteran Program,Japan,WPR,False,2,4,11253.91,0.7,Poor,175,50.0,98.32,100.0,99.99
+23andme; moba,23andMe; Norwegian Mother and Child Cohort Study,United States,AMR,False,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+nhs; smwhs,Nurses' Health Study; Shanghai Men and Women's Health Studies,United States,AMR,False,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+bbj; ckb; tommo; ukb,Biobank Japan; China Kadoorie Biobank; Tohoku Medical Megabank; UK Biobank,Japan,WPR,False,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+gel; ucl; ukb,"Genomics England / 100,000 Genomes Project; UCL Biobank; UK Biobank",United Kingdom,EUR,False,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+awigen; mvp,AWI-Gen; Million Veteran Program,South Africa,AFR,True,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+awigen; ukb; ugr,AWI-Gen; UK Biobank; Uganda Genome Resource,South Africa,AFR,True,1,4,11253.91,0.7,Poor,175,100.0,98.32,100.0,99.99
+golestan; jphc,Golestan Cohort Study; JPHC Study,Iran,EMR,True,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+gel; mvp,"Genomics England / 100,000 Genomes Project; Million Veteran Program",United Kingdom,EUR,False,3,4,11253.91,0.7,Poor,175,33.3,98.18,100.0,99.98
+epic; mws; ukb,European Prospective Investigation into Cancer and Nutrition; Million Women Study; UK Biobank,International,EUR,False,1,4,11253.91,0.7,Poor,175,100.0,98.32,100.0,99.99
+estbb; moba; ukb,Estonian Biobank; Norwegian Mother and Child Cohort Study; UK Biobank,Estonia,EUR,False,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+estbb; whi,Estonian Biobank; Women's Health Initiative,Estonia,EUR,False,2,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+aou; mvp; plco; ukb,All of Us Research Program; Million Veteran Program; PLCO Cancer Screening Trial; UK Biobank,United States,AMR,False,1,4,11253.91,0.7,Poor,175,0.0,98.32,100.0,99.99
+bbj; estbb; ukb,Biobank Japan; Estonian Biobank; UK Biobank,Japan,WPR,False,1,3,11253.91,0.5,Poor,176,0.0,98.74,100.0,99.99
+biovu; mec; whi,BioVU Vanderbilt; Multiethnic Cohort Study; Women's Health Initiative,United States,AMR,False,1,3,11253.91,0.5,Poor,176,0.0,98.74,100.0,99.99
+bbj; twb; ukb,Biobank Japan; Taiwan Biobank; UK Biobank,Japan,WPR,False,3,3,11253.91,0.5,Poor,176,0.0,98.74,100.0,99.98
+tommo; ukb,Tohoku Medical Megabank; UK Biobank,Japan,WPR,False,2,3,11253.91,0.5,Poor,176,0.0,98.74,100.0,99.99
+23andme; genes_health; ukb,23andMe; Genes & Health; UK Biobank,United States,AMR,False,1,3,11253.91,0.5,Poor,176,0.0,98.74,100.0,99.99
+bbj; estbb,Biobank Japan; Estonian Biobank,Japan,WPR,False,2,3,11253.91,0.5,Poor,176,0.0,98.74,100.0,99.99
+23andme; aou; ukb,23andMe; All of Us Research Program; UK Biobank,United States,AMR,False,1,3,11253.91,0.4,Poor,176,100.0,98.88,100.0,99.99
+ucl; ukb,UCL Biobank; UK Biobank,United Kingdom,EUR,False,1,2,11253.91,0.3,Poor,177,0.0,99.16,100.0,99.99
+bbj; cpsii; kcps; koges,Biobank Japan; Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study,Japan,WPR,False,1,2,11253.91,0.3,Poor,177,0.0,99.16,100.0,99.99
+aou; gel,"All of Us Research Program; Genomics England / 100,000 Genomes Project",United States,AMR,False,3,2,11253.91,0.3,Poor,177,0.0,99.16,100.0,99.98
+echo; whi,ECHO Cohort; Women's Health Initiative,United States,AMR,False,1,2,11253.91,0.3,Poor,177,0.0,99.16,100.0,99.99
+bbj; koges; twb,Biobank Japan; Korean Genome and Epidemiology Study; Taiwan Biobank,Japan,WPR,False,1,2,11253.91,0.3,Poor,177,0.0,99.16,100.0,99.99
+aou; bbj,All of Us Research Program; Biobank Japan,United States,AMR,False,1,2,11253.91,0.3,Poor,177,0.0,99.16,100.0,99.99
+epic; nhsii; nhs,European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study II; Nurses' Health Study,International,EUR,False,1,2,11253.91,0.3,Poor,177,0.0,99.16,100.0,99.99
+jhu,Johns Hopkins University Biobank,United States,AMR,False,1,1,11253.91,0.2,Poor,178,0.0,99.58,100.0,99.99
+bbj; mvp; ukb,Biobank Japan; Million Veteran Program; UK Biobank,Japan,WPR,False,2,1,11253.91,0.2,Poor,178,0.0,99.58,100.0,99.99
+hunt; nhs,HUNT Study; Nurses' Health Study,Norway,EUR,False,1,1,11253.91,0.2,Poor,178,0.0,99.58,100.0,99.99
+sg100k; snb,SG100K; Saudi National Biobank,Singapore,WPR,False,1,1,11253.91,0.2,Poor,178,0.0,99.58,100.0,99.99
+constances; nako; ukb,CONSTANCES; German National Cohort (NAKO); UK Biobank,France,EUR,False,1,1,11253.91,0.2,Poor,178,0.0,99.58,100.0,99.99
+23andme; biovu,23andMe; BioVU Vanderbilt,United States,AMR,False,1,1,11253.91,0.2,Poor,178,0.0,99.58,100.0,99.99
+23andme; gel; whi,"23andMe; Genomics England / 100,000 Genomes Project; Women's Health Initiative",United States,AMR,False,1,1,11253.91,0.2,Poor,178,0.0,99.58,100.0,99.99
+aou; twb; ukb; usnih,All of Us Research Program; Taiwan Biobank; UK Biobank; US NIH Biobank,United States,AMR,False,1,1,11253.91,0.2,Poor,178,0.0,99.58,100.0,99.99
+aou; gel; ukb,"All of Us Research Program; Genomics England / 100,000 Genomes Project; UK Biobank",United States,AMR,False,1,1,11253.91,0.2,Poor,178,0.0,99.58,100.0,99.99
+ckb; qbb; ukb,China Kadoorie Biobank; Qatar Biobank; UK Biobank,China,WPR,True,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+bbj; koges,Biobank Japan; Korean Genome and Epidemiology Study,Japan,WPR,False,3,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.98
+bbj; koges; ukb,Biobank Japan; Korean Genome and Epidemiology Study; UK Biobank,Japan,WPR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+biovu; bbj; ckb; estbb; hunt; qbb; twb; ukb; ugr,BioVU Vanderbilt; Biobank Japan; China Kadoorie Biobank; Estonian Biobank; HUNT Study; Qatar Biobank; Taiwan Biobank; UK Biobank; Uganda Genome Resource,United States,AMR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+aou; bbj; ukb,All of Us Research Program; Biobank Japan; UK Biobank,United States,AMR,False,2,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+biovu; mvp; ukb; usnih,BioVU Vanderbilt; Million Veteran Program; UK Biobank; US NIH Biobank,United States,AMR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+hunt; plco,HUNT Study; PLCO Cancer Screening Trial,Norway,EUR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+nshds; plco,Northern Sweden Health and Disease Study; PLCO Cancer Screening Trial,Sweden,EUR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+aou; twb,All of Us Research Program; Taiwan Biobank,United States,AMR,False,2,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+aou; usnih,All of Us Research Program; US NIH Biobank,United States,AMR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+bbj; ckb; twb,Biobank Japan; China Kadoorie Biobank; Taiwan Biobank,Japan,WPR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+23andme; bbj; ukb,23andMe; Biobank Japan; UK Biobank,United States,AMR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+awigen; ukb,AWI-Gen; UK Biobank,South Africa,AFR,True,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+mec; nhs,Multiethnic Cohort Study; Nurses' Health Study,United States,AMR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+qbb; ukb,Qatar Biobank; UK Biobank,Qatar,EMR,True,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+kcps; koges,Korean Cancer Prevention Study; Korean Genome and Epidemiology Study,South Korea,WPR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+epic; nhs; simpler,European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study; SIMPLER,International,EUR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+aou; biovu; ukb; usnih,All of Us Research Program; BioVU Vanderbilt; UK Biobank; US NIH Biobank,United States,AMR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+nako; twb; usnih,German National Cohort (NAKO); Taiwan Biobank; US NIH Biobank,Germany,EUR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+biovu; whi,BioVU Vanderbilt; Women's Health Initiative,United States,AMR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+aou; ckb; estbb; mvp; ukb,All of Us Research Program; China Kadoorie Biobank; Estonian Biobank; Million Veteran Program; UK Biobank,United States,AMR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+mvp; ukb; usnih,Million Veteran Program; UK Biobank; US NIH Biobank,United States,AMR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+bgi,BGI Research,China,WPR,True,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
+epic; plco; whi,European Prospective Investigation into Cancer and Nutrition; PLCO Cancer Screening Trial; Women's Health Initiative,International,EUR,False,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99

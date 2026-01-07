@@ -1,28 +1,274 @@
 biobank_id,biobank_name,total_papers,mesh_coverage,theme_breadth,n_clusters,distinctiveness_score,methodology_diversity,disease_coverage,top_theme_1,top_theme_1_pct,top_theme_2,top_theme_2_pct,top_theme_3,top_theme_3_pct
-uk_biobank,UK Biobank,13341,80.4,20,3,3.78,6,11,epidemiology,61.1,genomics_gwas,47.0,metabolic,33.5
-mvp,Million Veteran Program,327,85.0,20,12,100.16,6,11,genomics_gwas,67.0,epidemiology,54.4,cardiovascular,28.7
-finngen,FinnGen,2683,71.0,20,12,15.5,6,11,mendelian_randomization,89.7,genomics_gwas,85.5,epidemiology,41.3
-all_of_us,All of Us Research Program,613,71.3,20,12,59.6,6,11,epidemiology,44.5,metabolic,19.9,cardiovascular,16.5
-estonian_biobank,Estonian Biobank,116,81.0,19,3,48.33,5,11,genomics_gwas,69.8,epidemiology,53.4,cardiovascular,26.7
-biobank_japan,BioBank Japan,271,78.6,19,11,44.97,5,11,genomics_gwas,80.8,epidemiology,45.0,mendelian_randomization,42.4
-china_kadoorie,China Kadoorie Biobank,516,88.2,20,11,44.99,6,11,epidemiology,85.5,cardiovascular,49.6,metabolic,42.1
-taiwan_biobank,Taiwan Biobank,482,71.8,20,11,83.45,6,11,genomics_gwas,52.9,epidemiology,47.5,metabolic,43.6
-hunt,HUNT Study,1152,88.7,20,9,24.68,6,11,epidemiology,77.9,metabolic,33.8,cardiovascular,30.3
-decode,deCODE Genetics,5604,74.8,20,6,11.22,6,11,omics,20.8,aging,18.0,neuroimaging,17.0
-danish_national,Danish National Biobank,9,88.9,11,0,54.4,3,6,omics,44.4,cancer,33.3,metabolic,22.2
-swedish_twin,Swedish Twin Registry,289,93.4,20,10,100.55,6,11,epidemiology,72.3,environment,49.1,genomics_gwas,31.1
-generation_scotland,Generation Scotland,161,83.2,20,11,76.41,6,11,genomics_gwas,49.1,epidemiology,46.6,mental_health,39.1
-lifelines,LifeLines,730,83.3,20,12,44.02,6,11,epidemiology,67.7,metabolic,36.2,respiratory,24.4
-constances,CONSTANCES,222,86.5,19,11,72.66,5,11,epidemiology,64.4,environment,33.8,mental_health,26.1
-nako,German National Cohort (NAKO),138,83.3,19,12,58.52,6,10,epidemiology,55.8,metabolic,28.3,aging,28.3
-biovu,BioVU,155,85.8,20,7,46.53,6,11,genomics_gwas,80.6,epidemiology,45.2,cardiovascular,30.3
-geisinger_mycode,Geisinger MyCode,96,81.2,20,3,130.83,6,11,epidemiology,47.9,genomics_gwas,38.5,cardiovascular,27.1
-mgb_biobank,Mass General Brigham Biobank,92,78.3,20,3,34.2,6,11,epidemiology,52.2,genomics_gwas,47.8,cardiovascular,29.3
-qatar_biobank,Qatar Biobank,174,64.9,20,12,95.19,6,11,metabolic,73.0,epidemiology,53.4,cardiovascular,33.9
-h3africa,H3Africa,139,69.8,20,3,137.85,6,11,epidemiology,28.8,genomics_gwas,21.6,cardiovascular,20.1
-uganda_genome,Uganda Genome Resource,5,80.0,8,0,206.15,2,5,genomics_gwas,60.0,epidemiology,60.0,cardiovascular,40.0
-awigen,AWI-Gen,60,78.3,16,3,132.18,4,9,epidemiology,75.0,metabolic,71.7,cardiovascular,53.3
-mexico_city,Mexico City Prospective Study,29,89.7,16,3,61.47,3,10,epidemiology,100.0,metabolic,69.0,cardiovascular,62.1
-epigen_brazil,EPIGEN-Brazil,1,100.0,1,0,0.0,1,0,genomics_gwas,100.0,,,,
-emerge,eMERGE Network,47755,71.9,20,3,1.7,6,11,infectious,15.4,epidemiology,14.3,omics,13.5
-topmed,TOPMed,196,85.7,20,8,60.02,6,11,genomics_gwas,81.1,cardiovascular,34.2,omics,24.5
+23andme; ukb,23andMe; UK Biobank,69,84.1,20,3,16.81,6,11,genomics_gwas,88.4,epidemiology,49.3,mendelian_randomization,47.8
+23andme,23andMe,226,77.9,20,4,194.12,6,11,genomics_gwas,54.0,epidemiology,27.9,nutrition,16.8
+23andme; aou; ukb,23andMe; All of Us Research Program; UK Biobank,1,100.0,3,0,0.0,1,2,genomics_gwas,100.0,infectious,100.0,aging,100.0
+23andme; estbb; ukb,23andMe; Estonian Biobank; UK Biobank,3,100.0,10,0,1.52,3,7,genomics_gwas,100.0,mendelian_randomization,33.3,cardiovascular,33.3
+23andme; biovu; estbb,23andMe; BioVU Vanderbilt; Estonian Biobank,1,100.0,4,0,0.0,3,1,genomics_gwas,100.0,epidemiology,100.0,omics,100.0
+23andme; mvp; ukb,23andMe; Million Veteran Program; UK Biobank,1,100.0,4,0,0.0,3,1,genomics_gwas,100.0,mental_health,100.0,pharmacogenomics,100.0
+23andme; estbb,23andMe; Estonian Biobank,1,100.0,1,0,0.0,1,0,genomics_gwas,100.0,,,,
+23andme; gel; mvp; ukb,"23andMe; Genomics England / 100,000 Genomes Project; Million Veteran Program; UK Biobank",1,100.0,2,0,0.0,1,1,genomics_gwas,100.0,metabolic,100.0,,
+23andme; genes_health; ukb,23andMe; Genes & Health; UK Biobank,1,100.0,2,0,0.0,1,1,genomics_gwas,100.0,metabolic,100.0,,
+23andme; bbj; ukb,23andMe; Biobank Japan; UK Biobank,1,0.0,3,0,0.0,2,1,mendelian_randomization,100.0,cancer,100.0,epidemiology,100.0
+23andme; moba,23andMe; Norwegian Mother and Child Cohort Study,1,100.0,4,0,0.0,1,3,genomics_gwas,100.0,neurological,100.0,mental_health,100.0
+23andme; biovu,23andMe; BioVU Vanderbilt,1,100.0,3,0,0.0,3,0,genomics_gwas,100.0,epidemiology,100.0,omics,100.0
+23andme; gel; whi,"23andMe; Genomics England / 100,000 Genomes Project; Women's Health Initiative",1,100.0,1,0,0.0,1,0,genomics_gwas,100.0,,,,
+23andme; moba; usnih,23andMe; Norwegian Mother and Child Cohort Study; US NIH Biobank,1,100.0,8,0,0.0,3,4,genomics_gwas,100.0,cancer,100.0,mental_health,100.0
+23andme; hunt; ukb,23andMe; HUNT Study; UK Biobank,1,100.0,5,0,0.0,3,2,genomics_gwas,100.0,mendelian_randomization,100.0,cardiovascular,100.0
+45andup,45 and Up Study,432,92.4,18,9,56.12,4,11,epidemiology,75.9,metabolic,32.2,cardiovascular,28.7
+45andup; plco,45 and Up Study; PLCO Cancer Screening Trial,2,100.0,3,0,0.0,1,2,cancer,100.0,epidemiology,100.0,respiratory,100.0
+awigen,AWI-Gen,70,80.0,16,3,203.18,4,9,epidemiology,70.0,metabolic,67.1,cardiovascular,51.4
+awigen; mvp,AWI-Gen; Million Veteran Program,1,100.0,5,0,0.0,3,1,genomics_gwas,100.0,mendelian_randomization,100.0,metabolic,100.0
+awigen; estbb,AWI-Gen; Estonian Biobank,1,100.0,6,0,0.0,1,2,genomics_gwas,100.0,metabolic,100.0,respiratory,100.0
+awigen; ukb,AWI-Gen; UK Biobank,1,0.0,3,0,0.0,3,0,genomics_gwas,100.0,epidemiology,100.0,omics,100.0
+awigen; ukb; ugr,AWI-Gen; UK Biobank; Uganda Genome Resource,1,100.0,3,0,0.0,2,1,genomics_gwas,100.0,cardiovascular,100.0,epidemiology,100.0
+ahri,Africa Health Research Institute Population Cohort,33,63.6,14,3,170.59,3,9,infectious,90.9,epidemiology,60.6,environment,21.2
+ahri; saprin,Africa Health Research Institute Population Cohort; SAPRIN,3,100.0,6,0,159.62,1,4,infectious,100.0,epidemiology,66.7,environment,66.7
+aou,All of Us Research Program,777,72.3,20,9,42.91,6,11,epidemiology,41.6,metabolic,17.1,mental_health,14.4
+aou; ukb,All of Us Research Program; UK Biobank,33,78.8,18,3,19.46,5,10,genomics_gwas,63.6,epidemiology,48.5,cardiovascular,33.3
+aou; twb; ukb,All of Us Research Program; Taiwan Biobank; UK Biobank,1,100.0,2,0,0.0,1,1,genomics_gwas,100.0,cancer,100.0,,
+aou; twb; ukb; usnih,All of Us Research Program; Taiwan Biobank; UK Biobank; US NIH Biobank,1,100.0,1,0,0.0,1,0,neuroimaging,100.0,,,,
+aou; bbj,All of Us Research Program; Biobank Japan,1,100.0,2,0,0.0,1,1,genomics_gwas,100.0,musculoskeletal,100.0,,
+aou; biovu,All of Us Research Program; BioVU Vanderbilt,3,100.0,7,0,1.81,3,4,genomics_gwas,100.0,mendelian_randomization,66.7,cardiovascular,66.7
+aou; mvp,All of Us Research Program; Million Veteran Program,2,100.0,5,0,0.0,2,3,genomics_gwas,50.0,cardiovascular,50.0,epidemiology,50.0
+aou; twb,All of Us Research Program; Taiwan Biobank,2,0.0,3,0,0.0,1,1,genomics_gwas,100.0,metabolic,50.0,nutrition,50.0
+aou; usnih,All of Us Research Program; US NIH Biobank,1,100.0,2,0,0.0,2,0,epidemiology,100.0,omics,100.0,,
+aou; gel,"All of Us Research Program; Genomics England / 100,000 Genomes Project",3,100.0,1,0,1.58,0,0,environment,33.3,,,,
+aou; biovu; ukb; usnih,All of Us Research Program; BioVU Vanderbilt; UK Biobank; US NIH Biobank,1,0.0,4,0,0.0,1,3,cancer,100.0,epidemiology,100.0,aging,100.0
+aou; geisinger,All of Us Research Program; Geisinger MyCode Community Health Initiative,1,100.0,1,0,0.0,0,1,cancer,100.0,,,,
+aou; ckb; estbb; mvp; ukb,All of Us Research Program; China Kadoorie Biobank; Estonian Biobank; Million Veteran Program; UK Biobank,1,0.0,3,0,0.0,2,0,epidemiology,100.0,omics,100.0,environment,100.0
+aou; mvp; ukb,All of Us Research Program; Million Veteran Program; UK Biobank,1,100.0,3,0,0.0,1,2,genomics_gwas,100.0,cardiovascular,100.0,metabolic,100.0
+aou; gel; ukb,"All of Us Research Program; Genomics England / 100,000 Genomes Project; UK Biobank",1,100.0,0,0,0.0,0,0,,,,,,
+aou; bbj; ukb,All of Us Research Program; Biobank Japan; UK Biobank,2,0.0,8,0,0.0,2,5,genomics_gwas,50.0,cardiovascular,50.0,metabolic,50.0
+aou; whi,All of Us Research Program; Women's Health Initiative,2,100.0,5,0,0.0,2,2,genomics_gwas,50.0,cardiovascular,50.0,metabolic,50.0
+aou; tommo,All of Us Research Program; Tohoku Medical Megabank,1,100.0,3,0,0.0,2,1,genomics_gwas,100.0,metabolic,100.0,epidemiology,100.0
+aou; mvp; plco; ukb,All of Us Research Program; Million Veteran Program; PLCO Cancer Screening Trial; UK Biobank,1,100.0,6,0,0.0,3,3,genomics_gwas,100.0,cancer,100.0,pharmacogenomics,100.0
+aou; ukb; usnih,All of Us Research Program; UK Biobank; US NIH Biobank,1,100.0,4,0,0.0,2,2,genomics_gwas,100.0,cancer,100.0,epidemiology,100.0
+acscps3,American Cancer Society Cancer Prevention Study-3,92,81.5,19,3,49.46,5,11,cancer,59.8,epidemiology,46.7,nutrition,23.9
+acscps3; cpsii,American Cancer Society Cancer Prevention Study-3; Cancer Prevention Study II Nutrition Cohort,2,100.0,7,0,0.0,2,4,cancer,100.0,respiratory,100.0,cardiovascular,50.0
+bgi,BGI Research,1,100.0,0,0,0.0,0,0,,,,,,
+bandim,Bandim Health Project,80,92.5,9,3,361.66,1,5,epidemiology,87.5,infectious,57.5,environment,26.2
+biovu,BioVU Vanderbilt,119,85.7,19,6,59.18,5,11,genomics_gwas,80.7,epidemiology,45.4,cardiovascular,28.6
+biovu; whi,BioVU Vanderbilt; Women's Health Initiative,1,0.0,4,0,0.0,2,2,genomics_gwas,100.0,cardiovascular,100.0,epidemiology,100.0
+biovu; bbj,BioVU Vanderbilt; Biobank Japan,1,100.0,4,0,0.0,2,2,genomics_gwas,100.0,cancer,100.0,epidemiology,100.0
+biovu; ukb,BioVU Vanderbilt; UK Biobank,23,100.0,20,3,9.79,6,11,genomics_gwas,78.3,cardiovascular,34.8,epidemiology,34.8
+biovu; bbj; ckb; estbb; hunt; qbb; twb; ukb; ugr,BioVU Vanderbilt; Biobank Japan; China Kadoorie Biobank; Estonian Biobank; HUNT Study; Qatar Biobank; Taiwan Biobank; UK Biobank; Uganda Genome Resource,1,0.0,3,0,0.0,2,1,genomics_gwas,100.0,metabolic,100.0,omics,100.0
+biovu; geisinger; moba,BioVU Vanderbilt; Geisinger MyCode Community Health Initiative; Norwegian Mother and Child Cohort Study,1,100.0,3,0,0.0,2,1,genomics_gwas,100.0,metabolic,100.0,epidemiology,100.0
+biovu; bbj; ukb,BioVU Vanderbilt; Biobank Japan; UK Biobank,2,100.0,8,0,0.0,3,3,genomics_gwas,100.0,cardiovascular,50.0,metabolic,50.0
+biovu; mvp,BioVU Vanderbilt; Million Veteran Program,3,100.0,11,0,8.13,5,5,genomics_gwas,100.0,mendelian_randomization,33.3,cardiovascular,33.3
+biovu; mvp; ukb; usnih,BioVU Vanderbilt; Million Veteran Program; UK Biobank; US NIH Biobank,1,0.0,1,0,0.0,0,1,metabolic,100.0,,,,
+biovu; geisinger,BioVU Vanderbilt; Geisinger MyCode Community Health Initiative,1,100.0,1,0,0.0,1,0,genomics_gwas,100.0,,,,
+biovu; bbj; mvp; ukb,BioVU Vanderbilt; Biobank Japan; Million Veteran Program; UK Biobank,1,100.0,3,0,0.0,2,1,genomics_gwas,100.0,metabolic,100.0,epidemiology,100.0
+biovu; usnih,BioVU Vanderbilt; US NIH Biobank,1,100.0,1,0,0.0,1,0,genomics_gwas,100.0,,,,
+biovu; mec; whi,BioVU Vanderbilt; Multiethnic Cohort Study; Women's Health Initiative,1,100.0,4,0,0.0,2,2,genomics_gwas,100.0,cancer,100.0,epidemiology,100.0
+bbj,Biobank Japan,208,79.8,19,4,48.54,5,11,genomics_gwas,78.4,epidemiology,39.9,cancer,38.0
+bbj; koges; ukb,Biobank Japan; Korean Genome and Epidemiology Study; UK Biobank,1,0.0,5,0,0.0,3,2,genomics_gwas,100.0,mendelian_randomization,100.0,cardiovascular,100.0
+bbj; koges; twb,Biobank Japan; Korean Genome and Epidemiology Study; Taiwan Biobank,1,100.0,4,0,0.0,4,0,genomics_gwas,100.0,mendelian_randomization,100.0,epidemiology,100.0
+bbj; ukb,Biobank Japan; UK Biobank,86,89.5,20,3,22.07,6,11,genomics_gwas,95.3,mendelian_randomization,45.3,epidemiology,43.0
+bbj; koges,Biobank Japan; Korean Genome and Epidemiology Study,3,0.0,6,0,0.0,2,2,genomics_gwas,100.0,epidemiology,66.7,cardiovascular,33.3
+bbj; mvp,Biobank Japan; Million Veteran Program,5,100.0,10,0,5.42,5,4,genomics_gwas,100.0,cardiovascular,60.0,metabolic,60.0
+bbj; ckb,Biobank Japan; China Kadoorie Biobank,4,50.0,5,0,0.0,2,2,genomics_gwas,75.0,mendelian_randomization,50.0,cancer,25.0
+bbj; nbk,Biobank Japan; National Biobank of Korea,1,100.0,3,0,0.0,2,1,genomics_gwas,100.0,mendelian_randomization,100.0,cancer,100.0
+bbj; ckb; ukb,Biobank Japan; China Kadoorie Biobank; UK Biobank,2,50.0,4,0,0.0,2,2,genomics_gwas,100.0,epidemiology,100.0,cardiovascular,50.0
+bbj; ckb; twb,Biobank Japan; China Kadoorie Biobank; Taiwan Biobank,1,0.0,1,0,0.0,1,0,mendelian_randomization,100.0,,,,
+bbj; estbb,Biobank Japan; Estonian Biobank,2,100.0,5,0,0.0,2,2,genomics_gwas,100.0,environment,100.0,mendelian_randomization,50.0
+bbj; ckb; estbb; mvp,Biobank Japan; China Kadoorie Biobank; Estonian Biobank; Million Veteran Program,2,50.0,2,0,0.0,1,1,cardiovascular,100.0,genomics_gwas,50.0,,
+bbj; tommo,Biobank Japan; Tohoku Medical Megabank,4,75.0,10,0,0.0,3,5,genomics_gwas,50.0,metabolic,50.0,epidemiology,50.0
+bbj; cpsii; kcps; koges,Biobank Japan; Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study,1,100.0,5,0,0.0,3,2,genomics_gwas,100.0,mendelian_randomization,100.0,cardiovascular,100.0
+bbj; twb; ukb,Biobank Japan; Taiwan Biobank; UK Biobank,3,33.3,4,0,0.0,2,2,genomics_gwas,66.7,metabolic,33.3,epidemiology,33.3
+bbj; ckb; koges,Biobank Japan; China Kadoorie Biobank; Korean Genome and Epidemiology Study,1,100.0,4,0,0.0,2,2,mendelian_randomization,100.0,cancer,100.0,epidemiology,100.0
+bbj; ckb; estbb; whi,Biobank Japan; China Kadoorie Biobank; Estonian Biobank; Women's Health Initiative,1,100.0,5,0,0.0,1,3,genomics_gwas,100.0,metabolic,100.0,aging,100.0
+bbj; mvp; ukb,Biobank Japan; Million Veteran Program; UK Biobank,2,50.0,5,0,0.0,2,2,genomics_gwas,100.0,omics,50.0,aging,50.0
+bbj; twb,Biobank Japan; Taiwan Biobank,4,50.0,8,0,0.0,3,5,genomics_gwas,100.0,mendelian_randomization,75.0,metabolic,50.0
+bbj; tommo; ukb,Biobank Japan; Tohoku Medical Megabank; UK Biobank,1,100.0,3,0,0.0,2,1,genomics_gwas,100.0,metabolic,100.0,epidemiology,100.0
+bbj; estbb; ukb,Biobank Japan; Estonian Biobank; UK Biobank,1,100.0,2,0,0.0,2,0,genomics_gwas,100.0,pharmacogenomics,100.0,,
+bbj; ckb; tommo; ukb,Biobank Japan; China Kadoorie Biobank; Tohoku Medical Megabank; UK Biobank,1,100.0,6,0,0.0,3,2,genomics_gwas,100.0,mendelian_randomization,100.0,cardiovascular,100.0
+bbj; cpsii; kcps; koges; twb; ukb,Biobank Japan; Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study; Taiwan Biobank; UK Biobank,1,100.0,3,0,0.0,2,1,genomics_gwas,100.0,cancer,100.0,epidemiology,100.0
+c19genomnet,C19-GenoNet,1,100.0,1,0,0.0,0,1,infectious,100.0,,,,
+constances,CONSTANCES,231,86.1,18,12,85.28,4,11,epidemiology,63.2,environment,33.8,mental_health,25.1
+constances; nako; ukb,CONSTANCES; German National Cohort (NAKO); UK Biobank,1,100.0,3,0,0.0,3,0,genomics_gwas,100.0,neuroimaging,100.0,omics,100.0
+constances; ukb,CONSTANCES; UK Biobank,1,100.0,6,0,0.0,1,4,cardiovascular,100.0,metabolic,100.0,cancer,100.0
+constances; epic; hunt; plco,CONSTANCES; European Prospective Investigation into Cancer and Nutrition; HUNT Study; PLCO Cancer Screening Trial,1,100.0,4,0,0.0,1,2,cancer,100.0,epidemiology,100.0,respiratory,100.0
+cts,California Teachers Study,141,93.6,17,12,111.48,3,11,epidemiology,88.7,cancer,70.2,environment,36.2
+cts; mec,California Teachers Study; Multiethnic Cohort Study,1,100.0,3,0,0.0,2,1,genomics_gwas,100.0,cancer,100.0,epidemiology,100.0
+cts; whi,California Teachers Study; Women's Health Initiative,2,100.0,3,0,0.0,1,2,epidemiology,100.0,cardiovascular,50.0,cancer,50.0
+cts; nhs,California Teachers Study; Nurses' Health Study,1,100.0,3,0,0.0,1,1,cancer,100.0,epidemiology,100.0,nutrition,100.0
+cts; mec; nhs,California Teachers Study; Multiethnic Cohort Study; Nurses' Health Study,1,100.0,4,0,0.0,1,2,cancer,100.0,epidemiology,100.0,respiratory,100.0
+cptp,Canadian Partnership for Tomorrow's Health,19,68.4,12,0,206.13,1,8,epidemiology,63.2,cancer,42.1,respiratory,36.8
+cpsii,Cancer Prevention Study II Nutrition Cohort,293,95.2,18,11,25.77,4,11,cancer,99.0,epidemiology,95.2,nutrition,63.5
+cpsii; nhs,Cancer Prevention Study II Nutrition Cohort; Nurses' Health Study,9,100.0,11,0,10.59,3,5,cancer,100.0,epidemiology,88.9,nutrition,66.7
+cpsii; mec; nhs,Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study; Nurses' Health Study,5,100.0,6,0,70.36,2,2,cancer,100.0,epidemiology,100.0,nutrition,100.0
+cpsii; kcps,Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study,38,71.1,13,3,38.98,4,6,cancer,97.4,epidemiology,73.7,metabolic,42.1
+cpsii; plco,Cancer Prevention Study II Nutrition Cohort; PLCO Cancer Screening Trial,13,92.3,10,0,108.15,4,5,cancer,100.0,epidemiology,100.0,respiratory,100.0
+cpsii; epic; nshds,Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition; Northern Sweden Health and Disease Study,1,100.0,4,0,0.0,1,1,cancer,100.0,epidemiology,100.0,nutrition,100.0
+cpsii; epic,Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition,2,100.0,6,0,0.0,2,2,cancer,100.0,epidemiology,100.0,nutrition,100.0
+cpsii; kcps; ukb,Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; UK Biobank,2,50.0,4,0,0.0,1,2,cancer,100.0,epidemiology,100.0,metabolic,50.0
+cpsii; whi,Cancer Prevention Study II Nutrition Cohort; Women's Health Initiative,2,100.0,5,0,0.0,1,3,cancer,100.0,epidemiology,100.0,cardiovascular,50.0
+cpsii; epic; nhs,Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study,2,100.0,7,0,0.0,3,2,genomics_gwas,100.0,cancer,100.0,epidemiology,100.0
+cpsii; mec; nhs; whi,Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study; Nurses' Health Study; Women's Health Initiative,2,100.0,6,0,0.0,1,3,epidemiology,100.0,metabolic,50.0,cancer,50.0
+cpsii; kcps; koges,Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study,3,66.7,9,0,0.0,5,3,genomics_gwas,100.0,mendelian_randomization,100.0,cardiovascular,100.0
+cpsii; mec,Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study,1,100.0,5,0,0.0,1,4,cardiovascular,100.0,metabolic,100.0,cancer,100.0
+chop_cag,"Center for Applied Genomics, CHOP",8,100.0,9,0,11.91,2,6,genomics_gwas,62.5,epidemiology,50.0,metabolic,37.5
+ckb,China Kadoorie Biobank,527,88.0,20,12,36.79,6,11,epidemiology,85.2,cardiovascular,50.7,metabolic,41.6
+ckb; ukb,China Kadoorie Biobank; UK Biobank,38,81.6,16,3,14.93,5,8,epidemiology,76.3,cardiovascular,50.0,metabolic,50.0
+ckb; smwhs,China Kadoorie Biobank; Shanghai Men and Women's Health Studies,1,100.0,3,0,0.0,1,2,metabolic,100.0,cancer,100.0,epidemiology,100.0
+ckb; mws; ukb,China Kadoorie Biobank; Million Women Study; UK Biobank,1,100.0,4,0,0.0,1,2,metabolic,100.0,cancer,100.0,epidemiology,100.0
+ckb; qbb; ukb,China Kadoorie Biobank; Qatar Biobank; UK Biobank,1,0.0,4,0,0.0,3,0,genomics_gwas,100.0,mendelian_randomization,100.0,epidemiology,100.0
+ckb; estbb; ukb,China Kadoorie Biobank; Estonian Biobank; UK Biobank,1,100.0,5,0,0.0,3,2,genomics_gwas,100.0,mendelian_randomization,100.0,cardiovascular,100.0
+peace,China PEACE Million Persons Project,78,88.5,14,3,259.74,3,8,cardiovascular,98.7,epidemiology,79.5,metabolic,35.9
+nepal_csh,Civil Service Hospital Nepal,10,70.0,8,0,2786.14,2,6,epidemiology,50.0,pharmacogenomics,30.0,metabolic,20.0
+dnb,Danish National Biobank,8,87.5,9,0,20.58,3,5,omics,50.0,metabolic,25.0,cancer,25.0
+dnb; dnbc,Danish National Biobank; Danish National Birth Cohort,2,50.0,4,0,0.0,0,3,cardiovascular,50.0,metabolic,50.0,cancer,50.0
+dnbc,Danish National Birth Cohort,612,92.6,19,6,35.54,5,11,epidemiology,71.1,environment,49.5,nutrition,28.9
+dnbc; moba,Danish National Birth Cohort; Norwegian Mother and Child Cohort Study,18,100.0,9,0,108.02,2,5,epidemiology,94.4,environment,44.4,metabolic,38.9
+dnbc; nhsii; nhs,Danish National Birth Cohort; Nurses' Health Study II; Nurses' Health Study,4,100.0,8,0,48.76,3,3,metabolic,100.0,epidemiology,100.0,genomics_gwas,50.0
+dpuk; ukb,Dementias Platform UK; UK Biobank,2,100.0,5,0,0.0,2,2,neuroimaging,100.0,neurological,100.0,aging,100.0
+dpuk,Dementias Platform UK,14,85.7,15,0,15.58,5,7,neurological,100.0,epidemiology,57.1,aging,50.0
+elsa_brasil,ELSA-Brasil,649,89.2,20,12,31.89,6,11,epidemiology,91.8,cardiovascular,50.7,metabolic,49.5
+elsa_brasil; ukb,ELSA-Brasil; UK Biobank,6,83.3,8,0,35.55,2,4,cardiovascular,100.0,epidemiology,83.3,environment,50.0
+echo,ECHO Cohort,268,81.0,20,11,83.81,6,11,environment,90.3,epidemiology,51.5,metabolic,23.9
+echo; whi,ECHO Cohort; Women's Health Initiative,1,100.0,4,0,0.0,1,2,neurological,100.0,epidemiology,100.0,aging,100.0
+epihealth,EpiHealth,43,95.3,19,3,95.5,5,11,metabolic,76.7,epidemiology,69.8,cardiovascular,37.2
+epihealth; simpler,EpiHealth; SIMPLER,2,100.0,4,0,0.0,1,1,cardiovascular,100.0,omics,100.0,nutrition,50.0
+epihealth; lifegene,EpiHealth; LifeGene,3,100.0,6,0,6.87,1,4,cardiovascular,100.0,physical_activity,100.0,eye_vision,66.7
+estbb,Estonian Biobank,574,86.9,20,5,35.75,6,11,genomics_gwas,66.7,epidemiology,34.7,omics,33.1
+estbb; mvp,Estonian Biobank; Million Veteran Program,13,84.6,18,0,5.06,5,11,genomics_gwas,84.6,epidemiology,38.5,cardiovascular,30.8
+estbb; ukb,Estonian Biobank; UK Biobank,60,88.3,18,3,24.65,5,11,genomics_gwas,95.0,epidemiology,46.7,metabolic,38.3
+estbb; hunt,Estonian Biobank; HUNT Study,2,100.0,5,0,0.0,3,2,genomics_gwas,100.0,omics,100.0,metabolic,50.0
+estbb; whi,Estonian Biobank; Women's Health Initiative,2,100.0,3,0,0.0,1,2,genomics_gwas,50.0,metabolic,50.0,respiratory,50.0
+estbb; gel,"Estonian Biobank; Genomics England / 100,000 Genomes Project",5,100.0,8,0,6.56,4,3,genomics_gwas,100.0,cardiovascular,40.0,epidemiology,40.0
+estbb; moba; ukb,Estonian Biobank; Norwegian Mother and Child Cohort Study; UK Biobank,1,100.0,1,0,0.0,1,0,genomics_gwas,100.0,,,,
+estbb; gel; ukb,"Estonian Biobank; Genomics England / 100,000 Genomes Project; UK Biobank",2,100.0,6,0,0.0,3,3,genomics_gwas,100.0,cardiovascular,100.0,epidemiology,100.0
+estbb; mvp; ukb,Estonian Biobank; Million Veteran Program; UK Biobank,1,100.0,3,0,0.0,2,1,genomics_gwas,100.0,metabolic,100.0,epidemiology,100.0
+epic,European Prospective Investigation into Cancer and Nutrition,1796,95.4,20,4,10.38,6,11,epidemiology,98.3,cancer,95.9,nutrition,92.1
+epic; ukb,European Prospective Investigation into Cancer and Nutrition; UK Biobank,40,90.0,18,3,7.12,5,10,epidemiology,97.5,cancer,90.0,nutrition,75.0
+epic; nhs,European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study,9,100.0,10,0,7.02,4,4,cancer,100.0,epidemiology,100.0,nutrition,100.0
+epic; mvp; ukb,European Prospective Investigation into Cancer and Nutrition; Million Veteran Program; UK Biobank,1,100.0,6,0,0.0,2,3,mendelian_randomization,100.0,cardiovascular,100.0,metabolic,100.0
+epic; nshds,European Prospective Investigation into Cancer and Nutrition; Northern Sweden Health and Disease Study,4,100.0,7,0,6.32,2,3,cancer,100.0,epidemiology,100.0,nutrition,100.0
+epic; nhs; simpler,European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study; SIMPLER,1,0.0,3,0,0.0,1,1,cancer,100.0,epidemiology,100.0,nutrition,100.0
+epic; whi,European Prospective Investigation into Cancer and Nutrition; Women's Health Initiative,1,100.0,3,0,0.0,1,1,cancer,100.0,epidemiology,100.0,nutrition,100.0
+epic; hunt,European Prospective Investigation into Cancer and Nutrition; HUNT Study,1,100.0,3,0,0.0,1,1,cancer,100.0,epidemiology,100.0,nutrition,100.0
+epic; plco,European Prospective Investigation into Cancer and Nutrition; PLCO Cancer Screening Trial,3,100.0,6,0,0.0,2,3,cancer,100.0,epidemiology,100.0,respiratory,100.0
+epic; generations,European Prospective Investigation into Cancer and Nutrition; Generations Study,2,50.0,5,0,0.0,3,1,genomics_gwas,100.0,cancer,100.0,epidemiology,100.0
+epic; nhs; smwhs,European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study; Shanghai Men and Women's Health Studies,1,100.0,3,0,0.0,1,1,cancer,100.0,epidemiology,100.0,nutrition,100.0
+epic; mws; ukb,European Prospective Investigation into Cancer and Nutrition; Million Women Study; UK Biobank,1,100.0,4,0,0.0,1,1,cancer,100.0,epidemiology,100.0,nutrition,100.0
+epic; plco; whi,European Prospective Investigation into Cancer and Nutrition; PLCO Cancer Screening Trial; Women's Health Initiative,1,0.0,8,0,0.0,1,4,cardiovascular,100.0,metabolic,100.0,cancer,100.0
+epic; gel,"European Prospective Investigation into Cancer and Nutrition; Genomics England / 100,000 Genomes Project",1,100.0,4,0,0.0,2,1,genomics_gwas,100.0,cancer,100.0,epidemiology,100.0
+epic; mec,European Prospective Investigation into Cancer and Nutrition; Multiethnic Cohort Study,1,100.0,4,0,0.0,1,2,metabolic,100.0,cancer,100.0,epidemiology,100.0
+epic; nhsii; nhs,European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study II; Nurses' Health Study,1,100.0,2,0,0.0,1,0,epidemiology,100.0,nutrition,100.0,,
+fmc,Finnish Maternity Cohort Serum Bank,56,98.2,12,3,194.67,2,8,epidemiology,69.6,cancer,50.0,infectious,42.9
+fmc; hunt,Finnish Maternity Cohort Serum Bank; HUNT Study,1,100.0,3,0,0.0,2,1,cancer,100.0,epidemiology,100.0,omics,100.0
+geisinger; ukb,Geisinger MyCode Community Health Initiative; UK Biobank,11,72.7,7,0,47.37,3,4,epidemiology,63.6,cancer,36.4,genomics_gwas,27.3
+geisinger,Geisinger MyCode Community Health Initiative,50,78.0,16,3,161.45,5,9,epidemiology,46.0,genomics_gwas,30.0,cardiovascular,26.0
+genv,Generation Victoria,14,85.7,12,0,350.84,4,5,epidemiology,64.3,infectious,50.0,omics,21.4
+generations,Generations Study,69,82.6,15,3,64.7,3,9,epidemiology,50.7,cancer,42.0,environment,24.6
+generations; ukb,Generations Study; UK Biobank,1,100.0,3,0,0.0,1,2,cancer,100.0,epidemiology,100.0,respiratory,100.0
+generations; nhsii; nhs,Generations Study; Nurses' Health Study II; Nurses' Health Study,1,100.0,10,0,0.0,3,5,genomics_gwas,100.0,mendelian_randomization,100.0,cardiovascular,100.0
+genes_health,Genes & Health,26,65.4,15,0,281.46,5,8,epidemiology,53.8,genomics_gwas,46.2,metabolic,34.6
+genes_health; ukb,Genes & Health; UK Biobank,3,66.7,4,0,0.0,2,2,genomics_gwas,100.0,metabolic,66.7,epidemiology,66.7
+genes_health; gel; ukb,"Genes & Health; Genomics England / 100,000 Genomes Project; UK Biobank",1,100.0,1,0,0.0,0,1,cancer,100.0,,,,
+gel,"Genomics England / 100,000 Genomes Project",649,82.4,20,4,71.11,6,11,genomics_gwas,23.0,cancer,20.3,omics,15.1
+gel; mvp,"Genomics England / 100,000 Genomes Project; Million Veteran Program",3,100.0,4,0,10.13,2,2,genomics_gwas,100.0,cardiovascular,33.3,metabolic,33.3
+gel; ukb,"Genomics England / 100,000 Genomes Project; UK Biobank",30,80.0,13,3,14.31,6,7,genomics_gwas,63.3,epidemiology,23.3,aging,20.0
+gel; ucl; ukb,"Genomics England / 100,000 Genomes Project; UCL Biobank; UK Biobank",1,100.0,2,0,0.0,0,1,neurological,100.0,physical_activity,100.0,,
+gel; mvp; ukb,"Genomics England / 100,000 Genomes Project; Million Veteran Program; UK Biobank",2,100.0,6,0,0.0,3,3,epidemiology,100.0,genomics_gwas,50.0,cardiovascular,50.0
+nako,German National Cohort (NAKO),163,86.5,19,11,97.26,5,11,epidemiology,60.1,metabolic,32.5,cardiovascular,25.2
+nako; ukb,German National Cohort (NAKO); UK Biobank,9,77.8,9,0,36.66,2,6,neuroimaging,77.8,aging,77.8,musculoskeletal,33.3
+nako; twb; usnih,German National Cohort (NAKO); Taiwan Biobank; US NIH Biobank,1,0.0,1,0,0.0,0,1,aging,100.0,,,,
+golestan,Golestan Cohort Study,130,89.2,18,10,162.67,5,10,epidemiology,100.0,cancer,63.1,nutrition,39.2
+golestan; jphc,Golestan Cohort Study; JPHC Study,1,100.0,5,0,0.0,1,3,cardiovascular,100.0,cancer,100.0,epidemiology,100.0
+hunt,HUNT Study,1185,88.5,20,10,18.38,6,11,epidemiology,76.5,metabolic,33.0,cardiovascular,29.5
+hunt; ukb,HUNT Study; UK Biobank,22,86.4,17,0,6.12,5,9,genomics_gwas,63.6,epidemiology,63.6,mendelian_randomization,54.5
+hunt; nhs,HUNT Study; Nurses' Health Study,1,100.0,12,0,0.0,2,8,neuroimaging,100.0,cardiovascular,100.0,metabolic,100.0
+hunt; plco,HUNT Study; PLCO Cancer Screening Trial,1,0.0,3,0,0.0,1,2,cancer,100.0,epidemiology,100.0,respiratory,100.0
+hunt; nshds,HUNT Study; Northern Sweden Health and Disease Study,1,100.0,6,0,0.0,2,3,metabolic,100.0,cancer,100.0,epidemiology,100.0
+hunt; moba,HUNT Study; Norwegian Mother and Child Cohort Study,1,100.0,3,0,0.0,1,1,metabolic,100.0,epidemiology,100.0,nutrition,100.0
+healthy_nevada,Healthy Nevada,15,60.0,13,0,667.98,3,8,metabolic,53.3,genomics_gwas,46.7,cancer,46.7
+healthy_nevada; ukb,Healthy Nevada; UK Biobank,3,66.7,4,0,0.0,2,2,genomics_gwas,100.0,cardiovascular,33.3,metabolic,33.3
+iganga_mayuge,Iganga Mayuge HDSS,54,85.2,14,3,244.38,3,8,epidemiology,64.8,infectious,40.7,environment,20.4
+jphc,JPHC Study,442,95.7,19,10,22.86,5,11,epidemiology,96.4,cancer,60.0,nutrition,51.6
+jphc; smwhs,JPHC Study; Shanghai Men and Women's Health Studies,2,100.0,5,0,0.0,1,3,cancer,100.0,epidemiology,100.0,respiratory,100.0
+jphc; tommo,JPHC Study; Tohoku Medical Megabank,1,100.0,5,0,0.0,2,2,genomics_gwas,100.0,cancer,100.0,epidemiology,100.0
+jhu,Johns Hopkins University Biobank,1,100.0,1,0,0.0,0,1,cancer,100.0,,,,
+jhu; ukb,Johns Hopkins University Biobank; UK Biobank,5,100.0,7,0,59.64,3,4,cancer,80.0,genomics_gwas,40.0,epidemiology,40.0
+kemri,KEMRI-Wellcome,27,59.3,11,0,409.65,4,6,neuroimaging,85.2,infectious,40.7,epidemiology,18.5
+kprb; ukb,Kaiser Permanente Research Bank; UK Biobank,5,80.0,6,0,112.07,3,3,genomics_gwas,100.0,epidemiology,60.0,neurological,20.0
+kprb,Kaiser Permanente Research Bank,7,71.4,9,0,87.91,1,5,cancer,57.1,infectious,57.1,epidemiology,57.1
+kcps,Korean Cancer Prevention Study,20,80.0,15,0,60.65,4,8,cancer,95.0,epidemiology,90.0,metabolic,50.0
+kcps; koges,Korean Cancer Prevention Study; Korean Genome and Epidemiology Study,1,0.0,3,0,0.0,1,1,cancer,100.0,epidemiology,100.0,physical_activity,100.0
+koges,Korean Genome and Epidemiology Study,710,78.7,20,10,25.75,6,11,epidemiology,96.8,metabolic,61.4,nutrition,45.9
+koges; ukb,Korean Genome and Epidemiology Study; UK Biobank,9,88.9,9,0,8.41,2,5,genomics_gwas,88.9,epidemiology,88.9,metabolic,66.7
+koges; nbk,Korean Genome and Epidemiology Study; National Biobank of Korea,2,50.0,4,0,0.0,2,2,epidemiology,100.0,genomics_gwas,50.0,cardiovascular,50.0
+lifepath,LIFEPATH,38,92.1,16,3,679.29,4,9,epidemiology,55.3,aging,31.6,cardiovascular,23.7
+lifegene,LifeGene,26,80.8,15,3,11.39,3,9,epidemiology,61.5,mental_health,38.5,cardiovascular,26.9
+mauco,MAUCO,16,93.8,14,0,314.99,3,8,epidemiology,87.5,metabolic,50.0,cardiovascular,31.2
+mauco; usnih,MAUCO; US NIH Biobank,1,100.0,6,0,0.0,1,3,cardiovascular,100.0,cancer,100.0,neurological,100.0
+mvp,Million Veteran Program,324,82.4,20,9,110.27,6,11,genomics_gwas,58.3,epidemiology,50.3,cardiovascular,28.1
+mvp; ukb,Million Veteran Program; UK Biobank,78,87.2,20,3,18.38,6,11,genomics_gwas,92.3,epidemiology,53.8,mendelian_randomization,42.3
+mvp; ukb; usnih,Million Veteran Program; UK Biobank; US NIH Biobank,1,0.0,0,0,0.0,0,0,,,,,,
+mws,Million Women Study,144,94.4,18,12,63.2,4,11,epidemiology,79.9,cancer,74.3,respiratory,24.3
+mws; whi,Million Women Study; Women's Health Initiative,55,98.2,14,3,41.85,3,9,cancer,72.7,epidemiology,52.7,cardiovascular,27.3
+mws; ukb; whi,Million Women Study; UK Biobank; Women's Health Initiative,1,100.0,4,0,0.0,1,2,cardiovascular,100.0,cancer,100.0,epidemiology,100.0
+mws; plco,Million Women Study; PLCO Cancer Screening Trial,1,100.0,4,0,0.0,1,2,cancer,100.0,epidemiology,100.0,respiratory,100.0
+mws; ukb,Million Women Study; UK Biobank,4,100.0,8,0,2.76,2,4,epidemiology,100.0,cancer,75.0,nutrition,50.0
+mec,Multiethnic Cohort Study,311,93.9,20,12,54.27,6,11,epidemiology,99.4,cancer,65.9,nutrition,41.5
+mec; plco,Multiethnic Cohort Study; PLCO Cancer Screening Trial,2,100.0,4,0,0.0,1,2,cancer,100.0,epidemiology,100.0,respiratory,100.0
+mec; plco; smwhs,Multiethnic Cohort Study; PLCO Cancer Screening Trial; Shanghai Men and Women's Health Studies,1,100.0,4,0,0.0,2,2,cancer,100.0,epidemiology,100.0,omics,100.0
+mec; whi,Multiethnic Cohort Study; Women's Health Initiative,3,100.0,7,0,2.52,3,4,epidemiology,100.0,cancer,66.7,genomics_gwas,33.3
+mec; nhs,Multiethnic Cohort Study; Nurses' Health Study,1,0.0,5,0,0.0,2,2,metabolic,100.0,epidemiology,100.0,omics,100.0
+mec; ukb,Multiethnic Cohort Study; UK Biobank,2,50.0,5,0,0.0,2,3,epidemiology,100.0,omics,100.0,eye_vision,100.0
+nhsii; nhs,Nurses' Health Study II; Nurses' Health Study,991,95.3,19,12,17.52,5,11,epidemiology,89.2,nutrition,43.3,metabolic,39.9
+nhsii; nhs; whi,Nurses' Health Study II; Nurses' Health Study; Women's Health Initiative,7,100.0,11,0,3.95,2,7,epidemiology,100.0,metabolic,57.1,omics,42.9
+nhsii; nhs; ukb,Nurses' Health Study II; Nurses' Health Study; UK Biobank,3,100.0,6,0,2.67,2,3,epidemiology,100.0,genomics_gwas,33.3,cardiovascular,33.3
+nhsii; nshds; nhs,Nurses' Health Study II; Northern Sweden Health and Disease Study; Nurses' Health Study,1,100.0,3,0,0.0,1,2,cancer,100.0,mental_health,100.0,epidemiology,100.0
+unam,National Autonomous University of Mexico,1,100.0,2,0,0.0,1,1,neurological,100.0,omics,100.0,,
+nbk,National Biobank of Korea,13,53.8,10,0,5.74,4,5,omics,38.5,metabolic,30.8,epidemiology,30.8
+nbk; usnih,National Biobank of Korea; US NIH Biobank,1,100.0,1,0,0.0,0,0,nutrition,100.0,,,,
+ntr,Netherlands Twin Registry,31,96.8,14,3,199.27,4,7,genomics_gwas,61.3,environment,48.4,epidemiology,45.2
+nshds,Northern Sweden Health and Disease Study,99,89.9,17,3,59.4,4,10,epidemiology,85.9,cancer,62.6,omics,44.4
+nshds; plco,Northern Sweden Health and Disease Study; PLCO Cancer Screening Trial,1,0.0,5,0,0.0,2,2,cancer,100.0,epidemiology,100.0,omics,100.0
+moba,Norwegian Mother and Child Cohort Study,934,89.1,20,6,32.46,6,11,epidemiology,77.5,environment,34.4,nutrition,23.2
+moba; ukb,Norwegian Mother and Child Cohort Study; UK Biobank,5,100.0,10,0,40.03,3,5,mendelian_randomization,100.0,epidemiology,100.0,genomics_gwas,80.0
+nhs,Nurses' Health Study,2093,95.0,20,10,7.78,6,11,epidemiology,86.3,cancer,49.6,nutrition,42.7
+nhs; whi,Nurses' Health Study; Women's Health Initiative,39,94.9,15,3,25.88,4,8,epidemiology,84.6,cardiovascular,46.2,cancer,43.6
+nhs; plco,Nurses' Health Study; PLCO Cancer Screening Trial,10,100.0,10,0,16.9,2,7,cancer,100.0,respiratory,100.0,genomics_gwas,50.0
+nhs; ukb,Nurses' Health Study; UK Biobank,13,92.3,11,0,21.73,4,6,epidemiology,84.6,cancer,53.8,metabolic,46.2
+nhs; smwhs,Nurses' Health Study; Shanghai Men and Women's Health Studies,1,100.0,3,0,0.0,2,1,cancer,100.0,epidemiology,100.0,omics,100.0
+persian,PERSIAN Cohort Study,197,64.5,18,10,58.99,4,11,epidemiology,95.4,metabolic,60.4,cardiovascular,45.7
+plco,PLCO Cancer Screening Trial,928,87.1,20,8,29.92,6,11,cancer,97.6,respiratory,88.1,epidemiology,73.3
+plco; uklwc,PLCO Cancer Screening Trial; UKCTOCS Longitudinal Women's Cohort,10,100.0,6,0,102.01,2,4,cancer,100.0,epidemiology,100.0,respiratory,60.0
+plco; whi,PLCO Cancer Screening Trial; Women's Health Initiative,4,75.0,6,0,0.0,2,2,cancer,100.0,respiratory,100.0,epidemiology,75.0
+plco; ukb,PLCO Cancer Screening Trial; UK Biobank,12,91.7,10,0,9.18,4,5,cancer,100.0,epidemiology,83.3,respiratory,75.0
+plco; smwhs,PLCO Cancer Screening Trial; Shanghai Men and Women's Health Studies,2,100.0,4,0,0.0,2,2,cancer,100.0,epidemiology,100.0,omics,100.0
+plco; ucl; ukb,PLCO Cancer Screening Trial; UCL Biobank; UK Biobank,1,100.0,3,0,0.0,1,2,cancer,100.0,epidemiology,100.0,respiratory,100.0
+plco; ukb; usnih,PLCO Cancer Screening Trial; UK Biobank; US NIH Biobank,1,100.0,3,0,0.0,0,3,cancer,100.0,aging,100.0,respiratory,100.0
+qbb,Qatar Biobank,191,65.4,20,11,110.2,6,11,metabolic,66.0,epidemiology,50.8,omics,33.0
+qbb; ukb,Qatar Biobank; UK Biobank,1,0.0,2,0,0.0,1,0,genomics_gwas,100.0,nutrition,100.0,,
+qbb; qgp,Qatar Biobank; Qatar Genome Programme,11,81.8,8,0,94.01,3,4,genomics_gwas,54.5,metabolic,54.5,epidemiology,54.5
+qbb; usnih,Qatar Biobank; US NIH Biobank,2,100.0,4,0,0.0,2,2,cardiovascular,100.0,metabolic,100.0,epidemiology,100.0
+qgp,Qatar Genome Programme,14,50.0,8,0,610.06,3,5,epidemiology,57.1,infectious,50.0,genomics_gwas,21.4
+saprin,SAPRIN,3,66.7,6,0,0.0,1,4,cardiovascular,33.3,metabolic,33.3,mental_health,33.3
+sg100k,SG100K,7,71.4,7,0,1.6,3,4,genomics_gwas,71.4,cancer,42.9,epidemiology,28.6
+sg100k; snb,SG100K; Saudi National Biobank,1,100.0,0,0,0.0,0,0,,,,,,
+simpler,SIMPLER,277,98.2,18,12,33.79,4,11,epidemiology,93.1,nutrition,75.1,cancer,42.2
+snb,Saudi National Biobank,13,69.2,10,0,723.12,3,5,metabolic,23.1,cancer,15.4,environment,15.4
+smwhs,Shanghai Men and Women's Health Studies,210,96.2,18,12,65.93,4,11,epidemiology,91.0,cancer,70.0,nutrition,48.1
+sab,South Asia Biobank,8,62.5,5,0,3.53,1,2,nutrition,75.0,metabolic,50.0,environment,50.0
+twb,Taiwan Biobank,522,74.3,20,8,53.19,6,11,genomics_gwas,51.7,epidemiology,48.1,metabolic,40.6
+twb; ukb,Taiwan Biobank; UK Biobank,15,73.3,16,0,15.77,5,9,genomics_gwas,73.3,metabolic,60.0,epidemiology,40.0
+myc,The Malaysian Cohort,86,77.9,18,3,75.79,5,10,epidemiology,67.4,metabolic,30.2,genomics_gwas,20.9
+myc; ukb,The Malaysian Cohort; UK Biobank,1,100.0,3,0,0.0,1,2,cardiovascular,100.0,metabolic,100.0,epidemiology,100.0
+tommo,Tohoku Medical Megabank,235,83.0,20,5,129.48,6,11,epidemiology,74.5,cardiovascular,22.1,genomics_gwas,21.7
+tommo; ukb,Tohoku Medical Megabank; UK Biobank,2,100.0,3,0,0.0,2,1,metabolic,50.0,pharmacogenomics,50.0,epidemiology,50.0
+ucl,UCL Biobank,4,100.0,10,0,7.6,5,4,cardiovascular,50.0,infectious,50.0,genomics_gwas,25.0
+ucl; uklwc,UCL Biobank; UKCTOCS Longitudinal Women's Cohort,1,100.0,3,0,0.0,1,2,cancer,100.0,mental_health,100.0,epidemiology,100.0
+ucl; ukb,UCL Biobank; UK Biobank,1,100.0,2,0,0.0,1,1,cardiovascular,100.0,epidemiology,100.0,,
+ukb,UK Biobank,13084,79.8,20,12,2.98,6,11,epidemiology,60.8,genomics_gwas,45.6,metabolic,33.4
+ukb; ukbdc,UK Biobank; UK Blood Donor Cohorts,17,82.4,17,0,14.07,5,10,genomics_gwas,82.4,mendelian_randomization,76.5,epidemiology,58.8
+ukb; whi,UK Biobank; Women's Health Initiative,11,90.9,12,0,4.64,4,7,genomics_gwas,72.7,cardiovascular,54.5,epidemiology,54.5
+ukb; usnih,UK Biobank; US NIH Biobank,22,81.8,19,0,7.11,6,10,genomics_gwas,63.6,metabolic,54.5,epidemiology,54.5
+ukbdc,UK Blood Donor Cohorts,147,82.3,19,12,170.35,6,11,epidemiology,40.8,cardiovascular,24.5,genomics_gwas,17.7
+uklwc,UKCTOCS Longitudinal Women's Cohort,90,87.8,13,3,69.63,2,9,cancer,100.0,epidemiology,70.0,omics,37.8
+usnih,US NIH Biobank,17,52.9,13,0,7.58,4,8,epidemiology,41.2,cancer,29.4,aging,29.4
+ugr,Uganda Genome Resource,4,75.0,8,0,1.94,2,5,genomics_gwas,50.0,metabolic,50.0,epidemiology,50.0
+vhmpp,VHM&PP,28,89.3,11,3,128.97,3,6,epidemiology,96.4,metabolic,67.9,cardiovascular,50.0
+whi,Women's Health Initiative,3296,91.7,20,12,9.15,6,11,epidemiology,65.5,cardiovascular,40.9,cancer,37.7
