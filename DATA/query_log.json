@@ -1,0 +1,172 @@
+{
+  "generated": "2026-01-07T06:58:20.151404",
+  "total_queries": 17,
+  "queries": [
+    {
+      "cohort_id": "simpler",
+      "cohort_name": "SIMPLER",
+      "query": "(\"Swedish Mammography Cohort\"[Title/Abstract] OR \"Cohort of Swedish Men\"[Title/Abstract] OR \"SIMPLER cohort\"[Title/Abstract])",
+      "timestamp": "2026-01-07T06:44:29.768698",
+      "pmids_found": 280,
+      "records_fetched": 280,
+      "records_retained": 280,
+      "preprints_excluded": 0
+    },
+    {
+      "cohort_id": "snb",
+      "cohort_name": "Saudi National Biobank",
+      "query": "(\"Saudi National Biobank\"[Title/Abstract] OR \"Saudi Human Genome Program\"[Title/Abstract] OR \"SHGP\"[Title/Abstract])",
+      "timestamp": "2026-01-07T06:45:02.879941",
+      "pmids_found": 14,
+      "records_fetched": 14,
+      "records_retained": 14,
+      "preprints_excluded": 0
+    },
+    {
+      "cohort_id": "sequencebio",
+      "cohort_name": "Sequence Bio",
+      "query": "\"Sequence Bio\"[Title/Abstract]",
+      "timestamp": "2026-01-07T06:45:27.823325",
+      "pmids_found": 0,
+      "records_retained": 0
+    },
+    {
+      "cohort_id": "smwhs",
+      "cohort_name": "Shanghai Men and Women's Health Studies",
+      "query": "(\"Shanghai Men's Health Study\"[Title/Abstract] OR \"Shanghai Women's Health Study\"[Title/Abstract])",
+      "timestamp": "2026-01-07T06:45:47.819526",
+      "pmids_found": 219,
+      "records_fetched": 219,
+      "records_retained": 218,
+      "preprints_excluded": 1
+    },
+    {
+      "cohort_id": "sab",
+      "cohort_name": "South Asia Biobank",
+      "query": "\"South Asia Biobank\"[Title/Abstract]",
+      "timestamp": "2026-01-07T06:46:22.533393",
+      "pmids_found": 8,
+      "records_fetched": 8,
+      "records_retained": 8,
+      "preprints_excluded": 0
+    },
+    {
+      "cohort_id": "seac",
+      "cohort_name": "South(east) Asian Cohorts",
+      "query": "\"Southeast Asian Cohorts\"[Title/Abstract]",
+      "timestamp": "2026-01-07T06:46:44.555897",
+      "pmids_found": 0,
+      "records_retained": 0
+    },
+    {
+      "cohort_id": "twb",
+      "cohort_name": "Taiwan Biobank",
+      "query": "(\"Taiwan Biobank\"[All Fields] OR \"TWB cohort\"[All Fields])",
+      "timestamp": "2026-01-07T06:47:04.174010",
+      "pmids_found": 564,
+      "records_fetched": 564,
+      "records_retained": 560,
+      "preprints_excluded": 4
+    },
+    {
+      "cohort_id": "myc",
+      "cohort_name": "The Malaysian Cohort",
+      "query": "(\"Malaysian Cohort\"[Title/Abstract] OR \"The Malaysian Cohort\"[Title/Abstract])",
+      "timestamp": "2026-01-07T06:47:44.962261",
+      "pmids_found": 87,
+      "records_fetched": 87,
+      "records_retained": 87,
+      "preprints_excluded": 0
+    },
+    {
+      "cohort_id": "tommo",
+      "cohort_name": "Tohoku Medical Megabank",
+      "query": "(\"Tohoku Medical Megabank\"[Title/Abstract] OR \"ToMMo\"[Title/Abstract])",
+      "timestamp": "2026-01-07T06:48:13.273442",
+      "pmids_found": 246,
+      "records_fetched": 246,
+      "records_retained": 245,
+      "preprints_excluded": 1
+    },
+    {
+      "cohort_id": "ucl",
+      "cohort_name": "UCL Biobank",
+      "query": "(\"UCL\"[Title/Abstract] AND \"biobank\"[Title/Abstract])",
+      "timestamp": "2026-01-07T06:48:43.162603",
+      "pmids_found": 8,
+      "records_fetched": 8,
+      "records_retained": 8,
+      "preprints_excluded": 0
+    },
+    {
+      "cohort_id": "ukb",
+      "cohort_name": "UK Biobank",
+      "query": "(\"UK Biobank\"[All Fields] OR \"United Kingdom Biobank\"[All Fields] OR \"U.K. Biobank\"[All Fields] OR \"UK-Biobank\"[All Fields])",
+      "timestamp": "2026-01-07T06:49:06.795221",
+      "pmids_found": 14487,
+      "records_fetched": 14486,
+      "records_retained": 13902,
+      "preprints_excluded": 584
+    },
+    {
+      "cohort_id": "ukbdc",
+      "cohort_name": "UK Blood Donor Cohorts",
+      "query": "(\"UK Blood Donor\"[Title/Abstract] OR \"INTERVAL study\"[Title/Abstract])",
+      "timestamp": "2026-01-07T06:54:22.219306",
+      "pmids_found": 166,
+      "records_fetched": 165,
+      "records_retained": 165,
+      "preprints_excluded": 0
+    },
+    {
+      "cohort_id": "uklwc",
+      "cohort_name": "UKCTOCS Longitudinal Women's Cohort",
+      "query": "(\"UKCTOCS\"[Title/Abstract] OR \"UK Collaborative Trial of Ovarian Cancer Screening\"[Title/Abstract])",
+      "timestamp": "2026-01-07T06:54:56.836740",
+      "pmids_found": 103,
+      "records_fetched": 102,
+      "records_retained": 101,
+      "preprints_excluded": 1
+    },
+    {
+      "cohort_id": "usnih",
+      "cohort_name": "US NIH Biobank",
+      "query": "(\"NIH\"[Title/Abstract] AND \"biobank\"[Title/Abstract])",
+      "timestamp": "2026-01-07T06:55:27.652968",
+      "pmids_found": 63,
+      "records_fetched": 63,
+      "records_retained": 53,
+      "preprints_excluded": 10
+    },
+    {
+      "cohort_id": "ugr",
+      "cohort_name": "Uganda Genome Resource",
+      "query": "(\"Uganda Genome Resource\"[All Fields] OR \"Ugandan Genome\"[All Fields] OR \"UGR cohort\"[All Fields])",
+      "timestamp": "2026-01-07T06:55:55.487867",
+      "pmids_found": 7,
+      "records_fetched": 7,
+      "records_retained": 6,
+      "preprints_excluded": 1
+    },
+    {
+      "cohort_id": "vhmpp",
+      "cohort_name": "VHM&PP",
+      "query": "(\"VHM&PP\"[Title/Abstract] OR \"Vorarlberg Health Monitoring\"[Title/Abstract])",
+      "timestamp": "2026-01-07T06:56:18.298243",
+      "pmids_found": 28,
+      "records_fetched": 28,
+      "records_retained": 28,
+      "preprints_excluded": 0
+    },
+    {
+      "cohort_id": "whi",
+      "cohort_name": "Women's Health Initiative",
+      "query": "(\"Women's Health Initiative\"[All Fields] OR \"WHI cohort\"[All Fields])",
+      "timestamp": "2026-01-07T06:56:46.581448",
+      "pmids_found": 3459,
+      "records_fetched": 3455,
+      "records_retained": 3436,
+      "preprints_excluded": 19
+    }
+  ]
+}

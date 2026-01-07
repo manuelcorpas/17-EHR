@@ -1,0 +1,171 @@
+{
+  "timestamp": "2026-01-07T04:54:27.470593",
+  "original_count": 52434,
+  "validated_count": 57934,
+  "rwanda_validation": {
+    "original": 525,
+    "valid": 48,
+    "removed": 477
+  },
+  "smart_searches": [
+    {
+      "cohort_id": "ethiopian",
+      "name": "Ethiopian Genome Project",
+      "status": "success",
+      "candidates": 698,
+      "valid": 467,
+      "query_results": {
+        "\"Ethiopian\" AND \"genome sequencing\"": 79,
+        "\"Addis Ababa University\" AND \"genetics\"": 455,
+        "\"Ethiopian\" AND (\"whole genome\" OR \"exome\")": 34,
+        "\"Ethiopia\" AND \"population genetics\"": 129,
+        "\"Gurja\" AND \"Ethiopian\"": 1
+      }
+    },
+    {
+      "cohort_id": "ghana",
+      "name": "Ghana Genome Project",
+      "status": "success",
+      "candidates": 988,
+      "valid": 605,
+      "query_results": {
+        "\"Ghana\" AND \"genome sequencing\"": 197,
+        "\"University of Ghana\" AND \"genetics\"": 439,
+        "\"Ghanaian\" AND (\"whole genome\" OR \"exome\")": 12,
+        "\"Ghana\" AND \"population genetics\"": 68,
+        "\"Noguchi Memorial\" AND \"genetics\"": 272
+      }
+    },
+    {
+      "cohort_id": "kenyagenome",
+      "name": "Kenya Genome Project",
+      "status": "success",
+      "candidates": 998,
+      "valid": 743,
+      "query_results": {
+        "\"Kenya\" AND \"genome sequencing\"": 260,
+        "\"KEMRI\" AND \"genetics\"": 457,
+        "\"Kenyan\" AND (\"whole genome\" OR \"exome\")": 29,
+        "\"Kenya\" AND \"population genetics\"": 208,
+        "\"Kilifi\" AND \"genomic\"": 44
+      }
+    },
+    {
+      "cohort_id": "tanzaniagen",
+      "name": "Tanzania Human Genetics",
+      "status": "success",
+      "candidates": 562,
+      "valid": 364,
+      "query_results": {
+        "\"Tanzania\" AND \"genome sequencing\"": 133,
+        "\"Muhimbili\" AND \"genetics\"": 332,
+        "\"Tanzanian\" AND (\"whole genome\" OR \"exome\")": 6,
+        "\"Tanzania\" AND \"population genetics\"": 91
+      }
+    },
+    {
+      "cohort_id": "emirati",
+      "name": "Emirati Genome Program",
+      "status": "success",
+      "candidates": 845,
+      "valid": 637,
+      "query_results": {
+        "\"United Arab Emirates\" AND \"genome\"": 472,
+        "\"Emirati\" AND \"genetic\"": 112,
+        "\"UAE\" AND \"population genetics\"": 39,
+        "\"Khalifa University\" AND \"genome\"": 218,
+        "\"MBZUAI\" AND \"genome\"": 4
+      }
+    },
+    {
+      "cohort_id": "botswana",
+      "name": "Botswana Genome Project",
+      "status": "success",
+      "candidates": 88,
+      "valid": 70,
+      "query_results": {
+        "\"Botswana\" AND \"genome sequencing\"": 31,
+        "\"Botswana Harvard\" AND \"genetic\"": 37,
+        "\"Botswana\" AND \"population genetics\"": 20
+      }
+    },
+    {
+      "cohort_id": "bangladeshi",
+      "name": "Bangladesh Genome Project",
+      "status": "success",
+      "candidates": 559,
+      "valid": 441,
+      "query_results": {
+        "\"Bangladesh\" AND \"genome sequencing\"": 343,
+        "\"Bangladeshi\" AND (\"whole genome\" OR \"exome\")": 20,
+        "\"icddr,b\" AND \"genetic\"": 134,
+        "\"Dhaka\" AND \"population genetics\"": 62
+      }
+    },
+    {
+      "cohort_id": "colombian",
+      "name": "Colombian Genome Project",
+      "status": "success",
+      "candidates": 1002,
+      "valid": 676,
+      "query_results": {
+        "\"Colombia\" AND \"genome sequencing\"": 294,
+        "\"Colombian\" AND \"population genetics\"": 127,
+        "\"Universidad de Antioquia\" AND \"genetics\"": 480,
+        "\"Colombian\" AND \"ancestry\"": 101
+      }
+    },
+    {
+      "cohort_id": "argentine",
+      "name": "Argentine Genomic Medicine",
+      "status": "success",
+      "candidates": 801,
+      "valid": 600,
+      "query_results": {
+        "\"Argentina\" AND \"genome sequencing\"": 320,
+        "\"Argentine\" AND \"population genetics\"": 52,
+        "\"Buenos Aires\" AND \"genomic\"": 424,
+        "\"PoblAr\"": 5
+      }
+    },
+    {
+      "cohort_id": "chilean",
+      "name": "Chilean National Biobank",
+      "status": "success",
+      "candidates": 883,
+      "valid": 548,
+      "query_results": {
+        "\"Chile\" AND \"genome sequencing\"": 295,
+        "\"Chilean\" AND \"population genetics\"": 78,
+        "\"Universidad de Chile\" AND \"genetics\"": 461,
+        "\"Mapuche\" AND \"genetic\"": 49
+      }
+    },
+    {
+      "cohort_id": "zambian",
+      "name": "Zambia Genome Project",
+      "status": "success",
+      "candidates": 563,
+      "valid": 333,
+      "query_results": {
+        "\"Zambia\" AND \"genome sequencing\"": 48,
+        "\"Zambian\" AND \"genetic\"": 114,
+        "\"University of Zambia\" AND \"genetics\"": 350,
+        "\"Lusaka\" AND \"genomic\"": 51
+      }
+    },
+    {
+      "cohort_id": "moroccan",
+      "name": "Moroccan Biobank",
+      "status": "success",
+      "candidates": 937,
+      "valid": 493,
+      "query_results": {
+        "\"Morocco\" AND \"genome\"": 479,
+        "\"Moroccan\" AND \"population genetics\"": 74,
+        "\"Rabat\" AND \"genetics\"": 384
+      }
+    }
+  ],
+  "new_publications": 5977
+}
