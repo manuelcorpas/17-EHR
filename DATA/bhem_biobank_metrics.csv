@@ -47,8 +47,8 @@ kprb,Kaiser Permanente Research Bank,United States,AMR,False,12,39,9048.17,13.7,
 vhmpp,VHM&PP,Austria,EUR,False,28,46,10320.24,13.5,Poor,133,14.3,79.05,82.93,99.84
 generations,Generations Study,United Kingdom,EUR,False,73,58,10555.73,11.7,Poor,121,12.3,74.3,95.52,99.59
 iganga_mayuge,Iganga Mayuge HDSS,Uganda,AFR,True,54,32,10150.29,11.1,Poor,147,75.9,85.75,82.26,99.7
-uklwc,UKCTOCS Longitudinal Women's Cohort,United Kingdom,EUR,False,101,45,10406.76,10.8,Poor,134,1.0,79.33,92.11,99.44
 awigen,AWI-Gen,South Africa,AFR,True,74,31,10320.75,10.8,Poor,148,29.7,86.17,82.71,99.59
+uklwc,UKCTOCS Longitudinal Women's Cohort,United Kingdom,EUR,False,101,45,10406.76,10.8,Poor,134,1.0,79.33,92.11,99.44
 qgp,Qatar Genome Programme,Qatar,EMR,True,25,45,11025.67,10.6,Poor,134,28.0,80.59,90.86,99.86
 lifegene,LifeGene,Sweden,EUR,False,29,34,10670.0,9.1,Poor,145,34.5,85.61,88.89,99.84
 cptp,Canadian Partnership for Tomorrow's Health,Canada,AMR,False,19,46,10974.93,8.7,Poor,133,26.3,80.03,97.78,99.89
@@ -65,15 +65,7 @@ dpuk,Dementias Platform UK,United Kingdom,EUR,False,16,14,10890.99,5.1,Poor,165,
 lifepath,LIFEPATH,International,EUR,False,38,21,10902.73,4.8,Poor,158,18.4,90.08,97.3,99.79
 mauco,MAUCO,Chile,AMR,True,17,18,11108.93,3.6,Poor,161,5.9,92.04,98.58,99.91
 chop_cag,"Center for Applied Genomics, CHOP",United States,AMR,False,8,14,10967.65,3.5,Poor,165,100.0,93.3,97.42,99.96
-healthy_nevada,Healthy Nevada,United States,AMR,False,18,15,11048.08,3.3,Poor,164,11.1,93.02,98.53,99.9
-jhu,Johns Hopkins University Biobank,United States,AMR,False,6,13,10978.97,3.1,Poor,166,0.0,93.58,98.24,99.97
 nbk,National Biobank of Korea,South Korea,WPR,False,17,14,11108.93,3.0,Poor,165,11.8,93.58,98.58,99.91
 ugr,Uganda Genome Resource,Uganda,AFR,True,6,13,11108.93,2.7,Poor,166,33.3,94.27,98.58,99.97
-ucl,UCL Biobank,United Kingdom,EUR,False,8,13,11179.48,2.6,Poor,166,12.5,94.27,98.99,99.96
 sab,South Asia Biobank,United Kingdom,EUR,False,8,11,11108.93,2.5,Poor,168,12.5,94.97,98.58,99.96
-saprin,SAPRIN,South Africa,AFR,True,6,12,11108.93,2.3,Poor,167,66.7,95.25,98.58,99.97
 nepal_csh,Civil Service Hospital Nepal,Nepal,SEAR,True,10,10,11253.91,1.7,Poor,169,10.0,95.67,100.0,99.94
-sg100k,SG100K,Singapore,WPR,False,8,6,11253.91,1.1,Poor,173,0.0,97.35,100.0,99.96
-unam,National Autonomous University of Mexico,Mexico,AMR,True,1,6,11253.91,1.0,Poor,173,0.0,97.49,100.0,99.99
-c19genomnet,C19-GenoNet,International,INT,False,1,6,11253.91,1.0,Poor,173,100.0,97.63,100.0,99.99
-bgi,BGI Research,China,WPR,True,1,0,11253.91,0.0,Poor,179,0.0,100.0,100.0,99.99
