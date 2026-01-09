@@ -67,6 +67,7 @@ DATA_DIR = BASE_DIR / "DATA"
 # Input files
 INPUT_PUBLICATIONS = DATA_DIR / "bhem_publications_mapped.csv"
 INPUT_GBD_REGISTRY = DATA_DIR / "gbd_disease_registry.json"
+INPUT_IHCC_REGISTRY = DATA_DIR / "ihcc_cohort_registry.json"
 
 # Output files
 OUTPUT_METRICS_JSON = DATA_DIR / "bhem_metrics.json"
@@ -546,30 +547,64 @@ def load_gbd_registry() -> Dict[str, Dict]:
     return registry
 
 
-def load_publications(filepath: Path) -> pd.DataFrame:
-    """Load mapped publications data with year filtering and column normalization."""
+def load_ihcc_registry() -> Dict[str, Dict]:
+    """
+    Load the official IHCC cohort registry (87 member cohorts).
+
+    Returns dict mapping cohort_id -> cohort metadata
+    """
+    logger.info(f"Loading IHCC registry from {INPUT_IHCC_REGISTRY}")
+
+    if not INPUT_IHCC_REGISTRY.exists():
+        raise FileNotFoundError(
+            f"IHCC registry not found: {INPUT_IHCC_REGISTRY}\n"
+            f"Please ensure ihcc_cohort_registry.json exists in DATA/"
+        )
+
+    with open(INPUT_IHCC_REGISTRY, 'r') as f:
+        data = json.load(f)
+
+    # Build lookup dict by cohort_id
+    registry = {}
+    for cohort in data.get('cohorts', []):
+        cid = cohort.get('cohort_id')
+        if cid:
+            registry[cid] = cohort
+
+    logger.info(f"Loaded IHCC registry: {len(registry)} official cohorts")
+    return registry
+
+
+def load_publications(filepath: Path, ihcc_registry: Dict[str, Dict] = None) -> pd.DataFrame:
+    """
+    Load mapped publications data with:
+    - Year filtering
+    - Column normalization
+    - CRITICAL: Split combination biobank entries (e.g., "ukb; estbb") into individual rows
+    - CRITICAL: Filter to only IHCC member biobanks (87 official cohorts)
+    """
     logger.info(f"Loading publications from {filepath}")
-    
+
     if not filepath.exists():
         raise FileNotFoundError(f"Input file not found: {filepath}")
-    
+
     df = pd.read_csv(filepath)
-    logger.info(f"Loaded {len(df):,} publications")
-    
+    logger.info(f"Loaded {len(df):,} raw publications")
+
     # Apply year filter
     if 'year' in df.columns:
         df['year'] = pd.to_numeric(df['year'], errors='coerce')
         before_filter = len(df)
         df = df[
-            (df['year'] >= MIN_YEAR) & 
-            (df['year'] <= MAX_YEAR) & 
+            (df['year'] >= MIN_YEAR) &
+            (df['year'] <= MAX_YEAR) &
             (~df['year'].isin(EXCLUDE_YEARS))
         ]
         filtered_out = before_filter - len(df)
         if filtered_out > 0:
             logger.info(f"  Filtered: {filtered_out:,} outside {MIN_YEAR}-{MAX_YEAR}")
         logger.info(f"  {len(df):,} publications in year range")
-    
+
     # Handle IHCC cohort columns (normalize to biobank_* for compatibility)
     if 'cohort_id' in df.columns and 'biobank_id' not in df.columns:
         df['biobank_id'] = df['cohort_id']
@@ -577,7 +612,59 @@ def load_publications(filepath: Path) -> pd.DataFrame:
     if 'cohort_name' in df.columns and 'biobank_name' not in df.columns:
         df['biobank_name'] = df['cohort_name']
         logger.info("  Mapped cohort_name -> biobank_name")
-    
+
+    # =========================================================================
+    # CRITICAL FIX: Split combination biobank entries and filter to IHCC members
+    # =========================================================================
+    if ihcc_registry is not None and 'biobank_id' in df.columns:
+        valid_cohort_ids = set(ihcc_registry.keys())
+        logger.info(f"  Filtering to {len(valid_cohort_ids)} IHCC member cohorts")
+
+        # Count combination entries before splitting
+        combo_mask = df['biobank_id'].str.contains(';', na=False)
+        combo_count = combo_mask.sum()
+        logger.info(f"  Found {combo_count:,} combination entries to split")
+
+        # Split combination entries into individual rows
+        # e.g., "ukb; estbb" becomes two rows: one for "ukb", one for "estbb"
+        expanded_rows = []
+
+        for idx, row in df.iterrows():
+            biobank_ids_str = str(row.get('biobank_id', ''))
+
+            # Split by semicolon and clean
+            individual_ids = [bid.strip() for bid in biobank_ids_str.split(';') if bid.strip()]
+
+            # Filter to only valid IHCC members
+            valid_ids = [bid for bid in individual_ids if bid in valid_cohort_ids]
+
+            # Create a row for each valid biobank
+            for bid in valid_ids:
+                new_row = row.copy()
+                new_row['biobank_id'] = bid
+                # Update biobank_name from IHCC registry
+                cohort_info = ihcc_registry.get(bid, {})
+                new_row['biobank_name'] = cohort_info.get('name', bid)
+                new_row['country'] = cohort_info.get('country', row.get('country', 'Unknown'))
+                new_row['region'] = cohort_info.get('region', row.get('region', 'Unknown'))
+                expanded_rows.append(new_row)
+
+        # Create new dataframe from expanded rows
+        if expanded_rows:
+            df = pd.DataFrame(expanded_rows)
+            logger.info(f"  After splitting: {len(df):,} publication-biobank rows")
+        else:
+            logger.warning("  No valid IHCC publications found!")
+            df = pd.DataFrame()
+
+        # Report unique biobanks
+        unique_biobanks = df['biobank_id'].nunique() if 'biobank_id' in df.columns else 0
+        logger.info(f"  Unique IHCC biobanks: {unique_biobanks}")
+
+        # List any excluded non-IHCC biobanks (for debugging)
+        if combo_count > 0:
+            logger.info("  Combination entries have been attributed to individual biobanks")
+
     return df
 
 
@@ -969,15 +1056,25 @@ def main():
         print(f"\n❌ GBD registry not found: {INPUT_GBD_REGISTRY}")
         print(f"   Run 03-01-bhem-map-diseases.py first")
         return
-    
+
+    if not INPUT_IHCC_REGISTRY.exists():
+        print(f"\n❌ IHCC registry not found: {INPUT_IHCC_REGISTRY}")
+        print(f"   Ensure ihcc_cohort_registry.json exists in DATA/")
+        return
+
     # Load GBD registry
     print(f"\n📂 Loading GBD registry...")
     gbd_registry = load_gbd_registry()
     print(f"   GBD causes loaded: {len(gbd_registry)}")
-    
-    # Load publications
-    print(f"\n📂 Loading publications...")
-    df = load_publications(INPUT_PUBLICATIONS)
+
+    # Load IHCC registry (87 official member cohorts)
+    print(f"\n📂 Loading IHCC registry...")
+    ihcc_registry = load_ihcc_registry()
+    print(f"   IHCC cohorts loaded: {len(ihcc_registry)}")
+
+    # Load publications (with IHCC filtering and combination splitting)
+    print(f"\n📂 Loading and processing publications...")
+    df = load_publications(INPUT_PUBLICATIONS, ihcc_registry)
     print(f"   Publications loaded: {len(df):,}")
     
     # Compute disease metrics
