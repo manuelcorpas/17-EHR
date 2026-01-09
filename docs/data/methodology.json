@@ -1,0 +1,192 @@
+{
+  "version": "HEIM-Biobank v2.1",
+  "generated": "2026-01-09",
+  "documentation": {
+    "title": "HEIM-Biobank Methodology Documentation",
+    "description": "Complete technical documentation for reproducibility and peer review",
+    "reference": "Corpas et al. 2025, Annual Review of Biomedical Data Science"
+  },
+
+  "mesh_to_gbd_mapping": {
+    "description": "Mapping from PubMed MeSH terms to GBD 2021 disease causes",
+    "method": "Manual curation with expert review",
+    "validation": {
+      "total_gbd_causes": 179,
+      "causes_with_mesh_mapping": 175,
+      "causes_without_mesh_mapping": 4,
+      "unmapped_causes": ["_GENOMICS", "_BIOBANK_METHODS", "_AGING", "_IMAGING"],
+      "unmapped_rationale": "Meta-categories for publications about methodology rather than specific diseases"
+    },
+    "quality_metrics": {
+      "mesh_terms_per_cause_mean": 5.2,
+      "mesh_terms_per_cause_range": [2, 15],
+      "causes_with_global_south_priority": 55,
+      "causes_by_category": {
+        "Infectious": 25,
+        "Neglected": 18,
+        "Cancer": 28,
+        "Cardiovascular": 12,
+        "Mental Health": 8,
+        "Metabolic": 6,
+        "Other NCD": 45,
+        "Injuries": 15,
+        "Maternal/Child": 8,
+        "Nutritional": 5
+      }
+    },
+    "limitations": [
+      "MeSH terms may not capture all relevant publications (false negatives)",
+      "Some MeSH terms map to multiple GBD causes (potential double-counting)",
+      "Publication language limited to English-indexed PubMed entries",
+      "Preprints excluded from analysis"
+    ]
+  },
+
+  "equity_alignment_score": {
+    "formula": "EAS = 100 - (0.4 × Gap_Severity + 0.3 × Burden_Miss + 0.3 × Capacity_Penalty)",
+    "components": {
+      "gap_severity": {
+        "description": "Weighted count of diseases with critical/high research gaps",
+        "formula": "(n_critical × 1.0 + n_high × 0.6 + n_moderate × 0.3) / total_diseases × 100",
+        "weight": 0.4
+      },
+      "burden_miss": {
+        "description": "Proportion of global DALYs not addressed by biobank research",
+        "formula": "DALYs_unaddressed / DALYs_total × 100",
+        "weight": 0.3
+      },
+      "capacity_penalty": {
+        "description": "Penalty for low publication volume relative to biobank size",
+        "formula": "max(0, 100 - publications / expected_publications × 100)",
+        "weight": 0.3
+      }
+    },
+    "interpretation": {
+      "Strong": {"range": [70, 100], "description": "Excellent alignment with global disease burden"},
+      "Weak": {"range": [40, 70], "description": "Moderate alignment, some gaps in priority diseases"},
+      "Poor": {"range": [0, 40], "description": "Significant misalignment with global health priorities"}
+    },
+    "sensitivity_analysis": {
+      "description": "Impact of varying component weights on EAS rankings",
+      "scenarios": [
+        {
+          "name": "baseline",
+          "weights": {"gap_severity": 0.4, "burden_miss": 0.3, "capacity_penalty": 0.3},
+          "top_3_biobanks": ["ukb", "nhs", "whi"]
+        },
+        {
+          "name": "gap_focused",
+          "weights": {"gap_severity": 0.6, "burden_miss": 0.2, "capacity_penalty": 0.2},
+          "description": "Emphasizes coverage of high-burden diseases"
+        },
+        {
+          "name": "burden_focused",
+          "weights": {"gap_severity": 0.2, "burden_miss": 0.6, "capacity_penalty": 0.2},
+          "description": "Emphasizes addressing total DALY burden"
+        },
+        {
+          "name": "equal_weights",
+          "weights": {"gap_severity": 0.33, "burden_miss": 0.33, "capacity_penalty": 0.33},
+          "description": "Equal weighting of all components"
+        }
+      ],
+      "robustness_note": "Rankings are stable across weight variations; UK Biobank remains top-ranked in all scenarios"
+    }
+  },
+
+  "research_gap_score": {
+    "formula": "Three-tier scoring system",
+    "tiers": {
+      "tier_1_zero_publications": {
+        "score": 95,
+        "description": "Diseases with zero biobank-linked publications",
+        "rationale": "Complete absence of research represents critical gap"
+      },
+      "tier_2_category_thresholds": {
+        "infectious_neglected": {
+          "critical": "<10 publications",
+          "high": "<50 publications",
+          "moderate": "<100 publications"
+        },
+        "other_diseases": {
+          "critical": "<5 publications",
+          "high": "<25 publications",
+          "moderate": "<50 publications"
+        },
+        "rationale": "Infectious and neglected diseases have stricter thresholds due to higher global south burden"
+      },
+      "tier_3_burden_normalized": {
+        "formula": "max(0, 100 - (publications / DALYs_millions) × intensity_factor)",
+        "description": "For diseases above threshold, score based on research intensity relative to burden"
+      }
+    }
+  },
+
+  "research_appropriateness": {
+    "description": "Filter identifying diseases appropriate for biobank-based research",
+    "categories": {
+      "highly_appropriate": {
+        "criteria": "Chronic diseases with genetic/environmental components amenable to cohort study",
+        "examples": ["Diabetes mellitus", "Ischemic heart disease", "Breast cancer", "Alzheimer's disease"],
+        "count": 120
+      },
+      "moderately_appropriate": {
+        "criteria": "Diseases where biobank data provides some insights but not primary research modality",
+        "examples": ["Lower respiratory infections", "Maternal disorders", "Road injuries"],
+        "count": 35
+      },
+      "limited_appropriateness": {
+        "criteria": "Acute conditions, injuries, or diseases requiring different study designs",
+        "examples": ["Drowning", "Conflict and terrorism", "Animal contact", "Guinea worm disease"],
+        "count": 24
+      }
+    },
+    "flag_in_gap_score": true,
+    "rationale": "Avoids penalizing biobanks for not researching diseases outside their methodological scope"
+  },
+
+  "data_sources": {
+    "publications": {
+      "source": "PubMed/MEDLINE",
+      "query_date": "2026-01-07",
+      "year_range": "2000-2025",
+      "exclusions": ["Preprints", "Non-English", "Retracted"]
+    },
+    "disease_burden": {
+      "source": "IHME Global Burden of Disease Study 2021",
+      "metrics": ["DALYs", "Deaths", "Prevalence"],
+      "url": "https://vizhub.healthdata.org/gbd-results/"
+    },
+    "biobank_registry": {
+      "source": "IHCC Global Cohort Atlas",
+      "reference": "Connolly et al. 2025, Communications Medicine",
+      "total_cohorts": 79,
+      "cohorts_with_publications": 70
+    }
+  },
+
+  "known_limitations": [
+    "Publication counts may underestimate actual research due to MeSH indexing delays",
+    "Multi-biobank collaborations split across individual biobanks may inflate per-biobank counts",
+    "UK Biobank dominance (35.7% of publications) may skew aggregate statistics",
+    "Global South biobanks underrepresented in IHCC membership",
+    "EAS weights (0.4/0.3/0.3) are based on expert judgment, not empirical optimization",
+    "Research appropriateness categories are subjective classifications"
+  ],
+
+  "reproducibility": {
+    "code_repository": "https://github.com/manuelcorpas/17-EHR",
+    "pipeline_scripts": [
+      "03-00-ihcc-fetch-pubmed.py",
+      "03-01-bhem-map-diseases.py",
+      "03-03-bhem-compute-metrics.py",
+      "03-05-bhem-generate-json.py"
+    ],
+    "data_files": [
+      "ihcc_cohort_registry.json",
+      "gbd_disease_registry.json",
+      "bhem_publications_mapped.csv",
+      "bhem_metrics.json"
+    ]
+  }
+}

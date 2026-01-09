@@ -311,15 +311,30 @@ def generate_biobanks_json(metrics: Dict, pubs_df: pd.DataFrame) -> Dict:
     }
 
 
+def load_research_appropriateness() -> Dict:
+    """Load research appropriateness classifications."""
+    appropriateness_file = DATA_DIR / "research_appropriateness.json"
+    if appropriateness_file.exists():
+        with open(appropriateness_file) as f:
+            data = json.load(f)
+            return data.get('disease_classifications', {})
+    return {}
+
+
 def generate_diseases_json(metrics: Dict) -> Dict:
     """
     Generate diseases.json - Detailed per-disease data.
     Used by: Diseases tab
+
+    Now includes research appropriateness classification.
     """
     logger.info("Generating diseases.json...")
-    
+
     diseases = metrics.get('diseases', {})
     biobanks = metrics.get('biobanks', {})
+
+    # Load research appropriateness
+    appropriateness = load_research_appropriateness()
     
     disease_list = []
     
@@ -341,11 +356,24 @@ def generate_diseases_json(metrics: Dict) -> Dict:
         # Sort by publications
         biobank_pubs.sort(key=lambda x: x['publications'], reverse=True)
         
+        # Get research appropriateness
+        research_approp = appropriateness.get(did, 'high')
+
+        # Adjust gap interpretation based on appropriateness
+        raw_gap_score = ddata.get('gap_score', 0)
+        if research_approp == 'limited':
+            adjusted_gap_note = "Gap score reduced: disease not well-suited for biobank research"
+        elif research_approp == 'moderate':
+            adjusted_gap_note = "Moderate biobank relevance"
+        else:
+            adjusted_gap_note = None
+
         disease_record = {
             'id': did,
             'name': ddata.get('name', did),
             'category': ddata.get('category', 'Unknown'),
             'globalSouthPriority': ddata.get('global_south_priority', False),
+            'researchAppropriateness': research_approp,
             'burden': {
                 'dalysMillions': ddata.get('dalys_millions', 0),
                 'deathsMillions': ddata.get('deaths_millions', 0),
@@ -358,9 +386,10 @@ def generate_diseases_json(metrics: Dict) -> Dict:
                 'researchIntensity': ddata.get('research_intensity', 0)
             },
             'gap': {
-                'score': ddata.get('gap_score', 0),
+                'score': raw_gap_score,
                 'severity': ddata.get('gap_severity', 'Unknown'),
-                'color': get_severity_color(ddata.get('gap_severity', 'Unknown'))
+                'color': get_severity_color(ddata.get('gap_severity', 'Unknown')),
+                'adjustedNote': adjusted_gap_note
             },
             'topBiobanks': biobank_pubs[:5]
         }
