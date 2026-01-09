@@ -1,6 +1,6 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-09T05:30:56.144714",
+  "generated": "2026-01-09T05:37:20.111891",
   "count": 179,
   "diseases": [
     {
@@ -8,6 +8,7 @@
       "name": "Malaria",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 55.17,
         "deathsMillions": null,
@@ -22,7 +23,8 @@
       "gap": {
         "score": 95.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -57,6 +59,7 @@
       "name": "Dengue",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.08,
         "deathsMillions": null,
@@ -71,7 +74,8 @@
       "gap": {
         "score": 95.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": []
     },
@@ -80,6 +84,7 @@
       "name": "Schistosomiasis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.75,
         "deathsMillions": null,
@@ -94,7 +99,8 @@
       "gap": {
         "score": 95.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": []
     },
@@ -103,6 +109,7 @@
       "name": "Lymphatic filariasis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.31,
         "deathsMillions": null,
@@ -117,7 +124,8 @@
       "gap": {
         "score": 95.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": []
     },
@@ -126,6 +134,7 @@
       "name": "Cysticercosis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.24,
         "deathsMillions": null,
@@ -140,7 +149,8 @@
       "gap": {
         "score": 95.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": []
     },
@@ -149,6 +159,7 @@
       "name": "Guinea worm disease",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 0.0,
         "deathsMillions": null,
@@ -163,7 +174,8 @@
       "gap": {
         "score": 95.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": []
     },
@@ -172,6 +184,7 @@
       "name": "Scabies",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 5.32,
         "deathsMillions": null,
@@ -186,7 +199,8 @@
       "gap": {
         "score": 95.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -201,6 +215,7 @@
       "name": "Drowning",
       "category": "Injuries",
       "globalSouthPriority": true,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 15.7,
         "deathsMillions": null,
@@ -215,7 +230,8 @@
       "gap": {
         "score": 95.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": []
     },
@@ -224,6 +240,7 @@
       "name": "Animal contact",
       "category": "Injuries",
       "globalSouthPriority": true,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 4.89,
         "deathsMillions": null,
@@ -238,7 +255,8 @@
       "gap": {
         "score": 95.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": []
     },
@@ -247,6 +265,7 @@
       "name": "Typhoid and paratyphoid",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 8.1,
         "deathsMillions": null,
@@ -261,7 +280,8 @@
       "gap": {
         "score": 90.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -296,6 +316,7 @@
       "name": "Encephalitis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 4.95,
         "deathsMillions": null,
@@ -310,7 +331,8 @@
       "gap": {
         "score": 90.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -335,6 +357,7 @@
       "name": "Conflict and terrorism",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 8.73,
         "deathsMillions": null,
@@ -349,7 +372,8 @@
       "gap": {
         "score": 90.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -374,6 +398,7 @@
       "name": "Paralytic ileus and intestinal obstruction",
       "category": "Digestive",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 6.66,
         "deathsMillions": null,
@@ -388,7 +413,8 @@
       "gap": {
         "score": 85.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -403,6 +429,7 @@
       "name": "Viral skin diseases",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 4.2,
         "deathsMillions": null,
@@ -417,7 +444,8 @@
       "gap": {
         "score": 85.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -437,6 +465,7 @@
       "name": "Iodine deficiency",
       "category": "Nutritional",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 2.25,
         "deathsMillions": null,
@@ -451,7 +480,8 @@
       "gap": {
         "score": 82.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -486,6 +516,7 @@
       "name": "Otitis media",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.48,
         "deathsMillions": null,
@@ -500,7 +531,8 @@
       "gap": {
         "score": 80.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -535,6 +567,7 @@
       "name": "Tuberculosis",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 46.98,
         "deathsMillions": null,
@@ -549,7 +582,8 @@
       "gap": {
         "score": 80.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -584,6 +618,7 @@
       "name": "Diarrheal diseases",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 58.98,
         "deathsMillions": null,
@@ -598,7 +633,8 @@
       "gap": {
         "score": 80.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -633,6 +669,7 @@
       "name": "Invasive Non-typhoidal Salmonella (iNTS)",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 4.74,
         "deathsMillions": null,
@@ -647,7 +684,8 @@
       "gap": {
         "score": 80.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -682,6 +720,7 @@
       "name": "Leishmaniasis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.78,
         "deathsMillions": null,
@@ -696,7 +735,8 @@
       "gap": {
         "score": 80.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -711,6 +751,7 @@
       "name": "Urticaria",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.98,
         "deathsMillions": null,
@@ -725,7 +766,8 @@
       "gap": {
         "score": 80.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -745,6 +787,7 @@
       "name": "Road injuries",
       "category": "Injuries",
       "globalSouthPriority": true,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 65.14,
         "deathsMillions": null,
@@ -759,7 +802,8 @@
       "gap": {
         "score": 80.0,
         "severity": "Critical",
-        "color": "#dc3545"
+        "color": "#dc3545",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -794,6 +838,7 @@
       "name": "Meningitis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 14.51,
         "deathsMillions": null,
@@ -808,7 +853,8 @@
       "gap": {
         "score": 70.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -843,6 +889,7 @@
       "name": "Measles",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 4.88,
         "deathsMillions": null,
@@ -857,7 +904,8 @@
       "gap": {
         "score": 70.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -892,6 +940,7 @@
       "name": "Pertussis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 4.61,
         "deathsMillions": null,
@@ -906,7 +955,8 @@
       "gap": {
         "score": 70.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -941,6 +991,7 @@
       "name": "Fungal skin diseases",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.43,
         "deathsMillions": null,
@@ -955,7 +1006,8 @@
       "gap": {
         "score": 70.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -980,6 +1032,7 @@
       "name": "Hemoglobinopathies and hemolytic anemias",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 11.92,
         "deathsMillions": null,
@@ -994,7 +1047,8 @@
       "gap": {
         "score": 70.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1029,6 +1083,7 @@
       "name": "Fire, heat, and hot substances",
       "category": "Injuries",
       "globalSouthPriority": true,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 8.47,
         "deathsMillions": null,
@@ -1043,7 +1098,8 @@
       "gap": {
         "score": 70.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -1078,6 +1134,7 @@
       "name": "Foreign body",
       "category": "Injuries",
       "globalSouthPriority": false,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 5.67,
         "deathsMillions": null,
@@ -1092,7 +1149,8 @@
       "gap": {
         "score": 70.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -1117,6 +1175,7 @@
       "name": "Protein-energy malnutrition",
       "category": "Nutritional",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 11.83,
         "deathsMillions": null,
@@ -1131,7 +1190,8 @@
       "gap": {
         "score": 65.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -1166,6 +1226,7 @@
       "name": "Vitamin A deficiency",
       "category": "Nutritional",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 1.1,
         "deathsMillions": null,
@@ -1180,7 +1241,8 @@
       "gap": {
         "score": 65.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -1215,6 +1277,7 @@
       "name": "HIV/AIDS",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 40.27,
         "deathsMillions": null,
@@ -1229,7 +1292,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1264,6 +1328,7 @@
       "name": "Lower respiratory infections",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 82.53,
         "deathsMillions": null,
@@ -1278,7 +1343,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -1313,6 +1379,7 @@
       "name": "Upper respiratory infections",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 5.68,
         "deathsMillions": null,
@@ -1327,7 +1394,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -1362,6 +1430,7 @@
       "name": "COVID-19",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 212.01,
         "deathsMillions": null,
@@ -1376,7 +1445,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1411,6 +1481,7 @@
       "name": "Rabies",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 0.57,
         "deathsMillions": null,
@@ -1425,7 +1496,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -1450,6 +1522,7 @@
       "name": "Onchocerciasis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.26,
         "deathsMillions": null,
@@ -1464,7 +1537,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1499,6 +1573,7 @@
       "name": "Cystic echinococcosis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.11,
         "deathsMillions": null,
@@ -1513,7 +1588,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1528,6 +1604,7 @@
       "name": "Tetanus",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 1.34,
         "deathsMillions": null,
@@ -1542,7 +1619,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -1567,6 +1645,7 @@
       "name": "Dietary iron deficiency",
       "category": "Nutritional",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 32.32,
         "deathsMillions": null,
@@ -1581,7 +1660,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -1616,6 +1696,7 @@
       "name": "Chronic obstructive pulmonary disease",
       "category": "Respiratory",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 79.78,
         "deathsMillions": null,
@@ -1630,7 +1711,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1665,6 +1747,7 @@
       "name": "Appendicitis",
       "category": "Digestive",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.33,
         "deathsMillions": null,
@@ -1679,7 +1762,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1709,6 +1793,7 @@
       "name": "Headache disorders",
       "category": "Neurological",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 47.98,
         "deathsMillions": null,
@@ -1723,7 +1808,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1758,6 +1844,7 @@
       "name": "Acne vulgaris",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 5.13,
         "deathsMillions": null,
@@ -1772,7 +1859,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1807,6 +1895,7 @@
       "name": "Pruritus",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.85,
         "deathsMillions": null,
@@ -1821,7 +1910,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1841,6 +1931,7 @@
       "name": "Low back pain",
       "category": "Musculoskeletal",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 70.16,
         "deathsMillions": null,
@@ -1855,7 +1946,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -1890,6 +1982,7 @@
       "name": "Exposure to mechanical forces",
       "category": "Injuries",
       "globalSouthPriority": false,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 10.32,
         "deathsMillions": null,
@@ -1904,7 +1997,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -1939,6 +2033,7 @@
       "name": "Self-harm",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 33.53,
         "deathsMillions": null,
@@ -1953,7 +2048,8 @@
       "gap": {
         "score": 60.0,
         "severity": "High",
-        "color": "#fd7e14"
+        "color": "#fd7e14",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -1988,6 +2084,7 @@
       "name": "Intestinal nematode infections",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.38,
         "deathsMillions": null,
@@ -2002,7 +2099,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2037,6 +2135,7 @@
       "name": "Neonatal disorders",
       "category": "Maternal/Child",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 186.37,
         "deathsMillions": null,
@@ -2051,7 +2150,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -2086,6 +2186,7 @@
       "name": "Leukemia",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 10.98,
         "deathsMillions": null,
@@ -2100,7 +2201,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2135,6 +2237,7 @@
       "name": "Cardiomyopathy and myocarditis",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 11.65,
         "deathsMillions": null,
@@ -2149,7 +2252,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2184,6 +2288,7 @@
       "name": "Pneumoconiosis",
       "category": "Respiratory",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.45,
         "deathsMillions": null,
@@ -2198,7 +2303,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2223,6 +2329,7 @@
       "name": "Inguinal, femoral, and abdominal hernia",
       "category": "Digestive",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.34,
         "deathsMillions": null,
@@ -2237,7 +2344,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2272,6 +2380,7 @@
       "name": "Drug use disorders",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 15.56,
         "deathsMillions": null,
@@ -2286,7 +2395,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2321,6 +2431,7 @@
       "name": "Decubitus ulcer",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.8,
         "deathsMillions": null,
@@ -2335,7 +2446,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2370,6 +2482,7 @@
       "name": "Age-related and other hearing loss",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 44.45,
         "deathsMillions": null,
@@ -2384,7 +2497,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2419,6 +2533,7 @@
       "name": "Neck pain",
       "category": "Musculoskeletal",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 20.42,
         "deathsMillions": null,
@@ -2433,7 +2548,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2468,6 +2584,7 @@
       "name": "Congenital birth defects",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 52.33,
         "deathsMillions": null,
@@ -2482,7 +2599,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2517,6 +2635,7 @@
       "name": "Oral disorders",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 23.24,
         "deathsMillions": null,
@@ -2531,7 +2650,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2566,6 +2686,7 @@
       "name": "Falls",
       "category": "Injuries",
       "globalSouthPriority": false,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 43.8,
         "deathsMillions": null,
@@ -2580,7 +2701,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -2615,6 +2737,7 @@
       "name": "Exposure to forces of nature",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 1.09,
         "deathsMillions": null,
@@ -2629,7 +2752,8 @@
       "gap": {
         "score": 50.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -2654,6 +2778,7 @@
       "name": "Sexually transmitted infections excluding HIV",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 7.95,
         "deathsMillions": null,
@@ -2668,7 +2793,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2703,6 +2829,7 @@
       "name": "Leprosy",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.02,
         "deathsMillions": null,
@@ -2717,7 +2844,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2732,6 +2860,7 @@
       "name": "Other neglected tropical diseases",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 4.22,
         "deathsMillions": null,
@@ -2746,7 +2875,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2781,6 +2911,7 @@
       "name": "Acute hepatitis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 4.23,
         "deathsMillions": null,
@@ -2795,7 +2926,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -2830,6 +2962,7 @@
       "name": "Diphtheria",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 0.32,
         "deathsMillions": null,
@@ -2844,7 +2977,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -2864,6 +2998,7 @@
       "name": "Varicella and herpes zoster",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.89,
         "deathsMillions": null,
@@ -2878,7 +3013,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2913,6 +3049,7 @@
       "name": "Non-Hodgkin lymphoma",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 7.77,
         "deathsMillions": null,
@@ -2927,7 +3064,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -2962,6 +3100,7 @@
       "name": "Ischemic heart disease",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 188.36,
         "deathsMillions": null,
@@ -2976,7 +3115,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3011,6 +3151,7 @@
       "name": "Stroke",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 160.46,
         "deathsMillions": null,
@@ -3025,7 +3166,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3060,6 +3202,7 @@
       "name": "Rheumatic heart disease",
       "category": "Cardiovascular",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 13.43,
         "deathsMillions": null,
@@ -3074,7 +3217,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3109,6 +3253,7 @@
       "name": "Asthma",
       "category": "Respiratory",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 21.42,
         "deathsMillions": null,
@@ -3123,7 +3268,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3158,6 +3304,7 @@
       "name": "Cirrhosis and other chronic liver diseases",
       "category": "Digestive",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 46.42,
         "deathsMillions": null,
@@ -3172,7 +3319,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3207,6 +3355,7 @@
       "name": "Upper digestive system diseases",
       "category": "Digestive",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 15.21,
         "deathsMillions": null,
@@ -3221,7 +3370,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3256,6 +3406,7 @@
       "name": "Gallbladder and biliary diseases",
       "category": "Digestive",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 7.73,
         "deathsMillions": null,
@@ -3270,7 +3421,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3305,6 +3457,7 @@
       "name": "Pancreatitis",
       "category": "Digestive",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 4.1,
         "deathsMillions": null,
@@ -3319,7 +3472,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3354,6 +3508,7 @@
       "name": "Vascular intestinal disorders",
       "category": "Digestive",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.71,
         "deathsMillions": null,
@@ -3368,7 +3523,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3403,6 +3559,7 @@
       "name": "Depressive disorders",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 56.33,
         "deathsMillions": null,
@@ -3417,7 +3574,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3452,6 +3610,7 @@
       "name": "Anxiety disorders",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 42.51,
         "deathsMillions": null,
@@ -3466,7 +3625,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3501,6 +3661,7 @@
       "name": "Bipolar disorder",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 8.01,
         "deathsMillions": null,
@@ -3515,7 +3676,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3550,6 +3712,7 @@
       "name": "Schizophrenia",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 14.82,
         "deathsMillions": null,
@@ -3564,7 +3727,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3599,6 +3763,7 @@
       "name": "Autism spectrum disorders",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 11.54,
         "deathsMillions": null,
@@ -3613,7 +3778,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3648,6 +3814,7 @@
       "name": "Idiopathic developmental intellectual disability",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.81,
         "deathsMillions": null,
@@ -3662,7 +3829,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3697,6 +3865,7 @@
       "name": "Chronic kidney disease",
       "category": "Metabolic",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 44.45,
         "deathsMillions": null,
@@ -3711,7 +3880,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3746,6 +3916,7 @@
       "name": "Dermatitis",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 8.18,
         "deathsMillions": null,
@@ -3760,7 +3931,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3795,6 +3967,7 @@
       "name": "Blindness and vision loss",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 29.16,
         "deathsMillions": null,
@@ -3809,7 +3982,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3844,6 +4018,7 @@
       "name": "Other sense organ diseases",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.71,
         "deathsMillions": null,
@@ -3858,7 +4033,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3893,6 +4069,7 @@
       "name": "Osteoarthritis",
       "category": "Musculoskeletal",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 21.3,
         "deathsMillions": null,
@@ -3907,7 +4084,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3942,6 +4120,7 @@
       "name": "Other musculoskeletal disorders",
       "category": "Musculoskeletal",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 45.18,
         "deathsMillions": null,
@@ -3956,7 +4135,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -3991,6 +4171,7 @@
       "name": "Other transport injuries",
       "category": "Injuries",
       "globalSouthPriority": false,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 4.49,
         "deathsMillions": null,
@@ -4005,7 +4186,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -4040,6 +4222,7 @@
       "name": "Poisonings",
       "category": "Injuries",
       "globalSouthPriority": false,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 2.88,
         "deathsMillions": null,
@@ -4054,7 +4237,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -4089,6 +4273,7 @@
       "name": "Adverse effects of medical treatment",
       "category": "Injuries",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 4.85,
         "deathsMillions": null,
@@ -4103,7 +4288,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4138,6 +4324,7 @@
       "name": "Other unintentional injuries",
       "category": "Injuries",
       "globalSouthPriority": false,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 8.77,
         "deathsMillions": null,
@@ -4152,7 +4339,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -4187,6 +4375,7 @@
       "name": "Police conflict and executions",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 1.01,
         "deathsMillions": null,
@@ -4201,7 +4390,8 @@
       "gap": {
         "score": 40.0,
         "severity": "Moderate",
-        "color": "#ffc107"
+        "color": "#ffc107",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -4236,6 +4426,7 @@
       "name": "Yellow fever",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 0.32,
         "deathsMillions": null,
@@ -4250,7 +4441,8 @@
       "gap": {
         "score": 30.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -4285,6 +4477,7 @@
       "name": "Tracheal, bronchus, and lung cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 46.54,
         "deathsMillions": null,
@@ -4299,7 +4492,8 @@
       "gap": {
         "score": 30.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4334,6 +4528,7 @@
       "name": "Atrial fibrillation and flutter",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 8.36,
         "deathsMillions": null,
@@ -4348,7 +4543,8 @@
       "gap": {
         "score": 30.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4383,6 +4579,7 @@
       "name": "Aortic aneurysm",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.11,
         "deathsMillions": null,
@@ -4397,7 +4594,8 @@
       "gap": {
         "score": 30.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4432,6 +4630,7 @@
       "name": "Diabetes mellitus",
       "category": "Metabolic",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 78.94,
         "deathsMillions": null,
@@ -4446,7 +4645,8 @@
       "gap": {
         "score": 30.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4481,6 +4681,7 @@
       "name": "Psoriasis",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.69,
         "deathsMillions": null,
@@ -4495,7 +4696,8 @@
       "gap": {
         "score": 30.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4530,6 +4732,7 @@
       "name": "Bacterial skin diseases",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.27,
         "deathsMillions": null,
@@ -4544,7 +4747,8 @@
       "gap": {
         "score": 30.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4579,6 +4783,7 @@
       "name": "Other skin and subcutaneous diseases",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.53,
         "deathsMillions": null,
@@ -4593,7 +4798,8 @@
       "gap": {
         "score": 30.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4628,6 +4834,7 @@
       "name": "Trachoma",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.12,
         "deathsMillions": null,
@@ -4642,7 +4849,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4677,6 +4885,7 @@
       "name": "Ebola",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 0.0,
         "deathsMillions": null,
@@ -4691,7 +4900,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -4726,6 +4936,7 @@
       "name": "Zika virus",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 0.0,
         "deathsMillions": null,
@@ -4740,7 +4951,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -4760,6 +4972,7 @@
       "name": "Stomach cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 22.79,
         "deathsMillions": null,
@@ -4774,7 +4987,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4809,6 +5023,7 @@
       "name": "Malignant skin melanoma",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.68,
         "deathsMillions": null,
@@ -4823,7 +5038,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4858,6 +5074,7 @@
       "name": "Hodgkin lymphoma",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.2,
         "deathsMillions": null,
@@ -4872,7 +5089,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4907,6 +5125,7 @@
       "name": "Hypertensive heart disease",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 25.46,
         "deathsMillions": null,
@@ -4921,7 +5140,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -4956,6 +5176,7 @@
       "name": "Endocarditis",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.08,
         "deathsMillions": null,
@@ -4970,7 +5191,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5005,6 +5227,7 @@
       "name": "Non-rheumatic valvular heart disease",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.24,
         "deathsMillions": null,
@@ -5019,7 +5242,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5054,6 +5278,7 @@
       "name": "Interstitial lung disease and pulmonary sarcoidosis",
       "category": "Respiratory",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 4.04,
         "deathsMillions": null,
@@ -5068,7 +5293,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5103,6 +5329,7 @@
       "name": "Other digestive diseases",
       "category": "Digestive",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.0,
         "deathsMillions": null,
@@ -5117,7 +5344,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5152,6 +5380,7 @@
       "name": "Eating disorders",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.4,
         "deathsMillions": null,
@@ -5166,7 +5395,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5201,6 +5431,7 @@
       "name": "Alcohol use disorders",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 16.98,
         "deathsMillions": null,
@@ -5215,7 +5446,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5250,6 +5482,7 @@
       "name": "Acute glomerulonephritis",
       "category": "Metabolic",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.31,
         "deathsMillions": null,
@@ -5264,7 +5497,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5299,6 +5533,7 @@
       "name": "Alopecia areata",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.57,
         "deathsMillions": null,
@@ -5313,7 +5548,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5348,6 +5584,7 @@
       "name": "Interpersonal violence",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "limited",
       "burden": {
         "dalysMillions": 26.83,
         "deathsMillions": null,
@@ -5362,7 +5599,8 @@
       "gap": {
         "score": 20.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": "Gap score reduced: disease not well-suited for biobank research"
       },
       "topBiobanks": [
         {
@@ -5397,6 +5635,7 @@
       "name": "Other intestinal infectious diseases",
       "category": "Infectious",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.11,
         "deathsMillions": null,
@@ -5411,7 +5650,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5446,6 +5686,7 @@
       "name": "Chagas disease",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.24,
         "deathsMillions": null,
@@ -5460,7 +5701,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5495,6 +5737,7 @@
       "name": "African trypanosomiasis",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.06,
         "deathsMillions": null,
@@ -5509,7 +5752,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5544,6 +5788,7 @@
       "name": "Food-borne trematodiases",
       "category": "Other NCD",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.0,
         "deathsMillions": null,
@@ -5558,7 +5803,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5593,6 +5839,7 @@
       "name": "Other unspecified infectious diseases",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 5.85,
         "deathsMillions": null,
@@ -5607,7 +5854,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5642,6 +5890,7 @@
       "name": "Maternal disorders",
       "category": "Maternal/Child",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 12.31,
         "deathsMillions": null,
@@ -5656,7 +5905,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -5691,6 +5941,7 @@
       "name": "Other nutritional deficiencies",
       "category": "Nutritional",
       "globalSouthPriority": true,
+      "researchAppropriateness": "moderate",
       "burden": {
         "dalysMillions": 1.43,
         "deathsMillions": null,
@@ -5705,7 +5956,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": "Moderate biobank relevance"
       },
       "topBiobanks": [
         {
@@ -5740,6 +5992,7 @@
       "name": "Breast cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 20.64,
         "deathsMillions": null,
@@ -5754,7 +6007,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5789,6 +6043,7 @@
       "name": "Cervical cancer",
       "category": "Cancer",
       "globalSouthPriority": true,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 9.91,
         "deathsMillions": null,
@@ -5803,7 +6058,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5838,6 +6094,7 @@
       "name": "Uterine cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.56,
         "deathsMillions": null,
@@ -5852,7 +6109,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5887,6 +6145,7 @@
       "name": "Ovarian cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 5.16,
         "deathsMillions": null,
@@ -5901,7 +6160,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5936,6 +6196,7 @@
       "name": "Prostate cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 8.14,
         "deathsMillions": null,
@@ -5950,7 +6211,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -5985,6 +6247,7 @@
       "name": "Testicular cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.56,
         "deathsMillions": null,
@@ -5999,7 +6262,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6034,6 +6298,7 @@
       "name": "Colon and rectum cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 24.4,
         "deathsMillions": null,
@@ -6048,7 +6313,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6083,6 +6349,7 @@
       "name": "Lip and oral cavity cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 5.87,
         "deathsMillions": null,
@@ -6097,7 +6364,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6132,6 +6400,7 @@
       "name": "Nasopharynx cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.49,
         "deathsMillions": null,
@@ -6146,7 +6415,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6181,6 +6451,7 @@
       "name": "Other pharynx cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.84,
         "deathsMillions": null,
@@ -6195,7 +6466,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6230,6 +6502,7 @@
       "name": "Esophageal cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 13.0,
         "deathsMillions": null,
@@ -6244,7 +6517,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6279,6 +6553,7 @@
       "name": "Liver cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 12.89,
         "deathsMillions": null,
@@ -6293,7 +6568,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6328,6 +6604,7 @@
       "name": "Gallbladder and biliary tract cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.73,
         "deathsMillions": null,
@@ -6342,7 +6619,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6377,6 +6655,7 @@
       "name": "Pancreatic cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 11.32,
         "deathsMillions": null,
@@ -6391,7 +6670,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6426,6 +6706,7 @@
       "name": "Larynx cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.14,
         "deathsMillions": null,
@@ -6440,7 +6721,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6475,6 +6757,7 @@
       "name": "Non-melanoma skin cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.21,
         "deathsMillions": null,
@@ -6489,7 +6772,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6524,6 +6808,7 @@
       "name": "Kidney cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 4.02,
         "deathsMillions": null,
@@ -6538,7 +6823,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6573,6 +6859,7 @@
       "name": "Bladder cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 4.4,
         "deathsMillions": null,
@@ -6587,7 +6874,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6622,6 +6910,7 @@
       "name": "Brain and central nervous system cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 8.91,
         "deathsMillions": null,
@@ -6636,7 +6925,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6671,6 +6961,7 @@
       "name": "Thyroid cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.25,
         "deathsMillions": null,
@@ -6685,7 +6976,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6720,6 +7012,7 @@
       "name": "Mesothelioma",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.69,
         "deathsMillions": null,
@@ -6734,7 +7027,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6769,6 +7063,7 @@
       "name": "Multiple myeloma",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.6,
         "deathsMillions": null,
@@ -6783,7 +7078,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6818,6 +7114,7 @@
       "name": "Other neoplasms",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.22,
         "deathsMillions": null,
@@ -6832,7 +7129,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6867,6 +7165,7 @@
       "name": "Other malignant neoplasms",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 6.45,
         "deathsMillions": null,
@@ -6881,7 +7180,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6916,6 +7216,7 @@
       "name": "Malignant neoplasm of bone and articular cartilage",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.53,
         "deathsMillions": null,
@@ -6930,7 +7231,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -6965,6 +7267,7 @@
       "name": "Soft tissue and other extraosseous sarcomas",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.68,
         "deathsMillions": null,
@@ -6979,7 +7282,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7014,6 +7318,7 @@
       "name": "Eye cancer",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.47,
         "deathsMillions": null,
@@ -7028,7 +7333,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7063,6 +7369,7 @@
       "name": "Neuroblastoma and other peripheral nervous cell tumors",
       "category": "Cancer",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.29,
         "deathsMillions": null,
@@ -7077,7 +7384,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7112,6 +7420,7 @@
       "name": "Lower extremity peripheral arterial disease",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0,
         "deathsMillions": null,
@@ -7126,7 +7435,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7161,6 +7471,7 @@
       "name": "Other cardiovascular and circulatory diseases",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 9.99,
         "deathsMillions": null,
@@ -7175,7 +7486,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7210,6 +7522,7 @@
       "name": "Pulmonary Arterial Hypertension",
       "category": "Cardiovascular",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0,
         "deathsMillions": null,
@@ -7224,7 +7537,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7259,6 +7573,7 @@
       "name": "Other chronic respiratory diseases",
       "category": "Respiratory",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.81,
         "deathsMillions": null,
@@ -7273,7 +7588,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7308,6 +7624,7 @@
       "name": "Inflammatory bowel disease",
       "category": "Digestive",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.51,
         "deathsMillions": null,
@@ -7322,7 +7639,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7357,6 +7675,7 @@
       "name": "Alzheimer's disease and other dementias",
       "category": "Neurological",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0,
         "deathsMillions": null,
@@ -7371,7 +7690,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7406,6 +7726,7 @@
       "name": "Parkinson's disease",
       "category": "Neurological",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0,
         "deathsMillions": null,
@@ -7420,7 +7741,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7455,6 +7777,7 @@
       "name": "Idiopathic epilepsy",
       "category": "Neurological",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0,
         "deathsMillions": null,
@@ -7469,7 +7792,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7504,6 +7828,7 @@
       "name": "Multiple sclerosis",
       "category": "Neurological",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 0.97,
         "deathsMillions": null,
@@ -7518,7 +7843,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7553,6 +7879,7 @@
       "name": "Motor neuron disease",
       "category": "Neurological",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.04,
         "deathsMillions": null,
@@ -7567,7 +7894,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7602,6 +7930,7 @@
       "name": "Other neurological disorders",
       "category": "Neurological",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 4.36,
         "deathsMillions": null,
@@ -7616,7 +7945,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7651,6 +7981,7 @@
       "name": "Attention-deficit/hyperactivity disorder",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.03,
         "deathsMillions": null,
@@ -7665,7 +7996,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7700,6 +8032,7 @@
       "name": "Conduct disorder",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 5.0,
         "deathsMillions": null,
@@ -7714,7 +8047,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7749,6 +8083,7 @@
       "name": "Other mental disorders",
       "category": "Mental Health",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 8.96,
         "deathsMillions": null,
@@ -7763,7 +8098,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7798,6 +8134,7 @@
       "name": "Rheumatoid arthritis",
       "category": "Musculoskeletal",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 3.08,
         "deathsMillions": null,
@@ -7812,7 +8149,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7847,6 +8185,7 @@
       "name": "Gout",
       "category": "Musculoskeletal",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.75,
         "deathsMillions": null,
@@ -7861,7 +8200,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7896,6 +8236,7 @@
       "name": "Sudden infant death syndrome",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 2.75,
         "deathsMillions": null,
@@ -7910,7 +8251,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7945,6 +8287,7 @@
       "name": "Urinary diseases and male infertility",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 11.35,
         "deathsMillions": null,
@@ -7959,7 +8302,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -7994,6 +8338,7 @@
       "name": "Gynecological diseases",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 27.74,
         "deathsMillions": null,
@@ -8008,7 +8353,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -8043,6 +8389,7 @@
       "name": "Endocrine, metabolic, blood, and immune disorders",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 12.86,
         "deathsMillions": null,
@@ -8057,7 +8404,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -8092,6 +8440,7 @@
       "name": "Environmental heat and cold exposure",
       "category": "Injuries",
       "globalSouthPriority": false,
+      "researchAppropriateness": "high",
       "burden": {
         "dalysMillions": 1.68,
         "deathsMillions": null,
@@ -8106,7 +8455,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -8141,6 +8491,7 @@
       "name": "_GENOMICS",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "methodology",
       "burden": {
         "dalysMillions": 0,
         "deathsMillions": null,
@@ -8155,7 +8506,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -8190,6 +8542,7 @@
       "name": "_BIOBANK_METHODS",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "methodology",
       "burden": {
         "dalysMillions": 0,
         "deathsMillions": null,
@@ -8204,7 +8557,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -8239,6 +8593,7 @@
       "name": "_IMAGING",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "methodology",
       "burden": {
         "dalysMillions": 0,
         "deathsMillions": null,
@@ -8253,7 +8608,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
@@ -8288,6 +8644,7 @@
       "name": "_AGING",
       "category": "Other NCD",
       "globalSouthPriority": false,
+      "researchAppropriateness": "methodology",
       "burden": {
         "dalysMillions": 0,
         "deathsMillions": null,
@@ -8302,7 +8659,8 @@
       "gap": {
         "score": 10.0,
         "severity": "Low",
-        "color": "#28a745"
+        "color": "#28a745",
+        "adjustedNote": null
       },
       "topBiobanks": [
         {
