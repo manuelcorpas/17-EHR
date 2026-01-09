@@ -1,6 +1,6 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-07T08:37:08.405415",
+  "generated": "2026-01-09T05:21:00.090945",
   "count": 179,
   "diseases": [
     {
@@ -41,13 +41,13 @@
           "publications": 3
         },
         {
-          "id": "awigen",
-          "name": "AWI-Gen",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 1
         },
         {
-          "id": "epihealth",
-          "name": "EpiHealth",
+          "id": "gel",
+          "name": "Genomics England / 100,000 Genomes Project",
           "publications": 1
         }
       ]
@@ -280,13 +280,13 @@
           "publications": 4
         },
         {
-          "id": "plco",
-          "name": "PLCO Cancer Screening Trial",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 1
         },
         {
-          "id": "ukb",
-          "name": "UK Biobank",
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
           "publications": 1
         }
       ]
@@ -319,13 +319,13 @@
           "publications": 2
         },
         {
-          "id": "myc",
-          "name": "The Malaysian Cohort",
+          "id": "whi",
+          "name": "Women's Health Initiative",
           "publications": 1
         },
         {
-          "id": "whi",
-          "name": "Women's Health Initiative",
+          "id": "myc",
+          "name": "The Malaysian Cohort",
           "publications": 1
         }
       ]
@@ -421,13 +421,13 @@
       },
       "topBiobanks": [
         {
-          "id": "45andup",
-          "name": "45 and Up Study",
+          "id": "aou",
+          "name": "All of Us Research Program",
           "publications": 1
         },
         {
-          "id": "aou",
-          "name": "All of Us Research Program",
+          "id": "45andup",
+          "name": "45 and Up Study",
           "publications": 1
         }
       ]
@@ -460,23 +460,23 @@
           "publications": 14
         },
         {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
-          "publications": 3
-        },
-        {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
           "publications": 3
         },
         {
-          "id": "elsa_brasil",
-          "name": "ELSA-Brasil",
+          "id": "dnbc",
+          "name": "Danish National Birth Cohort",
+          "publications": 3
+        },
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 1
         },
         {
-          "id": "echo",
-          "name": "ECHO Cohort",
+          "id": "hunt",
+          "name": "HUNT Study",
           "publications": 1
         }
       ]
@@ -542,9 +542,9 @@
         "burdenScore": 76.72
       },
       "research": {
-        "globalPublications": 42,
+        "globalPublications": 43,
         "biobanksEngaged": 16,
-        "researchIntensity": 0.894
+        "researchIntensity": 0.915
       },
       "gap": {
         "score": 80.0,
@@ -570,7 +570,7 @@
         {
           "id": "ahri",
           "name": "Africa Health Research Institute Population Cohort",
-          "publications": 2
+          "publications": 3
         },
         {
           "id": "aou",
@@ -656,13 +656,13 @@
           "publications": 12
         },
         {
-          "id": "hunt",
-          "name": "HUNT Study",
+          "id": "moba",
+          "name": "Norwegian Mother and Child Cohort Study",
           "publications": 6
         },
         {
-          "id": "moba",
-          "name": "Norwegian Mother and Child Cohort Study",
+          "id": "hunt",
+          "name": "HUNT Study",
           "publications": 6
         },
         {
@@ -671,8 +671,8 @@
           "publications": 2
         },
         {
-          "id": "45andup",
-          "name": "45 and Up Study",
+          "id": "mvp",
+          "name": "Million Veteran Program",
           "publications": 1
         }
       ]
@@ -703,55 +703,6 @@
           "id": "ukb",
           "name": "UK Biobank",
           "publications": 1
-        }
-      ]
-    },
-    {
-      "id": "Meningitis",
-      "name": "Meningitis",
-      "category": "Other NCD",
-      "globalSouthPriority": true,
-      "burden": {
-        "dalysMillions": 14.51,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 71.62
-      },
-      "research": {
-        "globalPublications": 29,
-        "biobanksEngaged": 14,
-        "researchIntensity": 1.998
-      },
-      "gap": {
-        "score": 80.0,
-        "severity": "Critical",
-        "color": "#dc3545"
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 8
-        },
-        {
-          "id": "gel",
-          "name": "Genomics England / 100,000 Genomes Project",
-          "publications": 3
-        },
-        {
-          "id": "awigen",
-          "name": "AWI-Gen",
-          "publications": 2
-        },
-        {
-          "id": "bbj",
-          "name": "Biobank Japan",
-          "publications": 2
-        },
-        {
-          "id": "cpsii; plco",
-          "name": "Cancer Prevention Study II Nutrition Cohort; PLCO Cancer Screening Trial",
-          "publications": 2
         }
       ]
     },
@@ -801,9 +752,9 @@
         "burdenScore": 78.14
       },
       "research": {
-        "globalPublications": 53,
+        "globalPublications": 58,
         "biobanksEngaged": 20,
-        "researchIntensity": 0.814
+        "researchIntensity": 0.89
       },
       "gap": {
         "score": 80.0,
@@ -817,8 +768,13 @@
           "publications": 16
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 6
+        },
+        {
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
           "publications": 5
         },
         {
@@ -827,14 +783,58 @@
           "publications": 4
         },
         {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 3
+        }
+      ]
+    },
+    {
+      "id": "Meningitis",
+      "name": "Meningitis",
+      "category": "Other NCD",
+      "globalSouthPriority": true,
+      "burden": {
+        "dalysMillions": 14.51,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 71.62
+      },
+      "research": {
+        "globalPublications": 32,
+        "biobanksEngaged": 16,
+        "researchIntensity": 2.205
+      },
+      "gap": {
+        "score": 70.0,
+        "severity": "High",
+        "color": "#fd7e14"
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 8
+        },
+        {
+          "id": "gel",
+          "name": "Genomics England / 100,000 Genomes Project",
           "publications": 3
         },
         {
-          "id": "jphc",
-          "name": "JPHC Study",
-          "publications": 3
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 2
+        },
+        {
+          "id": "bbj",
+          "name": "Biobank Japan",
+          "publications": 2
+        },
+        {
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
+          "publications": 2
         }
       ]
     },
@@ -850,9 +850,9 @@
         "burdenScore": 66.88
       },
       "research": {
-        "globalPublications": 18,
-        "biobanksEngaged": 4,
-        "researchIntensity": 3.69
+        "globalPublications": 19,
+        "biobanksEngaged": 5,
+        "researchIntensity": 3.895
       },
       "gap": {
         "score": 70.0,
@@ -871,8 +871,13 @@
           "publications": 2
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 1
+        },
+        {
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
           "publications": 1
         },
         {
@@ -915,13 +920,13 @@
           "publications": 3
         },
         {
-          "id": "hunt",
-          "name": "HUNT Study",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 2
         },
         {
-          "id": "ukb",
-          "name": "UK Biobank",
+          "id": "hunt",
+          "name": "HUNT Study",
           "publications": 2
         },
         {
@@ -971,55 +976,6 @@
       ]
     },
     {
-      "id": "Acne vulgaris",
-      "name": "Acne vulgaris",
-      "category": "Other NCD",
-      "globalSouthPriority": false,
-      "burden": {
-        "dalysMillions": 5.13,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 67.1
-      },
-      "research": {
-        "globalPublications": 10,
-        "biobanksEngaged": 7,
-        "researchIntensity": 1.951
-      },
-      "gap": {
-        "score": 70.0,
-        "severity": "High",
-        "color": "#fd7e14"
-      },
-      "topBiobanks": [
-        {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 3
-        },
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 2
-        },
-        {
-          "id": "aou",
-          "name": "All of Us Research Program",
-          "publications": 1
-        },
-        {
-          "id": "biovu; ukb",
-          "name": "BioVU Vanderbilt; UK Biobank",
-          "publications": 1
-        },
-        {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
-          "publications": 1
-        }
-      ]
-    },
-    {
       "id": "Hemoglobinopathies and hemolytic anemias",
       "name": "Hemoglobinopathies and hemolytic anemias",
       "category": "Other NCD",
@@ -1062,8 +1018,8 @@
           "publications": 3
         },
         {
-          "id": "elsa_brasil",
-          "name": "ELSA-Brasil",
+          "id": "twb",
+          "name": "Taiwan Biobank",
           "publications": 2
         }
       ]
@@ -1091,13 +1047,13 @@
       },
       "topBiobanks": [
         {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 4
         },
         {
-          "id": "ukb",
-          "name": "UK Biobank",
+          "id": "nhs",
+          "name": "Nurses' Health Study",
           "publications": 4
         },
         {
@@ -1111,8 +1067,8 @@
           "publications": 2
         },
         {
-          "id": "echo",
-          "name": "ECHO Cohort",
+          "id": "mvp",
+          "name": "Million Veteran Program",
           "publications": 1
         }
       ]
@@ -1168,9 +1124,9 @@
         "burdenScore": 70.73
       },
       "research": {
-        "globalPublications": 57,
-        "biobanksEngaged": 19,
-        "researchIntensity": 4.82
+        "globalPublications": 59,
+        "biobanksEngaged": 18,
+        "researchIntensity": 4.989
       },
       "gap": {
         "score": 65.0,
@@ -1181,7 +1137,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 19
+          "publications": 20
         },
         {
           "id": "gel",
@@ -1199,8 +1155,8 @@
           "publications": 4
         },
         {
-          "id": "hunt",
-          "name": "HUNT Study",
+          "id": "aou",
+          "name": "All of Us Research Program",
           "publications": 2
         }
       ]
@@ -1217,9 +1173,9 @@
         "burdenScore": 60.43
       },
       "research": {
-        "globalPublications": 85,
-        "biobanksEngaged": 22,
-        "researchIntensity": 76.928
+        "globalPublications": 90,
+        "biobanksEngaged": 20,
+        "researchIntensity": 81.453
       },
       "gap": {
         "score": 65.0,
@@ -1230,16 +1186,16 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
+          "publications": 18
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
           "publications": 17
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 13
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
           "publications": 13
         },
         {
@@ -1266,9 +1222,9 @@
         "burdenScore": 76.05
       },
       "research": {
-        "globalPublications": 157,
-        "biobanksEngaged": 37,
-        "researchIntensity": 3.899
+        "globalPublications": 165,
+        "biobanksEngaged": 34,
+        "researchIntensity": 4.098
       },
       "gap": {
         "score": 60.0,
@@ -1279,17 +1235,17 @@
         {
           "id": "aou",
           "name": "All of Us Research Program",
-          "publications": 26
+          "publications": 28
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 25
+          "publications": 27
         },
         {
           "id": "ahri",
           "name": "Africa Health Research Institute Population Cohort",
-          "publications": 18
+          "publications": 19
         },
         {
           "id": "bandim",
@@ -1315,9 +1271,9 @@
         "burdenScore": 79.17
       },
       "research": {
-        "globalPublications": 167,
-        "biobanksEngaged": 30,
-        "researchIntensity": 2.023
+        "globalPublications": 177,
+        "biobanksEngaged": 29,
+        "researchIntensity": 2.145
       },
       "gap": {
         "score": 60.0,
@@ -1328,12 +1284,17 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 74
+          "publications": 77
         },
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
           "publications": 18
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 7
         },
         {
           "id": "dnbc",
@@ -1343,11 +1304,6 @@
         {
           "id": "ckb",
           "name": "China Kadoorie Biobank",
-          "publications": 6
-        },
-        {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
           "publications": 6
         }
       ]
@@ -1364,9 +1320,9 @@
         "burdenScore": 67.54
       },
       "research": {
-        "globalPublications": 63,
-        "biobanksEngaged": 16,
-        "researchIntensity": 11.094
+        "globalPublications": 64,
+        "biobanksEngaged": 17,
+        "researchIntensity": 11.27
       },
       "gap": {
         "score": 60.0,
@@ -1395,8 +1351,8 @@
           "publications": 4
         },
         {
-          "id": "echo",
-          "name": "ECHO Cohort",
+          "id": "moba",
+          "name": "Norwegian Mother and Child Cohort Study",
           "publications": 3
         }
       ]
@@ -1413,9 +1369,9 @@
         "burdenScore": 83.26
       },
       "research": {
-        "globalPublications": 553,
-        "biobanksEngaged": 54,
-        "researchIntensity": 2.608
+        "globalPublications": 582,
+        "biobanksEngaged": 45,
+        "researchIntensity": 2.745
       },
       "gap": {
         "score": 60.0,
@@ -1426,17 +1382,17 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 285
+          "publications": 294
         },
         {
           "id": "aou",
           "name": "All of Us Research Program",
-          "publications": 27
+          "publications": 28
         },
         {
           "id": "gel",
           "name": "Genomics England / 100,000 Genomes Project",
-          "publications": 24
+          "publications": 25
         },
         {
           "id": "whi",
@@ -1444,9 +1400,9 @@
           "publications": 24
         },
         {
-          "id": "echo",
-          "name": "ECHO Cohort",
-          "publications": 22
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 23
         }
       ]
     },
@@ -1473,13 +1429,13 @@
       },
       "topBiobanks": [
         {
-          "id": "moba",
-          "name": "Norwegian Mother and Child Cohort Study",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 1
         },
         {
-          "id": "ukb",
-          "name": "UK Biobank",
+          "id": "moba",
+          "name": "Norwegian Mother and Child Cohort Study",
           "publications": 1
         },
         {
@@ -1501,9 +1457,9 @@
         "burdenScore": 61.01
       },
       "research": {
-        "globalPublications": 9,
-        "biobanksEngaged": 6,
-        "researchIntensity": 7.126
+        "globalPublications": 10,
+        "biobanksEngaged": 5,
+        "researchIntensity": 7.918
       },
       "gap": {
         "score": 60.0,
@@ -1514,7 +1470,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 4
+          "publications": 5
+        },
+        {
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 2
         },
         {
           "id": "aou",
@@ -1522,18 +1483,13 @@
           "publications": 1
         },
         {
-          "id": "estbb",
-          "name": "Estonian Biobank",
-          "publications": 1
-        },
-        {
-          "id": "estbb; ukb",
-          "name": "Estonian Biobank; UK Biobank",
-          "publications": 1
-        },
-        {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
+          "publications": 1
+        },
+        {
+          "id": "ukbdc",
+          "name": "UK Blood Donor Cohorts",
           "publications": 1
         }
       ]
@@ -1595,13 +1551,13 @@
           "publications": 9
         },
         {
-          "id": "45andup",
-          "name": "45 and Up Study",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 1
         },
         {
-          "id": "ukb",
-          "name": "UK Biobank",
+          "id": "45andup",
+          "name": "45 and Up Study",
           "publications": 1
         }
       ]
@@ -1618,9 +1574,9 @@
         "burdenScore": 75.09
       },
       "research": {
-        "globalPublications": 138,
-        "biobanksEngaged": 28,
-        "researchIntensity": 4.27
+        "globalPublications": 140,
+        "biobanksEngaged": 27,
+        "researchIntensity": 4.332
       },
       "gap": {
         "score": 60.0,
@@ -1631,7 +1587,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 68
+          "publications": 70
         },
         {
           "id": "epic",
@@ -1667,9 +1623,9 @@
         "burdenScore": 79.02
       },
       "research": {
-        "globalPublications": 329,
-        "biobanksEngaged": 35,
-        "researchIntensity": 4.124
+        "globalPublications": 339,
+        "biobanksEngaged": 31,
+        "researchIntensity": 4.249
       },
       "gap": {
         "score": 60.0,
@@ -1680,12 +1636,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 173
+          "publications": 180
         },
         {
           "id": "ckb",
           "name": "China Kadoorie Biobank",
-          "publications": 31
+          "publications": 33
         },
         {
           "id": "hunt",
@@ -1695,7 +1651,7 @@
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 16
+          "publications": 18
         },
         {
           "id": "cpsii",
@@ -1732,67 +1688,18 @@
           "publications": 3
         },
         {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 1
+        },
+        {
           "id": "simpler",
           "name": "SIMPLER",
           "publications": 1
         },
         {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 1
-        },
-        {
           "id": "ukbdc",
           "name": "UK Blood Donor Cohorts",
-          "publications": 1
-        }
-      ]
-    },
-    {
-      "id": "Inguinal, femoral, and abdominal hernia",
-      "name": "Inguinal, femoral, and abdominal hernia",
-      "category": "Digestive",
-      "globalSouthPriority": false,
-      "burden": {
-        "dalysMillions": 2.34,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 63.7
-      },
-      "research": {
-        "globalPublications": 11,
-        "biobanksEngaged": 6,
-        "researchIntensity": 4.692
-      },
-      "gap": {
-        "score": 60.0,
-        "severity": "High",
-        "color": "#fd7e14"
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 6
-        },
-        {
-          "id": "23andme",
-          "name": "23andMe",
-          "publications": 1
-        },
-        {
-          "id": "bbj; ukb",
-          "name": "Biobank Japan; UK Biobank",
-          "publications": 1
-        },
-        {
-          "id": "estbb",
-          "name": "Estonian Biobank",
-          "publications": 1
-        },
-        {
-          "id": "estbb; ukb",
-          "name": "Estonian Biobank; UK Biobank",
           "publications": 1
         }
       ]
@@ -1809,9 +1716,9 @@
         "burdenScore": 76.81
       },
       "research": {
-        "globalPublications": 182,
-        "biobanksEngaged": 19,
-        "researchIntensity": 3.794
+        "globalPublications": 193,
+        "biobanksEngaged": 16,
+        "researchIntensity": 4.023
       },
       "gap": {
         "score": 60.0,
@@ -1822,12 +1729,12 @@
         {
           "id": "hunt",
           "name": "HUNT Study",
-          "publications": 72
+          "publications": 73
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 44
+          "publications": 47
         },
         {
           "id": "elsa_brasil",
@@ -1840,9 +1747,58 @@
           "publications": 11
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 7
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 9
+        }
+      ]
+    },
+    {
+      "id": "Acne vulgaris",
+      "name": "Acne vulgaris",
+      "category": "Other NCD",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 5.13,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 67.1
+      },
+      "research": {
+        "globalPublications": 14,
+        "biobanksEngaged": 7,
+        "researchIntensity": 2.731
+      },
+      "gap": {
+        "score": 60.0,
+        "severity": "High",
+        "color": "#fd7e14"
+      },
+      "topBiobanks": [
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 4
+        },
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 3
+        },
+        {
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
+          "publications": 3
+        },
+        {
+          "id": "aou",
+          "name": "All of Us Research Program",
+          "publications": 1
+        },
+        {
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 1
         }
       ]
     },
@@ -1869,13 +1825,13 @@
       },
       "topBiobanks": [
         {
-          "id": "twb",
-          "name": "Taiwan Biobank",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 1
         },
         {
-          "id": "ukb",
-          "name": "UK Biobank",
+          "id": "twb",
+          "name": "Taiwan Biobank",
           "publications": 1
         }
       ]
@@ -1892,9 +1848,9 @@
         "burdenScore": 78.46
       },
       "research": {
-        "globalPublications": 144,
-        "biobanksEngaged": 24,
-        "researchIntensity": 2.053
+        "globalPublications": 147,
+        "biobanksEngaged": 22,
+        "researchIntensity": 2.095
       },
       "gap": {
         "score": 60.0,
@@ -1905,7 +1861,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 54
+          "publications": 57
         },
         {
           "id": "hunt",
@@ -1941,9 +1897,9 @@
         "burdenScore": 70.13
       },
       "research": {
-        "globalPublications": 36,
-        "biobanksEngaged": 17,
-        "researchIntensity": 3.49
+        "globalPublications": 39,
+        "biobanksEngaged": 18,
+        "researchIntensity": 3.781
       },
       "gap": {
         "score": 60.0,
@@ -1962,18 +1918,18 @@
           "publications": 4
         },
         {
-          "id": "nako",
-          "name": "German National Cohort (NAKO)",
-          "publications": 3
-        },
-        {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 3
         },
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
+          "publications": 3
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
           "publications": 3
         }
       ]
@@ -1990,9 +1946,9 @@
         "burdenScore": 75.25
       },
       "research": {
-        "globalPublications": 124,
-        "biobanksEngaged": 23,
-        "researchIntensity": 3.699
+        "globalPublications": 127,
+        "biobanksEngaged": 22,
+        "researchIntensity": 3.788
       },
       "gap": {
         "score": 60.0,
@@ -2008,7 +1964,7 @@
         {
           "id": "mvp",
           "name": "Million Veteran Program",
-          "publications": 12
+          "publications": 13
         },
         {
           "id": "jphc",
@@ -2016,13 +1972,13 @@
           "publications": 10
         },
         {
-          "id": "hunt",
-          "name": "HUNT Study",
-          "publications": 7
-        },
-        {
           "id": "nhs",
           "name": "Nurses' Health Study",
+          "publications": 9
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
           "publications": 7
         }
       ]
@@ -2055,23 +2011,23 @@
           "publications": 12
         },
         {
-          "id": "ckb",
-          "name": "China Kadoorie Biobank",
-          "publications": 1
-        },
-        {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
-          "publications": 1
-        },
-        {
-          "id": "nako",
-          "name": "German National Cohort (NAKO)",
+          "id": "moba",
+          "name": "Norwegian Mother and Child Cohort Study",
           "publications": 1
         },
         {
           "id": "hunt",
           "name": "HUNT Study",
+          "publications": 1
+        },
+        {
+          "id": "ckb",
+          "name": "China Kadoorie Biobank",
+          "publications": 1
+        },
+        {
+          "id": "nako",
+          "name": "German National Cohort (NAKO)",
           "publications": 1
         }
       ]
@@ -2088,9 +2044,9 @@
         "burdenScore": 82.7
       },
       "research": {
-        "globalPublications": 1599,
-        "biobanksEngaged": 71,
-        "researchIntensity": 8.58
+        "globalPublications": 1681,
+        "biobanksEngaged": 57,
+        "researchIntensity": 9.02
       },
       "gap": {
         "score": 50.0,
@@ -2101,27 +2057,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 296
+          "publications": 311
         },
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 278
+          "publications": 296
         },
         {
           "id": "dnbc",
           "name": "Danish National Birth Cohort",
-          "publications": 209
+          "publications": 222
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 92
         },
         {
           "id": "echo",
           "name": "ECHO Cohort",
           "publications": 84
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 75
         }
       ]
     },
@@ -2137,9 +2093,9 @@
         "burdenScore": 70.41
       },
       "research": {
-        "globalPublications": 75,
-        "biobanksEngaged": 19,
-        "researchIntensity": 6.829
+        "globalPublications": 79,
+        "biobanksEngaged": 17,
+        "researchIntensity": 7.193
       },
       "gap": {
         "score": 50.0,
@@ -2150,7 +2106,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 17
+          "publications": 20
         },
         {
           "id": "epic",
@@ -2160,16 +2116,16 @@
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 6
-        },
-        {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
-          "publications": 5
+          "publications": 7
         },
         {
           "id": "gel",
           "name": "Genomics England / 100,000 Genomes Project",
+          "publications": 5
+        },
+        {
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
           "publications": 5
         }
       ]
@@ -2186,9 +2142,9 @@
         "burdenScore": 70.66
       },
       "research": {
-        "globalPublications": 74,
-        "biobanksEngaged": 18,
-        "researchIntensity": 6.35
+        "globalPublications": 82,
+        "biobanksEngaged": 13,
+        "researchIntensity": 7.036
       },
       "gap": {
         "score": 50.0,
@@ -2199,26 +2155,26 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 49
+          "publications": 57
         },
         {
           "id": "gel",
           "name": "Genomics England / 100,000 Genomes Project",
+          "publications": 6
+        },
+        {
+          "id": "mvp",
+          "name": "Million Veteran Program",
           "publications": 4
         },
         {
           "id": "aou",
           "name": "All of Us Research Program",
-          "publications": 2
+          "publications": 3
         },
         {
-          "id": "geisinger",
-          "name": "Geisinger MyCode Community Health Initiative",
-          "publications": 2
-        },
-        {
-          "id": "gel; ukb",
-          "name": "Genomics England / 100,000 Genomes Project; UK Biobank",
+          "id": "estbb",
+          "name": "Estonian Biobank",
           "publications": 2
         }
       ]
@@ -2263,20 +2219,20 @@
       ]
     },
     {
-      "id": "Upper digestive system diseases",
-      "name": "Upper digestive system diseases",
+      "id": "Inguinal, femoral, and abdominal hernia",
+      "name": "Inguinal, femoral, and abdominal hernia",
       "category": "Digestive",
       "globalSouthPriority": false,
       "burden": {
-        "dalysMillions": 15.21,
+        "dalysMillions": 2.34,
         "deathsMillions": null,
         "prevalenceMillions": null,
-        "burdenScore": 71.82
+        "burdenScore": 63.7
       },
       "research": {
-        "globalPublications": 149,
-        "biobanksEngaged": 26,
-        "researchIntensity": 9.799
+        "globalPublications": 13,
+        "biobanksEngaged": 5,
+        "researchIntensity": 5.545
       },
       "gap": {
         "score": 50.0,
@@ -2287,75 +2243,26 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 46
+          "publications": 8
         },
         {
-          "id": "hunt",
-          "name": "HUNT Study",
-          "publications": 17
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 2
         },
         {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 13
+          "id": "23andme",
+          "name": "23andMe",
+          "publications": 1
+        },
+        {
+          "id": "bbj",
+          "name": "Biobank Japan",
+          "publications": 1
         },
         {
           "id": "twb",
           "name": "Taiwan Biobank",
-          "publications": 12
-        },
-        {
-          "id": "jphc",
-          "name": "JPHC Study",
-          "publications": 8
-        }
-      ]
-    },
-    {
-      "id": "Pancreatitis",
-      "name": "Pancreatitis",
-      "category": "Digestive",
-      "globalSouthPriority": false,
-      "burden": {
-        "dalysMillions": 4.1,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 66.13
-      },
-      "research": {
-        "globalPublications": 41,
-        "biobanksEngaged": 9,
-        "researchIntensity": 9.997
-      },
-      "gap": {
-        "score": 50.0,
-        "severity": "Moderate",
-        "color": "#ffc107"
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 28
-        },
-        {
-          "id": "simpler",
-          "name": "SIMPLER",
-          "publications": 6
-        },
-        {
-          "id": "acscps3",
-          "name": "American Cancer Society Cancer Prevention Study-3",
-          "publications": 1
-        },
-        {
-          "id": "biovu; ukb",
-          "name": "BioVU Vanderbilt; UK Biobank",
-          "publications": 1
-        },
-        {
-          "id": "biovu; usnih",
-          "name": "BioVU Vanderbilt; US NIH Biobank",
           "publications": 1
         }
       ]
@@ -2372,9 +2279,9 @@
         "burdenScore": 71.92
       },
       "research": {
-        "globalPublications": 78,
-        "biobanksEngaged": 22,
-        "researchIntensity": 5.012
+        "globalPublications": 84,
+        "biobanksEngaged": 20,
+        "researchIntensity": 5.398
       },
       "gap": {
         "score": 50.0,
@@ -2385,16 +2292,16 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 14
-        },
-        {
-          "id": "hunt",
-          "name": "HUNT Study",
-          "publications": 9
+          "publications": 17
         },
         {
           "id": "mvp",
           "name": "Million Veteran Program",
+          "publications": 12
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
           "publications": 9
         },
         {
@@ -2442,13 +2349,13 @@
           "publications": 1
         },
         {
-          "id": "ckb",
-          "name": "China Kadoorie Biobank",
+          "id": "estbb",
+          "name": "Estonian Biobank",
           "publications": 1
         },
         {
-          "id": "estbb",
-          "name": "Estonian Biobank",
+          "id": "ckb",
+          "name": "China Kadoorie Biobank",
           "publications": 1
         },
         {
@@ -2470,9 +2377,9 @@
         "burdenScore": 76.48
       },
       "research": {
-        "globalPublications": 227,
-        "biobanksEngaged": 30,
-        "researchIntensity": 5.107
+        "globalPublications": 248,
+        "biobanksEngaged": 28,
+        "researchIntensity": 5.579
       },
       "gap": {
         "score": 50.0,
@@ -2483,7 +2390,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 109
+          "publications": 112
         },
         {
           "id": "hunt",
@@ -2491,19 +2398,19 @@
           "publications": 29
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 25
+        },
+        {
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
           "publications": 18
         },
         {
           "id": "gel",
           "name": "Genomics England / 100,000 Genomes Project",
           "publications": 9
-        },
-        {
-          "id": "aou",
-          "name": "All of Us Research Program",
-          "publications": 8
         }
       ]
     },
@@ -2519,9 +2426,9 @@
         "burdenScore": 73.1
       },
       "research": {
-        "globalPublications": 105,
-        "biobanksEngaged": 25,
-        "researchIntensity": 5.143
+        "globalPublications": 108,
+        "biobanksEngaged": 23,
+        "researchIntensity": 5.29
       },
       "gap": {
         "score": 50.0,
@@ -2532,7 +2439,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 27
+          "publications": 30
         },
         {
           "id": "hunt",
@@ -2568,9 +2475,9 @@
         "burdenScore": 77.19
       },
       "research": {
-        "globalPublications": 277,
-        "biobanksEngaged": 32,
-        "researchIntensity": 5.294
+        "globalPublications": 284,
+        "biobanksEngaged": 27,
+        "researchIntensity": 5.428
       },
       "gap": {
         "score": 50.0,
@@ -2581,12 +2488,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 117
+          "publications": 121
         },
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 35
+          "publications": 36
         },
         {
           "id": "gel",
@@ -2596,12 +2503,12 @@
         {
           "id": "dnbc",
           "name": "Danish National Birth Cohort",
-          "publications": 24
+          "publications": 25
         },
         {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 10
+          "publications": 11
         }
       ]
     },
@@ -2617,9 +2524,9 @@
         "burdenScore": 73.66
       },
       "research": {
-        "globalPublications": 219,
-        "biobanksEngaged": 35,
-        "researchIntensity": 9.424
+        "globalPublications": 226,
+        "biobanksEngaged": 34,
+        "researchIntensity": 9.725
       },
       "gap": {
         "score": 50.0,
@@ -2630,7 +2537,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 80
+          "publications": 81
         },
         {
           "id": "whi",
@@ -2645,7 +2552,7 @@
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 11
+          "publications": 13
         },
         {
           "id": "koges",
@@ -2666,9 +2573,9 @@
         "burdenScore": 76.42
       },
       "research": {
-        "globalPublications": 376,
-        "biobanksEngaged": 24,
-        "researchIntensity": 8.584
+        "globalPublications": 382,
+        "biobanksEngaged": 21,
+        "researchIntensity": 8.721
       },
       "gap": {
         "score": 50.0,
@@ -2679,17 +2586,17 @@
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 178
+          "publications": 181
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 72
+          "publications": 75
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 24
+          "publications": 25
         },
         {
           "id": "epic",
@@ -2700,55 +2607,6 @@
           "id": "simpler",
           "name": "SIMPLER",
           "publications": 16
-        }
-      ]
-    },
-    {
-      "id": "Police conflict and executions",
-      "name": "Police conflict and executions",
-      "category": "Other NCD",
-      "globalSouthPriority": true,
-      "burden": {
-        "dalysMillions": 1.01,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 60.05
-      },
-      "research": {
-        "globalPublications": 21,
-        "biobanksEngaged": 9,
-        "researchIntensity": 20.753
-      },
-      "gap": {
-        "score": 50.0,
-        "severity": "Moderate",
-        "color": "#ffc107"
-      },
-      "topBiobanks": [
-        {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 8
-        },
-        {
-          "id": "hunt",
-          "name": "HUNT Study",
-          "publications": 3
-        },
-        {
-          "id": "moba",
-          "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 2
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 2
-        },
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 2
         }
       ]
     },
@@ -2780,13 +2638,13 @@
           "publications": 22
         },
         {
-          "id": "echo",
-          "name": "ECHO Cohort",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 1
         },
         {
-          "id": "ukb",
-          "name": "UK Biobank",
+          "id": "echo",
+          "name": "ECHO Cohort",
           "publications": 1
         }
       ]
@@ -2803,9 +2661,9 @@
         "burdenScore": 69.01
       },
       "research": {
-        "globalPublications": 101,
-        "biobanksEngaged": 25,
-        "researchIntensity": 12.699
+        "globalPublications": 103,
+        "biobanksEngaged": 24,
+        "researchIntensity": 12.951
       },
       "gap": {
         "score": 40.0,
@@ -2816,7 +2674,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 42
+          "publications": 43
         },
         {
           "id": "fmc",
@@ -2829,13 +2687,13 @@
           "publications": 6
         },
         {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
+          "id": "estbb",
+          "name": "Estonian Biobank",
           "publications": 4
         },
         {
-          "id": "estbb",
-          "name": "Estonian Biobank",
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
           "publications": 4
         }
       ]
@@ -2881,9 +2739,9 @@
         "burdenScore": 66.25
       },
       "research": {
-        "globalPublications": 57,
-        "biobanksEngaged": 19,
-        "researchIntensity": 13.513
+        "globalPublications": 58,
+        "biobanksEngaged": 18,
+        "researchIntensity": 13.75
       },
       "gap": {
         "score": 40.0,
@@ -2894,7 +2752,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 24
+          "publications": 25
         },
         {
           "id": "whi",
@@ -2902,18 +2760,18 @@
           "publications": 4
         },
         {
-          "id": "bbj",
-          "name": "Biobank Japan",
-          "publications": 3
-        },
-        {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
-          "publications": 3
-        },
-        {
           "id": "estbb",
           "name": "Estonian Biobank",
+          "publications": 3
+        },
+        {
+          "id": "biovu",
+          "name": "BioVU Vanderbilt",
+          "publications": 3
+        },
+        {
+          "id": "bbj",
+          "name": "Biobank Japan",
           "publications": 3
         }
       ]
@@ -2930,9 +2788,9 @@
         "burdenScore": 66.26
       },
       "research": {
-        "globalPublications": 73,
-        "biobanksEngaged": 23,
-        "researchIntensity": 17.266
+        "globalPublications": 75,
+        "biobanksEngaged": 24,
+        "researchIntensity": 17.739
       },
       "gap": {
         "score": 40.0,
@@ -3013,9 +2871,9 @@
         "burdenScore": 59.47
       },
       "research": {
-        "globalPublications": 17,
+        "globalPublications": 19,
         "biobanksEngaged": 8,
-        "researchIntensity": 19.186
+        "researchIntensity": 21.443
       },
       "gap": {
         "score": 40.0,
@@ -3029,23 +2887,23 @@
           "publications": 4
         },
         {
-          "id": "45andup",
-          "name": "45 and Up Study",
-          "publications": 3
-        },
-        {
           "id": "ukb",
           "name": "UK Biobank",
           "publications": 3
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 2
+          "id": "45andup",
+          "name": "45 and Up Study",
+          "publications": 3
         },
         {
-          "id": "ukbdc",
-          "name": "UK Blood Donor Cohorts",
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 3
+        },
+        {
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
           "publications": 2
         }
       ]
@@ -3062,9 +2920,9 @@
         "burdenScore": 68.9
       },
       "research": {
-        "globalPublications": 120,
-        "biobanksEngaged": 21,
-        "researchIntensity": 15.452
+        "globalPublications": 125,
+        "biobanksEngaged": 19,
+        "researchIntensity": 16.096
       },
       "gap": {
         "score": 40.0,
@@ -3075,17 +2933,17 @@
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 25
+          "publications": 27
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 17
+          "publications": 18
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 14
+          "publications": 15
         },
         {
           "id": "cpsii",
@@ -3095,7 +2953,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 10
+          "publications": 11
         }
       ]
     },
@@ -3111,9 +2969,9 @@
         "burdenScore": 82.75
       },
       "research": {
-        "globalPublications": 2090,
-        "biobanksEngaged": 80,
-        "researchIntensity": 11.096
+        "globalPublications": 2197,
+        "biobanksEngaged": 52,
+        "researchIntensity": 11.664
       },
       "gap": {
         "score": 40.0,
@@ -3124,27 +2982,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 829
+          "publications": 890
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 295
+          "publications": 310
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 151
+          "publications": 180
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 147
+          "publications": 153
         },
         {
           "id": "hunt",
           "name": "HUNT Study",
-          "publications": 69
+          "publications": 71
         }
       ]
     },
@@ -3160,9 +3018,9 @@
         "burdenScore": 82.05
       },
       "research": {
-        "globalPublications": 1869,
-        "biobanksEngaged": 71,
-        "researchIntensity": 11.648
+        "globalPublications": 1934,
+        "biobanksEngaged": 49,
+        "researchIntensity": 12.053
       },
       "gap": {
         "score": 40.0,
@@ -3173,27 +3031,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 1103
+          "publications": 1142
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 221
+          "publications": 225
         },
         {
           "id": "ckb",
           "name": "China Kadoorie Biobank",
-          "publications": 74
+          "publications": 83
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 69
+          "publications": 73
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 58
+          "publications": 70
         }
       ]
     },
@@ -3209,9 +3067,9 @@
         "burdenScore": 71.28
       },
       "research": {
-        "globalPublications": 151,
-        "biobanksEngaged": 23,
-        "researchIntensity": 11.247
+        "globalPublications": 153,
+        "biobanksEngaged": 21,
+        "researchIntensity": 11.395
       },
       "gap": {
         "score": 40.0,
@@ -3222,7 +3080,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 94
+          "publications": 96
         },
         {
           "id": "dnbc",
@@ -3240,8 +3098,8 @@
           "publications": 5
         },
         {
-          "id": "iganga_mayuge",
-          "name": "Iganga Mayuge HDSS",
+          "id": "biovu",
+          "name": "BioVU Vanderbilt",
           "publications": 4
         }
       ]
@@ -3258,9 +3116,9 @@
         "burdenScore": 73.31
       },
       "research": {
-        "globalPublications": 364,
-        "biobanksEngaged": 37,
-        "researchIntensity": 16.991
+        "globalPublications": 381,
+        "biobanksEngaged": 31,
+        "researchIntensity": 17.785
       },
       "gap": {
         "score": 40.0,
@@ -3271,7 +3129,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 159
+          "publications": 167
         },
         {
           "id": "dnbc",
@@ -3279,18 +3137,18 @@
           "publications": 30
         },
         {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 29
+        },
+        {
           "id": "hunt",
           "name": "HUNT Study",
           "publications": 27
         },
         {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 22
-        },
-        {
-          "id": "echo",
-          "name": "ECHO Cohort",
+          "id": "moba",
+          "name": "Norwegian Mother and Child Cohort Study",
           "publications": 20
         }
       ]
@@ -3307,9 +3165,9 @@
         "burdenScore": 76.67
       },
       "research": {
-        "globalPublications": 586,
-        "biobanksEngaged": 49,
-        "researchIntensity": 12.624
+        "globalPublications": 607,
+        "biobanksEngaged": 38,
+        "researchIntensity": 13.077
       },
       "gap": {
         "score": 40.0,
@@ -3320,7 +3178,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 390
+          "publications": 402
         },
         {
           "id": "koges",
@@ -3330,17 +3188,66 @@
         {
           "id": "ckb",
           "name": "China Kadoorie Biobank",
-          "publications": 15
+          "publications": 16
+        },
+        {
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 13
+        },
+        {
+          "id": "mvp",
+          "name": "Million Veteran Program",
+          "publications": 13
+        }
+      ]
+    },
+    {
+      "id": "Upper digestive system diseases",
+      "name": "Upper digestive system diseases",
+      "category": "Digestive",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 15.21,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 71.82
+      },
+      "research": {
+        "globalPublications": 155,
+        "biobanksEngaged": 25,
+        "researchIntensity": 10.193
+      },
+      "gap": {
+        "score": 40.0,
+        "severity": "Moderate",
+        "color": "#ffc107"
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 48
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 17
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 12
+          "publications": 13
         },
         {
           "id": "twb",
           "name": "Taiwan Biobank",
-          "publications": 11
+          "publications": 12
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 10
         }
       ]
     },
@@ -3356,9 +3263,9 @@
         "burdenScore": 68.88
       },
       "research": {
-        "globalPublications": 146,
-        "biobanksEngaged": 34,
-        "researchIntensity": 18.877
+        "globalPublications": 157,
+        "biobanksEngaged": 29,
+        "researchIntensity": 20.3
       },
       "gap": {
         "score": 40.0,
@@ -3369,17 +3276,17 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 57
+          "publications": 62
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 16
+          "publications": 21
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 9
+          "publications": 10
         },
         {
           "id": "epic",
@@ -3387,9 +3294,58 @@
           "publications": 8
         },
         {
-          "id": "twb",
-          "name": "Taiwan Biobank",
-          "publications": 5
+          "id": "bbj",
+          "name": "Biobank Japan",
+          "publications": 6
+        }
+      ]
+    },
+    {
+      "id": "Pancreatitis",
+      "name": "Pancreatitis",
+      "category": "Digestive",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 4.1,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 66.13
+      },
+      "research": {
+        "globalPublications": 43,
+        "biobanksEngaged": 9,
+        "researchIntensity": 10.485
+      },
+      "gap": {
+        "score": 40.0,
+        "severity": "Moderate",
+        "color": "#ffc107"
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 29
+        },
+        {
+          "id": "simpler",
+          "name": "SIMPLER",
+          "publications": 6
+        },
+        {
+          "id": "biovu",
+          "name": "BioVU Vanderbilt",
+          "publications": 2
+        },
+        {
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 1
+        },
+        {
+          "id": "usnih",
+          "name": "US NIH Biobank",
+          "publications": 1
         }
       ]
     },
@@ -3431,13 +3387,13 @@
           "publications": 3
         },
         {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
+          "id": "gel",
+          "name": "Genomics England / 100,000 Genomes Project",
           "publications": 1
         },
         {
-          "id": "gel",
-          "name": "Genomics England / 100,000 Genomes Project",
+          "id": "nhs",
+          "name": "Nurses' Health Study",
           "publications": 1
         }
       ]
@@ -3454,9 +3410,9 @@
         "burdenScore": 77.51
       },
       "research": {
-        "globalPublications": 1293,
-        "biobanksEngaged": 58,
-        "researchIntensity": 22.954
+        "globalPublications": 1345,
+        "biobanksEngaged": 47,
+        "researchIntensity": 23.877
       },
       "gap": {
         "score": 40.0,
@@ -3467,7 +3423,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 563
+          "publications": 582
         },
         {
           "id": "hunt",
@@ -3477,17 +3433,17 @@
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 109
+          "publications": 110
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 89
         },
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
           "publications": 67
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 62
         }
       ]
     },
@@ -3503,9 +3459,9 @@
         "burdenScore": 76.28
       },
       "research": {
-        "globalPublications": 475,
-        "biobanksEngaged": 34,
-        "researchIntensity": 11.174
+        "globalPublications": 493,
+        "biobanksEngaged": 31,
+        "researchIntensity": 11.597
       },
       "gap": {
         "score": 40.0,
@@ -3516,7 +3472,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 162
+          "publications": 168
         },
         {
           "id": "hunt",
@@ -3529,14 +3485,14 @@
           "publications": 47
         },
         {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 28
+        },
+        {
           "id": "whi",
           "name": "Women's Health Initiative",
           "publications": 20
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 18
         }
       ]
     },
@@ -3552,9 +3508,9 @@
         "burdenScore": 69.04
       },
       "research": {
-        "globalPublications": 121,
-        "biobanksEngaged": 18,
-        "researchIntensity": 15.11
+        "globalPublications": 129,
+        "biobanksEngaged": 15,
+        "researchIntensity": 16.109
       },
       "gap": {
         "score": 40.0,
@@ -3565,22 +3521,22 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 95
+          "publications": 103
         },
         {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 4
+          "publications": 5
         },
         {
           "id": "mvp",
           "name": "Million Veteran Program",
-          "publications": 3
+          "publications": 4
         },
         {
-          "id": "23andme; ukb",
-          "name": "23andMe; UK Biobank",
-          "publications": 2
+          "id": "23andme",
+          "name": "23andMe",
+          "publications": 3
         },
         {
           "id": "aou",
@@ -3601,9 +3557,9 @@
         "burdenScore": 71.71
       },
       "research": {
-        "globalPublications": 211,
-        "biobanksEngaged": 27,
-        "researchIntensity": 14.241
+        "globalPublications": 224,
+        "biobanksEngaged": 19,
+        "researchIntensity": 15.118
       },
       "gap": {
         "score": 40.0,
@@ -3614,27 +3570,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 144
+          "publications": 156
         },
         {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 17
+          "publications": 18
+        },
+        {
+          "id": "mvp",
+          "name": "Million Veteran Program",
+          "publications": 6
+        },
+        {
+          "id": "twb",
+          "name": "Taiwan Biobank",
+          "publications": 6
         },
         {
           "id": "dnbc",
           "name": "Danish National Birth Cohort",
           "publications": 6
-        },
-        {
-          "id": "moba",
-          "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 5
-        },
-        {
-          "id": "twb",
-          "name": "Taiwan Biobank",
-          "publications": 5
         }
       ]
     },
@@ -3650,9 +3606,9 @@
         "burdenScore": 70.62
       },
       "research": {
-        "globalPublications": 134,
-        "biobanksEngaged": 23,
-        "researchIntensity": 11.608
+        "globalPublications": 143,
+        "biobanksEngaged": 21,
+        "researchIntensity": 12.387
       },
       "gap": {
         "score": 40.0,
@@ -3663,12 +3619,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 36
+          "publications": 37
         },
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 24
+          "publications": 25
         },
         {
           "id": "echo",
@@ -3681,8 +3637,8 @@
           "publications": 13
         },
         {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
+          "id": "nhs",
+          "name": "Nurses' Health Study",
           "publications": 7
         }
       ]
@@ -3699,9 +3655,9 @@
         "burdenScore": 65.81
       },
       "research": {
-        "globalPublications": 58,
-        "biobanksEngaged": 11,
-        "researchIntensity": 15.221
+        "globalPublications": 62,
+        "biobanksEngaged": 12,
+        "researchIntensity": 16.27
       },
       "gap": {
         "score": 40.0,
@@ -3712,17 +3668,17 @@
         {
           "id": "gel",
           "name": "Genomics England / 100,000 Genomes Project",
-          "publications": 31
-        },
-        {
-          "id": "estbb",
-          "name": "Estonian Biobank",
-          "publications": 6
+          "publications": 32
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 6
+          "publications": 7
+        },
+        {
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 7
         },
         {
           "id": "dnbc",
@@ -3748,9 +3704,9 @@
         "burdenScore": 76.48
       },
       "research": {
-        "globalPublications": 686,
-        "biobanksEngaged": 56,
-        "researchIntensity": 15.432
+        "globalPublications": 712,
+        "biobanksEngaged": 42,
+        "researchIntensity": 16.017
       },
       "gap": {
         "score": 40.0,
@@ -3761,7 +3717,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 356
+          "publications": 371
         },
         {
           "id": "koges",
@@ -3771,7 +3727,7 @@
         {
           "id": "gel",
           "name": "Genomics England / 100,000 Genomes Project",
-          "publications": 28
+          "publications": 32
         },
         {
           "id": "twb",
@@ -3779,9 +3735,9 @@
           "publications": 28
         },
         {
-          "id": "hunt",
-          "name": "HUNT Study",
-          "publications": 25
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 26
         }
       ]
     },
@@ -3797,9 +3753,9 @@
         "burdenScore": 69.13
       },
       "research": {
-        "globalPublications": 94,
-        "biobanksEngaged": 18,
-        "researchIntensity": 11.496
+        "globalPublications": 104,
+        "biobanksEngaged": 15,
+        "researchIntensity": 12.718
       },
       "gap": {
         "score": 40.0,
@@ -3810,7 +3766,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 27
+          "publications": 33
         },
         {
           "id": "aou",
@@ -3830,7 +3786,7 @@
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 5
+          "publications": 8
         }
       ]
     },
@@ -3846,9 +3802,9 @@
         "burdenScore": 74.65
       },
       "research": {
-        "globalPublications": 588,
-        "biobanksEngaged": 46,
-        "researchIntensity": 20.162
+        "globalPublications": 611,
+        "biobanksEngaged": 37,
+        "researchIntensity": 20.95
       },
       "gap": {
         "score": 40.0,
@@ -3859,12 +3815,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 327
+          "publications": 345
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 49
+          "publications": 54
         },
         {
           "id": "whi",
@@ -3895,9 +3851,9 @@
         "burdenScore": 65.7
       },
       "research": {
-        "globalPublications": 58,
-        "biobanksEngaged": 17,
-        "researchIntensity": 15.619
+        "globalPublications": 59,
+        "biobanksEngaged": 16,
+        "researchIntensity": 15.889
       },
       "gap": {
         "score": 40.0,
@@ -3908,17 +3864,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 31
+          "publications": 32
         },
         {
           "id": "gel",
           "name": "Genomics England / 100,000 Genomes Project",
           "publications": 4
-        },
-        {
-          "id": "bbj",
-          "name": "Biobank Japan",
-          "publications": 3
         },
         {
           "id": "estbb",
@@ -3928,7 +3879,12 @@
         {
           "id": "biovu",
           "name": "BioVU Vanderbilt",
-          "publications": 2
+          "publications": 3
+        },
+        {
+          "id": "bbj",
+          "name": "Biobank Japan",
+          "publications": 3
         }
       ]
     },
@@ -3944,9 +3900,9 @@
         "burdenScore": 73.28
       },
       "research": {
-        "globalPublications": 229,
-        "biobanksEngaged": 28,
-        "researchIntensity": 10.749
+        "globalPublications": 231,
+        "biobanksEngaged": 26,
+        "researchIntensity": 10.843
       },
       "gap": {
         "score": 40.0,
@@ -3957,7 +3913,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 140
+          "publications": 141
         },
         {
           "id": "whi",
@@ -3972,11 +3928,11 @@
         {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 6
+          "publications": 7
         },
         {
-          "id": "45andup",
-          "name": "45 and Up Study",
+          "id": "gel",
+          "name": "Genomics England / 100,000 Genomes Project",
           "publications": 5
         }
       ]
@@ -3993,9 +3949,9 @@
         "burdenScore": 76.55
       },
       "research": {
-        "globalPublications": 786,
-        "biobanksEngaged": 48,
-        "researchIntensity": 17.398
+        "globalPublications": 817,
+        "biobanksEngaged": 40,
+        "researchIntensity": 18.084
       },
       "gap": {
         "score": 40.0,
@@ -4006,12 +3962,12 @@
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 291
+          "publications": 301
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 223
+          "publications": 231
         },
         {
           "id": "hunt",
@@ -4019,14 +3975,14 @@
           "publications": 45
         },
         {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 37
+        },
+        {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
           "publications": 26
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 22
         }
       ]
     },
@@ -4073,8 +4029,8 @@
           "publications": 4
         },
         {
-          "id": "nako",
-          "name": "German National Cohort (NAKO)",
+          "id": "moba",
+          "name": "Norwegian Mother and Child Cohort Study",
           "publications": 3
         }
       ]
@@ -4091,9 +4047,9 @@
         "burdenScore": 64.6
       },
       "research": {
-        "globalPublications": 53,
-        "biobanksEngaged": 21,
-        "researchIntensity": 18.397
+        "globalPublications": 57,
+        "biobanksEngaged": 20,
+        "researchIntensity": 19.785
       },
       "gap": {
         "score": 40.0,
@@ -4104,7 +4060,7 @@
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 8
+          "publications": 10
         },
         {
           "id": "ukb",
@@ -4114,7 +4070,7 @@
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 6
+          "publications": 7
         },
         {
           "id": "twb",
@@ -4124,7 +4080,7 @@
         {
           "id": "nshds",
           "name": "Northern Sweden Health and Disease Study",
-          "publications": 4
+          "publications": 5
         }
       ]
     },
@@ -4140,9 +4096,9 @@
         "burdenScore": 66.85
       },
       "research": {
-        "globalPublications": 79,
-        "biobanksEngaged": 21,
-        "researchIntensity": 16.299
+        "globalPublications": 81,
+        "biobanksEngaged": 20,
+        "researchIntensity": 16.711
       },
       "gap": {
         "score": 40.0,
@@ -4153,16 +4109,16 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 32
-        },
-        {
-          "id": "45andup",
-          "name": "45 and Up Study",
-          "publications": 5
+          "publications": 34
         },
         {
           "id": "estbb",
           "name": "Estonian Biobank",
+          "publications": 5
+        },
+        {
+          "id": "biovu",
+          "name": "BioVU Vanderbilt",
           "publications": 5
         },
         {
@@ -4171,9 +4127,9 @@
           "publications": 5
         },
         {
-          "id": "aou",
-          "name": "All of Us Research Program",
-          "publications": 4
+          "id": "45andup",
+          "name": "45 and Up Study",
+          "publications": 5
         }
       ]
     },
@@ -4189,9 +4145,9 @@
         "burdenScore": 69.43
       },
       "research": {
-        "globalPublications": 136,
-        "biobanksEngaged": 22,
-        "researchIntensity": 15.501
+        "globalPublications": 184,
+        "biobanksEngaged": 19,
+        "researchIntensity": 20.971
       },
       "gap": {
         "score": 40.0,
@@ -4200,29 +4156,78 @@
       },
       "topBiobanks": [
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 40
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 42
         },
         {
-          "id": "mvp",
-          "name": "Million Veteran Program",
-          "publications": 27
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
+          "publications": 40
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 26
+          "publications": 34
         },
         {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 7
+          "id": "mvp",
+          "name": "Million Veteran Program",
+          "publications": 32
         },
         {
           "id": "aou",
           "name": "All of Us Research Program",
-          "publications": 6
+          "publications": 7
+        }
+      ]
+    },
+    {
+      "id": "Police conflict and executions",
+      "name": "Police conflict and executions",
+      "category": "Other NCD",
+      "globalSouthPriority": true,
+      "burden": {
+        "dalysMillions": 1.01,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 60.05
+      },
+      "research": {
+        "globalPublications": 29,
+        "biobanksEngaged": 9,
+        "researchIntensity": 28.659
+      },
+      "gap": {
+        "score": 40.0,
+        "severity": "Moderate",
+        "color": "#ffc107"
+      },
+      "topBiobanks": [
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 10
+        },
+        {
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
+          "publications": 8
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 3
+        },
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 2
+        },
+        {
+          "id": "moba",
+          "name": "Norwegian Mother and Child Cohort Study",
+          "publications": 2
         }
       ]
     },
@@ -4269,8 +4274,8 @@
           "publications": 2
         },
         {
-          "id": "constances",
-          "name": "CONSTANCES",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 1
         }
       ]
@@ -4287,9 +4292,9 @@
         "burdenScore": 76.68
       },
       "research": {
-        "globalPublications": 2093,
-        "biobanksEngaged": 94,
-        "researchIntensity": 44.976
+        "globalPublications": 2188,
+        "biobanksEngaged": 53,
+        "researchIntensity": 47.017
       },
       "gap": {
         "score": 30.0,
@@ -4300,27 +4305,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 569
+          "publications": 604
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 311
+          "publications": 331
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 279
+          "publications": 289
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 154
+          "publications": 159
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 94
+          "publications": 114
         }
       ]
     },
@@ -4336,9 +4341,9 @@
         "burdenScore": 69.22
       },
       "research": {
-        "globalPublications": 340,
-        "biobanksEngaged": 35,
-        "researchIntensity": 40.675
+        "globalPublications": 351,
+        "biobanksEngaged": 28,
+        "researchIntensity": 41.991
       },
       "gap": {
         "score": 30.0,
@@ -4349,7 +4354,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 218
+          "publications": 227
         },
         {
           "id": "whi",
@@ -4359,7 +4364,7 @@
         {
           "id": "hunt",
           "name": "HUNT Study",
-          "publications": 14
+          "publications": 17
         },
         {
           "id": "epic",
@@ -4369,7 +4374,7 @@
         {
           "id": "aou",
           "name": "All of Us Research Program",
-          "publications": 8
+          "publications": 9
         }
       ]
     },
@@ -4385,9 +4390,9 @@
         "burdenScore": 64.92
       },
       "research": {
-        "globalPublications": 98,
-        "biobanksEngaged": 13,
-        "researchIntensity": 31.534
+        "globalPublications": 103,
+        "biobanksEngaged": 11,
+        "researchIntensity": 33.143
       },
       "gap": {
         "score": 30.0,
@@ -4398,7 +4403,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 50
+          "publications": 54
         },
         {
           "id": "lifepath",
@@ -4408,7 +4413,7 @@
         {
           "id": "mvp",
           "name": "Million Veteran Program",
-          "publications": 8
+          "publications": 11
         },
         {
           "id": "simpler",
@@ -4434,9 +4439,9 @@
         "burdenScore": 78.97
       },
       "research": {
-        "globalPublications": 3255,
-        "biobanksEngaged": 98,
-        "researchIntensity": 41.235
+        "globalPublications": 3484,
+        "biobanksEngaged": 61,
+        "researchIntensity": 44.136
       },
       "gap": {
         "score": 30.0,
@@ -4447,27 +4452,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 1222
+          "publications": 1279
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 286
+          "publications": 420
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 256
+          "publications": 266
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 224
+          "publications": 230
         },
         {
           "id": "koges",
           "name": "Korean Genome and Epidemiology Study",
-          "publications": 153
+          "publications": 154
         }
       ]
     },
@@ -4483,9 +4488,9 @@
         "burdenScore": 65.67
       },
       "research": {
-        "globalPublications": 144,
-        "biobanksEngaged": 18,
-        "researchIntensity": 39.025
+        "globalPublications": 166,
+        "biobanksEngaged": 14,
+        "researchIntensity": 44.987
       },
       "gap": {
         "score": 30.0,
@@ -4496,17 +4501,17 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 61
-        },
-        {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 16
+          "publications": 64
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 13
+          "publications": 29
+        },
+        {
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
+          "publications": 16
         },
         {
           "id": "aou",
@@ -4514,9 +4519,9 @@
           "publications": 12
         },
         {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
-          "publications": 7
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 8
         }
       ]
     },
@@ -4532,9 +4537,9 @@
         "burdenScore": 63.56
       },
       "research": {
-        "globalPublications": 104,
+        "globalPublications": 109,
         "biobanksEngaged": 27,
-        "researchIntensity": 45.827
+        "researchIntensity": 48.03
       },
       "gap": {
         "score": 30.0,
@@ -4545,7 +4550,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 40
+          "publications": 42
         },
         {
           "id": "gel",
@@ -4581,9 +4586,9 @@
         "burdenScore": 65.48
       },
       "research": {
-        "globalPublications": 93,
-        "biobanksEngaged": 20,
-        "researchIntensity": 26.341
+        "globalPublications": 95,
+        "biobanksEngaged": 19,
+        "researchIntensity": 26.908
       },
       "gap": {
         "score": 30.0,
@@ -4594,7 +4599,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 37
+          "publications": 39
         },
         {
           "id": "aou",
@@ -4607,14 +4612,14 @@
           "publications": 5
         },
         {
-          "id": "gel",
-          "name": "Genomics England / 100,000 Genomes Project",
+          "id": "biovu",
+          "name": "BioVU Vanderbilt",
           "publications": 5
         },
         {
-          "id": "bbj",
-          "name": "Biobank Japan",
-          "publications": 4
+          "id": "gel",
+          "name": "Genomics England / 100,000 Genomes Project",
+          "publications": 5
         }
       ]
     },
@@ -4646,13 +4651,13 @@
           "publications": 7
         },
         {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
           "publications": 2
         },
         {
-          "id": "plco",
-          "name": "PLCO Cancer Screening Trial",
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
           "publications": 2
         },
         {
@@ -4705,13 +4710,13 @@
           "publications": 3
         },
         {
-          "id": "plco",
-          "name": "PLCO Cancer Screening Trial",
+          "id": "ukb",
+          "name": "UK Biobank",
           "publications": 1
         },
         {
-          "id": "ukb",
-          "name": "UK Biobank",
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
           "publications": 1
         }
       ]
@@ -4751,104 +4756,6 @@
       ]
     },
     {
-      "id": "Other unspecified infectious diseases",
-      "name": "Other unspecified infectious diseases",
-      "category": "Other NCD",
-      "globalSouthPriority": false,
-      "burden": {
-        "dalysMillions": 5.85,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 67.67
-      },
-      "research": {
-        "globalPublications": 582,
-        "biobanksEngaged": 62,
-        "researchIntensity": 99.454
-      },
-      "gap": {
-        "score": 20.0,
-        "severity": "Low",
-        "color": "#28a745"
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 204
-        },
-        {
-          "id": "aou",
-          "name": "All of Us Research Program",
-          "publications": 36
-        },
-        {
-          "id": "moba",
-          "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 33
-        },
-        {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 19
-        },
-        {
-          "id": "ahri",
-          "name": "Africa Health Research Institute Population Cohort",
-          "publications": 17
-        }
-      ]
-    },
-    {
-      "id": "Colon and rectum cancer",
-      "name": "Colon and rectum cancer",
-      "category": "Cancer",
-      "globalSouthPriority": false,
-      "burden": {
-        "dalysMillions": 24.4,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 73.87
-      },
-      "research": {
-        "globalPublications": 2431,
-        "biobanksEngaged": 80,
-        "researchIntensity": 99.627
-      },
-      "gap": {
-        "score": 20.0,
-        "severity": "Low",
-        "color": "#28a745"
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 530
-        },
-        {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 371
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 280
-        },
-        {
-          "id": "plco",
-          "name": "PLCO Cancer Screening Trial",
-          "publications": 256
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 248
-        }
-      ]
-    },
-    {
       "id": "Stomach cancer",
       "name": "Stomach cancer",
       "category": "Cancer",
@@ -4860,9 +4767,9 @@
         "burdenScore": 73.58
       },
       "research": {
-        "globalPublications": 1435,
-        "biobanksEngaged": 70,
-        "researchIntensity": 62.976
+        "globalPublications": 1491,
+        "biobanksEngaged": 48,
+        "researchIntensity": 65.433
       },
       "gap": {
         "score": 20.0,
@@ -4873,27 +4780,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 398
+          "publications": 420
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 284
+          "publications": 290
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 115
-        },
-        {
-          "id": "jphc",
-          "name": "JPHC Study",
-          "publications": 67
+          "publications": 119
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 65
+          "publications": 80
+        },
+        {
+          "id": "jphc",
+          "name": "JPHC Study",
+          "publications": 68
         }
       ]
     },
@@ -4909,9 +4816,9 @@
         "burdenScore": 62.25
       },
       "research": {
-        "globalPublications": 121,
-        "biobanksEngaged": 19,
-        "researchIntensity": 72.074
+        "globalPublications": 131,
+        "biobanksEngaged": 18,
+        "researchIntensity": 78.03
       },
       "gap": {
         "score": 20.0,
@@ -4922,21 +4829,21 @@
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 49
+          "publications": 57
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 21
+          "publications": 23
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 17
+          "publications": 18
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
           "publications": 7
         },
         {
@@ -4958,9 +4865,9 @@
         "burdenScore": 60.78
       },
       "research": {
-        "globalPublications": 84,
-        "biobanksEngaged": 21,
-        "researchIntensity": 70.223
+        "globalPublications": 86,
+        "biobanksEngaged": 19,
+        "researchIntensity": 71.895
       },
       "gap": {
         "score": 20.0,
@@ -4971,12 +4878,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 31
+          "publications": 33
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 16
+          "publications": 17
         },
         {
           "id": "jphc",
@@ -4984,13 +4891,13 @@
           "publications": 5
         },
         {
-          "id": "bbj",
-          "name": "Biobank Japan",
+          "id": "estbb",
+          "name": "Estonian Biobank",
           "publications": 3
         },
         {
-          "id": "estbb",
-          "name": "Estonian Biobank",
+          "id": "biovu",
+          "name": "BioVU Vanderbilt",
           "publications": 3
         }
       ]
@@ -5007,9 +4914,9 @@
         "burdenScore": 74.06
       },
       "research": {
-        "globalPublications": 1492,
-        "biobanksEngaged": 83,
-        "researchIntensity": 58.597
+        "globalPublications": 1600,
+        "biobanksEngaged": 55,
+        "researchIntensity": 62.838
       },
       "gap": {
         "score": 20.0,
@@ -5020,27 +4927,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 478
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 121
-        },
-        {
-          "id": "hunt",
-          "name": "HUNT Study",
-          "publications": 90
+          "publications": 507
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 76
+          "publications": 139
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 123
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 92
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 75
+          "publications": 78
         }
       ]
     },
@@ -5056,9 +4963,9 @@
         "burdenScore": 63.17
       },
       "research": {
-        "globalPublications": 174,
-        "biobanksEngaged": 30,
-        "researchIntensity": 83.798
+        "globalPublications": 179,
+        "biobanksEngaged": 29,
+        "researchIntensity": 86.206
       },
       "gap": {
         "score": 20.0,
@@ -5069,7 +4976,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 113
+          "publications": 115
         },
         {
           "id": "gel",
@@ -5079,7 +4986,7 @@
         {
           "id": "bbj",
           "name": "Biobank Japan",
-          "publications": 5
+          "publications": 6
         },
         {
           "id": "estbb",
@@ -5087,8 +4994,8 @@
           "publications": 5
         },
         {
-          "id": "ukbdc",
-          "name": "UK Blood Donor Cohorts",
+          "id": "whi",
+          "name": "Women's Health Initiative",
           "publications": 5
         }
       ]
@@ -5105,9 +5012,9 @@
         "burdenScore": 65.1
       },
       "research": {
-        "globalPublications": 191,
-        "biobanksEngaged": 30,
-        "researchIntensity": 58.984
+        "globalPublications": 198,
+        "biobanksEngaged": 23,
+        "researchIntensity": 61.145
       },
       "gap": {
         "score": 20.0,
@@ -5118,27 +5025,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 131
+          "publications": 137
         },
         {
           "id": "hunt",
           "name": "HUNT Study",
+          "publications": 6
+        },
+        {
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 5
+        },
+        {
+          "id": "biovu",
+          "name": "BioVU Vanderbilt",
           "publications": 5
         },
         {
           "id": "ukbdc",
           "name": "UK Blood Donor Cohorts",
           "publications": 5
-        },
-        {
-          "id": "echo",
-          "name": "ECHO Cohort",
-          "publications": 4
-        },
-        {
-          "id": "estbb",
-          "name": "Estonian Biobank",
-          "publications": 4
         }
       ]
     },
@@ -5154,9 +5061,9 @@
         "burdenScore": 66.07
       },
       "research": {
-        "globalPublications": 316,
-        "biobanksEngaged": 42,
-        "researchIntensity": 78.176
+        "globalPublications": 329,
+        "biobanksEngaged": 35,
+        "researchIntensity": 81.392
       },
       "gap": {
         "score": 20.0,
@@ -5167,12 +5074,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 154
+          "publications": 163
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 44
+          "publications": 47
         },
         {
           "id": "hunt",
@@ -5185,9 +5092,9 @@
           "publications": 9
         },
         {
-          "id": "bbj",
-          "name": "Biobank Japan",
-          "publications": 7
+          "id": "ckb",
+          "name": "China Kadoorie Biobank",
+          "publications": 9
         }
       ]
     },
@@ -5203,9 +5110,9 @@
         "burdenScore": 64.77
       },
       "research": {
-        "globalPublications": 235,
-        "biobanksEngaged": 31,
-        "researchIntensity": 78.286
+        "globalPublications": 246,
+        "biobanksEngaged": 27,
+        "researchIntensity": 81.95
       },
       "gap": {
         "score": 20.0,
@@ -5216,11 +5123,16 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 118
+          "publications": 123
         },
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
+          "publications": 14
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
           "publications": 14
         },
         {
@@ -5229,14 +5141,9 @@
           "publications": 13
         },
         {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 11
-        },
-        {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 9
+          "publications": 12
         }
       ]
     },
@@ -5252,9 +5159,9 @@
         "burdenScore": 65.32
       },
       "research": {
-        "globalPublications": 264,
-        "biobanksEngaged": 37,
-        "researchIntensity": 77.575
+        "globalPublications": 283,
+        "biobanksEngaged": 35,
+        "researchIntensity": 83.158
       },
       "gap": {
         "score": 20.0,
@@ -5263,13 +5170,13 @@
       },
       "topBiobanks": [
         {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 39
-        },
-        {
           "id": "ukb",
           "name": "UK Biobank",
+          "publications": 40
+        },
+        {
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
           "publications": 39
         },
         {
@@ -5280,11 +5187,11 @@
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 18
+          "publications": 35
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
           "publications": 17
         }
       ]
@@ -5301,9 +5208,9 @@
         "burdenScore": 72.3
       },
       "research": {
-        "globalPublications": 974,
-        "biobanksEngaged": 56,
-        "researchIntensity": 57.358
+        "globalPublications": 1041,
+        "biobanksEngaged": 43,
+        "researchIntensity": 61.304
       },
       "gap": {
         "score": 20.0,
@@ -5314,22 +5221,22 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 212
-        },
-        {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 113
+          "publications": 227
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 102
+          "publications": 145
+        },
+        {
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "publications": 116
         },
         {
           "id": "hunt",
           "name": "HUNT Study",
-          "publications": 61
+          "publications": 62
         },
         {
           "id": "whi",
@@ -5350,9 +5257,9 @@
         "burdenScore": 54.95
       },
       "research": {
-        "globalPublications": 19,
+        "globalPublications": 20,
         "biobanksEngaged": 9,
-        "researchIntensity": 60.838
+        "researchIntensity": 64.04
       },
       "gap": {
         "score": 20.0,
@@ -5363,7 +5270,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 6
+          "publications": 7
         },
         {
           "id": "gel",
@@ -5381,8 +5288,8 @@
           "publications": 1
         },
         {
-          "id": "bbj; ukb",
-          "name": "Biobank Japan; UK Biobank",
+          "id": "bbj",
+          "name": "Biobank Japan",
           "publications": 1
         }
       ]
@@ -5399,9 +5306,9 @@
         "burdenScore": 57.57
       },
       "research": {
-        "globalPublications": 31,
-        "biobanksEngaged": 9,
-        "researchIntensity": 54.209
+        "globalPublications": 35,
+        "biobanksEngaged": 8,
+        "researchIntensity": 61.204
       },
       "gap": {
         "score": 20.0,
@@ -5412,26 +5319,26 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 15
+          "publications": 18
         },
         {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 3
-        },
-        {
-          "id": "estbb; ukb",
-          "name": "Estonian Biobank; UK Biobank",
-          "publications": 3
+          "publications": 6
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 3
+          "publications": 4
         },
         {
           "id": "aou",
           "name": "All of Us Research Program",
+          "publications": 2
+        },
+        {
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
           "publications": 2
         }
       ]
@@ -5448,9 +5355,9 @@
         "burdenScore": 74.29
       },
       "research": {
-        "globalPublications": 1399,
-        "biobanksEngaged": 72,
-        "researchIntensity": 52.144
+        "globalPublications": 1533,
+        "biobanksEngaged": 55,
+        "researchIntensity": 57.138
       },
       "gap": {
         "score": 20.0,
@@ -5461,17 +5368,17 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 248
+          "publications": 263
         },
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 233
+          "publications": 245
         },
         {
           "id": "dnbc",
           "name": "Danish National Birth Cohort",
-          "publications": 211
+          "publications": 217
         },
         {
           "id": "echo",
@@ -5479,9 +5386,9 @@
           "publications": 144
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 100
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 135
         }
       ]
     },
@@ -5497,9 +5404,9 @@
         "burdenScore": 50.23
       },
       "research": {
-        "globalPublications": 107,
-        "biobanksEngaged": 21,
-        "researchIntensity": 1015.357
+        "globalPublications": 110,
+        "biobanksEngaged": 20,
+        "researchIntensity": 1043.825
       },
       "gap": {
         "score": 10.0,
@@ -5510,16 +5417,16 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 60
+          "publications": 62
         },
         {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 6
+          "publications": 7
         },
         {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "id": "hunt",
+          "name": "HUNT Study",
           "publications": 4
         },
         {
@@ -5528,8 +5435,8 @@
           "publications": 4
         },
         {
-          "id": "hunt",
-          "name": "HUNT Study",
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
           "publications": 4
         }
       ]
@@ -5546,9 +5453,9 @@
         "burdenScore": 53.78
       },
       "research": {
-        "globalPublications": 50,
-        "biobanksEngaged": 17,
-        "researchIntensity": 209.565
+        "globalPublications": 51,
+        "biobanksEngaged": 16,
+        "researchIntensity": 213.756
       },
       "gap": {
         "score": 10.0,
@@ -5559,12 +5466,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 24
-        },
-        {
-          "id": "bbj",
-          "name": "Biobank Japan",
-          "publications": 3
+          "publications": 25
         },
         {
           "id": "estbb",
@@ -5574,11 +5476,16 @@
         {
           "id": "biovu",
           "name": "BioVU Vanderbilt",
-          "publications": 2
+          "publications": 3
         },
         {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
+          "id": "bbj",
+          "name": "Biobank Japan",
+          "publications": 3
+        },
+        {
+          "id": "gel",
+          "name": "Genomics England / 100,000 Genomes Project",
           "publications": 2
         }
       ]
@@ -5595,9 +5502,9 @@
         "burdenScore": 47.92
       },
       "research": {
-        "globalPublications": 560,
-        "biobanksEngaged": 49,
-        "researchIntensity": 9037.727
+        "globalPublications": 599,
+        "biobanksEngaged": 37,
+        "researchIntensity": 9667.14
       },
       "gap": {
         "score": 10.0,
@@ -5608,27 +5515,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 299
+          "publications": 318
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 42
+          "publications": 44
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 35
+        },
+        {
+          "id": "ckb",
+          "name": "China Kadoorie Biobank",
+          "publications": 21
         },
         {
           "id": "koges",
           "name": "Korean Genome and Epidemiology Study",
           "publications": 21
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 21
-        },
-        {
-          "id": "ckb",
-          "name": "China Kadoorie Biobank",
-          "publications": 20
         }
       ]
     },
@@ -5644,9 +5551,9 @@
         "burdenScore": 59.99
       },
       "research": {
-        "globalPublications": 162,
-        "biobanksEngaged": 29,
-        "researchIntensity": 162.32
+        "globalPublications": 166,
+        "biobanksEngaged": 26,
+        "researchIntensity": 166.328
       },
       "gap": {
         "score": 10.0,
@@ -5657,17 +5564,17 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 107
+          "publications": 110
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 6
+          "publications": 7
         },
         {
           "id": "mvp",
           "name": "Million Veteran Program",
-          "publications": 5
+          "publications": 6
         },
         {
           "id": "twb",
@@ -5677,7 +5584,56 @@
         {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 3
+          "publications": 4
+        }
+      ]
+    },
+    {
+      "id": "Other unspecified infectious diseases",
+      "name": "Other unspecified infectious diseases",
+      "category": "Other NCD",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 5.85,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 67.67
+      },
+      "research": {
+        "globalPublications": 605,
+        "biobanksEngaged": 53,
+        "researchIntensity": 103.384
+      },
+      "gap": {
+        "score": 10.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 211
+        },
+        {
+          "id": "aou",
+          "name": "All of Us Research Program",
+          "publications": 37
+        },
+        {
+          "id": "moba",
+          "name": "Norwegian Mother and Child Cohort Study",
+          "publications": 34
+        },
+        {
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "publications": 19
+        },
+        {
+          "id": "ahri",
+          "name": "Africa Health Research Institute Population Cohort",
+          "publications": 18
         }
       ]
     },
@@ -5693,9 +5649,9 @@
         "burdenScore": 70.9
       },
       "research": {
-        "globalPublications": 3235,
-        "biobanksEngaged": 92,
-        "researchIntensity": 262.709
+        "globalPublications": 3498,
+        "biobanksEngaged": 61,
+        "researchIntensity": 284.066
       },
       "gap": {
         "score": 10.0,
@@ -5706,27 +5662,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 596
+          "publications": 624
         },
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 503
+          "publications": 522
         },
         {
           "id": "dnbc",
           "name": "Danish National Birth Cohort",
-          "publications": 418
+          "publications": 437
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 338
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 206
-        },
-        {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 192
+          "publications": 210
         }
       ]
     },
@@ -5742,9 +5698,9 @@
         "burdenScore": 61.54
       },
       "research": {
-        "globalPublications": 662,
-        "biobanksEngaged": 42,
-        "researchIntensity": 464.199
+        "globalPublications": 693,
+        "biobanksEngaged": 35,
+        "researchIntensity": 485.936
       },
       "gap": {
         "score": 10.0,
@@ -5755,26 +5711,26 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 218
+          "publications": 220
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 115
+          "publications": 116
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 72
+          "publications": 98
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 49
+          "publications": 52
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
           "publications": 24
         }
       ]
@@ -5791,9 +5747,9 @@
         "burdenScore": 73.15
       },
       "research": {
-        "globalPublications": 3085,
-        "biobanksEngaged": 93,
-        "researchIntensity": 149.498
+        "globalPublications": 3350,
+        "biobanksEngaged": 52,
+        "researchIntensity": 162.34
       },
       "gap": {
         "score": 10.0,
@@ -5804,27 +5760,27 @@
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 651
+          "publications": 694
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 535
-        },
-        {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 387
+          "publications": 565
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 338
+          "publications": 511
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 156
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "publications": 401
+        },
+        {
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
+          "publications": 157
         }
       ]
     },
@@ -5840,9 +5796,9 @@
         "burdenScore": 69.96
       },
       "research": {
-        "globalPublications": 1350,
-        "biobanksEngaged": 71,
-        "researchIntensity": 136.203
+        "globalPublications": 1399,
+        "biobanksEngaged": 48,
+        "researchIntensity": 141.147
       },
       "gap": {
         "score": 10.0,
@@ -5853,27 +5809,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 395
+          "publications": 413
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 246
+          "publications": 251
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 121
+          "publications": 125
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 67
+          "publications": 82
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 49
+          "publications": 53
         }
       ]
     },
@@ -5889,9 +5845,9 @@
         "burdenScore": 64.09
       },
       "research": {
-        "globalPublications": 1544,
-        "biobanksEngaged": 75,
-        "researchIntensity": 602.432
+        "globalPublications": 1621,
+        "biobanksEngaged": 47,
+        "researchIntensity": 632.476
       },
       "gap": {
         "score": 10.0,
@@ -5902,27 +5858,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 408
+          "publications": 428
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 268
+          "publications": 276
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 178
+          "publications": 187
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 107
+          "publications": 140
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 56
+          "publications": 63
         }
       ]
     },
@@ -5938,9 +5894,9 @@
         "burdenScore": 67.13
       },
       "research": {
-        "globalPublications": 1777,
-        "biobanksEngaged": 79,
-        "researchIntensity": 344.163
+        "globalPublications": 1872,
+        "biobanksEngaged": 49,
+        "researchIntensity": 362.562
       },
       "gap": {
         "score": 10.0,
@@ -5951,27 +5907,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 408
+          "publications": 429
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 269
+          "publications": 274
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 205
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 156
+          "publications": 221
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 125
+          "publications": 167
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 165
         }
       ]
     },
@@ -5987,9 +5943,9 @@
         "burdenScore": 69.11
       },
       "research": {
-        "globalPublications": 1895,
-        "biobanksEngaged": 71,
-        "researchIntensity": 232.756
+        "globalPublications": 1964,
+        "biobanksEngaged": 47,
+        "researchIntensity": 241.231
       },
       "gap": {
         "score": 10.0,
@@ -6000,27 +5956,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 472
+          "publications": 502
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 360
+          "publications": 371
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 291
+          "publications": 297
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 118
+          "publications": 122
         },
         {
           "id": "cpsii",
           "name": "Cancer Prevention Study II Nutrition Cohort",
-          "publications": 76
+          "publications": 84
         }
       ]
     },
@@ -6036,9 +5992,9 @@
         "burdenScore": 57.49
       },
       "research": {
-        "globalPublications": 1283,
-        "biobanksEngaged": 68,
-        "researchIntensity": 2287.308
+        "globalPublications": 1333,
+        "biobanksEngaged": 46,
+        "researchIntensity": 2376.447
       },
       "gap": {
         "score": 10.0,
@@ -6049,27 +6005,76 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 378
+          "publications": 397
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 239
+          "publications": 244
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 115
+          "publications": 119
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 63
+          "publications": 78
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 48
+          "publications": 52
+        }
+      ]
+    },
+    {
+      "id": "Colon and rectum cancer",
+      "name": "Colon and rectum cancer",
+      "category": "Cancer",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 24.4,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 73.87
+      },
+      "research": {
+        "globalPublications": 2536,
+        "biobanksEngaged": 48,
+        "researchIntensity": 103.93
+      },
+      "gap": {
+        "score": 10.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 559
+        },
+        {
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "publications": 384
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 328
+        },
+        {
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
+          "publications": 266
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 256
         }
       ]
     },
@@ -6085,9 +6090,9 @@
         "burdenScore": 67.69
       },
       "research": {
-        "globalPublications": 1293,
-        "biobanksEngaged": 69,
-        "researchIntensity": 220.12
+        "globalPublications": 1347,
+        "biobanksEngaged": 46,
+        "researchIntensity": 229.313
       },
       "gap": {
         "score": 10.0,
@@ -6098,27 +6103,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 379
+          "publications": 397
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 240
+          "publications": 245
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 115
+          "publications": 119
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 64
+          "publications": 80
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 50
+          "publications": 58
         }
       ]
     },
@@ -6134,9 +6139,9 @@
         "burdenScore": 63.96
       },
       "research": {
-        "globalPublications": 1331,
-        "biobanksEngaged": 68,
-        "researchIntensity": 534.497
+        "globalPublications": 1380,
+        "biobanksEngaged": 46,
+        "researchIntensity": 554.174
       },
       "gap": {
         "score": 10.0,
@@ -6147,27 +6152,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 379
+          "publications": 397
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 247
+          "publications": 252
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 122
+          "publications": 126
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 75
+          "publications": 90
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 55
+          "publications": 59
         }
       ]
     },
@@ -6183,9 +6188,9 @@
         "burdenScore": 64.54
       },
       "research": {
-        "globalPublications": 1294,
-        "biobanksEngaged": 68,
-        "researchIntensity": 455.028
+        "globalPublications": 1343,
+        "biobanksEngaged": 46,
+        "researchIntensity": 472.259
       },
       "gap": {
         "score": 10.0,
@@ -6196,27 +6201,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 383
+          "publications": 401
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 241
+          "publications": 246
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 115
+          "publications": 119
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 63
+          "publications": 78
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 50
+          "publications": 54
         }
       ]
     },
@@ -6232,9 +6237,9 @@
         "burdenScore": 71.14
       },
       "research": {
-        "globalPublications": 1377,
-        "biobanksEngaged": 69,
-        "researchIntensity": 105.929
+        "globalPublications": 1428,
+        "biobanksEngaged": 46,
+        "researchIntensity": 109.852
       },
       "gap": {
         "score": 10.0,
@@ -6245,27 +6250,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 399
+          "publications": 418
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 256
+          "publications": 261
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 116
+          "publications": 120
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 63
+          "publications": 78
         },
         {
-          "id": "jphc",
-          "name": "JPHC Study",
-          "publications": 53
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
+          "publications": 56
         }
       ]
     },
@@ -6281,9 +6286,9 @@
         "burdenScore": 71.1
       },
       "research": {
-        "globalPublications": 1649,
-        "biobanksEngaged": 77,
-        "researchIntensity": 127.952
+        "globalPublications": 1714,
+        "biobanksEngaged": 48,
+        "researchIntensity": 132.996
       },
       "gap": {
         "score": 10.0,
@@ -6294,27 +6299,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 537
+          "publications": 563
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 277
+          "publications": 284
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 128
+          "publications": 132
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 90
+          "publications": 109
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 62
+          "publications": 66
         }
       ]
     },
@@ -6330,9 +6335,9 @@
         "burdenScore": 65.72
       },
       "research": {
-        "globalPublications": 1306,
-        "biobanksEngaged": 70,
-        "researchIntensity": 349.935
+        "globalPublications": 1357,
+        "biobanksEngaged": 48,
+        "researchIntensity": 363.6
       },
       "gap": {
         "score": 10.0,
@@ -6343,27 +6348,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 383
+          "publications": 402
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 249
+          "publications": 254
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 116
+          "publications": 120
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 64
+          "publications": 80
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 51
+          "publications": 55
         }
       ]
     },
@@ -6379,9 +6384,9 @@
         "burdenScore": 70.54
       },
       "research": {
-        "globalPublications": 1509,
-        "biobanksEngaged": 72,
-        "researchIntensity": 133.34
+        "globalPublications": 1571,
+        "biobanksEngaged": 47,
+        "researchIntensity": 138.818
       },
       "gap": {
         "score": 10.0,
@@ -6392,27 +6397,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 422
+          "publications": 440
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 281
+          "publications": 287
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 132
+          "publications": 141
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 83
+          "publications": 103
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 75
+          "publications": 84
         }
       ]
     },
@@ -6428,156 +6433,9 @@
         "burdenScore": 64.97
       },
       "research": {
-        "globalPublications": 1280,
-        "biobanksEngaged": 68,
-        "researchIntensity": 407.214
-      },
-      "gap": {
-        "score": 10.0,
-        "severity": "Low",
-        "color": "#28a745"
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 377
-        },
-        {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 242
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 115
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 63
-        },
-        {
-          "id": "plco",
-          "name": "PLCO Cancer Screening Trial",
-          "publications": 48
-        }
-      ]
-    },
-    {
-      "id": "Non-melanoma skin cancer",
-      "name": "Non-melanoma skin cancer",
-      "category": "Cancer",
-      "globalSouthPriority": false,
-      "burden": {
-        "dalysMillions": 1.21,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 60.84
-      },
-      "research": {
-        "globalPublications": 1561,
-        "biobanksEngaged": 72,
-        "researchIntensity": 1287.027
-      },
-      "gap": {
-        "score": 10.0,
-        "severity": "Low",
-        "color": "#28a745"
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 423
-        },
-        {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 261
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 148
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 148
-        },
-        {
-          "id": "plco",
-          "name": "PLCO Cancer Screening Trial",
-          "publications": 58
-        }
-      ]
-    },
-    {
-      "id": "Kidney cancer",
-      "name": "Kidney cancer",
-      "category": "Cancer",
-      "globalSouthPriority": false,
-      "burden": {
-        "dalysMillions": 4.02,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 66.04
-      },
-      "research": {
-        "globalPublications": 1591,
-        "biobanksEngaged": 78,
-        "researchIntensity": 396.13
-      },
-      "gap": {
-        "score": 10.0,
-        "severity": "Low",
-        "color": "#28a745"
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 472
-        },
-        {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 259
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 137
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 97
-        },
-        {
-          "id": "plco",
-          "name": "PLCO Cancer Screening Trial",
-          "publications": 73
-        }
-      ]
-    },
-    {
-      "id": "Bladder cancer",
-      "name": "Bladder cancer",
-      "category": "Cancer",
-      "globalSouthPriority": false,
-      "burden": {
-        "dalysMillions": 4.4,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 66.43
-      },
-      "research": {
-        "globalPublications": 1368,
-        "biobanksEngaged": 70,
-        "researchIntensity": 311.117
+        "globalPublications": 1329,
+        "biobanksEngaged": 46,
+        "researchIntensity": 422.803
       },
       "gap": {
         "score": 10.0,
@@ -6593,22 +6451,169 @@
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 259
+          "publications": 247
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 122
+          "publications": 119
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 72
+          "publications": 78
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 63
+          "publications": 52
+        }
+      ]
+    },
+    {
+      "id": "Non-melanoma skin cancer",
+      "name": "Non-melanoma skin cancer",
+      "category": "Cancer",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 1.21,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 60.84
+      },
+      "research": {
+        "globalPublications": 1631,
+        "biobanksEngaged": 47,
+        "researchIntensity": 1344.742
+      },
+      "gap": {
+        "score": 10.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 447
+        },
+        {
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "publications": 266
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 176
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 153
+        },
+        {
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
+          "publications": 64
+        }
+      ]
+    },
+    {
+      "id": "Kidney cancer",
+      "name": "Kidney cancer",
+      "category": "Cancer",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 4.02,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 66.04
+      },
+      "research": {
+        "globalPublications": 1651,
+        "biobanksEngaged": 53,
+        "researchIntensity": 411.069
+      },
+      "gap": {
+        "score": 10.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 496
+        },
+        {
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "publications": 267
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 141
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 114
+        },
+        {
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
+          "publications": 79
+        }
+      ]
+    },
+    {
+      "id": "Bladder cancer",
+      "name": "Bladder cancer",
+      "category": "Cancer",
+      "globalSouthPriority": false,
+      "burden": {
+        "dalysMillions": 4.4,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 66.43
+      },
+      "research": {
+        "globalPublications": 1420,
+        "biobanksEngaged": 48,
+        "researchIntensity": 322.943
+      },
+      "gap": {
+        "score": 10.0,
+        "severity": "Low",
+        "color": "#28a745"
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 414
+        },
+        {
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "publications": 264
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 126
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 89
+        },
+        {
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
+          "publications": 68
         }
       ]
     },
@@ -6624,9 +6629,9 @@
         "burdenScore": 69.5
       },
       "research": {
-        "globalPublications": 2131,
-        "biobanksEngaged": 82,
-        "researchIntensity": 239.1
+        "globalPublications": 2201,
+        "biobanksEngaged": 53,
+        "researchIntensity": 246.954
       },
       "gap": {
         "score": 10.0,
@@ -6637,27 +6642,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 1065
+          "publications": 1097
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 244
+          "publications": 250
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 164
+          "publications": 168
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 69
+          "publications": 92
         },
         {
-          "id": "gel",
-          "name": "Genomics England / 100,000 Genomes Project",
-          "publications": 58
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
+          "publications": 60
         }
       ]
     },
@@ -6673,9 +6678,9 @@
         "burdenScore": 60.96
       },
       "research": {
-        "globalPublications": 1341,
-        "biobanksEngaged": 71,
-        "researchIntensity": 1075.825
+        "globalPublications": 1399,
+        "biobanksEngaged": 48,
+        "researchIntensity": 1122.356
       },
       "gap": {
         "score": 10.0,
@@ -6686,27 +6691,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 384
+          "publications": 404
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 252
+          "publications": 257
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 124
+          "publications": 128
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 65
+          "publications": 83
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 53
+          "publications": 57
         }
       ]
     },
@@ -6722,9 +6727,9 @@
         "burdenScore": 58.38
       },
       "research": {
-        "globalPublications": 1277,
-        "biobanksEngaged": 69,
-        "researchIntensity": 1852.446
+        "globalPublications": 1326,
+        "biobanksEngaged": 47,
+        "researchIntensity": 1923.527
       },
       "gap": {
         "score": 10.0,
@@ -6735,27 +6740,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 374
+          "publications": 392
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 240
+          "publications": 245
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 115
+          "publications": 119
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 63
+          "publications": 78
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 48
+          "publications": 52
         }
       ]
     },
@@ -6771,9 +6776,9 @@
         "burdenScore": 64.14
       },
       "research": {
-        "globalPublications": 1342,
-        "biobanksEngaged": 71,
-        "researchIntensity": 517.03
+        "globalPublications": 1394,
+        "biobanksEngaged": 47,
+        "researchIntensity": 537.064
       },
       "gap": {
         "score": 10.0,
@@ -6784,27 +6789,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 391
+          "publications": 410
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 243
+          "publications": 249
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 120
+          "publications": 124
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 77
+          "publications": 93
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 52
+          "publications": 56
         }
       ]
     },
@@ -6820,9 +6825,9 @@
         "burdenScore": 60.85
       },
       "research": {
-        "globalPublications": 6925,
-        "biobanksEngaged": 136,
-        "researchIntensity": 5697.485
+        "globalPublications": 7439,
+        "biobanksEngaged": 59,
+        "researchIntensity": 6120.374
       },
       "gap": {
         "score": 10.0,
@@ -6833,27 +6838,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 1226
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 898
-        },
-        {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 835
+          "publications": 1317
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 801
+          "publications": 1088
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 954
+        },
+        {
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "publications": 872
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 735
+          "publications": 789
         }
       ]
     },
@@ -6869,9 +6874,9 @@
         "burdenScore": 68.1
       },
       "research": {
-        "globalPublications": 1462,
-        "biobanksEngaged": 80,
-        "researchIntensity": 226.5
+        "globalPublications": 1563,
+        "biobanksEngaged": 47,
+        "researchIntensity": 242.147
       },
       "gap": {
         "score": 10.0,
@@ -6882,27 +6887,27 @@
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 364
+          "publications": 396
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 183
-        },
-        {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 148
+          "publications": 207
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 143
+          "publications": 182
+        },
+        {
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "publications": 154
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 122
+          "publications": 128
         }
       ]
     },
@@ -6918,9 +6923,9 @@
         "burdenScore": 64.02
       },
       "research": {
-        "globalPublications": 1283,
-        "biobanksEngaged": 68,
-        "researchIntensity": 507.952
+        "globalPublications": 1332,
+        "biobanksEngaged": 46,
+        "researchIntensity": 527.352
       },
       "gap": {
         "score": 10.0,
@@ -6931,27 +6936,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 376
+          "publications": 394
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 239
+          "publications": 244
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 116
+          "publications": 120
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 63
+          "publications": 78
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 48
+          "publications": 52
         }
       ]
     },
@@ -6967,9 +6972,9 @@
         "burdenScore": 62.25
       },
       "research": {
-        "globalPublications": 1282,
-        "biobanksEngaged": 68,
-        "researchIntensity": 764.054
+        "globalPublications": 1331,
+        "biobanksEngaged": 46,
+        "researchIntensity": 793.257
       },
       "gap": {
         "score": 10.0,
@@ -6980,27 +6985,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 376
+          "publications": 394
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 239
+          "publications": 244
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 116
+          "publications": 120
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 63
+          "publications": 78
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 48
+          "publications": 52
         }
       ]
     },
@@ -7016,9 +7021,9 @@
         "burdenScore": 56.71
       },
       "research": {
-        "globalPublications": 1275,
-        "biobanksEngaged": 68,
-        "researchIntensity": 2720.009
+        "globalPublications": 1324,
+        "biobanksEngaged": 46,
+        "researchIntensity": 2824.542
       },
       "gap": {
         "score": 10.0,
@@ -7029,27 +7034,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 374
+          "publications": 392
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 239
+          "publications": 244
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 115
+          "publications": 119
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 63
+          "publications": 78
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 48
+          "publications": 52
         }
       ]
     },
@@ -7065,9 +7070,9 @@
         "burdenScore": 54.56
       },
       "research": {
-        "globalPublications": 1282,
-        "biobanksEngaged": 69,
-        "researchIntensity": 4490.704
+        "globalPublications": 1332,
+        "biobanksEngaged": 46,
+        "researchIntensity": 4665.849
       },
       "gap": {
         "score": 10.0,
@@ -7078,27 +7083,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 377
+          "publications": 396
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 239
+          "publications": 244
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 117
+          "publications": 121
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 63
+          "publications": 78
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 48
+          "publications": 52
         }
       ]
     },
@@ -7114,8 +7119,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 143,
-        "biobanksEngaged": 31,
+        "globalPublications": 154,
+        "biobanksEngaged": 26,
         "researchIntensity": 0
       },
       "gap": {
@@ -7127,12 +7132,17 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 62
+          "publications": 71
+        },
+        {
+          "id": "mvp",
+          "name": "Million Veteran Program",
+          "publications": 13
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 10
+          "publications": 11
         },
         {
           "id": "ckb",
@@ -7140,13 +7150,8 @@
           "publications": 6
         },
         {
-          "id": "mvp",
-          "name": "Million Veteran Program",
-          "publications": 6
-        },
-        {
-          "id": "mvp; ukb",
-          "name": "Million Veteran Program; UK Biobank",
+          "id": "nhs",
+          "name": "Nurses' Health Study",
           "publications": 6
         }
       ]
@@ -7163,9 +7168,9 @@
         "burdenScore": 69.99
       },
       "research": {
-        "globalPublications": 3137,
-        "biobanksEngaged": 89,
-        "researchIntensity": 314.155
+        "globalPublications": 3290,
+        "biobanksEngaged": 52,
+        "researchIntensity": 329.477
       },
       "gap": {
         "score": 10.0,
@@ -7176,27 +7181,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 1351
+          "publications": 1418
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 500
+          "publications": 521
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 155
+          "publications": 215
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 132
+          "publications": 141
         },
         {
           "id": "hunt",
           "name": "HUNT Study",
-          "publications": 111
+          "publications": 113
         }
       ]
     },
@@ -7212,8 +7217,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 1023,
-        "biobanksEngaged": 71,
+        "globalPublications": 1097,
+        "biobanksEngaged": 51,
         "researchIntensity": 0
       },
       "gap": {
@@ -7225,22 +7230,22 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 333
+          "publications": 349
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 106
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 86
+          "publications": 87
         },
         {
           "id": "koges",
           "name": "Korean Genome and Epidemiology Study",
           "publications": 67
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 63
         },
         {
           "id": "elsa_brasil",
@@ -7261,9 +7266,9 @@
         "burdenScore": 64.49
       },
       "research": {
-        "globalPublications": 959,
-        "biobanksEngaged": 62,
-        "researchIntensity": 341.131
+        "globalPublications": 1012,
+        "biobanksEngaged": 44,
+        "researchIntensity": 359.984
       },
       "gap": {
         "score": 10.0,
@@ -7274,27 +7279,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 477
+          "publications": 510
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 55
+          "publications": 58
         },
         {
           "id": "plco",
           "name": "PLCO Cancer Screening Trial",
-          "publications": 46
+          "publications": 49
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 42
         },
         {
           "id": "ckb",
           "name": "China Kadoorie Biobank",
-          "publications": 32
-        },
-        {
-          "id": "koges",
-          "name": "Korean Genome and Epidemiology Study",
-          "publications": 28
+          "publications": 35
         }
       ]
     },
@@ -7310,9 +7315,9 @@
         "burdenScore": 61.79
       },
       "research": {
-        "globalPublications": 294,
-        "biobanksEngaged": 33,
-        "researchIntensity": 194.601
+        "globalPublications": 320,
+        "biobanksEngaged": 26,
+        "researchIntensity": 211.811
       },
       "gap": {
         "score": 10.0,
@@ -7323,17 +7328,17 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 153
+          "publications": 160
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 20
+          "publications": 40
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 18
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
+          "publications": 19
         },
         {
           "id": "epic",
@@ -7359,8 +7364,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 1181,
-        "biobanksEngaged": 47,
+        "globalPublications": 1203,
+        "biobanksEngaged": 38,
         "researchIntensity": 0
       },
       "gap": {
@@ -7372,22 +7377,22 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 784
+          "publications": 798
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 135
+          "publications": 137
         },
         {
           "id": "hunt",
           "name": "HUNT Study",
-          "publications": 38
+          "publications": 39
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 29
+          "publications": 36
         },
         {
           "id": "elsa_brasil",
@@ -7408,8 +7413,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 285,
-        "biobanksEngaged": 31,
+        "globalPublications": 295,
+        "biobanksEngaged": 28,
         "researchIntensity": 0
       },
       "gap": {
@@ -7421,27 +7426,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 145
+          "publications": 151
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 48
+          "publications": 51
         },
         {
           "id": "23andme",
           "name": "23andMe",
-          "publications": 18
+          "publications": 19
         },
         {
           "id": "cpsii",
           "name": "Cancer Prevention Study II Nutrition Cohort",
-          "publications": 8
+          "publications": 11
         },
         {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 5
+          "publications": 6
         }
       ]
     },
@@ -7457,7 +7462,7 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 101,
+        "globalPublications": 105,
         "biobanksEngaged": 16,
         "researchIntensity": 0
       },
@@ -7470,12 +7475,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 33
+          "publications": 34
         },
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 23
+          "publications": 24
         },
         {
           "id": "gel",
@@ -7506,9 +7511,9 @@
         "burdenScore": 59.88
       },
       "research": {
-        "globalPublications": 168,
-        "biobanksEngaged": 22,
-        "researchIntensity": 172.609
+        "globalPublications": 199,
+        "biobanksEngaged": 19,
+        "researchIntensity": 204.459
       },
       "gap": {
         "score": 10.0,
@@ -7519,22 +7524,22 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 87
-        },
-        {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 28
+          "publications": 90
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 9
+          "publications": 37
+        },
+        {
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
+          "publications": 28
         },
         {
           "id": "biovu",
           "name": "BioVU Vanderbilt",
-          "publications": 5
+          "publications": 6
         },
         {
           "id": "dnbc",
@@ -7555,9 +7560,9 @@
         "burdenScore": 60.17
       },
       "research": {
-        "globalPublications": 113,
-        "biobanksEngaged": 24,
-        "researchIntensity": 108.595
+        "globalPublications": 132,
+        "biobanksEngaged": 21,
+        "researchIntensity": 126.854
       },
       "gap": {
         "score": 10.0,
@@ -7568,27 +7573,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 60
+          "publications": 61
         },
         {
           "id": "cpsii",
           "name": "Cancer Prevention Study II Nutrition Cohort",
-          "publications": 6
+          "publications": 15
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 10
+        },
+        {
+          "id": "mec",
+          "name": "Multiethnic Cohort Study",
+          "publications": 7
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
           "publications": 6
-        },
-        {
-          "id": "bbj",
-          "name": "Biobank Japan",
-          "publications": 5
-        },
-        {
-          "id": "cpsii; mec; nhs",
-          "name": "Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study; Nurses' Health Study",
-          "publications": 5
         }
       ]
     },
@@ -7604,9 +7609,9 @@
         "burdenScore": 66.39
       },
       "research": {
-        "globalPublications": 970,
-        "biobanksEngaged": 52,
-        "researchIntensity": 222.632
+        "globalPublications": 987,
+        "biobanksEngaged": 42,
+        "researchIntensity": 226.534
       },
       "gap": {
         "score": 10.0,
@@ -7617,12 +7622,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 777
+          "publications": 790
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 57
+          "publications": 58
         },
         {
           "id": "gel",
@@ -7632,11 +7637,11 @@
         {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 11
+          "publications": 14
         },
         {
-          "id": "moba",
-          "name": "Norwegian Mother and Child Cohort Study",
+          "id": "aou",
+          "name": "All of Us Research Program",
           "publications": 7
         }
       ]
@@ -7653,9 +7658,9 @@
         "burdenScore": 60.13
       },
       "research": {
-        "globalPublications": 152,
-        "biobanksEngaged": 19,
-        "researchIntensity": 147.438
+        "globalPublications": 161,
+        "biobanksEngaged": 17,
+        "researchIntensity": 156.168
       },
       "gap": {
         "score": 10.0,
@@ -7666,12 +7671,12 @@
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 69
+          "publications": 70
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 25
+          "publications": 26
         },
         {
           "id": "dnbc",
@@ -7679,14 +7684,14 @@
           "publications": 24
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 7
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 9
         },
         {
-          "id": "hunt",
-          "name": "HUNT Study",
-          "publications": 4
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
+          "publications": 7
         }
       ]
     },
@@ -7702,9 +7707,9 @@
         "burdenScore": 66.99
       },
       "research": {
-        "globalPublications": 1424,
-        "biobanksEngaged": 72,
-        "researchIntensity": 284.651
+        "globalPublications": 1545,
+        "biobanksEngaged": 55,
+        "researchIntensity": 308.839
       },
       "gap": {
         "score": 10.0,
@@ -7715,17 +7720,17 @@
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 258
+          "publications": 270
         },
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 251
+          "publications": 266
         },
         {
           "id": "dnbc",
           "name": "Danish National Birth Cohort",
-          "publications": 214
+          "publications": 220
         },
         {
           "id": "echo",
@@ -7733,9 +7738,9 @@
           "publications": 147
         },
         {
-          "id": "gel",
-          "name": "Genomics England / 100,000 Genomes Project",
-          "publications": 89
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 121
         }
       ]
     },
@@ -7751,9 +7756,9 @@
         "burdenScore": 69.52
       },
       "research": {
-        "globalPublications": 1333,
-        "biobanksEngaged": 63,
-        "researchIntensity": 148.733
+        "globalPublications": 1432,
+        "biobanksEngaged": 49,
+        "researchIntensity": 159.78
       },
       "gap": {
         "score": 10.0,
@@ -7764,27 +7769,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 575
+          "publications": 606
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 108
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 96
+          "publications": 98
         },
         {
           "id": "hunt",
           "name": "HUNT Study",
-          "publications": 79
+          "publications": 81
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 60
-        },
-        {
-          "id": "moba",
-          "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 55
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
+          "publications": 62
         }
       ]
     },
@@ -7800,9 +7805,9 @@
         "burdenScore": 64.88
       },
       "research": {
-        "globalPublications": 452,
-        "biobanksEngaged": 35,
-        "researchIntensity": 146.977
+        "globalPublications": 485,
+        "biobanksEngaged": 30,
+        "researchIntensity": 157.708
       },
       "gap": {
         "score": 10.0,
@@ -7813,12 +7818,12 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 221
+          "publications": 224
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 55
+          "publications": 81
         },
         {
           "id": "whi",
@@ -7826,8 +7831,8 @@
           "publications": 33
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
           "publications": 26
         },
         {
@@ -7849,9 +7854,9 @@
         "burdenScore": 62.42
       },
       "research": {
-        "globalPublications": 215,
-        "biobanksEngaged": 27,
-        "researchIntensity": 123.03
+        "globalPublications": 230,
+        "biobanksEngaged": 23,
+        "researchIntensity": 131.613
       },
       "gap": {
         "score": 10.0,
@@ -7862,7 +7867,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 100
+          "publications": 108
         },
         {
           "id": "twb",
@@ -7870,14 +7875,14 @@
           "publications": 26
         },
         {
-          "id": "koges",
-          "name": "Korean Genome and Epidemiology Study",
-          "publications": 16
-        },
-        {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 16
+          "publications": 22
+        },
+        {
+          "id": "koges",
+          "name": "Korean Genome and Epidemiology Study",
+          "publications": 17
         },
         {
           "id": "elsa_brasil",
@@ -7898,9 +7903,9 @@
         "burdenScore": 64.39
       },
       "research": {
-        "globalPublications": 569,
-        "biobanksEngaged": 46,
-        "researchIntensity": 207.197
+        "globalPublications": 587,
+        "biobanksEngaged": 43,
+        "researchIntensity": 213.752
       },
       "gap": {
         "score": 10.0,
@@ -7911,12 +7916,12 @@
         {
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 156
+          "publications": 165
         },
         {
           "id": "dnbc",
           "name": "Danish National Birth Cohort",
-          "publications": 109
+          "publications": 116
         },
         {
           "id": "bandim",
@@ -7931,7 +7936,7 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 38
+          "publications": 40
         }
       ]
     },
@@ -7947,9 +7952,9 @@
         "burdenScore": 70.55
       },
       "research": {
-        "globalPublications": 16129,
-        "biobanksEngaged": 185,
-        "researchIntensity": 1420.668
+        "globalPublications": 16839,
+        "biobanksEngaged": 75,
+        "researchIntensity": 1483.206
       },
       "gap": {
         "score": 10.0,
@@ -7960,27 +7965,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 6006
+          "publications": 6310
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 1265
-        },
-        {
-          "id": "hunt",
-          "name": "HUNT Study",
-          "publications": 837
-        },
-        {
-          "id": "plco",
-          "name": "PLCO Cancer Screening Trial",
-          "publications": 676
+          "publications": 1299
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 674
+          "publications": 915
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 853
+        },
+        {
+          "id": "plco",
+          "name": "PLCO Cancer Screening Trial",
+          "publications": 717
         }
       ]
     },
@@ -7996,9 +8001,9 @@
         "burdenScore": 74.43
       },
       "research": {
-        "globalPublications": 23966,
-        "biobanksEngaged": 217,
-        "researchIntensity": 864.025
+        "globalPublications": 25601,
+        "biobanksEngaged": 76,
+        "researchIntensity": 922.97
       },
       "gap": {
         "score": 10.0,
@@ -8009,27 +8014,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 6535
+          "publications": 6882
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 2928
+          "publications": 3052
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 1881
+          "publications": 2885
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 1562
+          "publications": 1613
         },
         {
           "id": "hunt",
           "name": "HUNT Study",
-          "publications": 930
+          "publications": 947
         }
       ]
     },
@@ -8045,9 +8050,9 @@
         "burdenScore": 71.09
       },
       "research": {
-        "globalPublications": 3898,
-        "biobanksEngaged": 96,
-        "researchIntensity": 303.046
+        "globalPublications": 4162,
+        "biobanksEngaged": 58,
+        "researchIntensity": 323.57
       },
       "gap": {
         "score": 10.0,
@@ -8058,27 +8063,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 1081
-        },
-        {
-          "id": "epic",
-          "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 334
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 326
+          "publications": 1136
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 321
+          "publications": 503
+        },
+        {
+          "id": "epic",
+          "name": "European Prospective Investigation into Cancer and Nutrition",
+          "publications": 342
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 331
         },
         {
           "id": "hunt",
           "name": "HUNT Study",
-          "publications": 191
+          "publications": 196
         }
       ]
     },
@@ -8094,9 +8099,9 @@
         "burdenScore": 62.26
       },
       "research": {
-        "globalPublications": 853,
-        "biobanksEngaged": 51,
-        "researchIntensity": 506.759
+        "globalPublications": 890,
+        "biobanksEngaged": 38,
+        "researchIntensity": 528.74
       },
       "gap": {
         "score": 10.0,
@@ -8107,27 +8112,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 317
+          "publications": 337
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 148
+          "publications": 152
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 64
-        },
-        {
-          "id": "ckb",
-          "name": "China Kadoorie Biobank",
-          "publications": 56
+          "publications": 68
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 56
+          "publications": 67
+        },
+        {
+          "id": "ckb",
+          "name": "China Kadoorie Biobank",
+          "publications": 61
         }
       ]
     },
@@ -8143,8 +8148,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 8657,
-        "biobanksEngaged": 170,
+        "globalPublications": 9314,
+        "biobanksEngaged": 66,
         "researchIntensity": 0
       },
       "gap": {
@@ -8156,27 +8161,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 5207
+          "publications": 5656
         },
         {
           "id": "estbb",
           "name": "Estonian Biobank",
-          "publications": 362
+          "publications": 446
         },
         {
           "id": "gel",
           "name": "Genomics England / 100,000 Genomes Project",
-          "publications": 316
+          "publications": 352
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 266
+          "publications": 319
         },
         {
-          "id": "twb",
-          "name": "Taiwan Biobank",
-          "publications": 203
+          "id": "mvp",
+          "name": "Million Veteran Program",
+          "publications": 257
         }
       ]
     },
@@ -8192,8 +8197,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 22295,
-        "biobanksEngaged": 214,
+        "globalPublications": 23829,
+        "biobanksEngaged": 77,
         "researchIntensity": 0
       },
       "gap": {
@@ -8205,27 +8210,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 7207
+          "publications": 7565
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 1774
+          "publications": 2719
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 1743
+          "publications": 1821
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 1614
+          "publications": 1678
         },
         {
-          "id": "nhsii; nhs",
-          "name": "Nurses' Health Study II; Nurses' Health Study",
-          "publications": 852
+          "id": "nhsii",
+          "name": "Nurses' Health Study II",
+          "publications": 869
         }
       ]
     },
@@ -8241,8 +8246,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 2162,
-        "biobanksEngaged": 80,
+        "globalPublications": 2222,
+        "biobanksEngaged": 57,
         "researchIntensity": 0
       },
       "gap": {
@@ -8254,17 +8259,17 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 1374
+          "publications": 1405
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 223
+          "publications": 228
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 69
+          "publications": 81
         },
         {
           "id": "epic",
@@ -8272,9 +8277,9 @@
           "publications": 63
         },
         {
-          "id": "hunt",
-          "name": "HUNT Study",
-          "publications": 34
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 36
         }
       ]
     },
@@ -8290,8 +8295,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 18662,
-        "biobanksEngaged": 183,
+        "globalPublications": 19665,
+        "biobanksEngaged": 74,
         "researchIntensity": 0
       },
       "gap": {
@@ -8303,27 +8308,27 @@
         {
           "id": "ukb",
           "name": "UK Biobank",
-          "publications": 5905
+          "publications": 6151
         },
         {
           "id": "whi",
           "name": "Women's Health Initiative",
-          "publications": 2178
+          "publications": 2262
         },
         {
           "id": "nhs",
           "name": "Nurses' Health Study",
-          "publications": 1644
+          "publications": 2234
         },
         {
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
-          "publications": 1444
+          "publications": 1486
         },
         {
           "id": "hunt",
           "name": "HUNT Study",
-          "publications": 739
+          "publications": 752
         }
       ]
     }

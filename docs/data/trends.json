@@ -1,6 +1,6 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-07T08:37:08.650018",
+  "generated": "2026-01-09T05:21:00.174009",
   "yearRange": {
     "start": 2000,
     "end": 2025
@@ -64,21 +64,6 @@
     }
   },
   "byBiobank": {
-    "23andme; ukb": {
-      "name": "23andMe; UK Biobank",
-      "yearly": {
-        "2011": 1,
-        "2017": 2,
-        "2018": 2,
-        "2019": 7,
-        "2020": 8,
-        "2021": 15,
-        "2022": 6,
-        "2023": 9,
-        "2024": 10,
-        "2025": 9
-      }
-    },
     "23andme": {
       "name": "23andMe",
       "yearly": {
@@ -102,84 +87,273 @@
         "2025": 20
       }
     },
-    "23andme; aou; ukb": {
-      "name": "23andMe; All of Us Research Program; UK Biobank",
+    "ukb": {
+      "name": "UK Biobank",
       "yearly": {
-        "2020": 1
+        "2003": 3,
+        "2004": 3,
+        "2005": 3,
+        "2006": 7,
+        "2007": 3,
+        "2008": 10,
+        "2009": 5,
+        "2010": 2,
+        "2011": 4,
+        "2012": 7,
+        "2013": 9,
+        "2014": 20,
+        "2015": 28,
+        "2016": 74,
+        "2017": 133,
+        "2018": 267,
+        "2019": 427,
+        "2020": 718,
+        "2021": 1107,
+        "2022": 1503,
+        "2023": 2055,
+        "2024": 2800,
+        "2025": 3896
       }
     },
-    "23andme; estbb; ukb": {
-      "name": "23andMe; Estonian Biobank; UK Biobank",
+    "aou": {
+      "name": "All of Us Research Program",
       "yearly": {
+        "2016": 2,
+        "2017": 3,
+        "2018": 11,
+        "2019": 19,
+        "2020": 15,
+        "2021": 28,
+        "2022": 78,
+        "2023": 107,
+        "2024": 191,
+        "2025": 323
+      }
+    },
+    "estbb": {
+      "name": "Estonian Biobank",
+      "yearly": {
+        "2002": 2,
+        "2004": 2,
+        "2006": 1,
+        "2007": 1,
+        "2010": 2,
+        "2012": 1,
+        "2013": 4,
+        "2014": 43,
+        "2015": 58,
+        "2016": 58,
+        "2017": 71,
+        "2018": 43,
+        "2019": 62,
+        "2020": 30,
+        "2021": 42,
+        "2022": 33,
+        "2023": 32,
+        "2024": 41,
+        "2025": 48
+      }
+    },
+    "biovu": {
+      "name": "BioVU Vanderbilt",
+      "yearly": {
+        "2010": 5,
+        "2011": 3,
+        "2012": 5,
+        "2013": 8,
+        "2014": 8,
+        "2015": 10,
+        "2016": 6,
+        "2017": 17,
+        "2018": 5,
+        "2019": 7,
+        "2020": 7,
+        "2021": 7,
+        "2022": 7,
+        "2023": 10,
+        "2024": 6,
+        "2025": 8
+      }
+    },
+    "mvp": {
+      "name": "Million Veteran Program",
+      "yearly": {
+        "2003": 1,
+        "2012": 1,
+        "2014": 1,
+        "2016": 3,
+        "2018": 9,
+        "2019": 13,
+        "2020": 20,
+        "2021": 35,
+        "2022": 55,
+        "2023": 55,
+        "2024": 65,
+        "2025": 66
+      }
+    },
+    "gel": {
+      "name": "Genomics England / 100,000 Genomes Project",
+      "yearly": {
+        "2014": 1,
+        "2015": 5,
+        "2016": 17,
+        "2017": 21,
+        "2018": 27,
+        "2019": 51,
+        "2020": 53,
+        "2021": 76,
+        "2022": 115,
+        "2023": 90,
+        "2024": 98,
+        "2025": 95
+      }
+    },
+    "genes_health": {
+      "name": "Genes & Health",
+      "yearly": {
+        "2001": 1,
+        "2007": 1,
+        "2009": 1,
+        "2013": 1,
         "2016": 1,
         "2020": 1,
-        "2021": 1
+        "2021": 1,
+        "2022": 2,
+        "2023": 6,
+        "2024": 2,
+        "2025": 9
       }
     },
-    "23andme; biovu; estbb": {
-      "name": "23andMe; BioVU Vanderbilt; Estonian Biobank",
+    "bbj": {
+      "name": "Biobank Japan",
       "yearly": {
-        "2020": 1
+        "2005": 1,
+        "2007": 1,
+        "2008": 2,
+        "2009": 2,
+        "2010": 1,
+        "2011": 5,
+        "2013": 3,
+        "2014": 1,
+        "2015": 1,
+        "2016": 2,
+        "2017": 18,
+        "2018": 4,
+        "2019": 3,
+        "2020": 10,
+        "2021": 18,
+        "2022": 22,
+        "2023": 40,
+        "2024": 38,
+        "2025": 36
       }
     },
-    "23andme; mvp; ukb": {
-      "name": "23andMe; Million Veteran Program; UK Biobank",
+    "moba": {
+      "name": "Norwegian Mother and Child Cohort Study",
       "yearly": {
-        "2021": 1
+        "2000": 7,
+        "2001": 3,
+        "2002": 7,
+        "2003": 4,
+        "2004": 7,
+        "2005": 5,
+        "2006": 11,
+        "2007": 20,
+        "2008": 25,
+        "2009": 27,
+        "2010": 30,
+        "2011": 41,
+        "2012": 54,
+        "2013": 62,
+        "2014": 57,
+        "2015": 54,
+        "2016": 54,
+        "2017": 51,
+        "2018": 56,
+        "2019": 43,
+        "2020": 47,
+        "2021": 46,
+        "2022": 64,
+        "2023": 41,
+        "2024": 55,
+        "2025": 63
       }
     },
-    "23andme; estbb": {
-      "name": "23andMe; Estonian Biobank",
+    "whi": {
+      "name": "Women's Health Initiative",
       "yearly": {
-        "2024": 1
+        "2000": 18,
+        "2001": 9,
+        "2002": 69,
+        "2003": 123,
+        "2004": 135,
+        "2005": 153,
+        "2006": 145,
+        "2007": 135,
+        "2008": 122,
+        "2009": 112,
+        "2010": 125,
+        "2011": 143,
+        "2012": 157,
+        "2013": 164,
+        "2014": 179,
+        "2015": 137,
+        "2016": 152,
+        "2017": 153,
+        "2018": 137,
+        "2019": 135,
+        "2020": 136,
+        "2021": 140,
+        "2022": 148,
+        "2023": 131,
+        "2024": 123,
+        "2025": 115
       }
     },
-    "23andme; gel; mvp; ukb": {
-      "name": "23andMe; Genomics England / 100,000 Genomes Project; Million Veteran Program; UK Biobank",
+    "usnih": {
+      "name": "US NIH Biobank",
       "yearly": {
-        "2025": 1
+        "2008": 1,
+        "2011": 1,
+        "2014": 1,
+        "2015": 1,
+        "2016": 5,
+        "2017": 1,
+        "2019": 3,
+        "2020": 1,
+        "2025": 3
       }
     },
-    "23andme; genes_health; ukb": {
-      "name": "23andMe; Genes & Health; UK Biobank",
+    "hunt": {
+      "name": "HUNT Study",
       "yearly": {
-        "2023": 1
-      }
-    },
-    "23andme; bbj; ukb": {
-      "name": "23andMe; Biobank Japan; UK Biobank",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "23andme; moba": {
-      "name": "23andMe; Norwegian Mother and Child Cohort Study",
-      "yearly": {
-        "2023": 1
-      }
-    },
-    "23andme; biovu": {
-      "name": "23andMe; BioVU Vanderbilt",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "23andme; gel; whi": {
-      "name": "23andMe; Genomics England / 100,000 Genomes Project; Women's Health Initiative",
-      "yearly": {
-        "2018": 1
-      }
-    },
-    "23andme; moba; usnih": {
-      "name": "23andMe; Norwegian Mother and Child Cohort Study; US NIH Biobank",
-      "yearly": {
-        "2021": 1
-      }
-    },
-    "23andme; hunt; ukb": {
-      "name": "23andMe; HUNT Study; UK Biobank",
-      "yearly": {
-        "2020": 1
+        "2000": 4,
+        "2001": 5,
+        "2002": 9,
+        "2003": 14,
+        "2004": 7,
+        "2005": 13,
+        "2006": 20,
+        "2007": 31,
+        "2008": 34,
+        "2009": 34,
+        "2010": 28,
+        "2011": 48,
+        "2012": 62,
+        "2013": 80,
+        "2014": 52,
+        "2015": 61,
+        "2016": 60,
+        "2017": 70,
+        "2018": 72,
+        "2019": 68,
+        "2020": 63,
+        "2021": 52,
+        "2022": 47,
+        "2023": 77,
+        "2024": 77,
+        "2025": 97
       }
     },
     "45andup": {
@@ -205,11 +379,35 @@
         "2025": 24
       }
     },
-    "45andup; plco": {
-      "name": "45 and Up Study; PLCO Cancer Screening Trial",
+    "plco": {
+      "name": "PLCO Cancer Screening Trial",
       "yearly": {
-        "2017": 1,
-        "2022": 1
+        "2000": 11,
+        "2001": 2,
+        "2002": 7,
+        "2003": 6,
+        "2004": 16,
+        "2005": 21,
+        "2006": 17,
+        "2007": 21,
+        "2008": 15,
+        "2009": 30,
+        "2010": 36,
+        "2011": 32,
+        "2012": 41,
+        "2013": 37,
+        "2014": 45,
+        "2015": 57,
+        "2016": 35,
+        "2017": 48,
+        "2018": 39,
+        "2019": 39,
+        "2020": 63,
+        "2021": 53,
+        "2022": 58,
+        "2023": 59,
+        "2024": 59,
+        "2025": 81
       }
     },
     "awigen": {
@@ -228,28 +426,12 @@
         "2025": 15
       }
     },
-    "awigen; mvp": {
-      "name": "AWI-Gen; Million Veteran Program",
+    "ugr": {
+      "name": "Uganda Genome Resource",
       "yearly": {
-        "2023": 1
-      }
-    },
-    "awigen; estbb": {
-      "name": "AWI-Gen; Estonian Biobank",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "awigen; ukb": {
-      "name": "AWI-Gen; UK Biobank",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "awigen; ukb; ugr": {
-      "name": "AWI-Gen; UK Biobank; Uganda Genome Resource",
-      "yearly": {
-        "2023": 1
+        "2019": 1,
+        "2022": 1,
+        "2025": 2
       }
     },
     "ahri": {
@@ -267,149 +449,83 @@
         "2025": 3
       }
     },
-    "ahri; saprin": {
-      "name": "Africa Health Research Institute Population Cohort; SAPRIN",
-      "yearly": {
-        "2021": 2,
-        "2025": 1
-      }
-    },
-    "aou": {
-      "name": "All of Us Research Program",
-      "yearly": {
-        "2016": 2,
-        "2017": 3,
-        "2018": 11,
-        "2019": 19,
-        "2020": 15,
-        "2021": 28,
-        "2022": 78,
-        "2023": 107,
-        "2024": 191,
-        "2025": 323
-      }
-    },
-    "aou; ukb": {
-      "name": "All of Us Research Program; UK Biobank",
+    "saprin": {
+      "name": "SAPRIN",
       "yearly": {
         "2022": 1,
-        "2023": 3,
-        "2024": 8,
-        "2025": 21
-      }
-    },
-    "aou; twb; ukb": {
-      "name": "All of Us Research Program; Taiwan Biobank; UK Biobank",
-      "yearly": {
+        "2023": 1,
         "2025": 1
       }
     },
-    "aou; twb; ukb; usnih": {
-      "name": "All of Us Research Program; Taiwan Biobank; UK Biobank; US NIH Biobank",
+    "twb": {
+      "name": "Taiwan Biobank",
       "yearly": {
-        "2020": 1
+        "2012": 1,
+        "2013": 1,
+        "2014": 6,
+        "2015": 10,
+        "2016": 16,
+        "2017": 19,
+        "2018": 11,
+        "2019": 36,
+        "2020": 41,
+        "2021": 71,
+        "2022": 76,
+        "2023": 60,
+        "2024": 77,
+        "2025": 97
       }
     },
-    "aou; bbj": {
-      "name": "All of Us Research Program; Biobank Japan",
+    "geisinger": {
+      "name": "Geisinger MyCode Community Health Initiative",
       "yearly": {
-        "2022": 1
+        "2016": 1,
+        "2018": 6,
+        "2019": 4,
+        "2020": 5,
+        "2021": 7,
+        "2022": 7,
+        "2023": 6,
+        "2024": 2,
+        "2025": 12
       }
     },
-    "aou; biovu": {
-      "name": "All of Us Research Program; BioVU Vanderbilt",
+    "ckb": {
+      "name": "China Kadoorie Biobank",
       "yearly": {
-        "2021": 1,
-        "2025": 2
+        "2011": 1,
+        "2012": 2,
+        "2013": 5,
+        "2014": 10,
+        "2015": 20,
+        "2016": 18,
+        "2017": 34,
+        "2018": 39,
+        "2019": 43,
+        "2020": 41,
+        "2021": 49,
+        "2022": 74,
+        "2023": 66,
+        "2024": 60,
+        "2025": 65
       }
     },
-    "aou; mvp": {
-      "name": "All of Us Research Program; Million Veteran Program",
+    "tommo": {
+      "name": "Tohoku Medical Megabank",
       "yearly": {
-        "2019": 1,
-        "2024": 1
-      }
-    },
-    "aou; twb": {
-      "name": "All of Us Research Program; Taiwan Biobank",
-      "yearly": {
-        "2024": 1,
-        "2025": 1
-      }
-    },
-    "aou; usnih": {
-      "name": "All of Us Research Program; US NIH Biobank",
-      "yearly": {
-        "2017": 1
-      }
-    },
-    "aou; gel": {
-      "name": "All of Us Research Program; Genomics England / 100,000 Genomes Project",
-      "yearly": {
-        "2019": 1,
-        "2024": 1,
-        "2025": 1
-      }
-    },
-    "aou; biovu; ukb; usnih": {
-      "name": "All of Us Research Program; BioVU Vanderbilt; UK Biobank; US NIH Biobank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "aou; geisinger": {
-      "name": "All of Us Research Program; Geisinger MyCode Community Health Initiative",
-      "yearly": {
-        "2022": 1
-      }
-    },
-    "aou; ckb; estbb; mvp; ukb": {
-      "name": "All of Us Research Program; China Kadoorie Biobank; Estonian Biobank; Million Veteran Program; UK Biobank",
-      "yearly": {
-        "2022": 1
-      }
-    },
-    "aou; mvp; ukb": {
-      "name": "All of Us Research Program; Million Veteran Program; UK Biobank",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "aou; gel; ukb": {
-      "name": "All of Us Research Program; Genomics England / 100,000 Genomes Project; UK Biobank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "aou; bbj; ukb": {
-      "name": "All of Us Research Program; Biobank Japan; UK Biobank",
-      "yearly": {
-        "2025": 2
-      }
-    },
-    "aou; whi": {
-      "name": "All of Us Research Program; Women's Health Initiative",
-      "yearly": {
-        "2018": 1,
-        "2025": 1
-      }
-    },
-    "aou; tommo": {
-      "name": "All of Us Research Program; Tohoku Medical Megabank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "aou; mvp; plco; ukb": {
-      "name": "All of Us Research Program; Million Veteran Program; PLCO Cancer Screening Trial; UK Biobank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "aou; ukb; usnih": {
-      "name": "All of Us Research Program; UK Biobank; US NIH Biobank",
-      "yearly": {
-        "2024": 1
+        "2012": 1,
+        "2014": 2,
+        "2015": 6,
+        "2016": 3,
+        "2017": 4,
+        "2018": 6,
+        "2019": 14,
+        "2020": 16,
+        "2021": 20,
+        "2022": 29,
+        "2023": 36,
+        "2024": 41,
+        "2025": 57
       }
     },
     "acscps3": {
@@ -438,11 +554,35 @@
         "2025": 20
       }
     },
-    "acscps3; cpsii": {
-      "name": "American Cancer Society Cancer Prevention Study-3; Cancer Prevention Study II Nutrition Cohort",
+    "cpsii": {
+      "name": "Cancer Prevention Study II Nutrition Cohort",
       "yearly": {
-        "2022": 1,
-        "2024": 1
+        "2000": 5,
+        "2001": 6,
+        "2002": 9,
+        "2003": 12,
+        "2004": 10,
+        "2005": 20,
+        "2006": 8,
+        "2007": 15,
+        "2008": 12,
+        "2009": 14,
+        "2010": 8,
+        "2011": 16,
+        "2012": 19,
+        "2013": 13,
+        "2014": 16,
+        "2015": 12,
+        "2016": 10,
+        "2017": 12,
+        "2018": 11,
+        "2019": 8,
+        "2020": 15,
+        "2021": 10,
+        "2022": 8,
+        "2023": 8,
+        "2024": 7,
+        "2025": 9
       }
     },
     "bgi": {
@@ -478,280 +618,108 @@
         "2025": 6
       }
     },
-    "biovu": {
-      "name": "BioVU Vanderbilt",
+    "qbb": {
+      "name": "Qatar Biobank",
       "yearly": {
-        "2010": 5,
-        "2011": 3,
-        "2012": 5,
-        "2013": 8,
-        "2014": 8,
-        "2015": 10,
-        "2016": 6,
-        "2017": 17,
-        "2018": 5,
-        "2019": 7,
-        "2020": 7,
-        "2021": 7,
-        "2022": 7,
-        "2023": 10,
-        "2024": 6,
-        "2025": 8
-      }
-    },
-    "biovu; whi": {
-      "name": "BioVU Vanderbilt; Women's Health Initiative",
-      "yearly": {
-        "2016": 1
-      }
-    },
-    "biovu; bbj": {
-      "name": "BioVU Vanderbilt; Biobank Japan",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "biovu; ukb": {
-      "name": "BioVU Vanderbilt; UK Biobank",
-      "yearly": {
-        "2018": 1,
-        "2019": 2,
-        "2021": 9,
-        "2022": 1,
-        "2023": 2,
-        "2024": 6,
-        "2025": 2
-      }
-    },
-    "biovu; bbj; ckb; estbb; hunt; qbb; twb; ukb; ugr": {
-      "name": "BioVU Vanderbilt; Biobank Japan; China Kadoorie Biobank; Estonian Biobank; HUNT Study; Qatar Biobank; Taiwan Biobank; UK Biobank; Uganda Genome Resource",
-      "yearly": {
-        "2022": 1
-      }
-    },
-    "biovu; geisinger; moba": {
-      "name": "BioVU Vanderbilt; Geisinger MyCode Community Health Initiative; Norwegian Mother and Child Cohort Study",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "biovu; bbj; ukb": {
-      "name": "BioVU Vanderbilt; Biobank Japan; UK Biobank",
-      "yearly": {
-        "2021": 1,
-        "2022": 1
-      }
-    },
-    "biovu; mvp": {
-      "name": "BioVU Vanderbilt; Million Veteran Program",
-      "yearly": {
-        "2022": 1,
-        "2023": 2
-      }
-    },
-    "biovu; mvp; ukb; usnih": {
-      "name": "BioVU Vanderbilt; Million Veteran Program; UK Biobank; US NIH Biobank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "biovu; geisinger": {
-      "name": "BioVU Vanderbilt; Geisinger MyCode Community Health Initiative",
-      "yearly": {
-        "2020": 1
-      }
-    },
-    "biovu; bbj; mvp; ukb": {
-      "name": "BioVU Vanderbilt; Biobank Japan; Million Veteran Program; UK Biobank",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "biovu; usnih": {
-      "name": "BioVU Vanderbilt; US NIH Biobank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "biovu; mec; whi": {
-      "name": "BioVU Vanderbilt; Multiethnic Cohort Study; Women's Health Initiative",
-      "yearly": {
-        "2014": 1
-      }
-    },
-    "bbj": {
-      "name": "Biobank Japan",
-      "yearly": {
-        "2005": 1,
-        "2007": 1,
-        "2008": 2,
-        "2009": 2,
-        "2010": 1,
-        "2011": 5,
-        "2013": 3,
         "2014": 1,
         "2015": 1,
-        "2016": 2,
-        "2017": 18,
-        "2018": 4,
-        "2019": 3,
-        "2020": 10,
-        "2021": 18,
+        "2017": 3,
+        "2018": 6,
+        "2019": 13,
+        "2020": 15,
+        "2021": 26,
         "2022": 22,
-        "2023": 40,
-        "2024": 38,
-        "2025": 36
+        "2023": 30,
+        "2024": 28,
+        "2025": 46
       }
     },
-    "bbj; koges; ukb": {
-      "name": "Biobank Japan; Korean Genome and Epidemiology Study; UK Biobank",
+    "mec": {
+      "name": "Multiethnic Cohort Study",
       "yearly": {
-        "2025": 1
+        "2000": 1,
+        "2001": 2,
+        "2002": 2,
+        "2003": 10,
+        "2004": 8,
+        "2005": 11,
+        "2006": 10,
+        "2007": 16,
+        "2008": 9,
+        "2009": 14,
+        "2010": 9,
+        "2011": 13,
+        "2012": 17,
+        "2013": 15,
+        "2014": 9,
+        "2015": 13,
+        "2016": 6,
+        "2017": 10,
+        "2018": 11,
+        "2019": 16,
+        "2020": 18,
+        "2021": 20,
+        "2022": 19,
+        "2023": 17,
+        "2024": 17,
+        "2025": 18
       }
     },
-    "bbj; koges; twb": {
-      "name": "Biobank Japan; Korean Genome and Epidemiology Study; Taiwan Biobank",
+    "koges": {
+      "name": "Korean Genome and Epidemiology Study",
       "yearly": {
-        "2025": 1
+        "2007": 1,
+        "2009": 1,
+        "2010": 3,
+        "2011": 6,
+        "2012": 8,
+        "2013": 15,
+        "2014": 9,
+        "2015": 20,
+        "2016": 24,
+        "2017": 29,
+        "2018": 45,
+        "2019": 51,
+        "2020": 52,
+        "2021": 75,
+        "2022": 87,
+        "2023": 79,
+        "2024": 104,
+        "2025": 101
       }
     },
-    "bbj; ukb": {
-      "name": "Biobank Japan; UK Biobank",
+    "nbk": {
+      "name": "National Biobank of Korea",
       "yearly": {
+        "2011": 2,
+        "2012": 1,
+        "2013": 3,
+        "2018": 1,
         "2019": 1,
-        "2020": 6,
-        "2021": 17,
-        "2022": 17,
-        "2023": 13,
-        "2024": 22,
-        "2025": 10
-      }
-    },
-    "bbj; koges": {
-      "name": "Biobank Japan; Korean Genome and Epidemiology Study",
-      "yearly": {
-        "2022": 1,
-        "2025": 2
-      }
-    },
-    "bbj; mvp": {
-      "name": "Biobank Japan; Million Veteran Program",
-      "yearly": {
-        "2020": 1,
-        "2022": 1,
-        "2024": 1,
-        "2025": 2
-      }
-    },
-    "bbj; ckb": {
-      "name": "Biobank Japan; China Kadoorie Biobank",
-      "yearly": {
-        "2024": 3,
-        "2025": 1
-      }
-    },
-    "bbj; nbk": {
-      "name": "Biobank Japan; National Biobank of Korea",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "bbj; ckb; ukb": {
-      "name": "Biobank Japan; China Kadoorie Biobank; UK Biobank",
-      "yearly": {
-        "2020": 1,
-        "2021": 1
-      }
-    },
-    "bbj; ckb; twb": {
-      "name": "Biobank Japan; China Kadoorie Biobank; Taiwan Biobank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "bbj; estbb": {
-      "name": "Biobank Japan; Estonian Biobank",
-      "yearly": {
-        "2022": 2
-      }
-    },
-    "bbj; ckb; estbb; mvp": {
-      "name": "Biobank Japan; China Kadoorie Biobank; Estonian Biobank; Million Veteran Program",
-      "yearly": {
-        "2022": 2
-      }
-    },
-    "bbj; tommo": {
-      "name": "Biobank Japan; Tohoku Medical Megabank",
-      "yearly": {
-        "2022": 1,
-        "2023": 1,
-        "2024": 1,
-        "2025": 1
-      }
-    },
-    "bbj; cpsii; kcps; koges": {
-      "name": "Biobank Japan; Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "bbj; twb; ukb": {
-      "name": "Biobank Japan; Taiwan Biobank; UK Biobank",
-      "yearly": {
-        "2023": 2,
-        "2024": 1
-      }
-    },
-    "bbj; ckb; koges": {
-      "name": "Biobank Japan; China Kadoorie Biobank; Korean Genome and Epidemiology Study",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "bbj; ckb; estbb; whi": {
-      "name": "Biobank Japan; China Kadoorie Biobank; Estonian Biobank; Women's Health Initiative",
-      "yearly": {
-        "2021": 1
-      }
-    },
-    "bbj; mvp; ukb": {
-      "name": "Biobank Japan; Million Veteran Program; UK Biobank",
-      "yearly": {
-        "2025": 2
-      }
-    },
-    "bbj; twb": {
-      "name": "Biobank Japan; Taiwan Biobank",
-      "yearly": {
         "2021": 1,
         "2022": 1,
-        "2024": 1,
-        "2025": 1
+        "2023": 1,
+        "2024": 2
       }
     },
-    "bbj; tommo; ukb": {
-      "name": "Biobank Japan; Tohoku Medical Megabank; UK Biobank",
+    "kcps": {
+      "name": "Korean Cancer Prevention Study",
       "yearly": {
+        "2006": 1,
+        "2007": 1,
+        "2008": 1,
+        "2009": 1,
+        "2010": 3,
+        "2011": 1,
+        "2012": 1,
+        "2013": 1,
+        "2015": 1,
+        "2016": 1,
+        "2018": 3,
+        "2021": 1,
+        "2022": 1,
+        "2023": 2,
         "2024": 1
-      }
-    },
-    "bbj; estbb; ukb": {
-      "name": "Biobank Japan; Estonian Biobank; UK Biobank",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "bbj; ckb; tommo; ukb": {
-      "name": "Biobank Japan; China Kadoorie Biobank; Tohoku Medical Megabank; UK Biobank",
-      "yearly": {
-        "2022": 1
-      }
-    },
-    "bbj; cpsii; kcps; koges; twb; ukb": {
-      "name": "Biobank Japan; Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study; Taiwan Biobank; UK Biobank",
-      "yearly": {
-        "2025": 1
       }
     },
     "c19genomnet": {
@@ -780,22 +748,53 @@
         "2025": 39
       }
     },
-    "constances; nako; ukb": {
-      "name": "CONSTANCES; German National Cohort (NAKO); UK Biobank",
+    "nako": {
+      "name": "German National Cohort (NAKO)",
       "yearly": {
-        "2024": 1
+        "2012": 1,
+        "2014": 13,
+        "2015": 8,
+        "2016": 9,
+        "2017": 7,
+        "2018": 4,
+        "2019": 6,
+        "2020": 22,
+        "2021": 6,
+        "2022": 14,
+        "2023": 20,
+        "2024": 18,
+        "2025": 35
       }
     },
-    "constances; ukb": {
-      "name": "CONSTANCES; UK Biobank",
+    "epic": {
+      "name": "European Prospective Investigation into Cancer and Nutrition",
       "yearly": {
-        "2024": 1
-      }
-    },
-    "constances; epic; hunt; plco": {
-      "name": "CONSTANCES; European Prospective Investigation into Cancer and Nutrition; HUNT Study; PLCO Cancer Screening Trial",
-      "yearly": {
-        "2024": 1
+        "2000": 11,
+        "2001": 21,
+        "2002": 39,
+        "2003": 29,
+        "2004": 50,
+        "2005": 48,
+        "2006": 64,
+        "2007": 85,
+        "2008": 69,
+        "2009": 81,
+        "2010": 83,
+        "2011": 121,
+        "2012": 107,
+        "2013": 110,
+        "2014": 113,
+        "2015": 108,
+        "2016": 88,
+        "2017": 67,
+        "2018": 61,
+        "2019": 81,
+        "2020": 77,
+        "2021": 73,
+        "2022": 59,
+        "2023": 50,
+        "2024": 46,
+        "2025": 55
       }
     },
     "cts": {
@@ -827,29 +826,35 @@
         "2025": 10
       }
     },
-    "cts; mec": {
-      "name": "California Teachers Study; Multiethnic Cohort Study",
+    "nhs": {
+      "name": "Nurses' Health Study",
       "yearly": {
-        "2010": 1
-      }
-    },
-    "cts; whi": {
-      "name": "California Teachers Study; Women's Health Initiative",
-      "yearly": {
-        "2010": 1,
-        "2011": 1
-      }
-    },
-    "cts; nhs": {
-      "name": "California Teachers Study; Nurses' Health Study",
-      "yearly": {
-        "2013": 1
-      }
-    },
-    "cts; mec; nhs": {
-      "name": "California Teachers Study; Multiethnic Cohort Study; Nurses' Health Study",
-      "yearly": {
-        "2007": 1
+        "2000": 31,
+        "2001": 37,
+        "2002": 43,
+        "2003": 45,
+        "2004": 75,
+        "2005": 67,
+        "2006": 76,
+        "2007": 68,
+        "2008": 70,
+        "2009": 89,
+        "2010": 81,
+        "2011": 96,
+        "2012": 93,
+        "2013": 113,
+        "2014": 93,
+        "2015": 85,
+        "2016": 129,
+        "2017": 89,
+        "2018": 118,
+        "2019": 104,
+        "2020": 95,
+        "2021": 90,
+        "2022": 97,
+        "2023": 73,
+        "2024": 71,
+        "2025": 65
       }
     },
     "cptp": {
@@ -867,142 +872,35 @@
         "2025": 4
       }
     },
-    "cpsii": {
-      "name": "Cancer Prevention Study II Nutrition Cohort",
+    "nshds": {
+      "name": "Northern Sweden Health and Disease Study",
       "yearly": {
-        "2000": 5,
-        "2001": 6,
-        "2002": 9,
-        "2003": 12,
-        "2004": 10,
-        "2005": 20,
-        "2006": 8,
-        "2007": 15,
-        "2008": 12,
-        "2009": 14,
-        "2010": 8,
-        "2011": 16,
-        "2012": 19,
-        "2013": 13,
-        "2014": 16,
-        "2015": 12,
-        "2016": 10,
-        "2017": 12,
-        "2018": 11,
-        "2019": 8,
-        "2020": 15,
-        "2021": 10,
-        "2022": 8,
-        "2023": 8,
-        "2024": 7,
-        "2025": 9
-      }
-    },
-    "cpsii; nhs": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; Nurses' Health Study",
-      "yearly": {
-        "2003": 1,
-        "2009": 2,
-        "2011": 1,
-        "2013": 1,
-        "2018": 2,
-        "2023": 1,
-        "2025": 1
-      }
-    },
-    "cpsii; mec; nhs": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study; Nurses' Health Study",
-      "yearly": {
-        "2011": 1,
-        "2012": 1,
-        "2013": 1,
-        "2014": 1,
-        "2015": 1
-      }
-    },
-    "cpsii; kcps": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study",
-      "yearly": {
-        "2012": 1,
-        "2014": 1,
-        "2015": 4,
+        "2000": 1,
+        "2001": 2,
+        "2002": 3,
+        "2003": 4,
+        "2004": 5,
+        "2005": 1,
+        "2006": 3,
+        "2007": 1,
+        "2008": 3,
+        "2009": 5,
+        "2010": 4,
+        "2011": 3,
+        "2012": 2,
+        "2013": 6,
+        "2014": 3,
+        "2015": 3,
         "2016": 3,
-        "2017": 3,
-        "2018": 5,
-        "2019": 2,
-        "2020": 1,
-        "2022": 3,
-        "2023": 2,
-        "2024": 2,
-        "2025": 11
-      }
-    },
-    "cpsii; plco": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; PLCO Cancer Screening Trial",
-      "yearly": {
-        "2008": 2,
-        "2010": 1,
-        "2013": 1,
-        "2014": 1,
-        "2015": 1,
-        "2016": 1,
-        "2018": 3,
-        "2019": 1,
-        "2024": 1,
-        "2025": 1
-      }
-    },
-    "cpsii; epic; nshds": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition; Northern Sweden Health and Disease Study",
-      "yearly": {
-        "2019": 1
-      }
-    },
-    "cpsii; epic": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition",
-      "yearly": {
-        "2006": 1,
-        "2020": 1
-      }
-    },
-    "cpsii; kcps; ukb": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; UK Biobank",
-      "yearly": {
-        "2025": 2
-      }
-    },
-    "cpsii; whi": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; Women's Health Initiative",
-      "yearly": {
-        "2009": 1,
-        "2023": 1
-      }
-    },
-    "cpsii; epic; nhs": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study",
-      "yearly": {
-        "2006": 1,
-        "2008": 1
-      }
-    },
-    "cpsii; mec; nhs; whi": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study; Nurses' Health Study; Women's Health Initiative",
-      "yearly": {
-        "2019": 1,
-        "2021": 1
-      }
-    },
-    "cpsii; kcps; koges": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; Korean Cancer Prevention Study; Korean Genome and Epidemiology Study",
-      "yearly": {
-        "2019": 1,
-        "2020": 2
-      }
-    },
-    "cpsii; mec": {
-      "name": "Cancer Prevention Study II Nutrition Cohort; Multiethnic Cohort Study",
-      "yearly": {
-        "2014": 1
+        "2017": 9,
+        "2018": 2,
+        "2019": 3,
+        "2020": 6,
+        "2021": 4,
+        "2022": 5,
+        "2023": 6,
+        "2024": 7,
+        "2025": 5
       }
     },
     "chop_cag": {
@@ -1014,61 +912,62 @@
         "2024": 2
       }
     },
-    "ckb": {
-      "name": "China Kadoorie Biobank",
+    "smwhs": {
+      "name": "Shanghai Men and Women's Health Studies",
       "yearly": {
-        "2011": 1,
-        "2012": 2,
-        "2013": 5,
-        "2014": 10,
-        "2015": 20,
-        "2016": 18,
-        "2017": 34,
-        "2018": 39,
-        "2019": 43,
-        "2020": 41,
-        "2021": 49,
-        "2022": 74,
-        "2023": 66,
-        "2024": 60,
-        "2025": 65
-      }
-    },
-    "ckb; ukb": {
-      "name": "China Kadoorie Biobank; UK Biobank",
-      "yearly": {
-        "2017": 1,
-        "2019": 1,
+        "2002": 1,
+        "2003": 2,
+        "2004": 5,
+        "2005": 5,
+        "2006": 5,
+        "2007": 13,
+        "2008": 12,
+        "2009": 15,
+        "2010": 11,
+        "2011": 13,
+        "2012": 14,
+        "2013": 22,
+        "2014": 13,
+        "2015": 13,
+        "2016": 8,
+        "2017": 10,
+        "2018": 10,
+        "2019": 6,
         "2020": 1,
-        "2021": 3,
-        "2022": 3,
+        "2021": 5,
+        "2022": 12,
+        "2023": 4,
+        "2024": 6,
+        "2025": 4
+      }
+    },
+    "mws": {
+      "name": "Million Women Study",
+      "yearly": {
+        "2001": 1,
+        "2003": 22,
+        "2004": 8,
+        "2005": 8,
+        "2006": 6,
+        "2007": 9,
+        "2008": 6,
+        "2009": 5,
+        "2010": 9,
+        "2011": 4,
+        "2012": 9,
+        "2013": 5,
+        "2014": 4,
+        "2015": 3,
+        "2016": 8,
+        "2017": 3,
+        "2018": 3,
+        "2019": 8,
+        "2020": 2,
+        "2021": 2,
+        "2022": 4,
         "2023": 5,
-        "2024": 8,
-        "2025": 16
-      }
-    },
-    "ckb; smwhs": {
-      "name": "China Kadoorie Biobank; Shanghai Men and Women's Health Studies",
-      "yearly": {
-        "2021": 1
-      }
-    },
-    "ckb; mws; ukb": {
-      "name": "China Kadoorie Biobank; Million Women Study; UK Biobank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "ckb; qbb; ukb": {
-      "name": "China Kadoorie Biobank; Qatar Biobank; UK Biobank",
-      "yearly": {
-        "2021": 1
-      }
-    },
-    "ckb; estbb; ukb": {
-      "name": "China Kadoorie Biobank; Estonian Biobank; UK Biobank",
-      "yearly": {
-        "2024": 1
+        "2024": 3,
+        "2025": 7
       }
     },
     "peace": {
@@ -1112,13 +1011,6 @@
         "2025": 1
       }
     },
-    "dnb; dnbc": {
-      "name": "Danish National Biobank; Danish National Birth Cohort",
-      "yearly": {
-        "2017": 1,
-        "2023": 1
-      }
-    },
     "dnbc": {
       "name": "Danish National Birth Cohort",
       "yearly": {
@@ -1147,38 +1039,6 @@
         "2023": 24,
         "2024": 20,
         "2025": 32
-      }
-    },
-    "dnbc; moba": {
-      "name": "Danish National Birth Cohort; Norwegian Mother and Child Cohort Study",
-      "yearly": {
-        "2012": 1,
-        "2013": 1,
-        "2014": 1,
-        "2015": 2,
-        "2016": 2,
-        "2017": 1,
-        "2018": 4,
-        "2019": 2,
-        "2021": 1,
-        "2022": 2,
-        "2024": 1
-      }
-    },
-    "dnbc; nhsii; nhs": {
-      "name": "Danish National Birth Cohort; Nurses' Health Study II; Nurses' Health Study",
-      "yearly": {
-        "2014": 1,
-        "2018": 1,
-        "2019": 1,
-        "2020": 1
-      }
-    },
-    "dpuk; ukb": {
-      "name": "Dementias Platform UK; UK Biobank",
-      "yearly": {
-        "2023": 1,
-        "2025": 1
       }
     },
     "dpuk": {
@@ -1216,13 +1076,6 @@
         "2025": 73
       }
     },
-    "elsa_brasil; ukb": {
-      "name": "ELSA-Brasil; UK Biobank",
-      "yearly": {
-        "2024": 1,
-        "2025": 5
-      }
-    },
     "echo": {
       "name": "ECHO Cohort",
       "yearly": {
@@ -1237,12 +1090,6 @@
         "2023": 49,
         "2024": 55,
         "2025": 80
-      }
-    },
-    "echo; whi": {
-      "name": "ECHO Cohort; Women's Health Initiative",
-      "yearly": {
-        "2021": 1
       }
     },
     "epihealth": {
@@ -1262,253 +1109,69 @@
         "2025": 3
       }
     },
-    "epihealth; simpler": {
-      "name": "EpiHealth; SIMPLER",
+    "simpler": {
+      "name": "SIMPLER",
       "yearly": {
-        "2019": 2
+        "2002": 1,
+        "2004": 6,
+        "2005": 16,
+        "2006": 17,
+        "2007": 8,
+        "2008": 10,
+        "2009": 18,
+        "2010": 8,
+        "2011": 13,
+        "2012": 14,
+        "2013": 15,
+        "2014": 23,
+        "2015": 19,
+        "2016": 22,
+        "2017": 16,
+        "2018": 16,
+        "2019": 8,
+        "2020": 5,
+        "2021": 10,
+        "2022": 11,
+        "2023": 6,
+        "2024": 10,
+        "2025": 5
       }
     },
-    "epihealth; lifegene": {
-      "name": "EpiHealth; LifeGene",
+    "lifegene": {
+      "name": "LifeGene",
       "yearly": {
-        "2018": 2,
-        "2021": 1
-      }
-    },
-    "estbb": {
-      "name": "Estonian Biobank",
-      "yearly": {
-        "2002": 2,
-        "2004": 2,
-        "2006": 1,
-        "2007": 1,
         "2010": 2,
+        "2011": 1,
         "2012": 1,
-        "2013": 4,
-        "2014": 43,
-        "2015": 58,
-        "2016": 58,
-        "2017": 71,
-        "2018": 43,
-        "2019": 62,
-        "2020": 30,
-        "2021": 42,
-        "2022": 33,
-        "2023": 32,
-        "2024": 41,
-        "2025": 48
-      }
-    },
-    "estbb; mvp": {
-      "name": "Estonian Biobank; Million Veteran Program",
-      "yearly": {
-        "2017": 1,
-        "2018": 2,
-        "2019": 1,
-        "2022": 1,
-        "2023": 1,
-        "2024": 3,
-        "2025": 4
-      }
-    },
-    "estbb; ukb": {
-      "name": "Estonian Biobank; UK Biobank",
-      "yearly": {
-        "2004": 1,
-        "2006": 1,
-        "2015": 1,
-        "2016": 3,
         "2017": 2,
-        "2018": 4,
-        "2019": 7,
-        "2020": 2,
-        "2021": 4,
-        "2022": 9,
-        "2023": 7,
-        "2024": 9,
-        "2025": 10
-      }
-    },
-    "estbb; hunt": {
-      "name": "Estonian Biobank; HUNT Study",
-      "yearly": {
-        "2015": 1,
-        "2018": 1
-      }
-    },
-    "estbb; whi": {
-      "name": "Estonian Biobank; Women's Health Initiative",
-      "yearly": {
-        "2016": 1,
-        "2019": 1
-      }
-    },
-    "estbb; gel": {
-      "name": "Estonian Biobank; Genomics England / 100,000 Genomes Project",
-      "yearly": {
-        "2015": 1,
-        "2016": 1,
         "2018": 1,
         "2019": 1,
-        "2025": 1
-      }
-    },
-    "estbb; moba; ukb": {
-      "name": "Estonian Biobank; Norwegian Mother and Child Cohort Study; UK Biobank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "estbb; gel; ukb": {
-      "name": "Estonian Biobank; Genomics England / 100,000 Genomes Project; UK Biobank",
-      "yearly": {
-        "2017": 1,
-        "2020": 1
-      }
-    },
-    "estbb; mvp; ukb": {
-      "name": "Estonian Biobank; Million Veteran Program; UK Biobank",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "epic": {
-      "name": "European Prospective Investigation into Cancer and Nutrition",
-      "yearly": {
-        "2000": 11,
-        "2001": 21,
-        "2002": 39,
-        "2003": 29,
-        "2004": 50,
-        "2005": 48,
-        "2006": 64,
-        "2007": 85,
-        "2008": 69,
-        "2009": 81,
-        "2010": 83,
-        "2011": 121,
-        "2012": 107,
-        "2013": 110,
-        "2014": 113,
-        "2015": 108,
-        "2016": 88,
-        "2017": 67,
-        "2018": 61,
-        "2019": 81,
-        "2020": 77,
-        "2021": 73,
-        "2022": 59,
-        "2023": 50,
-        "2024": 46,
-        "2025": 55
-      }
-    },
-    "epic; ukb": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; UK Biobank",
-      "yearly": {
-        "2019": 3,
         "2020": 3,
+        "2021": 2,
+        "2022": 2,
+        "2023": 2,
+        "2024": 2,
+        "2025": 7
+      }
+    },
+    "generations": {
+      "name": "Generations Study",
+      "yearly": {
+        "2010": 2,
+        "2011": 5,
+        "2012": 2,
+        "2014": 5,
+        "2015": 2,
+        "2016": 2,
+        "2017": 4,
+        "2018": 6,
+        "2019": 8,
+        "2020": 7,
         "2021": 3,
-        "2022": 6,
-        "2023": 9,
-        "2024": 7,
-        "2025": 9
-      }
-    },
-    "epic; nhs": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study",
-      "yearly": {
-        "2004": 2,
-        "2005": 1,
-        "2009": 1,
-        "2011": 1,
-        "2014": 1,
-        "2015": 1,
-        "2016": 1,
-        "2017": 1
-      }
-    },
-    "epic; mvp; ukb": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Million Veteran Program; UK Biobank",
-      "yearly": {
-        "2022": 1
-      }
-    },
-    "epic; nshds": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Northern Sweden Health and Disease Study",
-      "yearly": {
-        "2018": 2,
-        "2022": 1,
-        "2023": 1
-      }
-    },
-    "epic; nhs; simpler": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study; SIMPLER",
-      "yearly": {
-        "2022": 1
-      }
-    },
-    "epic; whi": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Women's Health Initiative",
-      "yearly": {
-        "2018": 1
-      }
-    },
-    "epic; hunt": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; HUNT Study",
-      "yearly": {
-        "2018": 1
-      }
-    },
-    "epic; plco": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; PLCO Cancer Screening Trial",
-      "yearly": {
-        "2015": 1,
-        "2019": 1,
-        "2021": 1
-      }
-    },
-    "epic; generations": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Generations Study",
-      "yearly": {
-        "2012": 1,
-        "2015": 1
-      }
-    },
-    "epic; nhs; smwhs": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study; Shanghai Men and Women's Health Studies",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "epic; mws; ukb": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Million Women Study; UK Biobank",
-      "yearly": {
-        "2020": 1
-      }
-    },
-    "epic; plco; whi": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; PLCO Cancer Screening Trial; Women's Health Initiative",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "epic; gel": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Genomics England / 100,000 Genomes Project",
-      "yearly": {
-        "2019": 1
-      }
-    },
-    "epic; mec": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Multiethnic Cohort Study",
-      "yearly": {
-        "2011": 1
-      }
-    },
-    "epic; nhsii; nhs": {
-      "name": "European Prospective Investigation into Cancer and Nutrition; Nurses' Health Study II; Nurses' Health Study",
-      "yearly": {
-        "2025": 1
+        "2022": 8,
+        "2023": 5,
+        "2024": 5,
+        "2025": 5
       }
     },
     "fmc": {
@@ -1537,36 +1200,6 @@
         "2025": 1
       }
     },
-    "fmc; hunt": {
-      "name": "Finnish Maternity Cohort Serum Bank; HUNT Study",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "geisinger; ukb": {
-      "name": "Geisinger MyCode Community Health Initiative; UK Biobank",
-      "yearly": {
-        "2021": 1,
-        "2022": 2,
-        "2023": 4,
-        "2024": 1,
-        "2025": 3
-      }
-    },
-    "geisinger": {
-      "name": "Geisinger MyCode Community Health Initiative",
-      "yearly": {
-        "2016": 1,
-        "2018": 6,
-        "2019": 4,
-        "2020": 5,
-        "2021": 7,
-        "2022": 7,
-        "2023": 6,
-        "2024": 2,
-        "2025": 12
-      }
-    },
     "genv": {
       "name": "Generation Victoria",
       "yearly": {
@@ -1582,147 +1215,12 @@
         "2025": 1
       }
     },
-    "generations": {
-      "name": "Generations Study",
-      "yearly": {
-        "2010": 2,
-        "2011": 5,
-        "2012": 2,
-        "2014": 5,
-        "2015": 2,
-        "2016": 2,
-        "2017": 4,
-        "2018": 6,
-        "2019": 8,
-        "2020": 7,
-        "2021": 3,
-        "2022": 8,
-        "2023": 5,
-        "2024": 5,
-        "2025": 5
-      }
-    },
-    "generations; ukb": {
-      "name": "Generations Study; UK Biobank",
-      "yearly": {
-        "2021": 1
-      }
-    },
-    "generations; nhsii; nhs": {
-      "name": "Generations Study; Nurses' Health Study II; Nurses' Health Study",
-      "yearly": {
-        "2022": 1
-      }
-    },
-    "genes_health": {
-      "name": "Genes & Health",
-      "yearly": {
-        "2001": 1,
-        "2007": 1,
-        "2009": 1,
-        "2013": 1,
-        "2016": 1,
-        "2020": 1,
-        "2021": 1,
-        "2022": 2,
-        "2023": 6,
-        "2024": 2,
-        "2025": 9
-      }
-    },
-    "genes_health; ukb": {
-      "name": "Genes & Health; UK Biobank",
-      "yearly": {
-        "2023": 1,
-        "2025": 2
-      }
-    },
-    "genes_health; gel; ukb": {
-      "name": "Genes & Health; Genomics England / 100,000 Genomes Project; UK Biobank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "gel": {
-      "name": "Genomics England / 100,000 Genomes Project",
-      "yearly": {
-        "2014": 1,
-        "2015": 5,
-        "2016": 17,
-        "2017": 21,
-        "2018": 27,
-        "2019": 51,
-        "2020": 53,
-        "2021": 76,
-        "2022": 115,
-        "2023": 90,
-        "2024": 98,
-        "2025": 95
-      }
-    },
-    "gel; mvp": {
-      "name": "Genomics England / 100,000 Genomes Project; Million Veteran Program",
-      "yearly": {
-        "2020": 1,
-        "2022": 2
-      }
-    },
-    "gel; ukb": {
-      "name": "Genomics England / 100,000 Genomes Project; UK Biobank",
-      "yearly": {
-        "2020": 2,
-        "2021": 1,
-        "2022": 4,
-        "2023": 6,
-        "2024": 8,
-        "2025": 9
-      }
-    },
-    "gel; ucl; ukb": {
-      "name": "Genomics England / 100,000 Genomes Project; UCL Biobank; UK Biobank",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "gel; mvp; ukb": {
-      "name": "Genomics England / 100,000 Genomes Project; Million Veteran Program; UK Biobank",
+    "ucl": {
+      "name": "UCL Biobank",
       "yearly": {
         "2016": 1,
-        "2024": 1
-      }
-    },
-    "nako": {
-      "name": "German National Cohort (NAKO)",
-      "yearly": {
-        "2012": 1,
-        "2014": 13,
-        "2015": 8,
-        "2016": 9,
-        "2017": 7,
-        "2018": 4,
-        "2019": 6,
-        "2020": 22,
-        "2021": 6,
-        "2022": 14,
-        "2023": 20,
-        "2024": 18,
-        "2025": 35
-      }
-    },
-    "nako; ukb": {
-      "name": "German National Cohort (NAKO); UK Biobank",
-      "yearly": {
-        "2021": 1,
         "2022": 2,
-        "2023": 1,
-        "2024": 1,
-        "2025": 4
-      }
-    },
-    "nako; twb; usnih": {
-      "name": "German National Cohort (NAKO); Taiwan Biobank; US NIH Biobank",
-      "yearly": {
-        "2019": 1
+        "2025": 1
       }
     },
     "golestan": {
@@ -1746,123 +1244,6 @@
         "2023": 9,
         "2024": 13,
         "2025": 14
-      }
-    },
-    "golestan; jphc": {
-      "name": "Golestan Cohort Study; JPHC Study",
-      "yearly": {
-        "2023": 1
-      }
-    },
-    "hunt": {
-      "name": "HUNT Study",
-      "yearly": {
-        "2000": 4,
-        "2001": 5,
-        "2002": 9,
-        "2003": 14,
-        "2004": 7,
-        "2005": 13,
-        "2006": 20,
-        "2007": 31,
-        "2008": 34,
-        "2009": 34,
-        "2010": 28,
-        "2011": 48,
-        "2012": 62,
-        "2013": 80,
-        "2014": 52,
-        "2015": 61,
-        "2016": 60,
-        "2017": 70,
-        "2018": 72,
-        "2019": 68,
-        "2020": 63,
-        "2021": 52,
-        "2022": 47,
-        "2023": 77,
-        "2024": 77,
-        "2025": 97
-      }
-    },
-    "hunt; ukb": {
-      "name": "HUNT Study; UK Biobank",
-      "yearly": {
-        "2017": 1,
-        "2018": 1,
-        "2019": 3,
-        "2020": 1,
-        "2021": 3,
-        "2022": 4,
-        "2023": 3,
-        "2024": 3,
-        "2025": 3
-      }
-    },
-    "hunt; nhs": {
-      "name": "HUNT Study; Nurses' Health Study",
-      "yearly": {
-        "2016": 1
-      }
-    },
-    "hunt; plco": {
-      "name": "HUNT Study; PLCO Cancer Screening Trial",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "hunt; nshds": {
-      "name": "HUNT Study; Northern Sweden Health and Disease Study",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "hunt; moba": {
-      "name": "HUNT Study; Norwegian Mother and Child Cohort Study",
-      "yearly": {
-        "2021": 1
-      }
-    },
-    "healthy_nevada": {
-      "name": "Healthy Nevada",
-      "yearly": {
-        "2019": 1,
-        "2020": 1,
-        "2021": 1,
-        "2022": 5,
-        "2024": 6,
-        "2025": 1
-      }
-    },
-    "healthy_nevada; ukb": {
-      "name": "Healthy Nevada; UK Biobank",
-      "yearly": {
-        "2020": 1,
-        "2021": 1,
-        "2024": 1
-      }
-    },
-    "iganga_mayuge": {
-      "name": "Iganga Mayuge HDSS",
-      "yearly": {
-        "2007": 1,
-        "2008": 2,
-        "2009": 2,
-        "2011": 3,
-        "2012": 1,
-        "2013": 1,
-        "2014": 2,
-        "2015": 4,
-        "2016": 3,
-        "2017": 4,
-        "2018": 1,
-        "2019": 6,
-        "2020": 9,
-        "2021": 5,
-        "2022": 2,
-        "2023": 1,
-        "2024": 3,
-        "2025": 4
       }
     },
     "jphc": {
@@ -1895,31 +1276,44 @@
         "2025": 21
       }
     },
-    "jphc; smwhs": {
-      "name": "JPHC Study; Shanghai Men and Women's Health Studies",
+    "healthy_nevada": {
+      "name": "Healthy Nevada",
       "yearly": {
+        "2019": 1,
         "2020": 1,
-        "2023": 1
+        "2021": 1,
+        "2022": 5,
+        "2024": 6,
+        "2025": 1
       }
     },
-    "jphc; tommo": {
-      "name": "JPHC Study; Tohoku Medical Megabank",
+    "iganga_mayuge": {
+      "name": "Iganga Mayuge HDSS",
       "yearly": {
-        "2015": 1
+        "2007": 1,
+        "2008": 2,
+        "2009": 2,
+        "2011": 3,
+        "2012": 1,
+        "2013": 1,
+        "2014": 2,
+        "2015": 4,
+        "2016": 3,
+        "2017": 4,
+        "2018": 1,
+        "2019": 6,
+        "2020": 9,
+        "2021": 5,
+        "2022": 2,
+        "2023": 1,
+        "2024": 3,
+        "2025": 4
       }
     },
     "jhu": {
       "name": "Johns Hopkins University Biobank",
       "yearly": {
         "2016": 1
-      }
-    },
-    "jhu; ukb": {
-      "name": "Johns Hopkins University Biobank; UK Biobank",
-      "yearly": {
-        "2022": 1,
-        "2023": 1,
-        "2025": 3
       }
     },
     "kemri": {
@@ -1941,84 +1335,12 @@
         "2025": 1
       }
     },
-    "kprb; ukb": {
-      "name": "Kaiser Permanente Research Bank; UK Biobank",
-      "yearly": {
-        "2021": 4,
-        "2022": 1
-      }
-    },
     "kprb": {
       "name": "Kaiser Permanente Research Bank",
       "yearly": {
         "2022": 4,
         "2023": 2,
         "2024": 1
-      }
-    },
-    "kcps": {
-      "name": "Korean Cancer Prevention Study",
-      "yearly": {
-        "2006": 1,
-        "2007": 1,
-        "2008": 1,
-        "2009": 1,
-        "2010": 3,
-        "2011": 1,
-        "2012": 1,
-        "2013": 1,
-        "2015": 1,
-        "2016": 1,
-        "2018": 3,
-        "2021": 1,
-        "2022": 1,
-        "2023": 2,
-        "2024": 1
-      }
-    },
-    "kcps; koges": {
-      "name": "Korean Cancer Prevention Study; Korean Genome and Epidemiology Study",
-      "yearly": {
-        "2021": 1
-      }
-    },
-    "koges": {
-      "name": "Korean Genome and Epidemiology Study",
-      "yearly": {
-        "2007": 1,
-        "2009": 1,
-        "2010": 3,
-        "2011": 6,
-        "2012": 8,
-        "2013": 15,
-        "2014": 9,
-        "2015": 20,
-        "2016": 24,
-        "2017": 29,
-        "2018": 45,
-        "2019": 51,
-        "2020": 52,
-        "2021": 75,
-        "2022": 87,
-        "2023": 79,
-        "2024": 104,
-        "2025": 101
-      }
-    },
-    "koges; ukb": {
-      "name": "Korean Genome and Epidemiology Study; UK Biobank",
-      "yearly": {
-        "2022": 1,
-        "2023": 1,
-        "2024": 5,
-        "2025": 2
-      }
-    },
-    "koges; nbk": {
-      "name": "Korean Genome and Epidemiology Study; National Biobank of Korea",
-      "yearly": {
-        "2012": 1,
-        "2025": 1
       }
     },
     "lifepath": {
@@ -2045,23 +1367,6 @@
         "2025": 1
       }
     },
-    "lifegene": {
-      "name": "LifeGene",
-      "yearly": {
-        "2010": 2,
-        "2011": 1,
-        "2012": 1,
-        "2017": 2,
-        "2018": 1,
-        "2019": 1,
-        "2020": 3,
-        "2021": 2,
-        "2022": 2,
-        "2023": 2,
-        "2024": 2,
-        "2025": 7
-      }
-    },
     "mauco": {
       "name": "MAUCO",
       "yearly": {
@@ -2074,261 +1379,10 @@
         "2025": 3
       }
     },
-    "mauco; usnih": {
-      "name": "MAUCO; US NIH Biobank",
-      "yearly": {
-        "2016": 1
-      }
-    },
-    "mvp": {
-      "name": "Million Veteran Program",
-      "yearly": {
-        "2003": 1,
-        "2012": 1,
-        "2014": 1,
-        "2016": 3,
-        "2018": 9,
-        "2019": 13,
-        "2020": 20,
-        "2021": 35,
-        "2022": 55,
-        "2023": 55,
-        "2024": 65,
-        "2025": 66
-      }
-    },
-    "mvp; ukb": {
-      "name": "Million Veteran Program; UK Biobank",
-      "yearly": {
-        "2018": 2,
-        "2019": 4,
-        "2020": 7,
-        "2021": 10,
-        "2022": 11,
-        "2023": 14,
-        "2024": 12,
-        "2025": 18
-      }
-    },
-    "mvp; ukb; usnih": {
-      "name": "Million Veteran Program; UK Biobank; US NIH Biobank",
-      "yearly": {
-        "2020": 1
-      }
-    },
-    "mws": {
-      "name": "Million Women Study",
-      "yearly": {
-        "2001": 1,
-        "2003": 22,
-        "2004": 8,
-        "2005": 8,
-        "2006": 6,
-        "2007": 9,
-        "2008": 6,
-        "2009": 5,
-        "2010": 9,
-        "2011": 4,
-        "2012": 9,
-        "2013": 5,
-        "2014": 4,
-        "2015": 3,
-        "2016": 8,
-        "2017": 3,
-        "2018": 3,
-        "2019": 8,
-        "2020": 2,
-        "2021": 2,
-        "2022": 4,
-        "2023": 5,
-        "2024": 3,
-        "2025": 7
-      }
-    },
-    "mws; whi": {
-      "name": "Million Women Study; Women's Health Initiative",
-      "yearly": {
-        "2003": 1,
-        "2004": 9,
-        "2005": 2,
-        "2006": 3,
-        "2007": 7,
-        "2008": 2,
-        "2009": 6,
-        "2010": 4,
-        "2011": 6,
-        "2012": 2,
-        "2013": 3,
-        "2016": 3,
-        "2021": 1,
-        "2022": 4,
-        "2023": 1,
-        "2024": 1
-      }
-    },
-    "mws; ukb; whi": {
-      "name": "Million Women Study; UK Biobank; Women's Health Initiative",
-      "yearly": {
-        "2022": 1
-      }
-    },
-    "mws; plco": {
-      "name": "Million Women Study; PLCO Cancer Screening Trial",
-      "yearly": {
-        "2019": 1
-      }
-    },
-    "mws; ukb": {
-      "name": "Million Women Study; UK Biobank",
-      "yearly": {
-        "2016": 1,
-        "2019": 1,
-        "2021": 1,
-        "2025": 1
-      }
-    },
-    "mec": {
-      "name": "Multiethnic Cohort Study",
-      "yearly": {
-        "2000": 1,
-        "2001": 2,
-        "2002": 2,
-        "2003": 10,
-        "2004": 8,
-        "2005": 11,
-        "2006": 10,
-        "2007": 16,
-        "2008": 9,
-        "2009": 14,
-        "2010": 9,
-        "2011": 13,
-        "2012": 17,
-        "2013": 15,
-        "2014": 9,
-        "2015": 13,
-        "2016": 6,
-        "2017": 10,
-        "2018": 11,
-        "2019": 16,
-        "2020": 18,
-        "2021": 20,
-        "2022": 19,
-        "2023": 17,
-        "2024": 17,
-        "2025": 18
-      }
-    },
-    "mec; plco": {
-      "name": "Multiethnic Cohort Study; PLCO Cancer Screening Trial",
-      "yearly": {
-        "2023": 2
-      }
-    },
-    "mec; plco; smwhs": {
-      "name": "Multiethnic Cohort Study; PLCO Cancer Screening Trial; Shanghai Men and Women's Health Studies",
-      "yearly": {
-        "2024": 1
-      }
-    },
-    "mec; whi": {
-      "name": "Multiethnic Cohort Study; Women's Health Initiative",
-      "yearly": {
-        "2012": 1,
-        "2019": 1,
-        "2022": 1
-      }
-    },
-    "mec; nhs": {
-      "name": "Multiethnic Cohort Study; Nurses' Health Study",
-      "yearly": {
-        "2021": 1
-      }
-    },
-    "mec; ukb": {
-      "name": "Multiethnic Cohort Study; UK Biobank",
-      "yearly": {
-        "2024": 1,
-        "2025": 1
-      }
-    },
-    "nhsii; nhs": {
-      "name": "Nurses' Health Study II; Nurses' Health Study",
-      "yearly": {
-        "2000": 4,
-        "2001": 10,
-        "2002": 5,
-        "2003": 8,
-        "2004": 15,
-        "2005": 20,
-        "2006": 28,
-        "2007": 20,
-        "2008": 19,
-        "2009": 27,
-        "2010": 28,
-        "2011": 28,
-        "2012": 41,
-        "2013": 45,
-        "2014": 51,
-        "2015": 50,
-        "2016": 63,
-        "2017": 52,
-        "2018": 67,
-        "2019": 43,
-        "2020": 55,
-        "2021": 61,
-        "2022": 82,
-        "2023": 59,
-        "2024": 47,
-        "2025": 63
-      }
-    },
-    "nhsii; nhs; whi": {
-      "name": "Nurses' Health Study II; Nurses' Health Study; Women's Health Initiative",
-      "yearly": {
-        "2008": 1,
-        "2019": 2,
-        "2020": 1,
-        "2021": 2,
-        "2024": 1
-      }
-    },
-    "nhsii; nhs; ukb": {
-      "name": "Nurses' Health Study II; Nurses' Health Study; UK Biobank",
-      "yearly": {
-        "2023": 1,
-        "2025": 2
-      }
-    },
-    "nhsii; nshds; nhs": {
-      "name": "Nurses' Health Study II; Northern Sweden Health and Disease Study; Nurses' Health Study",
-      "yearly": {
-        "2017": 1
-      }
-    },
     "unam": {
       "name": "National Autonomous University of Mexico",
       "yearly": {
         "2020": 1
-      }
-    },
-    "nbk": {
-      "name": "National Biobank of Korea",
-      "yearly": {
-        "2011": 2,
-        "2012": 1,
-        "2013": 3,
-        "2018": 1,
-        "2019": 1,
-        "2021": 1,
-        "2022": 1,
-        "2023": 1,
-        "2024": 2
-      }
-    },
-    "nbk; usnih": {
-      "name": "National Biobank of Korea; US NIH Biobank",
-      "yearly": {
-        "2025": 1
       }
     },
     "ntr": {
@@ -2353,166 +1407,6 @@
         "2023": 1
       }
     },
-    "nshds": {
-      "name": "Northern Sweden Health and Disease Study",
-      "yearly": {
-        "2000": 1,
-        "2001": 2,
-        "2002": 3,
-        "2003": 4,
-        "2004": 5,
-        "2005": 1,
-        "2006": 3,
-        "2007": 1,
-        "2008": 3,
-        "2009": 5,
-        "2010": 4,
-        "2011": 3,
-        "2012": 2,
-        "2013": 6,
-        "2014": 3,
-        "2015": 3,
-        "2016": 3,
-        "2017": 9,
-        "2018": 2,
-        "2019": 3,
-        "2020": 6,
-        "2021": 4,
-        "2022": 5,
-        "2023": 6,
-        "2024": 7,
-        "2025": 5
-      }
-    },
-    "nshds; plco": {
-      "name": "Northern Sweden Health and Disease Study; PLCO Cancer Screening Trial",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "moba": {
-      "name": "Norwegian Mother and Child Cohort Study",
-      "yearly": {
-        "2000": 7,
-        "2001": 3,
-        "2002": 7,
-        "2003": 4,
-        "2004": 7,
-        "2005": 5,
-        "2006": 11,
-        "2007": 20,
-        "2008": 25,
-        "2009": 27,
-        "2010": 30,
-        "2011": 41,
-        "2012": 54,
-        "2013": 62,
-        "2014": 57,
-        "2015": 54,
-        "2016": 54,
-        "2017": 51,
-        "2018": 56,
-        "2019": 43,
-        "2020": 47,
-        "2021": 46,
-        "2022": 64,
-        "2023": 41,
-        "2024": 55,
-        "2025": 63
-      }
-    },
-    "moba; ukb": {
-      "name": "Norwegian Mother and Child Cohort Study; UK Biobank",
-      "yearly": {
-        "2022": 2,
-        "2023": 1,
-        "2024": 2
-      }
-    },
-    "nhs": {
-      "name": "Nurses' Health Study",
-      "yearly": {
-        "2000": 31,
-        "2001": 37,
-        "2002": 43,
-        "2003": 45,
-        "2004": 75,
-        "2005": 67,
-        "2006": 76,
-        "2007": 68,
-        "2008": 70,
-        "2009": 89,
-        "2010": 81,
-        "2011": 96,
-        "2012": 93,
-        "2013": 113,
-        "2014": 93,
-        "2015": 85,
-        "2016": 129,
-        "2017": 89,
-        "2018": 118,
-        "2019": 104,
-        "2020": 95,
-        "2021": 90,
-        "2022": 97,
-        "2023": 73,
-        "2024": 71,
-        "2025": 65
-      }
-    },
-    "nhs; whi": {
-      "name": "Nurses' Health Study; Women's Health Initiative",
-      "yearly": {
-        "2001": 2,
-        "2003": 1,
-        "2005": 1,
-        "2006": 1,
-        "2007": 1,
-        "2008": 4,
-        "2009": 3,
-        "2010": 1,
-        "2011": 2,
-        "2012": 2,
-        "2013": 3,
-        "2014": 2,
-        "2016": 3,
-        "2017": 2,
-        "2018": 1,
-        "2019": 3,
-        "2022": 1,
-        "2023": 2,
-        "2024": 3,
-        "2025": 1
-      }
-    },
-    "nhs; plco": {
-      "name": "Nurses' Health Study; PLCO Cancer Screening Trial",
-      "yearly": {
-        "2009": 1,
-        "2010": 1,
-        "2011": 3,
-        "2013": 2,
-        "2019": 1,
-        "2022": 1,
-        "2023": 1
-      }
-    },
-    "nhs; ukb": {
-      "name": "Nurses' Health Study; UK Biobank",
-      "yearly": {
-        "2021": 5,
-        "2022": 2,
-        "2023": 2,
-        "2024": 2,
-        "2025": 2
-      }
-    },
-    "nhs; smwhs": {
-      "name": "Nurses' Health Study; Shanghai Men and Women's Health Studies",
-      "yearly": {
-        "2019": 1
-      }
-    },
     "persian": {
       "name": "PERSIAN Cohort Study",
       "yearly": {
@@ -2528,120 +1422,28 @@
         "2025": 43
       }
     },
-    "plco": {
-      "name": "PLCO Cancer Screening Trial",
+    "uklwc": {
+      "name": "UKCTOCS Longitudinal Women's Cohort",
       "yearly": {
-        "2000": 11,
-        "2001": 2,
-        "2002": 7,
-        "2003": 6,
-        "2004": 16,
-        "2005": 21,
-        "2006": 17,
-        "2007": 21,
-        "2008": 15,
-        "2009": 30,
-        "2010": 36,
-        "2011": 32,
-        "2012": 41,
-        "2013": 37,
-        "2014": 45,
-        "2015": 57,
-        "2016": 35,
-        "2017": 48,
-        "2018": 39,
-        "2019": 39,
-        "2020": 63,
-        "2021": 53,
-        "2022": 58,
-        "2023": 59,
-        "2024": 59,
-        "2025": 81
-      }
-    },
-    "plco; uklwc": {
-      "name": "PLCO Cancer Screening Trial; UKCTOCS Longitudinal Women's Cohort",
-      "yearly": {
+        "2004": 1,
         "2006": 1,
-        "2012": 1,
+        "2008": 1,
+        "2009": 1,
+        "2011": 3,
+        "2012": 3,
         "2013": 3,
-        "2014": 1,
-        "2016": 1,
-        "2018": 2,
-        "2025": 1
-      }
-    },
-    "plco; whi": {
-      "name": "PLCO Cancer Screening Trial; Women's Health Initiative",
-      "yearly": {
-        "2010": 1,
-        "2013": 1,
-        "2014": 1,
-        "2021": 1
-      }
-    },
-    "plco; ukb": {
-      "name": "PLCO Cancer Screening Trial; UK Biobank",
-      "yearly": {
-        "2023": 2,
-        "2024": 5,
-        "2025": 5
-      }
-    },
-    "plco; smwhs": {
-      "name": "PLCO Cancer Screening Trial; Shanghai Men and Women's Health Studies",
-      "yearly": {
-        "2014": 2
-      }
-    },
-    "plco; ucl; ukb": {
-      "name": "PLCO Cancer Screening Trial; UCL Biobank; UK Biobank",
-      "yearly": {
-        "2023": 1
-      }
-    },
-    "plco; ukb; usnih": {
-      "name": "PLCO Cancer Screening Trial; UK Biobank; US NIH Biobank",
-      "yearly": {
-        "2023": 1
-      }
-    },
-    "qbb": {
-      "name": "Qatar Biobank",
-      "yearly": {
-        "2014": 1,
-        "2015": 1,
-        "2017": 3,
-        "2018": 6,
-        "2019": 13,
-        "2020": 15,
-        "2021": 26,
-        "2022": 22,
-        "2023": 30,
-        "2024": 28,
-        "2025": 46
-      }
-    },
-    "qbb; ukb": {
-      "name": "Qatar Biobank; UK Biobank",
-      "yearly": {
-        "2023": 1
-      }
-    },
-    "qbb; qgp": {
-      "name": "Qatar Biobank; Qatar Genome Programme",
-      "yearly": {
-        "2020": 1,
-        "2021": 1,
-        "2022": 4,
-        "2024": 5
-      }
-    },
-    "qbb; usnih": {
-      "name": "Qatar Biobank; US NIH Biobank",
-      "yearly": {
-        "2017": 1,
-        "2018": 1
+        "2014": 6,
+        "2015": 5,
+        "2016": 16,
+        "2017": 12,
+        "2018": 8,
+        "2019": 5,
+        "2020": 8,
+        "2021": 5,
+        "2022": 1,
+        "2023": 3,
+        "2024": 4,
+        "2025": 4
       }
     },
     "qgp": {
@@ -2655,54 +1457,12 @@
         "2025": 2
       }
     },
-    "saprin": {
-      "name": "SAPRIN",
-      "yearly": {
-        "2022": 1,
-        "2023": 1,
-        "2025": 1
-      }
-    },
     "sg100k": {
       "name": "SG100K",
       "yearly": {
         "2022": 3,
         "2023": 2,
         "2024": 2
-      }
-    },
-    "sg100k; snb": {
-      "name": "SG100K; Saudi National Biobank",
-      "yearly": {
-        "2019": 1
-      }
-    },
-    "simpler": {
-      "name": "SIMPLER",
-      "yearly": {
-        "2002": 1,
-        "2004": 6,
-        "2005": 16,
-        "2006": 17,
-        "2007": 8,
-        "2008": 10,
-        "2009": 18,
-        "2010": 8,
-        "2011": 13,
-        "2012": 14,
-        "2013": 15,
-        "2014": 23,
-        "2015": 19,
-        "2016": 22,
-        "2017": 16,
-        "2018": 16,
-        "2019": 8,
-        "2020": 5,
-        "2021": 10,
-        "2022": 11,
-        "2023": 6,
-        "2024": 10,
-        "2025": 5
       }
     },
     "snb": {
@@ -2720,35 +1480,6 @@
         "2025": 1
       }
     },
-    "smwhs": {
-      "name": "Shanghai Men and Women's Health Studies",
-      "yearly": {
-        "2002": 1,
-        "2003": 2,
-        "2004": 5,
-        "2005": 5,
-        "2006": 5,
-        "2007": 13,
-        "2008": 12,
-        "2009": 15,
-        "2010": 11,
-        "2011": 13,
-        "2012": 14,
-        "2013": 22,
-        "2014": 13,
-        "2015": 13,
-        "2016": 8,
-        "2017": 10,
-        "2018": 10,
-        "2019": 6,
-        "2020": 1,
-        "2021": 5,
-        "2022": 12,
-        "2023": 4,
-        "2024": 6,
-        "2025": 4
-      }
-    },
     "sab": {
       "name": "South Asia Biobank",
       "yearly": {
@@ -2756,36 +1487,6 @@
         "2022": 3,
         "2023": 1,
         "2025": 3
-      }
-    },
-    "twb": {
-      "name": "Taiwan Biobank",
-      "yearly": {
-        "2012": 1,
-        "2013": 1,
-        "2014": 6,
-        "2015": 10,
-        "2016": 16,
-        "2017": 19,
-        "2018": 11,
-        "2019": 36,
-        "2020": 41,
-        "2021": 71,
-        "2022": 76,
-        "2023": 60,
-        "2024": 77,
-        "2025": 97
-      }
-    },
-    "twb; ukb": {
-      "name": "Taiwan Biobank; UK Biobank",
-      "yearly": {
-        "2008": 1,
-        "2019": 1,
-        "2022": 4,
-        "2023": 2,
-        "2024": 3,
-        "2025": 4
       }
     },
     "myc": {
@@ -2808,118 +1509,6 @@
         "2023": 8,
         "2024": 12,
         "2025": 13
-      }
-    },
-    "myc; ukb": {
-      "name": "The Malaysian Cohort; UK Biobank",
-      "yearly": {
-        "2023": 1
-      }
-    },
-    "tommo": {
-      "name": "Tohoku Medical Megabank",
-      "yearly": {
-        "2012": 1,
-        "2014": 2,
-        "2015": 6,
-        "2016": 3,
-        "2017": 4,
-        "2018": 6,
-        "2019": 14,
-        "2020": 16,
-        "2021": 20,
-        "2022": 29,
-        "2023": 36,
-        "2024": 41,
-        "2025": 57
-      }
-    },
-    "tommo; ukb": {
-      "name": "Tohoku Medical Megabank; UK Biobank",
-      "yearly": {
-        "2020": 1,
-        "2024": 1
-      }
-    },
-    "ucl": {
-      "name": "UCL Biobank",
-      "yearly": {
-        "2016": 1,
-        "2022": 2,
-        "2025": 1
-      }
-    },
-    "ucl; uklwc": {
-      "name": "UCL Biobank; UKCTOCS Longitudinal Women's Cohort",
-      "yearly": {
-        "2025": 1
-      }
-    },
-    "ucl; ukb": {
-      "name": "UCL Biobank; UK Biobank",
-      "yearly": {
-        "2012": 1
-      }
-    },
-    "ukb": {
-      "name": "UK Biobank",
-      "yearly": {
-        "2003": 3,
-        "2004": 3,
-        "2005": 3,
-        "2006": 7,
-        "2007": 3,
-        "2008": 10,
-        "2009": 5,
-        "2010": 2,
-        "2011": 4,
-        "2012": 7,
-        "2013": 9,
-        "2014": 20,
-        "2015": 28,
-        "2016": 74,
-        "2017": 133,
-        "2018": 267,
-        "2019": 427,
-        "2020": 718,
-        "2021": 1107,
-        "2022": 1503,
-        "2023": 2055,
-        "2024": 2800,
-        "2025": 3896
-      }
-    },
-    "ukb; ukbdc": {
-      "name": "UK Biobank; UK Blood Donor Cohorts",
-      "yearly": {
-        "2020": 1,
-        "2021": 2,
-        "2022": 1,
-        "2023": 1,
-        "2024": 6,
-        "2025": 6
-      }
-    },
-    "ukb; whi": {
-      "name": "UK Biobank; Women's Health Initiative",
-      "yearly": {
-        "2020": 1,
-        "2021": 1,
-        "2022": 1,
-        "2023": 2,
-        "2024": 3,
-        "2025": 3
-      }
-    },
-    "ukb; usnih": {
-      "name": "UK Biobank; US NIH Biobank",
-      "yearly": {
-        "2011": 1,
-        "2021": 2,
-        "2022": 3,
-        "2023": 4,
-        "2024": 5,
-        "2025": 7
       }
     },
     "ukbdc": {
@@ -2953,52 +1542,6 @@
         "2025": 14
       }
     },
-    "uklwc": {
-      "name": "UKCTOCS Longitudinal Women's Cohort",
-      "yearly": {
-        "2004": 1,
-        "2006": 1,
-        "2008": 1,
-        "2009": 1,
-        "2011": 3,
-        "2012": 3,
-        "2013": 3,
-        "2014": 6,
-        "2015": 5,
-        "2016": 16,
-        "2017": 12,
-        "2018": 8,
-        "2019": 5,
-        "2020": 8,
-        "2021": 5,
-        "2022": 1,
-        "2023": 3,
-        "2024": 4,
-        "2025": 4
-      }
-    },
-    "usnih": {
-      "name": "US NIH Biobank",
-      "yearly": {
-        "2008": 1,
-        "2011": 1,
-        "2014": 1,
-        "2015": 1,
-        "2016": 5,
-        "2017": 1,
-        "2019": 3,
-        "2020": 1,
-        "2025": 3
-      }
-    },
-    "ugr": {
-      "name": "Uganda Genome Resource",
-      "yearly": {
-        "2019": 1,
-        "2022": 1,
-        "2025": 2
-      }
-    },
     "vhmpp": {
       "name": "VHM&PP",
       "yearly": {
@@ -3019,37 +1562,6 @@
         "2022": 1,
         "2023": 1,
         "2024": 2
-      }
-    },
-    "whi": {
-      "name": "Women's Health Initiative",
-      "yearly": {
-        "2000": 18,
-        "2001": 9,
-        "2002": 69,
-        "2003": 123,
-        "2004": 135,
-        "2005": 153,
-        "2006": 145,
-        "2007": 135,
-        "2008": 122,
-        "2009": 112,
-        "2010": 125,
-        "2011": 143,
-        "2012": 157,
-        "2013": 164,
-        "2014": 179,
-        "2015": 137,
-        "2016": 152,
-        "2017": 153,
-        "2018": 137,
-        "2019": 135,
-        "2020": 136,
-        "2021": 140,
-        "2022": 148,
-        "2023": 131,
-        "2024": 123,
-        "2025": 115
       }
     }
   }
