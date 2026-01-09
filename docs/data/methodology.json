@@ -165,6 +165,38 @@
     }
   },
 
+  "confidence_intervals": {
+    "description": "Uncertainty estimates for EAS scores based on publication sampling variability",
+    "methodology": {
+      "approach": "Analytical approximation based on publication count and component score variance",
+      "formula": "CI_width = base_uncertainty × (1 + log10(max_pubs / biobank_pubs))",
+      "base_uncertainty": 2.5,
+      "coverage": "95% (approximately ±1.96 standard errors)"
+    },
+    "interpretation": {
+      "narrow_ci": {
+        "width": "<5 points",
+        "description": "High confidence in score; biobank has substantial publication volume",
+        "typical_pubs": ">500"
+      },
+      "moderate_ci": {
+        "width": "5-8 points",
+        "description": "Moderate confidence; score may shift with additional data",
+        "typical_pubs": "100-500"
+      },
+      "wide_ci": {
+        "width": ">8 points",
+        "description": "Lower confidence; limited data increases uncertainty",
+        "typical_pubs": "<100"
+      }
+    },
+    "caveats": [
+      "CIs reflect statistical uncertainty only, not systematic biases",
+      "MeSH mapping errors not captured in CIs",
+      "Between-biobank comparisons should consider overlapping CIs"
+    ]
+  },
+
   "known_limitations": [
     "Publication counts may underestimate actual research due to MeSH indexing delays",
     "Multi-biobank collaborations split across individual biobanks may inflate per-biobank counts",

@@ -6,8 +6,30 @@
     "totalBiobanks": 70,
     "totalPublications": 38595,
     "totalDiseases": 179,
+    "addressableDiseases": 160,
     "totalCountries": 29,
     "equityRatio": 57.78
+  },
+  "diseaseAppropriateness": {
+    "description": "Breakdown of diseases by suitability for biobank research",
+    "high": {
+      "count": 137,
+      "description": "Highly appropriate for biobank research (chronic diseases with genetic/environmental components)"
+    },
+    "moderate": {
+      "count": 23,
+      "description": "Moderately appropriate (diseases where biobank data provides some insights)"
+    },
+    "limited": {
+      "count": 15,
+      "description": "Limited appropriateness (acute conditions, injuries, external causes)",
+      "examples": ["Drowning", "Road injuries", "Animal contact", "Guinea worm disease", "Self-harm", "Conflict and terrorism"]
+    },
+    "methodology": {
+      "count": 4,
+      "description": "Meta-categories for methodological publications (not disease-specific)"
+    },
+    "interpretation": "Biobanks should not be penalized for low research on 'limited' appropriateness diseases; 160 of 179 diseases are realistically addressable"
   },
   "gapDistribution": {
     "High": 26,
@@ -99,7 +121,9 @@
       "name": "Guinea worm disease",
       "gapScore": 95.0,
       "dalys": 0.0,
-      "publications": 0
+      "publications": 0,
+      "appropriateness": "limited",
+      "note": "Not a realistic target for biobank research"
     },
     {
       "id": "Scabies",
@@ -113,14 +137,18 @@
       "name": "Drowning",
       "gapScore": 95.0,
       "dalys": 15.7,
-      "publications": 0
+      "publications": 0,
+      "appropriateness": "limited",
+      "note": "Injury/external cause - not a realistic target for biobank research"
     },
     {
       "id": "Animal contact",
       "name": "Animal contact",
       "gapScore": 95.0,
       "dalys": 4.89,
-      "publications": 0
+      "publications": 0,
+      "appropriateness": "limited",
+      "note": "Injury/external cause - not a realistic target for biobank research"
     },
     {
       "id": "Typhoid and paratyphoid",
