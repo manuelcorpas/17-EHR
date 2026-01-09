@@ -1,0 +1,125 @@
+{
+  "version": "HEIM-Biobank v2.0 (IHCC)",
+  "generated": "2026-01-09",
+  "description": "Sensitivity analysis showing how UK Biobank (UKB) dominance affects overall statistics",
+  "summary": {
+    "ukb_share_of_publications": 35.7,
+    "ukb_is_only_strong_rated": true,
+    "recommendation": "Results remain valid but should be interpreted acknowledging UKB's outsized influence"
+  },
+  "statistics_comparison": {
+    "with_ukb": {
+      "total_biobanks": 70,
+      "total_publications": 38595,
+      "mean_eas": 24.1,
+      "median_eas": 19.7,
+      "eas_std": 15.6,
+      "strong_category": 1,
+      "weak_category": 13,
+      "poor_category": 56,
+      "diseases_with_coverage": 179,
+      "top_eas_biobank": {
+        "id": "ukb",
+        "name": "UK Biobank",
+        "eas": 84.6
+      }
+    },
+    "without_ukb": {
+      "total_biobanks": 69,
+      "total_publications": 24810,
+      "mean_eas": 23.2,
+      "median_eas": 19.5,
+      "eas_std": 13.9,
+      "strong_category": 0,
+      "weak_category": 13,
+      "poor_category": 56,
+      "diseases_with_coverage": 178,
+      "top_eas_biobank": {
+        "id": "nhs",
+        "name": "Nurses' Health Study",
+        "eas": 55.2
+      },
+      "notes": [
+        "No biobank achieves 'Strong' EAS category without UK Biobank",
+        "Second-highest EAS (55.2) is 29.4 points below UK Biobank (84.6)",
+        "The gap between UK Biobank and #2 exceeds the entire range of other biobanks"
+      ]
+    }
+  },
+  "publication_concentration": {
+    "ukb_publications": 13785,
+    "ukb_percentage": 35.7,
+    "top_5_biobanks": {
+      "total_publications": 25048,
+      "percentage_of_total": 64.9,
+      "biobanks": ["UK Biobank", "Women's Health Initiative", "Nurses' Health Study", "EPIC", "HUNT Study"]
+    },
+    "top_10_biobanks": {
+      "total_publications": 28389,
+      "percentage_of_total": 73.6
+    },
+    "interpretation": "Publication output is highly concentrated - top 5 biobanks produce 65% of all publications, with UK Biobank alone contributing over a third"
+  },
+  "eas_distribution_analysis": {
+    "with_ukb": {
+      "percentile_25": 10.8,
+      "percentile_50": 19.7,
+      "percentile_75": 35.1,
+      "percentile_90": 43.1,
+      "percentile_95": 48.1,
+      "max": 84.6
+    },
+    "without_ukb": {
+      "percentile_25": 10.6,
+      "percentile_50": 19.5,
+      "percentile_75": 34.7,
+      "percentile_90": 42.7,
+      "percentile_95": 45.2,
+      "max": 55.2
+    },
+    "interpretation": "Excluding UKB minimally affects the distribution below the 95th percentile, confirming UKB is an exceptional outlier rather than distorting the overall picture"
+  },
+  "disease_coverage_analysis": {
+    "ukb_unique_diseases": 1,
+    "diseases_only_covered_by_ukb": ["Food-borne trematodiases"],
+    "diseases_well_covered_only_due_to_ukb": [
+      {
+        "disease": "Migraine",
+        "ukb_pubs": 587,
+        "non_ukb_pubs": 142
+      },
+      {
+        "disease": "Age-related macular degeneration",
+        "ukb_pubs": 312,
+        "non_ukb_pubs": 89
+      },
+      {
+        "disease": "Gallbladder and biliary diseases",
+        "ukb_pubs": 245,
+        "non_ukb_pubs": 67
+      }
+    ]
+  },
+  "regional_impact": {
+    "europe_with_ukb": {
+      "biobanks": 25,
+      "publications": 21482,
+      "ukb_share_of_europe": 64.2
+    },
+    "europe_without_ukb": {
+      "biobanks": 24,
+      "publications": 7697,
+      "notes": "Removing UKB reduces European publications by nearly two-thirds"
+    }
+  },
+  "interpretation_guidance": [
+    "UK Biobank's exceptional performance reflects its design, funding, and infrastructure - it sets a benchmark rather than distorting analysis",
+    "The 'Strong' EAS category effectively represents UK Biobank-level achievement, which may be unrealistic for newer or lower-resourced biobanks",
+    "For policy purposes, comparing biobanks to the 'Weak' threshold (40-60) may be more actionable than to UK Biobank",
+    "The analysis reveals that even well-established biobanks (NHS, WHI) have substantial equity gaps to address"
+  ],
+  "methodology": {
+    "calculations": "Statistics computed by including/excluding UK Biobank from the 70-biobank IHCC dataset",
+    "data_source": "HEIM-Biobank analysis pipeline, January 2026"
+  }
+}
