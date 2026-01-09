@@ -2,13 +2,13 @@
   "global": {
     "version": "HEIM-Biobank v2.0 (IHCC)",
     "version_date": "2026-01-07",
-    "generated_at": "2026-01-09T05:20:53.442072",
-    "total_publications": 38644,
-    "total_biobanks": 78,
+    "generated_at": "2026-01-09T05:30:50.662061",
+    "total_publications": 38595,
+    "total_biobanks": 70,
     "total_diseases": 179,
-    "equity_ratio": 57.66,
-    "hic_publications": 36137,
-    "global_south_publications": 2507,
+    "equity_ratio": 57.78,
+    "hic_publications": 36096,
+    "global_south_publications": 2499,
     "gap_distribution": {
       "High": 26,
       "Moderate": 47,
@@ -16,12 +16,12 @@
       "Low": 84
     },
     "eas_distribution": {
-      "Poor": 64,
+      "Poor": 56,
       "Strong": 1,
       "Weak": 13
     },
-    "average_ros": 8810.81,
-    "average_eas": 21.8,
+    "average_ros": 8541.6,
+    "average_eas": 24.1,
     "average_gap_score": 37.7,
     "total_dalys_millions": 2745.8,
     "methodology": {
@@ -2897,72 +2897,6 @@
         "2016": 1
       }
     },
-    "saprin": {
-      "name": "SAPRIN",
-      "country": "South Africa",
-      "region": "AFR",
-      "is_global_south": true,
-      "total_publications": 6,
-      "diseases_covered": 12,
-      "research_opportunity_score": 11108.93,
-      "equity_alignment_score": 2.3,
-      "equity_alignment_category": "Poor",
-      "equity_alignment_components": {
-        "gap_severity_component": 95.25,
-        "burden_miss_component": 98.58,
-        "capacity_penalty": 99.97,
-        "n_critical": 168,
-        "n_high": 2,
-        "n_moderate": 6,
-        "n_low": 3,
-        "diseases_covered": 12,
-        "missed_dalys": 2706.74
-      },
-      "critical_gap_count": 167,
-      "critical_gaps": [
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media",
-        "Diarrheal diseases",
-        "Typhoid and paratyphoid",
-        "Invasive Non-typhoidal Salmonella (iNTS)",
-        "Other intestinal infectious diseases",
-        "Malaria",
-        "Dengue",
-        "Yellow fever",
-        "Rabies",
-        "Intestinal nematode infections",
-        "Schistosomiasis",
-        "Leishmaniasis",
-        "Lymphatic filariasis",
-        "Onchocerciasis",
-        "Trachoma",
-        "Chagas disease",
-        "African trypanosomiasis"
-      ],
-      "global_south_percentage": 66.7,
-      "disease_publications": {
-        "Urinary diseases and male infertility": 4,
-        "Gynecological diseases": 4,
-        "COVID-19": 2,
-        "_BIOBANK_METHODS": 4,
-        "Other unspecified infectious diseases": 2,
-        "Maternal disorders": 2,
-        "Pulmonary Arterial Hypertension": 2,
-        "Diabetes mellitus": 2,
-        "Tuberculosis": 1,
-        "HIV/AIDS": 2,
-        "_AGING": 2,
-        "Hypertensive heart disease": 2
-      },
-      "year_distribution": {
-        "2021": 2,
-        "2025": 2,
-        "2022": 1,
-        "2023": 1
-      }
-    },
     "twb": {
       "name": "Taiwan Biobank",
       "country": "Taiwan",
@@ -3897,56 +3831,6 @@
         "2000": 5
       }
     },
-    "bgi": {
-      "name": "BGI Research",
-      "country": "China",
-      "region": "WPR",
-      "is_global_south": true,
-      "total_publications": 1,
-      "diseases_covered": 0,
-      "research_opportunity_score": 11253.91,
-      "equity_alignment_score": 0.0,
-      "equity_alignment_category": "Poor",
-      "equity_alignment_components": {
-        "gap_severity_component": 100.0,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 99.99,
-        "n_critical": 179,
-        "n_high": 0,
-        "n_moderate": 0,
-        "n_low": 0,
-        "diseases_covered": 0,
-        "missed_dalys": 2745.83
-      },
-      "critical_gap_count": 179,
-      "critical_gaps": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media",
-        "COVID-19",
-        "Tuberculosis",
-        "Diarrheal diseases",
-        "Typhoid and paratyphoid",
-        "Invasive Non-typhoidal Salmonella (iNTS)",
-        "Other intestinal infectious diseases",
-        "Malaria",
-        "Dengue",
-        "Yellow fever",
-        "Rabies",
-        "Intestinal nematode infections",
-        "Schistosomiasis",
-        "Leishmaniasis",
-        "Lymphatic filariasis",
-        "Onchocerciasis"
-      ],
-      "global_south_percentage": 0.0,
-      "disease_publications": {},
-      "year_distribution": {
-        "2019": 1
-      }
-    },
     "bandim": {
       "name": "Bandim Health Project",
       "country": "Guinea-Bissau",
@@ -4701,63 +4585,6 @@
         "2006": 1,
         "2011": 1,
         "2013": 1
-      }
-    },
-    "c19genomnet": {
-      "name": "C19-GenoNet",
-      "country": "International",
-      "region": "INT",
-      "is_global_south": false,
-      "total_publications": 1,
-      "diseases_covered": 6,
-      "research_opportunity_score": 11253.91,
-      "equity_alignment_score": 1.0,
-      "equity_alignment_category": "Poor",
-      "equity_alignment_components": {
-        "gap_severity_component": 97.63,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 99.99,
-        "n_critical": 173,
-        "n_high": 1,
-        "n_moderate": 5,
-        "n_low": 0,
-        "diseases_covered": 6,
-        "missed_dalys": 2745.83
-      },
-      "critical_gap_count": 173,
-      "critical_gaps": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media",
-        "Tuberculosis",
-        "Diarrheal diseases",
-        "Typhoid and paratyphoid",
-        "Invasive Non-typhoidal Salmonella (iNTS)",
-        "Other intestinal infectious diseases",
-        "Malaria",
-        "Dengue",
-        "Yellow fever",
-        "Rabies",
-        "Intestinal nematode infections",
-        "Schistosomiasis",
-        "Leishmaniasis",
-        "Lymphatic filariasis",
-        "Onchocerciasis",
-        "Trachoma"
-      ],
-      "global_south_percentage": 100.0,
-      "disease_publications": {
-        "_BIOBANK_METHODS": 1,
-        "Urinary diseases and male infertility": 1,
-        "_AGING": 1,
-        "COVID-19": 1,
-        "Gynecological diseases": 1,
-        "_GENOMICS": 1
-      },
-      "year_distribution": {
-        "2024": 1
       }
     },
     "constances": {
@@ -7883,74 +7710,6 @@
         "2003": 1
       }
     },
-    "ucl": {
-      "name": "UCL Biobank",
-      "country": "United Kingdom",
-      "region": "EUR",
-      "is_global_south": false,
-      "total_publications": 8,
-      "diseases_covered": 13,
-      "research_opportunity_score": 11179.48,
-      "equity_alignment_score": 2.6,
-      "equity_alignment_category": "Poor",
-      "equity_alignment_components": {
-        "gap_severity_component": 94.27,
-        "burden_miss_component": 98.99,
-        "capacity_penalty": 99.96,
-        "n_critical": 166,
-        "n_high": 0,
-        "n_moderate": 11,
-        "n_low": 2,
-        "diseases_covered": 13,
-        "missed_dalys": 2718.09
-      },
-      "critical_gap_count": 166,
-      "critical_gaps": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media",
-        "COVID-19",
-        "Tuberculosis",
-        "Diarrheal diseases",
-        "Typhoid and paratyphoid",
-        "Invasive Non-typhoidal Salmonella (iNTS)",
-        "Other intestinal infectious diseases",
-        "Malaria",
-        "Dengue",
-        "Yellow fever",
-        "Rabies",
-        "Intestinal nematode infections",
-        "Schistosomiasis",
-        "Leishmaniasis",
-        "Lymphatic filariasis",
-        "Onchocerciasis"
-      ],
-      "global_south_percentage": 12.5,
-      "disease_publications": {
-        "Urinary diseases and male infertility": 2,
-        "Gynecological diseases": 4,
-        "_BIOBANK_METHODS": 7,
-        "_AGING": 2,
-        "Other malignant neoplasms": 2,
-        "Other neoplasms": 2,
-        "Tracheal, bronchus, and lung cancer": 1,
-        "_GENOMICS": 1,
-        "Ischemic heart disease": 1,
-        "Maternal disorders": 1,
-        "_IMAGING": 1,
-        "Ovarian cancer": 1,
-        "Other cardiovascular and circulatory diseases": 1
-      },
-      "year_distribution": {
-        "2025": 3,
-        "2022": 2,
-        "2023": 1,
-        "2016": 1,
-        "2012": 1
-      }
-    },
     "golestan": {
       "name": "Golestan Cohort Study",
       "country": "Iran",
@@ -8243,77 +8002,6 @@
         "2005": 4
       }
     },
-    "healthy_nevada": {
-      "name": "Healthy Nevada",
-      "country": "United States",
-      "region": "AMR",
-      "is_global_south": false,
-      "total_publications": 18,
-      "diseases_covered": 15,
-      "research_opportunity_score": 11048.08,
-      "equity_alignment_score": 3.3,
-      "equity_alignment_category": "Poor",
-      "equity_alignment_components": {
-        "gap_severity_component": 93.02,
-        "burden_miss_component": 98.53,
-        "capacity_penalty": 99.9,
-        "n_critical": 164,
-        "n_high": 1,
-        "n_moderate": 8,
-        "n_low": 6,
-        "diseases_covered": 15,
-        "missed_dalys": 2705.52
-      },
-      "critical_gap_count": 164,
-      "critical_gaps": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media",
-        "COVID-19",
-        "Tuberculosis",
-        "Diarrheal diseases",
-        "Typhoid and paratyphoid",
-        "Invasive Non-typhoidal Salmonella (iNTS)",
-        "Other intestinal infectious diseases",
-        "Malaria",
-        "Dengue",
-        "Yellow fever",
-        "Rabies",
-        "Intestinal nematode infections",
-        "Schistosomiasis",
-        "Leishmaniasis",
-        "Lymphatic filariasis",
-        "Onchocerciasis"
-      ],
-      "global_south_percentage": 11.1,
-      "disease_publications": {
-        "_GENOMICS": 5,
-        "_BIOBANK_METHODS": 5,
-        "Urinary diseases and male infertility": 6,
-        "_AGING": 7,
-        "Gynecological diseases": 8,
-        "Dietary iron deficiency": 1,
-        "Depressive disorders": 1,
-        "Other mental disorders": 1,
-        "Breast cancer": 2,
-        "Other neoplasms": 3,
-        "Neonatal disorders": 1,
-        "Sudden infant death syndrome": 1,
-        "Colon and rectum cancer": 1,
-        "Other malignant neoplasms": 2,
-        "Ovarian cancer": 2
-      },
-      "year_distribution": {
-        "2024": 7,
-        "2022": 5,
-        "2021": 2,
-        "2020": 2,
-        "2019": 1,
-        "2025": 1
-      }
-    },
     "iganga_mayuge": {
       "name": "Iganga Mayuge HDSS",
       "country": "Uganda",
@@ -8412,73 +8100,6 @@
         "2012": 1,
         "2023": 1,
         "2018": 1
-      }
-    },
-    "jhu": {
-      "name": "Johns Hopkins University Biobank",
-      "country": "United States",
-      "region": "AMR",
-      "is_global_south": false,
-      "total_publications": 6,
-      "diseases_covered": 13,
-      "research_opportunity_score": 10978.97,
-      "equity_alignment_score": 3.1,
-      "equity_alignment_category": "Poor",
-      "equity_alignment_components": {
-        "gap_severity_component": 93.58,
-        "burden_miss_component": 98.24,
-        "capacity_penalty": 99.97,
-        "n_critical": 166,
-        "n_high": 0,
-        "n_moderate": 6,
-        "n_low": 7,
-        "diseases_covered": 13,
-        "missed_dalys": 2697.38
-      },
-      "critical_gap_count": 166,
-      "critical_gaps": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media",
-        "COVID-19",
-        "Tuberculosis",
-        "Diarrheal diseases",
-        "Typhoid and paratyphoid",
-        "Invasive Non-typhoidal Salmonella (iNTS)",
-        "Other intestinal infectious diseases",
-        "Malaria",
-        "Dengue",
-        "Yellow fever",
-        "Rabies",
-        "Intestinal nematode infections",
-        "Schistosomiasis",
-        "Leishmaniasis",
-        "Lymphatic filariasis",
-        "Onchocerciasis"
-      ],
-      "global_south_percentage": 0.0,
-      "disease_publications": {
-        "_BIOBANK_METHODS": 3,
-        "_IMAGING": 1,
-        "Brain and central nervous system cancer": 1,
-        "Urinary diseases and male infertility": 5,
-        "_AGING": 3,
-        "Other neurological disorders": 1,
-        "Other cardiovascular and circulatory diseases": 1,
-        "Stroke": 1,
-        "Gynecological diseases": 5,
-        "_GENOMICS": 4,
-        "Breast cancer": 1,
-        "Prostate cancer": 4,
-        "Other neoplasms": 4
-      },
-      "year_distribution": {
-        "2025": 3,
-        "2016": 1,
-        "2022": 1,
-        "2023": 1
       }
     },
     "kemri": {
@@ -8819,63 +8440,6 @@
         "2024": 1,
         "2007": 1,
         "2016": 1
-      }
-    },
-    "unam": {
-      "name": "National Autonomous University of Mexico",
-      "country": "Mexico",
-      "region": "AMR",
-      "is_global_south": true,
-      "total_publications": 1,
-      "diseases_covered": 6,
-      "research_opportunity_score": 11253.91,
-      "equity_alignment_score": 1.0,
-      "equity_alignment_category": "Poor",
-      "equity_alignment_components": {
-        "gap_severity_component": 97.49,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 99.99,
-        "n_critical": 173,
-        "n_high": 0,
-        "n_moderate": 6,
-        "n_low": 0,
-        "diseases_covered": 6,
-        "missed_dalys": 2745.83
-      },
-      "critical_gap_count": 173,
-      "critical_gaps": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media",
-        "COVID-19",
-        "Tuberculosis",
-        "Diarrheal diseases",
-        "Typhoid and paratyphoid",
-        "Invasive Non-typhoidal Salmonella (iNTS)",
-        "Other intestinal infectious diseases",
-        "Malaria",
-        "Dengue",
-        "Yellow fever",
-        "Rabies",
-        "Intestinal nematode infections",
-        "Schistosomiasis",
-        "Leishmaniasis",
-        "Lymphatic filariasis",
-        "Onchocerciasis"
-      ],
-      "global_south_percentage": 0.0,
-      "disease_publications": {
-        "_BIOBANK_METHODS": 1,
-        "_IMAGING": 1,
-        "Brain and central nervous system cancer": 1,
-        "Alzheimer's disease and other dementias": 1,
-        "Other neurological disorders": 1,
-        "Stroke": 1
-      },
-      "year_distribution": {
-        "2020": 1
       }
     },
     "ntr": {
@@ -9295,66 +8859,6 @@
         "2023": 4,
         "2020": 2,
         "2025": 2
-      }
-    },
-    "sg100k": {
-      "name": "SG100K",
-      "country": "Singapore",
-      "region": "WPR",
-      "is_global_south": false,
-      "total_publications": 8,
-      "diseases_covered": 6,
-      "research_opportunity_score": 11253.91,
-      "equity_alignment_score": 1.1,
-      "equity_alignment_category": "Poor",
-      "equity_alignment_components": {
-        "gap_severity_component": 97.35,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 99.96,
-        "n_critical": 173,
-        "n_high": 0,
-        "n_moderate": 5,
-        "n_low": 1,
-        "diseases_covered": 6,
-        "missed_dalys": 2745.83
-      },
-      "critical_gap_count": 173,
-      "critical_gaps": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media",
-        "COVID-19",
-        "Tuberculosis",
-        "Diarrheal diseases",
-        "Typhoid and paratyphoid",
-        "Invasive Non-typhoidal Salmonella (iNTS)",
-        "Other intestinal infectious diseases",
-        "Malaria",
-        "Dengue",
-        "Yellow fever",
-        "Rabies",
-        "Intestinal nematode infections",
-        "Schistosomiasis",
-        "Leishmaniasis",
-        "Lymphatic filariasis",
-        "Onchocerciasis"
-      ],
-      "global_south_percentage": 0.0,
-      "disease_publications": {
-        "Breast cancer": 2,
-        "Other neoplasms": 2,
-        "_GENOMICS": 6,
-        "_BIOBANK_METHODS": 1,
-        "Tracheal, bronchus, and lung cancer": 1,
-        "Gynecological diseases": 1
-      },
-      "year_distribution": {
-        "2022": 3,
-        "2024": 2,
-        "2023": 2,
-        "2019": 1
       }
     },
     "snb": {
@@ -9937,11 +9441,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": true,
-      "publications": 165,
+      "publications": 163,
       "burden_score": 76.05,
       "gap_score": 60.0,
       "gap_severity": "High",
-      "research_intensity": 4.098
+      "research_intensity": 4.048
     },
     "Sexually transmitted infections excluding HIV": {
       "name": "Sexually transmitted infections excluding HIV",
@@ -10007,11 +9511,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": true,
-      "publications": 582,
+      "publications": 579,
       "burden_score": 83.26,
       "gap_score": 60.0,
       "gap_severity": "High",
-      "research_intensity": 2.745
+      "research_intensity": 2.731
     },
     "Tuberculosis": {
       "name": "Tuberculosis",
@@ -10021,11 +9525,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": true,
-      "publications": 43,
+      "publications": 42,
       "burden_score": 76.72,
       "gap_score": 80.0,
       "gap_severity": "Critical",
-      "research_intensity": 0.915
+      "research_intensity": 0.894
     },
     "Diarrheal diseases": {
       "name": "Diarrheal diseases",
@@ -10483,11 +9987,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 605,
+      "publications": 603,
       "burden_score": 67.67,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 103.384
+      "research_intensity": 103.042
     },
     "Maternal disorders": {
       "name": "Maternal disorders",
@@ -10497,11 +10001,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": true,
-      "publications": 3498,
+      "publications": 3495,
       "burden_score": 70.9,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 284.066
+      "research_intensity": 283.823
     },
     "Neonatal disorders": {
       "name": "Neonatal disorders",
@@ -10511,11 +10015,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": true,
-      "publications": 1681,
+      "publications": 1680,
       "burden_score": 82.7,
       "gap_score": 50.0,
       "gap_severity": "Moderate",
-      "research_intensity": 9.02
+      "research_intensity": 9.015
     },
     "Protein-energy malnutrition": {
       "name": "Protein-energy malnutrition",
@@ -10539,11 +10043,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": true,
-      "publications": 140,
+      "publications": 139,
       "burden_score": 75.09,
       "gap_score": 60.0,
       "gap_severity": "High",
-      "research_intensity": 4.332
+      "research_intensity": 4.301
     },
     "Iodine deficiency": {
       "name": "Iodine deficiency",
@@ -10595,11 +10099,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 3350,
+      "publications": 3345,
       "burden_score": 73.15,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 162.34
+      "research_intensity": 162.098
     },
     "Cervical cancer": {
       "name": "Cervical cancer",
@@ -10637,11 +10141,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 1872,
+      "publications": 1869,
       "burden_score": 67.13,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 362.562
+      "research_intensity": 361.981
     },
     "Prostate cancer": {
       "name": "Prostate cancer",
@@ -10651,11 +10155,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 1964,
+      "publications": 1960,
       "burden_score": 69.11,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 241.231
+      "research_intensity": 240.74
     },
     "Testicular cancer": {
       "name": "Testicular cancer",
@@ -10679,11 +10183,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 2536,
+      "publications": 2535,
       "burden_score": 73.87,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 103.93
+      "research_intensity": 103.889
     },
     "Lip and oral cavity cancer": {
       "name": "Lip and oral cavity cancer",
@@ -10819,11 +10323,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 2188,
+      "publications": 2186,
       "burden_score": 76.68,
       "gap_score": 30.0,
       "gap_severity": "Low",
-      "research_intensity": 47.017
+      "research_intensity": 46.974
     },
     "Malignant skin melanoma": {
       "name": "Malignant skin melanoma",
@@ -10889,11 +10393,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 2201,
+      "publications": 2199,
       "burden_score": 69.5,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 246.954
+      "research_intensity": 246.729
     },
     "Thyroid cancer": {
       "name": "Thyroid cancer",
@@ -10987,11 +10491,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 7439,
+      "publications": 7428,
       "burden_score": 60.85,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 6120.374
+      "research_intensity": 6111.323
     },
     "Other malignant neoplasms": {
       "name": "Other malignant neoplasms",
@@ -11001,11 +10505,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 1563,
+      "publications": 1559,
       "burden_score": 68.1,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 242.147
+      "research_intensity": 241.528
     },
     "Malignant neoplasm of bone and articular cartilage": {
       "name": "Malignant neoplasm of bone and articular cartilage",
@@ -11071,11 +10575,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 2197,
+      "publications": 2196,
       "burden_score": 82.75,
       "gap_score": 40.0,
       "gap_severity": "Moderate",
-      "research_intensity": 11.664
+      "research_intensity": 11.658
     },
     "Stroke": {
       "name": "Stroke",
@@ -11085,11 +10589,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 1934,
+      "publications": 1932,
       "burden_score": 82.05,
       "gap_score": 40.0,
       "gap_severity": "Moderate",
-      "research_intensity": 12.053
+      "research_intensity": 12.041
     },
     "Hypertensive heart disease": {
       "name": "Hypertensive heart disease",
@@ -11099,11 +10603,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 1600,
+      "publications": 1598,
       "burden_score": 74.06,
       "gap_score": 20.0,
       "gap_severity": "Low",
-      "research_intensity": 62.838
+      "research_intensity": 62.76
     },
     "Rheumatic heart disease": {
       "name": "Rheumatic heart disease",
@@ -11211,11 +10715,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 3290,
+      "publications": 3288,
       "burden_score": 69.99,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 329.477
+      "research_intensity": 329.277
     },
     "Pulmonary Arterial Hypertension": {
       "name": "Pulmonary Arterial Hypertension",
@@ -11225,7 +10729,7 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 1097,
+      "publications": 1095,
       "burden_score": 0.0,
       "gap_score": 10.0,
       "gap_severity": "Low",
@@ -11449,7 +10953,7 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 1203,
+      "publications": 1202,
       "burden_score": 0.0,
       "gap_score": 10.0,
       "gap_severity": "Low",
@@ -11533,11 +11037,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 987,
+      "publications": 985,
       "burden_score": 66.39,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 226.534
+      "research_intensity": 226.075
     },
     "Depressive disorders": {
       "name": "Depressive disorders",
@@ -11547,11 +11051,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 1345,
+      "publications": 1344,
       "burden_score": 77.51,
       "gap_score": 40.0,
       "gap_severity": "Moderate",
-      "research_intensity": 23.877
+      "research_intensity": 23.859
     },
     "Anxiety disorders": {
       "name": "Anxiety disorders",
@@ -11673,11 +11177,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 1432,
+      "publications": 1431,
       "burden_score": 69.52,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 159.78
+      "research_intensity": 159.668
     },
     "Alcohol use disorders": {
       "name": "Alcohol use disorders",
@@ -11715,11 +11219,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 3484,
+      "publications": 3482,
       "burden_score": 78.97,
       "gap_score": 30.0,
       "gap_severity": "Low",
-      "research_intensity": 44.136
+      "research_intensity": 44.11
     },
     "Chronic kidney disease": {
       "name": "Chronic kidney disease",
@@ -12079,11 +11583,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 587,
+      "publications": 586,
       "burden_score": 64.39,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 213.752
+      "research_intensity": 213.388
     },
     "Urinary diseases and male infertility": {
       "name": "Urinary diseases and male infertility",
@@ -12093,11 +11597,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 16839,
+      "publications": 16821,
       "burden_score": 70.55,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 1483.206
+      "research_intensity": 1481.621
     },
     "Gynecological diseases": {
       "name": "Gynecological diseases",
@@ -12107,11 +11611,11 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 25601,
+      "publications": 25578,
       "burden_score": 74.43,
       "gap_score": 10.0,
       "gap_severity": "Low",
-      "research_intensity": 922.97
+      "research_intensity": 922.141
     },
     "Hemoglobinopathies and hemolytic anemias": {
       "name": "Hemoglobinopathies and hemolytic anemias",
@@ -12387,7 +11891,7 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 9314,
+      "publications": 9297,
       "burden_score": 0.0,
       "gap_score": 10.0,
       "gap_severity": "Low",
@@ -12401,7 +11905,7 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 23829,
+      "publications": 23807,
       "burden_score": 0.0,
       "gap_score": 10.0,
       "gap_severity": "Low",
@@ -12415,7 +11919,7 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 2222,
+      "publications": 2219,
       "burden_score": 0.0,
       "gap_score": 10.0,
       "gap_severity": "Low",
@@ -12429,7 +11933,7 @@
       "deaths_millions": null,
       "prevalence_millions": null,
       "global_south_priority": false,
-      "publications": 19665,
+      "publications": 19650,
       "burden_score": 0.0,
       "gap_score": 10.0,
       "gap_severity": "Low",

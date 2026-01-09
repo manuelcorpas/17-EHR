@@ -4,8 +4,8 @@
     "source": "IHCC Global Cohort Atlas (https://atlas.ihccglobal.org/)",
     "reference": "Connolly et al. (2025) Communications Medicine 5:366",
     "generated": "2025-01-07",
-    "total_cohorts": 87,
-    "notes": "Official IHCC member cohorts only"
+    "total_cohorts": 79,
+    "notes": "Official IHCC member cohorts only - verified against IHCC Global Cohort Atlas"
   },
   "cohorts": [
     {
@@ -69,16 +69,6 @@
       "ihcc_member": true
     },
     {
-      "cohort_id": "bgi",
-      "name": "BGI Research",
-      "country": "China",
-      "iso3": "CHN",
-      "region": "WPR",
-      "income_level": "UMIC",
-      "pubmed_query": "\"BGI Research\"[Title/Abstract]",
-      "ihcc_member": true
-    },
-    {
       "cohort_id": "bandim",
       "name": "Bandim Health Project",
       "country": "Guinea-Bissau",
@@ -106,16 +96,6 @@
       "region": "WPR",
       "income_level": "HIC",
       "pubmed_query": "(\"Biobank Japan\"[Title/Abstract] OR \"BioBank Japan\"[Title/Abstract])",
-      "ihcc_member": true
-    },
-    {
-      "cohort_id": "c19genomnet",
-      "name": "C19-GenoNet",
-      "country": "International",
-      "iso3": "INT",
-      "region": "INT",
-      "income_level": "HIC",
-      "pubmed_query": "\"C19-GenoNet\"[Title/Abstract]",
       "ihcc_member": true
     },
     {
@@ -379,16 +359,6 @@
       "ihcc_member": true
     },
     {
-      "cohort_id": "healthy_nevada",
-      "name": "Healthy Nevada",
-      "country": "United States",
-      "iso3": "USA",
-      "region": "AMR",
-      "income_level": "HIC",
-      "pubmed_query": "\"Healthy Nevada Project\"[Title/Abstract]",
-      "ihcc_member": true
-    },
-    {
       "cohort_id": "iganga_mayuge",
       "name": "Iganga Mayuge HDSS",
       "country": "Uganda",
@@ -426,16 +396,6 @@
       "region": "WPR",
       "income_level": "HIC",
       "pubmed_query": "(\"JPHC Study\"[Title/Abstract] OR \"Japan Public Health Center-based Prospective Study\"[Title/Abstract] OR \"JPHC-NEXT\"[Title/Abstract])",
-      "ihcc_member": true
-    },
-    {
-      "cohort_id": "jhu",
-      "name": "Johns Hopkins University Biobank",
-      "country": "United States",
-      "iso3": "USA",
-      "region": "AMR",
-      "income_level": "HIC",
-      "pubmed_query": "(\"Johns Hopkins\"[Title/Abstract] AND \"biobank\"[Title/Abstract])",
       "ihcc_member": true
     },
     {
@@ -559,16 +519,6 @@
       "ihcc_member": true
     },
     {
-      "cohort_id": "unam",
-      "name": "National Autonomous University of Mexico",
-      "country": "Mexico",
-      "iso3": "MEX",
-      "region": "AMR",
-      "income_level": "UMIC",
-      "pubmed_query": "(\"UNAM\"[Title/Abstract] AND \"biobank\"[Title/Abstract])",
-      "ihcc_member": true
-    },
-    {
       "cohort_id": "nbk",
       "name": "National Biobank of Korea",
       "country": "South Korea",
@@ -689,26 +639,6 @@
       "ihcc_member": true
     },
     {
-      "cohort_id": "saprin",
-      "name": "SAPRIN",
-      "country": "South Africa",
-      "iso3": "ZAF",
-      "region": "AFR",
-      "income_level": "UMIC",
-      "pubmed_query": "(\"SAPRIN\"[Title/Abstract] OR \"South African Population Research Infrastructure Network\"[Title/Abstract])",
-      "ihcc_member": true
-    },
-    {
-      "cohort_id": "sg100k",
-      "name": "SG100K",
-      "country": "Singapore",
-      "iso3": "SGP",
-      "region": "WPR",
-      "income_level": "HIC",
-      "pubmed_query": "(\"SG100K\"[Title/Abstract] OR \"SG10K\"[Title/Abstract] OR \"Singapore 10K\"[Title/Abstract])",
-      "ihcc_member": true
-    },
-    {
       "cohort_id": "simpler",
       "name": "SIMPLER",
       "country": "Sweden",
@@ -796,16 +726,6 @@
       "region": "WPR",
       "income_level": "HIC",
       "pubmed_query": "(\"Tohoku Medical Megabank\"[Title/Abstract] OR \"ToMMo\"[Title/Abstract])",
-      "ihcc_member": true
-    },
-    {
-      "cohort_id": "ucl",
-      "name": "UCL Biobank",
-      "country": "United Kingdom",
-      "iso3": "GBR",
-      "region": "EUR",
-      "income_level": "HIC",
-      "pubmed_query": "(\"UCL\"[Title/Abstract] AND \"biobank\"[Title/Abstract])",
       "ihcc_member": true
     },
     {
