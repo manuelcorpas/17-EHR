@@ -1,7 +1,7 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-09T05:21:00.087347",
-  "count": 78,
+  "generated": "2026-01-09T05:30:56.141176",
+  "count": 70,
   "biobanks": [
     {
       "id": "ukb",
@@ -2578,84 +2578,6 @@
       "color": "#dc3545"
     },
     {
-      "id": "healthy_nevada",
-      "name": "Healthy Nevada",
-      "country": "United States",
-      "region": "AMR",
-      "regionName": "Americas",
-      "isGlobalSouth": false,
-      "stats": {
-        "totalPublications": 18,
-        "diseasesCovered": 15,
-        "criticalGaps": 164,
-        "highGaps": 1
-      },
-      "scores": {
-        "equityAlignment": 3.3,
-        "equityCategory": "Poor",
-        "researchOpportunity": 11048.08
-      },
-      "components": {
-        "gap_severity_component": 93.02,
-        "burden_miss_component": 98.53,
-        "capacity_penalty": 99.9,
-        "n_critical": 164,
-        "n_high": 1,
-        "n_moderate": 8,
-        "n_low": 6,
-        "diseases_covered": 15,
-        "missed_dalys": 2705.52
-      },
-      "criticalGapDiseases": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media"
-      ],
-      "dataSufficiency": "Low",
-      "color": "#dc3545"
-    },
-    {
-      "id": "jhu",
-      "name": "Johns Hopkins University Biobank",
-      "country": "United States",
-      "region": "AMR",
-      "regionName": "Americas",
-      "isGlobalSouth": false,
-      "stats": {
-        "totalPublications": 6,
-        "diseasesCovered": 13,
-        "criticalGaps": 166,
-        "highGaps": 0
-      },
-      "scores": {
-        "equityAlignment": 3.1,
-        "equityCategory": "Poor",
-        "researchOpportunity": 10978.97
-      },
-      "components": {
-        "gap_severity_component": 93.58,
-        "burden_miss_component": 98.24,
-        "capacity_penalty": 99.97,
-        "n_critical": 166,
-        "n_high": 0,
-        "n_moderate": 6,
-        "n_low": 7,
-        "diseases_covered": 13,
-        "missed_dalys": 2697.38
-      },
-      "criticalGapDiseases": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media"
-      ],
-      "dataSufficiency": "Low",
-      "color": "#dc3545"
-    },
-    {
       "id": "nbk",
       "name": "National Biobank of Korea",
       "country": "South Korea",
@@ -2734,45 +2656,6 @@
       "color": "#dc3545"
     },
     {
-      "id": "ucl",
-      "name": "UCL Biobank",
-      "country": "United Kingdom",
-      "region": "EUR",
-      "regionName": "Europe",
-      "isGlobalSouth": false,
-      "stats": {
-        "totalPublications": 8,
-        "diseasesCovered": 13,
-        "criticalGaps": 166,
-        "highGaps": 0
-      },
-      "scores": {
-        "equityAlignment": 2.6,
-        "equityCategory": "Poor",
-        "researchOpportunity": 11179.48
-      },
-      "components": {
-        "gap_severity_component": 94.27,
-        "burden_miss_component": 98.99,
-        "capacity_penalty": 99.96,
-        "n_critical": 166,
-        "n_high": 0,
-        "n_moderate": 11,
-        "n_low": 2,
-        "diseases_covered": 13,
-        "missed_dalys": 2718.09
-      },
-      "criticalGapDiseases": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media"
-      ],
-      "dataSufficiency": "Low",
-      "color": "#dc3545"
-    },
-    {
       "id": "sab",
       "name": "South Asia Biobank",
       "country": "United Kingdom",
@@ -2812,45 +2695,6 @@
       "color": "#dc3545"
     },
     {
-      "id": "saprin",
-      "name": "SAPRIN",
-      "country": "South Africa",
-      "region": "AFR",
-      "regionName": "Africa",
-      "isGlobalSouth": true,
-      "stats": {
-        "totalPublications": 6,
-        "diseasesCovered": 12,
-        "criticalGaps": 167,
-        "highGaps": 3
-      },
-      "scores": {
-        "equityAlignment": 2.3,
-        "equityCategory": "Poor",
-        "researchOpportunity": 11108.93
-      },
-      "components": {
-        "gap_severity_component": 95.25,
-        "burden_miss_component": 98.58,
-        "capacity_penalty": 99.97,
-        "n_critical": 168,
-        "n_high": 2,
-        "n_moderate": 6,
-        "n_low": 3,
-        "diseases_covered": 12,
-        "missed_dalys": 2706.74
-      },
-      "criticalGapDiseases": [
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media",
-        "Diarrheal diseases"
-      ],
-      "dataSufficiency": "Low",
-      "color": "#dc3545"
-    },
-    {
       "id": "nepal_csh",
       "name": "Civil Service Hospital Nepal",
       "country": "Nepal",
@@ -2877,162 +2721,6 @@
         "n_moderate": 9,
         "n_low": 1,
         "diseases_covered": 10,
-        "missed_dalys": 2745.83
-      },
-      "criticalGapDiseases": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media"
-      ],
-      "dataSufficiency": "Low",
-      "color": "#dc3545"
-    },
-    {
-      "id": "sg100k",
-      "name": "SG100K",
-      "country": "Singapore",
-      "region": "WPR",
-      "regionName": "Western Pacific",
-      "isGlobalSouth": false,
-      "stats": {
-        "totalPublications": 8,
-        "diseasesCovered": 6,
-        "criticalGaps": 173,
-        "highGaps": 0
-      },
-      "scores": {
-        "equityAlignment": 1.1,
-        "equityCategory": "Poor",
-        "researchOpportunity": 11253.91
-      },
-      "components": {
-        "gap_severity_component": 97.35,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 99.96,
-        "n_critical": 173,
-        "n_high": 0,
-        "n_moderate": 5,
-        "n_low": 1,
-        "diseases_covered": 6,
-        "missed_dalys": 2745.83
-      },
-      "criticalGapDiseases": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media"
-      ],
-      "dataSufficiency": "Low",
-      "color": "#dc3545"
-    },
-    {
-      "id": "c19genomnet",
-      "name": "C19-GenoNet",
-      "country": "International",
-      "region": "INT",
-      "regionName": "Unknown",
-      "isGlobalSouth": false,
-      "stats": {
-        "totalPublications": 1,
-        "diseasesCovered": 6,
-        "criticalGaps": 173,
-        "highGaps": 1
-      },
-      "scores": {
-        "equityAlignment": 1.0,
-        "equityCategory": "Poor",
-        "researchOpportunity": 11253.91
-      },
-      "components": {
-        "gap_severity_component": 97.63,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 99.99,
-        "n_critical": 173,
-        "n_high": 1,
-        "n_moderate": 5,
-        "n_low": 0,
-        "diseases_covered": 6,
-        "missed_dalys": 2745.83
-      },
-      "criticalGapDiseases": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media"
-      ],
-      "dataSufficiency": "Low",
-      "color": "#dc3545"
-    },
-    {
-      "id": "unam",
-      "name": "National Autonomous University of Mexico",
-      "country": "Mexico",
-      "region": "AMR",
-      "regionName": "Americas",
-      "isGlobalSouth": true,
-      "stats": {
-        "totalPublications": 1,
-        "diseasesCovered": 6,
-        "criticalGaps": 173,
-        "highGaps": 0
-      },
-      "scores": {
-        "equityAlignment": 1.0,
-        "equityCategory": "Poor",
-        "researchOpportunity": 11253.91
-      },
-      "components": {
-        "gap_severity_component": 97.49,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 99.99,
-        "n_critical": 173,
-        "n_high": 0,
-        "n_moderate": 6,
-        "n_low": 0,
-        "diseases_covered": 6,
-        "missed_dalys": 2745.83
-      },
-      "criticalGapDiseases": [
-        "HIV/AIDS",
-        "Sexually transmitted infections excluding HIV",
-        "Lower respiratory infections",
-        "Upper respiratory infections",
-        "Otitis media"
-      ],
-      "dataSufficiency": "Low",
-      "color": "#dc3545"
-    },
-    {
-      "id": "bgi",
-      "name": "BGI Research",
-      "country": "China",
-      "region": "WPR",
-      "regionName": "Western Pacific",
-      "isGlobalSouth": true,
-      "stats": {
-        "totalPublications": 1,
-        "diseasesCovered": 0,
-        "criticalGaps": 179,
-        "highGaps": 0
-      },
-      "scores": {
-        "equityAlignment": 0.0,
-        "equityCategory": "Poor",
-        "researchOpportunity": 11253.91
-      },
-      "components": {
-        "gap_severity_component": 100.0,
-        "burden_miss_component": 100.0,
-        "capacity_penalty": 99.99,
-        "n_critical": 179,
-        "n_high": 0,
-        "n_moderate": 0,
-        "n_low": 0,
-        "diseases_covered": 0,
         "missed_dalys": 2745.83
       },
       "criticalGapDiseases": [

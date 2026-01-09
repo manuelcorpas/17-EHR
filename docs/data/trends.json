@@ -1,6 +1,6 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-09T05:21:00.174009",
+  "generated": "2026-01-09T05:30:56.221018",
   "yearRange": {
     "start": 2000,
     "end": 2025
@@ -449,14 +449,6 @@
         "2025": 3
       }
     },
-    "saprin": {
-      "name": "SAPRIN",
-      "yearly": {
-        "2022": 1,
-        "2023": 1,
-        "2025": 1
-      }
-    },
     "twb": {
       "name": "Taiwan Biobank",
       "yearly": {
@@ -583,12 +575,6 @@
         "2023": 8,
         "2024": 7,
         "2025": 9
-      }
-    },
-    "bgi": {
-      "name": "BGI Research",
-      "yearly": {
-        "2019": 1
       }
     },
     "bandim": {
@@ -719,12 +705,6 @@
         "2021": 1,
         "2022": 1,
         "2023": 2,
-        "2024": 1
-      }
-    },
-    "c19genomnet": {
-      "name": "C19-GenoNet",
-      "yearly": {
         "2024": 1
       }
     },
@@ -1215,14 +1195,6 @@
         "2025": 1
       }
     },
-    "ucl": {
-      "name": "UCL Biobank",
-      "yearly": {
-        "2016": 1,
-        "2022": 2,
-        "2025": 1
-      }
-    },
     "golestan": {
       "name": "Golestan Cohort Study",
       "yearly": {
@@ -1276,17 +1248,6 @@
         "2025": 21
       }
     },
-    "healthy_nevada": {
-      "name": "Healthy Nevada",
-      "yearly": {
-        "2019": 1,
-        "2020": 1,
-        "2021": 1,
-        "2022": 5,
-        "2024": 6,
-        "2025": 1
-      }
-    },
     "iganga_mayuge": {
       "name": "Iganga Mayuge HDSS",
       "yearly": {
@@ -1308,12 +1269,6 @@
         "2023": 1,
         "2024": 3,
         "2025": 4
-      }
-    },
-    "jhu": {
-      "name": "Johns Hopkins University Biobank",
-      "yearly": {
-        "2016": 1
       }
     },
     "kemri": {
@@ -1377,12 +1332,6 @@
         "2023": 3,
         "2024": 1,
         "2025": 3
-      }
-    },
-    "unam": {
-      "name": "National Autonomous University of Mexico",
-      "yearly": {
-        "2020": 1
       }
     },
     "ntr": {
@@ -1455,14 +1404,6 @@
         "2023": 4,
         "2024": 2,
         "2025": 2
-      }
-    },
-    "sg100k": {
-      "name": "SG100K",
-      "yearly": {
-        "2022": 3,
-        "2023": 2,
-        "2024": 2
       }
     },
     "snb": {

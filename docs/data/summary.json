@@ -1,13 +1,13 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
   "versionDate": "2026-01-07",
-  "generated": "2026-01-09T05:21:00.085911",
+  "generated": "2026-01-09T05:30:56.139960",
   "overview": {
-    "totalBiobanks": 78,
-    "totalPublications": 38644,
+    "totalBiobanks": 70,
+    "totalPublications": 38595,
     "totalDiseases": 179,
-    "totalCountries": 31,
-    "equityRatio": 57.66
+    "totalCountries": 29,
+    "equityRatio": 57.78
   },
   "gapDistribution": {
     "High": 26,
@@ -16,7 +16,7 @@
     "Low": 84
   },
   "easDistribution": {
-    "Poor": 64,
+    "Poor": 56,
     "Strong": 1,
     "Weak": 13
   },
@@ -24,14 +24,14 @@
     {
       "region": "AFR",
       "name": "Africa",
-      "biobanks": 7,
-      "publications": 283
+      "biobanks": 6,
+      "publications": 277
     },
     {
       "region": "AMR",
       "name": "Americas",
-      "biobanks": 23,
-      "publications": 12458
+      "biobanks": 20,
+      "publications": 12433
     },
     {
       "region": "EMR",
@@ -42,14 +42,8 @@
     {
       "region": "EUR",
       "name": "Europe",
-      "biobanks": 26,
-      "publications": 21490
-    },
-    {
-      "region": "INT",
-      "name": "INT",
-      "biobanks": 1,
-      "publications": 1
+      "biobanks": 25,
+      "publications": 21482
     },
     {
       "region": "SEAR",
@@ -60,8 +54,8 @@
     {
       "region": "WPR",
       "name": "Western Pacific",
-      "biobanks": 15,
-      "publications": 3828
+      "biobanks": 13,
+      "publications": 3819
     }
   ],
   "criticalGaps": [
@@ -209,8 +203,8 @@
     }
   ],
   "averages": {
-    "eas": 21.8,
-    "ros": 8810.81,
+    "eas": 24.1,
+    "ros": 8541.6,
     "gapScore": 37.7
   },
   "methodology": {

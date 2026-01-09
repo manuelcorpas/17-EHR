@@ -1,6 +1,6 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-09T05:21:00.090945",
+  "generated": "2026-01-09T05:30:56.144714",
   "count": 179,
   "diseases": [
     {
@@ -542,9 +542,9 @@
         "burdenScore": 76.72
       },
       "research": {
-        "globalPublications": 43,
-        "biobanksEngaged": 16,
-        "researchIntensity": 0.915
+        "globalPublications": 42,
+        "biobanksEngaged": 15,
+        "researchIntensity": 0.894
       },
       "gap": {
         "score": 80.0,
@@ -1222,9 +1222,9 @@
         "burdenScore": 76.05
       },
       "research": {
-        "globalPublications": 165,
-        "biobanksEngaged": 34,
-        "researchIntensity": 4.098
+        "globalPublications": 163,
+        "biobanksEngaged": 33,
+        "researchIntensity": 4.048
       },
       "gap": {
         "score": 60.0,
@@ -1369,9 +1369,9 @@
         "burdenScore": 83.26
       },
       "research": {
-        "globalPublications": 582,
-        "biobanksEngaged": 45,
-        "researchIntensity": 2.745
+        "globalPublications": 579,
+        "biobanksEngaged": 43,
+        "researchIntensity": 2.731
       },
       "gap": {
         "score": 60.0,
@@ -1574,9 +1574,9 @@
         "burdenScore": 75.09
       },
       "research": {
-        "globalPublications": 140,
-        "biobanksEngaged": 27,
-        "researchIntensity": 4.332
+        "globalPublications": 139,
+        "biobanksEngaged": 26,
+        "researchIntensity": 4.301
       },
       "gap": {
         "score": 60.0,
@@ -2044,9 +2044,9 @@
         "burdenScore": 82.7
       },
       "research": {
-        "globalPublications": 1681,
-        "biobanksEngaged": 57,
-        "researchIntensity": 9.02
+        "globalPublications": 1680,
+        "biobanksEngaged": 56,
+        "researchIntensity": 9.015
       },
       "gap": {
         "score": 50.0,
@@ -2969,9 +2969,9 @@
         "burdenScore": 82.75
       },
       "research": {
-        "globalPublications": 2197,
-        "biobanksEngaged": 52,
-        "researchIntensity": 11.664
+        "globalPublications": 2196,
+        "biobanksEngaged": 51,
+        "researchIntensity": 11.658
       },
       "gap": {
         "score": 40.0,
@@ -3018,9 +3018,9 @@
         "burdenScore": 82.05
       },
       "research": {
-        "globalPublications": 1934,
-        "biobanksEngaged": 49,
-        "researchIntensity": 12.053
+        "globalPublications": 1932,
+        "biobanksEngaged": 47,
+        "researchIntensity": 12.041
       },
       "gap": {
         "score": 40.0,
@@ -3410,9 +3410,9 @@
         "burdenScore": 77.51
       },
       "research": {
-        "globalPublications": 1345,
-        "biobanksEngaged": 47,
-        "researchIntensity": 23.877
+        "globalPublications": 1344,
+        "biobanksEngaged": 46,
+        "researchIntensity": 23.859
       },
       "gap": {
         "score": 40.0,
@@ -4292,9 +4292,9 @@
         "burdenScore": 76.68
       },
       "research": {
-        "globalPublications": 2188,
-        "biobanksEngaged": 53,
-        "researchIntensity": 47.017
+        "globalPublications": 2186,
+        "biobanksEngaged": 51,
+        "researchIntensity": 46.974
       },
       "gap": {
         "score": 30.0,
@@ -4439,9 +4439,9 @@
         "burdenScore": 78.97
       },
       "research": {
-        "globalPublications": 3484,
-        "biobanksEngaged": 61,
-        "researchIntensity": 44.136
+        "globalPublications": 3482,
+        "biobanksEngaged": 60,
+        "researchIntensity": 44.11
       },
       "gap": {
         "score": 30.0,
@@ -4914,9 +4914,9 @@
         "burdenScore": 74.06
       },
       "research": {
-        "globalPublications": 1600,
-        "biobanksEngaged": 55,
-        "researchIntensity": 62.838
+        "globalPublications": 1598,
+        "biobanksEngaged": 54,
+        "researchIntensity": 62.76
       },
       "gap": {
         "score": 20.0,
@@ -5600,9 +5600,9 @@
         "burdenScore": 67.67
       },
       "research": {
-        "globalPublications": 605,
-        "biobanksEngaged": 53,
-        "researchIntensity": 103.384
+        "globalPublications": 603,
+        "biobanksEngaged": 52,
+        "researchIntensity": 103.042
       },
       "gap": {
         "score": 10.0,
@@ -5649,9 +5649,9 @@
         "burdenScore": 70.9
       },
       "research": {
-        "globalPublications": 3498,
-        "biobanksEngaged": 61,
-        "researchIntensity": 284.066
+        "globalPublications": 3495,
+        "biobanksEngaged": 59,
+        "researchIntensity": 283.823
       },
       "gap": {
         "score": 10.0,
@@ -5747,9 +5747,9 @@
         "burdenScore": 73.15
       },
       "research": {
-        "globalPublications": 3350,
-        "biobanksEngaged": 52,
-        "researchIntensity": 162.34
+        "globalPublications": 3345,
+        "biobanksEngaged": 49,
+        "researchIntensity": 162.098
       },
       "gap": {
         "score": 10.0,
@@ -5894,9 +5894,9 @@
         "burdenScore": 67.13
       },
       "research": {
-        "globalPublications": 1872,
-        "biobanksEngaged": 49,
-        "researchIntensity": 362.562
+        "globalPublications": 1869,
+        "biobanksEngaged": 47,
+        "researchIntensity": 361.981
       },
       "gap": {
         "score": 10.0,
@@ -5943,9 +5943,9 @@
         "burdenScore": 69.11
       },
       "research": {
-        "globalPublications": 1964,
-        "biobanksEngaged": 47,
-        "researchIntensity": 241.231
+        "globalPublications": 1960,
+        "biobanksEngaged": 46,
+        "researchIntensity": 240.74
       },
       "gap": {
         "score": 10.0,
@@ -6041,9 +6041,9 @@
         "burdenScore": 73.87
       },
       "research": {
-        "globalPublications": 2536,
-        "biobanksEngaged": 48,
-        "researchIntensity": 103.93
+        "globalPublications": 2535,
+        "biobanksEngaged": 47,
+        "researchIntensity": 103.889
       },
       "gap": {
         "score": 10.0,
@@ -6629,9 +6629,9 @@
         "burdenScore": 69.5
       },
       "research": {
-        "globalPublications": 2201,
-        "biobanksEngaged": 53,
-        "researchIntensity": 246.954
+        "globalPublications": 2199,
+        "biobanksEngaged": 51,
+        "researchIntensity": 246.729
       },
       "gap": {
         "score": 10.0,
@@ -6825,9 +6825,9 @@
         "burdenScore": 60.85
       },
       "research": {
-        "globalPublications": 7439,
-        "biobanksEngaged": 59,
-        "researchIntensity": 6120.374
+        "globalPublications": 7428,
+        "biobanksEngaged": 55,
+        "researchIntensity": 6111.323
       },
       "gap": {
         "score": 10.0,
@@ -6874,9 +6874,9 @@
         "burdenScore": 68.1
       },
       "research": {
-        "globalPublications": 1563,
-        "biobanksEngaged": 47,
-        "researchIntensity": 242.147
+        "globalPublications": 1559,
+        "biobanksEngaged": 45,
+        "researchIntensity": 241.528
       },
       "gap": {
         "score": 10.0,
@@ -7168,9 +7168,9 @@
         "burdenScore": 69.99
       },
       "research": {
-        "globalPublications": 3290,
-        "biobanksEngaged": 52,
-        "researchIntensity": 329.477
+        "globalPublications": 3288,
+        "biobanksEngaged": 50,
+        "researchIntensity": 329.277
       },
       "gap": {
         "score": 10.0,
@@ -7217,8 +7217,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 1097,
-        "biobanksEngaged": 51,
+        "globalPublications": 1095,
+        "biobanksEngaged": 50,
         "researchIntensity": 0
       },
       "gap": {
@@ -7364,8 +7364,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 1203,
-        "biobanksEngaged": 38,
+        "globalPublications": 1202,
+        "biobanksEngaged": 37,
         "researchIntensity": 0
       },
       "gap": {
@@ -7609,9 +7609,9 @@
         "burdenScore": 66.39
       },
       "research": {
-        "globalPublications": 987,
-        "biobanksEngaged": 42,
-        "researchIntensity": 226.534
+        "globalPublications": 985,
+        "biobanksEngaged": 40,
+        "researchIntensity": 226.075
       },
       "gap": {
         "score": 10.0,
@@ -7756,9 +7756,9 @@
         "burdenScore": 69.52
       },
       "research": {
-        "globalPublications": 1432,
-        "biobanksEngaged": 49,
-        "researchIntensity": 159.78
+        "globalPublications": 1431,
+        "biobanksEngaged": 48,
+        "researchIntensity": 159.668
       },
       "gap": {
         "score": 10.0,
@@ -7903,9 +7903,9 @@
         "burdenScore": 64.39
       },
       "research": {
-        "globalPublications": 587,
-        "biobanksEngaged": 43,
-        "researchIntensity": 213.752
+        "globalPublications": 586,
+        "biobanksEngaged": 42,
+        "researchIntensity": 213.388
       },
       "gap": {
         "score": 10.0,
@@ -7952,9 +7952,9 @@
         "burdenScore": 70.55
       },
       "research": {
-        "globalPublications": 16839,
-        "biobanksEngaged": 75,
-        "researchIntensity": 1483.206
+        "globalPublications": 16821,
+        "biobanksEngaged": 70,
+        "researchIntensity": 1481.621
       },
       "gap": {
         "score": 10.0,
@@ -8001,9 +8001,9 @@
         "burdenScore": 74.43
       },
       "research": {
-        "globalPublications": 25601,
-        "biobanksEngaged": 76,
-        "researchIntensity": 922.97
+        "globalPublications": 25578,
+        "biobanksEngaged": 70,
+        "researchIntensity": 922.141
       },
       "gap": {
         "score": 10.0,
@@ -8148,8 +8148,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 9314,
-        "biobanksEngaged": 66,
+        "globalPublications": 9297,
+        "biobanksEngaged": 61,
         "researchIntensity": 0
       },
       "gap": {
@@ -8197,8 +8197,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 23829,
-        "biobanksEngaged": 77,
+        "globalPublications": 23807,
+        "biobanksEngaged": 70,
         "researchIntensity": 0
       },
       "gap": {
@@ -8246,8 +8246,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 2222,
-        "biobanksEngaged": 57,
+        "globalPublications": 2219,
+        "biobanksEngaged": 54,
         "researchIntensity": 0
       },
       "gap": {
@@ -8295,8 +8295,8 @@
         "burdenScore": 0.0
       },
       "research": {
-        "globalPublications": 19665,
-        "biobanksEngaged": 74,
+        "globalPublications": 19650,
+        "biobanksEngaged": 69,
         "researchIntensity": 0
       },
       "gap": {

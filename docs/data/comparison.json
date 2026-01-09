@@ -1,6 +1,6 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-09T05:21:00.181509",
+  "generated": "2026-01-09T05:30:56.226909",
   "biobanks": [
     {
       "id": "23andme",
@@ -2064,40 +2064,6 @@
       }
     },
     {
-      "id": "saprin",
-      "name": "SAPRIN",
-      "country": "South Africa",
-      "region": "AFR",
-      "stats": {
-        "publications": 6,
-        "diseases": 12,
-        "eas": 2.3,
-        "ros": 11108.93,
-        "criticalGaps": 167
-      },
-      "radar": {
-        "coverage": 48.0,
-        "volume": 0.04352557127312296,
-        "equity": 2.3,
-        "depth": 0.030000000000001137,
-        "gsEngagement": 66.7
-      },
-      "diseasePublications": {
-        "Urinary diseases and male infertility": 4,
-        "Gynecological diseases": 4,
-        "COVID-19": 2,
-        "_BIOBANK_METHODS": 4,
-        "Other unspecified infectious diseases": 2,
-        "Maternal disorders": 2,
-        "Pulmonary Arterial Hypertension": 2,
-        "Diabetes mellitus": 2,
-        "Tuberculosis": 1,
-        "HIV/AIDS": 2,
-        "_AGING": 2,
-        "Hypertensive heart disease": 2
-      }
-    },
-    {
       "id": "twb",
       "name": "Taiwan Biobank",
       "country": "Taiwan",
@@ -2765,27 +2731,6 @@
       }
     },
     {
-      "id": "bgi",
-      "name": "BGI Research",
-      "country": "China",
-      "region": "WPR",
-      "stats": {
-        "publications": 1,
-        "diseases": 0,
-        "eas": 0.0,
-        "ros": 11253.91,
-        "criticalGaps": 179
-      },
-      "radar": {
-        "coverage": 0.0,
-        "volume": 0.007254261878853827,
-        "equity": 0.0,
-        "depth": 0.010000000000005116,
-        "gsEngagement": 0.0
-      },
-      "diseasePublications": {}
-    },
-    {
       "id": "bandim",
       "name": "Bandim Health Project",
       "country": "Guinea-Bissau",
@@ -3264,34 +3209,6 @@
         "Cirrhosis and other chronic liver diseases": 1,
         "Depressive disorders": 2,
         "Non-Hodgkin lymphoma": 1
-      }
-    },
-    {
-      "id": "c19genomnet",
-      "name": "C19-GenoNet",
-      "country": "International",
-      "region": "INT",
-      "stats": {
-        "publications": 1,
-        "diseases": 6,
-        "eas": 1.0,
-        "ros": 11253.91,
-        "criticalGaps": 173
-      },
-      "radar": {
-        "coverage": 24.0,
-        "volume": 0.007254261878853827,
-        "equity": 1.0,
-        "depth": 0.010000000000005116,
-        "gsEngagement": 100.0
-      },
-      "diseasePublications": {
-        "_BIOBANK_METHODS": 1,
-        "Urinary diseases and male infertility": 1,
-        "_AGING": 1,
-        "COVID-19": 1,
-        "Gynecological diseases": 1,
-        "_GENOMICS": 1
       }
     },
     {
@@ -5347,41 +5264,6 @@
       }
     },
     {
-      "id": "ucl",
-      "name": "UCL Biobank",
-      "country": "United Kingdom",
-      "region": "EUR",
-      "stats": {
-        "publications": 8,
-        "diseases": 13,
-        "eas": 2.6,
-        "ros": 11179.48,
-        "criticalGaps": 166
-      },
-      "radar": {
-        "coverage": 52.0,
-        "volume": 0.05803409503083062,
-        "equity": 2.6,
-        "depth": 0.04000000000000625,
-        "gsEngagement": 12.5
-      },
-      "diseasePublications": {
-        "Urinary diseases and male infertility": 2,
-        "Gynecological diseases": 4,
-        "_BIOBANK_METHODS": 7,
-        "_AGING": 2,
-        "Other malignant neoplasms": 2,
-        "Other neoplasms": 2,
-        "Tracheal, bronchus, and lung cancer": 1,
-        "_GENOMICS": 1,
-        "Ischemic heart disease": 1,
-        "Maternal disorders": 1,
-        "_IMAGING": 1,
-        "Ovarian cancer": 1,
-        "Other cardiovascular and circulatory diseases": 1
-      }
-    },
-    {
       "id": "golestan",
       "name": "Golestan Cohort Study",
       "country": "Iran",
@@ -5575,43 +5457,6 @@
       }
     },
     {
-      "id": "healthy_nevada",
-      "name": "Healthy Nevada",
-      "country": "United States",
-      "region": "AMR",
-      "stats": {
-        "publications": 18,
-        "diseases": 15,
-        "eas": 3.3,
-        "ros": 11048.08,
-        "criticalGaps": 164
-      },
-      "radar": {
-        "coverage": 60.0,
-        "volume": 0.13057671381936886,
-        "equity": 3.3,
-        "depth": 0.09999999999999432,
-        "gsEngagement": 11.1
-      },
-      "diseasePublications": {
-        "_GENOMICS": 5,
-        "_BIOBANK_METHODS": 5,
-        "Urinary diseases and male infertility": 6,
-        "_AGING": 7,
-        "Gynecological diseases": 8,
-        "Dietary iron deficiency": 1,
-        "Depressive disorders": 1,
-        "Other mental disorders": 1,
-        "Breast cancer": 2,
-        "Other neoplasms": 3,
-        "Neonatal disorders": 1,
-        "Sudden infant death syndrome": 1,
-        "Colon and rectum cancer": 1,
-        "Other malignant neoplasms": 2,
-        "Ovarian cancer": 2
-      }
-    },
-    {
       "id": "iganga_mayuge",
       "name": "Iganga Mayuge HDSS",
       "country": "Uganda",
@@ -5663,41 +5508,6 @@
         "Depressive disorders": 1,
         "Self-harm": 1,
         "Adverse effects of medical treatment": 1
-      }
-    },
-    {
-      "id": "jhu",
-      "name": "Johns Hopkins University Biobank",
-      "country": "United States",
-      "region": "AMR",
-      "stats": {
-        "publications": 6,
-        "diseases": 13,
-        "eas": 3.1,
-        "ros": 10978.97,
-        "criticalGaps": 166
-      },
-      "radar": {
-        "coverage": 52.0,
-        "volume": 0.04352557127312296,
-        "equity": 3.1,
-        "depth": 0.030000000000001137,
-        "gsEngagement": 0.0
-      },
-      "diseasePublications": {
-        "_BIOBANK_METHODS": 3,
-        "_IMAGING": 1,
-        "Brain and central nervous system cancer": 1,
-        "Urinary diseases and male infertility": 5,
-        "_AGING": 3,
-        "Other neurological disorders": 1,
-        "Other cardiovascular and circulatory diseases": 1,
-        "Stroke": 1,
-        "Gynecological diseases": 5,
-        "_GENOMICS": 4,
-        "Breast cancer": 1,
-        "Prostate cancer": 4,
-        "Other neoplasms": 4
       }
     },
     {
@@ -5881,34 +5691,6 @@
         "Alcohol use disorders": 1,
         "Other neoplasms": 1,
         "COVID-19": 1
-      }
-    },
-    {
-      "id": "unam",
-      "name": "National Autonomous University of Mexico",
-      "country": "Mexico",
-      "region": "AMR",
-      "stats": {
-        "publications": 1,
-        "diseases": 6,
-        "eas": 1.0,
-        "ros": 11253.91,
-        "criticalGaps": 173
-      },
-      "radar": {
-        "coverage": 24.0,
-        "volume": 0.007254261878853827,
-        "equity": 1.0,
-        "depth": 0.010000000000005116,
-        "gsEngagement": 0.0
-      },
-      "diseasePublications": {
-        "_BIOBANK_METHODS": 1,
-        "_IMAGING": 1,
-        "Brain and central nervous system cancer": 1,
-        "Alzheimer's disease and other dementias": 1,
-        "Other neurological disorders": 1,
-        "Stroke": 1
       }
     },
     {
@@ -6164,34 +5946,6 @@
         "Neonatal disorders": 1,
         "Conduct disorder": 1,
         "Interpersonal violence": 1
-      }
-    },
-    {
-      "id": "sg100k",
-      "name": "SG100K",
-      "country": "Singapore",
-      "region": "WPR",
-      "stats": {
-        "publications": 8,
-        "diseases": 6,
-        "eas": 1.1,
-        "ros": 11253.91,
-        "criticalGaps": 173
-      },
-      "radar": {
-        "coverage": 24.0,
-        "volume": 0.05803409503083062,
-        "equity": 1.1,
-        "depth": 0.04000000000000625,
-        "gsEngagement": 0.0
-      },
-      "diseasePublications": {
-        "Breast cancer": 2,
-        "Other neoplasms": 2,
-        "_GENOMICS": 6,
-        "_BIOBANK_METHODS": 1,
-        "Tracheal, bronchus, and lung cancer": 1,
-        "Gynecological diseases": 1
       }
     },
     {
@@ -6553,11 +6307,6 @@
   ],
   "similarPairs": [
     {
-      "biobank1": "unam",
-      "biobank2": "sg100k",
-      "similarity": 100.0
-    },
-    {
       "biobank1": "aou",
       "biobank2": "estbb",
       "similarity": 99.5
@@ -6638,19 +6387,24 @@
       "similarity": 99.0
     },
     {
-      "biobank1": "nbk",
-      "biobank2": "ucl",
-      "similarity": 99.0
-    },
-    {
-      "biobank1": "nbk",
-      "biobank2": "healthy_nevada",
-      "similarity": 99.0
-    },
-    {
       "biobank1": "kcps",
       "biobank2": "nshds",
       "similarity": 99.0
+    },
+    {
+      "biobank1": "constances",
+      "biobank2": "nako",
+      "similarity": 99.0
+    },
+    {
+      "biobank1": "cts",
+      "biobank2": "golestan",
+      "similarity": 99.0
+    },
+    {
+      "biobank1": "biovu",
+      "biobank2": "45andup",
+      "similarity": 98.9
     }
   ],
   "radarDimensions": [

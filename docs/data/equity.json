@@ -1,20 +1,20 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-09T05:21:00.185315",
-  "equityRatio": 57.66,
+  "generated": "2026-01-09T05:30:56.230687",
+  "equityRatio": 57.78,
   "equityInterpretation": "HIC-biased",
   "summary": {
     "hic": {
-      "biobanks": 57,
-      "publications": 36137,
+      "biobanks": 52,
+      "publications": 36096,
       "publicationShare": 93.5,
-      "averageEas": 25.0
+      "averageEas": 27.1
     },
     "lmic": {
-      "biobanks": 21,
-      "publications": 2507,
+      "biobanks": 18,
+      "publications": 2499,
       "publicationShare": 6.5,
-      "averageEas": 13.2
+      "averageEas": 15.2
     }
   },
   "globalSouthDiseases": [
@@ -135,7 +135,7 @@
       "name": "Tuberculosis",
       "gapScore": 80.0,
       "severity": "Critical",
-      "publications": 43,
+      "publications": 42,
       "dalys": 46.98
     },
     {
@@ -231,7 +231,7 @@
       "name": "HIV/AIDS",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 165,
+      "publications": 163,
       "dalys": 40.27
     },
     {
@@ -255,7 +255,7 @@
       "name": "COVID-19",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 582,
+      "publications": 579,
       "dalys": 212.01
     },
     {
@@ -295,7 +295,7 @@
       "name": "Dietary iron deficiency",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 140,
+      "publications": 139,
       "dalys": 32.32
     },
     {
@@ -311,7 +311,7 @@
       "name": "Neonatal disorders",
       "gapScore": 50.0,
       "severity": "Moderate",
-      "publications": 1681,
+      "publications": 1680,
       "dalys": 186.37
     },
     {
@@ -455,7 +455,7 @@
       "name": "Maternal disorders",
       "gapScore": 10.0,
       "severity": "Low",
-      "publications": 3498,
+      "publications": 3495,
       "dalys": 12.31
     },
     {
@@ -480,25 +480,25 @@
       "region": "EUR",
       "name": "Europe",
       "incomeCategory": "HIC",
-      "biobanks": 26,
-      "publications": 21490,
-      "averageEas": 24.9
+      "biobanks": 25,
+      "publications": 21482,
+      "averageEas": 25.8
     },
     {
       "region": "AMR",
       "name": "Americas",
       "incomeCategory": "Mixed",
-      "biobanks": 23,
-      "publications": 12458,
-      "averageEas": 25.0
+      "biobanks": 20,
+      "publications": 12433,
+      "averageEas": 28.4
     },
     {
       "region": "WPR",
       "name": "Western Pacific",
       "incomeCategory": "HIC",
-      "biobanks": 15,
-      "publications": 3828,
-      "averageEas": 22.4
+      "biobanks": 13,
+      "publications": 3819,
+      "averageEas": 25.8
     },
     {
       "region": "EMR",
@@ -512,9 +512,9 @@
       "region": "AFR",
       "name": "Africa",
       "incomeCategory": "LMIC",
-      "biobanks": 7,
-      "publications": 283,
-      "averageEas": 7.8
+      "biobanks": 6,
+      "publications": 277,
+      "averageEas": 8.7
     },
     {
       "region": "SEAR",
@@ -523,14 +523,6 @@
       "biobanks": 1,
       "publications": 10,
       "averageEas": 1.7
-    },
-    {
-      "region": "INT",
-      "name": "INT",
-      "incomeCategory": "HIC",
-      "biobanks": 1,
-      "publications": 1,
-      "averageEas": 1.0
     }
   ],
   "hicBiobanks": [
@@ -940,15 +932,6 @@
       "eas": 8.7
     },
     {
-      "id": "healthy_nevada",
-      "name": "Healthy Nevada",
-      "country": "United States",
-      "region": "AMR",
-      "incomeLevel": "",
-      "publications": 18,
-      "eas": 3.3
-    },
-    {
       "id": "nbk",
       "name": "National Biobank of Korea",
       "country": "South Korea",
@@ -1003,24 +986,6 @@
       "eas": 3.5
     },
     {
-      "id": "ucl",
-      "name": "UCL Biobank",
-      "country": "United Kingdom",
-      "region": "EUR",
-      "incomeLevel": "",
-      "publications": 8,
-      "eas": 2.6
-    },
-    {
-      "id": "sg100k",
-      "name": "SG100K",
-      "country": "Singapore",
-      "region": "WPR",
-      "incomeLevel": "",
-      "publications": 8,
-      "eas": 1.1
-    },
-    {
       "id": "sab",
       "name": "South Asia Biobank",
       "country": "United Kingdom",
@@ -1028,24 +993,6 @@
       "incomeLevel": "",
       "publications": 8,
       "eas": 2.5
-    },
-    {
-      "id": "jhu",
-      "name": "Johns Hopkins University Biobank",
-      "country": "United States",
-      "region": "AMR",
-      "incomeLevel": "",
-      "publications": 6,
-      "eas": 3.1
-    },
-    {
-      "id": "c19genomnet",
-      "name": "C19-GenoNet",
-      "country": "International",
-      "region": "INT",
-      "incomeLevel": "",
-      "publications": 1,
-      "eas": 1.0
     }
   ],
   "lmicBiobanks": [
@@ -1210,33 +1157,6 @@
       "incomeLevel": "",
       "publications": 6,
       "eas": 2.7
-    },
-    {
-      "id": "saprin",
-      "name": "SAPRIN",
-      "country": "South Africa",
-      "region": "AFR",
-      "incomeLevel": "",
-      "publications": 6,
-      "eas": 2.3
-    },
-    {
-      "id": "bgi",
-      "name": "BGI Research",
-      "country": "China",
-      "region": "WPR",
-      "incomeLevel": "",
-      "publications": 1,
-      "eas": 0.0
-    },
-    {
-      "id": "unam",
-      "name": "National Autonomous University of Mexico",
-      "country": "Mexico",
-      "region": "AMR",
-      "incomeLevel": "",
-      "publications": 1,
-      "eas": 1.0
     }
   ]
 }
