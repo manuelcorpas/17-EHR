@@ -259,10 +259,18 @@ body {
     font-weight: 600;
 }
 
+/* Gap severity badges (high gap = bad = orange) */
 .badge-critical { background: var(--critical); color: white; }
 .badge-high { background: var(--high); color: white; }
 .badge-moderate { background: var(--moderate); color: #000; }
 .badge-low { background: var(--low); color: white; }
+
+/* EAS alignment badges (high alignment = good = green) */
+.badge-eas-high { background: var(--success); color: white; }
+.badge-eas-moderate { background: var(--warning); color: #000; }
+.badge-eas-low { background: var(--danger); color: white; }
+
+/* Legacy category badges */
 .badge-strong { background: var(--success); color: white; }
 .badge-weak { background: var(--warning); color: #000; }
 .badge-poor { background: var(--danger); color: white; }
