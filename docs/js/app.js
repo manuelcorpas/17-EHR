@@ -288,14 +288,19 @@ function populateCompareSelects() {
     const select1 = document.getElementById('compare-biobank1');
     const select2 = document.getElementById('compare-biobank2');
     if (!select1 || !select2 || !DATA.comparison?.biobanks) return;
-    
-    const options = DATA.comparison.biobanks.map(b => 
+
+    // Sort biobanks alphabetically by name
+    const sortedBiobanks = [...DATA.comparison.biobanks].sort((a, b) =>
+        a.name.localeCompare(b.name)
+    );
+
+    const options = sortedBiobanks.map(b =>
         `<option value="${b.id}">${b.name}</option>`
     );
-    
+
     select1.innerHTML = '<option value="">Select biobank...</option>' + options.join('');
     select2.innerHTML = '<option value="">Select biobank...</option>' + options.join('');
-    
+
     select1.addEventListener('change', updateComparison);
     select2.addEventListener('change', updateComparison);
 }
