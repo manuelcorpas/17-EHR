@@ -241,6 +241,6 @@
     "ros": "\u03a3 Burden_Score for diseases with \u22642 publications",
     "eas": "100 - (0.4 \u00d7 Gap_Severity + 0.3 \u00d7 Burden_Miss + 0.3 \u00d7 Capacity_Penalty)",
     "equity_ratio": "(Pubs_HIC / DALYs_HIC) / (Pubs_LMIC / DALYs_LMIC)",
-    "source": "Corpas et al. 2025, Annual Review of Biomedical Data Science"
+    "source": "Corpas et al. 2025, medRxiv preprint"
   }
 }
