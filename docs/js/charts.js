@@ -34,9 +34,9 @@ function renderEASDistributionChart() {
     destroyChart('eas-dist');
     
     const dist = DATA.summary.easDistribution;
-    const labels = ['Strong', 'Moderate', 'Weak', 'Poor'];
+    const labels = ['High', 'Moderate', 'Low'];
     const values = labels.map(l => dist[l] || 0);
-    const colors = [COLORS.low, COLORS.moderate, COLORS.high, COLORS.critical];
+    const colors = [COLORS.low, COLORS.moderate, COLORS.critical];
     
     chartInstances['eas-dist'] = new Chart(canvas, {
         type: 'doughnut',
