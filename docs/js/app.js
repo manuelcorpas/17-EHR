@@ -109,13 +109,13 @@ function renderOverview() {
 function renderTopBiobanksTable() {
     const tbody = document.querySelector('#table-top-biobanks tbody');
     if (!tbody || !DATA.summary?.topBiobanks) return;
-    
+
     tbody.innerHTML = DATA.summary.topBiobanks.map((b, i) => `
         <tr>
             <td>${i + 1}</td>
             <td>${b.name}</td>
             <td>${b.eas?.toFixed(1) || '--'}</td>
-            <td><span class="badge badge-${b.category?.toLowerCase().replace(' ', '-')}">${b.category}</span></td>
+            <td><span class="badge badge-${getCategoryClass(b.category)}">${b.category}</span></td>
             <td>${formatNumber(b.publications)}</td>
         </tr>
     `).join('');
@@ -411,10 +411,14 @@ function formatNumber(num) {
 function getCategoryClass(category) {
     if (!category) return '';
     const cat = category.toLowerCase();
-    if (cat.includes('strong')) return 'strong';
-    if (cat.includes('moderate')) return 'moderate';
-    if (cat.includes('weak')) return 'weak';
-    if (cat.includes('poor')) return 'poor';
+    // Map EAS categories to eas-prefixed classes (high alignment = good = green)
+    if (cat === 'high') return 'eas-high';
+    if (cat === 'moderate') return 'eas-moderate';
+    if (cat === 'low') return 'eas-low';
+    // Legacy support
+    if (cat.includes('strong')) return 'eas-high';
+    if (cat.includes('weak')) return 'eas-moderate';
+    if (cat.includes('poor')) return 'eas-low';
     return cat;
 }
 
