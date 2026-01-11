@@ -18,7 +18,7 @@
       },
       "scores": {
         "equityAlignment": 84.6,
-        "equityCategory": "Strong",
+        "equityCategory": "High",
         "researchOpportunity": 2047.14
       },
       "components": {
@@ -57,7 +57,7 @@
       },
       "scores": {
         "equityAlignment": 55.2,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 4351.66
       },
       "components": {
@@ -96,7 +96,7 @@
       },
       "scores": {
         "equityAlignment": 53.4,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 4775.38
       },
       "components": {
@@ -135,7 +135,7 @@
       },
       "scores": {
         "equityAlignment": 49.2,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 4498.82
       },
       "components": {
@@ -174,7 +174,7 @@
       },
       "scores": {
         "equityAlignment": 49.1,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 5271.82
       },
       "components": {
@@ -213,7 +213,7 @@
       },
       "scores": {
         "equityAlignment": 48.1,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 5248.58
       },
       "components": {
@@ -252,7 +252,7 @@
       },
       "scores": {
         "equityAlignment": 45.2,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 5419.07
       },
       "components": {
@@ -291,7 +291,7 @@
       },
       "scores": {
         "equityAlignment": 44.4,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 6374.44
       },
       "components": {
@@ -330,7 +330,7 @@
       },
       "scores": {
         "equityAlignment": 43.6,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 5754.14
       },
       "components": {
@@ -369,7 +369,7 @@
       },
       "scores": {
         "equityAlignment": 43.1,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 7053.48
       },
       "components": {
@@ -408,7 +408,7 @@
       },
       "scores": {
         "equityAlignment": 42.7,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 5445.08
       },
       "components": {
@@ -447,7 +447,7 @@
       },
       "scores": {
         "equityAlignment": 42.5,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 5844.02
       },
       "components": {
@@ -486,7 +486,7 @@
       },
       "scores": {
         "equityAlignment": 41.6,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 6632.0
       },
       "components": {
@@ -525,7 +525,7 @@
       },
       "scores": {
         "equityAlignment": 40.1,
-        "equityCategory": "Weak",
+        "equityCategory": "Moderate",
         "researchOpportunity": 6537.82
       },
       "components": {
@@ -564,7 +564,7 @@
       },
       "scores": {
         "equityAlignment": 39.9,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 6531.35
       },
       "components": {
@@ -603,7 +603,7 @@
       },
       "scores": {
         "equityAlignment": 38.3,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 6695.09
       },
       "components": {
@@ -642,7 +642,7 @@
       },
       "scores": {
         "equityAlignment": 38.0,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 6740.36
       },
       "components": {
@@ -681,7 +681,7 @@
       },
       "scores": {
         "equityAlignment": 36.7,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 6972.87
       },
       "components": {
@@ -720,7 +720,7 @@
       },
       "scores": {
         "equityAlignment": 36.1,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 7458.28
       },
       "components": {
@@ -759,7 +759,7 @@
       },
       "scores": {
         "equityAlignment": 35.6,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 7270.95
       },
       "components": {
@@ -798,7 +798,7 @@
       },
       "scores": {
         "equityAlignment": 35.1,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 6640.64
       },
       "components": {
@@ -837,7 +837,7 @@
       },
       "scores": {
         "equityAlignment": 34.7,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 6648.96
       },
       "components": {
@@ -876,7 +876,7 @@
       },
       "scores": {
         "equityAlignment": 32.2,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 6988.32
       },
       "components": {
@@ -915,7 +915,7 @@
       },
       "scores": {
         "equityAlignment": 31.4,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 7424.54
       },
       "components": {
@@ -954,7 +954,7 @@
       },
       "scores": {
         "equityAlignment": 29.7,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 7487.37
       },
       "components": {
@@ -993,7 +993,7 @@
       },
       "scores": {
         "equityAlignment": 29.4,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 7586.65
       },
       "components": {
@@ -1032,7 +1032,7 @@
       },
       "scores": {
         "equityAlignment": 29.2,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 7434.82
       },
       "components": {
@@ -1071,7 +1071,7 @@
       },
       "scores": {
         "equityAlignment": 28.3,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 7561.18
       },
       "components": {
@@ -1110,7 +1110,7 @@
       },
       "scores": {
         "equityAlignment": 26.2,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 9457.24
       },
       "components": {
@@ -1149,7 +1149,7 @@
       },
       "scores": {
         "equityAlignment": 26.0,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 7980.7
       },
       "components": {
@@ -1188,7 +1188,7 @@
       },
       "scores": {
         "equityAlignment": 24.7,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 8684.32
       },
       "components": {
@@ -1227,7 +1227,7 @@
       },
       "scores": {
         "equityAlignment": 24.2,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 8177.35
       },
       "components": {
@@ -1266,7 +1266,7 @@
       },
       "scores": {
         "equityAlignment": 23.5,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 8103.51
       },
       "components": {
@@ -1305,7 +1305,7 @@
       },
       "scores": {
         "equityAlignment": 22.6,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 8145.87
       },
       "components": {
@@ -1344,7 +1344,7 @@
       },
       "scores": {
         "equityAlignment": 22.4,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 8139.86
       },
       "components": {
@@ -1383,7 +1383,7 @@
       },
       "scores": {
         "equityAlignment": 21.2,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 9758.13
       },
       "components": {
@@ -1422,7 +1422,7 @@
       },
       "scores": {
         "equityAlignment": 20.2,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 8391.81
       },
       "components": {
@@ -1461,7 +1461,7 @@
       },
       "scores": {
         "equityAlignment": 19.9,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 9415.72
       },
       "components": {
@@ -1500,7 +1500,7 @@
       },
       "scores": {
         "equityAlignment": 19.5,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 9551.26
       },
       "components": {
@@ -1539,7 +1539,7 @@
       },
       "scores": {
         "equityAlignment": 19.2,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 9684.73
       },
       "components": {
@@ -1578,7 +1578,7 @@
       },
       "scores": {
         "equityAlignment": 18.9,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 8730.39
       },
       "components": {
@@ -1617,7 +1617,7 @@
       },
       "scores": {
         "equityAlignment": 15.4,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10357.48
       },
       "components": {
@@ -1656,7 +1656,7 @@
       },
       "scores": {
         "equityAlignment": 14.3,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10031.49
       },
       "components": {
@@ -1695,7 +1695,7 @@
       },
       "scores": {
         "equityAlignment": 14.0,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 9770.02
       },
       "components": {
@@ -1734,7 +1734,7 @@
       },
       "scores": {
         "equityAlignment": 13.7,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 9048.17
       },
       "components": {
@@ -1773,7 +1773,7 @@
       },
       "scores": {
         "equityAlignment": 13.5,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10320.24
       },
       "components": {
@@ -1812,7 +1812,7 @@
       },
       "scores": {
         "equityAlignment": 11.7,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10555.73
       },
       "components": {
@@ -1851,7 +1851,7 @@
       },
       "scores": {
         "equityAlignment": 11.1,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10150.29
       },
       "components": {
@@ -1890,7 +1890,7 @@
       },
       "scores": {
         "equityAlignment": 10.8,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10320.75
       },
       "components": {
@@ -1929,7 +1929,7 @@
       },
       "scores": {
         "equityAlignment": 10.8,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10406.76
       },
       "components": {
@@ -1968,7 +1968,7 @@
       },
       "scores": {
         "equityAlignment": 10.6,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 11025.67
       },
       "components": {
@@ -2007,7 +2007,7 @@
       },
       "scores": {
         "equityAlignment": 9.1,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10670.0
       },
       "components": {
@@ -2046,7 +2046,7 @@
       },
       "scores": {
         "equityAlignment": 8.7,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10974.93
       },
       "components": {
@@ -2085,7 +2085,7 @@
       },
       "scores": {
         "equityAlignment": 8.6,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10835.71
       },
       "components": {
@@ -2124,7 +2124,7 @@
       },
       "scores": {
         "equityAlignment": 8.2,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10466.22
       },
       "components": {
@@ -2163,7 +2163,7 @@
       },
       "scores": {
         "equityAlignment": 8.1,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10658.09
       },
       "components": {
@@ -2202,7 +2202,7 @@
       },
       "scores": {
         "equityAlignment": 7.9,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 11031.74
       },
       "components": {
@@ -2241,7 +2241,7 @@
       },
       "scores": {
         "equityAlignment": 7.7,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10593.05
       },
       "components": {
@@ -2280,7 +2280,7 @@
       },
       "scores": {
         "equityAlignment": 7.6,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10741.59
       },
       "components": {
@@ -2319,7 +2319,7 @@
       },
       "scores": {
         "equityAlignment": 7.3,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10676.49
       },
       "components": {
@@ -2358,7 +2358,7 @@
       },
       "scores": {
         "equityAlignment": 6.4,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 11026.23
       },
       "components": {
@@ -2397,7 +2397,7 @@
       },
       "scores": {
         "equityAlignment": 5.8,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10884.42
       },
       "components": {
@@ -2436,7 +2436,7 @@
       },
       "scores": {
         "equityAlignment": 5.1,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10890.99
       },
       "components": {
@@ -2475,7 +2475,7 @@
       },
       "scores": {
         "equityAlignment": 4.8,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10902.73
       },
       "components": {
@@ -2514,7 +2514,7 @@
       },
       "scores": {
         "equityAlignment": 3.6,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 11108.93
       },
       "components": {
@@ -2553,7 +2553,7 @@
       },
       "scores": {
         "equityAlignment": 3.5,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 10967.65
       },
       "components": {
@@ -2592,7 +2592,7 @@
       },
       "scores": {
         "equityAlignment": 3.0,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 11108.93
       },
       "components": {
@@ -2631,7 +2631,7 @@
       },
       "scores": {
         "equityAlignment": 2.7,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 11108.93
       },
       "components": {
@@ -2670,7 +2670,7 @@
       },
       "scores": {
         "equityAlignment": 2.5,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 11108.93
       },
       "components": {
@@ -2709,7 +2709,7 @@
       },
       "scores": {
         "equityAlignment": 1.7,
-        "equityCategory": "Poor",
+        "equityCategory": "Low",
         "researchOpportunity": 11253.91
       },
       "components": {
