@@ -4,7 +4,7 @@
   "documentation": {
     "title": "HEIM-Biobank Methodology Documentation",
     "description": "Complete technical documentation for reproducibility and peer review",
-    "reference": "Corpas et al. 2025, Annual Review of Biomedical Data Science"
+    "reference": "Corpas et al. 2025, medRxiv preprint"
   },
 
   "mesh_to_gbd_mapping": {
@@ -62,9 +62,9 @@
       }
     },
     "interpretation": {
-      "Strong": {"range": [70, 100], "description": "Excellent alignment with global disease burden"},
-      "Weak": {"range": [40, 70], "description": "Moderate alignment, some gaps in priority diseases"},
-      "Poor": {"range": [0, 40], "description": "Significant misalignment with global health priorities"}
+      "High": {"range": [70, 100], "description": "Excellent alignment with global disease burden"},
+      "Moderate": {"range": [40, 70], "description": "Some alignment, gaps in priority diseases"},
+      "Low": {"range": [0, 40], "description": "Significant misalignment with global health priorities"}
     },
     "sensitivity_analysis": {
       "description": "Impact of varying component weights on EAS rankings",
