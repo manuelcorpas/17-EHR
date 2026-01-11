@@ -38,9 +38,9 @@
     "Low": 84
   },
   "easDistribution": {
-    "Poor": 56,
-    "Strong": 1,
-    "Weak": 13
+    "Low": 56,
+    "High": 1,
+    "Moderate": 13
   },
   "regionStats": [
     {
@@ -163,70 +163,70 @@
       "id": "ukb",
       "name": "UK Biobank",
       "eas": 84.6,
-      "category": "Strong",
+      "category": "High",
       "publications": 13785
     },
     {
       "id": "nhs",
       "name": "Nurses' Health Study",
       "eas": 55.2,
-      "category": "Weak",
+      "category": "Moderate",
       "publications": 3197
     },
     {
       "id": "whi",
       "name": "Women's Health Initiative",
       "eas": 53.4,
-      "category": "Weak",
+      "category": "Moderate",
       "publications": 3433
     },
     {
       "id": "estbb",
       "name": "Estonian Biobank",
       "eas": 49.2,
-      "category": "Weak",
+      "category": "Moderate",
       "publications": 675
     },
     {
       "id": "aou",
       "name": "All of Us Research Program",
       "eas": 49.1,
-      "category": "Weak",
+      "category": "Moderate",
       "publications": 837
     },
     {
       "id": "hunt",
       "name": "HUNT Study",
       "eas": 48.1,
-      "category": "Weak",
+      "category": "Moderate",
       "publications": 1218
     },
     {
       "id": "epic",
       "name": "European Prospective Investigation into Cancer and Nutrition",
       "eas": 45.2,
-      "category": "Weak",
+      "category": "Moderate",
       "publications": 1870
     },
     {
       "id": "dnbc",
       "name": "Danish National Birth Cohort",
       "eas": 44.4,
-      "category": "Weak",
+      "category": "Moderate",
       "publications": 636
     },
     {
       "id": "gel",
       "name": "Genomics England / 100,000 Genomes Project",
       "eas": 43.6,
-      "category": "Weak",
+      "category": "Moderate",
       "publications": 700
     },
     {
       "id": "moba",
       "name": "Norwegian Mother and Child Cohort Study",
       "eas": 43.1,
-      "category": "Weak",
+      "category": "Moderate",
       "publications": 962
     }
   ],
