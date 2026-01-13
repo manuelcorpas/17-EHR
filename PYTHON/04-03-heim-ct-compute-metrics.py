@@ -68,7 +68,7 @@ METHODOLOGY_SOURCE = "HEIM Framework (Corpas et al. 2025)"
 # Paths
 BASE_DIR = Path(__file__).parent.parent if Path(__file__).parent.name == "PYTHON" else Path(__file__).parent
 DATA_DIR = BASE_DIR / "DATA"
-ANALYSIS_DIR = BASE_DIR / "ANALYSIS" / "HEIM-CT"
+ANALYSIS_DIR = BASE_DIR / "ANALYSIS" / "04-04-HEIM-CT-FIGURES"
 
 # Input files
 INPUT_STUDIES = DATA_DIR / "heim_ct_studies_mapped.csv"
@@ -83,7 +83,7 @@ OUTPUT_ENROLLMENT = DATA_DIR / "heim_ct_enrollment_equity.csv"
 OUTPUT_DISEASE = DATA_DIR / "heim_ct_disease_equity.csv"
 OUTPUT_GEOGRAPHIC = DATA_DIR / "heim_ct_geographic_equity.csv"
 OUTPUT_METRICS_JSON = DATA_DIR / "heim_ct_metrics.json"
-OUTPUT_REPORT = ANALYSIS_DIR / "equity_report.txt"
+OUTPUT_REPORT = ANALYSIS_DIR / "04-04-00_equity_report.txt"
 
 
 # =============================================================================

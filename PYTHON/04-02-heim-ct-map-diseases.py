@@ -35,9 +35,13 @@ from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
 from typing import Dict, List, Set, Tuple, Any
+from multiprocessing import Pool, cpu_count
 
 import pandas as pd
 import numpy as np
+
+# Number of parallel workers (use performance cores on M3 Ultra)
+N_WORKERS = min(24, cpu_count())
 
 # =============================================================================
 # CONFIGURATION
@@ -721,22 +725,78 @@ def map_trial_to_diseases(
 ) -> List[str]:
     """Map a trial to GBD disease categories using conditions and MeSH terms."""
     matched_causes = set()
-    
+
     # Match MeSH terms
     trial_mesh = mesh_df[mesh_df['nct_id'] == nct_id]
     for _, row in trial_mesh.iterrows():
         mesh_term = row.get('mesh_term', '')
         causes = match_mesh_term(mesh_term, mapping)
         matched_causes.update(causes)
-    
+
     # Match condition names (free text)
     trial_conditions = conditions_df[conditions_df['nct_id'] == nct_id]
     for _, row in trial_conditions.iterrows():
         condition = row.get('name', '')
         causes = match_condition_text(condition, mapping)
         matched_causes.update(causes)
-    
+
     return list(matched_causes)
+
+
+# Pre-indexed lookup structures (set by main before multiprocessing)
+_CONDITIONS_BY_NCT = {}
+_MESH_BY_NCT = {}
+
+
+def map_trial_fast(nct_id: str) -> Tuple[str, List[str]]:
+    """Fast mapping using pre-indexed lookups. Returns (nct_id, causes)."""
+    matched_causes = set()
+
+    # Match MeSH terms (pre-indexed)
+    for mesh_term in _MESH_BY_NCT.get(nct_id, []):
+        causes = match_mesh_term(mesh_term, GBD_CONDITION_MAPPING)
+        matched_causes.update(causes)
+
+    # Match condition names (pre-indexed)
+    for condition in _CONDITIONS_BY_NCT.get(nct_id, []):
+        causes = match_condition_text(condition, GBD_CONDITION_MAPPING)
+        matched_causes.update(causes)
+
+    return (nct_id, list(matched_causes))
+
+
+def init_worker(conditions_dict, mesh_dict):
+    """Initialize worker process with pre-indexed data."""
+    global _CONDITIONS_BY_NCT, _MESH_BY_NCT
+    _CONDITIONS_BY_NCT = conditions_dict
+    _MESH_BY_NCT = mesh_dict
+
+
+def map_trials_parallel(nct_ids: List[str], conditions_dict: Dict, mesh_dict: Dict) -> Dict[str, List[str]]:
+    """Map trials to diseases in parallel using multiprocessing."""
+    global _CONDITIONS_BY_NCT, _MESH_BY_NCT
+    _CONDITIONS_BY_NCT = conditions_dict
+    _MESH_BY_NCT = mesh_dict
+
+    logger.info(f"   Using {N_WORKERS} parallel workers...")
+
+    # Process in parallel
+    results = {}
+    batch_size = 50000
+
+    for i in range(0, len(nct_ids), batch_size):
+        batch = nct_ids[i:i+batch_size]
+
+        with Pool(processes=N_WORKERS, initializer=init_worker,
+                  initargs=(conditions_dict, mesh_dict)) as pool:
+            batch_results = pool.map(map_trial_fast, batch)
+
+        for nct_id, causes in batch_results:
+            results[nct_id] = causes
+
+        logger.info(f"   Processed {min(i+batch_size, len(nct_ids)):,}/{len(nct_ids):,} trials...")
+
+    return results
 
 
 def find_gbd_file(data_dir: Path) -> Path:
@@ -808,23 +868,32 @@ def main():
     else:
         print(f"   ⚠️ GBD file not found; DALYs will be 0")
     
-    # Map trials to diseases
-    print(f"\n🔬 Mapping trials to {len(GBD_CONDITION_MAPPING)} GBD causes...")
-    
+    # Pre-index conditions and MeSH by nct_id for fast lookup
+    print(f"\n📇 Pre-indexing data for fast lookup...")
+
+    conditions_dict = {}
+    if len(df_conditions) > 0:
+        for nct_id, group in df_conditions.groupby('nct_id'):
+            conditions_dict[nct_id] = group['name'].dropna().tolist()
+    print(f"   Indexed {len(conditions_dict):,} trials with conditions")
+
+    mesh_dict = {}
+    if len(df_mesh) > 0:
+        for nct_id, group in df_mesh.groupby('nct_id'):
+            mesh_dict[nct_id] = group['mesh_term'].dropna().tolist()
+    print(f"   Indexed {len(mesh_dict):,} trials with MeSH terms")
+
+    # Map trials to diseases (parallel)
+    print(f"\n🔬 Mapping {len(df_studies):,} trials to {len(GBD_CONDITION_MAPPING)} GBD causes...")
+
+    nct_ids = df_studies['nct_id'].tolist()
+    trial_causes = map_trials_parallel(nct_ids, conditions_dict, mesh_dict)
+
+    # Count causes
     cause_counts = defaultdict(int)
-    trial_causes = {}
-    
-    for i, (idx, row) in enumerate(df_studies.iterrows()):
-        nct_id = row['nct_id']
-        
-        causes = map_trial_to_diseases(nct_id, df_conditions, df_mesh, GBD_CONDITION_MAPPING)
-        trial_causes[nct_id] = causes
-        
+    for nct_id, causes in trial_causes.items():
         for cause in causes:
             cause_counts[cause] += 1
-        
-        if (i + 1) % 50000 == 0:
-            logger.info(f"   Processed {i+1:,} trials...")
     
     # Add mapping to studies dataframe
     df_studies['gbd_causes'] = df_studies['nct_id'].map(lambda x: trial_causes.get(x, []))
