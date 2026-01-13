@@ -2,12 +2,20 @@
 # -*- coding: utf-8 -*-
 
 """
-BIOBANK MESH TERM CLUSTERING PIPELINE - ENHANCED VERSION WITH UNIFIED VISUALIZATION
+BIOBANK MESH TERM CLUSTERING PIPELINE - INCLUDING GENOMICS ENGLAND
 
-Clusters biomedical publications from different biobanks based on their MeSH terms.
+Clusters biomedical publications from 6 major biobanks based on their MeSH terms.
 Identifies semantic clusters of publications within each biobank using TF-IDF and K-means.
 ENHANCED: Includes comprehensive supplementary table generation for cluster interpretation.
 NEW: Adds Figure 3B showing all biobank clusters in unified semantic space for overlap analysis.
+
+BIOBANKS ANALYZED:
+1. UK Biobank
+2. Million Veteran Program
+3. FinnGen
+4. All of Us
+5. Estonian Biobank
+6. Genomics England (including 100,000 Genomes Project)
 
 NOTE: Now applies EXACT same filtering logic as 00-01-biobank-analysis.py to ensure consistent counts:
 - Year filtering (2000-2024, excluding 2025 as incomplete)
@@ -190,13 +198,19 @@ def load_biobank_data():
     logger.info(f"   📖 Published papers (ALL): {published_count:,} records ({published_count/total_year_filtered*100:.1f}%)")
     
     # Print biobank distribution for ALL published papers (should match analysis script EXACTLY)
-    logger.info(f"\n📋 Published papers by biobank (SHOULD MATCH ANALYSIS SCRIPT):")
+    logger.info(f"\n📋 Published papers by biobank (6 BIOBANKS - SHOULD MATCH ANALYSIS SCRIPT):")
     biobank_counts = df_published['Biobank'].value_counts()
     total_published = len(df_published)
     for biobank, count in biobank_counts.items():
         percentage = (count / total_published) * 100
         logger.info(f"   • {biobank}: {count:,} papers ({percentage:.1f}%)")
     logger.info(f"   📊 Total published papers: {biobank_counts.sum():,}")
+    
+    # Highlight Genomics England if present
+    if 'Genomics England' in biobank_counts.index:
+        ge_count = biobank_counts['Genomics England']
+        ge_pct = (ge_count / total_published) * 100
+        logger.info(f"   🔬 Genomics England specifically: {ge_count:,} papers ({ge_pct:.1f}%)")
     
     # NOW check how many have MeSH terms for clustering (but don't exclude from total)
     df_with_mesh = df_published.dropna(subset=['MeSH_Terms'])
@@ -447,7 +461,7 @@ def create_unified_semantic_space(all_publications_df):
     logger.info("\n" + "="*60)
     logger.info("CREATING UNIFIED SEMANTIC SPACE")
     logger.info("="*60)
-    logger.info("Building common TF-IDF vocabulary across all biobanks...")
+    logger.info("Building common TF-IDF vocabulary across all 6 biobanks...")
     
     # Preprocess all MeSH terms from all biobanks
     mesh_docs = []
@@ -554,13 +568,14 @@ def create_unified_visualization(all_centroids_data, save_projections=True, load
     cluster_ids = [d['cluster_id'] for d in all_centroids_data]
     cluster_sizes = [d['cluster_size'] for d in all_centroids_data]
     
-    # Define colors for each biobank - using distinct, colorblind-friendly palette
+    # Define colors for each biobank (6 biobanks) - using distinct, colorblind-friendly palette
     biobank_colors = {
-        'UK Biobank': '#2E86AB',      # Blue
-        'FinnGen': '#F24236',          # Red/Orange
-        'All of Us': '#73AB84',        # Green
-        'Estonian Biobank': '#F6AE2D', # Gold/Yellow
-        'Million Veteran Program': '#9B5DE5'  # Purple
+        'UK Biobank': '#2E86AB',           # Blue
+        'FinnGen': '#F24236',               # Red/Orange
+        'All of Us': '#73AB84',             # Green
+        'Estonian Biobank': '#F6AE2D',      # Gold/Yellow
+        'Million Veteran Program': '#9B5DE5',  # Purple
+        'Genomics England': '#00BFA5'       # Teal/Cyan (NEW COLOR FOR GENOMICS ENGLAND)
     }
     
     # Check for saved projections
@@ -643,8 +658,8 @@ def create_unified_visualization(all_centroids_data, save_projections=True, load
     ax.set_ylabel(f'PC2 ({explained_variance_ratio[1]:.1%} variance explained)', fontsize=13, fontweight='bold')
     
     # Title with better spacing
-    ax.set_title('Figure 3B: Unified Semantic Space - All Biobank Clusters Together\n' +
-                'Revealing Overlaps and Distinct Research Territories',
+    ax.set_title('Figure 3B: Unified Semantic Space - All 6 Biobank Clusters Together\n' +
+                'Revealing Overlaps and Distinct Research Territories (Including Genomics England)',
                 fontsize=16, fontweight='bold', pad=20)
     
     # Grid for better readability
@@ -698,12 +713,13 @@ def create_unified_visualization(all_centroids_data, save_projections=True, load
     # Keep both legends visible
     ax.add_artist(biobank_legend)
     
-    # Add informative text box instead of bottom text
+    # Add informative text box
     textstr = ('Interpretation Guide:\n'
               '• Each circle = one semantic cluster from a biobank\n'
               '• Circle size = number of publications in cluster\n'
               '• Proximity = semantic similarity (shared MeSH terms)\n'
-              '• Overlapping circles = shared research themes')
+              '• Overlapping circles = shared research themes\n'
+              '• 6 biobanks including Genomics England')
     
     props = dict(boxstyle='round', facecolor='wheat', alpha=0.8, edgecolor='black', linewidth=1)
     ax.text(0.02, 0.02, textstr, transform=ax.transAxes, fontsize=10,
@@ -785,8 +801,8 @@ def create_unified_visualization(all_centroids_data, save_projections=True, load
         # Customize UMAP plot
         ax.set_xlabel('UMAP1', fontsize=13, fontweight='bold')
         ax.set_ylabel('UMAP2', fontsize=13, fontweight='bold')
-        ax.set_title('Figure 3B (UMAP): Unified Semantic Space - All Biobank Clusters Together\n' +
-                    'Non-linear Projection Revealing Research Territories',
+        ax.set_title('Figure 3B (UMAP): Unified Semantic Space - All 6 Biobank Clusters Together\n' +
+                    'Non-linear Projection Revealing Research Territories (Including Genomics England)',
                     fontsize=16, fontweight='bold', pad=20)
         
         ax.grid(True, alpha=0.2, linestyle='--', linewidth=0.5)
@@ -828,7 +844,8 @@ def create_unified_visualization(all_centroids_data, save_projections=True, load
                   '• UMAP preserves local structure better than PCA\n'
                   '• Tight groups = highly similar research themes\n'
                   '• Distance reflects semantic dissimilarity\n'
-                  '• Isolated clusters = unique research focus')
+                  '• Isolated clusters = unique research focus\n'
+                  '• 6 biobanks including Genomics England')
         
         props = dict(boxstyle='round', facecolor='wheat', alpha=0.8, edgecolor='black', linewidth=1)
         ax.text(0.02, 0.02, textstr, transform=ax.transAxes, fontsize=10,
@@ -847,7 +864,7 @@ def create_unified_visualization(all_centroids_data, save_projections=True, load
     
     # Print summary of what's visible
     logger.info("\n" + "="*60)
-    logger.info("VISUALIZATION SUMMARY")
+    logger.info("VISUALIZATION SUMMARY (6 BIOBANKS)")
     logger.info("="*60)
     for biobank in unique_biobanks:
         biobank_clusters = [i for i, b in enumerate(biobanks) if b == biobank]
@@ -885,13 +902,14 @@ def create_annotated_unified_visualization(all_centroids_data, all_cluster_data,
     cluster_ids = [d['cluster_id'] for d in all_centroids_data]
     cluster_sizes = [d['cluster_size'] for d in all_centroids_data]
     
-    # Define colors
+    # Define colors (6 biobanks)
     biobank_colors = {
         'UK Biobank': '#2E86AB',
         'FinnGen': '#F24236',
         'All of Us': '#73AB84',
         'Estonian Biobank': '#F6AE2D',
-        'Million Veteran Program': '#9B5DE5'
+        'Million Veteran Program': '#9B5DE5',
+        'Genomics England': '#00BFA5'
     }
     
     # Use provided PCA coords or load/compute
@@ -1012,7 +1030,7 @@ def create_annotated_unified_visualization(all_centroids_data, all_cluster_data,
     ax.set_xlabel(f'PC1 ({explained_variance_ratio[0]:.1%} variance explained)', fontsize=13, fontweight='bold')
     ax.set_ylabel(f'PC2 ({explained_variance_ratio[1]:.1%} variance explained)', fontsize=13, fontweight='bold')
     ax.set_title('Figure 3B (Annotated): Unified Semantic Space with Cluster Descriptions\n' +
-                'Top MeSH Terms Shown for Key Clusters',
+                'Top MeSH Terms Shown for Key Clusters (6 Biobanks)',
                 fontsize=16, fontweight='bold', pad=20)
     
     ax.grid(True, alpha=0.2, linestyle='--', linewidth=0.5)
@@ -1110,7 +1128,7 @@ def create_overlap_heatmap(all_centroids_data):
                 ax=ax)
     
     # Customize
-    ax.set_title('Semantic Similarity Matrix Between All Biobank Clusters\n' +
+    ax.set_title('Semantic Similarity Matrix Between All Biobank Clusters (6 Biobanks)\n' +
                 'Darker = More Similar Research Themes',
                 fontsize=14, fontweight='bold', pad=20)
     
@@ -1130,7 +1148,7 @@ def create_overlap_heatmap(all_centroids_data):
 def generate_overlap_analysis(all_centroids_data, pca_coords):
     """Analyze and report cluster overlaps in semantic space"""
     logger.info("\n" + "="*60)
-    logger.info("ANALYZING SEMANTIC OVERLAPS")
+    logger.info("ANALYZING SEMANTIC OVERLAPS (6 BIOBANKS)")
     logger.info("="*60)
     
     # Calculate pairwise distances between clusters
@@ -1165,6 +1183,15 @@ def generate_overlap_analysis(all_centroids_data, pca_coords):
         logger.info(f"{i+1}. {overlap['biobank1']} C{overlap['cluster1']} <-> " +
                    f"{overlap['biobank2']} C{overlap['cluster2']}: " +
                    f"distance = {overlap['distance']:.3f}")
+    
+    # Check for Genomics England overlaps specifically
+    ge_overlaps = [o for o in overlaps if 'Genomics England' in [o['biobank1'], o['biobank2']]]
+    if ge_overlaps:
+        logger.info(f"\n🔬 Genomics England overlaps with other biobanks:")
+        for overlap in ge_overlaps[:5]:
+            logger.info(f"   - {overlap['biobank1']} C{overlap['cluster1']} <-> " +
+                       f"{overlap['biobank2']} C{overlap['cluster2']}: " +
+                       f"distance = {overlap['distance']:.3f}")
     
     if not overlaps:
         logger.info("No strong semantic overlaps detected between biobanks.")
@@ -1231,7 +1258,7 @@ def create_2d_projections(tfidf_matrix, cluster_labels, biobank_name):
     return projection_data
 
 def create_composite_visualizations(all_projection_data):
-    """Create composite PCA and UMAP figures showing all biobanks together (Figure 3A)"""
+    """Create composite PCA and UMAP figures showing all 6 biobanks together (Figure 3A)"""
     if not all_projection_data:
         logger.warning("No projection data available for composite visualization")
         return
@@ -1256,8 +1283,8 @@ def create_composite_visualizations(all_projection_data):
     else:
         axes = axes.flatten()
     
-    fig.suptitle('Figure 3A: PCA - MeSH Term Clusters Across All Biobanks\n'
-                 'Each panel shows semantic clusters within one biobank', 
+    fig.suptitle('Figure 3A: PCA - MeSH Term Clusters Across All 6 Biobanks\n'
+                 'Each panel shows semantic clusters within one biobank (Including Genomics England)', 
                  fontsize=16, fontweight='bold', y=0.98)
     
     for i, proj_data in enumerate(valid_projections):
@@ -1309,8 +1336,8 @@ def create_composite_visualizations(all_projection_data):
         else:
             axes = axes.flatten()
         
-        fig.suptitle('UMAP: MeSH Term Clusters Across All Biobanks\n'
-                     'Each panel shows semantic clusters within one biobank', 
+        fig.suptitle('UMAP: MeSH Term Clusters Across All 6 Biobanks\n'
+                     'Each panel shows semantic clusters within one biobank (Including Genomics England)', 
                      fontsize=16, fontweight='bold', y=0.98)
         
         for i, proj_data in enumerate(umap_data_available):
@@ -1508,13 +1535,14 @@ def infer_research_theme(top_terms):
     if not top_terms:
         return "Unknown"
     
-    # Common research theme mappings
+    # Common research theme mappings (updated for 6 biobanks including Genomics England)
     theme_keywords = {
-        'Genomics': ['genome', 'genetic', 'dna', 'snp', 'gwas', 'polymorphism', 'allele', 'genotype'],
+        'Genomics': ['genome', 'genetic', 'dna', 'snp', 'gwas', 'polymorphism', 'allele', 'genotype', 'sequencing', 'whole_genome'],
         'Cardiovascular': ['heart', 'cardiovascular', 'cardiac', 'blood_pressure', 'hypertension', 'coronary'],
         'Neurological': ['brain', 'neurological', 'cognitive', 'alzheimer', 'dementia', 'neural'],
         'Metabolic': ['diabetes', 'obesity', 'metabolism', 'glucose', 'insulin', 'lipid'],
         'Cancer': ['cancer', 'tumor', 'oncology', 'malignant', 'carcinoma', 'neoplasm'],
+        'Rare Diseases': ['rare', 'disorder', 'syndrome', 'orphan', 'mendelian', 'congenital'],
         'Imaging': ['imaging', 'mri', 'scan', 'radiological', 'tomography'],
         'Environmental': ['environment', 'pollution', 'exposure', 'air_quality', 'toxicity'],
         'Epidemiological': ['epidemiology', 'cohort', 'longitudinal', 'prospective', 'risk_factors'],
@@ -1534,7 +1562,7 @@ def infer_research_theme(top_terms):
 
 def create_supplementary_cluster_table(all_cluster_data):
     """Create comprehensive supplementary table summarizing all cluster characteristics"""
-    logger.info("Creating supplementary cluster characteristics table")
+    logger.info("Creating supplementary cluster characteristics table (6 biobanks)")
     
     # Ensure analysis directory exists
     os.makedirs(analysis_dir, exist_ok=True)
@@ -1626,6 +1654,13 @@ def create_supplementary_cluster_table(all_cluster_data):
         size_kb = os.path.getsize(summary_file) / 1024
         logger.info(f"📊 Summary overview: {len(summary_df)} rows, {len(summary_df.columns)} columns ({size_kb:.1f} KB)")
     
+    # Report Genomics England clusters if present
+    ge_clusters = supplementary_df[supplementary_df['Biobank'] == 'Genomics England']
+    if not ge_clusters.empty:
+        logger.info(f"🔬 Genomics England: {len(ge_clusters)} clusters identified")
+        logger.info(f"   Total papers in clusters: {ge_clusters['Number_of_Publications'].sum()}")
+        logger.info(f"   Average cluster size: {ge_clusters['Number_of_Publications'].mean():.1f}")
+    
     return supplementary_df
 
 #############################################################################
@@ -1697,7 +1732,7 @@ def process_biobank_enhanced(biobank_name, biobank_df):
 def main_enhanced():
     """Enhanced main execution function with unified visualization (Figure 3B)"""
     print("=" * 80)
-    print("BIOBANK MESH TERM CLUSTERING PIPELINE - ENHANCED WITH UNIFIED VISUALIZATION")
+    print("BIOBANK MESH TERM CLUSTERING PIPELINE - 6 BIOBANKS INCLUDING GENOMICS ENGLAND")
     print("Per-biobank semantic clustering + unified semantic space analysis")
     print("Generates Figure 3A (separate panels) and Figure 3B (unified space)")
     print("=" * 80)
@@ -1707,11 +1742,12 @@ def main_enhanced():
         df_with_mesh = load_biobank_data()
         
         print(f"\n🎯 Processing pipeline:")
-        print(f"   📊 Figure 3A: Each biobank analyzed independently (separate panels)")
+        print(f"   📊 Figure 3A: Each of 6 biobanks analyzed independently (separate panels)")
         print(f"   🔄 Figure 3B: All clusters in unified semantic space (shows overlaps)")
         print(f"   📋 Supplementary tables with cluster characteristics")
         print(f"   ✅ EXACT FILTERING: Same totals as 00-01-biobank-analysis.py")
         print(f"   🔬 CLUSTERING: Only papers with MeSH terms ({len(df_with_mesh):,} papers)")
+        print(f"   🧬 INCLUDING: Genomics England and 100,000 Genomes Project data")
         
         # Process each biobank and collect data
         all_summaries = []
@@ -1730,7 +1766,7 @@ def main_enhanced():
         
         # Create Figure 3A: composite visualizations (separate panels)
         logger.info("\n" + "="*60)
-        logger.info("CREATING FIGURE 3A: COMPOSITE VISUALIZATIONS")
+        logger.info("CREATING FIGURE 3A: COMPOSITE VISUALIZATIONS (6 BIOBANKS)")
         logger.info("="*60)
         create_composite_visualizations(all_projection_data)
         
@@ -1748,7 +1784,19 @@ def main_enhanced():
         )
         
         # Create Figure 3B: unified visualization
-        create_unified_visualization(all_centroids_data)
+        pca_coords, umap_coords = create_unified_visualization(all_centroids_data)
+        
+        # Create annotated version of Figure 3B
+        logger.info("\n" + "="*60)
+        logger.info("CREATING ANNOTATED FIGURE 3B")
+        logger.info("="*60)
+        create_annotated_unified_visualization(all_centroids_data, all_cluster_data, pca_coords)
+        
+        # Create overlap heatmap
+        logger.info("\n" + "="*60)
+        logger.info("CREATING CLUSTER SIMILARITY HEATMAP")
+        logger.info("="*60)
+        similarities, cluster_labels = create_overlap_heatmap(all_centroids_data)
         
         # Create supplementary cluster characteristics table
         logger.info("\n" + "="*60)
@@ -1765,33 +1813,48 @@ def main_enhanced():
         
         print(f"\n🎨 FIGURE 3 COMPONENTS:")
         print(f"   📊 Figure 3A: composite_pca_all_biobanks.png")
-        print(f"      - Shows each biobank's clusters independently")
+        print(f"      - Shows each of 6 biobanks' clusters independently")
         print(f"      - Separate panels for comparison")
+        print(f"      - Includes Genomics England")
         print(f"   🔄 Figure 3B: unified_pca_all_clusters.png")
-        print(f"      - All clusters in shared semantic space")
+        print(f"      - All clusters from 6 biobanks in shared semantic space")
         print(f"      - Reveals overlaps and distinct territories")
         print(f"      - Color = biobank, size = cluster size")
+        print(f"   📝 Figure 3B Annotated: unified_pca_annotated.png")
+        print(f"      - Same as 3B but with top MeSH terms labeled")
+        print(f"   🔥 Similarity Heatmap: cluster_similarity_heatmap.png")
+        print(f"      - Matrix showing semantic similarity between all clusters")
         
         print(f"\n📊 SUPPLEMENTARY TABLE STATISTICS:")
         print(f"   Total clusters analyzed: {len(supplementary_df)}")
         print(f"   Biobanks included: {supplementary_df['Biobank'].nunique()}")
+        
+        # Report Genomics England specifically
+        if 'Genomics England' in supplementary_df['Biobank'].values:
+            ge_clusters = supplementary_df[supplementary_df['Biobank'] == 'Genomics England']
+            print(f"   🔬 Genomics England clusters: {len(ge_clusters)}")
+            print(f"   🔬 Genomics England papers in clusters: {ge_clusters['Number_of_Publications'].sum()}")
+        
         print(f"   Largest cluster: {supplementary_df['Number_of_Publications'].max()} publications")
         print(f"   Average cluster size: {supplementary_df['Number_of_Publications'].mean():.1f} publications")
         
         print(f"\n📂 ALL OUTPUT FILES:")
         print(f"   🎨 FIGURE 3 VISUALIZATIONS:")
         print(f"      - composite_pca_all_biobanks.png (Figure 3A)")
+        print(f"      - composite_umap_all_biobanks.png (Figure 3A - UMAP)")
         print(f"      - unified_pca_all_clusters.png (Figure 3B)")
         print(f"      - unified_umap_all_clusters.png (Figure 3B - UMAP)")
+        print(f"      - unified_pca_annotated.png (Figure 3B - Annotated)")
+        print(f"      - cluster_similarity_heatmap.png (Similarity Matrix)")
         print(f"      - semantic_overlap_analysis.csv (cluster distances)")
         print(f"   📋 SUPPLEMENTARY TABLES:")
         print(f"      - supplementary_cluster_characteristics_table.csv")
         print(f"      - cluster_summary_overview.csv")
         print(f"   📈 INDIVIDUAL BIOBANK FILES:")
-        print(f"      - clustering_results_<biobank>.csv")
-        print(f"      - cluster_summaries_<biobank>.csv")
-        print(f"      - pca_clusters_<biobank>.png")
-        print(f"      - umap_clusters_<biobank>.png")
+        print(f"      - clustering_results_<biobank>.csv (for each of 6 biobanks)")
+        print(f"      - cluster_summaries_<biobank>.csv (for each of 6 biobanks)")
+        print(f"      - pca_clusters_<biobank>.png (for each of 6 biobanks)")
+        print(f"      - umap_clusters_<biobank>.png (for each of 6 biobanks)")
         print(f"   📋 SUMMARY:")
         print(f"      - biobank_clustering_summary.csv")
         
@@ -1799,7 +1862,9 @@ def main_enhanced():
         print(f"   - Overlapping clusters indicate shared research themes")
         print(f"   - Isolated clusters show unique biobank specializations")
         print(f"   - Distance reflects semantic dissimilarity")
+        print(f"   - Genomics England's position shows its unique focus areas")
         print(f"   - Check semantic_overlap_analysis.csv for quantified overlaps")
+        print(f"   - Heatmap reveals similarity patterns across all 6 biobanks")
         
         return supplementary_df
         
@@ -1808,5 +1873,5 @@ def main_enhanced():
         raise
 
 if __name__ == "__main__":
-    # Run the enhanced version with Figure 3B
+    # Run the enhanced version with Figure 3B (6 biobanks including Genomics England)
     supplementary_table = main_enhanced()

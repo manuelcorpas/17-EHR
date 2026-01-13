@@ -1,0 +1,18 @@
+cohort_id,cohort_name,search_query,pmids_found,records_fetched,records_retained,preprints_excluded,timestamp,retention_rate
+ukb,UK Biobank,"(""UK Biobank""[All Fields] OR ""United Kingdom Biobank""[All Fields] OR ""U.K. Biobank""[All Fields] OR ""UK-Biobank""[All Fields])",14487,14486,13902,584,2026-01-07T06:49:06.795221,96.0
+whi,Women's Health Initiative,"(""Women's Health Initiative""[All Fields] OR ""WHI cohort""[All Fields])",3459,3455,3436,19,2026-01-07T06:56:46.581448,99.3
+twb,Taiwan Biobank,"(""Taiwan Biobank""[All Fields] OR ""TWB cohort""[All Fields])",564,564,560,4,2026-01-07T06:47:04.174010,99.3
+simpler,SIMPLER,"(""Swedish Mammography Cohort""[Title/Abstract] OR ""Cohort of Swedish Men""[Title/Abstract] OR ""SIMPLER cohort""[Title/Abstract])",280,280,280,0,2026-01-07T06:44:29.768698,100.0
+tommo,Tohoku Medical Megabank,"(""Tohoku Medical Megabank""[Title/Abstract] OR ""ToMMo""[Title/Abstract])",246,246,245,1,2026-01-07T06:48:13.273442,99.6
+smwhs,Shanghai Men and Women's Health Studies,"(""Shanghai Men's Health Study""[Title/Abstract] OR ""Shanghai Women's Health Study""[Title/Abstract])",219,219,218,1,2026-01-07T06:45:47.819526,99.5
+ukbdc,UK Blood Donor Cohorts,"(""UK Blood Donor""[Title/Abstract] OR ""INTERVAL study""[Title/Abstract])",166,165,165,0,2026-01-07T06:54:22.219306,99.4
+uklwc,UKCTOCS Longitudinal Women's Cohort,"(""UKCTOCS""[Title/Abstract] OR ""UK Collaborative Trial of Ovarian Cancer Screening""[Title/Abstract])",103,102,101,1,2026-01-07T06:54:56.836740,98.1
+myc,The Malaysian Cohort,"(""Malaysian Cohort""[Title/Abstract] OR ""The Malaysian Cohort""[Title/Abstract])",87,87,87,0,2026-01-07T06:47:44.962261,100.0
+usnih,US NIH Biobank,"(""NIH""[Title/Abstract] AND ""biobank""[Title/Abstract])",63,63,53,10,2026-01-07T06:55:27.652968,84.1
+vhmpp,VHM&PP,"(""VHM&PP""[Title/Abstract] OR ""Vorarlberg Health Monitoring""[Title/Abstract])",28,28,28,0,2026-01-07T06:56:18.298243,100.0
+snb,Saudi National Biobank,"(""Saudi National Biobank""[Title/Abstract] OR ""Saudi Human Genome Program""[Title/Abstract] OR ""SHGP""[Title/Abstract])",14,14,14,0,2026-01-07T06:45:02.879941,100.0
+sab,South Asia Biobank,"""South Asia Biobank""[Title/Abstract]",8,8,8,0,2026-01-07T06:46:22.533393,100.0
+ucl,UCL Biobank,"(""UCL""[Title/Abstract] AND ""biobank""[Title/Abstract])",8,8,8,0,2026-01-07T06:48:43.162603,100.0
+ugr,Uganda Genome Resource,"(""Uganda Genome Resource""[All Fields] OR ""Ugandan Genome""[All Fields] OR ""UGR cohort""[All Fields])",7,7,6,1,2026-01-07T06:55:55.487867,85.7
+seac,South(east) Asian Cohorts,"""Southeast Asian Cohorts""[Title/Abstract]",0,0,0,0,2026-01-07T06:46:44.555897,0.0
+sequencebio,Sequence Bio,"""Sequence Bio""[Title/Abstract]",0,0,0,0,2026-01-07T06:45:27.823325,0.0
