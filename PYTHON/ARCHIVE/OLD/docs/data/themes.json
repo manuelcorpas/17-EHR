@@ -1,0 +1,857 @@
+{
+  "version": "HEIM-Biobank v1.0",
+  "generated": "2025-12-25T13:18:18.913714",
+  "source": "bhem_themes.json (transformed)",
+  "themes": [
+    {
+      "id": "epidemiology",
+      "name": "Epidemiology & Risk Factors",
+      "category": "methodology",
+      "publications": 20022,
+      "diseaseCount": 26
+    },
+    {
+      "id": "genomics_gwas",
+      "name": "Genomics & GWAS",
+      "category": "methodology",
+      "publications": 12289,
+      "diseaseCount": 27
+    },
+    {
+      "id": "omics",
+      "name": "Multi-omics & Biomarkers",
+      "category": "methodology",
+      "publications": 11520,
+      "diseaseCount": 24
+    },
+    {
+      "id": "metabolic",
+      "name": "Metabolic & Diabetes",
+      "category": "disease_area",
+      "publications": 11489,
+      "diseaseCount": 26
+    },
+    {
+      "id": "aging",
+      "name": "Aging & Longevity",
+      "category": "disease_area",
+      "publications": 11031,
+      "diseaseCount": 26
+    },
+    {
+      "id": "environment",
+      "name": "Environmental Health",
+      "category": "exposure",
+      "publications": 10006,
+      "diseaseCount": 25
+    },
+    {
+      "id": "cardiovascular",
+      "name": "Cardiovascular Research",
+      "category": "disease_area",
+      "publications": 9377,
+      "diseaseCount": 26
+    },
+    {
+      "id": "cancer",
+      "name": "Cancer & Oncology",
+      "category": "disease_area",
+      "publications": 9198,
+      "diseaseCount": 25
+    },
+    {
+      "id": "infectious",
+      "name": "Infectious Diseases",
+      "category": "disease_area",
+      "publications": 8906,
+      "diseaseCount": 25
+    },
+    {
+      "id": "mental_health",
+      "name": "Mental Health & Psychiatry",
+      "category": "disease_area",
+      "publications": 8118,
+      "diseaseCount": 25
+    },
+    {
+      "id": "neurological",
+      "name": "Neurological Disorders",
+      "category": "disease_area",
+      "publications": 7938,
+      "diseaseCount": 23
+    },
+    {
+      "id": "nutrition",
+      "name": "Nutrition & Diet",
+      "category": "exposure",
+      "publications": 7425,
+      "diseaseCount": 26
+    },
+    {
+      "id": "pharmacogenomics",
+      "name": "Pharmacogenomics",
+      "category": "methodology",
+      "publications": 6336,
+      "diseaseCount": 22
+    },
+    {
+      "id": "respiratory",
+      "name": "Respiratory Diseases",
+      "category": "disease_area",
+      "publications": 6284,
+      "diseaseCount": 25
+    },
+    {
+      "id": "mendelian_randomization",
+      "name": "Mendelian Randomization",
+      "category": "methodology",
+      "publications": 6242,
+      "diseaseCount": 23
+    },
+    {
+      "id": "physical_activity",
+      "name": "Physical Activity",
+      "category": "exposure",
+      "publications": 5821,
+      "diseaseCount": 24
+    },
+    {
+      "id": "neuroimaging",
+      "name": "Neuroimaging",
+      "category": "methodology",
+      "publications": 5265,
+      "diseaseCount": 20
+    },
+    {
+      "id": "musculoskeletal",
+      "name": "Musculoskeletal",
+      "category": "disease_area",
+      "publications": 5101,
+      "diseaseCount": 23
+    },
+    {
+      "id": "eye_vision",
+      "name": "Eye & Vision",
+      "category": "disease_area",
+      "publications": 4080,
+      "diseaseCount": 23
+    },
+    {
+      "id": "sleep",
+      "name": "Sleep Research",
+      "category": "disease_area",
+      "publications": 2040,
+      "diseaseCount": 24
+    }
+  ],
+  "byBiobank": {
+    "uk_biobank": {
+      "name": "UK Biobank",
+      "themes": {
+        "epidemiology": 8148,
+        "genomics_gwas": 6273,
+        "metabolic": 4475,
+        "cardiovascular": 4208,
+        "mendelian_randomization": 3230,
+        "aging": 2994,
+        "nutrition": 2561,
+        "omics": 2415,
+        "respiratory": 2175,
+        "cancer": 2120,
+        "environment": 1976,
+        "neurological": 1855,
+        "mental_health": 1637,
+        "musculoskeletal": 1531,
+        "neuroimaging": 1424,
+        "physical_activity": 1403,
+        "sleep": 866,
+        "eye_vision": 728,
+        "infectious": 670,
+        "pharmacogenomics": 603
+      }
+    },
+    "mvp": {
+      "name": "Million Veteran Program",
+      "themes": {
+        "genomics_gwas": 219,
+        "epidemiology": 178,
+        "cardiovascular": 94,
+        "metabolic": 90,
+        "mental_health": 72,
+        "mendelian_randomization": 65,
+        "nutrition": 63,
+        "omics": 50,
+        "respiratory": 50,
+        "environment": 47,
+        "cancer": 41,
+        "aging": 38,
+        "pharmacogenomics": 32,
+        "neurological": 25,
+        "infectious": 25,
+        "eye_vision": 20,
+        "physical_activity": 17,
+        "musculoskeletal": 16,
+        "sleep": 11,
+        "neuroimaging": 4
+      }
+    },
+    "finngen": {
+      "name": "FinnGen",
+      "themes": {
+        "mendelian_randomization": 2406,
+        "genomics_gwas": 2293,
+        "epidemiology": 1107,
+        "omics": 784,
+        "metabolic": 770,
+        "cardiovascular": 503,
+        "environment": 485,
+        "pharmacogenomics": 478,
+        "cancer": 456,
+        "respiratory": 381,
+        "nutrition": 379,
+        "musculoskeletal": 290,
+        "aging": 283,
+        "infectious": 209,
+        "mental_health": 208,
+        "neurological": 189,
+        "eye_vision": 146,
+        "sleep": 146,
+        "physical_activity": 90,
+        "neuroimaging": 50
+      }
+    },
+    "all_of_us": {
+      "name": "All of Us Research Program",
+      "themes": {
+        "epidemiology": 273,
+        "metabolic": 122,
+        "cardiovascular": 101,
+        "mental_health": 96,
+        "cancer": 84,
+        "genomics_gwas": 77,
+        "aging": 66,
+        "eye_vision": 64,
+        "respiratory": 63,
+        "environment": 51,
+        "infectious": 49,
+        "nutrition": 45,
+        "physical_activity": 36,
+        "omics": 31,
+        "neurological": 25,
+        "sleep": 25,
+        "musculoskeletal": 20,
+        "pharmacogenomics": 11,
+        "mendelian_randomization": 8,
+        "neuroimaging": 2
+      }
+    },
+    "estonian_biobank": {
+      "name": "Estonian Biobank",
+      "themes": {
+        "genomics_gwas": 81,
+        "epidemiology": 62,
+        "cardiovascular": 31,
+        "metabolic": 31,
+        "omics": 28,
+        "cancer": 16,
+        "aging": 16,
+        "mental_health": 14,
+        "mendelian_randomization": 13,
+        "nutrition": 13,
+        "respiratory": 12,
+        "pharmacogenomics": 10,
+        "infectious": 8,
+        "musculoskeletal": 7,
+        "environment": 7,
+        "neurological": 5,
+        "sleep": 4,
+        "eye_vision": 2,
+        "physical_activity": 2
+      }
+    },
+    "biobank_japan": {
+      "name": "BioBank Japan",
+      "themes": {
+        "genomics_gwas": 219,
+        "epidemiology": 122,
+        "mendelian_randomization": 115,
+        "cancer": 92,
+        "metabolic": 90,
+        "cardiovascular": 66,
+        "omics": 51,
+        "respiratory": 41,
+        "environment": 37,
+        "aging": 28,
+        "nutrition": 27,
+        "musculoskeletal": 24,
+        "pharmacogenomics": 19,
+        "infectious": 17,
+        "eye_vision": 11,
+        "physical_activity": 10,
+        "neurological": 5,
+        "mental_health": 5,
+        "sleep": 2
+      }
+    },
+    "china_kadoorie": {
+      "name": "China Kadoorie Biobank",
+      "themes": {
+        "epidemiology": 441,
+        "cardiovascular": 256,
+        "metabolic": 217,
+        "respiratory": 165,
+        "cancer": 152,
+        "environment": 139,
+        "nutrition": 124,
+        "physical_activity": 79,
+        "genomics_gwas": 53,
+        "musculoskeletal": 42,
+        "aging": 41,
+        "omics": 34,
+        "mendelian_randomization": 31,
+        "infectious": 28,
+        "sleep": 28,
+        "mental_health": 19,
+        "eye_vision": 13,
+        "neurological": 5,
+        "pharmacogenomics": 4,
+        "neuroimaging": 3
+      }
+    },
+    "taiwan_biobank": {
+      "name": "Taiwan Biobank",
+      "themes": {
+        "genomics_gwas": 255,
+        "epidemiology": 229,
+        "metabolic": 210,
+        "cardiovascular": 116,
+        "environment": 77,
+        "respiratory": 76,
+        "omics": 74,
+        "nutrition": 72,
+        "musculoskeletal": 54,
+        "cancer": 52,
+        "mental_health": 50,
+        "aging": 47,
+        "physical_activity": 45,
+        "neurological": 41,
+        "mendelian_randomization": 36,
+        "eye_vision": 16,
+        "infectious": 12,
+        "sleep": 11,
+        "pharmacogenomics": 8,
+        "neuroimaging": 4
+      }
+    },
+    "hunt": {
+      "name": "HUNT Study",
+      "themes": {
+        "epidemiology": 897,
+        "metabolic": 389,
+        "cardiovascular": 349,
+        "respiratory": 294,
+        "mental_health": 275,
+        "physical_activity": 234,
+        "musculoskeletal": 175,
+        "nutrition": 151,
+        "aging": 114,
+        "environment": 108,
+        "genomics_gwas": 100,
+        "cancer": 94,
+        "sleep": 86,
+        "omics": 65,
+        "neurological": 64,
+        "mendelian_randomization": 37,
+        "infectious": 30,
+        "neuroimaging": 16,
+        "pharmacogenomics": 9,
+        "eye_vision": 7
+      }
+    },
+    "decode": {
+      "name": "deCODE Genetics",
+      "themes": {
+        "omics": 1168,
+        "aging": 1009,
+        "neuroimaging": 952,
+        "neurological": 698,
+        "physical_activity": 697,
+        "environment": 620,
+        "cancer": 515,
+        "metabolic": 459,
+        "eye_vision": 426,
+        "pharmacogenomics": 421,
+        "genomics_gwas": 342,
+        "infectious": 342,
+        "musculoskeletal": 320,
+        "epidemiology": 306,
+        "mental_health": 299,
+        "cardiovascular": 294,
+        "nutrition": 206,
+        "mendelian_randomization": 161,
+        "respiratory": 130,
+        "sleep": 60
+      }
+    },
+    "danish_national": {
+      "name": "Danish National Biobank",
+      "themes": {
+        "omics": 4,
+        "cancer": 3,
+        "metabolic": 2,
+        "infectious": 2,
+        "epidemiology": 2,
+        "genomics_gwas": 1,
+        "cardiovascular": 1,
+        "mental_health": 1,
+        "aging": 1,
+        "nutrition": 1,
+        "environment": 1
+      }
+    },
+    "swedish_twin": {
+      "name": "Swedish Twin Registry",
+      "themes": {
+        "epidemiology": 209,
+        "environment": 142,
+        "genomics_gwas": 90,
+        "neurological": 63,
+        "mental_health": 61,
+        "metabolic": 59,
+        "respiratory": 55,
+        "aging": 52,
+        "cardiovascular": 49,
+        "nutrition": 41,
+        "cancer": 31,
+        "musculoskeletal": 25,
+        "physical_activity": 21,
+        "omics": 9,
+        "infectious": 8,
+        "sleep": 8,
+        "pharmacogenomics": 3,
+        "eye_vision": 3,
+        "mendelian_randomization": 2,
+        "neuroimaging": 1
+      }
+    },
+    "generation_scotland": {
+      "name": "Generation Scotland",
+      "themes": {
+        "genomics_gwas": 79,
+        "epidemiology": 75,
+        "mental_health": 63,
+        "omics": 60,
+        "neurological": 39,
+        "aging": 38,
+        "cardiovascular": 35,
+        "metabolic": 34,
+        "environment": 32,
+        "respiratory": 20,
+        "neuroimaging": 13,
+        "nutrition": 12,
+        "infectious": 10,
+        "cancer": 9,
+        "mendelian_randomization": 6,
+        "eye_vision": 6,
+        "musculoskeletal": 5,
+        "sleep": 3,
+        "physical_activity": 2,
+        "pharmacogenomics": 1
+      }
+    },
+    "lifelines": {
+      "name": "LifeLines",
+      "themes": {
+        "epidemiology": 494,
+        "metabolic": 264,
+        "respiratory": 178,
+        "nutrition": 173,
+        "cardiovascular": 148,
+        "mental_health": 133,
+        "environment": 131,
+        "aging": 106,
+        "omics": 103,
+        "physical_activity": 91,
+        "genomics_gwas": 81,
+        "infectious": 65,
+        "cancer": 64,
+        "musculoskeletal": 41,
+        "eye_vision": 39,
+        "sleep": 36,
+        "neurological": 31,
+        "pharmacogenomics": 15,
+        "mendelian_randomization": 13,
+        "neuroimaging": 4
+      }
+    },
+    "constances": {
+      "name": "CONSTANCES",
+      "themes": {
+        "epidemiology": 143,
+        "environment": 75,
+        "mental_health": 58,
+        "cardiovascular": 56,
+        "respiratory": 55,
+        "metabolic": 52,
+        "nutrition": 48,
+        "cancer": 33,
+        "infectious": 25,
+        "physical_activity": 24,
+        "neurological": 15,
+        "musculoskeletal": 12,
+        "aging": 11,
+        "sleep": 8,
+        "omics": 7,
+        "eye_vision": 5,
+        "genomics_gwas": 2,
+        "neuroimaging": 1,
+        "pharmacogenomics": 1
+      }
+    },
+    "nako": {
+      "name": "German National Cohort (NAKO)",
+      "themes": {
+        "epidemiology": 77,
+        "metabolic": 39,
+        "aging": 39,
+        "neuroimaging": 37,
+        "mental_health": 33,
+        "respiratory": 31,
+        "cardiovascular": 30,
+        "musculoskeletal": 19,
+        "environment": 19,
+        "infectious": 16,
+        "physical_activity": 16,
+        "cancer": 11,
+        "nutrition": 10,
+        "neurological": 8,
+        "omics": 8,
+        "pharmacogenomics": 2,
+        "sleep": 2,
+        "genomics_gwas": 1,
+        "mendelian_randomization": 1
+      }
+    },
+    "biovu": {
+      "name": "BioVU",
+      "themes": {
+        "genomics_gwas": 125,
+        "epidemiology": 70,
+        "cardiovascular": 47,
+        "metabolic": 42,
+        "omics": 31,
+        "cancer": 22,
+        "musculoskeletal": 17,
+        "respiratory": 16,
+        "eye_vision": 16,
+        "pharmacogenomics": 14,
+        "aging": 14,
+        "nutrition": 13,
+        "neurological": 11,
+        "environment": 10,
+        "mendelian_randomization": 8,
+        "infectious": 8,
+        "mental_health": 7,
+        "sleep": 2,
+        "physical_activity": 2,
+        "neuroimaging": 1
+      }
+    },
+    "geisinger_mycode": {
+      "name": "Geisinger MyCode",
+      "themes": {
+        "epidemiology": 46,
+        "genomics_gwas": 37,
+        "cardiovascular": 26,
+        "cancer": 25,
+        "metabolic": 17,
+        "aging": 10,
+        "mental_health": 7,
+        "omics": 7,
+        "musculoskeletal": 7,
+        "respiratory": 5,
+        "environment": 5,
+        "pharmacogenomics": 4,
+        "neuroimaging": 3,
+        "neurological": 3,
+        "eye_vision": 3,
+        "nutrition": 2,
+        "physical_activity": 2,
+        "mendelian_randomization": 1,
+        "infectious": 1,
+        "sleep": 1
+      }
+    },
+    "mgb_biobank": {
+      "name": "Mass General Brigham Biobank",
+      "themes": {
+        "epidemiology": 48,
+        "genomics_gwas": 44,
+        "cardiovascular": 27,
+        "metabolic": 27,
+        "mental_health": 20,
+        "respiratory": 18,
+        "omics": 16,
+        "aging": 16,
+        "cancer": 14,
+        "musculoskeletal": 12,
+        "nutrition": 12,
+        "environment": 9,
+        "pharmacogenomics": 7,
+        "sleep": 7,
+        "mendelian_randomization": 5,
+        "neurological": 5,
+        "neuroimaging": 4,
+        "physical_activity": 4,
+        "infectious": 3,
+        "eye_vision": 3
+      }
+    },
+    "qatar_biobank": {
+      "name": "Qatar Biobank",
+      "themes": {
+        "metabolic": 127,
+        "epidemiology": 93,
+        "cardiovascular": 59,
+        "omics": 58,
+        "nutrition": 39,
+        "genomics_gwas": 23,
+        "respiratory": 22,
+        "aging": 18,
+        "physical_activity": 17,
+        "musculoskeletal": 16,
+        "pharmacogenomics": 15,
+        "neurological": 11,
+        "environment": 11,
+        "mental_health": 8,
+        "eye_vision": 8,
+        "sleep": 6,
+        "infectious": 5,
+        "neuroimaging": 4,
+        "cancer": 4,
+        "mendelian_randomization": 2
+      }
+    },
+    "h3africa": {
+      "name": "H3Africa",
+      "themes": {
+        "epidemiology": 40,
+        "genomics_gwas": 30,
+        "cardiovascular": 28,
+        "infectious": 24,
+        "environment": 22,
+        "metabolic": 19,
+        "omics": 12,
+        "nutrition": 11,
+        "respiratory": 10,
+        "pharmacogenomics": 8,
+        "aging": 8,
+        "eye_vision": 6,
+        "cancer": 5,
+        "physical_activity": 4,
+        "neuroimaging": 2,
+        "mental_health": 2,
+        "musculoskeletal": 2,
+        "mendelian_randomization": 1,
+        "neurological": 1,
+        "sleep": 1
+      }
+    },
+    "uganda_genome": {
+      "name": "Uganda Genome Resource",
+      "themes": {
+        "genomics_gwas": 3,
+        "epidemiology": 3,
+        "cardiovascular": 2,
+        "metabolic": 2,
+        "mental_health": 1,
+        "aging": 1,
+        "respiratory": 1,
+        "nutrition": 1
+      }
+    },
+    "awigen": {
+      "name": "AWI-Gen",
+      "themes": {
+        "epidemiology": 45,
+        "metabolic": 43,
+        "cardiovascular": 32,
+        "environment": 24,
+        "genomics_gwas": 16,
+        "nutrition": 16,
+        "infectious": 14,
+        "respiratory": 13,
+        "omics": 8,
+        "physical_activity": 7,
+        "aging": 6,
+        "mendelian_randomization": 3,
+        "mental_health": 3,
+        "cancer": 2,
+        "eye_vision": 2,
+        "sleep": 1
+      }
+    },
+    "mexico_city": {
+      "name": "Mexico City Prospective Study",
+      "themes": {
+        "epidemiology": 29,
+        "metabolic": 20,
+        "cardiovascular": 18,
+        "respiratory": 13,
+        "physical_activity": 10,
+        "nutrition": 9,
+        "cancer": 7,
+        "genomics_gwas": 4,
+        "eye_vision": 4,
+        "aging": 3,
+        "musculoskeletal": 3,
+        "sleep": 3,
+        "neurological": 2,
+        "environment": 2,
+        "mendelian_randomization": 1,
+        "infectious": 1
+      }
+    },
+    "epigen_brazil": {
+      "name": "EPIGEN-Brazil",
+      "themes": {
+        "genomics_gwas": 1
+      }
+    },
+    "emerge": {
+      "name": "eMERGE Network",
+      "themes": {
+        "infectious": 7331,
+        "epidemiology": 6841,
+        "omics": 6449,
+        "aging": 6041,
+        "environment": 5964,
+        "cancer": 5333,
+        "mental_health": 5045,
+        "neurological": 4819,
+        "pharmacogenomics": 4657,
+        "metabolic": 3843,
+        "nutrition": 3390,
+        "physical_activity": 3002,
+        "neuroimaging": 2735,
+        "cardiovascular": 2734,
+        "eye_vision": 2551,
+        "musculoskeletal": 2452,
+        "respiratory": 2420,
+        "genomics_gwas": 1681,
+        "sleep": 714,
+        "mendelian_randomization": 88
+      }
+    },
+    "topmed": {
+      "name": "TOPMed",
+      "themes": {
+        "genomics_gwas": 159,
+        "cardiovascular": 67,
+        "omics": 48,
+        "metabolic": 46,
+        "epidemiology": 44,
+        "respiratory": 40,
+        "aging": 31,
+        "neurological": 18,
+        "pharmacogenomics": 14,
+        "cancer": 13,
+        "environment": 12,
+        "musculoskeletal": 11,
+        "mendelian_randomization": 9,
+        "sleep": 9,
+        "nutrition": 6,
+        "physical_activity": 6,
+        "neuroimaging": 5,
+        "infectious": 3,
+        "mental_health": 1,
+        "eye_vision": 1
+      }
+    }
+  },
+  "raw": {
+    "theme_definitions": {
+      "genomics_gwas": {
+        "name": "Genomics & GWAS",
+        "category": "methodology"
+      },
+      "mendelian_randomization": {
+        "name": "Mendelian Randomization",
+        "category": "methodology"
+      },
+      "neuroimaging": {
+        "name": "Neuroimaging",
+        "category": "methodology"
+      },
+      "cardiovascular": {
+        "name": "Cardiovascular Research",
+        "category": "disease_area"
+      },
+      "metabolic": {
+        "name": "Metabolic & Diabetes",
+        "category": "disease_area"
+      },
+      "cancer": {
+        "name": "Cancer & Oncology",
+        "category": "disease_area"
+      },
+      "neurological": {
+        "name": "Neurological Disorders",
+        "category": "disease_area"
+      },
+      "mental_health": {
+        "name": "Mental Health & Psychiatry",
+        "category": "disease_area"
+      },
+      "infectious": {
+        "name": "Infectious Diseases",
+        "category": "disease_area"
+      },
+      "pharmacogenomics": {
+        "name": "Pharmacogenomics",
+        "category": "methodology"
+      },
+      "epidemiology": {
+        "name": "Epidemiology & Risk Factors",
+        "category": "methodology"
+      },
+      "omics": {
+        "name": "Multi-omics & Biomarkers",
+        "category": "methodology"
+      },
+      "aging": {
+        "name": "Aging & Longevity",
+        "category": "disease_area"
+      },
+      "respiratory": {
+        "name": "Respiratory Diseases",
+        "category": "disease_area"
+      },
+      "musculoskeletal": {
+        "name": "Musculoskeletal",
+        "category": "disease_area"
+      },
+      "eye_vision": {
+        "name": "Eye & Vision",
+        "category": "disease_area"
+      },
+      "sleep": {
+        "name": "Sleep Research",
+        "category": "disease_area"
+      },
+      "nutrition": {
+        "name": "Nutrition & Diet",
+        "category": "exposure"
+      },
+      "physical_activity": {
+        "name": "Physical Activity",
+        "category": "exposure"
+      },
+      "environment": {
+        "name": "Environmental Health",
+        "category": "exposure"
+      }
+    },
+    "total_biobanks": 27
+  }
+}

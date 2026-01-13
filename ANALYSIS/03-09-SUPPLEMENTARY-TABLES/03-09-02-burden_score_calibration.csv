@@ -1,0 +1,180 @@
+disease,gbd_level2,dalys_millions,burden_score,is_calibration_disease,global_south_priority,daly_rank,burden_score_rank
+COVID-19,Respiratory infections,212.01,83.26,False,True,1,1
+Ischemic heart disease,Cardiovascular diseases,188.36,82.75,True,False,2,2
+Neonatal disorders,Neonatal disorders,186.37,82.7,True,True,3,3
+Stroke,Cardiovascular diseases,160.46,82.05,True,False,4,4
+Zika virus,NTDs and Malaria,157.95,81.99,False,True,5,5
+Lower respiratory infections,Respiratory infections,82.53,79.17,True,True,6,6
+Chronic obstructive pulmonary disease,Chronic respiratory diseases,79.78,79.02,True,False,7,7
+Diabetes mellitus,Diabetes and kidney diseases,78.94,78.97,True,False,8,8
+Low back pain,Musculoskeletal disorders,70.16,78.46,True,False,9,9
+Road injuries,Transport injuries,65.14,78.14,True,True,10,10
+Diarrheal diseases,Enteric infections,58.98,77.71,True,True,11,11
+Depressive disorders,Mental disorders,56.33,77.51,True,False,12,12
+Malaria,NTDs and Malaria,55.17,77.42,True,True,13,13
+Congenital birth defects,Other non-communicable diseases,52.33,77.19,False,False,14,14
+Headache disorders,Neurological disorders,47.98,76.81,False,False,15,15
+Tuberculosis,Respiratory infections,46.98,76.72,True,True,16,16
+"Tracheal, bronchus, and lung cancer",Neoplasms,46.54,76.68,True,False,17,17
+Cirrhosis and other chronic liver diseases,Digestive diseases,46.42,76.67,True,False,18,18
+Other musculoskeletal disorders,Musculoskeletal disorders,45.18,76.55,False,False,19,19
+Chronic kidney disease,Diabetes and kidney diseases,44.45,76.48,False,False,20,20
+Age-related and other hearing loss,Sense organ diseases,44.45,76.48,False,False,21,21
+Falls,Unintentional injuries,43.8,76.42,False,False,22,22
+Anxiety disorders,Mental disorders,42.51,76.28,False,False,23,23
+HIV/AIDS,HIV/AIDS and STIs,40.27,76.05,True,True,24,24
+Self-harm,Self-harm and violence,33.53,75.25,False,False,25,25
+Dietary iron deficiency,Nutritional deficiencies,32.32,75.09,False,True,26,26
+Blindness and vision loss,Sense organ diseases,29.16,74.65,False,False,27,27
+Gynecological diseases,Other non-communicable diseases,27.74,74.43,False,False,28,28
+Interpersonal violence,Self-harm and violence,26.83,74.29,False,True,29,29
+Hypertensive heart disease,Cardiovascular diseases,25.46,74.06,False,False,30,30
+Colon and rectum cancer,Neoplasms,24.4,73.87,False,False,31,31
+Oral disorders,Other non-communicable diseases,23.24,73.66,False,False,32,32
+Stomach cancer,Neoplasms,22.79,73.58,False,False,33,33
+Asthma,Chronic respiratory diseases,21.42,73.31,False,False,34,34
+Osteoarthritis,Musculoskeletal disorders,21.3,73.28,False,False,35,35
+Breast cancer,Neoplasms,20.64,73.15,False,False,36,36
+Neck pain,Musculoskeletal disorders,20.42,73.1,False,False,37,37
+Alcohol use disorders,Substance use disorders,16.98,72.3,False,False,38,38
+Drowning,Unintentional injuries,15.7,71.96,False,True,39,39
+Drug use disorders,Substance use disorders,15.56,71.92,False,False,40,40
+Upper digestive system diseases,Digestive diseases,15.21,71.82,False,False,41,41
+Schizophrenia,Mental disorders,14.82,71.71,False,False,42,42
+Meningitis,Other infectious,14.51,71.62,False,True,43,43
+Rheumatic heart disease,Cardiovascular diseases,13.43,71.28,False,True,44,44
+Esophageal cancer,Neoplasms,13.0,71.14,False,False,45,45
+Liver cancer,Neoplasms,12.89,71.1,False,False,46,46
+"Endocrine, metabolic, blood, and immune disorders",Other non-communicable diseases,12.86,71.09,False,False,47,47
+Maternal disorders,Maternal disorders,12.31,70.9,False,True,48,48
+Hemoglobinopathies and hemolytic anemias,Other non-communicable diseases,11.92,70.76,False,True,49,49
+Protein-energy malnutrition,Nutritional deficiencies,11.83,70.73,False,True,50,50
+Cardiomyopathy and myocarditis,Cardiovascular diseases,11.65,70.66,False,False,51,51
+Autism spectrum disorders,Mental disorders,11.54,70.62,False,False,52,52
+Urinary diseases and male infertility,Other non-communicable diseases,11.35,70.55,False,False,53,53
+Pancreatic cancer,Neoplasms,11.32,70.54,False,False,54,54
+Leukemia,Neoplasms,10.98,70.41,False,False,55,55
+Exposure to mechanical forces,Unintentional injuries,10.32,70.13,False,False,56,56
+Other cardiovascular and circulatory diseases,Cardiovascular diseases,9.99,69.99,False,False,57,57
+Cervical cancer,Neoplasms,9.91,69.96,False,True,58,58
+Other mental disorders,Mental disorders,8.96,69.52,False,False,59,59
+Brain and central nervous system cancer,Neoplasms,8.91,69.5,False,False,60,60
+Other unintentional injuries,Unintentional injuries,8.77,69.43,False,False,61,61
+Conflict and terrorism,Self-harm and violence,8.73,69.41,False,True,62,62
+"Fire, heat, and hot substances",Unintentional injuries,8.47,69.28,False,True,63,63
+Atrial fibrillation and flutter,Cardiovascular diseases,8.36,69.22,False,False,64,64
+Dermatitis,Skin and subcutaneous diseases,8.18,69.13,False,False,65,65
+Prostate cancer,Neoplasms,8.14,69.11,False,False,66,66
+Typhoid and paratyphoid,Enteric infections,8.1,69.08,False,True,67,67
+Bipolar disorder,Mental disorders,8.01,69.04,False,False,68,68
+Sexually transmitted infections excluding HIV,HIV/AIDS and STIs,7.95,69.01,False,True,69,69
+Non-Hodgkin lymphoma,Neoplasms,7.77,68.9,False,False,70,70
+Gallbladder and biliary diseases,Digestive diseases,7.73,68.88,False,False,71,71
+Paralytic ileus and intestinal obstruction,Digestive diseases,6.66,68.24,False,False,72,72
+Other malignant neoplasms,Neoplasms,6.45,68.1,False,False,73,73
+Lip and oral cavity cancer,Neoplasms,5.87,67.69,False,False,74,74
+Other unspecified infectious diseases,Other infectious,5.85,67.67,False,False,75,75
+Upper respiratory infections,Respiratory infections,5.68,67.54,False,False,76,76
+Foreign body,Unintentional injuries,5.67,67.53,False,False,77,77
+Scabies,Skin and subcutaneous diseases,5.32,67.26,False,True,78,78
+Ovarian cancer,Neoplasms,5.16,67.13,False,False,79,79
+Acne vulgaris,Skin and subcutaneous diseases,5.13,67.1,False,False,80,80
+Conduct disorder,Mental disorders,5.0,66.99,False,False,81,81
+Encephalitis,Other infectious,4.95,66.95,False,True,82,82
+Animal contact,Unintentional injuries,4.89,66.89,False,True,83,83
+Measles,Other infectious,4.88,66.88,False,True,84,84
+Adverse effects of medical treatment,Unintentional injuries,4.85,66.85,False,False,85,85
+Invasive Non-typhoidal Salmonella (iNTS),Enteric infections,4.74,66.76,False,True,86,86
+Pertussis,Other infectious,4.61,66.64,False,True,87,87
+Other transport injuries,Transport injuries,4.49,66.52,False,False,88,88
+Bladder cancer,Neoplasms,4.4,66.43,False,False,89,89
+Other neurological disorders,Neurological disorders,4.36,66.39,False,False,90,90
+Acute hepatitis,Other infectious,4.23,66.26,False,True,91,91
+Other neglected tropical diseases,NTDs and Malaria,4.22,66.25,False,True,92,92
+Viral skin diseases,Skin and subcutaneous diseases,4.2,66.23,False,False,93,93
+Pancreatitis,Digestive diseases,4.1,66.13,False,False,94,94
+Interstitial lung disease and pulmonary sarcoidosis,Chronic respiratory diseases,4.04,66.07,False,False,95,95
+Kidney cancer,Neoplasms,4.02,66.04,False,False,96,96
+Urticaria,Skin and subcutaneous diseases,3.98,66.0,False,False,97,97
+Idiopathic developmental intellectual disability,Mental disorders,3.81,65.81,False,False,98,98
+Gallbladder and biliary tract cancer,Neoplasms,3.73,65.72,False,False,99,99
+Other sense organ diseases,Sense organ diseases,3.71,65.7,False,False,100,100
+Psoriasis,Skin and subcutaneous diseases,3.69,65.67,False,False,101,101
+Other skin and subcutaneous diseases,Skin and subcutaneous diseases,3.53,65.48,False,False,102,102
+Fungal skin diseases,Skin and subcutaneous diseases,3.43,65.35,False,False,103,103
+Eating disorders,Mental disorders,3.4,65.32,False,False,104,104
+Non-rheumatic valvular heart disease,Cardiovascular diseases,3.24,65.1,False,False,105,105
+Larynx cancer,Neoplasms,3.14,64.97,False,False,106,106
+Aortic aneurysm,Cardiovascular diseases,3.11,64.92,False,False,107,107
+Rheumatoid arthritis,Musculoskeletal disorders,3.08,64.88,False,False,108,108
+Other digestive diseases,Digestive diseases,3.0,64.77,False,False,109,109
+Poisonings,Unintentional injuries,2.88,64.6,False,False,110,110
+Other pharynx cancer,Neoplasms,2.84,64.54,False,False,111,111
+Other chronic respiratory diseases,Chronic respiratory diseases,2.81,64.49,False,False,112,112
+Sudden infant death syndrome,Other non-communicable diseases,2.75,64.39,False,False,113,113
+Multiple myeloma,Neoplasms,2.6,64.14,False,False,114,114
+Uterine cancer,Neoplasms,2.56,64.09,False,False,115,115
+Malignant neoplasm of bone and articular cartilage,Neoplasms,2.53,64.02,False,False,116,116
+Nasopharynx cancer,Neoplasms,2.49,63.96,False,False,117,117
+Otitis media,Respiratory infections,2.48,63.94,False,False,118,118
+"Inguinal, femoral, and abdominal hernia",Digestive diseases,2.34,63.7,False,False,119,119
+Bacterial skin diseases,Skin and subcutaneous diseases,2.27,63.56,False,False,120,120
+Iodine deficiency,Nutritional deficiencies,2.25,63.51,False,True,121,121
+Endocarditis,Cardiovascular diseases,2.08,63.17,False,False,122,122
+Dengue,NTDs and Malaria,2.08,63.17,False,True,123,123
+Gout,Musculoskeletal disorders,1.75,62.42,False,False,124,125
+Schistosomiasis,NTDs and Malaria,1.75,62.42,False,True,125,124
+Vascular intestinal disorders,Digestive diseases,1.71,62.33,False,False,126,126
+Environmental heat and cold exposure,Unintentional injuries,1.68,62.26,False,False,127,127
+Malignant skin melanoma,Neoplasms,1.68,62.25,False,False,128,128
+Soft tissue and other extraosseous sarcomas,Neoplasms,1.68,62.25,False,False,129,129
+Inflammatory bowel disease,Digestive diseases,1.51,61.79,False,False,130,130
+Other nutritional deficiencies,Nutritional deficiencies,1.43,61.54,False,True,131,131
+Intestinal nematode infections,NTDs and Malaria,1.38,61.4,False,True,132,132
+Tetanus,Other infectious,1.34,61.28,False,True,133,133
+Appendicitis,Digestive diseases,1.33,61.24,False,False,134,134
+Lymphatic filariasis,NTDs and Malaria,1.31,61.19,False,True,135,135
+Onchocerciasis,NTDs and Malaria,1.26,61.01,False,True,136,136
+Thyroid cancer,Neoplasms,1.25,60.96,False,False,137,137
+Cysticercosis,NTDs and Malaria,1.24,60.92,False,True,138,138
+Other neoplasms,Neoplasms,1.22,60.85,False,False,139,139
+Non-melanoma skin cancer,Neoplasms,1.21,60.84,False,False,140,140
+Hodgkin lymphoma,Neoplasms,1.2,60.78,False,False,141,141
+Vitamin A deficiency,Nutritional deficiencies,1.1,60.43,False,True,142,142
+Exposure to forces of nature,Self-harm and violence,1.09,60.38,False,True,143,143
+Motor neuron disease,Neurological disorders,1.04,60.17,False,False,144,144
+Attention-deficit/hyperactivity disorder,Mental disorders,1.03,60.13,False,False,145,145
+Police conflict and executions,Self-harm and violence,1.01,60.05,False,True,146,146
+Food-borne trematodiases,NTDs and Malaria,1.0,59.99,False,True,147,147
+Multiple sclerosis,Neurological disorders,0.97,59.88,False,False,148,148
+Varicella and herpes zoster,Other infectious,0.89,59.47,False,False,149,149
+Guinea worm disease,NTDs and Malaria,0.85,59.32,False,True,150,150
+Pruritus,Skin and subcutaneous diseases,0.85,59.3,False,False,151,151
+Decubitus ulcer,Skin and subcutaneous diseases,0.8,59.05,False,False,152,152
+Leishmaniasis,NTDs and Malaria,0.78,58.93,False,True,153,153
+Mesothelioma,Neoplasms,0.69,58.38,False,False,154,154
+Alopecia areata,Skin and subcutaneous diseases,0.57,57.57,False,False,155,155
+Rabies,NTDs and Malaria,0.57,57.56,False,True,156,156
+Testicular cancer,Neoplasms,0.56,57.49,False,False,157,157
+Eye cancer,Neoplasms,0.47,56.71,False,False,158,158
+Pneumoconiosis,Chronic respiratory diseases,0.45,56.5,False,False,159,159
+Diphtheria,Other infectious,0.32,55.03,False,True,160,160
+Yellow fever,NTDs and Malaria,0.32,55.02,False,True,161,161
+Acute glomerulonephritis,Diabetes and kidney diseases,0.31,54.95,False,False,162,162
+Neuroblastoma and other peripheral nervous cell tumors,Neoplasms,0.29,54.56,False,False,163,163
+Chagas disease,NTDs and Malaria,0.24,53.78,False,True,164,164
+Trachoma,NTDs and Malaria,0.12,50.91,False,True,165,165
+Other intestinal infectious diseases,Enteric infections,0.11,50.23,False,True,167,166
+Cystic echinococcosis,NTDs and Malaria,0.11,50.21,False,True,166,167
+African trypanosomiasis,NTDs and Malaria,0.06,47.92,False,True,168,168
+Leprosy,NTDs and Malaria,0.02,43.31,False,True,169,169
+Ebola,NTDs and Malaria,0.0,34.16,False,True,175,170
+Pulmonary Arterial Hypertension,Cardiovascular diseases,0.0,0.0,False,False,170,171
+Alzheimer's disease and other dementias,Neurological disorders,0.0,0.0,False,False,171,172
+Parkinson's disease,Neurological disorders,0.0,0.0,False,False,172,173
+Lower extremity peripheral arterial disease,Cardiovascular diseases,0.0,0.0,False,False,173,174
+Idiopathic epilepsy,Neurological disorders,0.0,0.0,False,False,174,175
+_GENOMICS,Research methodology,0.0,0.0,False,False,176,176
+_BIOBANK_METHODS,Research methodology,0.0,0.0,False,False,177,177
+_IMAGING,Research methodology,0.0,0.0,False,False,178,178
+_AGING,Research methodology,0.0,0.0,False,False,179,179

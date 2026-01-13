@@ -1,0 +1,366 @@
+BIOBANK RESEARCH ANALYSIS - COMPREHENSIVE REPORT
+============================================================
+
+Analysis Date: 2025-07-01 05:24:40
+Total Articles Retrieved: 2706
+
+ARTICLES BY BIOBANK
+------------------------------
+UK Biobank: 301 articles
+Million Veteran Program: 1995 articles
+FinnGen: 26 articles
+All of Us: 352 articles
+Estonian Biobank: 32 articles
+
+1. MOST COMMONLY OCCURRING KEYWORDS BY BIOBANK
+--------------------------------------------------
+
+UK BIOBANK:
+   1. Electronic health records: 55 occurrences
+   2. Biobank: 43 occurrences
+   3. GWAS: 27 occurrences
+   4. Cancer: 15 occurrences
+   5. Genetics: 13 occurrences
+   6. Phewas: 13 occurrences
+   7. Epidemiology: 12 occurrences
+   8. Machine learning: 12 occurrences
+   9. Cardiovascular disease: 10 occurrences
+  10. Dementia: 10 occurrences
+  11. Polygenic risk score: 10 occurrences
+  12. Mendelian randomization: 8 occurrences
+  13. Cohort study: 8 occurrences
+  14. Phenome-wide Association Study: 8 occurrences
+  15. Depression: 7 occurrences
+
+MILLION VETERAN PROGRAM:
+   1. Electronic health records: 398 occurrences
+   2. Veterans: 154 occurrences
+   3. Natural Language Processing: 64 occurrences
+   4. Million Veteran Program: 55 occurrences
+   5. Primary Care: 54 occurrences
+   6. Cancer: 51 occurrences
+   7. Quality Improvement: 42 occurrences
+   8. Machine learning: 38 occurrences
+   9. Health Information Technology: 37 occurrences
+  10. Patient Safety: 36 occurrences
+  11. Epidemiology: 35 occurrences
+  12. Veteran: 33 occurrences
+  13. Covid-19: 26 occurrences
+  14. Mortality: 26 occurrences
+  15. Mental Health: 24 occurrences
+
+FINNGEN:
+   1. GWAS: 5 occurrences
+   2. Biobank: 5 occurrences
+   3. Electronic health records: 5 occurrences
+   4. Mendelian randomization: 3 occurrences
+   5. Genetics: 2 occurrences
+   6. Ancestry Diversity: 1 occurrences
+   7. Genetic Association Studies: 1 occurrences
+   8. Meta-analysis: 1 occurrences
+   9. Phenotype Harmonization: 1 occurrences
+  10. Data Mining: 1 occurrences
+  11. Ejection Fraction: 1 occurrences
+  12. Hfmref: 1 occurrences
+  13. Hfpef: 1 occurrences
+  14. Hfref: 1 occurrences
+  15. Heart Failure: 1 occurrences
+
+ALL OF US:
+   1. Electronic health records: 82 occurrences
+   2. Cancer: 35 occurrences
+   3. All Of Us: 23 occurrences
+   4. Precision medicine: 19 occurrences
+   5. All Of Us Research Program: 16 occurrences
+   6. Machine learning: 14 occurrences
+   7. Cardiovascular disease: 12 occurrences
+   8. Social Determinants Of Health: 11 occurrences
+   9. Polygenic risk score: 10 occurrences
+  10. Genetics: 9 occurrences
+  11. Epidemiology: 9 occurrences
+  12. Biobank: 9 occurrences
+  13. Health Disparities: 8 occurrences
+  14. Big Data: 7 occurrences
+  15. Genomics: 7 occurrences
+
+ESTONIAN BIOBANK:
+   1. Electronic health records: 12 occurrences
+   2. Biobank: 8 occurrences
+   3. GWAS: 6 occurrences
+   4. Genetics: 4 occurrences
+   5. Pharmacogenomics: 4 occurrences
+   6. Precision medicine: 2 occurrences
+   7. Machine learning: 2 occurrences
+   8. Hypertension: 2 occurrences
+   9. Polygenic risk score: 2 occurrences
+  10. Metabolomics: 2 occurrences
+  11. Ancestry Diversity: 1 occurrences
+  12. Genetic Association Studies: 1 occurrences
+  13. Meta-analysis: 1 occurrences
+  14. Phenotype Harmonization: 1 occurrences
+  15. Adipose Tissue: 1 occurrences
+
+2. TOP 20 MOST PROLIFIC AUTHORS BY BIOBANK
+---------------------------------------------
+
+UK BIOBANK:
+   1. Do, Ron: 14 publications
+   2. Fritsche, Lars G: 11 publications
+   3. Ritchie, Marylyn D: 11 publications
+   4. Denaxas, Spiros: 11 publications
+   5. Natarajan, Pradeep: 10 publications
+   6. Jarvik, Gail P: 10 publications
+   7. Polimanti, Renato: 10 publications
+   8. Lu, Qi: 9 publications
+   9. Liu, Gang: 9 publications
+  10. Verma, Anurag: 9 publications
+  11. Rocheleau, Ghislain: 9 publications
+  12. Bastarache, Lisa: 9 publications
+  13. Mukherjee, Bhramar: 9 publications
+  14. Pan, An: 8 publications
+  15. Hemingway, Harry: 8 publications
+  16. Denny, Joshua C: 8 publications
+  17. Pathak, Gita A: 8 publications
+  18. Geng, Tingting: 7 publications
+  19. Rader, Daniel J: 7 publications
+  20. Forrest, Iain S: 7 publications
+
+MILLION VETERAN PROGRAM:
+   1. Singh, Hardeep: 107 publications
+   2. Sittig, Dean F: 61 publications
+   3. Cho, Kelly: 54 publications
+   4. Gaziano, J Michael: 44 publications
+   5. Ho, Yuk-Lam: 36 publications
+   6. DuVall, Scott L: 33 publications
+   7. Murphy, Daniel R: 32 publications
+   8. Justice, Amy C: 32 publications
+   9. Yu, Hong: 30 publications
+  10. Weiner, Michael: 28 publications
+  11. Gagnon, David R: 24 publications
+  12. Matheny, Michael E: 24 publications
+  13. Brandt, Cynthia A: 22 publications
+  14. Shiner, Brian: 22 publications
+  15. Samore, Matthew H: 21 publications
+  16. Williams, Emily C: 20 publications
+  17. Beckham, Jean C: 19 publications
+  18. Schmajuk, Gabriela: 19 publications
+  19. O'Donnell, Christopher J: 19 publications
+  20. Gelernter, Joel: 19 publications
+
+FINNGEN:
+   1. Palotie, Aarno: 7 publications
+   2. Daly, Mark J: 7 publications
+   3. Karjalainen, Juha: 4 publications
+   4. Kurki, Mitja: 3 publications
+   5. Ganna, Andrea: 3 publications
+   6. Mägi, Reedik: 3 publications
+   7. Kiiskinen, Tuomo: 3 publications
+   8. Heyne, Henrike O: 3 publications
+   9. Kanai, Masahiro: 2 publications
+  10. Konuma, Takahiro: 2 publications
+  11. Matsuda, Koichi: 2 publications
+  12. Okada, Yukinori: 2 publications
+  13. Zhou, Wei: 2 publications
+  14. Partanen, Juulia J: 2 publications
+  15. Damrauer, Scott M: 2 publications
+  16. Finer, Sarah: 2 publications
+  17. Koskela, Jukka T: 2 publications
+  18. Lee, Seunggeun: 2 publications
+  19. Martin, Hilary C: 2 publications
+  20. van Heel, David A: 2 publications
+
+ALL OF US:
+   1. Denny, Joshua C: 27 publications
+   2. Wei, Wei-Qi: 16 publications
+   3. Weng, Chunhua: 13 publications
+   4. Tran, Tam C: 13 publications
+   5. Ohno-Machado, Lucila: 11 publications
+   6. Karlson, Elizabeth W: 10 publications
+   7. Sulieman, Lina: 10 publications
+   8. Mayo, Kelsey: 10 publications
+   9. Boerwinkle, Eric: 10 publications
+  10. Cicek, Mine: 10 publications
+  11. Carroll, Robert J: 10 publications
+  12. Smoller, Jordan W: 9 publications
+  13. Roden, Dan M: 9 publications
+  14. Master, Hiral: 9 publications
+  15. Ramirez, Andrea H: 9 publications
+  16. Cohn, Elizabeth: 9 publications
+  17. Mockrin, Stephen: 9 publications
+  18. Karnes, Jason H: 9 publications
+  19. Baxter, Sally L: 9 publications
+  20. Hripcsak, George: 8 publications
+
+ESTONIAN BIOBANK:
+   1. Esko, Tõnu: 12 publications
+   2. Milani, Lili: 9 publications
+   3. Mägi, Reedik: 8 publications
+   4. Krebs, Kristi: 8 publications
+   5. Abner, Erik: 7 publications
+   6. Metspalu, Andres: 7 publications
+   7. Lehto, Kelli: 6 publications
+   8. Vilo, Jaak: 5 publications
+   9. Reigo, Anu: 5 publications
+  10. Võsa, Urmo: 5 publications
+  11. Lindgren, Cecilia M: 4 publications
+  12. Daly, Mark J: 4 publications
+  13. Särg, Dage: 4 publications
+  14. Haller, Toomas: 4 publications
+  15. Loos, Ruth J F: 3 publications
+  16. Hayward, Caroline: 3 publications
+  17. Hveem, Kristian: 3 publications
+  18. Stefansson, Kari: 3 publications
+  19. John, Catherine: 3 publications
+  20. Packer, Richard: 3 publications
+
+3. TOP 10 LEADING INSTITUTIONS BY BIOBANK
+------------------------------------------
+
+UK BIOBANK:
+   1. Vanderbilt University: 249 publications
+   2. Massachusetts General Hospital: 217 publications
+   3. University of Medical Sciences: 198 publications
+   4. University of Pennsylvania: 188 publications
+   5. Icahn School of Medicine: 172 publications
+   6. Broad Institute: 163 publications
+   7. University: 160 publications
+   8. University of Science and Technology: 152 publications
+   9. University of Oxford: 128 publications
+  10. University of Edinburgh: 95 publications
+
+MILLION VETERAN PROGRAM:
+   1. Duke University: 596 publications
+   2. University of Utah: 476 publications
+   3. University of California: 468 publications
+   4. University of Pennsylvania: 449 publications
+   5. Vanderbilt University: 390 publications
+   6. Baylor College: 380 publications
+   7. University of Washington: 377 publications
+   8. Stanford University: 375 publications
+   9. Boston University: 348 publications
+  10. Yale University: 343 publications
+
+FINNGEN:
+   1. Broad Institute: 114 publications
+   2. University of Helsinki: 86 publications
+   3. Massachusetts General Hospital: 80 publications
+   4. University of Turku: 43 publications
+   5. Tampere University: 43 publications
+   6. Department of Psychiatry: 38 publications
+   7. Vanderbilt University: 21 publications
+   8. Turku University: 21 publications
+   9. University of Eastern Finland: 21 publications
+  10. University of Michigan: 19 publications
+
+ALL OF US:
+   1. Vanderbilt University: 478 publications
+   2. University of Medical Sciences: 309 publications
+   3. National Institute: 150 publications
+   4. University of Washington: 112 publications
+   5. Columbia University: 112 publications
+   6. China Medical University: 112 publications
+   7. Massachusetts General Hospital: 101 publications
+   8. University of California: 99 publications
+   9. National Human Genome Research Institute: 95 publications
+  10. University of California San Diego: 88 publications
+
+ESTONIAN BIOBANK:
+   1. University of Tartu: 228 publications
+   2. Broad Institute: 60 publications
+   3. University of Oxford: 50 publications
+   4. University of Leicester: 43 publications
+   5. University of Helsinki: 40 publications
+   6. University: 37 publications
+   7. Massachusetts General Hospital: 30 publications
+   8. University of Groningen: 27 publications
+   9. University of Michigan: 26 publications
+  10. Vanderbilt University: 23 publications
+
+4. MOST COMMON MESH TERMS BY BIOBANK
+--------------------------------------
+
+UK BIOBANK:
+   1. Humans: 220 occurrences
+   2. Female: 116 occurrences
+   3. Male: 112 occurrences
+   4. Middle Aged: 100 occurrences
+   5. Aged: 85 occurrences
+   6. United Kingdom: 85 occurrences
+   7. Electronic health records: 74 occurrences
+   8. Risk Factors: 72 occurrences
+   9. GWAS: 65 occurrences
+  10. Adult: 64 occurrences
+  11. Biological Specimen Banks: 64 occurrences
+  12. Genetic Predisposition To Disease: 45 occurrences
+  13. Phenotype: 41 occurrences
+  14. Prospective Studies: 34 occurrences
+  15. Cohort Studies: 32 occurrences
+
+MILLION VETERAN PROGRAM:
+   1. Humans: 1647 occurrences
+   2. Electronic health records: 932 occurrences
+   3. United States: 887 occurrences
+   4. Male: 881 occurrences
+   5. Female: 855 occurrences
+   6. Middle Aged: 668 occurrences
+   7. Million Veteran Program: 634 occurrences
+   8. Aged: 632 occurrences
+   9. Veterans: 524 occurrences
+  10. Adult: 437 occurrences
+  11. Retrospective Studies: 346 occurrences
+  12. Aged, 80 And Over: 216 occurrences
+  13. Cohort Studies: 144 occurrences
+  14. Primary Health Care: 139 occurrences
+  15. Risk Factors: 135 occurrences
+
+FINNGEN:
+   1. Humans: 16 occurrences
+   2. GWAS: 12 occurrences
+   3. Female: 10 occurrences
+   4. Male: 9 occurrences
+   5. Genetic Predisposition To Disease: 7 occurrences
+   6. Adult: 7 occurrences
+   7. Risk Factors: 6 occurrences
+   8. Phenotype: 5 occurrences
+   9. Middle Aged: 5 occurrences
+  10. Polymorphism, Single Nucleotide: 5 occurrences
+  11. Biological Specimen Banks: 4 occurrences
+  12. Electronic health records: 4 occurrences
+  13. Mendelian randomization: 4 occurrences
+  14. Finland: 4 occurrences
+  15. Cohort Studies: 3 occurrences
+
+ALL OF US:
+   1. Humans: 238 occurrences
+   2. Female: 145 occurrences
+   3. Male: 132 occurrences
+   4. Middle Aged: 116 occurrences
+   5. Adult: 108 occurrences
+   6. Aged: 106 occurrences
+   7. United States: 102 occurrences
+   8. Electronic health records: 89 occurrences
+   9. Population Health: 55 occurrences
+  10. Risk Factors: 51 occurrences
+  11. Retrospective Studies: 37 occurrences
+  12. Cross-sectional Studies: 35 occurrences
+  13. Young Adult: 27 occurrences
+  14. Prevalence: 24 occurrences
+  15. Adolescent: 24 occurrences
+
+ESTONIAN BIOBANK:
+   1. Humans: 21 occurrences
+   2. Electronic health records: 15 occurrences
+   3. Estonia: 13 occurrences
+   4. Female: 10 occurrences
+   5. GWAS: 9 occurrences
+   6. Adult: 9 occurrences
+   7. Male: 8 occurrences
+   8. Genetic Predisposition To Disease: 6 occurrences
+   9. Middle Aged: 6 occurrences
+  10. Aged: 6 occurrences
+  11. Polymorphism, Single Nucleotide: 5 occurrences
+  12. Biological Specimen Banks: 5 occurrences
+  13. Phenotype: 4 occurrences
+  14. Genetic Variation: 3 occurrences
+  15. Risk Factors: 3 occurrences
+

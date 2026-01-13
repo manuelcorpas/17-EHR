@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "WebFetch(domain:manuelcorpas.github.io)",
+      "Bash(git add docs/index.html tree.txt)",
+      "Bash(git add docs/index.html docs/data/biobanks.json docs/data/summary.json docs/js/charts.js tree.txt)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAlign webapp with HEIM manuscript \\(Corpas et al. 2025\\)\n\nSynchronize dashboard with paper: Health Equity Informative Metrics \\(HEIM\\):\nQuantifying Research Alignment Across 70 Global Biobanks\n\nKey changes:\n- Update EAS categories: Strong/Weak/Poor → High/Moderate/Low\n- Update EAS thresholds: 70/50/30 → 70/40 \\(per paper methodology\\)\n- Fix citation: Corpas M, Valdivia-Silva J, Fatumo S, Guio H\n- Remove obsolete Dataset Versions section\n- Update filter dropdown labels\n\nVerified statistics match paper:\n- 70 IHCC biobanks, 29 countries\n- 38,595 publications, 179 disease categories\n- Alignment ratio: 57.8:1\n- EAS: 1 High \\(1.4%\\), 13 Moderate \\(18.6%\\), 56 Low \\(80%\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push origin main)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(textutil:*)"
+    ]
+  }
+}

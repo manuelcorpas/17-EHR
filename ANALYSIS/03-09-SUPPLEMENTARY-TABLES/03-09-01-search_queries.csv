@@ -1,0 +1,80 @@
+cohort_id,cohort_name,country,income_level,search_aliases,field_restriction,date_range,query_template,publications_retrieved,disambiguation_notes
+ukb,UK Biobank,United Kingdom,HIC,UK Biobank; United Kingdom Biobank; U.K. Biobank; UK-Biobank,[All Fields],2000-2025,"""UK Biobank""[All Fields] OR ""United Kingdom Biobank""[All Fields] OR ""U.K. Biobank""[All Fields] OR ""UK-Biobank""[All Fields]",13902,Multiple aliases used; full name + acronym
+whi,Women's Health Initiative,United States,HIC,Women's Health Initiative; WHI cohort,[All Fields],2000-2025,"""Women's Health Initiative""[All Fields] OR ""WHI cohort""[All Fields]",3436,Multiple aliases used; full name + acronym
+twb,Taiwan Biobank,Taiwan,HIC,Taiwan Biobank; TWB cohort,[All Fields],2000-2025,"""Taiwan Biobank""[All Fields] OR ""TWB cohort""[All Fields]",560,Multiple aliases used; full name + acronym
+simpler,SIMPLER,Sweden,HIC,SIMPLER,[All Fields],2000-2025,"(""Swedish Mammography Cohort""[Title/Abstract] OR ""Cohort of Swedish Men""[Title/Abstract] OR ""SIMPLER cohort""[Title/Abstract])",280,
+tommo,Tohoku Medical Megabank,Japan,HIC,Tohoku Medical Megabank,[All Fields],2000-2025,"(""Tohoku Medical Megabank""[Title/Abstract] OR ""ToMMo""[Title/Abstract])",245,
+smwhs,Shanghai Men and Women's Health Studies,China,UMIC,Shanghai Men and Women's Health Studies,[All Fields],2000-2025,"(""Shanghai Men's Health Study""[Title/Abstract] OR ""Shanghai Women's Health Study""[Title/Abstract])",218,
+ukbdc,UK Blood Donor Cohorts,United Kingdom,HIC,UK Blood Donor Cohorts,[All Fields],2000-2025,"(""UK Blood Donor""[Title/Abstract] OR ""INTERVAL study""[Title/Abstract])",165,
+uklwc,UKCTOCS Longitudinal Women's Cohort,United Kingdom,HIC,UKCTOCS Longitudinal Women's Cohort,[All Fields],2000-2025,"(""UKCTOCS""[Title/Abstract] OR ""UK Collaborative Trial of Ovarian Cancer Screening""[Title/Abstract])",101,
+myc,The Malaysian Cohort,Malaysia,UMIC,The Malaysian Cohort,[All Fields],2000-2025,"(""Malaysian Cohort""[Title/Abstract] OR ""The Malaysian Cohort""[Title/Abstract])",87,
+usnih,US NIH Biobank,United States,HIC,US NIH Biobank,[All Fields],2000-2025,"(""NIH""[Title/Abstract] AND ""biobank""[Title/Abstract])",53,
+vhmpp,VHM&PP,Austria,HIC,VHM&PP,[All Fields],2000-2025,"(""VHM&PP""[Title/Abstract] OR ""Vorarlberg Health Monitoring""[Title/Abstract])",28,
+snb,Saudi National Biobank,Saudi Arabia,HIC,Saudi National Biobank,[All Fields],2000-2025,"(""Saudi National Biobank""[Title/Abstract] OR ""Saudi Human Genome Program""[Title/Abstract] OR ""SHGP""[Title/Abstract])",14,
+sab,South Asia Biobank,United Kingdom,HIC,South Asia Biobank,[All Fields],2000-2025,"""South Asia Biobank""[Title/Abstract]",8,
+ugr,Uganda Genome Resource,Uganda,LIC,Uganda Genome Resource; Ugandan Genome; UGR cohort,[All Fields],2000-2025,"""Uganda Genome Resource""[All Fields] OR ""Ugandan Genome""[All Fields] OR ""UGR cohort""[All Fields]",6,Multiple aliases used; full name + acronym
+koges,Korean Genome and Epidemiology Study,South Korea,HIC,Korean Genome and Epidemiology Study,[All Fields],2000-2025,"(""Korean Genome and Epidemiology Study""[Title/Abstract] OR ""KoGES""[Title/Abstract])",0,
+nshds,Northern Sweden Health and Disease Study,Sweden,HIC,Northern Sweden Health and Disease Study,[All Fields],2000-2025,"(""Northern Sweden Health and Disease""[Title/Abstract] OR ""NSHDS""[Title/Abstract])",0,
+lifepath,LIFEPATH,International,HIC,LIFEPATH,[All Fields],2000-2025,"(""LIFEPATH consortium""[Title/Abstract] OR ""LIFEPATH cohort""[Title/Abstract] OR ""Lifecourse biological pathways""[Title/Abstract])",0,
+lifegene,LifeGene,Sweden,HIC,LifeGene,[All Fields],2000-2025,"""LifeGene""[Title/Abstract]",0,
+mauco,MAUCO,Chile,HIC,MAUCO,[All Fields],2000-2025,"""MAUCO""[Title/Abstract]",0,
+mvp,Million Veteran Program,United States,HIC,Million Veteran Program; Million Veterans Program; MVP biobank; MVP cohort; MVP genomics; Veterans Affairs Million Veteran Program; VA Million Veteran Program,[All Fields],2000-2025,"""Million Veteran Program""[All Fields] OR ""Million Veterans Program""[All Fields] OR ""MVP biobank""[All Fields] OR ""MVP cohort""[All Fields] OR ""MVP genomics""[All Fields] OR ""Veterans Affairs Million Veteran Program""[All Fields] OR ""VA Million Veteran Program""[All Fields]",0,Multiple aliases used; full name + acronym
+mws,Million Women Study,United Kingdom,HIC,Million Women Study,[All Fields],2000-2025,"""Million Women Study""[Title/Abstract]",0,
+mec,Multiethnic Cohort Study,United States,HIC,Multiethnic Cohort Study,[All Fields],2000-2025,"(""Multiethnic Cohort""[Title/Abstract] OR ""Multi-ethnic Cohort""[Title/Abstract])",0,
+nhsii,Nurses' Health Study II,United States,HIC,Nurses' Health Study II,[All Fields],2000-2025,"""Nurses' Health Study II""[Title/Abstract]",0,
+niccc,NICCC,Israel,HIC,NICCC,[All Fields],2000-2025,"""NICCC""[Title/Abstract]",0,
+nbk,National Biobank of Korea,South Korea,HIC,National Biobank of Korea,[All Fields],2000-2025,"""National Biobank of Korea""[Title/Abstract]",0,
+ntr,Netherlands Twin Registry,Netherlands,HIC,Netherlands Twin Registry,[All Fields],2000-2025,"""Netherlands Twin Registry""[Title/Abstract]",0,
+plco,PLCO Cancer Screening Trial,United States,HIC,PLCO Cancer Screening Trial,[All Fields],2000-2025,"(""PLCO""[Title/Abstract] OR ""Prostate, Lung, Colorectal and Ovarian Cancer Screening Trial""[Title/Abstract])",0,
+nfbc,Norwegian Family Based Life Course Study,Norway,HIC,Norwegian Family Based Life Course Study,[All Fields],2000-2025,"""Norwegian Family Based Life Course""[Title/Abstract]",0,
+moba,Norwegian Mother and Child Cohort Study,Norway,HIC,Norwegian Mother and Child Cohort Study,[All Fields],2000-2025,"(""Norwegian Mother and Child Cohort""[Title/Abstract] OR ""MoBa""[Title/Abstract])",0,
+nhs,Nurses' Health Study,United States,HIC,Nurses' Health Study,[All Fields],2000-2025,"""Nurses' Health Study""[Title/Abstract]",0,
+persian,PERSIAN Cohort Study,Iran,LMIC,PERSIAN Cohort Study,[All Fields],2000-2025,"(""PERSIAN Cohort""[Title/Abstract] OR ""Prospective Epidemiological Research Studies in IrAN""[Title/Abstract])",0,
+pgr,Pakistan Genomic Resource,Pakistan,LMIC,Pakistan Genomic Resource,[All Fields],2000-2025,"(""Pakistan Genomic Resource""[Title/Abstract] OR ""PGR cohort""[Title/Abstract] OR ""Genes and Health Pakistan""[Title/Abstract])",0,
+niehs,Personalized Genes and Environment Study,United States,HIC,Personalized Genes and Environment Study,[All Fields],2000-2025,"(""Personalized Genes and Environment""[Title/Abstract] OR ""NIEHS Environmental Polymorphisms""[Title/Abstract])",0,
+kprb,Kaiser Permanente Research Bank,United States,HIC,Kaiser Permanente Research Bank,[All Fields],2000-2025,"(""Kaiser Permanente Research Bank""[Title/Abstract] OR ""KPRB""[Title/Abstract])",0,
+qbb,Qatar Biobank,Qatar,HIC,Qatar Biobank; QBB cohort,[All Fields],2000-2025,"""Qatar Biobank""[All Fields] OR ""QBB cohort""[All Fields]",0,Multiple aliases used; full name + acronym
+qgp,Qatar Genome Programme,Qatar,HIC,Qatar Genome Programme,[All Fields],2000-2025,"(""Qatar Genome Programme""[Title/Abstract] OR ""Qatar Genome Program""[Title/Abstract] OR ""QGP""[Title/Abstract])",0,
+sequencebio,Sequence Bio,Canada,HIC,Sequence Bio,[All Fields],2000-2025,"""Sequence Bio""[Title/Abstract]",0,
+seac,South(east) Asian Cohorts,International,LMIC,South(east) Asian Cohorts,[All Fields],2000-2025,"""Southeast Asian Cohorts""[Title/Abstract]",0,
+kcps,Korean Cancer Prevention Study,South Korea,HIC,Korean Cancer Prevention Study,[All Fields],2000-2025,"(""Korean Cancer Prevention Study""[Title/Abstract] OR ""KCPS-II""[Title/Abstract])",0,
+23andme,23andMe,United States,HIC,23andMe,[All Fields],2000-2025,"""23andMe""[Title/Abstract]",0,
+45andup,45 and Up Study,Australia,HIC,45 and Up Study,[All Fields],2000-2025,"""45 and Up Study""[Title/Abstract]",0,
+cts,California Teachers Study,United States,HIC,California Teachers Study,[All Fields],2000-2025,"""California Teachers Study""[Title/Abstract]",0,
+coronagenes,Coronagenes/University of Edinburgh,United Kingdom,HIC,Coronagenes/University of Edinburgh,[All Fields],2000-2025,"""Coronagenes""[Title/Abstract]",0,
+nepal_csh,Civil Service Hospital Nepal,Nepal,LMIC,Civil Service Hospital Nepal,[All Fields],2000-2025,"(""Civil Service Hospital""[Title/Abstract] AND ""Nepal""[Title/Abstract])",0,
+peace,China PEACE Million Persons Project,China,UMIC,China PEACE Million Persons Project,[All Fields],2000-2025,"""China PEACE""[Title/Abstract]",0,
+ckb,China Kadoorie Biobank,China,UMIC,China Kadoorie Biobank; CKB cohort; Kadoorie Biobank,[All Fields],2000-2025,"""China Kadoorie Biobank""[All Fields] OR ""CKB cohort""[All Fields] OR ""Kadoorie Biobank""[All Fields]",0,Multiple aliases used; full name + acronym
+chop_cag,"Center for Applied Genomics, CHOP",United States,HIC,"Center for Applied Genomics, CHOP",[All Fields],2000-2025,"(""Center for Applied Genomics""[Title/Abstract] AND ""Children's Hospital of Philadelphia""[Title/Abstract])",0,
+cpsii,Cancer Prevention Study II Nutrition Cohort,United States,HIC,Cancer Prevention Study II Nutrition Cohort,[All Fields],2000-2025,"""Cancer Prevention Study II""[Title/Abstract]",0,
+cptp,Canadian Partnership for Tomorrow's Health,Canada,HIC,Canadian Partnership for Tomorrow's Health,[All Fields],2000-2025,"(""CanPath""[Title/Abstract] OR ""Canadian Partnership for Tomorrow""[Title/Abstract])",0,
+constances,CONSTANCES,France,HIC,CONSTANCES; CONSTANCES cohort,[All Fields],2000-2025,"""CONSTANCES""[All Fields] OR ""CONSTANCES cohort""[All Fields]",0,Multiple aliases used; full name + acronym
+dnbc,Danish National Birth Cohort,Denmark,HIC,Danish National Birth Cohort,[All Fields],2000-2025,"(""Danish National Birth Cohort""[Title/Abstract] OR ""DNBC""[Title/Abstract])",0,
+bbj,Biobank Japan,Japan,HIC,BioBank Japan; Biobank Japan; BBJ cohort,[All Fields],2000-2025,"""BioBank Japan""[All Fields] OR ""Biobank Japan""[All Fields] OR ""BBJ cohort""[All Fields]",0,Multiple aliases used; full name + acronym
+biovu,BioVU Vanderbilt,United States,HIC,BioVU; Vanderbilt BioVU,[All Fields],2000-2025,"""BioVU""[All Fields] OR ""Vanderbilt BioVU""[All Fields]",0,Multiple aliases used; full name + acronym
+bandim,Bandim Health Project,Guinea-Bissau,LIC,Bandim Health Project,[All Fields],2000-2025,"""Bandim Health Project""[Title/Abstract]",0,
+acscps3,American Cancer Society Cancer Prevention Study-3,United States,HIC,American Cancer Society Cancer Prevention Study-3,[All Fields],2000-2025,"(""Cancer Prevention Study-3""[Title/Abstract] OR ""CPS-3""[Title/Abstract])",0,
+aou,All of Us Research Program,United States,HIC,All of Us Research Program; All of Us cohort; All of Us biobank; AoU Research Program; Precision Medicine Initiative cohort,[All Fields],2000-2025,"""All of Us Research Program""[All Fields] OR ""All of Us cohort""[All Fields] OR ""All of Us biobank""[All Fields] OR ""AoU Research Program""[All Fields] OR ""Precision Medicine Initiative cohort""[All Fields]",0,Multiple aliases used; full name + acronym
+ahri,Africa Health Research Institute Population Cohort,South Africa,UMIC,Africa Health Research Institute Population Cohort,[All Fields],2000-2025,"(""Africa Health Research Institute""[Title/Abstract] OR ""AHRI Population Cohort""[Title/Abstract])",0,
+awigen,AWI-Gen,South Africa,UMIC,AWI-Gen; Africa Wits-INDEPTH; AWI-Gen cohort,[All Fields],2000-2025,"""AWI-Gen""[All Fields] OR ""Africa Wits-INDEPTH""[All Fields] OR ""AWI-Gen cohort""[All Fields]",0,Multiple aliases used; full name + acronym
+dnb,Danish National Biobank,Denmark,HIC,Danish National Biobank,[All Fields],2000-2025,"""Danish National Biobank""[Title/Abstract]",0,
+dpuk,Dementias Platform UK,United Kingdom,HIC,Dementias Platform UK,[All Fields],2000-2025,"""Dementias Platform UK""[Title/Abstract]",0,
+jphc,JPHC Study,Japan,HIC,JPHC Study,[All Fields],2000-2025,"(""JPHC Study""[Title/Abstract] OR ""Japan Public Health Center-based Prospective Study""[Title/Abstract] OR ""JPHC-NEXT""[Title/Abstract])",0,
+genes_health,Genes & Health,United Kingdom,HIC,Genes & Health,[All Fields],2000-2025,"(""Genes and Health""[Title/Abstract] OR ""Genes & Health""[Title/Abstract])",0,
+israel_genome,Israel Genome Project,Israel,HIC,Israel Genome Project,[All Fields],2000-2025,"(""Israel Genome Project""[Title/Abstract] OR ""Israeli biobank""[Title/Abstract])",0,
+langebio,International Laboratory for Human Genome Research,Mexico,UMIC,International Laboratory for Human Genome Research,[All Fields],2000-2025,"(""LANGEBIO""[Title/Abstract] OR ""International Laboratory for Human Genome Research""[Title/Abstract])",0,
+iganga_mayuge,Iganga Mayuge HDSS,Uganda,LIC,Iganga Mayuge HDSS,[All Fields],2000-2025,"(""Iganga Mayuge""[Title/Abstract] OR ""MUCHAP""[Title/Abstract])",0,
+hunt,HUNT Study,Norway,HIC,HUNT Study; HUNT cohort; Nord-Trondelag Health Study; HUNT4,[All Fields],2000-2025,"""HUNT Study""[All Fields] OR ""HUNT cohort""[All Fields] OR ""Nord-Trondelag Health Study""[All Fields] OR ""HUNT4""[All Fields]",0,Multiple aliases used; full name + acronym
+golestan,Golestan Cohort Study,Iran,LMIC,Golestan Cohort Study,[All Fields],2000-2025,"""Golestan Cohort Study""[Title/Abstract]",0,
+nako,German National Cohort (NAKO),Germany,HIC,German National Cohort; NAKO Gesundheitsstudie; NAKO cohort,[All Fields],2000-2025,"""German National Cohort""[All Fields] OR ""NAKO Gesundheitsstudie""[All Fields] OR ""NAKO cohort""[All Fields]",0,Multiple aliases used; full name + acronym
+gel,"Genomics England / 100,000 Genomes Project",United Kingdom,HIC,"Genomics England; 100000 Genomes Project; 100,000 Genomes",[All Fields],2000-2025,"""Genomics England""[All Fields] OR ""100000 Genomes Project""[All Fields] OR ""100,000 Genomes""[All Fields]",0,Multiple aliases used; full name + acronym
+generations,Generations Study,United Kingdom,HIC,Generations Study,[All Fields],2000-2025,"""Generations Study""[Title/Abstract]",0,
+elsa_brasil,ELSA-Brasil,Brazil,UMIC,ELSA-Brasil,[All Fields],2000-2025,"""ELSA-Brasil""[Title/Abstract]",0,
+genv,Generation Victoria,Australia,HIC,Generation Victoria,[All Fields],2000-2025,"(""Generation Victoria""[Title/Abstract] OR ""GenV""[Title/Abstract])",0,
+geisinger,Geisinger MyCode Community Health Initiative,United States,HIC,Geisinger MyCode Community Health Initiative,[All Fields],2000-2025,"(""Geisinger MyCode""[Title/Abstract] OR ""MyCode Community Health Initiative""[Title/Abstract])",0,
+fmc,Finnish Maternity Cohort Serum Bank,Finland,HIC,Finnish Maternity Cohort Serum Bank,[All Fields],2000-2025,"""Finnish Maternity Cohort""[Title/Abstract]",0,
+epic,European Prospective Investigation into Cancer and Nutrition,International,HIC,EPIC cohort; European Prospective Investigation into Cancer,[All Fields],2000-2025,"""EPIC cohort""[All Fields] OR ""European Prospective Investigation into Cancer""[All Fields]",0,Multiple aliases used; full name + acronym
+estbb,Estonian Biobank,Estonia,HIC,Estonian Biobank; Estonia Biobank; Estonian Genome Center; Estonian Health Cohort; Tartu Biobank; Estonian Genome Project,[All Fields],2000-2025,"""Estonian Biobank""[All Fields] OR ""Estonia Biobank""[All Fields] OR ""Estonian Genome Center""[All Fields] OR ""Estonian Health Cohort""[All Fields] OR ""Tartu Biobank""[All Fields] OR ""Estonian Genome Project""[All Fields]",0,Multiple aliases used; full name + acronym
+epihealth,EpiHealth,Sweden,HIC,EpiHealth,[All Fields],2000-2025,"""EpiHealth""[Title/Abstract]",0,
+echo,ECHO Cohort,United States,HIC,ECHO Cohort,[All Fields],2000-2025,"(""Environmental influences on Child Health Outcomes""[Title/Abstract] OR ""ECHO cohort""[Title/Abstract])",0,
+kemri,KEMRI-Wellcome,Kenya,LMIC,KEMRI-Wellcome,[All Fields],2000-2025,"""KEMRI-Wellcome""[Title/Abstract]",0,

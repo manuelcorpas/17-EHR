@@ -1,0 +1,185 @@
+{
+  "version": "HEIM-Biobank v1.0",
+  "versionDate": "2025-12-24",
+  "generated": "2025-12-25T13:18:18.855903",
+  "overview": {
+    "totalBiobanks": 27,
+    "totalPublications": 75356,
+    "totalDiseases": 179,
+    "totalCountries": 19,
+    "equityRatio": 322.22
+  },
+  "gapDistribution": {
+    "Moderate": 48,
+    "Low": 108,
+    "High": 17,
+    "Critical": 6
+  },
+  "easDistribution": {
+    "Strong": 2,
+    "Poor": 19,
+    "Moderate": 2,
+    "Weak": 4
+  },
+  "regionStats": [
+    {
+      "region": "AFR",
+      "name": "Africa",
+      "biobanks": 3,
+      "publications": 204
+    },
+    {
+      "region": "AMR",
+      "name": "Americas",
+      "biobanks": 9,
+      "publications": 49264
+    },
+    {
+      "region": "EMR",
+      "name": "Eastern Mediterranean",
+      "biobanks": 1,
+      "publications": 174
+    },
+    {
+      "region": "EUR",
+      "name": "Europe",
+      "biobanks": 11,
+      "publications": 24445
+    },
+    {
+      "region": "WPR",
+      "name": "Western Pacific",
+      "biobanks": 3,
+      "publications": 1269
+    }
+  ],
+  "criticalGaps": [
+    {
+      "id": "Drowning",
+      "name": "Drowning",
+      "gapScore": 95.0,
+      "dalys": 15.7,
+      "publications": 0
+    },
+    {
+      "id": "Iodine deficiency",
+      "name": "Iodine deficiency",
+      "gapScore": 92.0,
+      "dalys": 2.25,
+      "publications": 10
+    },
+    {
+      "id": "Viral skin diseases",
+      "name": "Viral skin diseases",
+      "gapScore": 85.0,
+      "dalys": 4.2,
+      "publications": 1
+    },
+    {
+      "id": "Cysticercosis",
+      "name": "Cysticercosis",
+      "gapScore": 80.0,
+      "dalys": 1.24,
+      "publications": 2
+    },
+    {
+      "id": "Paralytic ileus and intestinal obstruction",
+      "name": "Paralytic ileus and intestinal obstruction",
+      "gapScore": 80.0,
+      "dalys": 6.66,
+      "publications": 5
+    },
+    {
+      "id": "Scabies",
+      "name": "Scabies",
+      "gapScore": 80.0,
+      "dalys": 5.32,
+      "publications": 6
+    }
+  ],
+  "topBiobanks": [
+    {
+      "id": "emerge",
+      "name": "eMERGE Network",
+      "eas": 98.3,
+      "category": "Strong",
+      "publications": 47755
+    },
+    {
+      "id": "uk_biobank",
+      "name": "UK Biobank",
+      "eas": 84.9,
+      "category": "Strong",
+      "publications": 13341
+    },
+    {
+      "id": "decode",
+      "name": "deCODE Genetics",
+      "eas": 69.4,
+      "category": "Moderate",
+      "publications": 5604
+    },
+    {
+      "id": "finngen",
+      "name": "FinnGen",
+      "eas": 60.3,
+      "category": "Moderate",
+      "publications": 2683
+    },
+    {
+      "id": "hunt",
+      "name": "HUNT Study",
+      "eas": 48.2,
+      "category": "Weak",
+      "publications": 1152
+    },
+    {
+      "id": "lifelines",
+      "name": "LifeLines",
+      "eas": 46.4,
+      "category": "Weak",
+      "publications": 730
+    },
+    {
+      "id": "all_of_us",
+      "name": "All of Us Research Program",
+      "eas": 42.0,
+      "category": "Weak",
+      "publications": 613
+    },
+    {
+      "id": "biobank_japan",
+      "name": "BioBank Japan",
+      "eas": 40.2,
+      "category": "Weak",
+      "publications": 271
+    },
+    {
+      "id": "mvp",
+      "name": "Million Veteran Program",
+      "eas": 38.9,
+      "category": "Poor",
+      "publications": 327
+    },
+    {
+      "id": "china_kadoorie",
+      "name": "China Kadoorie Biobank",
+      "eas": 38.7,
+      "category": "Poor",
+      "publications": 516
+    }
+  ],
+  "averages": {
+    "eas": 34.0,
+    "ros": 7726.73,
+    "gapScore": 30.0
+  },
+  "methodology": {
+    "burden_score": "0.5 \u00d7 DALYs + 50 \u00d7 Deaths + 10 \u00d7 log\u2081\u2080(Prevalence) [or 10 \u00d7 log\u2081\u2080(DALYs) if Deaths/Prevalence unavailable]",
+    "gap_score": "Three-tier: zero-pub penalty (95), category thresholds (Infectious/Neglected), burden-normalized intensity",
+    "ros": "\u03a3 Burden_Score for diseases with \u22642 publications",
+    "eas": "100 - (0.4 \u00d7 Gap_Severity + 0.3 \u00d7 Burden_Miss + 0.3 \u00d7 Capacity_Penalty)",
+    "equity_ratio": "(Pubs_HIC / DALYs_HIC) / (Pubs_LMIC / DALYs_LMIC)",
+    "source": "Corpas et al. 2025, Annual Review of Biomedical Data Science"
+  }
+}
