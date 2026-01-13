@@ -1,0 +1,90 @@
+gbd_cause,gbd_level2,global_south_priority,trial_count,dalys_millions
+Other malignant neoplasms,Neoplasms,False,113268,6.454745913878909
+Breast cancer,Neoplasms,False,101576,20.63571817792674
+"Tracheal, bronchus, and lung cancer",Neoplasms,False,101350,46.53627212165932
+Prostate cancer,Neoplasms,False,100772,8.141561072273841
+Colon and rectum cancer,Neoplasms,False,100743,24.40110017996526
+Liver cancer,Neoplasms,False,100571,12.887652414924736
+Brain and central nervous system cancer,Neoplasms,False,100437,8.912595213850375
+Stomach cancer,Neoplasms,False,100415,22.786633095688547
+Pancreatic cancer,Neoplasms,False,100378,11.316963350583197
+Bladder cancer,Neoplasms,False,100358,4.3970666327433765
+Ovarian cancer,Neoplasms,False,100314,5.163256304643558
+Cervical cancer,Neoplasms,True,100308,9.911653091017735
+Kidney cancer,Neoplasms,False,100264,4.016362117183705
+Other cardiovascular and circulatory diseases,Cardiovascular diseases,False,64945,9.985522400504964
+Diarrheal diseases,Enteric infections,True,49696,58.9838167929697
+Sexually transmitted infections excluding HIV,HIV/AIDS and STIs,True,46703,7.953311087690656
+HIV/AIDS,HIV/AIDS and STIs,True,46676,40.266791745204394
+Other mental disorders,Mental disorders,False,46434,8.962343979627114
+Lower respiratory infections,Respiratory infections,True,45810,82.53484053909253
+Intestinal nematode infections,NTDs and Malaria,True,44321,1.3816409735708872
+Interstitial lung disease and pulmonary sarcoidosis,Chronic respiratory diseases,False,43021,4.042150488924843
+Maternal disorders,Maternal disorders,True,39534,12.314021231347068
+Self-harm,Self-harm and violence,False,38351,33.525091294818154
+Other musculoskeletal disorders,Musculoskeletal disorders,False,29524,45.17782536783429
+Low back pain,Musculoskeletal disorders,False,24572,70.15696218649575
+Diabetes mellitus,Diabetes and kidney diseases,False,23548,78.93858705039968
+Road injuries,Transport injuries,True,19743,65.14364666178717
+Stroke,Cardiovascular diseases,False,18444,160.45722063007682
+Chronic kidney disease,Diabetes and kidney diseases,False,16614,44.45368361051758
+Cirrhosis and other chronic liver diseases,Digestive diseases,False,15290,46.4177771594818
+Ischemic heart disease,Cardiovascular diseases,False,13654,188.36055732268008
+Hypertensive heart disease,Cardiovascular diseases,False,12175,25.462184707367495
+Depressive disorders,Mental disorders,False,11303,56.33036114911696
+Neonatal disorders,Neonatal disorders,True,11118,186.36601177438888
+Alzheimer's disease and other dementias,Neurological disorders,False,10805,36.33268673680246
+Osteoarthritis,Musculoskeletal disorders,False,10776,21.304565816655384
+Rheumatoid arthritis,Musculoskeletal disorders,False,10357,3.0753031663426205
+Leukemia,Neoplasms,False,9423,10.98283618560453
+COVID-19,Respiratory infections,True,9239,212.00959596699755
+Anxiety disorders,Mental disorders,False,8440,42.509645279415395
+Congenital birth defects,Other non-communicable diseases,False,8320,52.32533269132468
+Non-Hodgkin lymphoma,Neoplasms,False,8319,1.196188224062072
+Drug use disorders,Substance use disorders,False,7720,15.562161528307351
+Chronic obstructive pulmonary disease,Chronic respiratory diseases,False,7672,79.77969505315077
+Blindness and vision loss,Sense organ diseases,False,6888,29.16399273777044
+Parkinson's disease,Neurological disorders,False,6800,7.471821424322477
+Heart failure,Cardiovascular diseases,False,6562,0.0
+Inflammatory bowel disease,Digestive diseases,False,6194,1.510783814759216
+Acute hepatitis,Other infectious,True,5229,4.228048129057121
+Asthma,Chronic respiratory diseases,False,4913,21.422859890543567
+Dietary iron deficiency,Nutritional deficiencies,True,4550,32.31575089759094
+Hemoglobinopathies and hemolytic anemias,Other non-communicable diseases,True,4499,11.920415820543596
+Atrial fibrillation and flutter,Cardiovascular diseases,False,4445,8.358893711971431
+Falls,Unintentional injuries,False,4434,43.80412262423419
+Schizophrenia,Mental disorders,False,4344,14.816611183696532
+Multiple myeloma,Neoplasms,False,3756,2.595594988860918
+Melanoma,Neoplasms,False,3560,1.6788363114432057
+Motor neuron disease,Neurological disorders,False,3510,1.0405659783974623
+Multiple sclerosis,Neurological disorders,False,3434,0.9732982653784076
+Protein-energy malnutrition,Nutritional deficiencies,True,2702,11.826130803078312
+Idiopathic epilepsy,Neurological disorders,False,2684,13.877827484414238
+Rheumatic heart disease,Cardiovascular diseases,True,2665,13.426369182196959
+Upper respiratory infections,Respiratory infections,False,2557,5.678886772827445
+Headache disorders,Neurological disorders,False,2490,47.97567506486085
+Psoriasis,Skin and subcutaneous diseases,False,2434,3.6899282561916857
+Upper digestive system diseases,Digestive diseases,False,2402,15.206382808753757
+Chagas disease,NTDs and Malaria,True,2251,0.23858928521429856
+Other neglected tropical diseases,NTDs and Malaria,True,2209,4.218302247168106
+Dermatitis,Skin and subcutaneous diseases,False,2202,8.177101563788819
+Autism spectrum disorders,Mental disorders,False,2079,11.544038080669445
+Bipolar disorder,Mental disorders,False,2041,8.007783132923045
+Alcohol use disorders,Substance use disorders,False,2007,16.980984234290705
+Attention-deficit/hyperactivity disorder,Mental disorders,False,1748,1.0309413513749615
+Interpersonal violence,Self-harm and violence,True,1741,26.829606601489587
+Cardiomyopathy and myocarditis,Cardiovascular diseases,False,1574,11.653957527670862
+Tuberculosis,Respiratory infections,True,1507,46.97746256174383
+Eating disorders,Mental disorders,False,1423,3.403145791933371
+Malaria,NTDs and Malaria,True,1402,55.17406070201989
+Pancreatitis,Digestive diseases,False,794,4.101153965670044
+Meningitis,Other infectious,True,610,14.511046482412157
+Typhoid and paratyphoid,Enteric infections,True,483,8.099574463723718
+Yellow fever,NTDs and Malaria,True,459,0.3177919486190491
+Leishmaniasis,NTDs and Malaria,True,358,0.781187607463255
+Dengue,NTDs and Malaria,True,273,2.076524690640326
+Rabies,NTDs and Malaria,True,107,0.569550281705966
+Schistosomiasis,NTDs and Malaria,True,94,1.7463333056925576
+Trachoma,NTDs and Malaria,True,91,0.12319023740696211
+Lymphatic filariasis,NTDs and Malaria,True,90,1.3145633995424943
+Onchocerciasis,NTDs and Malaria,True,34,1.2629881254184736

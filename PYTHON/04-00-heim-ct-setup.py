@@ -67,7 +67,7 @@ VERSION_DATE = "2026-01-13"
 # Paths
 BASE_DIR = Path(__file__).parent.parent if Path(__file__).parent.name == "PYTHON" else Path(__file__).parent
 DATA_DIR = BASE_DIR / "DATA"
-ANALYSIS_DIR = BASE_DIR / "ANALYSIS" / "HEIM-CT"
+ANALYSIS_DIR = BASE_DIR / "ANALYSIS" / "04-04-HEIM-CT-FIGURES"
 
 # AACT connection settings
 AACT_HOST = "aact-db.ctti-clinicaltrials.org"
@@ -495,7 +495,7 @@ def main():
             print(f"   {demo_output}")
         
         # Write diagnostic report
-        report_output = ANALYSIS_DIR / "setup_diagnostic_report.txt"
+        report_output = ANALYSIS_DIR / "04-04-01_setup_diagnostic.txt"
         write_diagnostic_report(
             profile, baseline_analysis, conditions_analysis, mesh_analysis,
             report_output

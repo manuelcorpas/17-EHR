@@ -1,0 +1,107 @@
+{
+  "version": "HEIM-CT v1.0",
+  "generated": "2026-01-13T08:09:36.291653",
+  "year_range": [
+    2000,
+    2025
+  ],
+  "tables": {
+    "heim_ct_studies.csv": {
+      "rows": 563725,
+      "columns": [
+        "nct_id",
+        "brief_title",
+        "official_title",
+        "overall_status",
+        "phase",
+        "study_type",
+        "enrollment",
+        "enrollment_type",
+        "start_date",
+        "completion_date",
+        "primary_completion_date",
+        "results_first_posted_date",
+        "last_update_posted_date",
+        "study_first_posted_date",
+        "start_year",
+        "posted_year",
+        "source",
+        "number_of_arms",
+        "number_of_groups",
+        "has_dmc",
+        "is_fda_regulated_drug",
+        "is_fda_regulated_device",
+        "is_us_export"
+      ]
+    },
+    "heim_ct_baseline.csv": {
+      "rows": 2758783,
+      "columns": [
+        "nct_id",
+        "result_group_id",
+        "ctgov_group_code",
+        "title",
+        "description",
+        "units",
+        "param_type",
+        "param_value",
+        "param_value_num",
+        "dispersion_type",
+        "dispersion_value",
+        "dispersion_value_num",
+        "explanation_of_na",
+        "category",
+        "classification"
+      ]
+    },
+    "heim_ct_conditions.csv": {
+      "rows": 999374,
+      "columns": [
+        "nct_id",
+        "name",
+        "downcase_name"
+      ]
+    },
+    "heim_ct_mesh_conditions.csv": {
+      "rows": 4109734,
+      "columns": [
+        "nct_id",
+        "mesh_term",
+        "downcase_mesh_term",
+        "mesh_type"
+      ]
+    },
+    "heim_ct_countries.csv": {
+      "rows": 770178,
+      "columns": [
+        "nct_id",
+        "name",
+        "removed"
+      ]
+    },
+    "heim_ct_sponsors.csv": {
+      "rows": 901662,
+      "columns": [
+        "nct_id",
+        "agency_class",
+        "lead_or_collaborator",
+        "name"
+      ]
+    },
+    "heim_ct_eligibilities.csv": {
+      "rows": 562763,
+      "columns": [
+        "nct_id",
+        "sampling_method",
+        "gender",
+        "gender_based",
+        "gender_description",
+        "minimum_age",
+        "maximum_age",
+        "healthy_volunteers",
+        "population",
+        "criteria"
+      ]
+    }
+  }
+}

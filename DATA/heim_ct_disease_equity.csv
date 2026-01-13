@@ -1,0 +1,90 @@
+disease,gbd_level2,global_south_priority,dalys_millions,trial_count,ct_gap_score,ct_gap_severity,biobank_publications,biobank_gap_score,combined_gap_score,trials_per_million_dalys
+HIV/AIDS,HIV/AIDS and STIs,True,40.27,0,95.0,Critical,163,60.0,77.5,0.0
+Hypertensive heart disease,Cardiovascular diseases,False,25.46,0,95.0,Critical,1598,20.0,57.5,0.0
+Anxiety disorders,Mental disorders,False,42.51,0,95.0,Critical,493,40.0,67.5,0.0
+Depressive disorders,Mental disorders,False,56.33,0,95.0,Critical,1344,40.0,67.5,0.0
+Headache disorders,Neurological disorders,False,47.98,0,95.0,Critical,193,60.0,77.5,0.0
+Motor neuron disease,Neurological disorders,False,1.04,0,95.0,Critical,132,10.0,52.5,0.0
+Multiple sclerosis,Neurological disorders,False,0.97,0,95.0,Critical,199,10.0,52.5,0.0
+Idiopathic epilepsy,Neurological disorders,False,13.88,0,95.0,Critical,105,10.0,52.5,0.0
+Parkinson's disease,Neurological disorders,False,7.47,0,95.0,Critical,295,10.0,52.5,0.0
+Alzheimer's disease and other dementias,Neurological disorders,False,36.33,0,95.0,Critical,1202,10.0,52.5,0.0
+Pancreatitis,Digestive diseases,False,4.1,0,95.0,Critical,43,40.0,67.5,0.0
+Upper digestive system diseases,Digestive diseases,False,15.21,0,95.0,Critical,155,40.0,67.5,0.0
+Inflammatory bowel disease,Digestive diseases,False,1.51,0,95.0,Critical,320,10.0,52.5,0.0
+Cirrhosis and other chronic liver diseases,Digestive diseases,False,46.42,0,95.0,Critical,607,40.0,67.5,0.0
+Interstitial lung disease and pulmonary sarcoidosis,Chronic respiratory diseases,False,4.04,0,95.0,Critical,329,20.0,57.5,0.0
+Asthma,Chronic respiratory diseases,False,21.42,0,95.0,Critical,381,40.0,67.5,0.0
+Chronic obstructive pulmonary disease,Chronic respiratory diseases,False,79.78,0,95.0,Critical,339,60.0,77.5,0.0
+Other cardiovascular and circulatory diseases,Cardiovascular diseases,False,9.99,0,95.0,Critical,3288,10.0,52.5,0.0
+Rheumatic heart disease,Cardiovascular diseases,True,13.43,0,95.0,Critical,153,40.0,67.5,0.0
+Cardiomyopathy and myocarditis,Cardiovascular diseases,False,11.65,0,95.0,Critical,82,50.0,72.5,0.0
+Heart failure,Cardiovascular diseases,False,0.0,0,95.0,Critical,0,,95.0,0.0
+Bipolar disorder,Mental disorders,False,8.01,0,95.0,Critical,129,40.0,67.5,0.0
+Schizophrenia,Mental disorders,False,14.82,0,95.0,Critical,224,40.0,67.5,0.0
+Eating disorders,Mental disorders,False,3.4,0,95.0,Critical,283,20.0,57.5,0.0
+Other musculoskeletal disorders,Musculoskeletal disorders,False,45.18,0,95.0,Critical,817,40.0,67.5,0.0
+Self-harm,Self-harm and violence,False,33.53,0,95.0,Critical,127,60.0,77.5,0.0
+Falls,Unintentional injuries,False,43.8,0,95.0,Critical,382,50.0,72.5,0.0
+Road injuries,Transport injuries,True,65.14,0,95.0,Critical,58,80.0,87.5,0.0
+Blindness and vision loss,Sense organ diseases,False,29.16,0,95.0,Critical,611,40.0,67.5,0.0
+Hemoglobinopathies and hemolytic anemias,Other non-communicable diseases,True,11.92,0,95.0,Critical,38,70.0,82.5,0.0
+Congenital birth defects,Other non-communicable diseases,False,52.33,0,95.0,Critical,284,50.0,72.5,0.0
+Psoriasis,Skin and subcutaneous diseases,False,3.69,0,95.0,Critical,166,30.0,62.5,0.0
+Dermatitis,Skin and subcutaneous diseases,False,8.18,0,95.0,Critical,104,40.0,67.5,0.0
+Rheumatoid arthritis,Musculoskeletal disorders,False,3.08,0,95.0,Critical,485,10.0,52.5,0.0
+Autism spectrum disorders,Mental disorders,False,11.54,0,95.0,Critical,143,40.0,67.5,0.0
+Osteoarthritis,Musculoskeletal disorders,False,21.3,0,95.0,Critical,231,40.0,67.5,0.0
+Low back pain,Musculoskeletal disorders,False,70.16,0,95.0,Critical,147,60.0,77.5,0.0
+Chronic kidney disease,Diabetes and kidney diseases,False,44.45,0,95.0,Critical,712,40.0,67.5,0.0
+Diabetes mellitus,Diabetes and kidney diseases,False,78.94,0,95.0,Critical,3482,30.0,62.5,0.0
+Drug use disorders,Substance use disorders,False,15.56,0,95.0,Critical,84,50.0,72.5,0.0
+Alcohol use disorders,Substance use disorders,False,16.98,0,95.0,Critical,1041,20.0,57.5,0.0
+Other mental disorders,Mental disorders,False,8.96,0,95.0,Critical,1431,10.0,52.5,0.0
+Attention-deficit/hyperactivity disorder,Mental disorders,False,1.03,0,95.0,Critical,161,10.0,52.5,0.0
+Atrial fibrillation and flutter,Cardiovascular diseases,False,8.36,0,95.0,Critical,351,30.0,62.5,0.0
+Stroke,Cardiovascular diseases,False,160.46,0,95.0,Critical,1932,40.0,67.5,0.0
+Sexually transmitted infections excluding HIV,HIV/AIDS and STIs,True,7.95,0,95.0,Critical,103,40.0,67.5,0.0
+Ischemic heart disease,Cardiovascular diseases,False,188.36,0,95.0,Critical,2196,40.0,67.5,0.0
+Meningitis,Other infectious,True,14.51,0,95.0,Critical,32,70.0,82.5,0.0
+Other neglected tropical diseases,NTDs and Malaria,True,4.22,0,95.0,Critical,58,40.0,67.5,0.0
+Intestinal nematode infections,NTDs and Malaria,True,1.38,0,95.0,Critical,17,50.0,72.5,0.0
+Yellow fever,NTDs and Malaria,True,0.32,0,95.0,Critical,21,30.0,62.5,0.0
+Rabies,NTDs and Malaria,True,0.57,0,95.0,Critical,3,60.0,77.5,0.0
+Trachoma,NTDs and Malaria,True,0.12,0,95.0,Critical,13,20.0,57.5,0.0
+Onchocerciasis,NTDs and Malaria,True,1.26,0,95.0,Critical,10,60.0,77.5,0.0
+Lymphatic filariasis,NTDs and Malaria,True,1.31,0,95.0,Critical,0,95.0,95.0,0.0
+Schistosomiasis,NTDs and Malaria,True,1.75,0,95.0,Critical,0,95.0,95.0,0.0
+Chagas disease,NTDs and Malaria,True,0.24,0,95.0,Critical,51,10.0,52.5,0.0
+Leishmaniasis,NTDs and Malaria,True,0.78,0,95.0,Critical,1,80.0,87.5,0.0
+Dengue,NTDs and Malaria,True,2.08,0,95.0,Critical,0,95.0,95.0,0.0
+Malaria,NTDs and Malaria,True,55.17,0,95.0,Critical,17,95.0,95.0,0.0
+Typhoid and paratyphoid,Enteric infections,True,8.1,0,95.0,Critical,21,90.0,92.5,0.0
+Diarrheal diseases,Enteric infections,True,58.98,0,95.0,Critical,46,80.0,87.5,0.0
+COVID-19,Respiratory infections,True,212.01,0,95.0,Critical,579,60.0,77.5,0.0
+Upper respiratory infections,Respiratory infections,False,5.68,0,95.0,Critical,64,60.0,77.5,0.0
+Lower respiratory infections,Respiratory infections,True,82.53,0,95.0,Critical,177,60.0,77.5,0.0
+Tuberculosis,Respiratory infections,True,46.98,0,95.0,Critical,42,80.0,87.5,0.0
+Acute hepatitis,Other infectious,True,4.23,0,95.0,Critical,75,40.0,67.5,0.0
+Maternal disorders,Maternal disorders,True,12.31,0,95.0,Critical,3495,10.0,52.5,0.0
+Neonatal disorders,Neonatal disorders,True,186.37,0,95.0,Critical,1680,50.0,72.5,0.0
+Ovarian cancer,Neoplasms,False,5.16,0,95.0,Critical,1869,10.0,52.5,0.0
+Other malignant neoplasms,Neoplasms,False,6.45,0,95.0,Critical,1559,10.0,52.5,0.0
+Melanoma,Neoplasms,False,1.68,0,95.0,Critical,0,,95.0,0.0
+Bladder cancer,Neoplasms,False,4.4,0,95.0,Critical,1420,10.0,52.5,0.0
+Kidney cancer,Neoplasms,False,4.02,0,95.0,Critical,1651,10.0,52.5,0.0
+Brain and central nervous system cancer,Neoplasms,False,8.91,0,95.0,Critical,2199,10.0,52.5,0.0
+Multiple myeloma,Neoplasms,False,2.6,0,95.0,Critical,1394,10.0,52.5,0.0
+Non-Hodgkin lymphoma,Neoplasms,False,1.2,0,95.0,Critical,125,40.0,67.5,0.0
+Leukemia,Neoplasms,False,10.98,0,95.0,Critical,79,50.0,72.5,0.0
+Cervical cancer,Neoplasms,True,9.91,0,95.0,Critical,1399,10.0,52.5,0.0
+Protein-energy malnutrition,Nutritional deficiencies,True,11.83,0,95.0,Critical,59,65.0,80.0,0.0
+Pancreatic cancer,Neoplasms,False,11.32,0,95.0,Critical,1571,10.0,52.5,0.0
+Stomach cancer,Neoplasms,False,22.79,0,95.0,Critical,1491,20.0,57.5,0.0
+Liver cancer,Neoplasms,False,12.89,0,95.0,Critical,1714,10.0,52.5,0.0
+Prostate cancer,Neoplasms,False,8.14,0,95.0,Critical,1960,10.0,52.5,0.0
+Colon and rectum cancer,Neoplasms,False,24.4,0,95.0,Critical,2535,10.0,52.5,0.0
+"Tracheal, bronchus, and lung cancer",Neoplasms,False,46.54,0,95.0,Critical,2186,30.0,62.5,0.0
+Breast cancer,Neoplasms,False,20.64,0,95.0,Critical,3345,10.0,52.5,0.0
+Dietary iron deficiency,Nutritional deficiencies,True,32.32,0,95.0,Critical,139,60.0,77.5,0.0
+Interpersonal violence,Self-harm and violence,True,26.83,0,95.0,Critical,1533,20.0,57.5,0.0
