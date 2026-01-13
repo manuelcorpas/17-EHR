@@ -1,0 +1,23 @@
+{
+  "metadata": {
+    "generated": "2026-01-11T15:22:43.819530",
+    "publications_analyzed": 36416,
+    "diseases_analyzed": 179,
+    "biobanks_analyzed": 78
+  },
+  "burden_score_sensitivity": {
+    "variations_tested": 13,
+    "min_spearman": 1.0,
+    "conclusion": "Rankings highly stable (all \u03c1 > 0.95)"
+  },
+  "gap_score_sensitivity": {
+    "variations_tested": 20,
+    "min_spearman": 0.9998,
+    "conclusion": "Gap classifications stable across thresholds"
+  },
+  "eas_weight_sensitivity": {
+    "variations_tested": 7,
+    "min_spearman": 0.991,
+    "conclusion": "EAS rankings stable across weight schemes"
+  }
+}

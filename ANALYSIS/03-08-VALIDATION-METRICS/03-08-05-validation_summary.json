@@ -1,0 +1,327 @@
+{
+  "metadata": {
+    "generated": "2026-01-11T15:23:41.678715",
+    "validation_sample_size": 200,
+    "random_seed": 42
+  },
+  "income_group_summary": {
+    "HIC": {
+      "n_biobanks": 61,
+      "total_publications": 36400,
+      "mean_publications": 596.7,
+      "mean_diseases_covered": 68.3,
+      "mean_eas": 38.17,
+      "std_eas": 23.06,
+      "min_eas": 3.35,
+      "max_eas": 91.06,
+      "top_biobank": "UK Biobank"
+    },
+    "UMIC": {
+      "n_biobanks": 10,
+      "total_publications": 1739,
+      "mean_publications": 173.9,
+      "mean_diseases_covered": 43.2,
+      "mean_eas": 24.13,
+      "std_eas": 22.89,
+      "min_eas": 0.0,
+      "max_eas": 64.8,
+      "top_biobank": "China Kadoorie Biobank"
+    },
+    "LMIC": {
+      "n_biobanks": 4,
+      "total_publications": 365,
+      "mean_publications": 91.2,
+      "mean_diseases_covered": 37.8,
+      "mean_eas": 21.09,
+      "std_eas": 15.96,
+      "min_eas": 5.59,
+      "max_eas": 37.99,
+      "top_biobank": "Golestan Cohort Study"
+    },
+    "LIC": {
+      "n_biobanks": 3,
+      "total_publications": 140,
+      "mean_publications": 46.7,
+      "mean_diseases_covered": 27.3,
+      "mean_eas": 15.27,
+      "std_eas": 7.08,
+      "min_eas": 7.26,
+      "max_eas": 20.67,
+      "top_biobank": "Bandim Health Project"
+    }
+  },
+  "mapping_validation": {
+    "total_sampled": 200,
+    "pubs_with_mapping": "200",
+    "pubs_without_mapping": "0",
+    "mapping_rate": 100.0,
+    "mean_causes_per_pub": 5.03,
+    "median_causes_per_pub": 5.0,
+    "max_causes_per_pub": "35",
+    "single_cause_pubs": "37",
+    "multi_cause_pubs": "163",
+    "cause_distribution": {
+      "6": 37,
+      "1": 37,
+      "5": 29,
+      "4": 27,
+      "3": 27,
+      "7": 15,
+      "8": 8,
+      "2": 6,
+      "10": 5,
+      "9": 5,
+      "35": 2,
+      "34": 1,
+      "33": 1
+    }
+  },
+  "coverage_analysis": {
+    "total_publications": 36416,
+    "causes_in_registry": 179,
+    "causes_with_publications": 172,
+    "coverage_rate": 96.1,
+    "zero_publication_causes": 7,
+    "top_20_causes": [
+      {
+        "cause": "Gynecological diseases",
+        "publications": 23966,
+        "pct_of_total": 65.81
+      },
+      {
+        "cause": "_BIOBANK_METHODS",
+        "publications": 22295,
+        "pct_of_total": 61.22
+      },
+      {
+        "cause": "_AGING",
+        "publications": 18662,
+        "pct_of_total": 51.25
+      },
+      {
+        "cause": "Urinary diseases and male infertility",
+        "publications": 16129,
+        "pct_of_total": 44.29
+      },
+      {
+        "cause": "_GENOMICS",
+        "publications": 8657,
+        "pct_of_total": 23.77
+      },
+      {
+        "cause": "Other neoplasms",
+        "publications": 6925,
+        "pct_of_total": 19.02
+      },
+      {
+        "cause": "Endocrine, metabolic, blood, and immune disorders",
+        "publications": 3898,
+        "pct_of_total": 10.7
+      },
+      {
+        "cause": "Diabetes mellitus",
+        "publications": 3255,
+        "pct_of_total": 8.94
+      },
+      {
+        "cause": "Maternal disorders",
+        "publications": 3235,
+        "pct_of_total": 8.88
+      },
+      {
+        "cause": "Other cardiovascular and circulatory diseases",
+        "publications": 3137,
+        "pct_of_total": 8.61
+      },
+      {
+        "cause": "Breast cancer",
+        "publications": 3085,
+        "pct_of_total": 8.47
+      },
+      {
+        "cause": "Colon and rectum cancer",
+        "publications": 2431,
+        "pct_of_total": 6.68
+      },
+      {
+        "cause": "_IMAGING",
+        "publications": 2162,
+        "pct_of_total": 5.94
+      },
+      {
+        "cause": "Brain and central nervous system cancer",
+        "publications": 2131,
+        "pct_of_total": 5.85
+      },
+      {
+        "cause": "Tracheal, bronchus, and lung cancer",
+        "publications": 2093,
+        "pct_of_total": 5.75
+      },
+      {
+        "cause": "Ischemic heart disease",
+        "publications": 2090,
+        "pct_of_total": 5.74
+      },
+      {
+        "cause": "Prostate cancer",
+        "publications": 1895,
+        "pct_of_total": 5.2
+      },
+      {
+        "cause": "Stroke",
+        "publications": 1869,
+        "pct_of_total": 5.13
+      },
+      {
+        "cause": "Ovarian cancer",
+        "publications": 1777,
+        "pct_of_total": 4.88
+      },
+      {
+        "cause": "Liver cancer",
+        "publications": 1649,
+        "pct_of_total": 4.53
+      }
+    ],
+    "zero_pub_examples": [
+      "Dengue",
+      "Schistosomiasis",
+      "Lymphatic filariasis",
+      "Cysticercosis",
+      "Guinea worm disease",
+      "Drowning",
+      "Animal contact"
+    ],
+    "level2_distribution": {
+      "Neoplasms": {
+        "publications": 52452,
+        "causes": 34
+      },
+      "Research methodology": {
+        "publications": 51776,
+        "causes": 4
+      },
+      "Other non-communicable diseases": {
+        "publications": 45096,
+        "causes": 7
+      },
+      "Cardiovascular diseases": {
+        "publications": 10782,
+        "causes": 12
+      },
+      "Mental disorders": {
+        "publications": 5465,
+        "causes": 10
+      },
+      "Diabetes and kidney diseases": {
+        "publications": 3960,
+        "causes": 3
+      },
+      "Maternal disorders": {
+        "publications": 3235,
+        "causes": 1
+      },
+      "Neurological disorders": {
+        "publications": 3000,
+        "causes": 7
+      },
+      "Chronic respiratory diseases": {
+        "publications": 1972,
+        "causes": 5
+      },
+      "Musculoskeletal disorders": {
+        "publications": 1931,
+        "causes": 6
+      },
+      "Neonatal disorders": {
+        "publications": 1599,
+        "causes": 1
+      },
+      "Self-harm and violence": {
+        "publications": 1574,
+        "causes": 5
+      },
+      "Unintentional injuries": {
+        "publications": 1561,
+        "causes": 10
+      },
+      "Digestive diseases": {
+        "publications": 1488,
+        "causes": 10
+      },
+      "Substance use disorders": {
+        "publications": 1052,
+        "causes": 2
+      },
+      "Nutritional deficiencies": {
+        "publications": 970,
+        "causes": 5
+      },
+      "NTDs and Malaria": {
+        "publications": 932,
+        "causes": 20
+      },
+      "Sense organ diseases": {
+        "publications": 873,
+        "causes": 3
+      },
+      "Respiratory infections": {
+        "publications": 856,
+        "causes": 5
+      },
+      "Other infectious": {
+        "publications": 765,
+        "causes": 9
+      },
+      "Skin and subcutaneous diseases": {
+        "publications": 496,
+        "causes": 12
+      },
+      "HIV/AIDS and STIs": {
+        "publications": 258,
+        "causes": 2
+      },
+      "Enteric infections": {
+        "publications": 205,
+        "causes": 4
+      },
+      "Transport injuries": {
+        "publications": 115,
+        "causes": 2
+      }
+    }
+  },
+  "search_summary": {
+    "total_cohorts_searched": 17,
+    "cohorts_with_publications": "15",
+    "cohorts_without_publications": "2",
+    "total_publications_retrieved": 19111,
+    "total_preprints_excluded": 621,
+    "mean_pubs_per_cohort": 1124.2,
+    "median_pubs_per_cohort": 87.0,
+    "mean_retention_rate": 85.9,
+    "top_5_cohorts": [
+      {
+        "cohort_name": "UK Biobank",
+        "records_retained": 13902
+      },
+      {
+        "cohort_name": "Women's Health Initiative",
+        "records_retained": 3436
+      },
+      {
+        "cohort_name": "Taiwan Biobank",
+        "records_retained": 560
+      },
+      {
+        "cohort_name": "SIMPLER",
+        "records_retained": 280
+      },
+      {
+        "cohort_name": "Tohoku Medical Megabank",
+        "records_retained": 245
+      }
+    ]
+  }
+}
