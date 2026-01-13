@@ -1,0 +1,1331 @@
+{
+  "version": "HEIM-CT v2.0",
+  "generated": "2026-01-13",
+  "summary": {
+    "totalTrials": 2189930,
+    "totalDALYs": 2410.0,
+    "diseaseCategories": 89,
+    "dateRange": "2000-2025",
+    "trialSiteRecords": 770178
+  },
+  "globalSouthAnalysis": {
+    "gsDiseaseCount": 30,
+    "gsTrials": 444502,
+    "gsTrialsPct": 20.3,
+    "gsDALYs": 914.8,
+    "gsDALYsPct": 38.0,
+    "gsIntensity": 485.9,
+    "nonGsIntensity": 1167.4,
+    "intensityGap": 2.4
+  },
+  "geographic": {
+    "hicSites": 552952,
+    "lmicSites": 217226,
+    "hicPct": 71.8,
+    "lmicPct": 28.2,
+    "hicLmicRatio": 2.5,
+    "topCountries": [
+      {
+        "name": "United States",
+        "sites": 192501,
+        "income": "HIC"
+      },
+      {
+        "name": "China",
+        "sites": 48028,
+        "income": "LMIC"
+      },
+      {
+        "name": "France",
+        "sites": 41913,
+        "income": "HIC"
+      },
+      {
+        "name": "Canada",
+        "sites": 32892,
+        "income": "HIC"
+      },
+      {
+        "name": "Germany",
+        "sites": 29157,
+        "income": "HIC"
+      },
+      {
+        "name": "United Kingdom",
+        "sites": 29012,
+        "income": "HIC"
+      },
+      {
+        "name": "Italy",
+        "sites": 25614,
+        "income": "HIC"
+      },
+      {
+        "name": "Spain",
+        "sites": 25007,
+        "income": "HIC"
+      },
+      {
+        "name": "Turkey (T\u00fcrkiye)",
+        "sites": 22053,
+        "income": "LMIC"
+      },
+      {
+        "name": "South Korea",
+        "sites": 17413,
+        "income": "HIC"
+      },
+      {
+        "name": "Belgium",
+        "sites": 15528,
+        "income": "HIC"
+      },
+      {
+        "name": "Netherlands",
+        "sites": 15516,
+        "income": "HIC"
+      },
+      {
+        "name": "Egypt",
+        "sites": 15202,
+        "income": "LMIC"
+      },
+      {
+        "name": "Denmark",
+        "sites": 12774,
+        "income": "HIC"
+      },
+      {
+        "name": "Australia",
+        "sites": 12711,
+        "income": "HIC"
+      }
+    ]
+  },
+  "diseases": [
+    {
+      "name": "COVID-19",
+      "category": "Respiratory infections",
+      "globalSouthPriority": true,
+      "trials": 9239,
+      "dalys": 212.00959596699755,
+      "intensity": 43.5782161550753
+    },
+    {
+      "name": "Ischemic heart disease",
+      "category": "Cardiovascular diseases",
+      "globalSouthPriority": false,
+      "trials": 13654,
+      "dalys": 188.36055732268008,
+      "intensity": 72.48863665554653
+    },
+    {
+      "name": "Neonatal disorders",
+      "category": "Neonatal disorders",
+      "globalSouthPriority": true,
+      "trials": 11118,
+      "dalys": 186.36601177438888,
+      "intensity": 59.656800583677445
+    },
+    {
+      "name": "Stroke",
+      "category": "Cardiovascular diseases",
+      "globalSouthPriority": false,
+      "trials": 18444,
+      "dalys": 160.45722063007682,
+      "intensity": 114.94652548246106
+    },
+    {
+      "name": "Lower respiratory infections",
+      "category": "Respiratory infections",
+      "globalSouthPriority": true,
+      "trials": 45810,
+      "dalys": 82.53484053909253,
+      "intensity": 555.0383292774661
+    },
+    {
+      "name": "Chronic obstructive pulmonary disease",
+      "category": "Chronic respiratory diseases",
+      "globalSouthPriority": false,
+      "trials": 7672,
+      "dalys": 79.77969505315077,
+      "intensity": 96.16481981898734
+    },
+    {
+      "name": "Diabetes mellitus",
+      "category": "Diabetes and kidney diseases",
+      "globalSouthPriority": false,
+      "trials": 23548,
+      "dalys": 78.93858705039968,
+      "intensity": 298.30784765586674
+    },
+    {
+      "name": "Low back pain",
+      "category": "Musculoskeletal disorders",
+      "globalSouthPriority": false,
+      "trials": 24572,
+      "dalys": 70.15696218649575,
+      "intensity": 350.2432151306827
+    },
+    {
+      "name": "Road injuries",
+      "category": "Transport injuries",
+      "globalSouthPriority": true,
+      "trials": 19743,
+      "dalys": 65.14364666178717,
+      "intensity": 303.0686952866136
+    },
+    {
+      "name": "Diarrheal diseases",
+      "category": "Enteric infections",
+      "globalSouthPriority": true,
+      "trials": 49696,
+      "dalys": 58.9838167929697,
+      "intensity": 842.5361853816704
+    },
+    {
+      "name": "Depressive disorders",
+      "category": "Mental disorders",
+      "globalSouthPriority": false,
+      "trials": 11303,
+      "dalys": 56.33036114911696,
+      "intensity": 200.65555713514516
+    },
+    {
+      "name": "Malaria",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 1402,
+      "dalys": 55.17406070201989,
+      "intensity": 25.410491491134234
+    },
+    {
+      "name": "Congenital birth defects",
+      "category": "Other non-communicable diseases",
+      "globalSouthPriority": false,
+      "trials": 8320,
+      "dalys": 52.32533269132468,
+      "intensity": 159.0052001977891
+    },
+    {
+      "name": "Headache disorders",
+      "category": "Neurological disorders",
+      "globalSouthPriority": false,
+      "trials": 2490,
+      "dalys": 47.97567506486085,
+      "intensity": 51.90130199593101
+    },
+    {
+      "name": "Tuberculosis",
+      "category": "Respiratory infections",
+      "globalSouthPriority": true,
+      "trials": 1507,
+      "dalys": 46.97746256174383,
+      "intensity": 32.07921240997865
+    },
+    {
+      "name": "Tracheal, bronchus, and lung cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 101350,
+      "dalys": 46.53627212165932,
+      "intensity": 2177.871053681345
+    },
+    {
+      "name": "Cirrhosis and other chronic liver diseases",
+      "category": "Digestive diseases",
+      "globalSouthPriority": false,
+      "trials": 15290,
+      "dalys": 46.4177771594818,
+      "intensity": 329.3996596921638
+    },
+    {
+      "name": "Other musculoskeletal disorders",
+      "category": "Musculoskeletal disorders",
+      "globalSouthPriority": false,
+      "trials": 29524,
+      "dalys": 45.17782536783429,
+      "intensity": 653.5064439161895
+    },
+    {
+      "name": "Chronic kidney disease",
+      "category": "Diabetes and kidney diseases",
+      "globalSouthPriority": false,
+      "trials": 16614,
+      "dalys": 44.45368361051758,
+      "intensity": 373.7373070264348
+    },
+    {
+      "name": "Falls",
+      "category": "Unintentional injuries",
+      "globalSouthPriority": false,
+      "trials": 4434,
+      "dalys": 43.80412262423419,
+      "intensity": 101.2233491819086
+    },
+    {
+      "name": "Anxiety disorders",
+      "category": "Mental disorders",
+      "globalSouthPriority": false,
+      "trials": 8440,
+      "dalys": 42.509645279415395,
+      "intensity": 198.54317636677465
+    },
+    {
+      "name": "HIV/AIDS",
+      "category": "HIV/AIDS and STIs",
+      "globalSouthPriority": true,
+      "trials": 46676,
+      "dalys": 40.266791745204394,
+      "intensity": 1159.1685847571632
+    },
+    {
+      "name": "Alzheimer's disease and other dementias",
+      "category": "Neurological disorders",
+      "globalSouthPriority": false,
+      "trials": 10805,
+      "dalys": 36.33268673680246,
+      "intensity": 297.39061353410165
+    },
+    {
+      "name": "Self-harm",
+      "category": "Self-harm and violence",
+      "globalSouthPriority": false,
+      "trials": 38351,
+      "dalys": 33.525091294818154,
+      "intensity": 1143.9491592354818
+    },
+    {
+      "name": "Dietary iron deficiency",
+      "category": "Nutritional deficiencies",
+      "globalSouthPriority": true,
+      "trials": 4550,
+      "dalys": 32.31575089759094,
+      "intensity": 140.79821367663754
+    },
+    {
+      "name": "Blindness and vision loss",
+      "category": "Sense organ diseases",
+      "globalSouthPriority": false,
+      "trials": 6888,
+      "dalys": 29.16399273777044,
+      "intensity": 236.18165255813258
+    },
+    {
+      "name": "Interpersonal violence",
+      "category": "Self-harm and violence",
+      "globalSouthPriority": true,
+      "trials": 1741,
+      "dalys": 26.829606601489587,
+      "intensity": 64.89099992630302
+    },
+    {
+      "name": "Hypertensive heart disease",
+      "category": "Cardiovascular diseases",
+      "globalSouthPriority": false,
+      "trials": 12175,
+      "dalys": 25.462184707367495,
+      "intensity": 478.1600691348829
+    },
+    {
+      "name": "Colon and rectum cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 100743,
+      "dalys": 24.40110017996526,
+      "intensity": 4128.625318407403
+    },
+    {
+      "name": "Stomach cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 100415,
+      "dalys": 22.786633095688547,
+      "intensity": 4406.750202117376
+    },
+    {
+      "name": "Asthma",
+      "category": "Chronic respiratory diseases",
+      "globalSouthPriority": false,
+      "trials": 4913,
+      "dalys": 21.422859890543567,
+      "intensity": 229.33445978278027
+    },
+    {
+      "name": "Osteoarthritis",
+      "category": "Musculoskeletal disorders",
+      "globalSouthPriority": false,
+      "trials": 10776,
+      "dalys": 21.304565816655384,
+      "intensity": 505.80706937362646
+    },
+    {
+      "name": "Breast cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 101576,
+      "dalys": 20.63571817792674,
+      "intensity": 4922.338981574776
+    },
+    {
+      "name": "Alcohol use disorders",
+      "category": "Substance use disorders",
+      "globalSouthPriority": false,
+      "trials": 2007,
+      "dalys": 16.980984234290705,
+      "intensity": 118.1910289950771
+    },
+    {
+      "name": "Drug use disorders",
+      "category": "Substance use disorders",
+      "globalSouthPriority": false,
+      "trials": 7720,
+      "dalys": 15.562161528307351,
+      "intensity": 496.075046256102
+    },
+    {
+      "name": "Upper digestive system diseases",
+      "category": "Digestive diseases",
+      "globalSouthPriority": false,
+      "trials": 2402,
+      "dalys": 15.206382808753755,
+      "intensity": 157.95998497533924
+    },
+    {
+      "name": "Schizophrenia",
+      "category": "Mental disorders",
+      "globalSouthPriority": false,
+      "trials": 4344,
+      "dalys": 14.816611183696532,
+      "intensity": 293.1844499489818
+    },
+    {
+      "name": "Meningitis",
+      "category": "Other infectious",
+      "globalSouthPriority": true,
+      "trials": 610,
+      "dalys": 14.511046482412157,
+      "intensity": 42.03694066719028
+    },
+    {
+      "name": "Idiopathic epilepsy",
+      "category": "Neurological disorders",
+      "globalSouthPriority": false,
+      "trials": 2684,
+      "dalys": 13.877827484414238,
+      "intensity": 193.40202946133448
+    },
+    {
+      "name": "Rheumatic heart disease",
+      "category": "Cardiovascular diseases",
+      "globalSouthPriority": true,
+      "trials": 2665,
+      "dalys": 13.42636918219696,
+      "intensity": 198.48999858679034
+    },
+    {
+      "name": "Liver cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 100571,
+      "dalys": 12.887652414924736,
+      "intensity": 7803.6710459022215
+    },
+    {
+      "name": "Maternal disorders",
+      "category": "Maternal disorders",
+      "globalSouthPriority": true,
+      "trials": 39534,
+      "dalys": 12.314021231347068,
+      "intensity": 3210.4865873838726
+    },
+    {
+      "name": "Hemoglobinopathies and hemolytic anemias",
+      "category": "Other non-communicable diseases",
+      "globalSouthPriority": true,
+      "trials": 4499,
+      "dalys": 11.920415820543596,
+      "intensity": 377.41971989319717
+    },
+    {
+      "name": "Protein-energy malnutrition",
+      "category": "Nutritional deficiencies",
+      "globalSouthPriority": true,
+      "trials": 2702,
+      "dalys": 11.826130803078312,
+      "intensity": 228.47709407177166
+    },
+    {
+      "name": "Cardiomyopathy and myocarditis",
+      "category": "Cardiovascular diseases",
+      "globalSouthPriority": false,
+      "trials": 1574,
+      "dalys": 11.653957527670862,
+      "intensity": 135.06141551166067
+    },
+    {
+      "name": "Autism spectrum disorders",
+      "category": "Mental disorders",
+      "globalSouthPriority": false,
+      "trials": 2079,
+      "dalys": 11.544038080669443,
+      "intensity": 180.09296101346868
+    },
+    {
+      "name": "Pancreatic cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 100378,
+      "dalys": 11.316963350583196,
+      "intensity": 8869.69382955784
+    },
+    {
+      "name": "Leukemia",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 9423,
+      "dalys": 10.98283618560453,
+      "intensity": 857.9751023101805
+    },
+    {
+      "name": "Other cardiovascular and circulatory diseases",
+      "category": "Cardiovascular diseases",
+      "globalSouthPriority": false,
+      "trials": 64945,
+      "dalys": 9.985522400504964,
+      "intensity": 6503.916109257915
+    },
+    {
+      "name": "Cervical cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": true,
+      "trials": 100308,
+      "dalys": 9.911653091017737,
+      "intensity": 10120.208917612581
+    },
+    {
+      "name": "Other mental disorders",
+      "category": "Mental disorders",
+      "globalSouthPriority": false,
+      "trials": 46434,
+      "dalys": 8.962343979627114,
+      "intensity": 5181.010693804225
+    },
+    {
+      "name": "Brain and central nervous system cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 100437,
+      "dalys": 8.912595213850375,
+      "intensity": 11269.108221578224
+    },
+    {
+      "name": "Atrial fibrillation and flutter",
+      "category": "Cardiovascular diseases",
+      "globalSouthPriority": false,
+      "trials": 4445,
+      "dalys": 8.358893711971431,
+      "intensity": 531.7689341633768
+    },
+    {
+      "name": "Dermatitis",
+      "category": "Skin and subcutaneous diseases",
+      "globalSouthPriority": false,
+      "trials": 2202,
+      "dalys": 8.177101563788819,
+      "intensity": 269.2885716072376
+    },
+    {
+      "name": "Prostate cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 100772,
+      "dalys": 8.141561072273841,
+      "intensity": 12377.4788526957
+    },
+    {
+      "name": "Typhoid and paratyphoid",
+      "category": "Enteric infections",
+      "globalSouthPriority": true,
+      "trials": 483,
+      "dalys": 8.099574463723718,
+      "intensity": 59.6327624572445
+    },
+    {
+      "name": "Bipolar disorder",
+      "category": "Mental disorders",
+      "globalSouthPriority": false,
+      "trials": 2041,
+      "dalys": 8.007783132923045,
+      "intensity": 254.87703227234914
+    },
+    {
+      "name": "Sexually transmitted infections excluding HIV",
+      "category": "HIV/AIDS and STIs",
+      "globalSouthPriority": true,
+      "trials": 46703,
+      "dalys": 7.953311087690656,
+      "intensity": 5872.145510852991
+    },
+    {
+      "name": "Parkinson's disease",
+      "category": "Neurological disorders",
+      "globalSouthPriority": false,
+      "trials": 6800,
+      "dalys": 7.471821424322477,
+      "intensity": 910.0859902599458
+    },
+    {
+      "name": "Other malignant neoplasms",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 113268,
+      "dalys": 6.454745913878909,
+      "intensity": 17548.018390073674
+    },
+    {
+      "name": "Upper respiratory infections",
+      "category": "Respiratory infections",
+      "globalSouthPriority": false,
+      "trials": 2557,
+      "dalys": 5.678886772827445,
+      "intensity": 450.264303953872
+    },
+    {
+      "name": "Ovarian cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 100314,
+      "dalys": 5.163256304643558,
+      "intensity": 19428.43703299852
+    },
+    {
+      "name": "Bladder cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 100358,
+      "dalys": 4.3970666327433765,
+      "intensity": 22823.852441232073
+    },
+    {
+      "name": "Acute hepatitis",
+      "category": "Other infectious",
+      "globalSouthPriority": true,
+      "trials": 5229,
+      "dalys": 4.228048129057121,
+      "intensity": 1236.740888558924
+    },
+    {
+      "name": "Other neglected tropical diseases",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 2209,
+      "dalys": 4.218302247168106,
+      "intensity": 523.6703940508244
+    },
+    {
+      "name": "Pancreatitis",
+      "category": "Digestive diseases",
+      "globalSouthPriority": false,
+      "trials": 794,
+      "dalys": 4.101153965670044,
+      "intensity": 193.60404575063953
+    },
+    {
+      "name": "Interstitial lung disease and pulmonary sarcoidosis",
+      "category": "Chronic respiratory diseases",
+      "globalSouthPriority": false,
+      "trials": 43021,
+      "dalys": 4.042150488924843,
+      "intensity": 10643.097063771864
+    },
+    {
+      "name": "Kidney cancer",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 100264,
+      "dalys": 4.016362117183705,
+      "intensity": 24963.884499116244
+    },
+    {
+      "name": "Psoriasis",
+      "category": "Skin and subcutaneous diseases",
+      "globalSouthPriority": false,
+      "trials": 2434,
+      "dalys": 3.6899282561916857,
+      "intensity": 659.6334213045354
+    },
+    {
+      "name": "Eating disorders",
+      "category": "Mental disorders",
+      "globalSouthPriority": false,
+      "trials": 1423,
+      "dalys": 3.403145791933371,
+      "intensity": 418.1425325276985
+    },
+    {
+      "name": "Rheumatoid arthritis",
+      "category": "Musculoskeletal disorders",
+      "globalSouthPriority": false,
+      "trials": 10357,
+      "dalys": 3.0753031663426205,
+      "intensity": 3367.798047799403
+    },
+    {
+      "name": "Multiple myeloma",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 3756,
+      "dalys": 2.595594988860918,
+      "intensity": 1447.0670563470026
+    },
+    {
+      "name": "Dengue",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 273,
+      "dalys": 2.076524690640326,
+      "intensity": 131.46966237893207
+    },
+    {
+      "name": "Schistosomiasis",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 94,
+      "dalys": 1.7463333056925576,
+      "intensity": 53.82706708598314
+    },
+    {
+      "name": "Melanoma",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 3560,
+      "dalys": 1.6788363114432057,
+      "intensity": 2120.516440902841
+    },
+    {
+      "name": "Inflammatory bowel disease",
+      "category": "Digestive diseases",
+      "globalSouthPriority": false,
+      "trials": 6194,
+      "dalys": 1.510783814759216,
+      "intensity": 4099.858589620369
+    },
+    {
+      "name": "Intestinal nematode infections",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 44321,
+      "dalys": 1.3816409735708872,
+      "intensity": 32078.521734522114
+    },
+    {
+      "name": "Lymphatic filariasis",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 90,
+      "dalys": 1.3145633995424943,
+      "intensity": 68.46379568404429
+    },
+    {
+      "name": "Onchocerciasis",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 34,
+      "dalys": 1.2629881254184736,
+      "intensity": 26.920284772063532
+    },
+    {
+      "name": "Non-Hodgkin lymphoma",
+      "category": "Neoplasms",
+      "globalSouthPriority": false,
+      "trials": 8319,
+      "dalys": 1.196188224062072,
+      "intensity": 6954.591119238701
+    },
+    {
+      "name": "Motor neuron disease",
+      "category": "Neurological disorders",
+      "globalSouthPriority": false,
+      "trials": 3510,
+      "dalys": 1.0405659783974623,
+      "intensity": 3373.164290269823
+    },
+    {
+      "name": "Attention-deficit/hyperactivity disorder",
+      "category": "Mental disorders",
+      "globalSouthPriority": false,
+      "trials": 1748,
+      "dalys": 1.0309413513749617,
+      "intensity": 1695.5377700862425
+    },
+    {
+      "name": "Multiple sclerosis",
+      "category": "Neurological disorders",
+      "globalSouthPriority": false,
+      "trials": 3434,
+      "dalys": 0.9732982653784076,
+      "intensity": 3528.209308648977
+    },
+    {
+      "name": "Leishmaniasis",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 358,
+      "dalys": 0.781187607463255,
+      "intensity": 458.27659909062163
+    },
+    {
+      "name": "Rabies",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 107,
+      "dalys": 0.569550281705966,
+      "intensity": 187.86752186216887
+    },
+    {
+      "name": "Yellow fever",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 459,
+      "dalys": 0.3177919486190491,
+      "intensity": 1444.3411860953818
+    },
+    {
+      "name": "Chagas disease",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 2251,
+      "dalys": 0.2385892852142985,
+      "intensity": 9434.623176720506
+    },
+    {
+      "name": "Trachoma",
+      "category": "NTDs and Malaria",
+      "globalSouthPriority": true,
+      "trials": 91,
+      "dalys": 0.1231902374069621,
+      "intensity": 738.6948991694786
+    },
+    {
+      "name": "Heart failure",
+      "category": "Cardiovascular diseases",
+      "globalSouthPriority": false,
+      "trials": 6562,
+      "dalys": 0.0,
+      "intensity": 0.0
+    }
+  ],
+  "categories": [
+    {
+      "name": "Neoplasms",
+      "trials": 1345812,
+      "dalys": 202.01503539631003,
+      "intensity": 6661.939777699251,
+      "diseaseCount": 17,
+      "gsPriorityCount": 1
+    },
+    {
+      "name": "Cardiovascular diseases",
+      "trials": 124464,
+      "dalys": 417.7047054824686,
+      "intensity": 297.97126622319996,
+      "diseaseCount": 8,
+      "gsPriorityCount": 1
+    },
+    {
+      "name": "HIV/AIDS and STIs",
+      "trials": 93379,
+      "dalys": 48.22010283289505,
+      "intensity": 1936.5159863636418,
+      "diseaseCount": 2,
+      "gsPriorityCount": 2
+    },
+    {
+      "name": "Mental disorders",
+      "trials": 77812,
+      "dalys": 146.60486994875683,
+      "intensity": 530.759994720488,
+      "diseaseCount": 8,
+      "gsPriorityCount": 0
+    },
+    {
+      "name": "Musculoskeletal disorders",
+      "trials": 75229,
+      "dalys": 139.71465653732804,
+      "intensity": 538.4474461339051,
+      "diseaseCount": 4,
+      "gsPriorityCount": 0
+    },
+    {
+      "name": "Respiratory infections",
+      "trials": 59113,
+      "dalys": 347.20078584066135,
+      "intensity": 170.25595105400583,
+      "diseaseCount": 4,
+      "gsPriorityCount": 3
+    },
+    {
+      "name": "Chronic respiratory diseases",
+      "trials": 55606,
+      "dalys": 105.24470543261918,
+      "intensity": 528.3496188376016,
+      "diseaseCount": 3,
+      "gsPriorityCount": 0
+    },
+    {
+      "name": "NTDs and Malaria",
+      "trials": 51689,
+      "dalys": 69.20472280446226,
+      "intensity": 746.8998921655551,
+      "diseaseCount": 12,
+      "gsPriorityCount": 12
+    },
+    {
+      "name": "Enteric infections",
+      "trials": 50179,
+      "dalys": 67.08339125669342,
+      "intensity": 748.0092920167219,
+      "diseaseCount": 2,
+      "gsPriorityCount": 2
+    },
+    {
+      "name": "Diabetes and kidney diseases",
+      "trials": 40162,
+      "dalys": 123.39227066091726,
+      "intensity": 325.4822995385621,
+      "diseaseCount": 2,
+      "gsPriorityCount": 0
+    },
+    {
+      "name": "Self-harm and violence",
+      "trials": 40092,
+      "dalys": 60.35469789630774,
+      "intensity": 664.2730623700573,
+      "diseaseCount": 2,
+      "gsPriorityCount": 1
+    },
+    {
+      "name": "Maternal disorders",
+      "trials": 39534,
+      "dalys": 12.314021231347068,
+      "intensity": 3210.4865873838726,
+      "diseaseCount": 1,
+      "gsPriorityCount": 1
+    },
+    {
+      "name": "Neurological disorders",
+      "trials": 29723,
+      "dalys": 107.67187495417589,
+      "intensity": 276.05166170506294,
+      "diseaseCount": 6,
+      "gsPriorityCount": 0
+    },
+    {
+      "name": "Digestive diseases",
+      "trials": 24680,
+      "dalys": 67.23609774866482,
+      "intensity": 367.0647290129222,
+      "diseaseCount": 4,
+      "gsPriorityCount": 0
+    },
+    {
+      "name": "Transport injuries",
+      "trials": 19743,
+      "dalys": 65.14364666178717,
+      "intensity": 303.0686952866136,
+      "diseaseCount": 1,
+      "gsPriorityCount": 1
+    },
+    {
+      "name": "Other non-communicable diseases",
+      "trials": 12819,
+      "dalys": 64.24574851186827,
+      "intensity": 199.53071287871936,
+      "diseaseCount": 2,
+      "gsPriorityCount": 1
+    },
+    {
+      "name": "Neonatal disorders",
+      "trials": 11118,
+      "dalys": 186.36601177438888,
+      "intensity": 59.656800583677445,
+      "diseaseCount": 1,
+      "gsPriorityCount": 1
+    },
+    {
+      "name": "Substance use disorders",
+      "trials": 9727,
+      "dalys": 32.54314576259806,
+      "intensity": 298.8955053994587,
+      "diseaseCount": 2,
+      "gsPriorityCount": 0
+    },
+    {
+      "name": "Nutritional deficiencies",
+      "trials": 7252,
+      "dalys": 44.14188170066925,
+      "intensity": 164.28841999026176,
+      "diseaseCount": 2,
+      "gsPriorityCount": 2
+    },
+    {
+      "name": "Sense organ diseases",
+      "trials": 6888,
+      "dalys": 29.16399273777044,
+      "intensity": 236.18165255813258,
+      "diseaseCount": 1,
+      "gsPriorityCount": 0
+    },
+    {
+      "name": "Other infectious",
+      "trials": 5839,
+      "dalys": 18.739094611469277,
+      "intensity": 311.5945631880334,
+      "diseaseCount": 2,
+      "gsPriorityCount": 2
+    },
+    {
+      "name": "Skin and subcutaneous diseases",
+      "trials": 4636,
+      "dalys": 11.867029819980505,
+      "intensity": 390.66220194326735,
+      "diseaseCount": 2,
+      "gsPriorityCount": 0
+    },
+    {
+      "name": "Unintentional injuries",
+      "trials": 4434,
+      "dalys": 43.80412262423419,
+      "intensity": 101.2233491819086,
+      "diseaseCount": 1,
+      "gsPriorityCount": 0
+    }
+  ],
+  "temporal": [
+    {
+      "year": 2000,
+      "trials": 2332,
+      "gsTrials": 1295,
+      "gsPct": 55.53173241852487
+    },
+    {
+      "year": 2001,
+      "trials": 2910,
+      "gsTrials": 1476,
+      "gsPct": 50.72164948453608
+    },
+    {
+      "year": 2002,
+      "trials": 4131,
+      "gsTrials": 1954,
+      "gsPct": 47.30089566690874
+    },
+    {
+      "year": 2003,
+      "trials": 5669,
+      "gsTrials": 2558,
+      "gsPct": 45.1225965778797
+    },
+    {
+      "year": 2004,
+      "trials": 7475,
+      "gsTrials": 3305,
+      "gsPct": 44.214046822742475
+    },
+    {
+      "year": 2005,
+      "trials": 9343,
+      "gsTrials": 4071,
+      "gsPct": 43.57272824574548
+    },
+    {
+      "year": 2006,
+      "trials": 11332,
+      "gsTrials": 4791,
+      "gsPct": 42.27850335333569
+    },
+    {
+      "year": 2007,
+      "trials": 12969,
+      "gsTrials": 5338,
+      "gsPct": 41.15968848793276
+    },
+    {
+      "year": 2008,
+      "trials": 14963,
+      "gsTrials": 5878,
+      "gsPct": 39.283566129786806
+    },
+    {
+      "year": 2009,
+      "trials": 16311,
+      "gsTrials": 6332,
+      "gsPct": 38.82042793207038
+    },
+    {
+      "year": 2010,
+      "trials": 17506,
+      "gsTrials": 6606,
+      "gsPct": 37.73563349708672
+    },
+    {
+      "year": 2011,
+      "trials": 18366,
+      "gsTrials": 6749,
+      "gsPct": 36.74725035391484
+    },
+    {
+      "year": 2012,
+      "trials": 19438,
+      "gsTrials": 7077,
+      "gsPct": 36.408066673526086
+    },
+    {
+      "year": 2013,
+      "trials": 20321,
+      "gsTrials": 7201,
+      "gsPct": 35.4362482161311
+    },
+    {
+      "year": 2014,
+      "trials": 22624,
+      "gsTrials": 7915,
+      "gsPct": 34.98497171145686
+    },
+    {
+      "year": 2015,
+      "trials": 24373,
+      "gsTrials": 8796,
+      "gsPct": 36.08911500430805
+    },
+    {
+      "year": 2016,
+      "trials": 26448,
+      "gsTrials": 9236,
+      "gsPct": 34.92135511191773
+    },
+    {
+      "year": 2017,
+      "trials": 27927,
+      "gsTrials": 9687,
+      "gsPct": 34.686862176388445
+    },
+    {
+      "year": 2018,
+      "trials": 30103,
+      "gsTrials": 10176,
+      "gsPct": 33.803939806663784
+    },
+    {
+      "year": 2019,
+      "trials": 31901,
+      "gsTrials": 10769,
+      "gsPct": 33.75756245885709
+    },
+    {
+      "year": 2020,
+      "trials": 33393,
+      "gsTrials": 14379,
+      "gsPct": 43.05992273829845
+    },
+    {
+      "year": 2021,
+      "trials": 38180,
+      "gsTrials": 14251,
+      "gsPct": 37.32582503928759
+    },
+    {
+      "year": 2022,
+      "trials": 37117,
+      "gsTrials": 12873,
+      "gsPct": 34.68222108467818
+    },
+    {
+      "year": 2023,
+      "trials": 38337,
+      "gsTrials": 12614,
+      "gsPct": 32.902939718809506
+    },
+    {
+      "year": 2024,
+      "trials": 38595,
+      "gsTrials": 12561,
+      "gsPct": 32.545666537116205
+    },
+    {
+      "year": 2025,
+      "trials": 36212,
+      "gsTrials": 11703,
+      "gsPct": 32.31801612725064
+    }
+  ],
+  "keyFindings": {
+    "cancerDominance": {
+      "cancerTrials": 1345812,
+      "cancerPct": 61.5,
+      "cancerDALYsPct": 8.4
+    },
+    "neglectedDiseases": [
+      {
+        "name": "Typhoid and paratyphoid",
+        "trials": 483,
+        "dalys": 8.099574463723718
+      },
+      {
+        "name": "Dengue",
+        "trials": 273,
+        "dalys": 2.076524690640326
+      },
+      {
+        "name": "Schistosomiasis",
+        "trials": 94,
+        "dalys": 1.7463333056925576
+      },
+      {
+        "name": "Lymphatic filariasis",
+        "trials": 90,
+        "dalys": 1.3145633995424943
+      },
+      {
+        "name": "Onchocerciasis",
+        "trials": 34,
+        "dalys": 1.2629881254184736
+      },
+      {
+        "name": "Leishmaniasis",
+        "trials": 358,
+        "dalys": 0.781187607463255
+      },
+      {
+        "name": "Rabies",
+        "trials": 107,
+        "dalys": 0.569550281705966
+      },
+      {
+        "name": "Yellow fever",
+        "trials": 459,
+        "dalys": 0.3177919486190491
+      },
+      {
+        "name": "Trachoma",
+        "trials": 91,
+        "dalys": 0.1231902374069621
+      }
+    ],
+    "lowestIntensity": [
+      {
+        "name": "Malaria",
+        "intensity": 25.4,
+        "dalys": 55.2,
+        "gs": true
+      },
+      {
+        "name": "Tuberculosis",
+        "intensity": 32.1,
+        "dalys": 47.0,
+        "gs": true
+      },
+      {
+        "name": "Meningitis",
+        "intensity": 42.0,
+        "dalys": 14.5,
+        "gs": true
+      },
+      {
+        "name": "COVID-19",
+        "intensity": 43.6,
+        "dalys": 212.0,
+        "gs": true
+      },
+      {
+        "name": "Headache disorders",
+        "intensity": 51.9,
+        "dalys": 48.0,
+        "gs": false
+      },
+      {
+        "name": "Typhoid and paratyphoid",
+        "intensity": 59.6,
+        "dalys": 8.1,
+        "gs": true
+      },
+      {
+        "name": "Neonatal disorders",
+        "intensity": 59.7,
+        "dalys": 186.4,
+        "gs": true
+      },
+      {
+        "name": "Interpersonal violence",
+        "intensity": 64.9,
+        "dalys": 26.8,
+        "gs": true
+      },
+      {
+        "name": "Ischemic heart disease",
+        "intensity": 72.5,
+        "dalys": 188.4,
+        "gs": false
+      },
+      {
+        "name": "Chronic obstructive pulmonary disease",
+        "intensity": 96.2,
+        "dalys": 79.8,
+        "gs": false
+      }
+    ],
+    "highestIntensity": [
+      {
+        "name": "Intestinal nematode infections",
+        "intensity": 32079.0,
+        "trials": 44321
+      },
+      {
+        "name": "Kidney cancer",
+        "intensity": 24964.0,
+        "trials": 100264
+      },
+      {
+        "name": "Bladder cancer",
+        "intensity": 22824.0,
+        "trials": 100358
+      },
+      {
+        "name": "Ovarian cancer",
+        "intensity": 19428.0,
+        "trials": 100314
+      },
+      {
+        "name": "Other malignant neoplasms",
+        "intensity": 17548.0,
+        "trials": 113268
+      },
+      {
+        "name": "Prostate cancer",
+        "intensity": 12377.0,
+        "trials": 100772
+      },
+      {
+        "name": "Brain and central nervous system cancer",
+        "intensity": 11269.0,
+        "trials": 100437
+      },
+      {
+        "name": "Interstitial lung disease and pulmonary sarcoidosis",
+        "intensity": 10643.0,
+        "trials": 43021
+      },
+      {
+        "name": "Cervical cancer",
+        "intensity": 10120.0,
+        "trials": 100308
+      },
+      {
+        "name": "Chagas disease",
+        "intensity": 9435.0,
+        "trials": 2251
+      }
+    ]
+  }
+}

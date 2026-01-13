@@ -1,0 +1,124 @@
+================================================================================
+HEIM-CT Setup Diagnostic Report
+Generated: 2026-01-13 07:51:31
+Version: HEIM-CT v1.0
+================================================================================
+
+DATABASE CONNECTION
+----------------------------------------
+Host: aact-db.ctti-clinicaltrials.org
+Database: aact
+Status: CONNECTED ✓
+
+TABLE AVAILABILITY
+----------------------------------------
+Available: 12/12
+
+  ✓ studies                        (     565,519 rows,  71 cols)
+  ✓ baseline_measurements          (   2,757,014 rows,  22 cols)
+  ✓ baseline_counts                (     226,928 rows,   7 cols)
+  ✓ eligibilities                  (     563,069 rows,  14 cols)
+  ✓ countries                      (     771,530 rows,   4 cols)
+  ✓ conditions                     (   1,003,360 rows,   4 cols)
+  ✓ browse_conditions              (   4,127,113 rows,   5 cols)
+  ✓ sponsors                       (     904,335 rows,   5 cols)
+  ✓ result_groups                  (   2,088,534 rows,   7 cols)
+  ✓ calculated_values              (     565,511 rows,  19 cols)
+  ✓ interventions                  (     956,653 rows,   5 cols)
+  ✓ facilities                     (   3,373,734 rows,  10 cols)
+
+DEMOGRAPHIC DATA AVAILABILITY
+----------------------------------------
+Total baseline measurement rows: 2,760,193
+Studies with demographic data: 75,776
+Race/ethnicity categories: 2030
+Sex/gender categories: 476
+Age categories: 50
+
+Top demographic category titles:
+  race (nih/omb)                                        636,548
+  sex: female, male                                     429,676
+  ethnicity (nih/omb)                                   227,130
+  race/ethnicity, customized                            215,442
+  age, categorical                                      210,187
+  region of enrollment                                  206,835
+  age, continuous                                       174,006
+  age, customized                                        68,205
+  sex/gender, customized                                 19,012
+  age continuous                                         12,668
+  weight                                                  8,757
+  gender                                                  7,421
+  education                                               7,093
+  height                                                  6,593
+  body mass index (bmi)                                   5,998
+  body mass index                                         5,461
+  race and ethnicity not collected                        5,413
+  bmi                                                     5,235
+  marital status                                          5,054
+  eastern cooperative oncology group (ecog) performa      3,463
+
+CONDITIONS COVERAGE
+----------------------------------------
+Total condition entries: 1,003,360
+Distinct conditions: 123,534
+Studies with conditions: 564,516
+
+Top 20 conditions:
+  healthy                                                10,821
+  breast cancer                                           8,417
+  obesity                                                 7,282
+  stroke                                                  4,960
+  hypertension                                            4,490
+  depression                                              4,405
+  pain                                                    4,350
+  prostate cancer                                         4,286
+  hiv infections                                          3,846
+  cancer                                                  3,801
+  coronary artery disease                                 3,616
+  asthma                                                  3,585
+  heart failure                                           3,566
+  colorectal cancer                                       3,338
+  diabetes mellitus, type 2                               3,262
+  covid-19                                                3,158
+  anxiety                                                 3,038
+  lung cancer                                             3,017
+  cardiovascular diseases                                 2,978
+  diabetes                                                2,959
+
+MeSH TERM COVERAGE
+----------------------------------------
+Total MeSH entries: 4,126,238
+Distinct MeSH terms: 6,003
+Studies with MeSH: 448,133
+
+Top 20 MeSH terms:
+  Pathological Conditions, Signs and Symptoms           132,899
+  Neoplasms                                             100,421
+  Pathologic Processes                                   71,479
+  Nervous System Diseases                                70,395
+  Signs and Symptoms                                     69,340
+  Neoplasms by Site                                      68,280
+  Cardiovascular Diseases                                60,628
+  Urogenital Diseases                                    51,345
+  Respiratory Tract Diseases                             49,630
+  Nutritional and Metabolic Diseases                     47,283
+  Mental Disorders                                       45,527
+  Immune System Diseases                                 45,142
+  Infections                                             44,452
+  Digestive System Diseases                              43,580
+  Vascular Diseases                                      43,151
+  Neurologic Manifestations                              41,482
+  Neoplasms by Histologic Type                           41,077
+  Central Nervous System Diseases                        38,687
+  Behavior                                               38,438
+  Lung Diseases                                          38,027
+
+RECOMMENDATIONS
+----------------------------------------
+✓ Sufficient demographic data for robust analysis
+✓ Strong condition coverage for disease mapping
+✓ Good MeSH coverage for GBD disease mapping
+
+================================================================================
+Setup complete. Proceed to 04-01-heim-ct-fetch.py
+================================================================================

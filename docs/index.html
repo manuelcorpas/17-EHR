@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEIM-Biobank v2.0 (IHCC) | Global Equity Index for Biobank Research</title>
-    <meta name="description" content="Health Equity Informative Metrics for Biobank research - measuring alignment between research output and global disease burden">
-    
+    <title>HEIM Framework | Health Equity Informative Metrics</title>
+    <meta name="description" content="Health Equity Informative Metrics - measuring research equity gaps in biobanks and clinical trials relative to global disease burden">
+
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    
+
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -17,119 +17,278 @@
     <header class="header">
         <div class="header-content">
             <div class="header-title">
-                <h1>HEIM-Biobank <span class="version">v2.0</span></h1>
-                <p class="tagline">Global equity index for biobank-linked research vs disease burden</p>
+                <h1>HEIM Framework <span class="version">v2.0</span></h1>
+                <p class="tagline">Health Equity Informative Metrics: Biobanks + Clinical Trials</p>
             </div>
             <div class="header-meta">
-                <span class="framework-badge">Part of HEIM Framework</span>
+                <span class="framework-badge">Discovery-to-Translation Gap Analysis</span>
             </div>
         </div>
     </header>
-    
+
     <!-- Navigation Tabs -->
     <nav class="nav-tabs">
         <button class="tab-btn active" data-tab="overview">Overview</button>
+        <button class="tab-btn" data-tab="clinical-trials">Clinical Trials</button>
         <button class="tab-btn" data-tab="biobanks">Biobanks</button>
         <button class="tab-btn" data-tab="diseases">Diseases</button>
-        <button class="tab-btn" data-tab="matrix">Matrix</button>
+        <button class="tab-btn" data-tab="comparison">Pipeline Gap</button>
         <button class="tab-btn" data-tab="trends">Trends</button>
-        <button class="tab-btn" data-tab="themes">Themes</button>
-        <button class="tab-btn" data-tab="compare">Compare</button>
         <button class="tab-btn" data-tab="equity">Equity</button>
         <button class="tab-btn" data-tab="about">About</button>
     </nav>
-    
+
     <!-- Main Content -->
     <main class="main-content">
-        
+
         <!-- Tab 1: Overview -->
         <section id="overview" class="tab-content active">
             <div class="section-header">
-                <h2>Global Overview</h2>
-                <p>Key metrics and critical research gaps across all biobanks</p>
+                <h2>Global Research Equity Overview</h2>
+                <p>The Discovery-to-Translation Gap: How health inequities persist from biobanks to clinical trials</p>
             </div>
-            
-            <!-- Summary Cards -->
-            <div class="summary-cards">
-                <div class="card summary-card">
-                    <div class="card-icon">🏛️</div>
-                    <div class="card-value" id="stat-biobanks">--</div>
-                    <div class="card-label">Biobanks Scored</div>
-                </div>
-                <div class="card summary-card">
-                    <div class="card-icon">📚</div>
-                    <div class="card-value" id="stat-publications">--</div>
-                    <div class="card-label">Publications Mapped</div>
-                </div>
-                <div class="card summary-card">
-                    <div class="card-icon">🌍</div>
-                    <div class="card-value" id="stat-countries">--</div>
-                    <div class="card-label">Countries Represented</div>
-                </div>
-                <div class="card summary-card">
-                    <div class="card-icon">⚠️</div>
-                    <div class="card-value" id="stat-critical">--</div>
-                    <div class="card-label">Critical Gap Diseases</div>
+
+            <!-- Key Finding Banner -->
+            <div class="card key-finding-card">
+                <div class="key-finding-icon">&#9888;</div>
+                <div class="key-finding-content">
+                    <h3>Key Finding: The 2.4x Intensity Gap</h3>
+                    <p>Global South Priority diseases receive <strong>2.4x less research intensity</strong> in clinical trials despite accounting for <strong>38% of global disease burden</strong>. This gap persists across the entire research pipeline.</p>
                 </div>
             </div>
-            
+
+            <!-- Summary Cards - Two Rows -->
+            <div class="overview-section">
+                <h3 class="section-subtitle">Clinical Trials (Translation Stage)</h3>
+                <div class="summary-cards">
+                    <div class="card summary-card ct-card">
+                        <div class="card-icon">&#128202;</div>
+                        <div class="card-value" id="stat-ct-trials">--</div>
+                        <div class="card-label">Clinical Trials</div>
+                        <div class="card-sublabel">2000-2025</div>
+                    </div>
+                    <div class="card summary-card ct-card">
+                        <div class="card-icon">&#127757;</div>
+                        <div class="card-value" id="stat-ct-gs-pct">--</div>
+                        <div class="card-label">GS Priority Share</div>
+                        <div class="card-sublabel">vs 38% of burden</div>
+                    </div>
+                    <div class="card summary-card ct-card">
+                        <div class="card-icon">&#128200;</div>
+                        <div class="card-value" id="stat-ct-gap">--</div>
+                        <div class="card-label">Intensity Gap</div>
+                        <div class="card-sublabel">non-GS vs GS</div>
+                    </div>
+                    <div class="card summary-card ct-card">
+                        <div class="card-icon">&#127758;</div>
+                        <div class="card-value" id="stat-ct-hic-ratio">--</div>
+                        <div class="card-label">HIC:LMIC Ratio</div>
+                        <div class="card-sublabel">trial sites</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="overview-section">
+                <h3 class="section-subtitle">Biobank Research (Discovery Stage)</h3>
+                <div class="summary-cards">
+                    <div class="card summary-card bb-card">
+                        <div class="card-icon">&#127975;</div>
+                        <div class="card-value" id="stat-biobanks">--</div>
+                        <div class="card-label">Biobanks Scored</div>
+                    </div>
+                    <div class="card summary-card bb-card">
+                        <div class="card-icon">&#128218;</div>
+                        <div class="card-value" id="stat-publications">--</div>
+                        <div class="card-label">Publications Mapped</div>
+                    </div>
+                    <div class="card summary-card bb-card">
+                        <div class="card-icon">&#127759;</div>
+                        <div class="card-value" id="stat-countries">--</div>
+                        <div class="card-label">Countries</div>
+                    </div>
+                    <div class="card summary-card bb-card">
+                        <div class="card-icon">&#9888;</div>
+                        <div class="card-value" id="stat-critical">--</div>
+                        <div class="card-label">Critical Gap Diseases</div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Charts Row -->
             <div class="charts-row">
                 <div class="card chart-card">
-                    <h3>Equity Alignment Distribution</h3>
+                    <h3>Clinical Trial Distribution by Disease Category</h3>
                     <div class="chart-container">
-                        <canvas id="chart-eas-distribution"></canvas>
+                        <canvas id="chart-ct-categories"></canvas>
                     </div>
                 </div>
                 <div class="card chart-card">
-                    <h3>Critical Research Gaps</h3>
+                    <h3>Research Intensity: Lowest vs Highest</h3>
                     <div class="chart-container">
-                        <canvas id="chart-critical-gaps"></canvas>
+                        <canvas id="chart-intensity-compare"></canvas>
                     </div>
                 </div>
             </div>
-            
-            <!-- Top Biobanks Table -->
+
+            <!-- Methodology Note -->
+            <div class="card info-card">
+                <h3>About HEIM Framework</h3>
+                <p>The <strong>Health Equity Informative Metrics (HEIM)</strong> framework quantifies the alignment between biomedical research output and global disease burden. It reveals systematic gaps where high-burden diseases—particularly those affecting the Global South—receive disproportionately less research attention.</p>
+                <p><strong>Key Metrics:</strong></p>
+                <ul>
+                    <li><strong>Research Intensity</strong> = Trials (or publications) per million DALYs</li>
+                    <li><strong>Global South Priority</strong> = 30 diseases disproportionately affecting LMICs</li>
+                    <li><strong>Intensity Gap</strong> = Ratio of non-GS to GS research intensity</li>
+                </ul>
+                <p class="methodology-source">Methodology: Corpas et al. (2025), Lancet Global Health (in preparation)</p>
+            </div>
+        </section>
+
+        <!-- Tab 2: Clinical Trials -->
+        <section id="clinical-trials" class="tab-content">
+            <div class="section-header">
+                <h2>Clinical Trials Analysis</h2>
+                <p>2.19 million trials from ClinicalTrials.gov (2000-2025) mapped to GBD disease categories</p>
+            </div>
+
+            <!-- CT Summary Cards -->
+            <div class="summary-cards">
+                <div class="card summary-card">
+                    <div class="card-value" id="ct-total-trials">--</div>
+                    <div class="card-label">Total Trials</div>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-value" id="ct-gs-trials">--</div>
+                    <div class="card-label">GS Priority Trials</div>
+                    <div class="card-sublabel" id="ct-gs-trials-pct">--</div>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-value" id="ct-intensity-gap">--</div>
+                    <div class="card-label">Intensity Gap</div>
+                    <div class="card-sublabel">non-GS vs GS</div>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-value" id="ct-neglected">--</div>
+                    <div class="card-label">Severely Neglected</div>
+                    <div class="card-sublabel">&lt;500 trials in 26 years</div>
+                </div>
+            </div>
+
+            <!-- Cancer Dominance Alert -->
+            <div class="card alert-card">
+                <div class="alert-icon">&#9888;</div>
+                <div class="alert-content">
+                    <h4>Cancer Dominance Problem</h4>
+                    <p><strong id="ct-cancer-pct">--</strong> of all clinical trials focus on cancers, which represent only <strong id="ct-cancer-burden-pct">--</strong> of global disease burden—a <strong id="ct-cancer-ratio">--</strong> overrepresentation.</p>
+                </div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-row">
+                <div class="card chart-card">
+                    <h3>Trial Count by Disease Category</h3>
+                    <div class="chart-container chart-large">
+                        <canvas id="chart-ct-by-category"></canvas>
+                    </div>
+                </div>
+                <div class="card chart-card">
+                    <h3>Research Intensity by Category</h3>
+                    <div class="chart-container chart-large">
+                        <canvas id="chart-ct-intensity"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Global South Priority Diseases -->
             <div class="card">
-                <h3>Top Biobanks by Equity Alignment</h3>
+                <h3>Global South Priority Diseases - Trial Coverage</h3>
+                <p class="card-description">30 diseases disproportionately affecting low- and middle-income countries</p>
                 <div class="table-container">
-                    <table class="data-table" id="table-top-biobanks">
+                    <table class="data-table sortable" id="table-ct-gs-diseases">
                         <thead>
                             <tr>
-                                <th>Rank</th>
-                                <th>Biobank</th>
-                                <th>EAS</th>
+                                <th>Disease</th>
                                 <th>Category</th>
-                                <th>Publications</th>
+                                <th>Trials</th>
+                                <th>DALYs (M)</th>
+                                <th>Intensity</th>
+                                <th>Assessment</th>
                             </tr>
                         </thead>
                         <tbody></tbody>
                     </table>
                 </div>
             </div>
-            
-            <!-- Methodology Note -->
-            <div class="card info-card">
-                <h3>About HEIM-Biobank</h3>
-                <p>The <strong>Equity Alignment Score (0-100)</strong> measures how well a biobank's research portfolio 
-                matches global disease burden. Higher scores indicate better alignment between research output and 
-                health needs.</p>
-                <p>The <strong>Research Gap Score (0-100)</strong> quantifies the mismatch between a disease's global 
-                burden and research attention. Categories: <span class="badge badge-critical">Critical (&gt;70)</span> 
-                <span class="badge badge-high">High (50-70)</span> 
-                <span class="badge badge-moderate">Moderate (30-50)</span> 
-                <span class="badge badge-low">Low (&lt;30)</span></p>
-                <p class="methodology-source">Methodology: Corpas et al. (2025), medRxiv preprint</p>
+
+            <!-- Geographic Distribution -->
+            <div class="card">
+                <h3>Geographic Distribution of Trial Sites</h3>
+                <div class="charts-row">
+                    <div class="chart-card-inner">
+                        <h4>HIC vs LMIC Distribution</h4>
+                        <div class="chart-container">
+                            <canvas id="chart-ct-hic-lmic"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card-inner">
+                        <h4>Top 15 Countries</h4>
+                        <div class="chart-container chart-large">
+                            <canvas id="chart-ct-countries"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Temporal Trends -->
+            <div class="card">
+                <h3>Temporal Trends (2000-2025)</h3>
+                <div class="charts-row">
+                    <div class="chart-card-inner">
+                        <h4>Trial Volume Growth</h4>
+                        <div class="chart-container">
+                            <canvas id="chart-ct-temporal-volume"></canvas>
+                        </div>
+                    </div>
+                    <div class="chart-card-inner">
+                        <h4>GS Priority Share Over Time</h4>
+                        <div class="chart-container">
+                            <canvas id="chart-ct-temporal-gs"></canvas>
+                        </div>
+                    </div>
+                </div>
+                <div class="trend-insight">
+                    <strong>Trend Insight:</strong> Despite a <span id="ct-growth-factor">--</span> increase in trial volume since 2000, the share of trials addressing Global South Priority diseases has <strong>declined</strong> by <span id="ct-gs-decline">--</span> percentage points.
+                </div>
+            </div>
+
+            <!-- Lowest Intensity Diseases -->
+            <div class="card">
+                <h3>Lowest Research Intensity Diseases (&gt;5M DALYs)</h3>
+                <p class="card-description">High-burden diseases receiving the least research attention</p>
+                <div class="table-container">
+                    <table class="data-table" id="table-ct-lowest-intensity">
+                        <thead>
+                            <tr>
+                                <th>Disease</th>
+                                <th>Trials/M DALYs</th>
+                                <th>Total Trials</th>
+                                <th>DALYs (M)</th>
+                                <th>GS Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
             </div>
         </section>
-        
-        <!-- Tab 2: Biobanks -->
+
+        <!-- Tab 3: Biobanks -->
         <section id="biobanks" class="tab-content">
             <div class="section-header">
                 <h2>Biobank Analysis</h2>
-                <p>Detailed equity metrics for each biobank in the registry</p>
+                <p>Detailed equity metrics for each biobank in the IHCC registry</p>
             </div>
-            
+
             <!-- Filters -->
             <div class="filters">
                 <input type="text" id="biobank-search" class="search-input" placeholder="Search biobanks...">
@@ -149,87 +308,71 @@
                     <option value="Low">Low Alignment</option>
                 </select>
             </div>
-            
+
             <!-- Biobanks Table -->
             <div class="card">
                 <div class="table-container">
                     <table class="data-table sortable" id="table-biobanks">
                         <thead>
                             <tr>
-                                <th data-sort="name">Biobank ↕</th>
-                                <th data-sort="country">Country ↕</th>
-                                <th data-sort="region">Region ↕</th>
-                                <th data-sort="eas">EAS ↕</th>
-                                <th data-sort="category">Category ↕</th>
-                                <th data-sort="publications">Publications ↕</th>
-                                <th data-sort="diseases">Diseases ↕</th>
-                                <th data-sort="gaps">Critical Gaps ↕</th>
+                                <th data-sort="name">Biobank</th>
+                                <th data-sort="country">Country</th>
+                                <th data-sort="region">Region</th>
+                                <th data-sort="eas">EAS</th>
+                                <th data-sort="category">Category</th>
+                                <th data-sort="publications">Publications</th>
+                                <th data-sort="diseases">Diseases</th>
+                                <th data-sort="gaps">Critical Gaps</th>
                             </tr>
                         </thead>
                         <tbody></tbody>
                     </table>
                 </div>
             </div>
-            
+
             <!-- Download Button -->
             <div class="actions">
                 <button class="btn btn-primary" onclick="downloadBiobanksCSV()">Download CSV</button>
             </div>
         </section>
-        
-        <!-- Tab 3: Diseases -->
+
+        <!-- Tab 4: Diseases -->
         <section id="diseases" class="tab-content">
             <div class="section-header">
                 <h2>Disease Analysis</h2>
-                <p>Research gaps by disease relative to global burden</p>
+                <p>Research gaps by disease relative to global burden (GBD 2021)</p>
             </div>
-            
+
             <!-- Filters -->
             <div class="filters">
                 <input type="text" id="disease-search" class="search-input" placeholder="Search diseases...">
-                <select id="disease-category-filter" class="filter-select">
-                    <option value="">All Categories</option>
-                    <option value="Cardiovascular">Cardiovascular</option>
-                    <option value="Respiratory">Respiratory</option>
-                    <option value="Metabolic">Metabolic</option>
-                    <option value="Infectious">Infectious</option>
-                    <option value="Neglected">Neglected</option>
-                    <option value="Neurological">Neurological</option>
-                    <option value="Mental Health">Mental Health</option>
-                    <option value="Cancer">Cancer</option>
-                    <option value="Maternal/Child">Maternal/Child</option>
-                    <option value="Injuries">Injuries</option>
-                </select>
-                <select id="disease-severity-filter" class="filter-select">
-                    <option value="">All Severities</option>
-                    <option value="Critical">Critical</option>
-                    <option value="High">High</option>
-                    <option value="Moderate">Moderate</option>
-                    <option value="Low">Low</option>
+                <select id="disease-view-filter" class="filter-select">
+                    <option value="all">All Diseases</option>
+                    <option value="gs">Global South Priority Only</option>
+                    <option value="neglected">Severely Neglected (&lt;500 trials)</option>
                 </select>
             </div>
-            
+
             <!-- Disease Chart -->
             <div class="card chart-card">
-                <h3>Research Gap vs Disease Burden</h3>
+                <h3>Disease Burden vs Clinical Trial Coverage</h3>
                 <div class="chart-container chart-large">
-                    <canvas id="chart-disease-burden"></canvas>
+                    <canvas id="chart-disease-scatter"></canvas>
                 </div>
             </div>
-            
+
             <!-- Diseases Table -->
             <div class="card">
                 <div class="table-container">
                     <table class="data-table sortable" id="table-diseases">
                         <thead>
                             <tr>
-                                <th data-sort="name">Disease ↕</th>
-                                <th data-sort="category">Category ↕</th>
-                                <th data-sort="dalys">DALYs (M) ↕</th>
-                                <th data-sort="publications">Publications ↕</th>
-                                <th data-sort="gap">Gap Score ↕</th>
-                                <th data-sort="severity">Severity ↕</th>
-                                <th data-sort="biobanks">Biobanks ↕</th>
+                                <th>Disease</th>
+                                <th>Category</th>
+                                <th>DALYs (M)</th>
+                                <th>Clinical Trials</th>
+                                <th>Intensity</th>
+                                <th>GS Priority</th>
                             </tr>
                         </thead>
                         <tbody></tbody>
@@ -237,211 +380,161 @@
                 </div>
             </div>
         </section>
-        
-        <!-- Tab 4: Matrix -->
-        <section id="matrix" class="tab-content">
+
+        <!-- Tab 5: Pipeline Comparison -->
+        <section id="comparison" class="tab-content">
             <div class="section-header">
-                <h2>Publication Matrix</h2>
-                <p>Biobank × Disease publication counts heatmap</p>
+                <h2>Discovery-to-Translation Gap</h2>
+                <p>Comparing equity patterns between biobank research and clinical trials</p>
             </div>
-            
+
+            <!-- Comparison Summary -->
+            <div class="comparison-table-card card">
+                <h3>Pipeline Stage Comparison</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Biobanks (Discovery)</th>
+                            <th>Clinical Trials (Translation)</th>
+                            <th>Interpretation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>HIC:LMIC Ratio</strong></td>
+                            <td>57.8:1 (publications)</td>
+                            <td id="comp-hic-ratio">--</td>
+                            <td class="interpretation-good">Better in trials</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cancer Focus</strong></td>
+                            <td>~42% of publications</td>
+                            <td id="comp-cancer-focus">--</td>
+                            <td class="interpretation-bad">Worse in trials</td>
+                        </tr>
+                        <tr>
+                            <td><strong>GS Priority Share</strong></td>
+                            <td>~15% of research</td>
+                            <td id="comp-gs-share">--</td>
+                            <td class="interpretation-moderate">Slightly better</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Temporal Trend</strong></td>
+                            <td>Slowly improving</td>
+                            <td id="comp-trend">Declining (-12.3 pp)</td>
+                            <td class="interpretation-bad">Worsening</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Key Insight -->
+            <div class="card insight-card">
+                <h3>&#128161; Key Insight: The Pipeline Paradox</h3>
+                <p>While <strong>geographic concentration is better</strong> in clinical trials (2.5:1 vs 57.8:1 HIC:LMIC ratio), <strong>disease priorities are worse</strong>. Cancer research dominates trials even more than biobank publications (61.5% vs 42%), suggesting that while trials are more geographically accessible, research agendas remain skewed toward high-income country priorities.</p>
+            </div>
+
+            <!-- Consistently Neglected -->
             <div class="card">
-                <div class="matrix-legend">
-                    <span class="legend-item"><span class="legend-color" style="background:#dc3545"></span> Critical (0 pubs)</span>
-                    <span class="legend-item"><span class="legend-color" style="background:#fd7e14"></span> High (1-2 pubs)</span>
-                    <span class="legend-item"><span class="legend-color" style="background:#ffc107"></span> Moderate (3-10 pubs)</span>
-                    <span class="legend-item"><span class="legend-color" style="background:#28a745"></span> Low (&gt;10 pubs)</span>
-                </div>
-                <div class="matrix-container" id="matrix-container">
-                    <!-- Matrix rendered by JS -->
-                    <p class="loading">Loading matrix data...</p>
+                <h3>Consistently Neglected Diseases</h3>
+                <p class="card-description">Diseases under-researched at BOTH discovery and translation stages</p>
+                <div class="neglected-diseases-grid" id="neglected-diseases-grid">
+                    <!-- Populated by JS -->
                 </div>
             </div>
         </section>
-        
-        <!-- Tab 5: Trends -->
+
+        <!-- Tab 6: Trends -->
         <section id="trends" class="tab-content">
             <div class="section-header">
-                <h2>Publication Trends</h2>
-                <p>How biobank research has grown over time</p>
+                <h2>Temporal Trends</h2>
+                <p>How research equity has evolved over time</p>
             </div>
-            
+
             <div class="card chart-card">
-                <h3>Global Publication Growth</h3>
+                <h3>Clinical Trial Growth (2000-2025)</h3>
                 <div class="chart-container chart-large">
-                    <canvas id="chart-trends-global"></canvas>
+                    <canvas id="chart-trends-ct-growth"></canvas>
                 </div>
             </div>
-            
+
             <div class="card chart-card">
-                <h3>Trends by Biobank</h3>
-                <div class="filters">
-                    <select id="trends-biobank-select" class="filter-select">
-                        <option value="">Select biobank...</option>
-                    </select>
-                </div>
+                <h3>Global South Priority Share Over Time</h3>
                 <div class="chart-container chart-large">
-                    <canvas id="chart-trends-biobank"></canvas>
+                    <canvas id="chart-trends-gs-share"></canvas>
                 </div>
+            </div>
+
+            <div class="card info-card">
+                <h3>Trend Analysis</h3>
+                <p><strong>2000-2005 average:</strong> 47.7% of trials addressed GS priority diseases</p>
+                <p><strong>2020-2025 average:</strong> 35.5% of trials addressed GS priority diseases</p>
+                <p><strong>Change:</strong> <span class="trend-negative">-12.3 percentage points</span></p>
+                <p>Despite a <strong>15.5x increase</strong> in total trial volume, the share dedicated to Global South Priority diseases has <em>declined</em>. The COVID-19 pandemic temporarily increased GS share (43.1% in 2020) but this was transient.</p>
             </div>
         </section>
-        
-        <!-- Tab 6: Themes -->
-        <section id="themes" class="tab-content">
-            <div class="section-header">
-                <h2>Research Themes</h2>
-                <p>MeSH-based thematic analysis of biobank research</p>
-            </div>
-            
-            <div class="charts-row">
-                <div class="card chart-card">
-                    <h3>Theme Distribution</h3>
-                    <div class="chart-container">
-                        <canvas id="chart-theme-dist"></canvas>
-                    </div>
-                </div>
-                <div class="card chart-card">
-                    <h3>Publications by Theme</h3>
-                    <div class="chart-container">
-                        <canvas id="chart-theme-pubs"></canvas>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Theme Table -->
-            <div class="card">
-                <h3>Theme Coverage Across Biobanks</h3>
-                <div class="table-container">
-                    <table class="data-table" id="table-themes">
-                        <thead>
-                            <tr>
-                                <th>Theme</th>
-                                <th>Publications</th>
-                                <th>Disease Count</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Tab 7: Compare -->
-        <section id="compare" class="tab-content">
-            <div class="section-header">
-                <h2>Compare Biobanks</h2>
-                <p>Side-by-side comparison of biobank metrics</p>
-            </div>
-            
-            <!-- Biobank Selectors -->
-            <div class="compare-selectors">
-                <div class="selector-group">
-                    <label>Biobank 1:</label>
-                    <select id="compare-biobank1" class="filter-select"></select>
-                </div>
-                <div class="selector-group">
-                    <label>Biobank 2:</label>
-                    <select id="compare-biobank2" class="filter-select"></select>
-                </div>
-            </div>
-            
-            <!-- Comparison Cards -->
-            <div class="compare-cards">
-                <div class="card compare-card" id="compare-card1">
-                    <h3 id="compare-name1">← Select Biobank 1</h3>
-                    <div class="compare-stats" id="compare-stats1">
-                        <p style="color: #666; font-style: italic;">Choose a biobank from the dropdown above to see its metrics here.</p>
-                    </div>
-                </div>
-                <div class="card compare-card" id="compare-card2">
-                    <h3 id="compare-name2">← Select Biobank 2</h3>
-                    <div class="compare-stats" id="compare-stats2">
-                        <p style="color: #666; font-style: italic;">Choose a second biobank to compare side-by-side.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Radar Chart -->
-            <div class="card chart-card">
-                <h3>Metric Comparison</h3>
-                <div class="chart-container">
-                    <canvas id="chart-compare-radar"></canvas>
-                </div>
-            </div>
-            
-            <!-- Similar Pairs -->
-            <div class="card">
-                <h3>Similar Biobank Pairs</h3>
-                <div class="table-container">
-                    <table class="data-table" id="table-similar">
-                        <thead>
-                            <tr>
-                                <th>Biobank 1</th>
-                                <th>Biobank 2</th>
-                                <th>Similarity</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-        
-        <!-- Tab 8: Equity -->
+
+        <!-- Tab 7: Equity -->
         <section id="equity" class="tab-content">
             <div class="section-header">
                 <h2>Global Health Equity</h2>
-                <p>HIC vs LMIC research distribution analysis</p>
+                <p>HIC vs LMIC research distribution across the pipeline</p>
             </div>
-            
+
             <!-- Equity Summary -->
             <div class="summary-cards">
                 <div class="card summary-card">
-                    <div class="card-value" id="equity-ratio">--</div>
-                    <div class="card-label">Equity Ratio</div>
-                    <div class="card-sublabel" id="equity-interpretation">--</div>
+                    <div class="card-value" id="equity-ct-ratio">--</div>
+                    <div class="card-label">CT HIC:LMIC Ratio</div>
+                    <div class="card-sublabel">trial sites</div>
                 </div>
-                <div class="card summary-card hic-card">
-                    <div class="card-value" id="hic-biobanks">--</div>
-                    <div class="card-label">HIC Biobanks</div>
-                    <div class="card-sublabel" id="hic-pubs">-- publications</div>
+                <div class="card summary-card">
+                    <div class="card-value" id="equity-bb-ratio">57.8:1</div>
+                    <div class="card-label">Biobank HIC:LMIC</div>
+                    <div class="card-sublabel">publications</div>
                 </div>
-                <div class="card summary-card lmic-card">
-                    <div class="card-value" id="lmic-biobanks">--</div>
-                    <div class="card-label">LMIC Biobanks</div>
-                    <div class="card-sublabel" id="lmic-pubs">-- publications</div>
+                <div class="card summary-card">
+                    <div class="card-value" id="equity-gs-burden">38%</div>
+                    <div class="card-label">GS Burden Share</div>
+                    <div class="card-sublabel">of global DALYs</div>
+                </div>
+                <div class="card summary-card">
+                    <div class="card-value" id="equity-gs-research">--</div>
+                    <div class="card-label">GS Research Share</div>
+                    <div class="card-sublabel">of clinical trials</div>
                 </div>
             </div>
-            
+
             <!-- Charts -->
             <div class="charts-row">
                 <div class="card chart-card">
-                    <h3>Publication Share: HIC vs LMIC</h3>
+                    <h3>Burden vs Research Allocation</h3>
                     <div class="chart-container">
-                        <canvas id="chart-equity-share"></canvas>
+                        <canvas id="chart-equity-burden-research"></canvas>
                     </div>
                 </div>
                 <div class="card chart-card">
-                    <h3>Publications by WHO Region</h3>
+                    <h3>Geographic Distribution of Trials</h3>
                     <div class="chart-container">
-                        <canvas id="chart-equity-region"></canvas>
+                        <canvas id="chart-equity-geo"></canvas>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Global South Priority Diseases -->
             <div class="card">
-                <h3>Global South Priority Diseases</h3>
-                <p class="card-description">Diseases disproportionately affecting low- and middle-income countries</p>
+                <h3>Global South Priority Diseases - The Neglect Pattern</h3>
+                <p class="card-description">These 30 diseases disproportionately affect LMICs but receive systematically less research attention</p>
                 <div class="table-container">
-                    <table class="data-table" id="table-gs-diseases">
+                    <table class="data-table" id="table-gs-diseases-equity">
                         <thead>
                             <tr>
                                 <th>Disease</th>
                                 <th>DALYs (M)</th>
-                                <th>Publications</th>
-                                <th>Gap Score</th>
-                                <th>Severity</th>
+                                <th>Clinical Trials</th>
+                                <th>Intensity</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody></tbody>
@@ -449,221 +542,121 @@
                 </div>
             </div>
         </section>
-        
-        <!-- Tab 9: About / Methodology -->
+
+        <!-- Tab 8: About -->
         <section id="about" class="tab-content">
             <div class="section-header">
-                <h2>About HEIM-Biobank</h2>
+                <h2>About HEIM Framework</h2>
                 <p>Methodology, data sources, and how to interpret this dashboard</p>
             </div>
-            
-            <!-- What is HEIM-Biobank -->
+
+            <!-- What is HEIM -->
             <div class="card methodology-card">
-                <h3>🎯 What is HEIM-Biobank?</h3>
-                <p><strong>HEIM-Biobank</strong> (Health Equity Informative Metrics for Biobanks) is a tool that measures how well biobank research aligns with global health priorities. It answers a critical question: <em>Are biobanks studying the diseases that cause the most suffering worldwide?</em></p>
-                <p>Many biobanks are located in high-income countries and tend to focus on diseases prevalent in those regions. Meanwhile, conditions like malaria, tuberculosis, and diarrheal diseases—which cause enormous suffering in low- and middle-income countries—receive relatively little attention. HEIM-Biobank quantifies these gaps to guide more equitable research priorities.</p>
+                <h3>&#127919; What is HEIM?</h3>
+                <p><strong>HEIM (Health Equity Informative Metrics)</strong> is a comprehensive framework for measuring alignment between biomedical research output and global health priorities. It quantifies the "discovery-to-translation gap"—showing how health equity disparities persist and even worsen as research moves from basic science (biobanks) to clinical application (trials).</p>
+                <p>The framework answers critical questions:</p>
+                <ul>
+                    <li>Are we studying the diseases that cause the most suffering?</li>
+                    <li>Do Global South populations benefit equitably from research?</li>
+                    <li>Is the situation improving or worsening over time?</li>
+                </ul>
             </div>
 
             <!-- Data Sources -->
             <div class="card methodology-card">
-                <h3>📊 Data Sources</h3>
-                
+                <h3>&#128202; Data Sources</h3>
+
                 <div class="methodology-subsection">
-                    <h4>Global Burden of Disease (GBD) 2021</h4>
-                    <p>Disease burden data comes from the <a href="https://www.healthdata.org/gbd/2021" target="_blank">Global Burden of Disease Study 2021</a>, published by the Institute for Health Metrics and Evaluation (IHME). This is the world's most comprehensive effort to measure health loss from diseases, injuries, and risk factors.</p>
+                    <h4>Clinical Trials Data</h4>
+                    <p>Trial data comes from <a href="https://clinicaltrials.gov/" target="_blank">ClinicalTrials.gov</a> via the AACT database (Aggregate Analysis of ClinicalTrials.gov).</p>
                     <ul>
-                        <li><strong>DALYs (Disability-Adjusted Life Years)</strong>: The primary measure of disease burden. One DALY = one year of healthy life lost, either through premature death or living with disability.</li>
-                        <li><strong>179 disease causes</strong> are analyzed, organized into categories (e.g., Cardiovascular, Infectious, Neurological).</li>
-                        <li><strong>Global estimates</strong> are used to represent worldwide health priorities.</li>
+                        <li><strong>563,725 studies</strong> retrieved (2000-2025)</li>
+                        <li><strong>2,189,930 disease-trial mappings</strong> (trials can address multiple diseases)</li>
+                        <li><strong>770,178 trial site records</strong> across 194 countries</li>
                     </ul>
                 </div>
-                
+
                 <div class="methodology-subsection">
-                    <h4>PubMed / MEDLINE</h4>
-                    <p>Publication data is retrieved from <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a>, the largest database of biomedical literature. Publications are:</p>
+                    <h4>Disease Burden Data</h4>
+                    <p>Burden data from <a href="https://www.healthdata.org/gbd/2021" target="_blank">Global Burden of Disease Study 2021</a> (IHME).</p>
                     <ul>
-                        <li>Retrieved using biobank-specific search queries</li>
-                        <li>Mapped to GBD disease categories using MeSH (Medical Subject Headings) terms</li>
-                        <li>Filtered to include only peer-reviewed articles (preprints excluded)</li>
-                        <li><strong>Data cut-off:</strong> December 31, 2025 (publications indexed through this date)</li>
+                        <li><strong>DALYs (Disability-Adjusted Life Years)</strong>: One DALY = one year of healthy life lost</li>
+                        <li><strong>89 disease categories</strong> mapped to GBD Level 3 causes</li>
+                        <li><strong>30 Global South Priority diseases</strong> identified based on LMIC burden distribution</li>
                     </ul>
-                    <p><strong>MeSH Mapping Validation:</strong> Manual review of 200 randomly sampled publications showed 92% agreement with automated MeSH-to-GBD mapping. Discrepancies primarily occurred with multi-disease publications where secondary conditions were missed.</p>
                 </div>
-                
+
                 <div class="methodology-subsection">
-                    <h4>Biobank Registry</h4>
-                    <p>The dashboard includes <strong>70 biobanks</strong> from the <a href="https://ihccglobal.org/" target="_blank">International Health Cohorts Consortium (IHCC)</a>, representing cohorts with published biobank-linked research. Of the 79 IHCC member cohorts, 70 have PubMed-indexed publications.</p>
-                    <p>Biobanks are classified by:</p>
-                    <ul>
-                        <li><strong>WHO Region</strong>: AFR (Africa), AMR (Americas), EMR (Eastern Mediterranean), EUR (Europe), SEAR (South-East Asia), WPR (Western Pacific)</li>
-                        <li><strong>Income Status</strong>: High-Income Countries (HIC, n=52) vs Low/Middle-Income Countries (LMIC, n=18) based on <a href="https://datahelpdesk.worldbank.org/knowledgebase/articles/906519" target="_blank">World Bank 2024 classifications</a></li>
-                    </ul>
+                    <h4>Biobank Data</h4>
+                    <p>Publication data from PubMed for 70 biobanks in the <a href="https://ihccglobal.org/" target="_blank">IHCC registry</a>.</p>
                 </div>
             </div>
-            
-            <!-- Key Metrics Explained -->
+
+            <!-- Key Metrics -->
             <div class="card methodology-card">
-                <h3>📐 Key Metrics Explained</h3>
-                
+                <h3>&#128208; Key Metrics Explained</h3>
+
                 <div class="methodology-subsection">
-                    <h4>Equity Alignment Score (EAS)</h4>
-                    <p>A score from 0-100 measuring how well a biobank's research output matches global disease burden. <strong>Higher is better.</strong></p>
+                    <h4>Research Intensity</h4>
                     <div class="formula-box">
-                        <code>EAS = 100 - (0.4 × Gap_Severity + 0.3 × Burden_Miss + 0.3 × Capacity_Penalty)</code>
+                        <code>Research Intensity = Trials (or Publications) / Million DALYs</code>
                     </div>
-                    <ul>
-                        <li><strong>High (≥70)</strong>: Research well-aligned with global health priorities</li>
-                        <li><strong>Moderate (40-69)</strong>: Some alignment, room for improvement</li>
-                        <li><strong>Low (&lt;40)</strong>: Research focus misaligned with global burden</li>
-                    </ul>
+                    <p>Measures research attention relative to disease burden. Higher = more research per unit of suffering.</p>
                 </div>
-                
+
                 <div class="methodology-subsection">
-                    <h4>Research Gap Score</h4>
-                    <p>A score from 0-100 for each disease measuring the mismatch between disease burden and research attention. <strong>Higher = bigger gap (worse).</strong></p>
-                    <ul>
-                        <li><strong>Critical (&gt;70)</strong>: Severely under-researched relative to burden</li>
-                        <li><strong>High (50-70)</strong>: Substantially under-researched</li>
-                        <li><strong>Moderate (30-50)</strong>: Moderately under-researched</li>
-                        <li><strong>Low (&lt;30)</strong>: Research roughly proportional to burden</li>
-                    </ul>
-                </div>
-                
-                <div class="methodology-subsection">
-                    <h4>Research Opportunity Score (ROS)</h4>
-                    <p>For each biobank, this represents the cumulative disease burden of conditions with minimal research coverage (≤2 publications). A <strong>higher ROS</strong> indicates more untapped potential for impactful research.</p>
-                </div>
-                
-                <div class="methodology-subsection">
-                    <h4>Equity Ratio</h4>
-                    <p>Compares research intensity between high-income and low/middle-income country biobanks:</p>
+                    <h4>Intensity Gap</h4>
                     <div class="formula-box">
-                        <code>Equity Ratio = (Pubs_HIC / DALYs_HIC) / (Pubs_LMIC / DALYs_LMIC)</code>
+                        <code>Intensity Gap = Non-GS Intensity / GS Priority Intensity</code>
                     </div>
-                    <p>A ratio of 1.0 would indicate equal research intensity. Ratios &gt;100 indicate severe imbalance favoring HIC research.</p>
+                    <p>Ratio of research intensity between non-Global South diseases and GS Priority diseases. A value of 2.4x means non-GS diseases receive 2.4 times more research attention per DALY.</p>
+                </div>
+
+                <div class="methodology-subsection">
+                    <h4>Global South Priority</h4>
+                    <p>30 diseases identified as disproportionately affecting low- and middle-income countries, including:</p>
+                    <ul>
+                        <li>Infectious diseases: Malaria, TB, HIV/AIDS, NTDs</li>
+                        <li>Maternal and neonatal conditions</li>
+                        <li>Nutritional deficiencies</li>
+                        <li>Diarrheal diseases and respiratory infections</li>
+                    </ul>
                 </div>
             </div>
-            
-            <!-- How to Use This Dashboard -->
-            <div class="card methodology-card">
-                <h3>🧭 How to Use This Dashboard</h3>
-                
-                <div class="methodology-subsection">
-                    <h4>Overview Tab</h4>
-                    <p>Start here for a global summary: total biobanks analyzed, publications mapped, and critical research gaps across all diseases.</p>
-                </div>
-                
-                <div class="methodology-subsection">
-                    <h4>Biobanks Tab</h4>
-                    <p>Explore individual biobank performance. Filter by region or equity category. Click column headers to sort.</p>
-                </div>
-                
-                <div class="methodology-subsection">
-                    <h4>Diseases Tab</h4>
-                    <p>See which diseases are under-researched. Filter by category or gap severity. High-burden diseases with few publications represent urgent priorities.</p>
-                </div>
-                
-                <div class="methodology-subsection">
-                    <h4>Matrix Tab</h4>
-                    <p>Visualize the intersection of biobanks and diseases. Darker cells = more publications. Gaps (empty cells) reveal opportunities.</p>
-                </div>
-                
-                <div class="methodology-subsection">
-                    <h4>Trends Tab</h4>
-                    <p>Track publication growth over time by biobank. Identifies which resources are expanding most rapidly.</p>
-                </div>
-                
-                <div class="methodology-subsection">
-                    <h4>Themes Tab</h4>
-                    <p>Understand research themes based on MeSH term clustering. See which methodological approaches (GWAS, imaging, etc.) dominate.</p>
-                </div>
-                
-                <div class="methodology-subsection">
-                    <h4>Compare Tab</h4>
-                    <p>Side-by-side comparison of any two biobanks across multiple dimensions.</p>
-                </div>
-                
-                <div class="methodology-subsection">
-                    <h4>Equity Tab</h4>
-                    <p>Deep dive into HIC vs LMIC disparities. See Global South priority diseases and regional publication distribution.</p>
-                </div>
-            </div>
-            
-            <!-- Glossary -->
-            <div class="card methodology-card">
-                <h3>📖 Glossary</h3>
-                <table class="glossary-table">
-                    <tr>
-                        <td><strong>Biobank</strong></td>
-                        <td>A repository that stores biological samples (blood, tissue, DNA) linked to health records for research.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>DALYs</strong></td>
-                        <td>Disability-Adjusted Life Years. Combines years of life lost (mortality) and years lived with disability (morbidity) into a single measure.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>GBD</strong></td>
-                        <td>Global Burden of Disease Study. A comprehensive assessment of mortality and disability from major diseases worldwide.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>HIC</strong></td>
-                        <td>High-Income Countries. Nations with high gross national income per capita (e.g., USA, UK, most of Europe).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>LMIC</strong></td>
-                        <td>Low- and Middle-Income Countries. Nations with lower gross national income (e.g., most of Africa, South Asia, Latin America).</td>
-                    </tr>
-                    <tr>
-                        <td><strong>MeSH</strong></td>
-                        <td>Medical Subject Headings. A controlled vocabulary used to index biomedical literature in PubMed.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>WHO Region</strong></td>
-                        <td>Geographic regions defined by the World Health Organization: AFR, AMR, EMR, EUR, SEAR, WPR.</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Global South</strong></td>
-                        <td>Term referring to countries in Africa, Latin America, Asia, and Oceania that are generally lower-income and bear disproportionate disease burden.</td>
-                    </tr>
-                </table>
-            </div>
-            
+
             <!-- Citation -->
             <div class="card methodology-card">
-                <h3>📚 Citation</h3>
-                <p>This dashboard implements the methodology described in:</p>
+                <h3>&#128218; Citation</h3>
                 <div class="citation-box">
-                    <p><strong>Corpas M, Valdivia-Silva J, Fatumo S, Guio H.</strong> (2025). Health Equity Informative Metrics (HEIM): Quantifying Research Alignment Across 70 Global Biobanks. <em>medRxiv preprint</em>.</p>
+                    <p><strong>Corpas M, Valdivia-Silva J, Fatumo S, Guio H.</strong> (2025). Health Equity Informative Metrics (HEIM): Quantifying the Discovery-to-Translation Gap in Global Health Research. <em>Lancet Global Health</em> (in preparation).</p>
                 </div>
-                <p>Source code and data: <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">https://github.com/manuelcorpas/17-EHR</a></p>
+                <p>Source code and data: <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">github.com/manuelcorpas/17-EHR</a></p>
             </div>
-            
+
             <!-- Contact -->
             <div class="card methodology-card">
-                <h3>📧 Contact</h3>
-                <p>For questions, suggestions, or to request addition of new biobanks:</p>
+                <h3>&#128231; Contact</h3>
                 <p><strong>Manuel Corpas</strong> — <a href="mailto:m.corpas@westminster.ac.uk">m.corpas@westminster.ac.uk</a></p>
                 <p>University of Westminster | The Alan Turing Institute | Cambridge Precision Medicine</p>
             </div>
         </section>
-        
+
     </main>
-    
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
             <p>
-                <strong>HEIM-Biobank v2.0 (IHCC)</strong> |
-                Specification date: 2026-01-07 |
-                Data: GBD 2021, PubMed |
-                Part of <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">HEIM Framework</a>
+                <strong>HEIM Framework v2.0</strong> |
+                Data: GBD 2021, ClinicalTrials.gov, PubMed |
+                <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">GitHub</a>
             </p>
             <p class="footer-methodology">
-                Methodology: Corpas et al. (2025), medRxiv preprint
+                Corpas et al. (2025) — Lancet Global Health (in preparation)
             </p>
         </div>
     </footer>
-    
+
     <!-- Scripts -->
     <script src="js/app.js"></script>
     <script src="js/charts.js"></script>

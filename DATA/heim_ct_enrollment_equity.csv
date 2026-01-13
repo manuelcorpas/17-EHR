@@ -1,0 +1,9 @@
+category,observed_count,observed_pct,reference_pct,eri,status,trial_count
+white,,0,57.8,0.0,Severely underrepresented,33217
+black,,0,12.1,0.0,Severely underrepresented,32714
+asian,,0,5.9,0.0,Severely underrepresented,32452
+hispanic,,0,18.7,0.0,Severely underrepresented,24828
+american_indian,3145.0,0,0.7,0.0,Severely underrepresented,109
+pacific_islander,,0,0.2,0.0,Severely underrepresented,30590
+multiple,42039.0,0,10.7,0.0,Severely underrepresented,319
+other,,0,3.9,0.0,Severely underrepresented,48925

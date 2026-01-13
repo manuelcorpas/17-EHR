@@ -1,4 +1,5 @@
-// HEIM-Biobank v2.0 (IHCC) Dashboard Application
+// HEIM Framework v2.0 Dashboard Application
+// Integrates Biobank and Clinical Trials equity analysis
 
 // Global data store
 let DATA = {
@@ -9,43 +10,47 @@ let DATA = {
     trends: null,
     themes: null,
     comparison: null,
-    equity: null
+    equity: null,
+    clinicalTrials: null  // NEW: Clinical trials data
 };
+
+// Chart instances for cleanup
+let chartInstances = {};
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('HEIM-Biobank v2.0 (IHCC) Dashboard initializing...');
-    
+    console.log('HEIM Framework v2.0 Dashboard initializing...');
+
     // Setup tab navigation
     setupTabs();
-    
+
     // Load all data
     await loadAllData();
-    
+
     // Render initial view
     renderOverview();
-    
+
     // Setup filters and interactions
     setupFilters();
-    
+
     console.log('Dashboard ready');
 });
 
 // Tab Navigation
 function setupTabs() {
     const tabBtns = document.querySelectorAll('.tab-btn');
-    
+
     tabBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             // Update active button
             tabBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-            
+
             // Update active content
             const tabId = btn.dataset.tab;
             document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
-            
+
             // Render tab-specific content
             renderTab(tabId);
         });
@@ -55,25 +60,25 @@ function setupTabs() {
 function renderTab(tabId) {
     switch(tabId) {
         case 'overview': renderOverview(); break;
+        case 'clinical-trials': renderClinicalTrials(); break;
         case 'biobanks': renderBiobanks(); break;
         case 'diseases': renderDiseases(); break;
-        case 'matrix': renderMatrix(); break;
+        case 'comparison': renderComparison(); break;
         case 'trends': renderTrends(); break;
-        case 'themes': renderThemes(); break;
-        case 'compare': renderCompare(); break;
         case 'equity': renderEquity(); break;
     }
 }
 
 // Data Loading
 async function loadAllData() {
-    const files = ['summary', 'biobanks', 'diseases', 'matrix', 'trends', 'themes', 'comparison', 'equity'];
-    
+    const files = ['summary', 'biobanks', 'diseases', 'matrix', 'trends', 'themes', 'comparison', 'equity', 'clinical_trials'];
+
     const promises = files.map(async (file) => {
         try {
             const response = await fetch(`data/${file}.json`);
             if (response.ok) {
-                DATA[file] = await response.json();
+                const key = file === 'clinical_trials' ? 'clinicalTrials' : file;
+                DATA[key] = await response.json();
                 console.log(`Loaded ${file}.json`);
             } else {
                 console.warn(`Failed to load ${file}.json`);
@@ -82,54 +87,345 @@ async function loadAllData() {
             console.warn(`Error loading ${file}.json:`, err);
         }
     });
-    
+
     await Promise.all(promises);
 }
 
-// Overview Tab
+// ============================================================
+// OVERVIEW TAB
+// ============================================================
 function renderOverview() {
-    if (!DATA.summary) return;
-    
-    const s = DATA.summary;
-    
-    // Update summary stats
-    document.getElementById('stat-biobanks').textContent = s.overview?.totalBiobanks || '--';
-    document.getElementById('stat-publications').textContent = formatNumber(s.overview?.totalPublications);
-    document.getElementById('stat-countries').textContent = s.overview?.totalCountries || '--';
-    document.getElementById('stat-critical').textContent = s.gapDistribution?.Critical || '--';
-    
+    // Render biobank summary stats
+    if (DATA.summary) {
+        const s = DATA.summary;
+        setText('stat-biobanks', s.overview?.totalBiobanks || '--');
+        setText('stat-publications', formatNumber(s.overview?.totalPublications));
+        setText('stat-countries', s.overview?.totalCountries || '--');
+        setText('stat-critical', s.gapDistribution?.Critical || '--');
+    }
+
+    // Render clinical trials summary stats
+    if (DATA.clinicalTrials) {
+        const ct = DATA.clinicalTrials;
+        setText('stat-ct-trials', formatNumber(ct.summary?.totalTrials));
+        setText('stat-ct-gs-pct', ct.globalSouthAnalysis?.gsTrialsPct + '%');
+        setText('stat-ct-gap', ct.globalSouthAnalysis?.intensityGap + 'x');
+        setText('stat-ct-hic-ratio', ct.geographic?.hicLmicRatio + ':1');
+    }
+
+    // Render overview charts
+    renderOverviewCharts();
+}
+
+function renderOverviewCharts() {
+    if (!DATA.clinicalTrials) return;
+
+    // Chart: Clinical Trial Categories (pie)
+    const catCtx = document.getElementById('chart-ct-categories');
+    if (catCtx) {
+        destroyChart('chart-ct-categories');
+        const categories = DATA.clinicalTrials.categories.slice(0, 8);
+        chartInstances['chart-ct-categories'] = new Chart(catCtx, {
+            type: 'doughnut',
+            data: {
+                labels: categories.map(c => c.name),
+                datasets: [{
+                    data: categories.map(c => c.trials),
+                    backgroundColor: [
+                        '#762a83', '#e31a1c', '#1f78b4', '#33a02c',
+                        '#ff7f00', '#6a3d9a', '#b15928', '#999999'
+                    ]
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { position: 'right', labels: { boxWidth: 12 } }
+                }
+            }
+        });
+    }
+
+    // Chart: Research Intensity Comparison
+    const intensityCtx = document.getElementById('chart-intensity-compare');
+    if (intensityCtx && DATA.clinicalTrials.keyFindings) {
+        destroyChart('chart-intensity-compare');
+        const lowest = DATA.clinicalTrials.keyFindings.lowestIntensity.slice(0, 5);
+        const highest = DATA.clinicalTrials.keyFindings.highestIntensity.slice(0, 5);
+
+        chartInstances['chart-intensity-compare'] = new Chart(intensityCtx, {
+            type: 'bar',
+            data: {
+                labels: [...lowest.map(d => truncate(d.name, 20)), '', ...highest.map(d => truncate(d.name, 20))],
+                datasets: [{
+                    label: 'Trials/M DALYs',
+                    data: [...lowest.map(d => d.intensity), null, ...highest.map(d => d.intensity)],
+                    backgroundColor: [...lowest.map(d => d.gs ? '#d73027' : '#4575b4'), 'transparent', ...highest.map(() => '#1b7837')]
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    title: { display: true, text: 'Lowest (left) vs Highest (right) Research Intensity' }
+                },
+                scales: {
+                    x: { type: 'logarithmic', title: { display: true, text: 'Trials per Million DALYs (log scale)' } }
+                }
+            }
+        });
+    }
+}
+
+// ============================================================
+// CLINICAL TRIALS TAB
+// ============================================================
+function renderClinicalTrials() {
+    if (!DATA.clinicalTrials) return;
+
+    const ct = DATA.clinicalTrials;
+    const gs = ct.globalSouthAnalysis;
+    const geo = ct.geographic;
+
+    // Summary cards
+    setText('ct-total-trials', formatNumber(ct.summary.totalTrials));
+    setText('ct-gs-trials', formatNumber(gs.gsTrials));
+    setText('ct-gs-trials-pct', `(${gs.gsTrialsPct}%)`);
+    setText('ct-intensity-gap', gs.intensityGap + 'x');
+    setText('ct-neglected', ct.keyFindings.neglectedDiseases.length);
+
+    // Cancer dominance
+    const cancer = ct.keyFindings.cancerDominance;
+    setText('ct-cancer-pct', cancer.cancerPct + '%');
+    setText('ct-cancer-burden-pct', cancer.cancerDALYsPct + '%');
+    setText('ct-cancer-ratio', (cancer.cancerPct / cancer.cancerDALYsPct).toFixed(1) + 'x');
+
+    // Temporal insights
+    if (ct.temporal && ct.temporal.length > 0) {
+        const firstYear = ct.temporal[0];
+        const lastYear = ct.temporal[ct.temporal.length - 1];
+        const growthFactor = (lastYear.trials / firstYear.trials).toFixed(1);
+        const gsDecline = (lastYear.gsPct - ct.temporal.slice(0, 6).reduce((a, b) => a + b.gsPct, 0) / 6).toFixed(1);
+        setText('ct-growth-factor', growthFactor + 'x');
+        setText('ct-gs-decline', Math.abs(gsDecline));
+    }
+
     // Render charts
-    renderEASDistributionChart();
-    renderCriticalGapsChart();
-    
-    // Render top biobanks table
-    renderTopBiobanksTable();
+    renderCTCharts();
+
+    // Render tables
+    renderCTTables();
 }
 
-function renderTopBiobanksTable() {
-    const tbody = document.querySelector('#table-top-biobanks tbody');
-    if (!tbody || !DATA.summary?.topBiobanks) return;
+function renderCTCharts() {
+    const ct = DATA.clinicalTrials;
 
-    tbody.innerHTML = DATA.summary.topBiobanks.map((b, i) => `
-        <tr>
-            <td>${i + 1}</td>
-            <td>${b.name}</td>
-            <td>${b.eas?.toFixed(1) || '--'}</td>
-            <td><span class="badge badge-${getCategoryClass(b.category)}">${b.category}</span></td>
-            <td>${formatNumber(b.publications)}</td>
-        </tr>
-    `).join('');
+    // Trials by category (bar)
+    const catCtx = document.getElementById('chart-ct-by-category');
+    if (catCtx) {
+        destroyChart('chart-ct-by-category');
+        const categories = ct.categories.slice(0, 12);
+        chartInstances['chart-ct-by-category'] = new Chart(catCtx, {
+            type: 'bar',
+            data: {
+                labels: categories.map(c => truncate(c.name, 25)),
+                datasets: [{
+                    label: 'Clinical Trials',
+                    data: categories.map(c => c.trials),
+                    backgroundColor: '#2563eb'
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { x: { title: { display: true, text: 'Number of Trials' } } }
+            }
+        });
+    }
+
+    // Intensity by category
+    const intCtx = document.getElementById('chart-ct-intensity');
+    if (intCtx) {
+        destroyChart('chart-ct-intensity');
+        const sorted = [...ct.categories].sort((a, b) => a.intensity - b.intensity).slice(0, 12);
+        chartInstances['chart-ct-intensity'] = new Chart(intCtx, {
+            type: 'bar',
+            data: {
+                labels: sorted.map(c => truncate(c.name, 25)),
+                datasets: [{
+                    label: 'Trials/M DALYs',
+                    data: sorted.map(c => c.intensity),
+                    backgroundColor: sorted.map(c => c.intensity < 200 ? '#dc3545' : c.intensity < 500 ? '#ffc107' : '#28a745')
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { x: { title: { display: true, text: 'Trials per Million DALYs' } } }
+            }
+        });
+    }
+
+    // HIC vs LMIC pie
+    const hicCtx = document.getElementById('chart-ct-hic-lmic');
+    if (hicCtx) {
+        destroyChart('chart-ct-hic-lmic');
+        chartInstances['chart-ct-hic-lmic'] = new Chart(hicCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['High-Income (HIC)', 'Low/Middle-Income (LMIC)'],
+                datasets: [{
+                    data: [ct.geographic.hicSites, ct.geographic.lmicSites],
+                    backgroundColor: ['#2166ac', '#b2182b']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+    }
+
+    // Top countries bar
+    const countryCtx = document.getElementById('chart-ct-countries');
+    if (countryCtx) {
+        destroyChart('chart-ct-countries');
+        const countries = ct.geographic.topCountries.slice(0, 15);
+        chartInstances['chart-ct-countries'] = new Chart(countryCtx, {
+            type: 'bar',
+            data: {
+                labels: countries.map(c => c.name),
+                datasets: [{
+                    label: 'Trial Sites',
+                    data: countries.map(c => c.sites),
+                    backgroundColor: countries.map(c => c.income === 'HIC' ? '#2166ac' : '#b2182b')
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { x: { title: { display: true, text: 'Number of Trial Sites' } } }
+            }
+        });
+    }
+
+    // Temporal volume
+    const volCtx = document.getElementById('chart-ct-temporal-volume');
+    if (volCtx && ct.temporal) {
+        destroyChart('chart-ct-temporal-volume');
+        chartInstances['chart-ct-temporal-volume'] = new Chart(volCtx, {
+            type: 'bar',
+            data: {
+                labels: ct.temporal.map(t => t.year),
+                datasets: [
+                    {
+                        label: 'GS Priority',
+                        data: ct.temporal.map(t => t.gsTrials),
+                        backgroundColor: '#d73027'
+                    },
+                    {
+                        label: 'Other',
+                        data: ct.temporal.map(t => t.trials - t.gsTrials),
+                        backgroundColor: '#4575b4'
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'top' } },
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true, title: { display: true, text: 'Trials Started' } }
+                }
+            }
+        });
+    }
+
+    // GS priority share over time
+    const gsCtx = document.getElementById('chart-ct-temporal-gs');
+    if (gsCtx && ct.temporal) {
+        destroyChart('chart-ct-temporal-gs');
+        chartInstances['chart-ct-temporal-gs'] = new Chart(gsCtx, {
+            type: 'line',
+            data: {
+                labels: ct.temporal.map(t => t.year),
+                datasets: [{
+                    label: 'GS Priority Share (%)',
+                    data: ct.temporal.map(t => t.gsPct),
+                    borderColor: '#d73027',
+                    backgroundColor: 'rgba(215, 48, 39, 0.1)',
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { y: { title: { display: true, text: '% of Trials' }, min: 0, max: 60 } }
+            }
+        });
+    }
 }
 
-// Biobanks Tab
+function renderCTTables() {
+    const ct = DATA.clinicalTrials;
+
+    // GS Priority diseases table
+    const gsTable = document.querySelector('#table-ct-gs-diseases tbody');
+    if (gsTable) {
+        const gsDiseases = ct.diseases.filter(d => d.globalSouthPriority).sort((a, b) => b.dalys - a.dalys);
+        gsTable.innerHTML = gsDiseases.map(d => {
+            const status = d.trials < 500 ? 'Severely Neglected' : d.trials < 2000 ? 'Neglected' : d.trials < 10000 ? 'Under-researched' : 'Moderate';
+            const statusClass = d.trials < 500 ? 'critical' : d.trials < 2000 ? 'high' : d.trials < 10000 ? 'moderate' : 'low';
+            return `<tr>
+                <td>${d.name}</td>
+                <td>${truncate(d.category, 20)}</td>
+                <td>${formatNumber(d.trials)}</td>
+                <td>${d.dalys.toFixed(1)}</td>
+                <td>${d.intensity.toFixed(0)}</td>
+                <td><span class="badge badge-${statusClass}">${status}</span></td>
+            </tr>`;
+        }).join('');
+    }
+
+    // Lowest intensity table
+    const lowTable = document.querySelector('#table-ct-lowest-intensity tbody');
+    if (lowTable && ct.keyFindings) {
+        lowTable.innerHTML = ct.keyFindings.lowestIntensity.map(d => `
+            <tr>
+                <td>${d.name}</td>
+                <td>${d.intensity.toFixed(1)}</td>
+                <td>${formatNumber(ct.diseases.find(x => x.name === d.name)?.trials || 0)}</td>
+                <td>${d.dalys}</td>
+                <td>${d.gs ? '<span class="badge badge-critical">Yes</span>' : 'No'}</td>
+            </tr>
+        `).join('');
+    }
+}
+
+// ============================================================
+// BIOBANKS TAB
+// ============================================================
 function renderBiobanks() {
     if (!DATA.biobanks?.biobanks) return;
-    
+
     const tbody = document.querySelector('#table-biobanks tbody');
     if (!tbody) return;
-    
+
     const biobanks = filterBiobanks(DATA.biobanks.biobanks);
-    
+
     tbody.innerHTML = biobanks.map(b => `
         <tr>
             <td>${b.name}</td>
@@ -148,7 +444,7 @@ function filterBiobanks(biobanks) {
     const search = document.getElementById('biobank-search')?.value.toLowerCase() || '';
     const region = document.getElementById('biobank-region-filter')?.value || '';
     const category = document.getElementById('biobank-category-filter')?.value || '';
-    
+
     return biobanks.filter(b => {
         if (search && !b.name.toLowerCase().includes(search)) return false;
         if (region && b.region !== region) return false;
@@ -157,280 +453,324 @@ function filterBiobanks(biobanks) {
     });
 }
 
-// Diseases Tab
+// ============================================================
+// DISEASES TAB
+// ============================================================
 function renderDiseases() {
-    if (!DATA.diseases?.diseases) return;
-    
+    if (!DATA.clinicalTrials?.diseases) return;
+
     const tbody = document.querySelector('#table-diseases tbody');
     if (!tbody) return;
-    
-    const diseases = filterDiseases(DATA.diseases.diseases);
-    
+
+    const filter = document.getElementById('disease-view-filter')?.value || 'all';
+    const search = document.getElementById('disease-search')?.value.toLowerCase() || '';
+
+    let diseases = DATA.clinicalTrials.diseases;
+
+    if (filter === 'gs') {
+        diseases = diseases.filter(d => d.globalSouthPriority);
+    } else if (filter === 'neglected') {
+        diseases = diseases.filter(d => d.trials < 500);
+    }
+
+    if (search) {
+        diseases = diseases.filter(d => d.name.toLowerCase().includes(search));
+    }
+
     tbody.innerHTML = diseases.map(d => `
         <tr>
             <td>${d.name}</td>
-            <td>${d.category}</td>
-            <td>${d.burden?.dalysMillions?.toFixed(1) || '--'}</td>
-            <td>${formatNumber(d.research?.globalPublications)}</td>
-            <td>${d.gap?.score?.toFixed(0) || '--'}</td>
-            <td><span class="badge badge-${d.gap?.severity?.toLowerCase()}">${d.gap?.severity || '--'}</span></td>
-            <td>${d.research?.biobanksEngaged || '--'}</td>
+            <td>${truncate(d.category, 25)}</td>
+            <td>${d.dalys.toFixed(1)}</td>
+            <td>${formatNumber(d.trials)}</td>
+            <td>${d.intensity.toFixed(0)}</td>
+            <td>${d.globalSouthPriority ? '<span class="badge badge-critical">Yes</span>' : 'No'}</td>
         </tr>
     `).join('');
-    
-    // Render burden chart
-    renderDiseaseBurdenChart();
+
+    // Render scatter plot
+    renderDiseaseScatter();
 }
 
-function filterDiseases(diseases) {
-    const search = document.getElementById('disease-search')?.value.toLowerCase() || '';
-    const category = document.getElementById('disease-category-filter')?.value || '';
-    const severity = document.getElementById('disease-severity-filter')?.value || '';
-    
-    return diseases.filter(d => {
-        if (search && !d.name.toLowerCase().includes(search)) return false;
-        if (category && d.category !== category) return false;
-        if (severity && d.gap?.severity !== severity) return false;
-        return true;
-    });
-}
+function renderDiseaseScatter() {
+    const ctx = document.getElementById('chart-disease-scatter');
+    if (!ctx || !DATA.clinicalTrials) return;
 
-// Matrix Tab
-function renderMatrix() {
-    if (!DATA.matrix) return;
-    
-    const container = document.getElementById('matrix-container');
-    if (!container) return;
-    
-    const m = DATA.matrix;
-    
-    // Build matrix table
-    let html = '<table class="matrix-table">';
-    
-    // Header row
-    html += '<tr><th></th>';
-    m.diseases.forEach(d => {
-        html += `<th title="${d.name}">${d.name.substring(0, 8)}</th>`;
-    });
-    html += '</tr>';
-    
-    // Data rows
-    m.biobanks.forEach((b, bi) => {
-        html += `<tr><td title="${b.name}">${b.name.substring(0, 15)}</td>`;
-        m.matrix.values[bi].forEach((val, di) => {
-            const cat = m.matrix.gapCategories[bi][di];
-            html += `<td class="matrix-cell-${cat}" title="${b.name} / ${m.diseases[di].name}: ${val} pubs">${val}</td>`;
-        });
-        html += '</tr>';
-    });
-    
-    html += '</table>';
-    container.innerHTML = html;
-}
+    destroyChart('chart-disease-scatter');
 
-// Trends Tab
-function renderTrends() {
-    if (!DATA.trends) return;
-    
-    renderGlobalTrendsChart();
-    populateTrendsBiobankSelect();
-}
+    const diseases = DATA.clinicalTrials.diseases.filter(d => d.dalys > 0 && d.trials > 0);
 
-function populateTrendsBiobankSelect() {
-    const select = document.getElementById('trends-biobank-select');
-    if (!select || !DATA.trends?.byBiobank) return;
-    
-    const options = Object.entries(DATA.trends.byBiobank).map(([id, data]) => 
-        `<option value="${id}">${data.name}</option>`
-    );
-    
-    select.innerHTML = '<option value="">Select biobank...</option>' + options.join('');
-    
-    select.addEventListener('change', () => {
-        const biobank = select.value;
-        if (biobank) {
-            renderBiobankTrendsChart(biobank);
+    chartInstances['chart-disease-scatter'] = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+            datasets: [
+                {
+                    label: 'Global South Priority',
+                    data: diseases.filter(d => d.globalSouthPriority).map(d => ({ x: d.trials, y: d.dalys, label: d.name })),
+                    backgroundColor: 'rgba(215, 48, 39, 0.7)',
+                    pointRadius: 8
+                },
+                {
+                    label: 'Other Diseases',
+                    data: diseases.filter(d => !d.globalSouthPriority).map(d => ({ x: d.trials, y: d.dalys, label: d.name })),
+                    backgroundColor: 'rgba(69, 117, 180, 0.5)',
+                    pointRadius: 6
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                x: { type: 'logarithmic', title: { display: true, text: 'Clinical Trials (log scale)' } },
+                y: { title: { display: true, text: 'Disease Burden (Million DALYs)' } }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: (ctx) => `${ctx.raw.label}: ${ctx.raw.x.toLocaleString()} trials, ${ctx.raw.y.toFixed(1)}M DALYs`
+                    }
+                }
+            }
         }
     });
 }
 
-// Themes Tab
-function renderThemes() {
-    if (!DATA.themes) return;
-    
-    renderThemeDistributionChart();
-    renderThemePublicationsChart();
-    renderThemesTable();
+// ============================================================
+// COMPARISON TAB (Pipeline Gap)
+// ============================================================
+function renderComparison() {
+    if (!DATA.clinicalTrials) return;
+
+    const ct = DATA.clinicalTrials;
+
+    // Update comparison table
+    setText('comp-hic-ratio', ct.geographic.hicLmicRatio + ':1 (sites)');
+    setText('comp-cancer-focus', ct.keyFindings.cancerDominance.cancerPct + '%');
+    setText('comp-gs-share', ct.globalSouthAnalysis.gsTrialsPct + '%');
+
+    // Render neglected diseases grid
+    const grid = document.getElementById('neglected-diseases-grid');
+    if (grid) {
+        const neglected = ['Malaria', 'Tuberculosis', 'Neonatal disorders', 'Neglected tropical diseases',
+                          'Mental disorders', 'Road injuries', 'Lower respiratory infections'];
+        grid.innerHTML = neglected.map(name => `
+            <div class="neglected-disease-card">
+                <div class="disease-name">${name}</div>
+                <div class="disease-status">Neglected at both stages</div>
+            </div>
+        `).join('');
+    }
 }
 
-function renderThemesTable() {
-    const tbody = document.querySelector('#table-themes tbody');
-    if (!tbody || !DATA.themes?.themes) return;
-    
-    tbody.innerHTML = DATA.themes.themes.map(t => `
-        <tr>
-            <td>${t.name}</td>
-            <td>${formatNumber(t.publications)}</td>
-            <td>${t.diseaseCount || '--'}</td>
-        </tr>
-    `).join('');
+// ============================================================
+// TRENDS TAB
+// ============================================================
+function renderTrends() {
+    if (!DATA.clinicalTrials?.temporal) return;
+
+    const temporal = DATA.clinicalTrials.temporal;
+
+    // Growth chart
+    const growthCtx = document.getElementById('chart-trends-ct-growth');
+    if (growthCtx) {
+        destroyChart('chart-trends-ct-growth');
+        chartInstances['chart-trends-ct-growth'] = new Chart(growthCtx, {
+            type: 'bar',
+            data: {
+                labels: temporal.map(t => t.year),
+                datasets: [{
+                    label: 'Trials Started',
+                    data: temporal.map(t => t.trials),
+                    backgroundColor: '#2563eb'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: { y: { title: { display: true, text: 'Number of Trials' } } }
+            }
+        });
+    }
+
+    // GS share chart
+    const gsCtx = document.getElementById('chart-trends-gs-share');
+    if (gsCtx) {
+        destroyChart('chart-trends-gs-share');
+        chartInstances['chart-trends-gs-share'] = new Chart(gsCtx, {
+            type: 'line',
+            data: {
+                labels: temporal.map(t => t.year),
+                datasets: [{
+                    label: 'GS Priority Share (%)',
+                    data: temporal.map(t => t.gsPct),
+                    borderColor: '#d73027',
+                    backgroundColor: 'rgba(215, 48, 39, 0.1)',
+                    fill: true,
+                    tension: 0.3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: { title: { display: true, text: '% of Trials' }, min: 0, max: 60 }
+                },
+                plugins: {
+                    annotation: {
+                        annotations: {
+                            line1: {
+                                type: 'line',
+                                yMin: 38,
+                                yMax: 38,
+                                borderColor: '#666',
+                                borderDash: [5, 5],
+                                label: { content: 'Burden Share (38%)', enabled: true }
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    }
 }
 
-// Compare Tab
-function renderCompare() {
-    if (!DATA.comparison) return;
-    
-    populateCompareSelects();
-    renderSimilarPairsTable();
-}
-
-function populateCompareSelects() {
-    const select1 = document.getElementById('compare-biobank1');
-    const select2 = document.getElementById('compare-biobank2');
-    if (!select1 || !select2 || !DATA.comparison?.biobanks) return;
-
-    // Sort biobanks alphabetically by name
-    const sortedBiobanks = [...DATA.comparison.biobanks].sort((a, b) =>
-        a.name.localeCompare(b.name)
-    );
-
-    const options = sortedBiobanks.map(b =>
-        `<option value="${b.id}">${b.name}</option>`
-    );
-
-    select1.innerHTML = '<option value="">Select biobank...</option>' + options.join('');
-    select2.innerHTML = '<option value="">Select biobank...</option>' + options.join('');
-
-    select1.addEventListener('change', updateComparison);
-    select2.addEventListener('change', updateComparison);
-}
-
-function updateComparison() {
-    const id1 = document.getElementById('compare-biobank1')?.value;
-    const id2 = document.getElementById('compare-biobank2')?.value;
-    
-    if (id1) renderCompareCard(id1, 1);
-    if (id2) renderCompareCard(id2, 2);
-    if (id1 && id2) renderComparisonRadar(id1, id2);
-}
-
-function renderCompareCard(biobankId, cardNum) {
-    const biobank = DATA.comparison?.biobanks?.find(b => b.id === biobankId);
-    if (!biobank) return;
-    
-    document.getElementById(`compare-name${cardNum}`).textContent = biobank.name;
-    
-    const statsDiv = document.getElementById(`compare-stats${cardNum}`);
-    statsDiv.innerHTML = `
-        <div class="stat-item">
-            <div class="stat-label">Publications</div>
-            <div class="stat-value">${formatNumber(biobank.stats?.publications)}</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-label">Diseases</div>
-            <div class="stat-value">${biobank.stats?.diseases}/25</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-label">EAS</div>
-            <div class="stat-value">${biobank.stats?.eas?.toFixed(1)}</div>
-        </div>
-        <div class="stat-item">
-            <div class="stat-label">ROS</div>
-            <div class="stat-value">${biobank.stats?.ros?.toFixed(0)}</div>
-        </div>
-    `;
-}
-
-function renderSimilarPairsTable() {
-    const tbody = document.querySelector('#table-similar tbody');
-    if (!tbody || !DATA.comparison?.similarPairs) return;
-    
-    const biobanks = DATA.comparison.biobanks || [];
-    const getName = (id) => biobanks.find(b => b.id === id)?.name || id;
-    
-    tbody.innerHTML = DATA.comparison.similarPairs.slice(0, 10).map(p => `
-        <tr>
-            <td>${getName(p.biobank1)}</td>
-            <td>${getName(p.biobank2)}</td>
-            <td>${p.similarity?.toFixed(1)}%</td>
-        </tr>
-    `).join('');
-}
-
-// Equity Tab
+// ============================================================
+// EQUITY TAB
+// ============================================================
 function renderEquity() {
-    if (!DATA.equity) return;
-    
-    const e = DATA.equity;
-    
-    // Update summary
-    document.getElementById('equity-ratio').textContent = e.equityRatio?.toFixed(2) || '--';
-    document.getElementById('equity-interpretation').textContent = e.equityInterpretation || '--';
-    document.getElementById('hic-biobanks').textContent = e.summary?.hic?.biobanks || '--';
-    document.getElementById('hic-pubs').textContent = formatNumber(e.summary?.hic?.publications) + ' publications';
-    document.getElementById('lmic-biobanks').textContent = e.summary?.lmic?.biobanks || '--';
-    document.getElementById('lmic-pubs').textContent = formatNumber(e.summary?.lmic?.publications) + ' publications';
-    
-    // Render charts
-    renderEquityShareChart();
-    renderEquityRegionChart();
-    
-    // Render GS diseases table
-    renderGSDiseasesTable();
+    if (!DATA.clinicalTrials) return;
+
+    const ct = DATA.clinicalTrials;
+
+    // Update stats
+    setText('equity-ct-ratio', ct.geographic.hicLmicRatio + ':1');
+    setText('equity-gs-research', ct.globalSouthAnalysis.gsTrialsPct + '%');
+
+    // Burden vs Research chart
+    const burdenCtx = document.getElementById('chart-equity-burden-research');
+    if (burdenCtx) {
+        destroyChart('chart-equity-burden-research');
+        chartInstances['chart-equity-burden-research'] = new Chart(burdenCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Global South Priority', 'Other Diseases'],
+                datasets: [
+                    {
+                        label: 'Disease Burden (%)',
+                        data: [ct.globalSouthAnalysis.gsDALYsPct, 100 - ct.globalSouthAnalysis.gsDALYsPct],
+                        backgroundColor: ['#d73027', '#4575b4']
+                    },
+                    {
+                        label: 'Clinical Trials (%)',
+                        data: [ct.globalSouthAnalysis.gsTrialsPct, 100 - ct.globalSouthAnalysis.gsTrialsPct],
+                        backgroundColor: ['rgba(215, 48, 39, 0.5)', 'rgba(69, 117, 180, 0.5)']
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'top' } },
+                scales: { y: { title: { display: true, text: 'Percentage' } } }
+            }
+        });
+    }
+
+    // Geographic distribution
+    const geoCtx = document.getElementById('chart-equity-geo');
+    if (geoCtx) {
+        destroyChart('chart-equity-geo');
+        chartInstances['chart-equity-geo'] = new Chart(geoCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['HIC', 'LMIC'],
+                datasets: [{
+                    data: [ct.geographic.hicPct, ct.geographic.lmicPct],
+                    backgroundColor: ['#2166ac', '#b2182b']
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { position: 'bottom' } }
+            }
+        });
+    }
+
+    // GS diseases table
+    const gsTable = document.querySelector('#table-gs-diseases-equity tbody');
+    if (gsTable) {
+        const gsDiseases = ct.diseases.filter(d => d.globalSouthPriority).sort((a, b) => b.dalys - a.dalys);
+        gsTable.innerHTML = gsDiseases.map(d => {
+            const status = d.trials < 500 ? 'Severely Neglected' : d.trials < 2000 ? 'Neglected' : d.trials < 10000 ? 'Under-researched' : 'Moderate';
+            const statusClass = d.trials < 500 ? 'critical' : d.trials < 2000 ? 'high' : d.trials < 10000 ? 'moderate' : 'low';
+            return `<tr>
+                <td>${d.name}</td>
+                <td>${d.dalys.toFixed(1)}</td>
+                <td>${formatNumber(d.trials)}</td>
+                <td>${d.intensity.toFixed(0)}</td>
+                <td><span class="badge badge-${statusClass}">${status}</span></td>
+            </tr>`;
+        }).join('');
+    }
 }
 
-function renderGSDiseasesTable() {
-    const tbody = document.querySelector('#table-gs-diseases tbody');
-    if (!tbody || !DATA.equity?.globalSouthDiseases) return;
-    
-    tbody.innerHTML = DATA.equity.globalSouthDiseases.map(d => `
-        <tr>
-            <td>${d.name}</td>
-            <td>${d.dalys?.toFixed(1) || '--'}</td>
-            <td>${formatNumber(d.publications)}</td>
-            <td>${d.gapScore?.toFixed(0) || '--'}</td>
-            <td><span class="badge badge-${d.severity?.toLowerCase()}">${d.severity || '--'}</span></td>
-        </tr>
-    `).join('');
-}
-
-// Filters Setup
+// ============================================================
+// FILTERS
+// ============================================================
 function setupFilters() {
     // Biobank filters
     document.getElementById('biobank-search')?.addEventListener('input', renderBiobanks);
     document.getElementById('biobank-region-filter')?.addEventListener('change', renderBiobanks);
     document.getElementById('biobank-category-filter')?.addEventListener('change', renderBiobanks);
-    
+
     // Disease filters
     document.getElementById('disease-search')?.addEventListener('input', renderDiseases);
-    document.getElementById('disease-category-filter')?.addEventListener('change', renderDiseases);
-    document.getElementById('disease-severity-filter')?.addEventListener('change', renderDiseases);
+    document.getElementById('disease-view-filter')?.addEventListener('change', renderDiseases);
 }
 
-// Utility Functions
+// ============================================================
+// UTILITY FUNCTIONS
+// ============================================================
 function formatNumber(num) {
     if (num === undefined || num === null) return '--';
+    if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+    if (num >= 1000) return (num / 1000).toFixed(0) + 'K';
     return num.toLocaleString();
+}
+
+function setText(id, text) {
+    const el = document.getElementById(id);
+    if (el) el.textContent = text;
+}
+
+function truncate(str, len) {
+    if (!str) return '';
+    return str.length > len ? str.substring(0, len) + '...' : str;
 }
 
 function getCategoryClass(category) {
     if (!category) return '';
     const cat = category.toLowerCase();
-    // Map EAS categories to eas-prefixed classes (high alignment = good = green)
     if (cat === 'high') return 'eas-high';
     if (cat === 'moderate') return 'eas-moderate';
     if (cat === 'low') return 'eas-low';
-    // Legacy support
-    if (cat.includes('strong')) return 'eas-high';
-    if (cat.includes('weak')) return 'eas-moderate';
-    if (cat.includes('poor')) return 'eas-low';
     return cat;
+}
+
+function destroyChart(id) {
+    if (chartInstances[id]) {
+        chartInstances[id].destroy();
+        delete chartInstances[id];
+    }
 }
 
 // CSV Download
 function downloadBiobanksCSV() {
     if (!DATA.biobanks?.biobanks) return;
-    
+
     const headers = ['Name', 'Country', 'Region', 'EAS', 'Category', 'Publications', 'Diseases', 'Critical Gaps'];
     const rows = DATA.biobanks.biobanks.map(b => [
         b.name,
@@ -442,10 +782,10 @@ function downloadBiobanksCSV() {
         b.stats?.diseasesCovered,
         b.stats?.criticalGaps
     ]);
-    
+
     let csv = headers.join(',') + '\n';
     csv += rows.map(r => r.map(v => `"${v || ''}"`).join(',')).join('\n');
-    
+
     const blob = new Blob([csv], { type: 'text/csv' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
