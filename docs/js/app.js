@@ -120,8 +120,12 @@ function renderOverview() {
     // Render semantic/integrated stats
     if (DATA.integrated) {
         const int = DATA.integrated;
+        console.log('Integrated data loaded:', int.n_diseases, 'diseases');
+
         // Calculate total papers from diseases
         const totalPapers = int.diseases?.reduce((sum, d) => sum + (d.n_papers || 0), 0) || 0;
+        console.log('Total papers calculated:', totalPapers);
+
         setText('stat-sem-papers', formatNumber(totalPapers));
         setText('stat-sem-embeddings', formatNumber(Math.round(totalPapers * 0.91))); // ~91% success rate
         setText('stat-sem-diseases', int.n_diseases || '--');
@@ -132,6 +136,8 @@ function renderOverview() {
 
         // Render top neglected diseases
         renderTopNeglected(int.diseases);
+    } else {
+        console.warn('Integrated data not loaded');
     }
 
     // Render overview charts
