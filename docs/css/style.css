@@ -889,8 +889,65 @@ body {
     color: var(--text-secondary);
 }
 
+/* Equity Dimensions Layout */
+.equity-dimensions {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.equity-dim {
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-top: 4px solid;
+}
+
+.equity-dim:nth-child(1) { border-color: #059669; }
+.equity-dim:nth-child(2) { border-color: #2563eb; }
+.equity-dim:nth-child(3) { border-color: #7c3aed; }
+
+.equity-dim h4 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.equity-stat {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+}
+
+.equity-dim:nth-child(1) .equity-stat { color: #059669; }
+.equity-dim:nth-child(2) .equity-stat { color: #2563eb; }
+.equity-dim:nth-child(3) .equity-stat { color: #7c3aed; }
+
+.equity-label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0.5rem 0;
+}
+
+.equity-detail {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--border);
+}
+
 @media (max-width: 768px) {
     .three-pillars {
+        grid-template-columns: 1fr;
+    }
+    .equity-dimensions {
         grid-template-columns: 1fr;
     }
 }
