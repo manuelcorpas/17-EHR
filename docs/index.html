@@ -239,22 +239,22 @@
                     <div class="metric-box">
                         <h4>SII (Semantic Isolation Index)</h4>
                         <p>Measures how far a disease's research is from the centroid of all biomedical knowledge. Higher values indicate more isolated, siloed research.</p>
-                        <div class="metric-range">Range: 0.0014 - 0.0044</div>
+                        <div class="metric-interpretation"><strong>Interpretation:</strong> Diseases with high SII (top 25%) are research "islands" disconnected from mainstream science</div>
                     </div>
                     <div class="metric-box">
                         <h4>KTP (Knowledge Transfer Potential)</h4>
                         <p>Maximum similarity to any other disease. Lower values mean less opportunity to benefit from advances in related fields.</p>
-                        <div class="metric-range">Range: 0.9978 - 0.9994</div>
+                        <div class="metric-interpretation"><strong>Interpretation:</strong> Most diseases have high KTP (>99%), but even small differences indicate reduced spillover benefit</div>
                     </div>
                     <div class="metric-box">
                         <h4>RCC (Research Clustering Coefficient)</h4>
                         <p>Density of connections in the knowledge network. Lower values indicate sparser research communities.</p>
-                        <div class="metric-range">Range: 0.0025 - 0.0082</div>
+                        <div class="metric-interpretation"><strong>Interpretation:</strong> Low RCC diseases have fewer collaborating research fields and less integrated knowledge</div>
                     </div>
                     <div class="metric-box">
-                        <h4>Temporal Drift</h4>
-                        <p>How much a disease's research focus has shifted over time. Higher drift may indicate unstable research priorities.</p>
-                        <div class="metric-range">Computed per disease</div>
+                        <h4>Unified Score (0-100)</h4>
+                        <p>Combined neglect score integrating Discovery (biobank gaps), Translation (trial equity), and Knowledge (semantic isolation).</p>
+                        <div class="metric-interpretation"><strong>Interpretation:</strong> Higher scores = more neglected. Top diseases score 40+ across all three dimensions</div>
                     </div>
                 </div>
             </div>
@@ -324,15 +324,16 @@
                                 <th>Disease</th>
                                 <th>Papers</th>
                                 <th>Gap Score</th>
-                                <th>SII</th>
-                                <th>KTP</th>
-                                <th>RCC</th>
-                                <th>Unified Score</th>
+                                <th>Isolation %</th>
+                                <th>Transfer %</th>
+                                <th>Clustering %</th>
+                                <th>Unified</th>
                             </tr>
                         </thead>
                         <tbody></tbody>
                     </table>
                 </div>
+                <p class="table-note">Note: Isolation/Transfer/Clustering show percentile ranks (0-100%). Higher isolation = more neglected. Higher transfer = better connected.</p>
             </div>
         </section>
 

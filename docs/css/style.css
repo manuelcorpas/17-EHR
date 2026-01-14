@@ -842,6 +842,15 @@ body {
     font-style: italic;
 }
 
+.metric-interpretation {
+    font-size: 0.8rem;
+    color: #059669;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    background: #ecfdf5;
+    border-radius: 4px;
+}
+
 /* Analysis Figures */
 .analysis-figure {
     width: 100%;
@@ -913,6 +922,28 @@ body {
 .unified-high { background: #ea580c; color: white; }
 .unified-moderate { background: #ca8a04; color: white; }
 .unified-low { background: #16a34a; color: white; }
+
+/* Percentile badges */
+.pct-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.pct-high { background: #fecaca; color: #991b1b; }
+.pct-mod { background: #fef3c7; color: #92400e; }
+.pct-low { background: #d1fae5; color: #065f46; }
+.pct-good { background: #cffafe; color: #0e7490; }
+
+/* Table note */
+.table-note {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin-top: 0.75rem;
+    font-style: italic;
+}
 
 /* Responsive */
 @media (max-width: 768px) {
