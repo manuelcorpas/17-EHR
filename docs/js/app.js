@@ -623,19 +623,43 @@ function renderDiseaseScatter() {
 
     const diseases = DATA.clinicalTrials.diseases.filter(d => d.dalys > 0 && d.trials > 0);
 
+    // Identify diseases to label (high burden, extreme trial counts, notable)
+    const labeledDiseases = new Set([
+        'Ischemic heart disease', 'Stroke', 'Diabetes mellitus', 'COPD',
+        'Lower respiratory infections', 'Neonatal disorders', 'HIV/AIDS',
+        'Malaria', 'Tuberculosis', 'Road injuries', 'Diarrheal diseases',
+        'Breast cancer', 'Lung cancer', 'Depressive disorders', 'Alzheimer'
+    ]);
+
+    // Also label highest burden and lowest trials ratio
+    const sortedByBurden = [...diseases].sort((a, b) => b.dalys - a.dalys).slice(0, 8);
+    const sortedByIntensity = [...diseases].sort((a, b) => a.intensity - b.intensity).slice(0, 5);
+    sortedByBurden.forEach(d => labeledDiseases.add(d.name));
+    sortedByIntensity.forEach(d => labeledDiseases.add(d.name));
+
     chartInstances['chart-disease-scatter'] = new Chart(ctx, {
         type: 'scatter',
         data: {
             datasets: [
                 {
                     label: 'Global South Priority',
-                    data: diseases.filter(d => d.globalSouthPriority).map(d => ({ x: d.trials, y: d.dalys, label: d.name })),
+                    data: diseases.filter(d => d.globalSouthPriority).map(d => ({
+                        x: d.trials,
+                        y: d.dalys,
+                        label: d.name,
+                        showLabel: labeledDiseases.has(d.name)
+                    })),
                     backgroundColor: 'rgba(215, 48, 39, 0.7)',
                     pointRadius: 8
                 },
                 {
                     label: 'Other Diseases',
-                    data: diseases.filter(d => !d.globalSouthPriority).map(d => ({ x: d.trials, y: d.dalys, label: d.name })),
+                    data: diseases.filter(d => !d.globalSouthPriority).map(d => ({
+                        x: d.trials,
+                        y: d.dalys,
+                        label: d.name,
+                        showLabel: labeledDiseases.has(d.name)
+                    })),
                     backgroundColor: 'rgba(69, 117, 180, 0.5)',
                     pointRadius: 6
                 }
@@ -645,17 +669,32 @@ function renderDiseaseScatter() {
             responsive: true,
             maintainAspectRatio: false,
             scales: {
-                x: { type: 'logarithmic', title: { display: true, text: 'Clinical Trials (log scale)' } },
-                y: { title: { display: true, text: 'Disease Burden (Million DALYs)' } }
+                x: {
+                    type: 'logarithmic',
+                    title: { display: true, text: 'Clinical Trials (log scale)', font: { size: 14 } }
+                },
+                y: {
+                    title: { display: true, text: 'Disease Burden (Million DALYs)', font: { size: 14 } }
+                }
             },
             plugins: {
                 tooltip: {
                     callbacks: {
                         label: (ctx) => `${ctx.raw.label}: ${ctx.raw.x.toLocaleString()} trials, ${ctx.raw.y.toFixed(1)}M DALYs`
                     }
+                },
+                datalabels: {
+                    display: (context) => context.dataset.data[context.dataIndex].showLabel,
+                    formatter: (value) => value.label.length > 18 ? value.label.substring(0, 16) + '...' : value.label,
+                    color: '#333',
+                    font: { size: 11, weight: 'bold' },
+                    anchor: 'end',
+                    align: 'top',
+                    offset: 4
                 }
             }
-        }
+        },
+        plugins: [ChartDataLabels]
     });
 }
 
