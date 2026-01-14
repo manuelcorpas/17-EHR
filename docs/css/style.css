@@ -1008,25 +1008,23 @@ body {
     border-radius: 4px;
 }
 
+/* Figure Cards - Full Width Layout */
+.figure-card {
+    margin-bottom: 1.5rem;
+}
+
+.figure-container {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+
 /* Analysis Figures */
 .analysis-figure {
-    width: 100%;
+    max-width: 100%;
     height: auto;
-    min-height: 500px;
-    max-height: none;
-    object-fit: contain;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.analysis-figure:hover {
-    transform: scale(1.02);
-}
-
-/* Large figure container for semantic analysis */
-.chart-container.chart-large .analysis-figure {
-    min-height: 600px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
 }
 
 /* Top Neglected Card */
