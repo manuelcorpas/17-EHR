@@ -50,147 +50,69 @@
         <!-- Tab 1: Overview -->
         <section id="overview" class="tab-content active">
             <div class="section-header">
-                <h2>Three-Dimensional Global Research Equity</h2>
-                <p>The Architecture of Research Inequity: How gaps persist across Discovery, Translation, and Knowledge Structure</p>
+                <h2>The Architecture of Research Inequity</h2>
+                <p>How disadvantage compounds across Discovery, Translation, and Knowledge</p>
             </div>
 
-            <!-- Key Finding Banner -->
+            <!-- Key Finding Banner - Simplified -->
             <div class="card key-finding-card">
                 <div class="key-finding-icon">&#9888;</div>
                 <div class="key-finding-content">
-                    <h3>Key Finding: The Triple Burden</h3>
-                    <p>Neglected diseases face <strong>compounding disadvantages</strong> across three dimensions: <strong>under-studied in biobanks</strong> (Discovery), <strong>under-represented in trials</strong> (Translation), and <strong>semantically isolated</strong> in the research literature (Knowledge). This creates self-reinforcing cycles of neglect.</p>
+                    <h3>Key Finding</h3>
+                    <p>Neglected diseases face <strong>compounding disadvantages</strong>: under-studied in biobanks, under-represented in trials, and semantically isolated in research literature. This creates self-reinforcing cycles of neglect.</p>
                 </div>
             </div>
 
-            <!-- Summary Cards - Two Rows -->
-            <div class="overview-section">
-                <h3 class="section-subtitle">Clinical Trials (Translation Stage)</h3>
-                <div class="summary-cards">
-                    <div class="card summary-card ct-card">
-                        <div class="card-icon">&#128202;</div>
-                        <div class="card-value" id="stat-ct-trials">--</div>
-                        <div class="card-label">Clinical Trials</div>
-                        <div class="card-sublabel">2000-2025</div>
-                    </div>
-                    <div class="card summary-card ct-card">
-                        <div class="card-icon">&#127757;</div>
-                        <div class="card-value" id="stat-ct-gs-pct">--</div>
-                        <div class="card-label">GS Priority Share</div>
-                        <div class="card-sublabel">vs 38% of burden</div>
-                    </div>
-                    <div class="card summary-card ct-card">
-                        <div class="card-icon">&#128200;</div>
-                        <div class="card-value" id="stat-ct-gap">--</div>
-                        <div class="card-label">Intensity Gap</div>
-                        <div class="card-sublabel">non-GS vs GS</div>
-                    </div>
-                    <div class="card summary-card ct-card">
-                        <div class="card-icon">&#127758;</div>
-                        <div class="card-value" id="stat-ct-hic-ratio">--</div>
-                        <div class="card-label">HIC:LMIC Ratio</div>
-                        <div class="card-sublabel">trial sites</div>
-                    </div>
+            <!-- Three Pillars - Simplified Visual -->
+            <div class="three-pillars">
+                <div class="pillar pillar-discovery">
+                    <div class="pillar-header">Discovery</div>
+                    <div class="pillar-stat" id="stat-biobanks">70</div>
+                    <div class="pillar-label">Biobanks analyzed</div>
+                    <div class="pillar-finding"><span id="stat-critical">22</span> diseases with critical gaps</div>
+                </div>
+                <div class="pillar pillar-translation">
+                    <div class="pillar-header">Translation</div>
+                    <div class="pillar-stat" id="stat-ct-gap">2.4x</div>
+                    <div class="pillar-label">Research intensity gap</div>
+                    <div class="pillar-finding">Global South diseases get <span id="stat-ct-gs-pct">20%</span> of trials</div>
+                </div>
+                <div class="pillar pillar-knowledge">
+                    <div class="pillar-header">Knowledge</div>
+                    <div class="pillar-stat" id="stat-sem-diseases">146</div>
+                    <div class="pillar-label">Diseases mapped semantically</div>
+                    <div class="pillar-finding"><span id="stat-sem-isolated">8</span> diseases are research "islands"</div>
                 </div>
             </div>
 
-            <div class="overview-section">
-                <h3 class="section-subtitle">Biobank Research (Discovery Stage)</h3>
-                <div class="summary-cards">
-                    <div class="card summary-card bb-card">
-                        <div class="card-icon">&#127975;</div>
-                        <div class="card-value" id="stat-biobanks">--</div>
-                        <div class="card-label">Biobanks Scored</div>
-                    </div>
-                    <div class="card summary-card bb-card">
-                        <div class="card-icon">&#128218;</div>
-                        <div class="card-value" id="stat-publications">--</div>
-                        <div class="card-label">Publications Mapped</div>
-                    </div>
-                    <div class="card summary-card bb-card">
-                        <div class="card-icon">&#127759;</div>
-                        <div class="card-value" id="stat-countries">--</div>
-                        <div class="card-label">Countries</div>
-                    </div>
-                    <div class="card summary-card bb-card">
-                        <div class="card-icon">&#9888;</div>
-                        <div class="card-value" id="stat-critical">--</div>
-                        <div class="card-label">Critical Gap Diseases</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="overview-section">
-                <h3 class="section-subtitle">Semantic Analysis (Knowledge Structure)</h3>
-                <div class="summary-cards">
-                    <div class="card summary-card sem-card">
-                        <div class="card-icon">&#128300;</div>
-                        <div class="card-value" id="stat-sem-papers">--</div>
-                        <div class="card-label">Papers Analyzed</div>
-                        <div class="card-sublabel">2000-2025</div>
-                    </div>
-                    <div class="card summary-card sem-card">
-                        <div class="card-icon">&#129504;</div>
-                        <div class="card-value" id="stat-sem-embeddings">--</div>
-                        <div class="card-label">Embeddings</div>
-                        <div class="card-sublabel">PubMedBERT</div>
-                    </div>
-                    <div class="card summary-card sem-card">
-                        <div class="card-icon">&#127760;</div>
-                        <div class="card-value" id="stat-sem-diseases">--</div>
-                        <div class="card-label">Diseases Mapped</div>
-                    </div>
-                    <div class="card summary-card sem-card">
-                        <div class="card-icon">&#128279;</div>
-                        <div class="card-value" id="stat-sem-isolated">--</div>
-                        <div class="card-label">Isolated Diseases</div>
-                        <div class="card-sublabel">High SII</div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Top Neglected Diseases (Unified Score) -->
-            <div class="card top-neglected-card">
-                <h3>&#127919; Top Neglected Diseases (Unified Triple-Burden Score)</h3>
-                <p class="card-description">Diseases suffering from compounding neglect across all three dimensions</p>
-                <div class="neglected-ranking" id="top-neglected-unified">
+            <!-- Top 5 Most Neglected - Clean List -->
+            <div class="card">
+                <h3>Most Neglected Diseases</h3>
+                <p class="card-description">Ranked by unified triple-burden score (combines all three dimensions)</p>
+                <div class="top-five-list" id="top-neglected-unified">
                     <!-- Populated by JS -->
                 </div>
             </div>
 
-            <!-- Charts Row -->
-            <div class="charts-row">
-                <div class="card chart-card">
-                    <h3>Clinical Trial Distribution by Disease Category</h3>
-                    <div class="chart-container">
-                        <canvas id="chart-ct-categories"></canvas>
-                    </div>
-                </div>
-                <div class="card chart-card">
-                    <h3>Research Intensity: Lowest vs Highest</h3>
-                    <div class="chart-container">
-                        <canvas id="chart-intensity-compare"></canvas>
-                    </div>
+            <!-- Single Chart -->
+            <div class="card chart-card">
+                <h3>Research Intensity Gap</h3>
+                <p class="card-description">Trials per million DALYs: Lowest vs Highest research attention</p>
+                <div class="chart-container">
+                    <canvas id="chart-intensity-compare"></canvas>
                 </div>
             </div>
 
-            <!-- Methodology Note -->
+            <!-- Brief Methodology -->
             <div class="card info-card">
-                <h3>About HEIM Framework v3.0</h3>
-                <p>The <strong>Health Equity Informative Metrics (HEIM)</strong> framework provides a three-dimensional analysis of global health research equity, revealing how disadvantage compounds across the research pipeline.</p>
-                <p><strong>Three Dimensions:</strong></p>
+                <h3>About This Analysis</h3>
+                <p><strong>HEIM v3.0</strong> integrates three data sources to reveal compound neglect:</p>
                 <ul>
-                    <li><strong>Discovery</strong> (Biobanks): How diseases are represented in foundational research</li>
-                    <li><strong>Translation</strong> (Clinical Trials): Progress from discovery to patient treatment</li>
-                    <li><strong>Knowledge Structure</strong> (Semantic): How diseases connect in the scientific literature</li>
+                    <li><strong>70 biobanks</strong> from the IHCC registry (Discovery)</li>
+                    <li><strong>2.2M clinical trials</strong> from ClinicalTrials.gov (Translation)</li>
+                    <li><strong>3.6M PubMed papers</strong> with PubMedBERT embeddings (Knowledge)</li>
                 </ul>
-                <p><strong>Key Semantic Metrics:</strong></p>
-                <ul>
-                    <li><strong>SII</strong> (Semantic Isolation Index): How disconnected a disease is from mainstream research</li>
-                    <li><strong>KTP</strong> (Knowledge Transfer Potential): Ability to benefit from related research advances</li>
-                    <li><strong>RCC</strong> (Research Clustering Coefficient): Density of connections to other diseases</li>
-                </ul>
-                <p class="methodology-source">Methodology: Corpas et al. (2026) — In preparation</p>
+                <p class="methodology-source">Corpas et al. (2026) — In preparation</p>
             </div>
         </section>
 
