@@ -170,7 +170,7 @@
     {
       "name": "Road injuries",
       "category": "Transport injuries",
-      "globalSouthPriority": true,
+      "globalSouthPriority": false,
       "trials": 19743,
       "dalys": 65.14364666178717,
       "intensity": 303.0686952866136
