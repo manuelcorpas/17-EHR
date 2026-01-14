@@ -148,26 +148,19 @@ function renderTopNeglected(diseases) {
     const container = document.getElementById('top-neglected-unified');
     if (!container || !diseases) return;
 
-    // Sort by unified score and get top 10
-    const top10 = [...diseases]
+    // Sort by unified score and get top 5
+    const top5 = [...diseases]
         .filter(d => d.unified_score && d.unified_score > 0)
         .sort((a, b) => b.unified_score - a.unified_score)
-        .slice(0, 10);
+        .slice(0, 5);
 
-    container.innerHTML = top10.map((d, i) => {
-        const scoreClass = d.unified_score > 40 ? 'critical' : d.unified_score > 30 ? 'high' : d.unified_score > 20 ? 'moderate' : 'low';
+    container.innerHTML = top5.map((d, i) => {
         const diseaseName = d.disease.replace(/_/g, ' ');
         return `
-            <div class="neglected-item">
-                <div class="neglected-rank">#${i + 1}</div>
-                <div class="neglected-info">
-                    <div class="neglected-name">${diseaseName}</div>
-                    <div class="neglected-score">
-                        <span class="unified-badge unified-${scoreClass}">${d.unified_score.toFixed(1)}</span>
-                        ${d.n_papers ? `· ${formatNumber(d.n_papers)} papers` : ''}
-                        ${d.dimensions_available ? `· ${d.dimensions_available}D` : ''}
-                    </div>
-                </div>
+            <div class="top-five-item">
+                <div class="top-five-rank">${i + 1}</div>
+                <div class="top-five-name">${diseaseName}</div>
+                <div class="top-five-score">Score: ${d.unified_score.toFixed(1)}</div>
             </div>
         `;
     }).join('');
@@ -175,33 +168,6 @@ function renderTopNeglected(diseases) {
 
 function renderOverviewCharts() {
     if (!DATA.clinicalTrials) return;
-
-    // Chart: Clinical Trial Categories (pie)
-    const catCtx = document.getElementById('chart-ct-categories');
-    if (catCtx) {
-        destroyChart('chart-ct-categories');
-        const categories = DATA.clinicalTrials.categories.slice(0, 8);
-        chartInstances['chart-ct-categories'] = new Chart(catCtx, {
-            type: 'doughnut',
-            data: {
-                labels: categories.map(c => c.name),
-                datasets: [{
-                    data: categories.map(c => c.trials),
-                    backgroundColor: [
-                        '#762a83', '#e31a1c', '#1f78b4', '#33a02c',
-                        '#ff7f00', '#6a3d9a', '#b15928', '#999999'
-                    ]
-                }]
-            },
-            options: {
-                responsive: true,
-                maintainAspectRatio: false,
-                plugins: {
-                    legend: { position: 'right', labels: { boxWidth: 12 } }
-                }
-            }
-        });
-    }
 
     // Chart: Research Intensity Comparison
     const intensityCtx = document.getElementById('chart-intensity-compare');
