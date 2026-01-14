@@ -17,11 +17,16 @@
     <header class="header">
         <div class="header-content">
             <div class="header-title">
-                <h1>HEIM Framework <span class="version">v2.0</span></h1>
-                <p class="tagline">Health Equity Informative Metrics: Biobanks + Clinical Trials</p>
+                <h1>HEIM Framework <span class="version">v3.0</span></h1>
+                <p class="tagline">Health Equity Informative Metrics: Discovery + Translation + Knowledge</p>
             </div>
             <div class="header-meta">
-                <span class="framework-badge">Discovery-to-Translation Gap Analysis</span>
+                <span class="framework-badge">Three-Dimensional Equity Analysis</span>
+                <div class="dimension-badges">
+                    <span class="dim-badge dim-discovery">Discovery</span>
+                    <span class="dim-badge dim-translation">Translation</span>
+                    <span class="dim-badge dim-knowledge">Knowledge</span>
+                </div>
             </div>
         </div>
     </header>
@@ -29,6 +34,7 @@
     <!-- Navigation Tabs -->
     <nav class="nav-tabs">
         <button class="tab-btn active" data-tab="overview">Overview</button>
+        <button class="tab-btn" data-tab="knowledge">Knowledge</button>
         <button class="tab-btn" data-tab="clinical-trials">Clinical Trials</button>
         <button class="tab-btn" data-tab="biobanks">Biobanks</button>
         <button class="tab-btn" data-tab="diseases">Diseases</button>
@@ -44,16 +50,16 @@
         <!-- Tab 1: Overview -->
         <section id="overview" class="tab-content active">
             <div class="section-header">
-                <h2>Global Research Equity Overview</h2>
-                <p>The Discovery-to-Translation Gap: How health inequities persist from biobanks to clinical trials</p>
+                <h2>Three-Dimensional Global Research Equity</h2>
+                <p>The Architecture of Research Inequity: How gaps persist across Discovery, Translation, and Knowledge Structure</p>
             </div>
 
             <!-- Key Finding Banner -->
             <div class="card key-finding-card">
                 <div class="key-finding-icon">&#9888;</div>
                 <div class="key-finding-content">
-                    <h3>Key Finding: The 2.4x Intensity Gap</h3>
-                    <p>Global South Priority diseases receive <strong>2.4x less research intensity</strong> in clinical trials despite accounting for <strong>38% of global disease burden</strong>. This gap persists across the entire research pipeline.</p>
+                    <h3>Key Finding: The Triple Burden</h3>
+                    <p>Neglected diseases face <strong>compounding disadvantages</strong> across three dimensions: <strong>under-studied in biobanks</strong> (Discovery), <strong>under-represented in trials</strong> (Translation), and <strong>semantically isolated</strong> in the research literature (Knowledge). This creates self-reinforcing cycles of neglect.</p>
                 </div>
             </div>
 
@@ -114,6 +120,44 @@
                 </div>
             </div>
 
+            <div class="overview-section">
+                <h3 class="section-subtitle">Semantic Analysis (Knowledge Structure)</h3>
+                <div class="summary-cards">
+                    <div class="card summary-card sem-card">
+                        <div class="card-icon">&#128300;</div>
+                        <div class="card-value" id="stat-sem-papers">--</div>
+                        <div class="card-label">Papers Analyzed</div>
+                        <div class="card-sublabel">2000-2025</div>
+                    </div>
+                    <div class="card summary-card sem-card">
+                        <div class="card-icon">&#129504;</div>
+                        <div class="card-value" id="stat-sem-embeddings">--</div>
+                        <div class="card-label">Embeddings</div>
+                        <div class="card-sublabel">PubMedBERT</div>
+                    </div>
+                    <div class="card summary-card sem-card">
+                        <div class="card-icon">&#127760;</div>
+                        <div class="card-value" id="stat-sem-diseases">--</div>
+                        <div class="card-label">Diseases Mapped</div>
+                    </div>
+                    <div class="card summary-card sem-card">
+                        <div class="card-icon">&#128279;</div>
+                        <div class="card-value" id="stat-sem-isolated">--</div>
+                        <div class="card-label">Isolated Diseases</div>
+                        <div class="card-sublabel">High SII</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Neglected Diseases (Unified Score) -->
+            <div class="card top-neglected-card">
+                <h3>&#127919; Top Neglected Diseases (Unified Triple-Burden Score)</h3>
+                <p class="card-description">Diseases suffering from compounding neglect across all three dimensions</p>
+                <div class="neglected-ranking" id="top-neglected-unified">
+                    <!-- Populated by JS -->
+                </div>
+            </div>
+
             <!-- Charts Row -->
             <div class="charts-row">
                 <div class="card chart-card">
@@ -132,19 +176,167 @@
 
             <!-- Methodology Note -->
             <div class="card info-card">
-                <h3>About HEIM Framework</h3>
-                <p>The <strong>Health Equity Informative Metrics (HEIM)</strong> framework quantifies the alignment between biomedical research output and global disease burden. It reveals systematic gaps where high-burden diseases—particularly those affecting the Global South—receive disproportionately less research attention.</p>
-                <p><strong>Key Metrics:</strong></p>
+                <h3>About HEIM Framework v3.0</h3>
+                <p>The <strong>Health Equity Informative Metrics (HEIM)</strong> framework provides a three-dimensional analysis of global health research equity, revealing how disadvantage compounds across the research pipeline.</p>
+                <p><strong>Three Dimensions:</strong></p>
                 <ul>
-                    <li><strong>Research Intensity</strong> = Trials (or publications) per million DALYs</li>
-                    <li><strong>Global South Priority</strong> = 30 diseases disproportionately affecting LMICs</li>
-                    <li><strong>Intensity Gap</strong> = Ratio of non-GS to GS research intensity</li>
+                    <li><strong>Discovery</strong> (Biobanks): How diseases are represented in foundational research</li>
+                    <li><strong>Translation</strong> (Clinical Trials): Progress from discovery to patient treatment</li>
+                    <li><strong>Knowledge Structure</strong> (Semantic): How diseases connect in the scientific literature</li>
                 </ul>
-                <p class="methodology-source">Methodology: Corpas et al. (2026) In preparation</p>
+                <p><strong>Key Semantic Metrics:</strong></p>
+                <ul>
+                    <li><strong>SII</strong> (Semantic Isolation Index): How disconnected a disease is from mainstream research</li>
+                    <li><strong>KTP</strong> (Knowledge Transfer Potential): Ability to benefit from related research advances</li>
+                    <li><strong>RCC</strong> (Research Clustering Coefficient): Density of connections to other diseases</li>
+                </ul>
+                <p class="methodology-source">Methodology: Corpas et al. (2026) — medRxiv preprint + Nature Medicine Perspective</p>
             </div>
         </section>
 
-        <!-- Tab 2: Clinical Trials -->
+        <!-- Tab 2: Knowledge Structure (NEW) -->
+        <section id="knowledge" class="tab-content">
+            <div class="section-header">
+                <h2>Knowledge Structure Analysis</h2>
+                <p>Semantic analysis of 3.9M PubMed papers revealing the architecture of research knowledge</p>
+            </div>
+
+            <!-- Semantic Summary Cards -->
+            <div class="summary-cards">
+                <div class="card summary-card sem-card">
+                    <div class="card-value" id="sem-total-papers">--</div>
+                    <div class="card-label">Papers Analyzed</div>
+                    <div class="card-sublabel">2000-2025</div>
+                </div>
+                <div class="card summary-card sem-card">
+                    <div class="card-value" id="sem-embeddings">--</div>
+                    <div class="card-label">Embeddings Generated</div>
+                    <div class="card-sublabel">PubMedBERT 768-dim</div>
+                </div>
+                <div class="card summary-card sem-card">
+                    <div class="card-value" id="sem-diseases">--</div>
+                    <div class="card-label">Diseases Analyzed</div>
+                </div>
+                <div class="card summary-card sem-card">
+                    <div class="card-value" id="sem-unified-mean">--</div>
+                    <div class="card-label">Mean Unified Score</div>
+                </div>
+            </div>
+
+            <!-- Key Insight -->
+            <div class="card insight-card semantic-insight">
+                <h3>&#129504; Semantic Isolation Reveals Hidden Neglect</h3>
+                <p>Beyond funding and trials, neglected diseases suffer <strong>structural isolation</strong> in the research literature.
+                Diseases like <strong>Guinea worm disease</strong> and <strong>Lymphatic filariasis</strong> exist in semantic "islands" —
+                disconnected from mainstream research, unable to benefit from spillover advances in related fields.
+                This represents a <strong>fourth dimension of neglect</strong> previously unmeasured.</p>
+            </div>
+
+            <!-- Semantic Metrics Explanation -->
+            <div class="card">
+                <h3>Semantic Metrics Explained</h3>
+                <div class="metrics-grid">
+                    <div class="metric-box">
+                        <h4>SII (Semantic Isolation Index)</h4>
+                        <p>Measures how far a disease's research is from the centroid of all biomedical knowledge. Higher values indicate more isolated, siloed research.</p>
+                        <div class="metric-range">Range: 0.0014 - 0.0044</div>
+                    </div>
+                    <div class="metric-box">
+                        <h4>KTP (Knowledge Transfer Potential)</h4>
+                        <p>Maximum similarity to any other disease. Lower values mean less opportunity to benefit from advances in related fields.</p>
+                        <div class="metric-range">Range: 0.9978 - 0.9994</div>
+                    </div>
+                    <div class="metric-box">
+                        <h4>RCC (Research Clustering Coefficient)</h4>
+                        <p>Density of connections in the knowledge network. Lower values indicate sparser research communities.</p>
+                        <div class="metric-range">Range: 0.0025 - 0.0082</div>
+                    </div>
+                    <div class="metric-box">
+                        <h4>Temporal Drift</h4>
+                        <p>How much a disease's research focus has shifted over time. Higher drift may indicate unstable research priorities.</p>
+                        <div class="metric-range">Computed per disease</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Knowledge Landscape Visualization -->
+            <div class="charts-row">
+                <div class="card chart-card">
+                    <h3>Knowledge Landscape (UMAP Projection)</h3>
+                    <p class="card-description">2D projection of disease embeddings showing research clusters</p>
+                    <div class="chart-container chart-large">
+                        <img id="fig-umap" src="" alt="UMAP Knowledge Landscape" class="analysis-figure">
+                    </div>
+                </div>
+                <div class="card chart-card">
+                    <h3>Knowledge Transfer Network</h3>
+                    <p class="card-description">Connections between diseases based on semantic similarity</p>
+                    <div class="chart-container chart-large">
+                        <img id="fig-network" src="" alt="Knowledge Network" class="analysis-figure">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Semantic Isolation Heatmap -->
+            <div class="card">
+                <h3>Disease Similarity Heatmap</h3>
+                <p class="card-description">Cross-disease semantic similarity matrix — darker colors indicate more related research</p>
+                <div class="chart-container chart-large">
+                    <img id="fig-heatmap" src="" alt="Semantic Similarity Heatmap" class="analysis-figure">
+                </div>
+            </div>
+
+            <!-- Gap vs Isolation Scatter -->
+            <div class="charts-row">
+                <div class="card chart-card">
+                    <h3>Gap Score vs Semantic Isolation</h3>
+                    <p class="card-description">Correlation between biobank neglect and knowledge isolation</p>
+                    <div class="chart-container chart-large">
+                        <img id="fig-gap-isolation" src="" alt="Gap vs Isolation" class="analysis-figure">
+                    </div>
+                </div>
+                <div class="card chart-card">
+                    <h3>Temporal Research Drift</h3>
+                    <p class="card-description">How research focus has shifted over 25 years</p>
+                    <div class="chart-container chart-large">
+                        <img id="fig-temporal" src="" alt="Temporal Drift" class="analysis-figure">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disease Rankings Table -->
+            <div class="card">
+                <h3>Disease Semantic Metrics</h3>
+                <p class="card-description">Complete metrics for all analyzed diseases, sorted by Unified Score</p>
+                <div class="filters">
+                    <input type="text" id="semantic-disease-search" class="search-input" placeholder="Search diseases...">
+                    <select id="semantic-filter" class="filter-select">
+                        <option value="all">All Diseases</option>
+                        <option value="high-isolation">High Isolation (SII > 0.003)</option>
+                        <option value="low-ktp">Low Transfer Potential</option>
+                        <option value="top-unified">Top 20 Unified Score</option>
+                    </select>
+                </div>
+                <div class="table-container">
+                    <table class="data-table sortable" id="table-semantic-diseases">
+                        <thead>
+                            <tr>
+                                <th>Disease</th>
+                                <th>Papers</th>
+                                <th>Gap Score</th>
+                                <th>SII</th>
+                                <th>KTP</th>
+                                <th>RCC</th>
+                                <th>Unified Score</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab 3: Clinical Trials -->
         <section id="clinical-trials" class="tab-content">
             <div class="section-header">
                 <h2>Clinical Trials Analysis</h2>
@@ -624,6 +816,55 @@
                 </div>
             </div>
 
+            <!-- Semantic Analysis Methodology -->
+            <div class="card methodology-card">
+                <h3>&#129504; Semantic Analysis Methodology (New in v3.0)</h3>
+
+                <div class="methodology-subsection">
+                    <h4>Data Collection</h4>
+                    <p>PubMed abstracts (2000-2025) retrieved for 175 diseases using MeSH terms and keyword searches.</p>
+                    <ul>
+                        <li><strong>3,912,541 papers</strong> retrieved</li>
+                        <li><strong>3,573,484 embeddings</strong> generated</li>
+                        <li><strong>146 diseases</strong> with sufficient data for analysis</li>
+                    </ul>
+                </div>
+
+                <div class="methodology-subsection">
+                    <h4>Embedding Model</h4>
+                    <p><a href="https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext" target="_blank">PubMedBERT</a> (microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext)</p>
+                    <ul>
+                        <li>768-dimensional dense vectors</li>
+                        <li>Pre-trained on PubMed abstracts and PMC full-text articles</li>
+                        <li>State-of-the-art for biomedical NLP tasks</li>
+                    </ul>
+                </div>
+
+                <div class="methodology-subsection">
+                    <h4>Semantic Isolation Index (SII)</h4>
+                    <div class="formula-box">
+                        <code>SII = mean(cosine_distance(disease_embedding, global_centroid))</code>
+                    </div>
+                    <p>Measures how far a disease's research is from the center of all biomedical knowledge. Higher SII indicates more isolated research that doesn't benefit from mainstream advances.</p>
+                </div>
+
+                <div class="methodology-subsection">
+                    <h4>Knowledge Transfer Potential (KTP)</h4>
+                    <div class="formula-box">
+                        <code>KTP = max(cosine_similarity(disease_i, disease_j)) for all j ≠ i</code>
+                    </div>
+                    <p>Maximum similarity to any other disease. Higher KTP means the disease can potentially benefit from advances in related fields.</p>
+                </div>
+
+                <div class="methodology-subsection">
+                    <h4>Unified Triple-Burden Score</h4>
+                    <div class="formula-box">
+                        <code>Unified = 0.33×Discovery + 0.33×Translation + 0.34×Knowledge</code>
+                    </div>
+                    <p>Combines Gap Score (biobanks), Clinical Trial Equity, and Semantic Isolation into a single measure of compound neglect. Higher scores indicate diseases facing disadvantage across multiple dimensions.</p>
+                </div>
+            </div>
+
             <!-- Citation -->
             <div class="card methodology-card">
                 <h3>&#128218; Citation</h3>
@@ -647,12 +888,12 @@
     <footer class="footer">
         <div class="footer-content">
             <p>
-                <strong>HEIM Framework v2.0</strong> |
-                Data: GBD 2021, ClinicalTrials.gov, PubMed |
+                <strong>HEIM Framework v3.0</strong> |
+                Data: GBD 2021, ClinicalTrials.gov, PubMed, PubMedBERT Embeddings |
                 <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">GitHub</a>
             </p>
             <p class="footer-methodology">
-                Corpas et al. (2026) — In preparation
+                Corpas et al. (2026) — Three-Dimensional Health Equity Analysis
             </p>
         </div>
     </footer>
