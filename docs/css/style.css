@@ -796,6 +796,105 @@ body {
 .dim-translation { background: #2563eb; color: white; }
 .dim-knowledge { background: #7c3aed; color: white; }
 
+/* Three Pillars Layout */
+.three-pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.pillar {
+    text-align: center;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    background: white;
+    box-shadow: var(--shadow);
+}
+
+.pillar-header {
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid;
+}
+
+.pillar-discovery .pillar-header { color: #059669; border-color: #059669; }
+.pillar-translation .pillar-header { color: #2563eb; border-color: #2563eb; }
+.pillar-knowledge .pillar-header { color: #7c3aed; border-color: #7c3aed; }
+
+.pillar-stat {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.pillar-discovery .pillar-stat { color: #059669; }
+.pillar-translation .pillar-stat { color: #2563eb; }
+.pillar-knowledge .pillar-stat { color: #7c3aed; }
+
+.pillar-label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.pillar-finding {
+    font-size: 0.85rem;
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+}
+
+.pillar-finding span {
+    font-weight: 700;
+    color: #dc2626;
+}
+
+/* Top Five List */
+.top-five-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.top-five-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: var(--bg-primary);
+    border-radius: 6px;
+    border-left: 4px solid #dc2626;
+}
+
+.top-five-rank {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #dc2626;
+    width: 40px;
+}
+
+.top-five-name {
+    flex: 1;
+    font-weight: 500;
+}
+
+.top-five-score {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+    .three-pillars {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Semantic Insight Card */
 .semantic-insight {
     background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
