@@ -641,6 +641,7 @@ body {
 /* Card Types */
 .ct-card .card-value { color: #2563eb; }
 .bb-card .card-value { color: #059669; }
+.sem-card .card-value { color: #7c3aed; }
 
 /* Alert Card */
 .alert-card {
@@ -774,6 +775,144 @@ body {
 .info-card li {
     margin-bottom: 0.5rem;
 }
+
+/* Dimension Badges (Header) */
+.dimension-badges {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.dim-badge {
+    padding: 0.35rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.dim-discovery { background: #059669; color: white; }
+.dim-translation { background: #2563eb; color: white; }
+.dim-knowledge { background: #7c3aed; color: white; }
+
+/* Semantic Insight Card */
+.semantic-insight {
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+    border-left: 5px solid #7c3aed;
+}
+
+.semantic-insight h3 {
+    color: #5b21b6;
+}
+
+.semantic-insight p {
+    color: #4c1d95;
+}
+
+/* Metrics Grid */
+.metrics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+}
+
+.metric-box {
+    background: var(--bg-primary);
+    border-radius: 8px;
+    padding: 1rem;
+    border-left: 4px solid #7c3aed;
+}
+
+.metric-box h4 {
+    color: #5b21b6;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.metric-box p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+}
+
+.metric-range {
+    font-size: 0.75rem;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+/* Analysis Figures */
+.analysis-figure {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+/* Top Neglected Card */
+.top-neglected-card {
+    background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+    border-left: 5px solid #dc2626;
+}
+
+.top-neglected-card h3 {
+    color: #991b1b;
+}
+
+.neglected-ranking {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.neglected-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: white;
+    padding: 0.75rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.neglected-rank {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #dc2626;
+    min-width: 30px;
+}
+
+.neglected-info {
+    flex: 1;
+}
+
+.neglected-name {
+    font-weight: 600;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+}
+
+.neglected-score {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Unified Score Badge */
+.unified-badge {
+    display: inline-block;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+.unified-critical { background: #dc2626; color: white; }
+.unified-high { background: #ea580c; color: white; }
+.unified-moderate { background: #ca8a04; color: white; }
+.unified-low { background: #16a34a; color: white; }
 
 /* Responsive */
 @media (max-width: 768px) {
