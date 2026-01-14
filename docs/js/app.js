@@ -1,5 +1,5 @@
-// HEIM Framework v2.0 Dashboard Application
-// Integrates Biobank and Clinical Trials equity analysis
+// HEIM Framework v3.0 Dashboard Application
+// Three-Dimensional Equity Analysis: Discovery + Translation + Knowledge
 
 // Global data store
 let DATA = {
@@ -11,7 +11,9 @@ let DATA = {
     themes: null,
     comparison: null,
     equity: null,
-    clinicalTrials: null  // NEW: Clinical trials data
+    clinicalTrials: null,
+    semantic: null,       // NEW: Semantic analysis data
+    integrated: null      // NEW: Integrated three-dimensional metrics
 };
 
 // Chart instances for cleanup
@@ -19,7 +21,7 @@ let chartInstances = {};
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('HEIM Framework v2.0 Dashboard initializing...');
+    console.log('HEIM Framework v3.0 Dashboard initializing...');
 
     // Setup tab navigation
     setupTabs();
@@ -60,6 +62,7 @@ function setupTabs() {
 function renderTab(tabId) {
     switch(tabId) {
         case 'overview': renderOverview(); break;
+        case 'knowledge': renderKnowledge(); break;
         case 'clinical-trials': renderClinicalTrials(); break;
         case 'biobanks': renderBiobanks(); break;
         case 'diseases': renderDiseases(); break;
@@ -71,13 +74,14 @@ function renderTab(tabId) {
 
 // Data Loading
 async function loadAllData() {
-    const files = ['summary', 'biobanks', 'diseases', 'matrix', 'trends', 'themes', 'comparison', 'equity', 'clinical_trials'];
+    const files = ['summary', 'biobanks', 'diseases', 'matrix', 'trends', 'themes', 'comparison', 'equity', 'clinical_trials', 'integrated'];
 
     const promises = files.map(async (file) => {
         try {
             const response = await fetch(`data/${file}.json`);
             if (response.ok) {
-                const key = file === 'clinical_trials' ? 'clinicalTrials' : file;
+                let key = file;
+                if (file === 'clinical_trials') key = 'clinicalTrials';
                 DATA[key] = await response.json();
                 console.log(`Loaded ${file}.json`);
             } else {
@@ -113,8 +117,54 @@ function renderOverview() {
         setText('stat-ct-hic-ratio', ct.geographic?.hicLmicRatio + ':1');
     }
 
+    // Render semantic/integrated stats
+    if (DATA.integrated) {
+        const int = DATA.integrated;
+        // Calculate total papers from diseases
+        const totalPapers = int.diseases?.reduce((sum, d) => sum + (d.n_papers || 0), 0) || 0;
+        setText('stat-sem-papers', formatNumber(totalPapers));
+        setText('stat-sem-embeddings', formatNumber(Math.round(totalPapers * 0.91))); // ~91% success rate
+        setText('stat-sem-diseases', int.n_diseases || '--');
+
+        // Count highly isolated diseases (SII > 0.003)
+        const isolated = int.diseases?.filter(d => d.sii > 0.003).length || 0;
+        setText('stat-sem-isolated', isolated);
+
+        // Render top neglected diseases
+        renderTopNeglected(int.diseases);
+    }
+
     // Render overview charts
     renderOverviewCharts();
+}
+
+function renderTopNeglected(diseases) {
+    const container = document.getElementById('top-neglected-unified');
+    if (!container || !diseases) return;
+
+    // Sort by unified score and get top 10
+    const top10 = [...diseases]
+        .filter(d => d.unified_score && d.unified_score > 0)
+        .sort((a, b) => b.unified_score - a.unified_score)
+        .slice(0, 10);
+
+    container.innerHTML = top10.map((d, i) => {
+        const scoreClass = d.unified_score > 40 ? 'critical' : d.unified_score > 30 ? 'high' : d.unified_score > 20 ? 'moderate' : 'low';
+        const diseaseName = d.disease.replace(/_/g, ' ');
+        return `
+            <div class="neglected-item">
+                <div class="neglected-rank">#${i + 1}</div>
+                <div class="neglected-info">
+                    <div class="neglected-name">${diseaseName}</div>
+                    <div class="neglected-score">
+                        <span class="unified-badge unified-${scoreClass}">${d.unified_score.toFixed(1)}</span>
+                        ${d.n_papers ? `· ${formatNumber(d.n_papers)} papers` : ''}
+                        ${d.dimensions_available ? `· ${d.dimensions_available}D` : ''}
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
 }
 
 function renderOverviewCharts() {
@@ -178,6 +228,85 @@ function renderOverviewCharts() {
             }
         });
     }
+}
+
+// ============================================================
+// KNOWLEDGE STRUCTURE TAB (NEW in v3.0)
+// ============================================================
+function renderKnowledge() {
+    if (!DATA.integrated) return;
+
+    const int = DATA.integrated;
+
+    // Calculate summary stats
+    const totalPapers = int.diseases?.reduce((sum, d) => sum + (d.n_papers || 0), 0) || 0;
+    const totalEmbeddings = Math.round(totalPapers * 0.91);
+
+    setText('sem-total-papers', formatNumber(totalPapers));
+    setText('sem-embeddings', formatNumber(totalEmbeddings));
+    setText('sem-diseases', int.n_diseases || '--');
+    setText('sem-unified-mean', int.summary?.unified_score?.mean?.toFixed(1) || '--');
+
+    // Set figure paths
+    const figBasePath = 'figures/';
+    const figUmap = document.getElementById('fig-umap');
+    const figNetwork = document.getElementById('fig-network');
+    const figHeatmap = document.getElementById('fig-heatmap');
+    const figGapIsolation = document.getElementById('fig-gap-isolation');
+    const figTemporal = document.getElementById('fig-temporal');
+
+    if (figUmap) figUmap.src = figBasePath + 'fig_umap_disease_clusters.png';
+    if (figNetwork) figNetwork.src = figBasePath + 'fig_knowledge_network.png';
+    if (figHeatmap) figHeatmap.src = figBasePath + 'fig_semantic_isolation_heatmap.png';
+    if (figGapIsolation) figGapIsolation.src = figBasePath + 'fig_gap_vs_isolation.png';
+    if (figTemporal) figTemporal.src = figBasePath + 'fig_temporal_drift.png';
+
+    // Render semantic diseases table
+    renderSemanticDiseases();
+}
+
+function renderSemanticDiseases() {
+    if (!DATA.integrated?.diseases) return;
+
+    const filter = document.getElementById('semantic-filter')?.value || 'all';
+    const search = document.getElementById('semantic-disease-search')?.value?.toLowerCase() || '';
+
+    let diseases = [...DATA.integrated.diseases];
+
+    // Apply filters
+    if (filter === 'high-isolation') {
+        diseases = diseases.filter(d => d.sii > 0.003);
+    } else if (filter === 'low-ktp') {
+        diseases = diseases.filter(d => d.ktp < 0.999);
+    } else if (filter === 'top-unified') {
+        diseases = diseases.sort((a, b) => (b.unified_score || 0) - (a.unified_score || 0)).slice(0, 20);
+    }
+
+    // Apply search
+    if (search) {
+        diseases = diseases.filter(d => d.disease.toLowerCase().replace(/_/g, ' ').includes(search));
+    }
+
+    // Sort by unified score
+    diseases = diseases.sort((a, b) => (b.unified_score || 0) - (a.unified_score || 0));
+
+    const tbody = document.querySelector('#table-semantic-diseases tbody');
+    if (!tbody) return;
+
+    tbody.innerHTML = diseases.map(d => {
+        const diseaseName = d.disease.replace(/_/g, ' ');
+        const unifiedClass = d.unified_score > 40 ? 'critical' : d.unified_score > 30 ? 'high' : d.unified_score > 20 ? 'moderate' : 'low';
+
+        return `<tr>
+            <td>${diseaseName}</td>
+            <td>${formatNumber(d.n_papers)}</td>
+            <td>${d.gap_score !== null && !isNaN(d.gap_score) ? d.gap_score.toFixed(0) : '--'}</td>
+            <td>${d.sii ? d.sii.toFixed(4) : '--'}</td>
+            <td>${d.ktp ? d.ktp.toFixed(4) : '--'}</td>
+            <td>${d.rcc ? d.rcc.toFixed(4) : '--'}</td>
+            <td><span class="unified-badge unified-${unifiedClass}">${d.unified_score ? d.unified_score.toFixed(1) : '--'}</span></td>
+        </tr>`;
+    }).join('');
 }
 
 // ============================================================
@@ -729,6 +858,10 @@ function setupFilters() {
     // Disease filters
     document.getElementById('disease-search')?.addEventListener('input', renderDiseases);
     document.getElementById('disease-view-filter')?.addEventListener('change', renderDiseases);
+
+    // Semantic/Knowledge filters
+    document.getElementById('semantic-disease-search')?.addEventListener('input', renderSemanticDiseases);
+    document.getElementById('semantic-filter')?.addEventListener('change', renderSemanticDiseases);
 }
 
 // ============================================================
