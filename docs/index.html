@@ -55,12 +55,12 @@
                 <p>How disadvantage compounds across Discovery, Translation, and Knowledge</p>
             </div>
 
-            <!-- Key Finding Banner - Simplified -->
+            <!-- Key Finding Banner - NTD Focus -->
             <div class="card key-finding-card">
                 <div class="key-finding-icon">&#9888;</div>
                 <div class="key-finding-content">
                     <h3>Key Finding</h3>
-                    <p>Neglected diseases face <strong>compounding disadvantages</strong>: under-studied in biobanks, under-represented in trials, and semantically isolated in research literature. This creates self-reinforcing cycles of neglect.</p>
+                    <p><strong>Neglected Tropical Diseases are structurally isolated</strong> in the research literature. NTDs show 20% higher semantic isolation than other diseases (p=0.002, Cohen's d=0.82), limiting their ability to benefit from advances in related fields. This isolation compounds existing funding and trial coverage gaps.</p>
                 </div>
             </div>
 
@@ -146,13 +146,16 @@
                 </div>
             </div>
 
-            <!-- Key Insight -->
+            <!-- Key Insight - Statistically Validated -->
             <div class="card insight-card semantic-insight">
-                <h3>&#129504; Semantic Isolation Reveals Hidden Neglect</h3>
-                <p>Beyond funding and trials, neglected diseases suffer <strong>structural isolation</strong> in the research literature.
-                Diseases like <strong>Guinea worm disease</strong> and <strong>Lymphatic filariasis</strong> exist in semantic "islands" -
-                disconnected from mainstream research, unable to benefit from spillover advances in related fields.
-                This represents a <strong>fourth dimension of neglect</strong> previously unmeasured.</p>
+                <h3>&#129504; NTDs Are Structurally Isolated in Research</h3>
+                <p><strong>17 WHO Neglected Tropical Diseases</strong> show significantly higher semantic isolation than other diseases:</p>
+                <ul style="margin: 0.5rem 0 0.5rem 1.5rem;">
+                    <li>Mean SII: 0.00242 vs 0.00201 (<strong>p=0.002</strong>, Cohen's d=0.82)</li>
+                    <li>Lower Knowledge Transfer Potential (<strong>p=0.009</strong>)</li>
+                    <li><strong>Guinea worm disease</strong> has the highest isolation (2x mean)</li>
+                </ul>
+                <p style="margin-top: 0.75rem;">This isolation limits NTDs' ability to benefit from advances in related fields, compounding existing funding gaps.</p>
             </div>
 
             <!-- Semantic Metrics Explanation -->
@@ -764,7 +767,53 @@
                         <code>Unified = 0.33×Discovery + 0.33×Translation + 0.34×Knowledge</code>
                     </div>
                     <p>Combines Gap Score (biobanks), Clinical Trial Equity, and Semantic Isolation into a single measure of compound neglect. Higher scores indicate diseases facing disadvantage across multiple dimensions.</p>
+                    <p><strong>Weighting justification:</strong> Equal weights are used because the three dimensions are empirically orthogonal (inter-dimension correlation r=0.07), meaning they capture independent aspects of neglect rather than redundant signals. This orthogonality supports treating them as equally important contributors to overall disadvantage.</p>
                 </div>
+            </div>
+
+            <!-- Statistical Validation -->
+            <div class="card methodology-card">
+                <h3>&#128202; Statistical Validation</h3>
+                <p>The central finding - that NTDs are semantically isolated - was validated using multiple statistical approaches:</p>
+
+                <div class="methodology-subsection">
+                    <h4>NTD Semantic Isolation</h4>
+                    <table class="comparison-table" style="margin: 1rem 0;">
+                        <thead>
+                            <tr><th>Metric</th><th>NTDs (n=17)</th><th>Non-NTDs (n=129)</th><th>p-value</th></tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Mean SII</td><td>0.00242</td><td>0.00201</td><td><strong>0.002</strong></td></tr>
+                            <tr><td>Mean KTP</td><td>0.9987</td><td>0.9989</td><td><strong>0.009</strong></td></tr>
+                            <tr><td>Mann-Whitney U</td><td colspan="2">U=1715</td><td><strong>0.0001</strong></td></tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Effect size:</strong> Cohen's d = 0.82 (large effect). The orthogonality of dimensions (r=0.07) confirms they measure independent aspects of neglect.</p>
+                </div>
+            </div>
+
+            <!-- Policy Implications -->
+            <div class="card methodology-card">
+                <h3>&#127919; Policy Implications</h3>
+                <p>The identification of semantic isolation as a measurable dimension of neglect suggests actionable interventions:</p>
+                <ul>
+                    <li><strong>Targeted funding mechanisms:</strong> Prioritize semantically isolated diseases (high SII) for cross-disciplinary research initiatives</li>
+                    <li><strong>Research network building:</strong> Fund collaborative projects that explicitly connect NTD researchers with mainstream biomedical science</li>
+                    <li><strong>WHO monitoring:</strong> Consider adopting SII as a complementary indicator alongside traditional R&D metrics</li>
+                    <li><strong>Knowledge translation:</strong> Develop systematic reviews that explicitly bridge isolated disease literature with related therapeutic areas</li>
+                </ul>
+                <p>The finding that isolation is <em>measurable</em> means progress can be tracked - providing accountability for equity-focused research investments.</p>
+            </div>
+
+            <!-- Limitations -->
+            <div class="card methodology-card">
+                <h3>&#9888; Limitations</h3>
+                <ul>
+                    <li><strong>Data sources:</strong> ClinicalTrials.gov has US/Western registration bias; PubMed has English-language bias</li>
+                    <li><strong>Biobank coverage:</strong> 70 IHCC biobanks may not represent all global biobank activity</li>
+                    <li><strong>Temporal scope:</strong> Embeddings trained on 2000-2025 literature; historical patterns may differ</li>
+                    <li><strong>Generalizability:</strong> The NTD finding is robust; broader framework applicability requires further validation</li>
+                </ul>
             </div>
 
             <!-- Citation -->
