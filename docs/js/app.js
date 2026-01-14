@@ -733,7 +733,7 @@ function renderTrends() {
 
     const temporal = DATA.clinicalTrials.temporal;
 
-    // Growth chart
+    // Growth chart with GS breakdown
     const growthCtx = document.getElementById('chart-trends-ct-growth');
     if (growthCtx) {
         destroyChart('chart-trends-ct-growth');
@@ -741,17 +741,27 @@ function renderTrends() {
             type: 'bar',
             data: {
                 labels: temporal.map(t => t.year),
-                datasets: [{
-                    label: 'Trials Started',
-                    data: temporal.map(t => t.trials),
-                    backgroundColor: '#2563eb'
-                }]
+                datasets: [
+                    {
+                        label: 'Global South Priority',
+                        data: temporal.map(t => t.gsTrials),
+                        backgroundColor: '#d73027'
+                    },
+                    {
+                        label: 'Other Diseases',
+                        data: temporal.map(t => t.trials - t.gsTrials),
+                        backgroundColor: '#4575b4'
+                    }
+                ]
             },
             options: {
                 responsive: true,
                 maintainAspectRatio: false,
-                plugins: { legend: { display: false } },
-                scales: { y: { title: { display: true, text: 'Number of Trials' } } }
+                plugins: { legend: { position: 'top' } },
+                scales: {
+                    x: { stacked: true },
+                    y: { stacked: true, title: { display: true, text: 'Number of Trials' } }
+                }
             }
         });
     }
