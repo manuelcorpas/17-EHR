@@ -505,15 +505,15 @@ function renderCTCharts() {
 function renderCTTables() {
     const ct = DATA.clinicalTrials;
 
-    // GS Priority diseases table
+    // All diseases table (sorted by burden)
     const gsTable = document.querySelector('#table-ct-gs-diseases tbody');
     if (gsTable) {
-        const gsDiseases = ct.diseases.filter(d => d.globalSouthPriority).sort((a, b) => b.dalys - a.dalys);
-        gsTable.innerHTML = gsDiseases.map(d => {
+        const allDiseases = [...ct.diseases].sort((a, b) => b.dalys - a.dalys);
+        gsTable.innerHTML = allDiseases.map(d => {
             const status = d.trials < 500 ? 'Severely Neglected' : d.trials < 2000 ? 'Neglected' : d.trials < 10000 ? 'Under-researched' : 'Moderate';
             const statusClass = d.trials < 500 ? 'critical' : d.trials < 2000 ? 'high' : d.trials < 10000 ? 'moderate' : 'low';
             return `<tr>
-                <td>${d.name}</td>
+                <td>${d.name}${d.globalSouthPriority ? ' <span class="badge badge-critical" style="font-size:0.65rem">GS</span>' : ''}</td>
                 <td>${truncate(d.category, 20)}</td>
                 <td>${formatNumber(d.trials)}</td>
                 <td>${d.dalys.toFixed(1)}</td>
