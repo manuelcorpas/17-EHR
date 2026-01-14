@@ -277,7 +277,21 @@ function renderSemanticDiseases() {
     const filter = document.getElementById('semantic-filter')?.value || 'all';
     const search = document.getElementById('semantic-disease-search')?.value?.toLowerCase() || '';
 
-    let diseases = [...DATA.integrated.diseases];
+    let allDiseases = [...DATA.integrated.diseases];
+
+    // Calculate percentile ranks for each metric
+    const siiValues = allDiseases.map(d => d.sii).filter(v => v).sort((a, b) => a - b);
+    const ktpValues = allDiseases.map(d => d.ktp).filter(v => v).sort((a, b) => b - a); // reversed - lower is worse
+    const rccValues = allDiseases.map(d => d.rcc).filter(v => v).sort((a, b) => a - b);
+
+    const getPercentile = (value, sortedArr, reverse = false) => {
+        if (!value || !sortedArr.length) return null;
+        const idx = sortedArr.findIndex(v => v >= value);
+        const pct = ((idx === -1 ? sortedArr.length : idx) / sortedArr.length) * 100;
+        return reverse ? 100 - pct : pct;
+    };
+
+    let diseases = allDiseases;
 
     // Apply filters
     if (filter === 'high-isolation') {
@@ -303,13 +317,21 @@ function renderSemanticDiseases() {
         const diseaseName = d.disease.replace(/_/g, ' ');
         const unifiedClass = d.unified_score > 40 ? 'critical' : d.unified_score > 30 ? 'high' : d.unified_score > 20 ? 'moderate' : 'low';
 
+        // Convert to percentile ranks (higher = more isolated/worse)
+        const siiPct = getPercentile(d.sii, siiValues);
+        const ktpPct = getPercentile(d.ktp, ktpValues, true); // reverse - lower KTP is worse
+        const rccPct = getPercentile(d.rcc, rccValues);
+
+        // Color code percentiles
+        const getPctClass = (pct) => pct > 75 ? 'pct-high' : pct > 50 ? 'pct-mod' : pct > 25 ? 'pct-low' : 'pct-good';
+
         return `<tr>
             <td>${diseaseName}</td>
             <td>${formatNumber(d.n_papers)}</td>
             <td>${d.gap_score !== null && !isNaN(d.gap_score) ? d.gap_score.toFixed(0) : '--'}</td>
-            <td>${d.sii ? d.sii.toFixed(4) : '--'}</td>
-            <td>${d.ktp ? d.ktp.toFixed(4) : '--'}</td>
-            <td>${d.rcc ? d.rcc.toFixed(4) : '--'}</td>
+            <td><span class="pct-badge ${getPctClass(siiPct)}">${siiPct !== null ? siiPct.toFixed(0) + '%' : '--'}</span></td>
+            <td><span class="pct-badge ${getPctClass(ktpPct)}">${ktpPct !== null ? (100 - ktpPct).toFixed(0) + '%' : '--'}</span></td>
+            <td><span class="pct-badge ${getPctClass(rccPct)}">${rccPct !== null ? rccPct.toFixed(0) + '%' : '--'}</span></td>
             <td><span class="unified-badge unified-${unifiedClass}">${d.unified_score ? d.unified_score.toFixed(1) : '--'}</span></td>
         </tr>`;
     }).join('');
