@@ -594,31 +594,38 @@
         <!-- Tab 7: Equity -->
         <section id="equity" class="tab-content">
             <div class="section-header">
-                <h2>Global Health Equity</h2>
-                <p>HIC vs LMIC research distribution across the pipeline</p>
+                <h2>Research Equity Summary</h2>
+                <p>Key inequities across the three dimensions of the research pipeline</p>
             </div>
 
-            <!-- Equity Summary -->
-            <div class="summary-cards">
-                <div class="card summary-card">
-                    <div class="card-value" id="equity-ct-ratio">--</div>
-                    <div class="card-label">CT HIC:LMIC Ratio</div>
-                    <div class="card-sublabel">trial sites</div>
+            <!-- Three Dimension Equity Summary -->
+            <div class="equity-dimensions">
+                <div class="equity-dim">
+                    <h4>Discovery (Biobanks)</h4>
+                    <div class="equity-stat">57.8:1</div>
+                    <div class="equity-label">HIC vs LMIC publication ratio</div>
+                    <p class="equity-detail">High-income country biobanks produce 58x more research output than LMIC biobanks</p>
                 </div>
-                <div class="card summary-card">
-                    <div class="card-value" id="equity-bb-ratio">57.8:1</div>
-                    <div class="card-label">Biobank HIC:LMIC</div>
-                    <div class="card-sublabel">publications</div>
+                <div class="equity-dim">
+                    <h4>Translation (Trials)</h4>
+                    <div class="equity-stat" id="equity-ct-ratio">2.5:1</div>
+                    <div class="equity-label">HIC vs LMIC trial site ratio</div>
+                    <p class="equity-detail">Global South diseases get 20% of trials despite 38% of disease burden</p>
                 </div>
-                <div class="card summary-card">
-                    <div class="card-value" id="equity-gs-burden">38%</div>
-                    <div class="card-label">GS Burden Share</div>
-                    <div class="card-sublabel">of global DALYs</div>
+                <div class="equity-dim">
+                    <h4>Knowledge (Semantic)</h4>
+                    <div class="equity-stat">8</div>
+                    <div class="equity-label">Semantically isolated diseases</div>
+                    <p class="equity-detail">Neglected diseases exist as research "islands" disconnected from mainstream science</p>
                 </div>
-                <div class="card summary-card">
-                    <div class="card-value" id="equity-gs-research">--</div>
-                    <div class="card-label">GS Research Share</div>
-                    <div class="card-sublabel">of clinical trials</div>
+            </div>
+
+            <!-- Key Insight -->
+            <div class="card alert-card">
+                <div class="alert-icon">&#9888;</div>
+                <div class="alert-content">
+                    <h4>The Compounding Effect</h4>
+                    <p>Inequity worsens at each stage: diseases under-studied in biobanks are also under-represented in trials AND semantically isolated. This creates self-reinforcing cycles where neglected diseases receive progressively less attention.</p>
                 </div>
             </div>
 
@@ -626,36 +633,25 @@
             <div class="charts-row">
                 <div class="card chart-card">
                     <h3>Burden vs Research Allocation</h3>
+                    <p class="card-description">Global South diseases: 38% of burden, 20% of trials</p>
                     <div class="chart-container">
                         <canvas id="chart-equity-burden-research"></canvas>
                     </div>
                 </div>
                 <div class="card chart-card">
-                    <h3>Geographic Distribution of Trials</h3>
+                    <h3>Trial Site Distribution</h3>
+                    <p class="card-description">Where clinical trials are conducted globally</p>
                     <div class="chart-container">
                         <canvas id="chart-equity-geo"></canvas>
                     </div>
                 </div>
             </div>
 
-            <!-- Global South Priority Diseases -->
-            <div class="card">
-                <h3>Global South Priority Diseases - The Neglect Pattern</h3>
-                <p class="card-description">These 30 diseases disproportionately affect LMICs but receive systematically less research attention</p>
-                <div class="table-container">
-                    <table class="data-table" id="table-gs-diseases-equity">
-                        <thead>
-                            <tr>
-                                <th>Disease</th>
-                                <th>DALYs (M)</th>
-                                <th>Clinical Trials</th>
-                                <th>Intensity</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
+            <!-- What This Means -->
+            <div class="card info-card">
+                <h3>What This Means</h3>
+                <p>The three-dimensional analysis reveals that research inequity is not random but <strong>structural</strong>. The same diseases that are neglected in one dimension tend to be neglected across all dimensions, suggesting systemic factors that perpetuate the gap.</p>
+                <p>Addressing this requires interventions at multiple levels: funding priorities, trial site selection, and deliberate efforts to connect isolated research communities to mainstream biomedical science.</p>
             </div>
         </section>
 
@@ -683,7 +679,7 @@
                 <h3>&#128202; Data Sources</h3>
 
                 <div class="methodology-subsection">
-                    <h4>Clinical Trials Data</h4>
+                    <h4>Clinical Trials Data (Translation)</h4>
                     <p>Trial data comes from <a href="https://clinicaltrials.gov/" target="_blank">ClinicalTrials.gov</a> via the AACT database (Aggregate Analysis of ClinicalTrials.gov).</p>
                     <ul>
                         <li><strong>563,725 studies</strong> retrieved (2000-2025)</li>
@@ -703,8 +699,18 @@
                 </div>
 
                 <div class="methodology-subsection">
-                    <h4>Biobank Data</h4>
+                    <h4>Biobank Data (Discovery)</h4>
                     <p>Publication data from PubMed for 70 biobanks in the <a href="https://ihccglobal.org/" target="_blank">IHCC registry</a>.</p>
+                </div>
+
+                <div class="methodology-subsection">
+                    <h4>PubMed Semantic Data (Knowledge)</h4>
+                    <p>Abstracts retrieved from <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a> (2000-2025) using MeSH terms and keyword searches. Embeddings generated using <a href="https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext" target="_blank">PubMedBERT</a>.</p>
+                    <ul>
+                        <li><strong>3,912,541 papers</strong> retrieved for 175 diseases</li>
+                        <li><strong>3,573,484 embeddings</strong> generated (768-dimensional dense vectors)</li>
+                        <li><strong>146 diseases</strong> with sufficient data for analysis</li>
+                    </ul>
                 </div>
             </div>
 
@@ -736,31 +742,6 @@
                         <li>Maternal and neonatal conditions</li>
                         <li>Nutritional deficiencies</li>
                         <li>Diarrheal diseases and respiratory infections</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- Semantic Analysis Methodology -->
-            <div class="card methodology-card">
-                <h3>&#129504; Semantic Analysis Methodology (New in v3.0)</h3>
-
-                <div class="methodology-subsection">
-                    <h4>Data Collection</h4>
-                    <p>PubMed abstracts (2000-2025) retrieved for 175 diseases using MeSH terms and keyword searches.</p>
-                    <ul>
-                        <li><strong>3,912,541 papers</strong> retrieved</li>
-                        <li><strong>3,573,484 embeddings</strong> generated</li>
-                        <li><strong>146 diseases</strong> with sufficient data for analysis</li>
-                    </ul>
-                </div>
-
-                <div class="methodology-subsection">
-                    <h4>Embedding Model</h4>
-                    <p><a href="https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext" target="_blank">PubMedBERT</a> (microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext)</p>
-                    <ul>
-                        <li>768-dimensional dense vectors</li>
-                        <li>Pre-trained on PubMed abstracts and PMC full-text articles</li>
-                        <li>State-of-the-art for biomedical NLP tasks</li>
                     </ul>
                 </div>
 
