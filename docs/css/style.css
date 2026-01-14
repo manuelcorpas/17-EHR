@@ -213,7 +213,8 @@ body {
 }
 
 .chart-container.chart-large {
-    height: 400px;
+    height: 600px;
+    min-height: 600px;
 }
 
 /* Tables */
@@ -1011,9 +1012,21 @@ body {
 .analysis-figure {
     width: 100%;
     height: auto;
-    max-height: 400px;
+    min-height: 500px;
+    max-height: none;
     object-fit: contain;
     border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.analysis-figure:hover {
+    transform: scale(1.02);
+}
+
+/* Large figure container for semantic analysis */
+.chart-container.chart-large .analysis-figure {
+    min-height: 600px;
 }
 
 /* Top Neglected Card */
