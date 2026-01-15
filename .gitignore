@@ -85,3 +85,6 @@ config.local.py
 # - PRODUCTION/* (final outputs)
 DATA/bhem_publications*.csv
 DATA/bhem_fetch_progress.csv
+
+# Local Claude session intelligence (not for GitHub)
+DOCX/ANNUAL-REVIEWS/CLAUDE.md
