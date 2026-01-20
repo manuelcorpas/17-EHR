@@ -1,0 +1,2127 @@
+{
+  "generated_at": "2026-01-19T21:59:36.718407",
+  "n_diseases": 175,
+  "total_papers": 13100113,
+  "metrics": {
+    "Acne_vulgaris": {
+      "n_papers": 16412,
+      "sii": 0.0013910419074818492,
+      "ktp": 0.9991838932037354,
+      "rcc": 0.007048164494335651,
+      "temporal_drift": {
+        "mean_drift": 4.847233140026219e-05,
+        "max_drift": 0.0002537369728088379,
+        "total_drift": 0.0012602806091308594,
+        "n_years": 27
+      }
+    },
+    "Acute_glomerulonephritis": {
+      "n_papers": 32647,
+      "sii": 0.001632543746381998,
+      "ktp": 0.9988569617271423,
+      "rcc": 0.006603907328099012,
+      "temporal_drift": {
+        "mean_drift": 2.910082184826024e-05,
+        "max_drift": 0.0002536773681640625,
+        "total_drift": 0.0007566213607788086,
+        "n_years": 27
+      }
+    },
+    "Acute_hepatitis": {
+      "n_papers": 105425,
+      "sii": 0.0013970434665679932,
+      "ktp": 0.999090850353241,
+      "rcc": 0.006603155750781298,
+      "temporal_drift": {
+        "mean_drift": 1.6079498891485855e-05,
+        "max_drift": 0.00014650821685791016,
+        "total_drift": 0.00041806697845458984,
+        "n_years": 27
+      }
+    },
+    "Adverse_effects_of_medical_treatment": {
+      "n_papers": 115362,
+      "sii": 0.0009236311889253557,
+      "ktp": 0.9994407892227173,
+      "rcc": 0.00751708447933197,
+      "temporal_drift": {
+        "mean_drift": 1.7849299183581024e-05,
+        "max_drift": 0.00016820430755615234,
+        "total_drift": 0.0004640817642211914,
+        "n_years": 27
+      }
+    },
+    "African_trypanosomiasis": {
+      "n_papers": 4845,
+      "sii": 0.002652810886502266,
+      "ktp": 0.9985998868942261,
+      "rcc": 0.007300170138478279,
+      "temporal_drift": {
+        "mean_drift": 0.0001157426813733764,
+        "max_drift": 0.00034821033477783203,
+        "total_drift": 0.0028935670852661133,
+        "n_years": 26
+      }
+    },
+    "Age-related_and_other_hearing_loss": {
+      "n_papers": 80002,
+      "sii": 0.0014369189739227295,
+      "ktp": 0.9990764856338501,
+      "rcc": 0.0071556163020431995,
+      "temporal_drift": {
+        "mean_drift": 2.0439807485672645e-05,
+        "max_drift": 0.00021320581436157227,
+        "total_drift": 0.0005314350128173828,
+        "n_years": 27
+      }
+    },
+    "Alcohol_use_disorders": {
+      "n_papers": 39037,
+      "sii": 0.0017676412826403975,
+      "ktp": 0.999144971370697,
+      "rcc": 0.006683488842099905,
+      "temporal_drift": {
+        "mean_drift": 2.377766759309452e-05,
+        "max_drift": 9.334087371826172e-05,
+        "total_drift": 0.0006182193756103516,
+        "n_years": 27
+      }
+    },
+    "Alopecia_areata": {
+      "n_papers": 4415,
+      "sii": 0.00147624674718827,
+      "ktp": 0.9991047978401184,
+      "rcc": 0.006488794926553965,
+      "temporal_drift": {
+        "mean_drift": 0.00020206662884447724,
+        "max_drift": 0.0007648468017578125,
+        "total_drift": 0.005253732204437256,
+        "n_years": 27
+      }
+    },
+    "Alzheimer's_disease_and_other_dementias": {
+      "n_papers": 204293,
+      "sii": 0.0014890212332829833,
+      "ktp": 0.9990776181221008,
+      "rcc": 0.007225359324365854,
+      "temporal_drift": {
+        "mean_drift": 1.4940133041818626e-05,
+        "max_drift": 0.00010061264038085938,
+        "total_drift": 0.0003884434700012207,
+        "n_years": 27
+      }
+    },
+    "Animal_contact": {
+      "n_papers": 10211,
+      "sii": 0.0017891174647957087,
+      "ktp": 0.9987818598747253,
+      "rcc": 0.007262870669364929,
+      "temporal_drift": {
+        "mean_drift": 6.897403363836929e-05,
+        "max_drift": 0.0004017353057861328,
+        "total_drift": 0.0017933249473571777,
+        "n_years": 27
+      }
+    },
+    "Anxiety_disorders": {
+      "n_papers": 61312,
+      "sii": 0.002061313483864069,
+      "ktp": 0.999101996421814,
+      "rcc": 0.006286961492151022,
+      "temporal_drift": {
+        "mean_drift": 1.8319258742849343e-05,
+        "max_drift": 8.124113082885742e-05,
+        "total_drift": 0.0004763007164001465,
+        "n_years": 27
+      }
+    },
+    "Aortic_aneurysm": {
+      "n_papers": 48286,
+      "sii": 0.001954616978764534,
+      "ktp": 0.9987398982048035,
+      "rcc": 0.006879290100187063,
+      "temporal_drift": {
+        "mean_drift": 1.970392077055294e-05,
+        "max_drift": 0.00011861324310302734,
+        "total_drift": 0.0005123019218444824,
+        "n_years": 27
+      }
+    },
+    "Appendicitis": {
+      "n_papers": 16121,
+      "sii": 0.0017849546857178211,
+      "ktp": 0.9988091588020325,
+      "rcc": 0.006629957351833582,
+      "temporal_drift": {
+        "mean_drift": 4.96277425554581e-05,
+        "max_drift": 0.000287473201751709,
+        "total_drift": 0.0012903213500976562,
+        "n_years": 27
+      }
+    },
+    "Asthma": {
+      "n_papers": 142197,
+      "sii": 0.0012016785331070423,
+      "ktp": 0.9992629885673523,
+      "rcc": 0.007302391342818737,
+      "temporal_drift": {
+        "mean_drift": 1.3848910384695046e-05,
+        "max_drift": 8.410215377807617e-05,
+        "total_drift": 0.00036007165908813477,
+        "n_years": 27
+      }
+    },
+    "Atrial_fibrillation_and_flutter": {
+      "n_papers": 101534,
+      "sii": 0.0016972101293504238,
+      "ktp": 0.9990116357803345,
+      "rcc": 0.006728275679051876,
+      "temporal_drift": {
+        "mean_drift": 1.7273883713642135e-05,
+        "max_drift": 4.6312808990478516e-05,
+        "total_drift": 0.00044912099838256836,
+        "n_years": 27
+      }
+    },
+    "Attention-deficit_hyperactivity_disorder": {
+      "n_papers": 44908,
+      "sii": 0.0021696758922189474,
+      "ktp": 0.999022901058197,
+      "rcc": 0.006137066055089235,
+      "temporal_drift": {
+        "mean_drift": 2.1478304915945046e-05,
+        "max_drift": 8.761882781982422e-05,
+        "total_drift": 0.0005584359169006348,
+        "n_years": 27
+      }
+    },
+    "Autism_spectrum_disorders": {
+      "n_papers": 94640,
+      "sii": 0.0017586875474080443,
+      "ktp": 0.999085009098053,
+      "rcc": 0.007318068295717239,
+      "temporal_drift": {
+        "mean_drift": 2.041000516328495e-05,
+        "max_drift": 6.580352783203125e-05,
+        "total_drift": 0.0005306601524353027,
+        "n_years": 27
+      }
+    },
+    "Bacterial_skin_diseases": {
+      "n_papers": 14283,
+      "sii": 0.0013951939763501287,
+      "ktp": 0.9992071986198425,
+      "rcc": 0.007676133885979652,
+      "temporal_drift": {
+        "mean_drift": 7.722469308646396e-05,
+        "max_drift": 0.000881195068359375,
+        "total_drift": 0.0020078420639038086,
+        "n_years": 27
+      }
+    },
+    "Bipolar_disorder": {
+      "n_papers": 46090,
+      "sii": 0.001680632820352912,
+      "ktp": 0.9991981387138367,
+      "rcc": 0.0062767015770077705,
+      "temporal_drift": {
+        "mean_drift": 2.369972389715258e-05,
+        "max_drift": 0.00014132261276245117,
+        "total_drift": 0.0006161928176879883,
+        "n_years": 27
+      }
+    },
+    "Bladder_cancer": {
+      "n_papers": 54009,
+      "sii": 0.0011978810653090477,
+      "ktp": 0.9995356202125549,
+      "rcc": 0.007083744276314974,
+      "temporal_drift": {
+        "mean_drift": 2.2429685486713424e-05,
+        "max_drift": 0.00011646747589111328,
+        "total_drift": 0.0005831718444824219,
+        "n_years": 27
+      }
+    },
+    "Blindness_and_vision_loss": {
+      "n_papers": 55325,
+      "sii": 0.0013182145776227117,
+      "ktp": 0.9991406798362732,
+      "rcc": 0.007216088008135557,
+      "temporal_drift": {
+        "mean_drift": 1.7773647414287552e-05,
+        "max_drift": 0.00010001659393310547,
+        "total_drift": 0.0004621148109436035,
+        "n_years": 27
+      }
+    },
+    "Brain_and_central_nervous_system_cancer": {
+      "n_papers": 155117,
+      "sii": 0.0011831409065052867,
+      "ktp": 0.9993929862976074,
+      "rcc": 0.007337271235883236,
+      "temporal_drift": {
+        "mean_drift": 1.601072472112719e-05,
+        "max_drift": 0.00010126829147338867,
+        "total_drift": 0.0004162788391113281,
+        "n_years": 27
+      }
+    },
+    "Breast_cancer": {
+      "n_papers": 219224,
+      "sii": 0.0010550826555117965,
+      "ktp": 0.9995400905609131,
+      "rcc": 0.007509819231927395,
+      "temporal_drift": {
+        "mean_drift": 1.5125824575079605e-05,
+        "max_drift": 0.00011605024337768555,
+        "total_drift": 0.00039327144622802734,
+        "n_years": 27
+      }
+    },
+    "COVID-19": {
+      "n_papers": 52153,
+      "sii": 0.0016639137174934149,
+      "ktp": 0.9988614320755005,
+      "rcc": 0.007392252329736948,
+      "temporal_drift": {
+        "mean_drift": 0.0002656153228599578,
+        "max_drift": 0.0015475153923034668,
+        "total_drift": 0.0018593072891235352,
+        "n_years": 8
+      }
+    },
+    "Cardiomyopathy_and_myocarditis": {
+      "n_papers": 109826,
+      "sii": 0.0013340843142941594,
+      "ktp": 0.9991523623466492,
+      "rcc": 0.007447933312505484,
+      "temporal_drift": {
+        "mean_drift": 1.597175287315622e-05,
+        "max_drift": 7.909536361694336e-05,
+        "total_drift": 0.0004152655601501465,
+        "n_years": 27
+      }
+    },
+    "Cervical_cancer": {
+      "n_papers": 77362,
+      "sii": 0.0012234514579176903,
+      "ktp": 0.999399721622467,
+      "rcc": 0.00727734062820673,
+      "temporal_drift": {
+        "mean_drift": 1.765443812473677e-05,
+        "max_drift": 7.092952728271484e-05,
+        "total_drift": 0.0004590153694152832,
+        "n_years": 27
+      }
+    },
+    "Chagas_disease": {
+      "n_papers": 17438,
+      "sii": 0.0022344356402754784,
+      "ktp": 0.9986300468444824,
+      "rcc": 0.007747333962470293,
+      "temporal_drift": {
+        "mean_drift": 5.605129263130948e-05,
+        "max_drift": 0.00045686960220336914,
+        "total_drift": 0.0014573335647583008,
+        "n_years": 27
+      }
+    },
+    "Chronic_kidney_disease": {
+      "n_papers": 136989,
+      "sii": 0.0012980926549062133,
+      "ktp": 0.9993157982826233,
+      "rcc": 0.006722744554281235,
+      "temporal_drift": {
+        "mean_drift": 1.6347719792975113e-05,
+        "max_drift": 7.814168930053711e-05,
+        "total_drift": 0.00042504072189331055,
+        "n_years": 27
+      }
+    },
+    "Chronic_obstructive_pulmonary_disease": {
+      "n_papers": 73460,
+      "sii": 0.0013139790389686823,
+      "ktp": 0.9992098808288574,
+      "rcc": 0.0071531059220433235,
+      "temporal_drift": {
+        "mean_drift": 2.2133956008474343e-05,
+        "max_drift": 7.408857345581055e-05,
+        "total_drift": 0.0005754828453063965,
+        "n_years": 27
+      }
+    },
+    "Cirrhosis_and_other_chronic_liver_diseases": {
+      "n_papers": 115444,
+      "sii": 0.0011193030513823032,
+      "ktp": 0.9993690252304077,
+      "rcc": 0.006807056721299887,
+      "temporal_drift": {
+        "mean_drift": 1.6567799320910126e-05,
+        "max_drift": 9.912252426147461e-05,
+        "total_drift": 0.00043076276779174805,
+        "n_years": 27
+      }
+    },
+    "Colon_and_rectum_cancer": {
+      "n_papers": 190757,
+      "sii": 0.0010421520564705133,
+      "ktp": 0.9996317625045776,
+      "rcc": 0.0075095584616065025,
+      "temporal_drift": {
+        "mean_drift": 1.499515292380238e-05,
+        "max_drift": 7.462501525878906e-05,
+        "total_drift": 0.0003898739814758301,
+        "n_years": 27
+      }
+    },
+    "Conduct_disorder": {
+      "n_papers": 6012,
+      "sii": 0.0033469724003225565,
+      "ktp": 0.9983583092689514,
+      "rcc": 0.005803059320896864,
+      "temporal_drift": {
+        "mean_drift": 0.00014329873374663293,
+        "max_drift": 0.0016457438468933105,
+        "total_drift": 0.003725767135620117,
+        "n_years": 27
+      }
+    },
+    "Conflict_and_terrorism": {
+      "n_papers": 15089,
+      "sii": 0.002443463308736682,
+      "ktp": 0.9984331727027893,
+      "rcc": 0.00724823446944356,
+      "temporal_drift": {
+        "mean_drift": 9.111945109907538e-05,
+        "max_drift": 0.0009339451789855957,
+        "total_drift": 0.002369105815887451,
+        "n_years": 27
+      }
+    },
+    "Congenital_birth_defects": {
+      "n_papers": 207110,
+      "sii": 0.0012665730901062489,
+      "ktp": 0.9991509914398193,
+      "rcc": 0.007488636765629053,
+      "temporal_drift": {
+        "mean_drift": 8.610578333900776e-06,
+        "max_drift": 6.699562072753906e-05,
+        "total_drift": 0.0002238750457763672,
+        "n_years": 27
+      }
+    },
+    "Cystic_echinococcosis": {
+      "n_papers": 11794,
+      "sii": 0.0022014654241502285,
+      "ktp": 0.9984024167060852,
+      "rcc": 0.007459771353751421,
+      "temporal_drift": {
+        "mean_drift": 7.275434472830966e-05,
+        "max_drift": 0.0004304051399230957,
+        "total_drift": 0.0018916130065917969,
+        "n_years": 27
+      }
+    },
+    "Cysticercosis": {
+      "n_papers": 4651,
+      "sii": 0.0020278238225728273,
+      "ktp": 0.998711884021759,
+      "rcc": 0.006797312758862972,
+      "temporal_drift": {
+        "mean_drift": 0.00012194156443001702,
+        "max_drift": 0.0002970099449157715,
+        "total_drift": 0.003048539161682129,
+        "n_years": 26
+      }
+    },
+    "Decubitus_ulcer": {
+      "n_papers": 13194,
+      "sii": 0.001358471461571753,
+      "ktp": 0.9991432428359985,
+      "rcc": 0.006826615426689386,
+      "temporal_drift": {
+        "mean_drift": 5.4038486268837005e-05,
+        "max_drift": 0.0002027750015258789,
+        "total_drift": 0.0014050006866455078,
+        "n_years": 27
+      }
+    },
+    "Dengue": {
+      "n_papers": 29945,
+      "sii": 0.00187530810944736,
+      "ktp": 0.9990274906158447,
+      "rcc": 0.007273243740200996,
+      "temporal_drift": {
+        "mean_drift": 3.756009755306877e-05,
+        "max_drift": 0.00018733739852905273,
+        "total_drift": 0.0009765625,
+        "n_years": 27
+      }
+    },
+    "Depressive_disorders": {
+      "n_papers": 227813,
+      "sii": 0.001347912009805441,
+      "ktp": 0.9993259310722351,
+      "rcc": 0.006946473382413387,
+      "temporal_drift": {
+        "mean_drift": 1.2879188034276012e-05,
+        "max_drift": 0.0001201629638671875,
+        "total_drift": 0.00033485889434814453,
+        "n_years": 27
+      }
+    },
+    "Dermatitis": {
+      "n_papers": 77689,
+      "sii": 0.0011626153718680143,
+      "ktp": 0.9993755221366882,
+      "rcc": 0.007407326251268387,
+      "temporal_drift": {
+        "mean_drift": 1.5893807358224876e-05,
+        "max_drift": 7.76052474975586e-05,
+        "total_drift": 0.0004132390022277832,
+        "n_years": 27
+      }
+    },
+    "Diabetes_mellitus": {
+      "n_papers": 231620,
+      "sii": 0.0010570836020633578,
+      "ktp": 0.9994475245475769,
+      "rcc": 0.00733746774494648,
+      "temporal_drift": {
+        "mean_drift": 1.4903454029990826e-05,
+        "max_drift": 9.40561294555664e-05,
+        "total_drift": 0.00038748979568481445,
+        "n_years": 27
+      }
+    },
+    "Diarrheal_diseases": {
+      "n_papers": 115871,
+      "sii": 0.0010553443571552634,
+      "ktp": 0.9993656277656555,
+      "rcc": 0.007903823629021645,
+      "temporal_drift": {
+        "mean_drift": 1.6767244233051315e-05,
+        "max_drift": 0.0001576542854309082,
+        "total_drift": 0.00043594837188720703,
+        "n_years": 27
+      }
+    },
+    "Dietary_iron_deficiency": {
+      "n_papers": 22514,
+      "sii": 0.0011814224999397993,
+      "ktp": 0.9992982149124146,
+      "rcc": 0.00694924034178257,
+      "temporal_drift": {
+        "mean_drift": 3.332587220938876e-05,
+        "max_drift": 0.0001856684684753418,
+        "total_drift": 0.0008664727210998535,
+        "n_years": 27
+      }
+    },
+    "Diphtheria": {
+      "n_papers": 9165,
+      "sii": 0.0016086995601654053,
+      "ktp": 0.999047577381134,
+      "rcc": 0.007566067855805159,
+      "temporal_drift": {
+        "mean_drift": 9.02414321899414e-05,
+        "max_drift": 0.0008902549743652344,
+        "total_drift": 0.0023462772369384766,
+        "n_years": 27
+      }
+    },
+    "Drowning": {
+      "n_papers": 4323,
+      "sii": 0.0017017978243529797,
+      "ktp": 0.9989187717437744,
+      "rcc": 0.0071509345434606075,
+      "temporal_drift": {
+        "mean_drift": 0.00017009102157317102,
+        "max_drift": 0.0008785724639892578,
+        "total_drift": 0.004422366619110107,
+        "n_years": 27
+      }
+    },
+    "Drug_use_disorders": {
+      "n_papers": 177601,
+      "sii": 0.0016569036524742842,
+      "ktp": 0.9991750121116638,
+      "rcc": 0.006904706824570894,
+      "temporal_drift": {
+        "mean_drift": 1.028867882268969e-05,
+        "max_drift": 5.9723854064941406e-05,
+        "total_drift": 0.0002675056457519531,
+        "n_years": 27
+      }
+    },
+    "Eating_disorders": {
+      "n_papers": 51541,
+      "sii": 0.0014383376110345125,
+      "ktp": 0.9991678595542908,
+      "rcc": 0.007197868078947067,
+      "temporal_drift": {
+        "mean_drift": 1.8977201762027107e-05,
+        "max_drift": 0.00011926889419555664,
+        "total_drift": 0.0004934072494506836,
+        "n_years": 27
+      }
+    },
+    "Ebola": {
+      "n_papers": 10194,
+      "sii": 0.002445325255393982,
+      "ktp": 0.9986464381217957,
+      "rcc": 0.00712676253169775,
+      "temporal_drift": {
+        "mean_drift": 0.00020124591537751257,
+        "max_drift": 0.0011687874794006348,
+        "total_drift": 0.005232393741607666,
+        "n_years": 27
+      }
+    },
+    "Encephalitis": {
+      "n_papers": 47767,
+      "sii": 0.001399240456521511,
+      "ktp": 0.9990877509117126,
+      "rcc": 0.007345044519752264,
+      "temporal_drift": {
+        "mean_drift": 2.244573443022091e-05,
+        "max_drift": 9.965896606445312e-05,
+        "total_drift": 0.0005835890769958496,
+        "n_years": 27
+      }
+    },
+    "Endocarditis": {
+      "n_papers": 25786,
+      "sii": 0.0018575984286144376,
+      "ktp": 0.9987329840660095,
+      "rcc": 0.007719812914729118,
+      "temporal_drift": {
+        "mean_drift": 4.6796521928627044e-05,
+        "max_drift": 0.0004512667655944824,
+        "total_drift": 0.0012167096138000488,
+        "n_years": 27
+      }
+    },
+    "Endocrine,_metabolic,_blood,_and_immune_disorders": {
+      "n_papers": 219891,
+      "sii": 0.0008232027175836265,
+      "ktp": 0.999566376209259,
+      "rcc": 0.0076827858574688435,
+      "temporal_drift": {
+        "mean_drift": 1.4027724319021218e-05,
+        "max_drift": 9.28640365600586e-05,
+        "total_drift": 0.00036472082138061523,
+        "n_years": 27
+      }
+    },
+    "Environmental_heat_and_cold_exposure": {
+      "n_papers": 10160,
+      "sii": 0.0014744317159056664,
+      "ktp": 0.9989790916442871,
+      "rcc": 0.007225159090012312,
+      "temporal_drift": {
+        "mean_drift": 7.270161586347967e-05,
+        "max_drift": 0.00026291608810424805,
+        "total_drift": 0.0018902420997619629,
+        "n_years": 27
+      }
+    },
+    "Esophageal_cancer": {
+      "n_papers": 51432,
+      "sii": 0.001415446400642395,
+      "ktp": 0.9994931817054749,
+      "rcc": 0.006911867763847113,
+      "temporal_drift": {
+        "mean_drift": 2.646217035362497e-05,
+        "max_drift": 0.00023245811462402344,
+        "total_drift": 0.000688016414642334,
+        "n_years": 27
+      }
+    },
+    "Exposure_to_forces_of_nature": {
+      "n_papers": 27992,
+      "sii": 0.002425660379230976,
+      "ktp": 0.9981935024261475,
+      "rcc": 0.007913259789347649,
+      "temporal_drift": {
+        "mean_drift": 0.0001186820154543966,
+        "max_drift": 0.0004080533981323242,
+        "total_drift": 0.0030857324600219727,
+        "n_years": 27
+      }
+    },
+    "Exposure_to_mechanical_forces": {
+      "n_papers": 17810,
+      "sii": 0.0014637731947004795,
+      "ktp": 0.9990972876548767,
+      "rcc": 0.006983748637139797,
+      "temporal_drift": {
+        "mean_drift": 4.4834156142314896e-05,
+        "max_drift": 0.00024706125259399414,
+        "total_drift": 0.0011656880378723145,
+        "n_years": 27
+      }
+    },
+    "Eye_cancer": {
+      "n_papers": 20518,
+      "sii": 0.0014800566714257002,
+      "ktp": 0.9991307258605957,
+      "rcc": 0.007083289325237274,
+      "temporal_drift": {
+        "mean_drift": 4.412806811160408e-05,
+        "max_drift": 0.0002879500389099121,
+        "total_drift": 0.0011473298072814941,
+        "n_years": 27
+      }
+    },
+    "Falls": {
+      "n_papers": 17388,
+      "sii": 0.001766393193975091,
+      "ktp": 0.9987977147102356,
+      "rcc": 0.0063303811475634575,
+      "temporal_drift": {
+        "mean_drift": 5.896733273402788e-05,
+        "max_drift": 0.000317990779876709,
+        "total_drift": 0.0015331506729125977,
+        "n_years": 27
+      }
+    },
+    "Fire,_heat,_and_hot_substances": {
+      "n_papers": 30292,
+      "sii": 0.0012531477259472013,
+      "ktp": 0.9991883635520935,
+      "rcc": 0.007273989263921976,
+      "temporal_drift": {
+        "mean_drift": 3.937345172744244e-05,
+        "max_drift": 0.0002897977828979492,
+        "total_drift": 0.001023709774017334,
+        "n_years": 27
+      }
+    },
+    "Food-borne_trematodiases": {
+      "n_papers": 17465,
+      "sii": 0.001953926170244813,
+      "ktp": 0.9989221096038818,
+      "rcc": 0.007281002122908831,
+      "temporal_drift": {
+        "mean_drift": 5.787152622360736e-05,
+        "max_drift": 0.0004354715347290039,
+        "total_drift": 0.001504659652709961,
+        "n_years": 27
+      }
+    },
+    "Foreign_body": {
+      "n_papers": 32632,
+      "sii": 0.001994349993765354,
+      "ktp": 0.9986722469329834,
+      "rcc": 0.00719691114500165,
+      "temporal_drift": {
+        "mean_drift": 3.639551141532138e-05,
+        "max_drift": 0.00041979551315307617,
+        "total_drift": 0.0009462833404541016,
+        "n_years": 27
+      }
+    },
+    "Fungal_skin_diseases": {
+      "n_papers": 12452,
+      "sii": 0.0022696275264024734,
+      "ktp": 0.9985362887382507,
+      "rcc": 0.006798600312322378,
+      "temporal_drift": {
+        "mean_drift": 7.002628990449011e-05,
+        "max_drift": 0.000743567943572998,
+        "total_drift": 0.001820683479309082,
+        "n_years": 27
+      }
+    },
+    "Gallbladder_and_biliary_diseases": {
+      "n_papers": 62746,
+      "sii": 0.0011957562528550625,
+      "ktp": 0.9993249177932739,
+      "rcc": 0.007095328066498041,
+      "temporal_drift": {
+        "mean_drift": 1.702858935459517e-05,
+        "max_drift": 9.548664093017578e-05,
+        "total_drift": 0.00044274330139160156,
+        "n_years": 27
+      }
+    },
+    "Gallbladder_and_biliary_tract_cancer": {
+      "n_papers": 17652,
+      "sii": 0.0014465403510257602,
+      "ktp": 0.9994730353355408,
+      "rcc": 0.006799664348363876,
+      "temporal_drift": {
+        "mean_drift": 4.082688974449411e-05,
+        "max_drift": 0.00015872716903686523,
+        "total_drift": 0.0010614991188049316,
+        "n_years": 27
+      }
+    },
+    "Gout": {
+      "n_papers": 12818,
+      "sii": 0.0012046241899952292,
+      "ktp": 0.9992230534553528,
+      "rcc": 0.007543409243226051,
+      "temporal_drift": {
+        "mean_drift": 8.549140329705551e-05,
+        "max_drift": 0.0005061626434326172,
+        "total_drift": 0.002222776412963867,
+        "n_years": 27
+      }
+    },
+    "Guinea_worm_disease": {
+      "n_papers": 429,
+      "sii": 0.002285813679918647,
+      "ktp": 0.9988042116165161,
+      "rcc": 0.007910522632300854,
+      "temporal_drift": {
+        "mean_drift": 0.0010221791453659534,
+        "max_drift": 0.0018382668495178223,
+        "total_drift": 0.02555447816848755,
+        "n_years": 26
+      }
+    },
+    "Gynecological_diseases": {
+      "n_papers": 207352,
+      "sii": 0.000982270808890462,
+      "ktp": 0.9995316863059998,
+      "rcc": 0.007290965411812067,
+      "temporal_drift": {
+        "mean_drift": 1.1391364751034416e-05,
+        "max_drift": 6.639957427978516e-05,
+        "total_drift": 0.000296175479888916,
+        "n_years": 27
+      }
+    },
+    "HIV_AIDS": {
+      "n_papers": 222246,
+      "sii": 0.001190053764730692,
+      "ktp": 0.9992278814315796,
+      "rcc": 0.007636045105755329,
+      "temporal_drift": {
+        "mean_drift": 1.018780949380016e-05,
+        "max_drift": 4.5299530029296875e-05,
+        "total_drift": 0.00026488304138183594,
+        "n_years": 27
+      }
+    },
+    "Headache_disorders": {
+      "n_papers": 99995,
+      "sii": 0.0010897755855694413,
+      "ktp": 0.9993179440498352,
+      "rcc": 0.007150991819798946,
+      "temporal_drift": {
+        "mean_drift": 1.39406092785066e-05,
+        "max_drift": 8.374452590942383e-05,
+        "total_drift": 0.0003624558448791504,
+        "n_years": 27
+      }
+    },
+    "Hemoglobinopathies_and_hemolytic_anemias": {
+      "n_papers": 38043,
+      "sii": 0.0012908572098240256,
+      "ktp": 0.9990736842155457,
+      "rcc": 0.007105308584868908,
+      "temporal_drift": {
+        "mean_drift": 2.8878450393676758e-05,
+        "max_drift": 0.00017654895782470703,
+        "total_drift": 0.0007508397102355957,
+        "n_years": 27
+      }
+    },
+    "Hodgkin_lymphoma": {
+      "n_papers": 27318,
+      "sii": 0.001427644514478743,
+      "ktp": 0.9991455078125,
+      "rcc": 0.0068832156248390675,
+      "temporal_drift": {
+        "mean_drift": 3.125117291347124e-05,
+        "max_drift": 0.00019347667694091797,
+        "total_drift": 0.000812530517578125,
+        "n_years": 27
+      }
+    },
+    "Hypertensive_heart_disease": {
+      "n_papers": 228464,
+      "sii": 0.0010738575365394354,
+      "ktp": 0.9994747042655945,
+      "rcc": 0.007208548486232758,
+      "temporal_drift": {
+        "mean_drift": 1.2819583389500622e-05,
+        "max_drift": 7.224082946777344e-05,
+        "total_drift": 0.0003333091735839844,
+        "n_years": 27
+      }
+    },
+    "Idiopathic_developmental_intellectual_disability": {
+      "n_papers": 63611,
+      "sii": 0.0014971267664805055,
+      "ktp": 0.9990602135658264,
+      "rcc": 0.007498915772885084,
+      "temporal_drift": {
+        "mean_drift": 1.860811244114302e-05,
+        "max_drift": 7.510185241699219e-05,
+        "total_drift": 0.0004838109016418457,
+        "n_years": 27
+      }
+    },
+    "Idiopathic_epilepsy": {
+      "n_papers": 74509,
+      "sii": 0.001407011179253459,
+      "ktp": 0.9990671873092651,
+      "rcc": 0.006808532401919365,
+      "temporal_drift": {
+        "mean_drift": 1.649443947826512e-05,
+        "max_drift": 0.00010251998901367188,
+        "total_drift": 0.00042885541915893555,
+        "n_years": 27
+      }
+    },
+    "Inflammatory_bowel_disease": {
+      "n_papers": 95884,
+      "sii": 0.0011190694058313966,
+      "ktp": 0.9993254542350769,
+      "rcc": 0.007038096431642771,
+      "temporal_drift": {
+        "mean_drift": 1.766819150361698e-05,
+        "max_drift": 0.00013375282287597656,
+        "total_drift": 0.00045937299728393555,
+        "n_years": 27
+      }
+    },
+    "Inguinal,_femoral,_and_abdominal_hernia": {
+      "n_papers": 13350,
+      "sii": 0.0021087294444441795,
+      "ktp": 0.9985888004302979,
+      "rcc": 0.0063039991073310375,
+      "temporal_drift": {
+        "mean_drift": 6.009065327816643e-05,
+        "max_drift": 0.0005019307136535645,
+        "total_drift": 0.001562356948852539,
+        "n_years": 27
+      }
+    },
+    "Interpersonal_violence": {
+      "n_papers": 86268,
+      "sii": 0.002398492069914937,
+      "ktp": 0.9987782835960388,
+      "rcc": 0.006902297958731651,
+      "temporal_drift": {
+        "mean_drift": 2.4868892069207504e-05,
+        "max_drift": 0.00019675493240356445,
+        "total_drift": 0.0006465911865234375,
+        "n_years": 27
+      }
+    },
+    "Intestinal_nematode_infections": {
+      "n_papers": 26256,
+      "sii": 0.0020175366662442684,
+      "ktp": 0.9989097714424133,
+      "rcc": 0.0068988194689154625,
+      "temporal_drift": {
+        "mean_drift": 3.4139706258429214e-05,
+        "max_drift": 0.0002429485321044922,
+        "total_drift": 0.0008876323699951172,
+        "n_years": 27
+      }
+    },
+    "Invasive_Non-typhoidal_Salmonella_(iNTS)": {
+      "n_papers": 13791,
+      "sii": 0.0020467103458940983,
+      "ktp": 0.9987495541572571,
+      "rcc": 0.008020375855267048,
+      "temporal_drift": {
+        "mean_drift": 6.19040074525401e-05,
+        "max_drift": 0.00023216009140014648,
+        "total_drift": 0.001609504222869873,
+        "n_years": 27
+      }
+    },
+    "Iodine_deficiency": {
+      "n_papers": 3368,
+      "sii": 0.0019743209704756737,
+      "ktp": 0.9986364841461182,
+      "rcc": 0.006030958611518145,
+      "temporal_drift": {
+        "mean_drift": 0.00013724803284276277,
+        "max_drift": 0.0002970695495605469,
+        "total_drift": 0.0034312009811401367,
+        "n_years": 26
+      }
+    },
+    "Ischemic_heart_disease": {
+      "n_papers": 109356,
+      "sii": 0.001487736706621945,
+      "ktp": 0.999212384223938,
+      "rcc": 0.007171096745878458,
+      "temporal_drift": {
+        "mean_drift": 3.270919478381984e-05,
+        "max_drift": 0.00019305944442749023,
+        "total_drift": 0.0008504390716552734,
+        "n_years": 27
+      }
+    },
+    "Kidney_cancer": {
+      "n_papers": 67556,
+      "sii": 0.0012730627786368132,
+      "ktp": 0.9994548559188843,
+      "rcc": 0.007261249702423811,
+      "temporal_drift": {
+        "mean_drift": 2.0343522919574752e-05,
+        "max_drift": 8.606910705566406e-05,
+        "total_drift": 0.0005289316177368164,
+        "n_years": 27
+      }
+    },
+    "Larynx_cancer": {
+      "n_papers": 14243,
+      "sii": 0.0013770520454272628,
+      "ktp": 0.9993435144424438,
+      "rcc": 0.007105918135493994,
+      "temporal_drift": {
+        "mean_drift": 5.813057578052394e-05,
+        "max_drift": 0.0004100799560546875,
+        "total_drift": 0.00151139497756958,
+        "n_years": 27
+      }
+    },
+    "Leishmaniasis": {
+      "n_papers": 24632,
+      "sii": 0.002150160726159811,
+      "ktp": 0.9988369941711426,
+      "rcc": 0.007646894082427025,
+      "temporal_drift": {
+        "mean_drift": 4.395154974190518e-05,
+        "max_drift": 0.00023734569549560547,
+        "total_drift": 0.001142740249633789,
+        "n_years": 27
+      }
+    },
+    "Leprosy": {
+      "n_papers": 8452,
+      "sii": 0.0016424661735072732,
+      "ktp": 0.9988564848899841,
+      "rcc": 0.007501645945012569,
+      "temporal_drift": {
+        "mean_drift": 0.0001096908890758641,
+        "max_drift": 0.0011295676231384277,
+        "total_drift": 0.0028519630432128906,
+        "n_years": 27
+      }
+    },
+    "Leukemia": {
+      "n_papers": 192887,
+      "sii": 0.001384854898788035,
+      "ktp": 0.9992074370384216,
+      "rcc": 0.007705360651016235,
+      "temporal_drift": {
+        "mean_drift": 1.3784720067633316e-05,
+        "max_drift": 6.985664367675781e-05,
+        "total_drift": 0.00035840272903442383,
+        "n_years": 27
+      }
+    },
+    "Lip_and_oral_cavity_cancer": {
+      "n_papers": 57156,
+      "sii": 0.0011779284104704857,
+      "ktp": 0.9994972348213196,
+      "rcc": 0.007045316975563765,
+      "temporal_drift": {
+        "mean_drift": 2.0038623915752396e-05,
+        "max_drift": 9.125471115112305e-05,
+        "total_drift": 0.0005210041999816895,
+        "n_years": 27
+      }
+    },
+    "Liver_cancer": {
+      "n_papers": 156561,
+      "sii": 0.0012881738366559148,
+      "ktp": 0.9994845390319824,
+      "rcc": 0.0072370655834674835,
+      "temporal_drift": {
+        "mean_drift": 1.712487210170366e-05,
+        "max_drift": 6.848573684692383e-05,
+        "total_drift": 0.00044524669647216797,
+        "n_years": 27
+      }
+    },
+    "Low_back_pain": {
+      "n_papers": 40563,
+      "sii": 0.0015933364629745483,
+      "ktp": 0.99900883436203,
+      "rcc": 0.0062567368149757385,
+      "temporal_drift": {
+        "mean_drift": 2.2899646864971146e-05,
+        "max_drift": 0.0001704096794128418,
+        "total_drift": 0.000595390796661377,
+        "n_years": 27
+      }
+    },
+    "Lower_extremity_peripheral_arterial_disease": {
+      "n_papers": 52741,
+      "sii": 0.0010444909567013383,
+      "ktp": 0.9994124174118042,
+      "rcc": 0.0074417670257389545,
+      "temporal_drift": {
+        "mean_drift": 1.9075778254773468e-05,
+        "max_drift": 6.014108657836914e-05,
+        "total_drift": 0.0004959702491760254,
+        "n_years": 27
+      }
+    },
+    "Lower_respiratory_infections": {
+      "n_papers": 174866,
+      "sii": 0.0010489261476323009,
+      "ktp": 0.9994163513183594,
+      "rcc": 0.007580908015370369,
+      "temporal_drift": {
+        "mean_drift": 4.14389833167661e-05,
+        "max_drift": 0.000618278980255127,
+        "total_drift": 0.001077413558959961,
+        "n_years": 27
+      }
+    },
+    "Lymphatic_filariasis": {
+      "n_papers": 3354,
+      "sii": 0.002374436939135194,
+      "ktp": 0.9988543391227722,
+      "rcc": 0.006120411213487387,
+      "temporal_drift": {
+        "mean_drift": 0.00011932134657399729,
+        "max_drift": 0.00020557641983032227,
+        "total_drift": 0.0029830336570739746,
+        "n_years": 26
+      }
+    },
+    "Malaria": {
+      "n_papers": 78894,
+      "sii": 0.0017577052349224687,
+      "ktp": 0.999054491519928,
+      "rcc": 0.007671162951737642,
+      "temporal_drift": {
+        "mean_drift": 2.6326913939556107e-05,
+        "max_drift": 0.000244140625,
+        "total_drift": 0.0006844997406005859,
+        "n_years": 27
+      }
+    },
+    "Malignant_neoplasm_of_bone_and_articular_cartilage": {
+      "n_papers": 72852,
+      "sii": 0.0012254565954208374,
+      "ktp": 0.9993911981582642,
+      "rcc": 0.0074175214394927025,
+      "temporal_drift": {
+        "mean_drift": 1.8695225662668236e-05,
+        "max_drift": 9.948015213012695e-05,
+        "total_drift": 0.00048607587814331055,
+        "n_years": 27
+      }
+    },
+    "Malignant_skin_melanoma": {
+      "n_papers": 120427,
+      "sii": 0.0011710887774825096,
+      "ktp": 0.9994215965270996,
+      "rcc": 0.007789527531713247,
+      "temporal_drift": {
+        "mean_drift": 1.4763611943635624e-05,
+        "max_drift": 7.516145706176758e-05,
+        "total_drift": 0.0003838539123535156,
+        "n_years": 27
+      }
+    },
+    "Maternal_disorders": {
+      "n_papers": 197490,
+      "sii": 0.0012421804713085294,
+      "ktp": 0.9991770386695862,
+      "rcc": 0.007051172200590372,
+      "temporal_drift": {
+        "mean_drift": 1.1258400263614021e-05,
+        "max_drift": 7.808208465576172e-05,
+        "total_drift": 0.00029271841049194336,
+        "n_years": 27
+      }
+    },
+    "Measles": {
+      "n_papers": 15392,
+      "sii": 0.001583241275511682,
+      "ktp": 0.9991742372512817,
+      "rcc": 0.007107824552804232,
+      "temporal_drift": {
+        "mean_drift": 5.6005439546424896e-05,
+        "max_drift": 0.0003962516784667969,
+        "total_drift": 0.001456141471862793,
+        "n_years": 27
+      }
+    },
+    "Meningitis": {
+      "n_papers": 42140,
+      "sii": 0.0012759793316945434,
+      "ktp": 0.9992499351501465,
+      "rcc": 0.007693989668041468,
+      "temporal_drift": {
+        "mean_drift": 2.2542018996318802e-05,
+        "max_drift": 0.00012511014938354492,
+        "total_drift": 0.000586092472076416,
+        "n_years": 27
+      }
+    },
+    "Mesothelioma": {
+      "n_papers": 14334,
+      "sii": 0.0012371272314339876,
+      "ktp": 0.9993435144424438,
+      "rcc": 0.007207092363387346,
+      "temporal_drift": {
+        "mean_drift": 5.647998477797955e-05,
+        "max_drift": 0.000440061092376709,
+        "total_drift": 0.0014684796333312988,
+        "n_years": 27
+      }
+    },
+    "Motor_neuron_disease": {
+      "n_papers": 52517,
+      "sii": 0.0014657085994258523,
+      "ktp": 0.9990520477294922,
+      "rcc": 0.00799647718667984,
+      "temporal_drift": {
+        "mean_drift": 2.2695614461554214e-05,
+        "max_drift": 5.793571472167969e-05,
+        "total_drift": 0.0005900859832763672,
+        "n_years": 27
+      }
+    },
+    "Multiple_myeloma": {
+      "n_papers": 45115,
+      "sii": 0.0014506310690194368,
+      "ktp": 0.9991554021835327,
+      "rcc": 0.007238815538585186,
+      "temporal_drift": {
+        "mean_drift": 2.1533323888434097e-05,
+        "max_drift": 8.821487426757812e-05,
+        "total_drift": 0.0005598664283752441,
+        "n_years": 27
+      }
+    },
+    "Multiple_sclerosis": {
+      "n_papers": 90164,
+      "sii": 0.0012393820798024535,
+      "ktp": 0.9991677403450012,
+      "rcc": 0.006975026801228523,
+      "temporal_drift": {
+        "mean_drift": 1.3864957509213127e-05,
+        "max_drift": 5.650520324707031e-05,
+        "total_drift": 0.0003604888916015625,
+        "n_years": 27
+      }
+    },
+    "Nasopharynx_cancer": {
+      "n_papers": 24915,
+      "sii": 0.0011983930598944426,
+      "ktp": 0.9994438290596008,
+      "rcc": 0.007790419738739729,
+      "temporal_drift": {
+        "mean_drift": 4.155819260631688e-05,
+        "max_drift": 0.00029027462005615234,
+        "total_drift": 0.0010805130004882812,
+        "n_years": 27
+      }
+    },
+    "Neck_pain": {
+      "n_papers": 16475,
+      "sii": 0.0016051107086241245,
+      "ktp": 0.9989991188049316,
+      "rcc": 0.0061543476767838,
+      "temporal_drift": {
+        "mean_drift": 4.847233140026219e-05,
+        "max_drift": 0.0003122091293334961,
+        "total_drift": 0.0012602806091308594,
+        "n_years": 27
+      }
+    },
+    "Neonatal_disorders": {
+      "n_papers": 222965,
+      "sii": 0.0009983265772461891,
+      "ktp": 0.9993723630905151,
+      "rcc": 0.007504780776798725,
+      "temporal_drift": {
+        "mean_drift": 1.0112156815011986e-05,
+        "max_drift": 5.161762237548828e-05,
+        "total_drift": 0.00026291608810424805,
+        "n_years": 27
+      }
+    },
+    "Neuroblastoma_and_other_peripheral_nervous_cell_tumors": {
+      "n_papers": 34075,
+      "sii": 0.001499040168710053,
+      "ktp": 0.9991012811660767,
+      "rcc": 0.007722422480583191,
+      "temporal_drift": {
+        "mean_drift": 3.627171827247366e-05,
+        "max_drift": 0.00027483701705932617,
+        "total_drift": 0.0009430646896362305,
+        "n_years": 27
+      }
+    },
+    "Non-Hodgkin_lymphoma": {
+      "n_papers": 70213,
+      "sii": 0.0015899789286777377,
+      "ktp": 0.9990898370742798,
+      "rcc": 0.007000977173447609,
+      "temporal_drift": {
+        "mean_drift": 1.635001171962358e-05,
+        "max_drift": 0.00012475252151489258,
+        "total_drift": 0.00042510032653808594,
+        "n_years": 27
+      }
+    },
+    "Non-melanoma_skin_cancer": {
+      "n_papers": 102183,
+      "sii": 0.0012498199939727783,
+      "ktp": 0.9995923638343811,
+      "rcc": 0.006761476397514343,
+      "temporal_drift": {
+        "mean_drift": 1.4456419194175396e-05,
+        "max_drift": 7.748603820800781e-05,
+        "total_drift": 0.0003758668899536133,
+        "n_years": 27
+      }
+    },
+    "Non-rheumatic_valvular_heart_disease": {
+      "n_papers": 77007,
+      "sii": 0.0018826377345249057,
+      "ktp": 0.9988960027694702,
+      "rcc": 0.006853332743048668,
+      "temporal_drift": {
+        "mean_drift": 1.7963922800845467e-05,
+        "max_drift": 8.255243301391602e-05,
+        "total_drift": 0.00046706199645996094,
+        "n_years": 27
+      }
+    },
+    "Onchocerciasis": {
+      "n_papers": 2345,
+      "sii": 0.0025801307056099176,
+      "ktp": 0.9987198114395142,
+      "rcc": 0.006194391753524542,
+      "temporal_drift": {
+        "mean_drift": 0.0001713657402433455,
+        "max_drift": 0.0002694129943847656,
+        "total_drift": 0.0042841434478759766,
+        "n_years": 26
+      }
+    },
+    "Oral_disorders": {
+      "n_papers": 192917,
+      "sii": 0.001101818634197116,
+      "ktp": 0.9992435574531555,
+      "rcc": 0.007403785362839699,
+      "temporal_drift": {
+        "mean_drift": 1.3718237823923118e-05,
+        "max_drift": 0.00012892484664916992,
+        "total_drift": 0.0003566741943359375,
+        "n_years": 27
+      }
+    },
+    "Osteoarthritis": {
+      "n_papers": 114321,
+      "sii": 0.001509783323854208,
+      "ktp": 0.9990286827087402,
+      "rcc": 0.006876267027109861,
+      "temporal_drift": {
+        "mean_drift": 1.5893807358224876e-05,
+        "max_drift": 7.933378219604492e-05,
+        "total_drift": 0.0004132390022277832,
+        "n_years": 27
+      }
+    },
+    "Other_cardiovascular_and_circulatory_diseases": {
+      "n_papers": 210283,
+      "sii": 0.0009405058808624744,
+      "ktp": 0.9995600581169128,
+      "rcc": 0.007804782595485449,
+      "temporal_drift": {
+        "mean_drift": 1.6721394786145538e-05,
+        "max_drift": 0.00012701749801635742,
+        "total_drift": 0.0004347562789916992,
+        "n_years": 27
+      }
+    },
+    "Other_chronic_respiratory_diseases": {
+      "n_papers": 99873,
+      "sii": 0.0010788876097649336,
+      "ktp": 0.9993942379951477,
+      "rcc": 0.007234664633870125,
+      "temporal_drift": {
+        "mean_drift": 2.6017427444458008e-05,
+        "max_drift": 0.0001990199089050293,
+        "total_drift": 0.0006764531135559082,
+        "n_years": 27
+      }
+    },
+    "Other_digestive_diseases": {
+      "n_papers": 218025,
+      "sii": 0.0007999330991879106,
+      "ktp": 0.9996199607849121,
+      "rcc": 0.007772253360599279,
+      "temporal_drift": {
+        "mean_drift": 1.6471514754812233e-05,
+        "max_drift": 0.00011777877807617188,
+        "total_drift": 0.00042825937271118164,
+        "n_years": 27
+      }
+    },
+    "Other_intestinal_infectious_diseases": {
+      "n_papers": 25413,
+      "sii": 0.0011003565741702914,
+      "ktp": 0.9993236660957336,
+      "rcc": 0.007296539843082428,
+      "temporal_drift": {
+        "mean_drift": 3.6209821701049805e-05,
+        "max_drift": 0.00025093555450439453,
+        "total_drift": 0.0009414553642272949,
+        "n_years": 27
+      }
+    },
+    "Other_malignant_neoplasms": {
+      "n_papers": 221347,
+      "sii": 0.0010278815170750022,
+      "ktp": 0.9996271729469299,
+      "rcc": 0.007286077830940485,
+      "temporal_drift": {
+        "mean_drift": 1.2312943908909801e-05,
+        "max_drift": 6.508827209472656e-05,
+        "total_drift": 0.00032013654708862305,
+        "n_years": 27
+      }
+    },
+    "Other_mental_disorders": {
+      "n_papers": 219665,
+      "sii": 0.0013237077509984374,
+      "ktp": 0.9994320869445801,
+      "rcc": 0.007374185603111982,
+      "temporal_drift": {
+        "mean_drift": 1.2028675882902462e-05,
+        "max_drift": 7.843971252441406e-05,
+        "total_drift": 0.0003127455711364746,
+        "n_years": 27
+      }
+    },
+    "Other_musculoskeletal_disorders": {
+      "n_papers": 219603,
+      "sii": 0.0009724801639094949,
+      "ktp": 0.9994416236877441,
+      "rcc": 0.007729632779955864,
+      "temporal_drift": {
+        "mean_drift": 1.2328991942922585e-05,
+        "max_drift": 8.738040924072266e-05,
+        "total_drift": 0.0003205537796020508,
+        "n_years": 27
+      }
+    },
+    "Other_neglected_tropical_diseases": {
+      "n_papers": 12657,
+      "sii": 0.0015351080801337957,
+      "ktp": 0.9991307258605957,
+      "rcc": 0.00821550004184246,
+      "temporal_drift": {
+        "mean_drift": 0.00011125665332656354,
+        "max_drift": 0.00028395652770996094,
+        "total_drift": 0.0028926730155944824,
+        "n_years": 27
+      }
+    },
+    "Other_neoplasms": {
+      "n_papers": 112046,
+      "sii": 0.001291214837692678,
+      "ktp": 0.9993516206741333,
+      "rcc": 0.006808165926486254,
+      "temporal_drift": {
+        "mean_drift": 1.3044247680227272e-05,
+        "max_drift": 0.00011032819747924805,
+        "total_drift": 0.00033915042877197266,
+        "n_years": 27
+      }
+    },
+    "Other_neurological_disorders": {
+      "n_papers": 220012,
+      "sii": 0.0008771502762101591,
+      "ktp": 0.9995073676109314,
+      "rcc": 0.007837469689548016,
+      "temporal_drift": {
+        "mean_drift": 1.4089620890445076e-05,
+        "max_drift": 9.244680404663086e-05,
+        "total_drift": 0.0003663301467895508,
+        "n_years": 27
+      }
+    },
+    "Other_nutritional_deficiencies": {
+      "n_papers": 72403,
+      "sii": 0.00122140406165272,
+      "ktp": 0.999301552772522,
+      "rcc": 0.0072068339213728905,
+      "temporal_drift": {
+        "mean_drift": 1.9832299585686997e-05,
+        "max_drift": 0.00013113021850585938,
+        "total_drift": 0.0005156397819519043,
+        "n_years": 27
+      }
+    },
+    "Other_pharynx_cancer": {
+      "n_papers": 27592,
+      "sii": 0.0012990713585168123,
+      "ktp": 0.9995047450065613,
+      "rcc": 0.006896326318383217,
+      "temporal_drift": {
+        "mean_drift": 3.398152330191806e-05,
+        "max_drift": 0.00020313262939453125,
+        "total_drift": 0.0008835196495056152,
+        "n_years": 27
+      }
+    },
+    "Other_sense_organ_diseases": {
+      "n_papers": 99493,
+      "sii": 0.0012787706218659878,
+      "ktp": 0.9992121458053589,
+      "rcc": 0.007201609667390585,
+      "temporal_drift": {
+        "mean_drift": 1.4632940292358398e-05,
+        "max_drift": 0.00010716915130615234,
+        "total_drift": 0.00038045644760131836,
+        "n_years": 27
+      }
+    },
+    "Other_skin_and_subcutaneous_diseases": {
+      "n_papers": 204666,
+      "sii": 0.0007831478142179549,
+      "ktp": 0.9995349645614624,
+      "rcc": 0.007841210812330246,
+      "temporal_drift": {
+        "mean_drift": 1.1549545888556167e-05,
+        "max_drift": 6.568431854248047e-05,
+        "total_drift": 0.00030028820037841797,
+        "n_years": 27
+      }
+    },
+    "Other_transport_injuries": {
+      "n_papers": 759,
+      "sii": 0.00280177709646523,
+      "ktp": 0.9982135891914368,
+      "rcc": 0.006285442505031824,
+      "temporal_drift": {
+        "mean_drift": 0.0006867647171020508,
+        "max_drift": 0.0020999908447265625,
+        "total_drift": 0.01716911792755127,
+        "n_years": 26
+      }
+    },
+    "Other_unintentional_injuries": {
+      "n_papers": 4626,
+      "sii": 0.0016587722348049283,
+      "ktp": 0.9989564418792725,
+      "rcc": 0.006881503388285637,
+      "temporal_drift": {
+        "mean_drift": 0.00011832667951239273,
+        "max_drift": 0.00048238039016723633,
+        "total_drift": 0.003076493740081787,
+        "n_years": 27
+      }
+    },
+    "Other_unspecified_infectious_diseases": {
+      "n_papers": 211595,
+      "sii": 0.0011427205754444003,
+      "ktp": 0.9993295073509216,
+      "rcc": 0.00756648788228631,
+      "temporal_drift": {
+        "mean_drift": 1.1666463251458481e-05,
+        "max_drift": 5.352497100830078e-05,
+        "total_drift": 0.0003033280372619629,
+        "n_years": 27
+      }
+    },
+    "Otitis_media": {
+      "n_papers": 17536,
+      "sii": 0.0014111900236457586,
+      "ktp": 0.9990454316139221,
+      "rcc": 0.007057609967887402,
+      "temporal_drift": {
+        "mean_drift": 4.4758504373021424e-05,
+        "max_drift": 0.00027751922607421875,
+        "total_drift": 0.0011637210845947266,
+        "n_years": 27
+      }
+    },
+    "Ovarian_cancer": {
+      "n_papers": 88730,
+      "sii": 0.0012010389473289251,
+      "ktp": 0.9995417594909668,
+      "rcc": 0.0074203903786838055,
+      "temporal_drift": {
+        "mean_drift": 1.5753965271869674e-05,
+        "max_drift": 6.443262100219727e-05,
+        "total_drift": 0.0004096031188964844,
+        "n_years": 27
+      }
+    },
+    "Pancreatic_cancer": {
+      "n_papers": 87717,
+      "sii": 0.0012173973955214024,
+      "ktp": 0.9995570182800293,
+      "rcc": 0.007388839963823557,
+      "temporal_drift": {
+        "mean_drift": 1.5595784134347923e-05,
+        "max_drift": 5.894899368286133e-05,
+        "total_drift": 0.0004054903984069824,
+        "n_years": 27
+      }
+    },
+    "Pancreatitis": {
+      "n_papers": 48066,
+      "sii": 0.0011160314315930009,
+      "ktp": 0.9993355870246887,
+      "rcc": 0.00710704131051898,
+      "temporal_drift": {
+        "mean_drift": 2.2129370336188003e-05,
+        "max_drift": 0.00016063451766967773,
+        "total_drift": 0.0005753636360168457,
+        "n_years": 27
+      }
+    },
+    "Paralytic_ileus_and_intestinal_obstruction": {
+      "n_papers": 23965,
+      "sii": 0.001930069294758141,
+      "ktp": 0.998816192150116,
+      "rcc": 0.006664149463176727,
+      "temporal_drift": {
+        "mean_drift": 3.919692971976474e-05,
+        "max_drift": 0.00035250186920166016,
+        "total_drift": 0.001019120216369629,
+        "n_years": 27
+      }
+    },
+    "Parkinson's_disease": {
+      "n_papers": 140133,
+      "sii": 0.001600571908056736,
+      "ktp": 0.9989749789237976,
+      "rcc": 0.007028219755738974,
+      "temporal_drift": {
+        "mean_drift": 1.4807169463892933e-05,
+        "max_drift": 6.854534149169922e-05,
+        "total_drift": 0.00038498640060424805,
+        "n_years": 27
+      }
+    },
+    "Pertussis": {
+      "n_papers": 15935,
+      "sii": 0.00158539111725986,
+      "ktp": 0.998947024345398,
+      "rcc": 0.007903121411800385,
+      "temporal_drift": {
+        "mean_drift": 5.73236211494077e-05,
+        "max_drift": 0.00024521350860595703,
+        "total_drift": 0.0014904141426086426,
+        "n_years": 27
+      }
+    },
+    "Pneumoconiosis": {
+      "n_papers": 5837,
+      "sii": 0.00133895396720618,
+      "ktp": 0.9990484714508057,
+      "rcc": 0.00731023820117116,
+      "temporal_drift": {
+        "mean_drift": 0.0001396766019752249,
+        "max_drift": 0.0013274550437927246,
+        "total_drift": 0.003631591796875,
+        "n_years": 27
+      }
+    },
+    "Poisonings": {
+      "n_papers": 91498,
+      "sii": 0.0011658460134640336,
+      "ktp": 0.9991771578788757,
+      "rcc": 0.008113138377666473,
+      "temporal_drift": {
+        "mean_drift": 2.2739171981811523e-05,
+        "max_drift": 0.00018602609634399414,
+        "total_drift": 0.0005912184715270996,
+        "n_years": 27
+      }
+    },
+    "Police_conflict_and_executions": {
+      "n_papers": 2599,
+      "sii": 0.002992486348375678,
+      "ktp": 0.9982592463493347,
+      "rcc": 0.006150481756776571,
+      "temporal_drift": {
+        "mean_drift": 0.0002055145159829408,
+        "max_drift": 0.0006635189056396484,
+        "total_drift": 0.005343377590179443,
+        "n_years": 27
+      }
+    },
+    "Prostate_cancer": {
+      "n_papers": 164684,
+      "sii": 0.0011781960492953658,
+      "ktp": 0.9994072914123535,
+      "rcc": 0.007247893139719963,
+      "temporal_drift": {
+        "mean_drift": 1.2936500752402935e-05,
+        "max_drift": 5.716085433959961e-05,
+        "total_drift": 0.0003363490104675293,
+        "n_years": 27
+      }
+    },
+    "Protein-energy_malnutrition": {
+      "n_papers": 2931,
+      "sii": 0.0014428526628762484,
+      "ktp": 0.9991269111633301,
+      "rcc": 0.006611890159547329,
+      "temporal_drift": {
+        "mean_drift": 0.00014493466005660594,
+        "max_drift": 0.00023573637008666992,
+        "total_drift": 0.003623366355895996,
+        "n_years": 26
+      }
+    },
+    "Pruritus": {
+      "n_papers": 19806,
+      "sii": 0.0011669844388961792,
+      "ktp": 0.9993494749069214,
+      "rcc": 0.007112381514161825,
+      "temporal_drift": {
+        "mean_drift": 4.117076241527684e-05,
+        "max_drift": 0.0001513361930847168,
+        "total_drift": 0.0010704398155212402,
+        "n_years": 27
+      }
+    },
+    "Psoriasis": {
+      "n_papers": 47484,
+      "sii": 0.0012851256178691983,
+      "ktp": 0.999264121055603,
+      "rcc": 0.007077239919453859,
+      "temporal_drift": {
+        "mean_drift": 2.6700588932726532e-05,
+        "max_drift": 0.00012987852096557617,
+        "total_drift": 0.0006942152976989746,
+        "n_years": 27
+      }
+    },
+    "Pulmonary_Arterial_Hypertension": {
+      "n_papers": 52658,
+      "sii": 0.0012711983872577548,
+      "ktp": 0.9991531372070312,
+      "rcc": 0.007844376377761364,
+      "temporal_drift": {
+        "mean_drift": 3.228737841709517e-05,
+        "max_drift": 0.0002434253692626953,
+        "total_drift": 0.0008394718170166016,
+        "n_years": 27
+      }
+    },
+    "Rabies": {
+      "n_papers": 9674,
+      "sii": 0.001778035773895681,
+      "ktp": 0.998972475528717,
+      "rcc": 0.007267190143465996,
+      "temporal_drift": {
+        "mean_drift": 7.68762402003631e-05,
+        "max_drift": 0.0003121495246887207,
+        "total_drift": 0.0019987821578979492,
+        "n_years": 27
+      }
+    },
+    "Rheumatic_heart_disease": {
+      "n_papers": 4749,
+      "sii": 0.0014273237902671099,
+      "ktp": 0.9990543127059937,
+      "rcc": 0.006944846361875534,
+      "temporal_drift": {
+        "mean_drift": 0.00018435028323438019,
+        "max_drift": 0.0011368393898010254,
+        "total_drift": 0.004793107509613037,
+        "n_years": 27
+      }
+    },
+    "Rheumatoid_arthritis": {
+      "n_papers": 111424,
+      "sii": 0.0011207318166270852,
+      "ktp": 0.9993170499801636,
+      "rcc": 0.007166572846472263,
+      "temporal_drift": {
+        "mean_drift": 2.126281106029637e-05,
+        "max_drift": 0.00021606683731079102,
+        "total_drift": 0.000552833080291748,
+        "n_years": 27
+      }
+    },
+    "Road_injuries": {
+      "n_papers": 30365,
+      "sii": 0.001912513980641961,
+      "ktp": 0.9987308382987976,
+      "rcc": 0.0067068953067064285,
+      "temporal_drift": {
+        "mean_drift": 4.201439878670499e-05,
+        "max_drift": 0.00042694807052612305,
+        "total_drift": 0.001092374324798584,
+        "n_years": 27
+      }
+    },
+    "Scabies": {
+      "n_papers": 2871,
+      "sii": 0.0018675822066143155,
+      "ktp": 0.9988588690757751,
+      "rcc": 0.0077439602464437485,
+      "temporal_drift": {
+        "mean_drift": 0.0002447985752951354,
+        "max_drift": 0.0015472769737243652,
+        "total_drift": 0.006364762783050537,
+        "n_years": 27
+      }
+    },
+    "Schistosomiasis": {
+      "n_papers": 14232,
+      "sii": 0.0017247832147404552,
+      "ktp": 0.9990401268005371,
+      "rcc": 0.0074540432542562485,
+      "temporal_drift": {
+        "mean_drift": 6.382969877449796e-05,
+        "max_drift": 0.0004506707191467285,
+        "total_drift": 0.0016595721244812012,
+        "n_years": 27
+      }
+    },
+    "Schizophrenia": {
+      "n_papers": 123827,
+      "sii": 0.001628828700631857,
+      "ktp": 0.9992432594299316,
+      "rcc": 0.0068526058457791805,
+      "temporal_drift": {
+        "mean_drift": 1.5261080989148468e-05,
+        "max_drift": 0.00012814998626708984,
+        "total_drift": 0.0003967881202697754,
+        "n_years": 27
+      }
+    },
+    "Self-harm": {
+      "n_papers": 58732,
+      "sii": 0.001985883805900812,
+      "ktp": 0.9990158081054688,
+      "rcc": 0.006764611229300499,
+      "temporal_drift": {
+        "mean_drift": 2.2457195882452652e-05,
+        "max_drift": 0.000164031982421875,
+        "total_drift": 0.0005838871002197266,
+        "n_years": 27
+      }
+    },
+    "Sexually_transmitted_infections_excluding_HIV": {
+      "n_papers": 203014,
+      "sii": 0.0013834488345310092,
+      "ktp": 0.9991106390953064,
+      "rcc": 0.007182412780821323,
+      "temporal_drift": {
+        "mean_drift": 1.0559191650827415e-05,
+        "max_drift": 7.200241088867188e-05,
+        "total_drift": 0.0002745389938354492,
+        "n_years": 27
+      }
+    },
+    "Soft_tissue_and_other_extraosseous_sarcomas": {
+      "n_papers": 69865,
+      "sii": 0.0013188302982598543,
+      "ktp": 0.9994239807128906,
+      "rcc": 0.007324570789933205,
+      "temporal_drift": {
+        "mean_drift": 1.7163845768664032e-05,
+        "max_drift": 9.435415267944336e-05,
+        "total_drift": 0.0004462599754333496,
+        "n_years": 27
+      }
+    },
+    "Stomach_cancer": {
+      "n_papers": 103320,
+      "sii": 0.001527757034637034,
+      "ktp": 0.9994316101074219,
+      "rcc": 0.007401833776384592,
+      "temporal_drift": {
+        "mean_drift": 1.8727321730693802e-05,
+        "max_drift": 8.386373519897461e-05,
+        "total_drift": 0.000486910343170166,
+        "n_years": 27
+      }
+    },
+    "Stroke": {
+      "n_papers": 213448,
+      "sii": 0.0010709970956668258,
+      "ktp": 0.9994202852249146,
+      "rcc": 0.007260454352945089,
+      "temporal_drift": {
+        "mean_drift": 1.1781086868722923e-05,
+        "max_drift": 6.347894668579102e-05,
+        "total_drift": 0.0003063082695007324,
+        "n_years": 27
+      }
+    },
+    "Sudden_infant_death_syndrome": {
+      "n_papers": 4695,
+      "sii": 0.0014610439538955688,
+      "ktp": 0.9989871978759766,
+      "rcc": 0.00680845882743597,
+      "temporal_drift": {
+        "mean_drift": 0.00012740492820739746,
+        "max_drift": 0.0010075569152832031,
+        "total_drift": 0.003312528133392334,
+        "n_years": 27
+      }
+    },
+    "Testicular_cancer": {
+      "n_papers": 12763,
+      "sii": 0.0014483582926914096,
+      "ktp": 0.9991868138313293,
+      "rcc": 0.006841416470706463,
+      "temporal_drift": {
+        "mean_drift": 5.250252070254646e-05,
+        "max_drift": 0.0004432201385498047,
+        "total_drift": 0.001365065574645996,
+        "n_years": 27
+      }
+    },
+    "Tetanus": {
+      "n_papers": 12379,
+      "sii": 0.001500709680840373,
+      "ktp": 0.9991143345832825,
+      "rcc": 0.007436290383338928,
+      "temporal_drift": {
+        "mean_drift": 6.0780690546380356e-05,
+        "max_drift": 0.000452578067779541,
+        "total_drift": 0.0015802979469299316,
+        "n_years": 27
+      }
+    },
+    "Thyroid_cancer": {
+      "n_papers": 52209,
+      "sii": 0.0012881809379905462,
+      "ktp": 0.9993529319763184,
+      "rcc": 0.007098181638866663,
+      "temporal_drift": {
+        "mean_drift": 2.3972530470928177e-05,
+        "max_drift": 0.00014036893844604492,
+        "total_drift": 0.0006232857704162598,
+        "n_years": 27
+      }
+    },
+    "Tracheal": {
+      "n_papers": 1146,
+      "sii": 0.002458406612277031,
+      "ktp": 0.9983752965927124,
+      "rcc": 0.007255407050251961,
+      "temporal_drift": {
+        "mean_drift": 0.0004099202051293105,
+        "max_drift": 0.0007355809211730957,
+        "total_drift": 0.010248005390167236,
+        "n_years": 26
+      }
+    },
+    "Tracheal,_bronchus,_and_lung_cancer": {
+      "n_papers": 188000,
+      "sii": 0.0011176728876307607,
+      "ktp": 0.9995706081390381,
+      "rcc": 0.007741264067590237,
+      "temporal_drift": {
+        "mean_drift": 1.694376624072902e-05,
+        "max_drift": 9.697675704956055e-05,
+        "total_drift": 0.0004405379295349121,
+        "n_years": 27
+      }
+    },
+    "Trachoma": {
+      "n_papers": 2072,
+      "sii": 0.0020336199086159468,
+      "ktp": 0.9986234307289124,
+      "rcc": 0.006551122758537531,
+      "temporal_drift": {
+        "mean_drift": 0.00020714283164124936,
+        "max_drift": 0.0003649592399597168,
+        "total_drift": 0.005178570747375488,
+        "n_years": 26
+      }
+    },
+    "Tuberculosis": {
+      "n_papers": 142560,
+      "sii": 0.0013145303819328547,
+      "ktp": 0.9991748929023743,
+      "rcc": 0.008233887143433094,
+      "temporal_drift": {
+        "mean_drift": 1.3913099792262074e-05,
+        "max_drift": 6.175041198730469e-05,
+        "total_drift": 0.0003617405891418457,
+        "n_years": 27
+      }
+    },
+    "Typhoid_and_paratyphoid": {
+      "n_papers": 6240,
+      "sii": 0.0018723922548815608,
+      "ktp": 0.9989438652992249,
+      "rcc": 0.00801378209143877,
+      "temporal_drift": {
+        "mean_drift": 0.0001251560024684295,
+        "max_drift": 0.0009420514106750488,
+        "total_drift": 0.0032540559768676758,
+        "n_years": 27
+      }
+    },
+    "Upper_digestive_system_diseases": {
+      "n_papers": 216009,
+      "sii": 0.0008628761861473322,
+      "ktp": 0.9995750188827515,
+      "rcc": 0.007644737139344215,
+      "temporal_drift": {
+        "mean_drift": 1.2819583389500622e-05,
+        "max_drift": 9.119510650634766e-05,
+        "total_drift": 0.0003333091735839844,
+        "n_years": 27
+      }
+    },
+    "Upper_respiratory_infections": {
+      "n_papers": 176702,
+      "sii": 0.0010368520161136985,
+      "ktp": 0.9994226098060608,
+      "rcc": 0.007598127704113722,
+      "temporal_drift": {
+        "mean_drift": 4.0943807107396424e-05,
+        "max_drift": 0.0006111860275268555,
+        "total_drift": 0.0010645389556884766,
+        "n_years": 27
+      }
+    },
+    "Urinary_diseases_and_male_infertility": {
+      "n_papers": 217013,
+      "sii": 0.0008891248726285994,
+      "ktp": 0.9995130896568298,
+      "rcc": 0.007422324735671282,
+      "temporal_drift": {
+        "mean_drift": 1.1638952855719253e-05,
+        "max_drift": 6.270408630371094e-05,
+        "total_drift": 0.0003026127815246582,
+        "n_years": 27
+      }
+    },
+    "Urticaria": {
+      "n_papers": 15762,
+      "sii": 0.0013899176847189665,
+      "ktp": 0.9991737604141235,
+      "rcc": 0.006917319260537624,
+      "temporal_drift": {
+        "mean_drift": 4.340364466770552e-05,
+        "max_drift": 0.0002752542495727539,
+        "total_drift": 0.0011284947395324707,
+        "n_years": 27
+      }
+    },
+    "Uterine_cancer": {
+      "n_papers": 96168,
+      "sii": 0.001155062927864492,
+      "ktp": 0.9995306730270386,
+      "rcc": 0.007061760872602463,
+      "temporal_drift": {
+        "mean_drift": 1.3938317351858132e-05,
+        "max_drift": 6.210803985595703e-05,
+        "total_drift": 0.000362396240234375,
+        "n_years": 27
+      }
+    },
+    "Varicella_and_herpes_zoster": {
+      "n_papers": 15389,
+      "sii": 0.0013152360916137695,
+      "ktp": 0.9992356300354004,
+      "rcc": 0.007084512617439032,
+      "temporal_drift": {
+        "mean_drift": 4.859154068981297e-05,
+        "max_drift": 0.0003858804702758789,
+        "total_drift": 0.0012633800506591797,
+        "n_years": 27
+      }
+    },
+    "Vascular_intestinal_disorders": {
+      "n_papers": 4226,
+      "sii": 0.0015216803876683116,
+      "ktp": 0.999011218547821,
+      "rcc": 0.006506042554974556,
+      "temporal_drift": {
+        "mean_drift": 0.0001276593975489959,
+        "max_drift": 0.00040525197982788086,
+        "total_drift": 0.0033191442489624023,
+        "n_years": 27
+      }
+    },
+    "Viral_skin_diseases": {
+      "n_papers": 9983,
+      "sii": 0.0013326335465535522,
+      "ktp": 0.9991436004638672,
+      "rcc": 0.007102198898792267,
+      "temporal_drift": {
+        "mean_drift": 7.480153726646677e-05,
+        "max_drift": 0.000761866569519043,
+        "total_drift": 0.0019448399543762207,
+        "n_years": 27
+      }
+    },
+    "Vitamin_A_deficiency": {
+      "n_papers": 3135,
+      "sii": 0.0015678917989134789,
+      "ktp": 0.9989964962005615,
+      "rcc": 0.006557582411915064,
+      "temporal_drift": {
+        "mean_drift": 0.00013083696831017733,
+        "max_drift": 0.00020819902420043945,
+        "total_drift": 0.0032709240913391113,
+        "n_years": 26
+      }
+    },
+    "Yellow_fever": {
+      "n_papers": 5685,
+      "sii": 0.0021509421057999134,
+      "ktp": 0.9989386200904846,
+      "rcc": 0.007661812473088503,
+      "temporal_drift": {
+        "mean_drift": 0.00015995594731066376,
+        "max_drift": 0.0014019608497619629,
+        "total_drift": 0.0041588544845581055,
+        "n_years": 27
+      }
+    },
+    "Zika_virus": {
+      "n_papers": 12776,
+      "sii": 0.002414488699287176,
+      "ktp": 0.998604953289032,
+      "rcc": 0.007635738700628281,
+      "temporal_drift": {
+        "mean_drift": 0.0002974501112475991,
+        "max_drift": 0.0019134879112243652,
+        "total_drift": 0.003866851329803467,
+        "n_years": 14
+      }
+    }
+  },
+  "summary": {
+    "sii": {
+      "mean": 0.0015129885958906795,
+      "std": 0.0004475963311594046,
+      "min": 0.0007831478142179549,
+      "max": 0.0033469724003225565
+    },
+    "ktp": {
+      "mean": 0.9991307510648455,
+      "std": 0.0003049031522497971,
+      "min": 0.9981935024261475,
+      "max": 0.9996317625045776
+    },
+    "rcc": {
+      "mean": 0.007180513965764216,
+      "std": 0.00046208342860844655,
+      "min": 0.005803059320896864,
+      "max": 0.008233887143433094
+    }
+  }
+}

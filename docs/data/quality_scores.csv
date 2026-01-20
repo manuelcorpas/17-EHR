@@ -1,0 +1,2 @@
+total_papers,unique_pmids,papers_with_abstracts,year_coverage,abstract_coverage,duplicate_rate,quality_score,years_with_data,total_years,passes_filters,disease,disease_folder
+15827,14433,13791,1.0,0.871359069943767,0.08807733619763691,93.09281607379795,26,26,False,Invasive Non-typhoidal Salmonella (iNTS),Invasive_Non-typhoidal_Salmonella_(iNTS)
