@@ -2,7 +2,8 @@
   "version": "HEIM-CT v2.0",
   "generated": "2026-01-13",
   "summary": {
-    "totalTrials": 2189930,
+    "totalTrials": 563725,
+    "totalDiseaseTrialMappings": 2189930,
     "totalDALYs": 2410.0,
     "diseaseCategories": 89,
     "dateRange": "2000-2025",
