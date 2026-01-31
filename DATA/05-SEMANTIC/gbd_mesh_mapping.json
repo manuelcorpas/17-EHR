@@ -1,275 +1,2792 @@
 {
   "_metadata": {
     "description": "GBD Disease Name to PubMed/MeSH Search Term Mapping",
-    "version": "1.0",
+    "version": "3.0",
     "created": "2025-01-14",
     "notes": [
       "Each GBD disease maps to one or more PubMed search strategies",
       "mesh_terms: Use [MeSH Terms] qualifier",
       "title_abstract: Use [Title/Abstract] for keywords",
       "combined: Full query string for complex searches",
-      "priority: CRITICAL = must fix, HIGH = should fix, NORMAL = ok"
+      "priority: CRITICAL = must fix, HIGH = should fix, NORMAL = ok",
+      "Extended to cover all GBD diseases with proper MeSH mappings",
+      "Updated to use MeSH Major Topics [Majr] for higher precision"
     ]
   },
   "mappings": {
     "Tracheal, bronchus, and lung cancer": {
       "priority": "CRITICAL",
-      "mesh_terms": ["Lung Neoplasms", "Bronchial Neoplasms", "Tracheal Neoplasms"],
-      "title_abstract": ["lung cancer", "lung carcinoma", "lung adenocarcinoma", "NSCLC", "SCLC", "bronchogenic carcinoma"],
-      "combined": "(\"Lung Neoplasms\"[MeSH] OR \"lung cancer\"[tiab] OR \"lung carcinoma\"[tiab] OR \"NSCLC\"[tiab] OR \"bronchogenic\"[tiab])"
+      "mesh_terms": [
+        "Lung Neoplasms",
+        "Bronchial Neoplasms",
+        "Tracheal Neoplasms"
+      ],
+      "title_abstract": [
+        "lung cancer",
+        "lung carcinoma",
+        "lung adenocarcinoma",
+        "NSCLC",
+        "SCLC",
+        "bronchogenic carcinoma"
+      ],
+      "combined": "(\"Lung Neoplasms\"[Majr] OR \"lung cancer\"[tiab] OR \"lung carcinoma\"[tiab] OR \"NSCLC\"[tiab] OR \"bronchogenic\"[tiab])"
     },
     "Brain and central nervous system cancer": {
       "priority": "CRITICAL",
-      "mesh_terms": ["Brain Neoplasms", "Central Nervous System Neoplasms", "Glioma", "Glioblastoma", "Meningioma"],
-      "title_abstract": ["brain tumor", "brain cancer", "glioma", "glioblastoma", "CNS tumor", "brain metastasis"],
-      "combined": "(\"Brain Neoplasms\"[MeSH] OR \"Glioma\"[MeSH] OR \"brain tumor\"[tiab] OR \"brain cancer\"[tiab] OR \"glioblastoma\"[tiab])"
+      "mesh_terms": [
+        "Brain Neoplasms",
+        "Central Nervous System Neoplasms",
+        "Glioma",
+        "Glioblastoma",
+        "Meningioma"
+      ],
+      "title_abstract": [
+        "brain tumor",
+        "brain cancer",
+        "glioma",
+        "glioblastoma",
+        "CNS tumor",
+        "brain metastasis"
+      ],
+      "combined": "(\"Brain Neoplasms\"[Majr] OR \"Glioma\"[Majr] OR \"brain tumor\"[tiab] OR \"brain cancer\"[tiab] OR \"glioblastoma\"[tiab])"
     },
     "Alzheimer's disease and other dementias": {
       "priority": "CRITICAL",
-      "mesh_terms": ["Alzheimer Disease", "Dementia", "Dementia, Vascular", "Frontotemporal Dementia", "Lewy Body Disease"],
-      "title_abstract": ["Alzheimer", "dementia", "cognitive decline", "memory impairment", "neurodegeneration"],
-      "combined": "(\"Alzheimer Disease\"[MeSH] OR \"Dementia\"[MeSH] OR \"Alzheimer\"[tiab] OR \"dementia\"[tiab])"
+      "mesh_terms": [
+        "Alzheimer Disease",
+        "Dementia",
+        "Dementia, Vascular",
+        "Frontotemporal Dementia",
+        "Lewy Body Disease"
+      ],
+      "title_abstract": [
+        "Alzheimer",
+        "dementia",
+        "cognitive decline",
+        "memory impairment",
+        "neurodegeneration"
+      ],
+      "combined": "(\"Alzheimer Disease\"[Majr] OR \"Dementia\"[Majr] OR \"Alzheimer\"[tiab] OR \"dementia\"[tiab])"
     },
     "Colon and rectum cancer": {
       "priority": "CRITICAL",
-      "mesh_terms": ["Colorectal Neoplasms", "Colonic Neoplasms", "Rectal Neoplasms"],
-      "title_abstract": ["colorectal cancer", "colon cancer", "rectal cancer", "CRC", "bowel cancer"],
-      "combined": "(\"Colorectal Neoplasms\"[MeSH] OR \"colorectal cancer\"[tiab] OR \"colon cancer\"[tiab] OR \"CRC\"[tiab])"
+      "mesh_terms": [
+        "Colorectal Neoplasms",
+        "Colonic Neoplasms",
+        "Rectal Neoplasms"
+      ],
+      "title_abstract": [
+        "colorectal cancer",
+        "colon cancer",
+        "rectal cancer",
+        "CRC",
+        "bowel cancer"
+      ],
+      "combined": "(\"Colorectal Neoplasms\"[Majr] OR \"colorectal cancer\"[tiab] OR \"colon cancer\"[tiab] OR \"CRC\"[tiab])"
     },
     "Other malignant neoplasms": {
       "priority": "CRITICAL",
-      "mesh_terms": ["Neoplasms"],
-      "title_abstract": ["cancer", "malignancy", "tumor", "carcinoma", "neoplasm"],
-      "combined": "(\"Neoplasms\"[MeSH] AND \"malignant\"[tiab])",
+      "mesh_terms": [
+        "Neoplasms"
+      ],
+      "title_abstract": [
+        "cancer",
+        "malignancy",
+        "tumor",
+        "carcinoma",
+        "neoplasm"
+      ],
+      "combined": "(\"Neoplasms\"[Majr] AND \"malignant\"[tiab])",
       "notes": "Very broad category - may need disease-specific sub-queries"
     },
     "Intestinal nematode infections": {
       "priority": "CRITICAL",
-      "mesh_terms": ["Nematode Infections", "Ascariasis", "Hookworm Infections", "Trichuriasis", "Strongyloidiasis"],
-      "title_abstract": ["intestinal worm", "roundworm", "hookworm", "ascaris", "soil-transmitted helminth", "STH"],
-      "combined": "(\"Nematode Infections\"[MeSH] OR \"Ascariasis\"[MeSH] OR \"soil-transmitted helminth\"[tiab] OR \"intestinal parasit\"[tiab])"
+      "mesh_terms": [
+        "Nematode Infections",
+        "Ascariasis",
+        "Hookworm Infections",
+        "Trichuriasis",
+        "Strongyloidiasis"
+      ],
+      "title_abstract": [
+        "intestinal worm",
+        "roundworm",
+        "hookworm",
+        "ascaris",
+        "soil-transmitted helminth",
+        "STH"
+      ],
+      "combined": "(\"Nematode Infections\"[Majr] OR \"Ascariasis\"[Majr] OR \"soil-transmitted helminth\"[tiab] OR \"intestinal parasit\"[tiab])"
     },
     "Maternal disorders": {
       "priority": "CRITICAL",
-      "mesh_terms": ["Pregnancy Complications", "Maternal Mortality", "Puerperal Disorders", "Obstetric Labor Complications"],
-      "title_abstract": ["maternal health", "pregnancy complication", "obstetric", "postpartum", "maternal mortality"],
-      "combined": "(\"Pregnancy Complications\"[MeSH] OR \"Maternal Health\"[tiab] OR \"obstetric complication\"[tiab])"
+      "mesh_terms": [
+        "Pregnancy Complications",
+        "Maternal Mortality",
+        "Puerperal Disorders",
+        "Obstetric Labor Complications"
+      ],
+      "title_abstract": [
+        "maternal health",
+        "pregnancy complication",
+        "obstetric",
+        "postpartum",
+        "maternal mortality"
+      ],
+      "combined": "(\"Pregnancy Complications\"[Majr] OR \"Maternal Health\"[tiab] OR \"obstetric complication\"[tiab])"
     },
     "Neonatal disorders": {
       "priority": "CRITICAL",
-      "mesh_terms": ["Infant, Newborn, Diseases", "Neonatal Sepsis", "Respiratory Distress Syndrome, Newborn", "Jaundice, Neonatal"],
-      "title_abstract": ["neonatal", "newborn disease", "preterm infant", "neonatal mortality", "NICU"],
-      "combined": "(\"Infant, Newborn, Diseases\"[MeSH] OR \"neonatal\"[tiab] OR \"newborn\"[tiab])"
+      "mesh_terms": [
+        "Infant, Newborn, Diseases",
+        "Neonatal Sepsis",
+        "Respiratory Distress Syndrome, Newborn",
+        "Jaundice, Neonatal"
+      ],
+      "title_abstract": [
+        "neonatal",
+        "newborn disease",
+        "preterm infant",
+        "neonatal mortality",
+        "NICU"
+      ],
+      "combined": "(\"Infant, Newborn, Diseases\"[Majr] OR \"neonatal\"[tiab] OR \"newborn\"[tiab])"
     },
     "Other musculoskeletal disorders": {
       "priority": "CRITICAL",
-      "mesh_terms": ["Musculoskeletal Diseases", "Joint Diseases", "Bone Diseases"],
-      "title_abstract": ["musculoskeletal", "joint disorder", "bone disease", "orthopedic"],
-      "combined": "(\"Musculoskeletal Diseases\"[MeSH] OR \"musculoskeletal disorder\"[tiab])"
+      "mesh_terms": [
+        "Musculoskeletal Diseases",
+        "Joint Diseases",
+        "Bone Diseases"
+      ],
+      "title_abstract": [
+        "musculoskeletal",
+        "joint disorder",
+        "bone disease",
+        "orthopedic"
+      ],
+      "combined": "(\"Musculoskeletal Diseases\"[Majr] OR \"musculoskeletal disorder\"[tiab])"
     },
     "Road injuries": {
       "priority": "CRITICAL",
-      "mesh_terms": ["Accidents, Traffic", "Wounds and Injuries"],
-      "title_abstract": ["road traffic injury", "traffic accident", "motor vehicle accident", "road crash", "pedestrian injury"],
-      "combined": "(\"Accidents, Traffic\"[MeSH] OR \"road traffic\"[tiab] OR \"motor vehicle accident\"[tiab])"
+      "mesh_terms": [
+        "Accidents, Traffic",
+        "Wounds and Injuries"
+      ],
+      "title_abstract": [
+        "road traffic injury",
+        "traffic accident",
+        "motor vehicle accident",
+        "road crash",
+        "pedestrian injury"
+      ],
+      "combined": "(\"Accidents, Traffic\"[Majr] OR \"road traffic\"[tiab] OR \"motor vehicle accident\"[tiab])"
     },
     "Ischemic heart disease": {
       "priority": "HIGH",
-      "mesh_terms": ["Myocardial Ischemia", "Coronary Artery Disease", "Myocardial Infarction", "Angina Pectoris"],
-      "title_abstract": ["ischemic heart", "coronary heart disease", "coronary artery disease", "myocardial infarction", "heart attack"],
-      "combined": "(\"Myocardial Ischemia\"[MeSH] OR \"Coronary Artery Disease\"[MeSH] OR \"coronary heart disease\"[tiab])"
+      "mesh_terms": [
+        "Myocardial Ischemia",
+        "Coronary Artery Disease",
+        "Myocardial Infarction",
+        "Angina Pectoris"
+      ],
+      "title_abstract": [
+        "ischemic heart",
+        "coronary heart disease",
+        "coronary artery disease",
+        "myocardial infarction",
+        "heart attack"
+      ],
+      "combined": "(\"Myocardial Ischemia\"[Majr] OR \"Coronary Artery Disease\"[Majr] OR \"coronary heart disease\"[tiab])"
     },
     "HIV/AIDS": {
       "priority": "HIGH",
-      "mesh_terms": ["HIV Infections", "Acquired Immunodeficiency Syndrome", "HIV"],
-      "title_abstract": ["HIV", "AIDS", "human immunodeficiency virus", "antiretroviral"],
-      "combined": "(\"HIV Infections\"[MeSH] OR \"Acquired Immunodeficiency Syndrome\"[MeSH] OR \"HIV\"[tiab])"
+      "mesh_terms": [
+        "HIV Infections",
+        "Acquired Immunodeficiency Syndrome",
+        "HIV"
+      ],
+      "title_abstract": [
+        "HIV",
+        "AIDS",
+        "human immunodeficiency virus",
+        "antiretroviral"
+      ],
+      "combined": "(\"HIV Infections\"[Majr] OR \"Acquired Immunodeficiency Syndrome\"[Majr] OR \"HIV\"[tiab])"
     },
     "Blindness and vision loss": {
       "priority": "HIGH",
-      "mesh_terms": ["Blindness", "Vision Disorders", "Visual Impairment", "Vision, Low"],
-      "title_abstract": ["blindness", "vision loss", "visual impairment", "low vision", "sight loss"],
-      "combined": "(\"Blindness\"[MeSH] OR \"Vision Disorders\"[MeSH] OR \"vision loss\"[tiab] OR \"visual impairment\"[tiab])"
+      "mesh_terms": [
+        "Blindness",
+        "Vision Disorders",
+        "Visual Impairment",
+        "Vision, Low"
+      ],
+      "title_abstract": [
+        "blindness",
+        "vision loss",
+        "visual impairment",
+        "low vision",
+        "sight loss"
+      ],
+      "combined": "(\"Blindness\"[Majr] OR \"Vision Disorders\"[Majr] OR \"vision loss\"[tiab] OR \"visual impairment\"[tiab])"
     },
     "Hypertensive heart disease": {
       "priority": "HIGH",
-      "mesh_terms": ["Hypertension", "Hypertensive Heart Disease", "Heart Failure"],
-      "title_abstract": ["hypertension", "high blood pressure", "hypertensive heart", "hypertensive cardiomyopathy"],
-      "combined": "(\"Hypertension\"[MeSH] OR \"hypertension\"[tiab] OR \"high blood pressure\"[tiab])"
+      "mesh_terms": [
+        "Hypertension",
+        "Hypertensive Heart Disease",
+        "Heart Failure"
+      ],
+      "title_abstract": [
+        "hypertension",
+        "high blood pressure",
+        "hypertensive heart",
+        "hypertensive cardiomyopathy"
+      ],
+      "combined": "(\"Hypertension\"[Majr] OR \"hypertension\"[tiab] OR \"high blood pressure\"[tiab])"
     },
     "Chronic obstructive pulmonary disease": {
       "priority": "HIGH",
-      "mesh_terms": ["Pulmonary Disease, Chronic Obstructive", "Emphysema", "Bronchitis, Chronic"],
-      "title_abstract": ["COPD", "chronic obstructive pulmonary", "emphysema", "chronic bronchitis"],
-      "combined": "(\"Pulmonary Disease, Chronic Obstructive\"[MeSH] OR \"COPD\"[tiab])"
+      "mesh_terms": [
+        "Pulmonary Disease, Chronic Obstructive",
+        "Emphysema",
+        "Bronchitis, Chronic"
+      ],
+      "title_abstract": [
+        "COPD",
+        "chronic obstructive pulmonary",
+        "emphysema",
+        "chronic bronchitis"
+      ],
+      "combined": "(\"Pulmonary Disease, Chronic Obstructive\"[Majr] OR \"COPD\"[tiab])"
     },
     "Non-rheumatic valvular heart disease": {
       "priority": "HIGH",
-      "mesh_terms": ["Heart Valve Diseases", "Aortic Valve Stenosis", "Mitral Valve Insufficiency"],
-      "title_abstract": ["valvular heart disease", "aortic stenosis", "mitral regurgitation", "heart valve"],
-      "combined": "(\"Heart Valve Diseases\"[MeSH] OR \"valvular heart\"[tiab] OR \"aortic stenosis\"[tiab])"
+      "mesh_terms": [
+        "Heart Valve Diseases",
+        "Aortic Valve Stenosis",
+        "Mitral Valve Insufficiency"
+      ],
+      "title_abstract": [
+        "valvular heart disease",
+        "aortic stenosis",
+        "mitral regurgitation",
+        "heart valve"
+      ],
+      "combined": "(\"Heart Valve Diseases\"[Majr] OR \"valvular heart\"[tiab] OR \"aortic stenosis\"[tiab])"
     },
     "Malignant skin melanoma": {
       "priority": "HIGH",
-      "mesh_terms": ["Melanoma", "Skin Neoplasms"],
-      "title_abstract": ["melanoma", "skin melanoma", "cutaneous melanoma", "malignant melanoma"],
-      "combined": "(\"Melanoma\"[MeSH] OR \"melanoma\"[tiab])"
+      "mesh_terms": [
+        "Melanoma",
+        "Skin Neoplasms"
+      ],
+      "title_abstract": [
+        "melanoma",
+        "skin melanoma",
+        "cutaneous melanoma",
+        "malignant melanoma"
+      ],
+      "combined": "(\"Melanoma\"[Majr] OR \"melanoma\"[tiab])"
     },
     "Lip and oral cavity cancer": {
       "priority": "HIGH",
-      "mesh_terms": ["Mouth Neoplasms", "Lip Neoplasms", "Tongue Neoplasms"],
-      "title_abstract": ["oral cancer", "mouth cancer", "oral squamous cell", "tongue cancer", "lip cancer"],
-      "combined": "(\"Mouth Neoplasms\"[MeSH] OR \"oral cancer\"[tiab] OR \"oral squamous\"[tiab])"
+      "mesh_terms": [
+        "Mouth Neoplasms",
+        "Lip Neoplasms",
+        "Tongue Neoplasms"
+      ],
+      "title_abstract": [
+        "oral cancer",
+        "mouth cancer",
+        "oral squamous cell",
+        "tongue cancer",
+        "lip cancer"
+      ],
+      "combined": "(\"Mouth Neoplasms\"[Majr] OR \"oral cancer\"[tiab] OR \"oral squamous\"[tiab])"
     },
     "Gallbladder and biliary tract cancer": {
       "priority": "HIGH",
-      "mesh_terms": ["Gallbladder Neoplasms", "Bile Duct Neoplasms", "Cholangiocarcinoma"],
-      "title_abstract": ["gallbladder cancer", "biliary cancer", "cholangiocarcinoma", "bile duct cancer"],
-      "combined": "(\"Gallbladder Neoplasms\"[MeSH] OR \"Cholangiocarcinoma\"[MeSH] OR \"biliary cancer\"[tiab])"
+      "mesh_terms": [
+        "Gallbladder Neoplasms",
+        "Bile Duct Neoplasms",
+        "Cholangiocarcinoma"
+      ],
+      "title_abstract": [
+        "gallbladder cancer",
+        "biliary cancer",
+        "cholangiocarcinoma",
+        "bile duct cancer"
+      ],
+      "combined": "(\"Gallbladder Neoplasms\"[Majr] OR \"Cholangiocarcinoma\"[Majr] OR \"biliary cancer\"[tiab])"
     },
     "Gallbladder and biliary diseases": {
       "priority": "HIGH",
-      "mesh_terms": ["Gallbladder Diseases", "Biliary Tract Diseases", "Cholecystitis", "Cholelithiasis"],
-      "title_abstract": ["gallbladder disease", "biliary disease", "gallstones", "cholecystitis"],
-      "combined": "(\"Gallbladder Diseases\"[MeSH] OR \"Biliary Tract Diseases\"[MeSH] OR \"gallstone\"[tiab])"
+      "mesh_terms": [
+        "Gallbladder Diseases",
+        "Biliary Tract Diseases",
+        "Cholecystitis",
+        "Cholelithiasis"
+      ],
+      "title_abstract": [
+        "gallbladder disease",
+        "biliary disease",
+        "gallstones",
+        "cholecystitis"
+      ],
+      "combined": "(\"Gallbladder Diseases\"[Majr] OR \"Biliary Tract Diseases\"[Majr] OR \"gallstone\"[tiab])"
     },
     "Other digestive diseases": {
       "priority": "HIGH",
-      "mesh_terms": ["Digestive System Diseases", "Gastrointestinal Diseases"],
-      "title_abstract": ["digestive disease", "gastrointestinal disorder", "GI disease"],
-      "combined": "(\"Digestive System Diseases\"[MeSH] OR \"gastrointestinal disease\"[tiab])"
+      "mesh_terms": [
+        "Digestive System Diseases",
+        "Gastrointestinal Diseases"
+      ],
+      "title_abstract": [
+        "digestive disease",
+        "gastrointestinal disorder",
+        "GI disease"
+      ],
+      "combined": "(\"Digestive System Diseases\"[Majr] OR \"gastrointestinal disease\"[tiab])"
     },
     "Food-borne trematodiases": {
       "priority": "HIGH",
-      "mesh_terms": ["Trematode Infections", "Opisthorchiasis", "Clonorchiasis", "Fascioliasis", "Paragonimiasis"],
-      "title_abstract": ["liver fluke", "food-borne trematode", "opisthorchis", "clonorchis", "fasciola"],
-      "combined": "(\"Trematode Infections\"[MeSH] OR \"liver fluke\"[tiab] OR \"foodborne trematod\"[tiab])"
+      "mesh_terms": [
+        "Trematode Infections",
+        "Opisthorchiasis",
+        "Clonorchiasis",
+        "Fascioliasis",
+        "Paragonimiasis"
+      ],
+      "title_abstract": [
+        "liver fluke",
+        "food-borne trematode",
+        "opisthorchis",
+        "clonorchis",
+        "fasciola"
+      ],
+      "combined": "(\"Trematode Infections\"[Majr] OR \"liver fluke\"[tiab] OR \"foodborne trematod\"[tiab])"
     },
     "Other chronic respiratory diseases": {
       "priority": "HIGH",
-      "mesh_terms": ["Respiratory Tract Diseases", "Lung Diseases, Interstitial", "Bronchiectasis"],
-      "title_abstract": ["chronic respiratory", "pulmonary fibrosis", "bronchiectasis", "interstitial lung"],
-      "combined": "(\"Lung Diseases\"[MeSH] AND \"chronic\"[tiab])"
+      "mesh_terms": [
+        "Respiratory Tract Diseases",
+        "Lung Diseases, Interstitial",
+        "Bronchiectasis"
+      ],
+      "title_abstract": [
+        "chronic respiratory",
+        "pulmonary fibrosis",
+        "bronchiectasis",
+        "interstitial lung"
+      ],
+      "combined": "(\"Lung Diseases\"[Majr] AND \"chronic\"[tiab])"
     },
     "Other nutritional deficiencies": {
       "priority": "HIGH",
-      "mesh_terms": ["Malnutrition", "Deficiency Diseases", "Avitaminosis"],
-      "title_abstract": ["nutritional deficiency", "micronutrient deficiency", "vitamin deficiency", "mineral deficiency"],
-      "combined": "(\"Malnutrition\"[MeSH] OR \"nutritional deficiency\"[tiab] OR \"micronutrient\"[tiab])"
+      "mesh_terms": [
+        "Malnutrition",
+        "Deficiency Diseases",
+        "Avitaminosis"
+      ],
+      "title_abstract": [
+        "nutritional deficiency",
+        "micronutrient deficiency",
+        "vitamin deficiency",
+        "mineral deficiency"
+      ],
+      "combined": "(\"Malnutrition\"[Majr] OR \"nutritional deficiency\"[tiab] OR \"micronutrient\"[tiab])"
     },
     "Conflict and terrorism": {
       "priority": "NORMAL",
-      "mesh_terms": ["Warfare", "Terrorism", "Violence"],
-      "title_abstract": ["war injury", "terrorism", "conflict injury", "combat injury", "war trauma"],
-      "combined": "(\"Warfare\"[MeSH] OR \"Terrorism\"[MeSH] OR \"war injury\"[tiab] OR \"combat trauma\"[tiab])"
+      "mesh_terms": [
+        "Warfare",
+        "Terrorism",
+        "Violence"
+      ],
+      "title_abstract": [
+        "war injury",
+        "terrorism",
+        "conflict injury",
+        "combat injury",
+        "war trauma"
+      ],
+      "combined": "(\"Warfare\"[Majr] OR \"Terrorism\"[Majr] OR \"war injury\"[tiab] OR \"combat trauma\"[tiab])"
     },
     "Exposure to mechanical forces": {
       "priority": "NORMAL",
-      "mesh_terms": ["Wounds and Injuries", "Crush Injuries", "Accidents"],
-      "title_abstract": ["mechanical injury", "crush injury", "blunt trauma", "occupational injury"],
-      "combined": "(\"Wounds and Injuries\"[MeSH] AND \"mechanical\"[tiab])"
+      "mesh_terms": [
+        "Wounds and Injuries",
+        "Crush Injuries",
+        "Accidents"
+      ],
+      "title_abstract": [
+        "mechanical injury",
+        "crush injury",
+        "blunt trauma",
+        "occupational injury"
+      ],
+      "combined": "(\"Wounds and Injuries\"[Majr] AND \"mechanical\"[tiab])"
     },
     "Adverse effects of medical treatment": {
       "priority": "NORMAL",
-      "mesh_terms": ["Drug-Related Side Effects and Adverse Reactions", "Medical Errors", "Iatrogenic Disease"],
-      "title_abstract": ["adverse drug reaction", "medication error", "iatrogenic", "treatment complication"],
-      "combined": "(\"Drug-Related Side Effects and Adverse Reactions\"[MeSH] OR \"adverse drug\"[tiab] OR \"iatrogenic\"[tiab])"
+      "mesh_terms": [
+        "Drug-Related Side Effects and Adverse Reactions",
+        "Medical Errors",
+        "Iatrogenic Disease"
+      ],
+      "title_abstract": [
+        "adverse drug reaction",
+        "medication error",
+        "iatrogenic",
+        "treatment complication"
+      ],
+      "combined": "(\"Drug-Related Side Effects and Adverse Reactions\"[Majr] OR \"adverse drug\"[tiab] OR \"iatrogenic\"[tiab])"
     },
     "Other unintentional injuries": {
       "priority": "NORMAL",
-      "mesh_terms": ["Wounds and Injuries", "Accidents"],
-      "title_abstract": ["accidental injury", "unintentional injury", "trauma"],
-      "combined": "(\"Wounds and Injuries\"[MeSH] AND \"accidental\"[tiab])"
+      "mesh_terms": [
+        "Wounds and Injuries",
+        "Accidents"
+      ],
+      "title_abstract": [
+        "accidental injury",
+        "unintentional injury",
+        "trauma"
+      ],
+      "combined": "(\"Wounds and Injuries\"[Majr] AND \"accidental\"[tiab])"
     },
     "Viral skin diseases": {
       "priority": "NORMAL",
-      "mesh_terms": ["Skin Diseases, Viral", "Warts", "Herpes Simplex", "Molluscum Contagiosum"],
-      "title_abstract": ["viral skin", "skin wart", "cutaneous herpes", "molluscum"],
-      "combined": "(\"Skin Diseases, Viral\"[MeSH] OR \"viral skin\"[tiab])"
+      "mesh_terms": [
+        "Skin Diseases, Viral",
+        "Warts",
+        "Herpes Simplex",
+        "Molluscum Contagiosum"
+      ],
+      "title_abstract": [
+        "viral skin",
+        "skin wart",
+        "cutaneous herpes",
+        "molluscum"
+      ],
+      "combined": "(\"Skin Diseases, Viral\"[Majr] OR \"viral skin\"[tiab])"
     },
     "Fungal skin diseases": {
       "priority": "NORMAL",
-      "mesh_terms": ["Dermatomycoses", "Tinea", "Candidiasis, Cutaneous"],
-      "title_abstract": ["fungal skin", "dermatophytosis", "tinea", "ringworm", "cutaneous fungal"],
-      "combined": "(\"Dermatomycoses\"[MeSH] OR \"fungal skin\"[tiab] OR \"tinea\"[tiab])"
+      "mesh_terms": [
+        "Dermatomycoses",
+        "Tinea",
+        "Candidiasis, Cutaneous"
+      ],
+      "title_abstract": [
+        "fungal skin",
+        "dermatophytosis",
+        "tinea",
+        "ringworm",
+        "cutaneous fungal"
+      ],
+      "combined": "(\"Dermatomycoses\"[Majr] OR \"fungal skin\"[tiab] OR \"tinea\"[tiab])"
     },
     "Bacterial skin diseases": {
       "priority": "NORMAL",
-      "mesh_terms": ["Skin Diseases, Bacterial", "Impetigo", "Cellulitis", "Erysipelas"],
-      "title_abstract": ["bacterial skin", "skin infection", "impetigo", "cellulitis", "pyoderma"],
-      "combined": "(\"Skin Diseases, Bacterial\"[MeSH] OR \"bacterial skin\"[tiab] OR \"skin infection\"[tiab])"
+      "mesh_terms": [
+        "Skin Diseases, Bacterial",
+        "Impetigo",
+        "Cellulitis",
+        "Erysipelas"
+      ],
+      "title_abstract": [
+        "bacterial skin",
+        "skin infection",
+        "impetigo",
+        "cellulitis",
+        "pyoderma"
+      ],
+      "combined": "(\"Skin Diseases, Bacterial\"[Majr] OR \"bacterial skin\"[tiab] OR \"skin infection\"[tiab])"
     },
     "Tuberculosis": {
       "priority": "NORMAL",
-      "mesh_terms": ["Tuberculosis", "Tuberculosis, Pulmonary", "Mycobacterium tuberculosis"],
-      "title_abstract": ["tuberculosis", "TB", "mycobacterium tuberculosis", "pulmonary TB"],
-      "combined": "(\"Tuberculosis\"[MeSH] OR \"tuberculosis\"[tiab])"
+      "mesh_terms": [
+        "Tuberculosis",
+        "Tuberculosis, Pulmonary",
+        "Mycobacterium tuberculosis"
+      ],
+      "title_abstract": [
+        "tuberculosis",
+        "TB",
+        "mycobacterium tuberculosis",
+        "pulmonary TB"
+      ],
+      "combined": "(\"Tuberculosis\"[Majr] OR \"tuberculosis\"[tiab])"
     },
     "Malaria": {
       "priority": "NORMAL",
-      "mesh_terms": ["Malaria", "Plasmodium falciparum", "Plasmodium vivax"],
-      "title_abstract": ["malaria", "plasmodium", "antimalarial"],
-      "combined": "(\"Malaria\"[MeSH] OR \"malaria\"[tiab])"
+      "mesh_terms": [
+        "Malaria",
+        "Plasmodium falciparum",
+        "Plasmodium vivax"
+      ],
+      "title_abstract": [
+        "malaria",
+        "plasmodium",
+        "antimalarial"
+      ],
+      "combined": "(\"Malaria\"[Majr] OR \"malaria\"[tiab])"
     },
     "Diabetes mellitus": {
       "priority": "NORMAL",
-      "mesh_terms": ["Diabetes Mellitus", "Diabetes Mellitus, Type 2", "Diabetes Mellitus, Type 1"],
-      "title_abstract": ["diabetes", "diabetic", "hyperglycemia", "insulin resistance"],
-      "combined": "(\"Diabetes Mellitus\"[MeSH] OR \"diabetes\"[tiab])"
+      "mesh_terms": [
+        "Diabetes Mellitus",
+        "Diabetes Mellitus, Type 2",
+        "Diabetes Mellitus, Type 1"
+      ],
+      "title_abstract": [
+        "diabetes",
+        "diabetic",
+        "hyperglycemia",
+        "insulin resistance"
+      ],
+      "combined": "(\"Diabetes Mellitus\"[Majr] OR \"diabetes\"[tiab])"
     },
     "Stroke": {
       "priority": "NORMAL",
-      "mesh_terms": ["Stroke", "Brain Ischemia", "Intracranial Hemorrhages", "Cerebrovascular Disorders"],
-      "title_abstract": ["stroke", "cerebrovascular", "brain infarction", "cerebral hemorrhage"],
-      "combined": "(\"Stroke\"[MeSH] OR \"stroke\"[tiab] OR \"cerebrovascular\"[tiab])"
+      "mesh_terms": [
+        "Stroke",
+        "Brain Ischemia",
+        "Intracranial Hemorrhages",
+        "Cerebrovascular Disorders"
+      ],
+      "title_abstract": [
+        "stroke",
+        "cerebrovascular",
+        "brain infarction",
+        "cerebral hemorrhage"
+      ],
+      "combined": "(\"Stroke\"[Majr] OR \"stroke\"[tiab] OR \"cerebrovascular\"[tiab])"
     },
     "Breast cancer": {
       "priority": "NORMAL",
-      "mesh_terms": ["Breast Neoplasms", "Carcinoma, Ductal, Breast"],
-      "title_abstract": ["breast cancer", "breast carcinoma", "mammary cancer", "breast tumor"],
-      "combined": "(\"Breast Neoplasms\"[MeSH] OR \"breast cancer\"[tiab])"
+      "mesh_terms": [
+        "Breast Neoplasms",
+        "Carcinoma, Ductal, Breast"
+      ],
+      "title_abstract": [
+        "breast cancer",
+        "breast carcinoma",
+        "mammary cancer",
+        "breast tumor"
+      ],
+      "combined": "(\"Breast Neoplasms\"[Majr] OR \"breast cancer\"[tiab])"
     },
     "Asthma": {
       "priority": "NORMAL",
-      "mesh_terms": ["Asthma", "Bronchial Hyperreactivity"],
-      "title_abstract": ["asthma", "asthmatic", "bronchial asthma", "airway hyperresponsiveness"],
-      "combined": "(\"Asthma\"[MeSH] OR \"asthma\"[tiab])"
+      "mesh_terms": [
+        "Asthma",
+        "Bronchial Hyperreactivity"
+      ],
+      "title_abstract": [
+        "asthma",
+        "asthmatic",
+        "bronchial asthma",
+        "airway hyperresponsiveness"
+      ],
+      "combined": "(\"Asthma\"[Majr] OR \"asthma\"[tiab])"
     },
     "Schizophrenia": {
       "priority": "NORMAL",
-      "mesh_terms": ["Schizophrenia", "Psychotic Disorders"],
-      "title_abstract": ["schizophrenia", "schizophrenic", "psychosis", "antipsychotic"],
-      "combined": "(\"Schizophrenia\"[MeSH] OR \"schizophrenia\"[tiab])"
+      "mesh_terms": [
+        "Schizophrenia",
+        "Psychotic Disorders"
+      ],
+      "title_abstract": [
+        "schizophrenia",
+        "schizophrenic",
+        "psychosis",
+        "antipsychotic"
+      ],
+      "combined": "(\"Schizophrenia\"[Majr] OR \"schizophrenia\"[tiab])"
     },
     "Depressive disorders": {
       "priority": "NORMAL",
-      "mesh_terms": ["Depressive Disorder", "Depressive Disorder, Major", "Depression"],
-      "title_abstract": ["depression", "depressive disorder", "major depression", "antidepressant"],
-      "combined": "(\"Depressive Disorder\"[MeSH] OR \"depression\"[tiab])"
+      "mesh_terms": [
+        "Depressive Disorder",
+        "Depressive Disorder, Major",
+        "Depression"
+      ],
+      "title_abstract": [
+        "depression",
+        "depressive disorder",
+        "major depression",
+        "antidepressant"
+      ],
+      "combined": "(\"Depressive Disorder\"[Majr] OR \"depression\"[tiab])"
     },
     "Dengue": {
       "priority": "NORMAL",
-      "mesh_terms": ["Dengue", "Severe Dengue", "Dengue Virus"],
-      "title_abstract": ["dengue", "dengue fever", "dengue hemorrhagic"],
-      "combined": "(\"Dengue\"[MeSH] OR \"dengue\"[tiab])"
+      "mesh_terms": [
+        "Dengue",
+        "Severe Dengue",
+        "Dengue Virus"
+      ],
+      "title_abstract": [
+        "dengue",
+        "dengue fever",
+        "dengue hemorrhagic"
+      ],
+      "combined": "(\"Dengue\"[Majr] OR \"dengue\"[tiab])"
     },
     "Leishmaniasis": {
       "priority": "NORMAL",
-      "mesh_terms": ["Leishmaniasis", "Leishmaniasis, Visceral", "Leishmaniasis, Cutaneous"],
-      "title_abstract": ["leishmaniasis", "leishmania", "kala-azar", "cutaneous leishmaniasis"],
-      "combined": "(\"Leishmaniasis\"[MeSH] OR \"leishmaniasis\"[tiab])"
+      "mesh_terms": [
+        "Leishmaniasis",
+        "Leishmaniasis, Visceral",
+        "Leishmaniasis, Cutaneous"
+      ],
+      "title_abstract": [
+        "leishmaniasis",
+        "leishmania",
+        "kala-azar",
+        "cutaneous leishmaniasis"
+      ],
+      "combined": "(\"Leishmaniasis\"[Majr] OR \"leishmaniasis\"[tiab])"
     },
     "Schistosomiasis": {
       "priority": "NORMAL",
-      "mesh_terms": ["Schistosomiasis", "Schistosoma"],
-      "title_abstract": ["schistosomiasis", "schistosoma", "bilharzia"],
-      "combined": "(\"Schistosomiasis\"[MeSH] OR \"schistosomiasis\"[tiab])"
+      "mesh_terms": [
+        "Schistosomiasis",
+        "Schistosoma"
+      ],
+      "title_abstract": [
+        "schistosomiasis",
+        "schistosoma",
+        "bilharzia"
+      ],
+      "combined": "(\"Schistosomiasis\"[Majr] OR \"schistosomiasis\"[tiab])"
     },
     "Chagas disease": {
       "priority": "NORMAL",
-      "mesh_terms": ["Chagas Disease", "Trypanosoma cruzi"],
-      "title_abstract": ["chagas", "trypanosoma cruzi", "American trypanosomiasis"],
-      "combined": "(\"Chagas Disease\"[MeSH] OR \"chagas\"[tiab] OR \"trypanosoma cruzi\"[tiab])"
+      "mesh_terms": [
+        "Chagas Disease",
+        "Trypanosoma cruzi"
+      ],
+      "title_abstract": [
+        "chagas",
+        "trypanosoma cruzi",
+        "American trypanosomiasis"
+      ],
+      "combined": "(\"Chagas Disease\"[Majr] OR \"chagas\"[tiab] OR \"trypanosoma cruzi\"[tiab])"
+    },
+    "Guinea worm disease": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Dracunculiasis",
+        "Dracunculus Medinensis"
+      ],
+      "title_abstract": [
+        "guinea worm",
+        "dracunculiasis",
+        "dracunculus"
+      ],
+      "combined": "(\"Dracunculiasis\"[Majr] OR \"guinea worm\"[tiab] OR \"dracunculus\"[tiab])"
+    },
+    "Other neglected tropical diseases": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Neglected Diseases",
+        "Tropical Medicine"
+      ],
+      "title_abstract": [
+        "neglected tropical disease",
+        "NTD",
+        "tropical disease"
+      ],
+      "combined": "(\"Neglected Diseases\"[Majr] OR \"neglected tropical\"[tiab] OR \"NTD\"[tiab])"
+    },
+    "Dietary iron deficiency": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Anemia, Iron-Deficiency",
+        "Iron Deficiencies"
+      ],
+      "title_abstract": [
+        "iron deficiency",
+        "iron deficiency anemia",
+        "IDA",
+        "ferritin deficiency"
+      ],
+      "combined": "(\"Anemia, Iron-Deficiency\"[Majr] OR \"iron deficiency\"[tiab])"
+    },
+    "Nasopharynx cancer": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Nasopharyngeal Neoplasms",
+        "Nasopharyngeal Carcinoma"
+      ],
+      "title_abstract": [
+        "nasopharyngeal cancer",
+        "nasopharyngeal carcinoma",
+        "NPC",
+        "nasopharynx cancer"
+      ],
+      "combined": "(\"Nasopharyngeal Neoplasms\"[Majr] OR \"nasopharyngeal cancer\"[tiab] OR \"NPC\"[tiab])"
+    },
+    "Typhoid and paratyphoid": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Typhoid Fever",
+        "Paratyphoid Fever",
+        "Salmonella typhi"
+      ],
+      "title_abstract": [
+        "typhoid",
+        "paratyphoid",
+        "enteric fever",
+        "salmonella typhi"
+      ],
+      "combined": "(\"Typhoid Fever\"[Majr] OR \"typhoid\"[tiab] OR \"enteric fever\"[tiab])"
+    },
+    "Eye cancer": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Eye Neoplasms",
+        "Retinoblastoma",
+        "Uveal Neoplasms",
+        "Ocular Melanoma"
+      ],
+      "title_abstract": [
+        "eye cancer",
+        "ocular cancer",
+        "retinoblastoma",
+        "uveal melanoma",
+        "intraocular tumor"
+      ],
+      "combined": "(\"Eye Neoplasms\"[Majr] OR \"Retinoblastoma\"[Majr] OR \"ocular cancer\"[tiab] OR \"eye tumor\"[tiab])"
+    },
+    "Lower extremity peripheral arterial disease": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Peripheral Arterial Disease",
+        "Intermittent Claudication",
+        "Peripheral Vascular Diseases"
+      ],
+      "title_abstract": [
+        "peripheral arterial disease",
+        "PAD",
+        "claudication",
+        "limb ischemia",
+        "peripheral vascular"
+      ],
+      "combined": "(\"Peripheral Arterial Disease\"[Majr] OR \"peripheral arterial disease\"[tiab] OR \"PAD\"[tiab] OR \"claudication\"[tiab])"
+    },
+    "Atrial fibrillation and flutter": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Atrial Fibrillation",
+        "Atrial Flutter"
+      ],
+      "title_abstract": [
+        "atrial fibrillation",
+        "AFib",
+        "AF",
+        "atrial flutter",
+        "cardiac arrhythmia"
+      ],
+      "combined": "(\"Atrial Fibrillation\"[Majr] OR \"Atrial Flutter\"[Majr] OR \"atrial fibrillation\"[tiab])"
+    },
+    "Congenital birth defects": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Congenital Abnormalities",
+        "Birth Defects",
+        "Congenital Heart Defects"
+      ],
+      "title_abstract": [
+        "congenital abnormality",
+        "birth defect",
+        "congenital malformation",
+        "congenital anomaly"
+      ],
+      "combined": "(\"Congenital Abnormalities\"[Majr] OR \"birth defect\"[tiab] OR \"congenital malformation\"[tiab])"
+    },
+    "Decubitus ulcer": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Pressure Ulcer",
+        "Bedsores"
+      ],
+      "title_abstract": [
+        "pressure ulcer",
+        "decubitus ulcer",
+        "bedsore",
+        "pressure sore",
+        "pressure injury"
+      ],
+      "combined": "(\"Pressure Ulcer\"[Majr] OR \"pressure ulcer\"[tiab] OR \"bedsore\"[tiab] OR \"decubitus\"[tiab])"
+    },
+    "Lower respiratory infections": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Respiratory Tract Infections",
+        "Pneumonia",
+        "Bronchitis"
+      ],
+      "title_abstract": [
+        "lower respiratory infection",
+        "pneumonia",
+        "bronchitis",
+        "LRTI",
+        "respiratory tract infection"
+      ],
+      "combined": "(\"Respiratory Tract Infections\"[Majr] OR \"Pneumonia\"[Majr] OR \"lower respiratory\"[tiab])"
+    },
+    "Drug use disorders": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Substance-Related Disorders",
+        "Drug Addiction",
+        "Opioid-Related Disorders"
+      ],
+      "title_abstract": [
+        "drug use disorder",
+        "substance abuse",
+        "drug addiction",
+        "opioid use",
+        "drug dependence"
+      ],
+      "combined": "(\"Substance-Related Disorders\"[Majr] OR \"drug addiction\"[tiab] OR \"substance abuse\"[tiab])"
+    },
+    "Diarrheal diseases": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Diarrhea",
+        "Dysentery",
+        "Gastroenteritis"
+      ],
+      "title_abstract": [
+        "diarrhea",
+        "diarrhoea",
+        "dysentery",
+        "gastroenteritis",
+        "acute diarrheal"
+      ],
+      "combined": "(\"Diarrhea\"[Majr] OR \"diarrhea\"[tiab] OR \"diarrhoea\"[tiab] OR \"gastroenteritis\"[tiab])"
+    },
+    "Other mental disorders": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Mental Disorders",
+        "Anxiety Disorders",
+        "Mood Disorders"
+      ],
+      "title_abstract": [
+        "mental disorder",
+        "psychiatric disorder",
+        "mental illness",
+        "mental health"
+      ],
+      "combined": "(\"Mental Disorders\"[Majr] OR \"mental disorder\"[tiab] OR \"psychiatric\"[tiab])"
+    },
+    "Stomach cancer": {
+      "priority": "HIGH",
+      "mesh_terms": [
+        "Stomach Neoplasms",
+        "Gastric Cancer"
+      ],
+      "title_abstract": [
+        "stomach cancer",
+        "gastric cancer",
+        "gastric carcinoma",
+        "gastric adenocarcinoma"
+      ],
+      "combined": "(\"Stomach Neoplasms\"[Majr] OR \"gastric cancer\"[tiab] OR \"stomach cancer\"[tiab])"
+    },
+    "Bladder cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Urinary Bladder Neoplasms"
+      ],
+      "title_abstract": [
+        "bladder cancer",
+        "bladder carcinoma",
+        "urothelial cancer"
+      ],
+      "combined": "(\"Urinary Bladder Neoplasms\"[Majr] OR \"bladder cancer\"[tiab])"
+    },
+    "Cervical cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Uterine Cervical Neoplasms"
+      ],
+      "title_abstract": [
+        "cervical cancer",
+        "cervical carcinoma",
+        "HPV cancer"
+      ],
+      "combined": "(\"Uterine Cervical Neoplasms\"[Majr] OR \"cervical cancer\"[tiab])"
+    },
+    "Esophageal cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Esophageal Neoplasms"
+      ],
+      "title_abstract": [
+        "esophageal cancer",
+        "oesophageal cancer",
+        "esophageal carcinoma"
+      ],
+      "combined": "(\"Esophageal Neoplasms\"[Majr] OR \"esophageal cancer\"[tiab] OR \"oesophageal cancer\"[tiab])"
+    },
+    "Hodgkin lymphoma": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Hodgkin Disease"
+      ],
+      "title_abstract": [
+        "Hodgkin lymphoma",
+        "Hodgkin disease",
+        "Hodgkin's lymphoma"
+      ],
+      "combined": "(\"Hodgkin Disease\"[Majr] OR \"Hodgkin lymphoma\"[tiab])"
+    },
+    "Kidney cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Kidney Neoplasms",
+        "Carcinoma, Renal Cell"
+      ],
+      "title_abstract": [
+        "kidney cancer",
+        "renal cell carcinoma",
+        "renal cancer"
+      ],
+      "combined": "(\"Kidney Neoplasms\"[Majr] OR \"renal cell carcinoma\"[tiab] OR \"kidney cancer\"[tiab])"
+    },
+    "Larynx cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Laryngeal Neoplasms"
+      ],
+      "title_abstract": [
+        "laryngeal cancer",
+        "larynx cancer",
+        "throat cancer"
+      ],
+      "combined": "(\"Laryngeal Neoplasms\"[Majr] OR \"laryngeal cancer\"[tiab])"
+    },
+    "Leukemia": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Leukemia"
+      ],
+      "title_abstract": [
+        "leukemia",
+        "leukaemia",
+        "acute leukemia",
+        "chronic leukemia"
+      ],
+      "combined": "(\"Leukemia\"[Majr] OR \"leukemia\"[tiab] OR \"leukaemia\"[tiab])"
+    },
+    "Liver cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Liver Neoplasms",
+        "Carcinoma, Hepatocellular"
+      ],
+      "title_abstract": [
+        "liver cancer",
+        "hepatocellular carcinoma",
+        "HCC",
+        "hepatoma"
+      ],
+      "combined": "(\"Liver Neoplasms\"[Majr] OR \"Carcinoma, Hepatocellular\"[Majr] OR \"liver cancer\"[tiab] OR \"HCC\"[tiab])"
+    },
+    "Mesothelioma": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Mesothelioma"
+      ],
+      "title_abstract": [
+        "mesothelioma",
+        "malignant mesothelioma",
+        "pleural mesothelioma"
+      ],
+      "combined": "(\"Mesothelioma\"[Majr] OR \"mesothelioma\"[tiab])"
+    },
+    "Multiple myeloma": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Multiple Myeloma"
+      ],
+      "title_abstract": [
+        "multiple myeloma",
+        "plasma cell myeloma",
+        "myeloma"
+      ],
+      "combined": "(\"Multiple Myeloma\"[Majr] OR \"multiple myeloma\"[tiab])"
+    },
+    "Non-Hodgkin lymphoma": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Lymphoma, Non-Hodgkin"
+      ],
+      "title_abstract": [
+        "non-Hodgkin lymphoma",
+        "NHL",
+        "B-cell lymphoma",
+        "T-cell lymphoma"
+      ],
+      "combined": "(\"Lymphoma, Non-Hodgkin\"[Majr] OR \"non-Hodgkin lymphoma\"[tiab] OR \"NHL\"[tiab])"
+    },
+    "Non-melanoma skin cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Skin Neoplasms",
+        "Carcinoma, Basal Cell",
+        "Carcinoma, Squamous Cell"
+      ],
+      "title_abstract": [
+        "non-melanoma skin cancer",
+        "basal cell carcinoma",
+        "squamous cell carcinoma",
+        "NMSC"
+      ],
+      "combined": "(\"Carcinoma, Basal Cell\"[Majr] OR \"Carcinoma, Squamous Cell\"[Majr] OR \"non-melanoma skin\"[tiab] OR \"NMSC\"[tiab])"
+    },
+    "Other pharynx cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Pharyngeal Neoplasms",
+        "Oropharyngeal Neoplasms"
+      ],
+      "title_abstract": [
+        "pharyngeal cancer",
+        "oropharyngeal cancer",
+        "throat cancer",
+        "pharynx cancer"
+      ],
+      "combined": "(\"Pharyngeal Neoplasms\"[Majr] OR \"pharyngeal cancer\"[tiab] OR \"oropharyngeal cancer\"[tiab])"
+    },
+    "Ovarian cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Ovarian Neoplasms"
+      ],
+      "title_abstract": [
+        "ovarian cancer",
+        "ovarian carcinoma",
+        "epithelial ovarian cancer"
+      ],
+      "combined": "(\"Ovarian Neoplasms\"[Majr] OR \"ovarian cancer\"[tiab])"
+    },
+    "Pancreatic cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Pancreatic Neoplasms"
+      ],
+      "title_abstract": [
+        "pancreatic cancer",
+        "pancreatic adenocarcinoma",
+        "pancreas cancer"
+      ],
+      "combined": "(\"Pancreatic Neoplasms\"[Majr] OR \"pancreatic cancer\"[tiab])"
+    },
+    "Prostate cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Prostatic Neoplasms"
+      ],
+      "title_abstract": [
+        "prostate cancer",
+        "prostatic carcinoma",
+        "prostate adenocarcinoma"
+      ],
+      "combined": "(\"Prostatic Neoplasms\"[Majr] OR \"prostate cancer\"[tiab])"
+    },
+    "Testicular cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Testicular Neoplasms"
+      ],
+      "title_abstract": [
+        "testicular cancer",
+        "testis cancer",
+        "germ cell tumor"
+      ],
+      "combined": "(\"Testicular Neoplasms\"[Majr] OR \"testicular cancer\"[tiab])"
+    },
+    "Thyroid cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Thyroid Neoplasms"
+      ],
+      "title_abstract": [
+        "thyroid cancer",
+        "thyroid carcinoma",
+        "papillary thyroid"
+      ],
+      "combined": "(\"Thyroid Neoplasms\"[Majr] OR \"thyroid cancer\"[tiab])"
+    },
+    "Uterine cancer": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Uterine Neoplasms",
+        "Endometrial Neoplasms"
+      ],
+      "title_abstract": [
+        "uterine cancer",
+        "endometrial cancer",
+        "uterine carcinoma"
+      ],
+      "combined": "(\"Uterine Neoplasms\"[Majr] OR \"endometrial cancer\"[tiab] OR \"uterine cancer\"[tiab])"
+    },
+    "African trypanosomiasis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Trypanosomiasis, African"
+      ],
+      "title_abstract": [
+        "African trypanosomiasis",
+        "sleeping sickness",
+        "trypanosoma brucei"
+      ],
+      "combined": "(\"Trypanosomiasis, African\"[Majr] OR \"sleeping sickness\"[tiab] OR \"African trypanosomiasis\"[tiab])"
+    },
+    "Acute hepatitis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Hepatitis",
+        "Hepatitis A",
+        "Hepatitis B",
+        "Hepatitis C",
+        "Hepatitis E"
+      ],
+      "title_abstract": [
+        "acute hepatitis",
+        "viral hepatitis",
+        "hepatitis A",
+        "hepatitis B",
+        "hepatitis C"
+      ],
+      "combined": "(\"Hepatitis\"[Majr] OR \"acute hepatitis\"[tiab] OR \"viral hepatitis\"[tiab])"
+    },
+    "COVID-19": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "COVID-19",
+        "SARS-CoV-2"
+      ],
+      "title_abstract": [
+        "COVID-19",
+        "SARS-CoV-2",
+        "coronavirus disease 2019",
+        "COVID"
+      ],
+      "combined": "(\"COVID-19\"[Majr] OR \"SARS-CoV-2\"[Majr] OR \"COVID-19\"[tiab])"
+    },
+    "Cysticercosis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Cysticercosis",
+        "Neurocysticercosis"
+      ],
+      "title_abstract": [
+        "cysticercosis",
+        "neurocysticercosis",
+        "taenia solium"
+      ],
+      "combined": "(\"Cysticercosis\"[Majr] OR \"cysticercosis\"[tiab] OR \"neurocysticercosis\"[tiab])"
+    },
+    "Cystic echinococcosis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Echinococcosis",
+        "Echinococcosis, Hepatic"
+      ],
+      "title_abstract": [
+        "echinococcosis",
+        "hydatid disease",
+        "echinococcus"
+      ],
+      "combined": "(\"Echinococcosis\"[Majr] OR \"echinococcosis\"[tiab] OR \"hydatid\"[tiab])"
+    },
+    "Encephalitis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Encephalitis",
+        "Encephalitis, Viral"
+      ],
+      "title_abstract": [
+        "encephalitis",
+        "brain inflammation",
+        "viral encephalitis"
+      ],
+      "combined": "(\"Encephalitis\"[Majr] OR \"encephalitis\"[tiab])"
+    },
+    "Hookworm disease": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Hookworm Infections",
+        "Ancylostomiasis",
+        "Necatoriasis"
+      ],
+      "title_abstract": [
+        "hookworm",
+        "ancylostoma",
+        "necator"
+      ],
+      "combined": "(\"Hookworm Infections\"[Majr] OR \"hookworm\"[tiab])"
+    },
+    "Influenza": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Influenza, Human"
+      ],
+      "title_abstract": [
+        "influenza",
+        "flu",
+        "H1N1",
+        "H3N2",
+        "influenza virus"
+      ],
+      "combined": "(\"Influenza, Human\"[Majr] OR \"influenza\"[tiab])"
+    },
+    "Leprosy": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Leprosy"
+      ],
+      "title_abstract": [
+        "leprosy",
+        "Hansen disease",
+        "mycobacterium leprae"
+      ],
+      "combined": "(\"Leprosy\"[Majr] OR \"leprosy\"[tiab] OR \"Hansen disease\"[tiab])"
+    },
+    "Lymphatic filariasis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Elephantiasis, Filarial",
+        "Filariasis"
+      ],
+      "title_abstract": [
+        "lymphatic filariasis",
+        "elephantiasis",
+        "wuchereria",
+        "brugia"
+      ],
+      "combined": "(\"Elephantiasis, Filarial\"[Majr] OR \"lymphatic filariasis\"[tiab])"
+    },
+    "Measles": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Measles"
+      ],
+      "title_abstract": [
+        "measles",
+        "rubeola",
+        "measles virus"
+      ],
+      "combined": "(\"Measles\"[Majr] OR \"measles\"[tiab])"
+    },
+    "Meningitis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Meningitis",
+        "Meningitis, Bacterial",
+        "Meningitis, Viral"
+      ],
+      "title_abstract": [
+        "meningitis",
+        "bacterial meningitis",
+        "viral meningitis",
+        "meningococcal"
+      ],
+      "combined": "(\"Meningitis\"[Majr] OR \"meningitis\"[tiab])"
+    },
+    "Onchocerciasis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Onchocerciasis"
+      ],
+      "title_abstract": [
+        "onchocerciasis",
+        "river blindness",
+        "onchocerca"
+      ],
+      "combined": "(\"Onchocerciasis\"[Majr] OR \"onchocerciasis\"[tiab] OR \"river blindness\"[tiab])"
+    },
+    "Otitis media": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Otitis Media"
+      ],
+      "title_abstract": [
+        "otitis media",
+        "middle ear infection",
+        "ear infection"
+      ],
+      "combined": "(\"Otitis Media\"[Majr] OR \"otitis media\"[tiab])"
+    },
+    "Rabies": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Rabies"
+      ],
+      "title_abstract": [
+        "rabies",
+        "rabies virus",
+        "lyssavirus"
+      ],
+      "combined": "(\"Rabies\"[Majr] OR \"rabies\"[tiab])"
+    },
+    "Sexually transmitted infections excluding HIV": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Sexually Transmitted Diseases",
+        "Chlamydia Infections",
+        "Gonorrhea",
+        "Syphilis",
+        "Herpes Genitalis"
+      ],
+      "title_abstract": [
+        "sexually transmitted infection",
+        "STI",
+        "STD",
+        "chlamydia",
+        "gonorrhea",
+        "syphilis",
+        "genital herpes"
+      ],
+      "combined": "(\"Sexually Transmitted Diseases\"[Majr] OR \"sexually transmitted\"[tiab] OR \"STI\"[tiab])"
+    },
+    "Trachoma": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Trachoma"
+      ],
+      "title_abstract": [
+        "trachoma",
+        "chlamydia trachomatis eye"
+      ],
+      "combined": "(\"Trachoma\"[Majr] OR \"trachoma\"[tiab])"
+    },
+    "Upper respiratory infections": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Respiratory Tract Infections",
+        "Common Cold",
+        "Pharyngitis",
+        "Sinusitis"
+      ],
+      "title_abstract": [
+        "upper respiratory infection",
+        "URTI",
+        "common cold",
+        "pharyngitis",
+        "sinusitis"
+      ],
+      "combined": "(\"Respiratory Tract Infections\"[Majr] OR \"upper respiratory\"[tiab] OR \"URTI\"[tiab])"
+    },
+    "Varicella and herpes zoster": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Chickenpox",
+        "Herpes Zoster"
+      ],
+      "title_abstract": [
+        "varicella",
+        "chickenpox",
+        "herpes zoster",
+        "shingles"
+      ],
+      "combined": "(\"Chickenpox\"[Majr] OR \"Herpes Zoster\"[Majr] OR \"varicella\"[tiab] OR \"shingles\"[tiab])"
+    },
+    "Whooping cough": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Whooping Cough"
+      ],
+      "title_abstract": [
+        "whooping cough",
+        "pertussis",
+        "bordetella pertussis"
+      ],
+      "combined": "(\"Whooping Cough\"[Majr] OR \"pertussis\"[tiab])"
+    },
+    "Yellow fever": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Yellow Fever"
+      ],
+      "title_abstract": [
+        "yellow fever",
+        "yellow fever virus"
+      ],
+      "combined": "(\"Yellow Fever\"[Majr] OR \"yellow fever\"[tiab])"
+    },
+    "Zika virus": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Zika Virus Infection"
+      ],
+      "title_abstract": [
+        "zika",
+        "zika virus",
+        "ZIKV"
+      ],
+      "combined": "(\"Zika Virus Infection\"[Majr] OR \"zika\"[tiab])"
+    },
+    "Alcohol use disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Alcoholism",
+        "Alcohol-Related Disorders"
+      ],
+      "title_abstract": [
+        "alcohol use disorder",
+        "alcoholism",
+        "alcohol dependence",
+        "alcohol abuse"
+      ],
+      "combined": "(\"Alcoholism\"[Majr] OR \"alcohol use disorder\"[tiab] OR \"alcohol dependence\"[tiab])"
+    },
+    "Anxiety disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Anxiety Disorders",
+        "Generalized Anxiety Disorder",
+        "Panic Disorder",
+        "Phobic Disorders"
+      ],
+      "title_abstract": [
+        "anxiety disorder",
+        "generalized anxiety",
+        "panic disorder",
+        "social anxiety",
+        "phobia"
+      ],
+      "combined": "(\"Anxiety Disorders\"[Majr] OR \"anxiety disorder\"[tiab])"
+    },
+    "Attention-deficit hyperactivity disorder": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Attention Deficit Disorder with Hyperactivity"
+      ],
+      "title_abstract": [
+        "ADHD",
+        "attention deficit",
+        "hyperactivity disorder"
+      ],
+      "combined": "(\"Attention Deficit Disorder with Hyperactivity\"[Majr] OR \"ADHD\"[tiab])"
+    },
+    "Autism spectrum disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Autism Spectrum Disorder",
+        "Autistic Disorder"
+      ],
+      "title_abstract": [
+        "autism",
+        "ASD",
+        "autistic",
+        "Asperger"
+      ],
+      "combined": "(\"Autism Spectrum Disorder\"[Majr] OR \"autism\"[tiab] OR \"ASD\"[tiab])"
+    },
+    "Bipolar disorder": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Bipolar Disorder"
+      ],
+      "title_abstract": [
+        "bipolar disorder",
+        "manic depression",
+        "bipolar affective"
+      ],
+      "combined": "(\"Bipolar Disorder\"[Majr] OR \"bipolar disorder\"[tiab])"
+    },
+    "Eating disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Feeding and Eating Disorders",
+        "Anorexia Nervosa",
+        "Bulimia Nervosa"
+      ],
+      "title_abstract": [
+        "eating disorder",
+        "anorexia nervosa",
+        "bulimia",
+        "binge eating"
+      ],
+      "combined": "(\"Feeding and Eating Disorders\"[Majr] OR \"eating disorder\"[tiab] OR \"anorexia\"[tiab])"
+    },
+    "Epilepsy": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Epilepsy"
+      ],
+      "title_abstract": [
+        "epilepsy",
+        "seizure disorder",
+        "epileptic"
+      ],
+      "combined": "(\"Epilepsy\"[Majr] OR \"epilepsy\"[tiab])"
+    },
+    "Headache disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Headache Disorders",
+        "Migraine Disorders",
+        "Tension-Type Headache"
+      ],
+      "title_abstract": [
+        "headache",
+        "migraine",
+        "tension headache",
+        "cluster headache"
+      ],
+      "combined": "(\"Headache Disorders\"[Majr] OR \"Migraine Disorders\"[Majr] OR \"headache\"[tiab] OR \"migraine\"[tiab])"
+    },
+    "Idiopathic developmental intellectual disability": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Intellectual Disability"
+      ],
+      "title_abstract": [
+        "intellectual disability",
+        "mental retardation",
+        "developmental disability",
+        "cognitive impairment"
+      ],
+      "combined": "(\"Intellectual Disability\"[Majr] OR \"intellectual disability\"[tiab])"
+    },
+    "Motor neuron disease": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Motor Neuron Disease",
+        "Amyotrophic Lateral Sclerosis"
+      ],
+      "title_abstract": [
+        "motor neuron disease",
+        "ALS",
+        "amyotrophic lateral sclerosis",
+        "Lou Gehrig"
+      ],
+      "combined": "(\"Motor Neuron Disease\"[Majr] OR \"ALS\"[tiab] OR \"amyotrophic lateral sclerosis\"[tiab])"
+    },
+    "Multiple sclerosis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Multiple Sclerosis"
+      ],
+      "title_abstract": [
+        "multiple sclerosis",
+        "MS",
+        "demyelinating disease"
+      ],
+      "combined": "(\"Multiple Sclerosis\"[Majr] OR \"multiple sclerosis\"[tiab])"
+    },
+    "Parkinson's disease": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Parkinson Disease"
+      ],
+      "title_abstract": [
+        "Parkinson disease",
+        "Parkinson's",
+        "parkinsonism"
+      ],
+      "combined": "(\"Parkinson Disease\"[Majr] OR \"Parkinson\"[tiab])"
+    },
+    "Aortic aneurysm": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Aortic Aneurysm",
+        "Aortic Aneurysm, Abdominal",
+        "Aortic Aneurysm, Thoracic"
+      ],
+      "title_abstract": [
+        "aortic aneurysm",
+        "AAA",
+        "abdominal aortic aneurysm"
+      ],
+      "combined": "(\"Aortic Aneurysm\"[Majr] OR \"aortic aneurysm\"[tiab])"
+    },
+    "Cardiomyopathy and myocarditis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Cardiomyopathies",
+        "Myocarditis"
+      ],
+      "title_abstract": [
+        "cardiomyopathy",
+        "myocarditis",
+        "dilated cardiomyopathy",
+        "hypertrophic cardiomyopathy"
+      ],
+      "combined": "(\"Cardiomyopathies\"[Majr] OR \"Myocarditis\"[Majr] OR \"cardiomyopathy\"[tiab])"
+    },
+    "Endocarditis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Endocarditis",
+        "Endocarditis, Bacterial"
+      ],
+      "title_abstract": [
+        "endocarditis",
+        "infective endocarditis",
+        "bacterial endocarditis"
+      ],
+      "combined": "(\"Endocarditis\"[Majr] OR \"endocarditis\"[tiab])"
+    },
+    "Other cardiovascular and circulatory diseases": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Cardiovascular Diseases",
+        "Vascular Diseases"
+      ],
+      "title_abstract": [
+        "cardiovascular disease",
+        "circulatory disease",
+        "vascular disease"
+      ],
+      "combined": "(\"Cardiovascular Diseases\"[Majr] OR \"cardiovascular disease\"[tiab])"
+    },
+    "Peripheral artery disease": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Peripheral Arterial Disease"
+      ],
+      "title_abstract": [
+        "peripheral artery disease",
+        "peripheral arterial disease",
+        "PAD"
+      ],
+      "combined": "(\"Peripheral Arterial Disease\"[Majr] OR \"peripheral artery disease\"[tiab])"
+    },
+    "Rheumatic heart disease": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Rheumatic Heart Disease"
+      ],
+      "title_abstract": [
+        "rheumatic heart disease",
+        "rheumatic fever",
+        "rheumatic valvular"
+      ],
+      "combined": "(\"Rheumatic Heart Disease\"[Majr] OR \"rheumatic heart\"[tiab])"
+    },
+    "Interstitial lung disease and pulmonary sarcoidosis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Lung Diseases, Interstitial",
+        "Sarcoidosis, Pulmonary",
+        "Idiopathic Pulmonary Fibrosis"
+      ],
+      "title_abstract": [
+        "interstitial lung disease",
+        "ILD",
+        "pulmonary fibrosis",
+        "sarcoidosis"
+      ],
+      "combined": "(\"Lung Diseases, Interstitial\"[Majr] OR \"interstitial lung\"[tiab] OR \"pulmonary fibrosis\"[tiab])"
+    },
+    "Pneumoconiosis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Pneumoconiosis",
+        "Silicosis",
+        "Asbestosis",
+        "Coal Workers' Pneumoconiosis"
+      ],
+      "title_abstract": [
+        "pneumoconiosis",
+        "silicosis",
+        "asbestosis",
+        "coal workers lung",
+        "black lung"
+      ],
+      "combined": "(\"Pneumoconiosis\"[Majr] OR \"silicosis\"[tiab] OR \"asbestosis\"[tiab])"
+    },
+    "Acute pancreatitis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Pancreatitis"
+      ],
+      "title_abstract": [
+        "acute pancreatitis",
+        "pancreatitis"
+      ],
+      "combined": "(\"Pancreatitis\"[Majr] OR \"pancreatitis\"[tiab])"
+    },
+    "Appendicitis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Appendicitis"
+      ],
+      "title_abstract": [
+        "appendicitis",
+        "acute appendicitis"
+      ],
+      "combined": "(\"Appendicitis\"[Majr] OR \"appendicitis\"[tiab])"
+    },
+    "Cirrhosis and other chronic liver diseases": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Liver Cirrhosis",
+        "Liver Diseases"
+      ],
+      "title_abstract": [
+        "cirrhosis",
+        "liver cirrhosis",
+        "chronic liver disease",
+        "hepatic fibrosis"
+      ],
+      "combined": "(\"Liver Cirrhosis\"[Majr] OR \"cirrhosis\"[tiab] OR \"chronic liver disease\"[tiab])"
+    },
+    "Gastritis and duodenitis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Gastritis",
+        "Duodenitis"
+      ],
+      "title_abstract": [
+        "gastritis",
+        "duodenitis",
+        "peptic ulcer"
+      ],
+      "combined": "(\"Gastritis\"[Majr] OR \"Duodenitis\"[Majr] OR \"gastritis\"[tiab])"
+    },
+    "Inguinal, femoral, and abdominal hernia": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Hernia, Inguinal",
+        "Hernia, Femoral",
+        "Hernia, Abdominal"
+      ],
+      "title_abstract": [
+        "inguinal hernia",
+        "femoral hernia",
+        "abdominal hernia",
+        "groin hernia"
+      ],
+      "combined": "(\"Hernia, Inguinal\"[Majr] OR \"inguinal hernia\"[tiab] OR \"abdominal hernia\"[tiab])"
+    },
+    "Inflammatory bowel disease": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Inflammatory Bowel Diseases",
+        "Crohn Disease",
+        "Colitis, Ulcerative"
+      ],
+      "title_abstract": [
+        "inflammatory bowel disease",
+        "IBD",
+        "Crohn",
+        "ulcerative colitis"
+      ],
+      "combined": "(\"Inflammatory Bowel Diseases\"[Majr] OR \"IBD\"[tiab] OR \"Crohn\"[tiab])"
+    },
+    "Paralytic ileus and intestinal obstruction": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Ileus",
+        "Intestinal Obstruction"
+      ],
+      "title_abstract": [
+        "ileus",
+        "intestinal obstruction",
+        "bowel obstruction"
+      ],
+      "combined": "(\"Ileus\"[Majr] OR \"Intestinal Obstruction\"[Majr] OR \"bowel obstruction\"[tiab])"
+    },
+    "Peptic ulcer disease": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Peptic Ulcer",
+        "Stomach Ulcer",
+        "Duodenal Ulcer"
+      ],
+      "title_abstract": [
+        "peptic ulcer",
+        "gastric ulcer",
+        "duodenal ulcer",
+        "H pylori"
+      ],
+      "combined": "(\"Peptic Ulcer\"[Majr] OR \"peptic ulcer\"[tiab])"
+    },
+    "Upper digestive system diseases": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Gastrointestinal Diseases",
+        "Esophageal Diseases",
+        "Stomach Diseases"
+      ],
+      "title_abstract": [
+        "upper GI disease",
+        "esophageal disease",
+        "gastric disease",
+        "GERD"
+      ],
+      "combined": "(\"Gastrointestinal Diseases\"[Majr] OR \"upper gastrointestinal\"[tiab] OR \"GERD\"[tiab])"
+    },
+    "Vascular intestinal disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Mesenteric Ischemia",
+        "Intestinal Diseases"
+      ],
+      "title_abstract": [
+        "mesenteric ischemia",
+        "intestinal ischemia",
+        "bowel ischemia"
+      ],
+      "combined": "(\"Mesenteric Ischemia\"[Majr] OR \"intestinal ischemia\"[tiab])"
+    },
+    "Acute glomerulonephritis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Glomerulonephritis"
+      ],
+      "title_abstract": [
+        "glomerulonephritis",
+        "acute nephritis",
+        "nephritic syndrome"
+      ],
+      "combined": "(\"Glomerulonephritis\"[Majr] OR \"glomerulonephritis\"[tiab])"
+    },
+    "Chronic kidney disease": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Renal Insufficiency, Chronic",
+        "Kidney Failure, Chronic"
+      ],
+      "title_abstract": [
+        "chronic kidney disease",
+        "CKD",
+        "chronic renal failure",
+        "end-stage renal"
+      ],
+      "combined": "(\"Renal Insufficiency, Chronic\"[Majr] OR \"chronic kidney disease\"[tiab] OR \"CKD\"[tiab])"
+    },
+    "Urinary diseases and male infertility": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Urologic Diseases",
+        "Infertility, Male",
+        "Urinary Tract Diseases"
+      ],
+      "title_abstract": [
+        "urinary disease",
+        "male infertility",
+        "urologic disease"
+      ],
+      "combined": "(\"Urologic Diseases\"[Majr] OR \"male infertility\"[tiab])"
+    },
+    "Gout": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Gout"
+      ],
+      "title_abstract": [
+        "gout",
+        "gouty arthritis",
+        "hyperuricemia"
+      ],
+      "combined": "(\"Gout\"[Majr] OR \"gout\"[tiab])"
+    },
+    "Low back pain": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Low Back Pain"
+      ],
+      "title_abstract": [
+        "low back pain",
+        "LBP",
+        "lumbar pain",
+        "lumbago"
+      ],
+      "combined": "(\"Low Back Pain\"[Majr] OR \"low back pain\"[tiab])"
+    },
+    "Neck pain": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Neck Pain"
+      ],
+      "title_abstract": [
+        "neck pain",
+        "cervical pain",
+        "cervicalgia"
+      ],
+      "combined": "(\"Neck Pain\"[Majr] OR \"neck pain\"[tiab])"
+    },
+    "Osteoarthritis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Osteoarthritis"
+      ],
+      "title_abstract": [
+        "osteoarthritis",
+        "OA",
+        "degenerative joint disease"
+      ],
+      "combined": "(\"Osteoarthritis\"[Majr] OR \"osteoarthritis\"[tiab])"
+    },
+    "Rheumatoid arthritis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Arthritis, Rheumatoid"
+      ],
+      "title_abstract": [
+        "rheumatoid arthritis",
+        "RA",
+        "rheumatoid"
+      ],
+      "combined": "(\"Arthritis, Rheumatoid\"[Majr] OR \"rheumatoid arthritis\"[tiab])"
+    },
+    "Acne vulgaris": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Acne Vulgaris"
+      ],
+      "title_abstract": [
+        "acne vulgaris",
+        "acne"
+      ],
+      "combined": "(\"Acne Vulgaris\"[Majr] OR \"acne\"[tiab])"
+    },
+    "Alopecia areata": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Alopecia Areata"
+      ],
+      "title_abstract": [
+        "alopecia areata",
+        "hair loss",
+        "alopecia"
+      ],
+      "combined": "(\"Alopecia Areata\"[Majr] OR \"alopecia areata\"[tiab])"
+    },
+    "Dermatitis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Dermatitis",
+        "Dermatitis, Atopic",
+        "Eczema"
+      ],
+      "title_abstract": [
+        "dermatitis",
+        "eczema",
+        "atopic dermatitis"
+      ],
+      "combined": "(\"Dermatitis\"[Majr] OR \"dermatitis\"[tiab] OR \"eczema\"[tiab])"
+    },
+    "Pruritus": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Pruritus"
+      ],
+      "title_abstract": [
+        "pruritus",
+        "itching",
+        "itch"
+      ],
+      "combined": "(\"Pruritus\"[Majr] OR \"pruritus\"[tiab])"
+    },
+    "Psoriasis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Psoriasis"
+      ],
+      "title_abstract": [
+        "psoriasis",
+        "psoriatic"
+      ],
+      "combined": "(\"Psoriasis\"[Majr] OR \"psoriasis\"[tiab])"
+    },
+    "Scabies": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Scabies"
+      ],
+      "title_abstract": [
+        "scabies",
+        "sarcoptes scabiei"
+      ],
+      "combined": "(\"Scabies\"[Majr] OR \"scabies\"[tiab])"
+    },
+    "Urticaria": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Urticaria"
+      ],
+      "title_abstract": [
+        "urticaria",
+        "hives",
+        "chronic urticaria"
+      ],
+      "combined": "(\"Urticaria\"[Majr] OR \"urticaria\"[tiab] OR \"hives\"[tiab])"
+    },
+    "Age-related and other hearing loss": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Hearing Loss",
+        "Presbycusis"
+      ],
+      "title_abstract": [
+        "hearing loss",
+        "deafness",
+        "presbycusis",
+        "sensorineural hearing loss"
+      ],
+      "combined": "(\"Hearing Loss\"[Majr] OR \"hearing loss\"[tiab] OR \"deafness\"[tiab])"
+    },
+    "Cataract": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Cataract"
+      ],
+      "title_abstract": [
+        "cataract",
+        "lens opacity"
+      ],
+      "combined": "(\"Cataract\"[Majr] OR \"cataract\"[tiab])"
+    },
+    "Glaucoma": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Glaucoma"
+      ],
+      "title_abstract": [
+        "glaucoma",
+        "intraocular pressure",
+        "optic neuropathy"
+      ],
+      "combined": "(\"Glaucoma\"[Majr] OR \"glaucoma\"[tiab])"
+    },
+    "Macular degeneration": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Macular Degeneration"
+      ],
+      "title_abstract": [
+        "macular degeneration",
+        "AMD",
+        "age-related macular"
+      ],
+      "combined": "(\"Macular Degeneration\"[Majr] OR \"macular degeneration\"[tiab] OR \"AMD\"[tiab])"
+    },
+    "Near vision loss": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Presbyopia",
+        "Refractive Errors"
+      ],
+      "title_abstract": [
+        "presbyopia",
+        "near vision loss",
+        "refractive error"
+      ],
+      "combined": "(\"Presbyopia\"[Majr] OR \"presbyopia\"[tiab] OR \"near vision\"[tiab])"
+    },
+    "Other sense organ diseases": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Sensation Disorders",
+        "Eye Diseases",
+        "Ear Diseases"
+      ],
+      "title_abstract": [
+        "sense organ disease",
+        "sensory disorder"
+      ],
+      "combined": "(\"Sensation Disorders\"[Majr] OR \"sense organ\"[tiab])"
+    },
+    "Refraction disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Refractive Errors",
+        "Myopia",
+        "Hyperopia",
+        "Astigmatism"
+      ],
+      "title_abstract": [
+        "refractive error",
+        "myopia",
+        "hyperopia",
+        "astigmatism",
+        "nearsightedness"
+      ],
+      "combined": "(\"Refractive Errors\"[Majr] OR \"myopia\"[tiab] OR \"refractive error\"[tiab])"
+    },
+    "Animal contact": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Bites and Stings",
+        "Animal Attacks"
+      ],
+      "title_abstract": [
+        "animal bite",
+        "animal attack",
+        "dog bite",
+        "snake bite"
+      ],
+      "combined": "(\"Bites and Stings\"[Majr] OR \"animal bite\"[tiab] OR \"animal attack\"[tiab])"
+    },
+    "Drowning": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Drowning"
+      ],
+      "title_abstract": [
+        "drowning",
+        "near drowning",
+        "submersion"
+      ],
+      "combined": "(\"Drowning\"[Majr] OR \"drowning\"[tiab])"
+    },
+    "Environmental heat and cold exposure": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Heat Stress Disorders",
+        "Hypothermia",
+        "Heat Stroke"
+      ],
+      "title_abstract": [
+        "heat stroke",
+        "hypothermia",
+        "frostbite",
+        "heat exhaustion"
+      ],
+      "combined": "(\"Heat Stress Disorders\"[Majr] OR \"Hypothermia\"[Majr] OR \"heat stroke\"[tiab])"
+    },
+    "Executions and police conflict": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Violence",
+        "Law Enforcement"
+      ],
+      "title_abstract": [
+        "police violence",
+        "execution",
+        "law enforcement injury"
+      ],
+      "combined": "(\"Violence\"[Majr] AND \"police\"[tiab])"
+    },
+    "Falls": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Accidental Falls"
+      ],
+      "title_abstract": [
+        "fall injury",
+        "accidental fall",
+        "fall prevention"
+      ],
+      "combined": "(\"Accidental Falls\"[Majr] OR \"fall injury\"[tiab])"
+    },
+    "Fire, heat, and hot substances": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Burns",
+        "Fires"
+      ],
+      "title_abstract": [
+        "burn injury",
+        "fire injury",
+        "scald",
+        "thermal injury"
+      ],
+      "combined": "(\"Burns\"[Majr] OR \"burn injury\"[tiab] OR \"thermal injury\"[tiab])"
+    },
+    "Foreign body": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Foreign Bodies"
+      ],
+      "title_abstract": [
+        "foreign body",
+        "aspiration",
+        "ingested foreign body"
+      ],
+      "combined": "(\"Foreign Bodies\"[Majr] OR \"foreign body\"[tiab])"
+    },
+    "Interpersonal violence": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Violence",
+        "Domestic Violence",
+        "Assault"
+      ],
+      "title_abstract": [
+        "interpersonal violence",
+        "assault",
+        "domestic violence",
+        "physical abuse"
+      ],
+      "combined": "(\"Violence\"[Majr] OR \"assault\"[tiab] OR \"domestic violence\"[tiab])"
+    },
+    "Poisonings": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Poisoning"
+      ],
+      "title_abstract": [
+        "poisoning",
+        "toxic exposure",
+        "intoxication"
+      ],
+      "combined": "(\"Poisoning\"[Majr] OR \"poisoning\"[tiab])"
+    },
+    "Self-harm": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Self-Injurious Behavior",
+        "Suicide, Attempted"
+      ],
+      "title_abstract": [
+        "self-harm",
+        "self-injury",
+        "suicide attempt",
+        "deliberate self-harm"
+      ],
+      "combined": "(\"Self-Injurious Behavior\"[Majr] OR \"self-harm\"[tiab] OR \"suicide attempt\"[tiab])"
+    },
+    "Iodine deficiency": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Iodine Deficiency"
+      ],
+      "title_abstract": [
+        "iodine deficiency",
+        "goiter",
+        "cretinism"
+      ],
+      "combined": "(\"Iodine Deficiency\"[Majr] OR \"iodine deficiency\"[tiab])"
+    },
+    "Protein-energy malnutrition": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Protein-Energy Malnutrition",
+        "Kwashiorkor",
+        "Marasmus"
+      ],
+      "title_abstract": [
+        "protein energy malnutrition",
+        "kwashiorkor",
+        "marasmus",
+        "PEM",
+        "severe acute malnutrition"
+      ],
+      "combined": "(\"Protein-Energy Malnutrition\"[Majr] OR \"protein energy malnutrition\"[tiab] OR \"kwashiorkor\"[tiab])"
+    },
+    "Vitamin A deficiency": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Vitamin A Deficiency"
+      ],
+      "title_abstract": [
+        "vitamin A deficiency",
+        "xerophthalmia",
+        "night blindness"
+      ],
+      "combined": "(\"Vitamin A Deficiency\"[Majr] OR \"vitamin A deficiency\"[tiab])"
+    },
+    "Conduct disorder": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Conduct Disorder"
+      ],
+      "title_abstract": [
+        "conduct disorder",
+        "oppositional defiant",
+        "disruptive behavior"
+      ],
+      "combined": "(\"Conduct Disorder\"[Majr] OR \"conduct disorder\"[tiab])"
+    },
+    "Endometriosis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Endometriosis"
+      ],
+      "title_abstract": [
+        "endometriosis",
+        "endometriotic"
+      ],
+      "combined": "(\"Endometriosis\"[Majr] OR \"endometriosis\"[tiab])"
+    },
+    "Genital prolapse": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Pelvic Organ Prolapse",
+        "Uterine Prolapse"
+      ],
+      "title_abstract": [
+        "genital prolapse",
+        "pelvic organ prolapse",
+        "uterine prolapse"
+      ],
+      "combined": "(\"Pelvic Organ Prolapse\"[Majr] OR \"genital prolapse\"[tiab])"
+    },
+    "Gynecological diseases": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Genital Diseases, Female"
+      ],
+      "title_abstract": [
+        "gynecological disease",
+        "gynecologic disorder",
+        "female reproductive disease"
+      ],
+      "combined": "(\"Genital Diseases, Female\"[Majr] OR \"gynecological disease\"[tiab])"
+    },
+    "Hemoglobinopathies and hemolytic anemias": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Hemoglobinopathies",
+        "Anemia, Sickle Cell",
+        "Thalassemia",
+        "Anemia, Hemolytic"
+      ],
+      "title_abstract": [
+        "hemoglobinopathy",
+        "sickle cell",
+        "thalassemia",
+        "hemolytic anemia"
+      ],
+      "combined": "(\"Hemoglobinopathies\"[Majr] OR \"sickle cell\"[tiab] OR \"thalassemia\"[tiab])"
+    },
+    "Other neoplasms": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Neoplasms"
+      ],
+      "title_abstract": [
+        "neoplasm",
+        "tumor",
+        "benign tumor"
+      ],
+      "combined": "(\"Neoplasms\"[Majr] AND \"benign\"[tiab])"
+    },
+    "Other oral disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Mouth Diseases",
+        "Stomatognathic Diseases"
+      ],
+      "title_abstract": [
+        "oral disease",
+        "mouth disease",
+        "dental disease"
+      ],
+      "combined": "(\"Mouth Diseases\"[Majr] OR \"oral disease\"[tiab])"
+    },
+    "Other skin and subcutaneous diseases": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Skin Diseases"
+      ],
+      "title_abstract": [
+        "skin disease",
+        "cutaneous disease",
+        "dermatological"
+      ],
+      "combined": "(\"Skin Diseases\"[Majr] OR \"skin disease\"[tiab])"
+    },
+    "Polycystic ovarian syndrome": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Polycystic Ovary Syndrome"
+      ],
+      "title_abstract": [
+        "polycystic ovary syndrome",
+        "PCOS",
+        "polycystic ovarian"
+      ],
+      "combined": "(\"Polycystic Ovary Syndrome\"[Majr] OR \"PCOS\"[tiab] OR \"polycystic ovary\"[tiab])"
+    },
+    "Premenstrual syndrome": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Premenstrual Syndrome"
+      ],
+      "title_abstract": [
+        "premenstrual syndrome",
+        "PMS",
+        "premenstrual dysphoric"
+      ],
+      "combined": "(\"Premenstrual Syndrome\"[Majr] OR \"premenstrual syndrome\"[tiab] OR \"PMS\"[tiab])"
+    },
+    "Sudden infant death syndrome": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Sudden Infant Death"
+      ],
+      "title_abstract": [
+        "sudden infant death",
+        "SIDS",
+        "cot death",
+        "crib death"
+      ],
+      "combined": "(\"Sudden Infant Death\"[Majr] OR \"SIDS\"[tiab] OR \"sudden infant death\"[tiab])"
+    },
+    "Benign prostatic hyperplasia": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Prostatic Hyperplasia"
+      ],
+      "title_abstract": [
+        "benign prostatic hyperplasia",
+        "BPH",
+        "enlarged prostate"
+      ],
+      "combined": "(\"Prostatic Hyperplasia\"[Majr] OR \"BPH\"[tiab] OR \"benign prostatic\"[tiab])"
+    },
+    "Oral disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Mouth Diseases",
+        "Tooth Diseases"
+      ],
+      "title_abstract": [
+        "oral disorder",
+        "dental caries",
+        "periodontal disease",
+        "tooth decay"
+      ],
+      "combined": "(\"Mouth Diseases\"[Majr] OR \"dental caries\"[tiab] OR \"periodontal\"[tiab])"
+    },
+    "Ischemic stroke": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Stroke",
+        "Brain Ischemia",
+        "Ischemic Stroke"
+      ],
+      "title_abstract": [
+        "ischemic stroke",
+        "cerebral infarction",
+        "brain ischemia"
+      ],
+      "combined": "(\"Stroke\"[Majr] OR \"ischemic stroke\"[tiab] OR \"cerebral infarction\"[tiab])"
+    },
+    "Intracerebral hemorrhage": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Cerebral Hemorrhage",
+        "Intracranial Hemorrhages"
+      ],
+      "title_abstract": [
+        "intracerebral hemorrhage",
+        "ICH",
+        "brain hemorrhage"
+      ],
+      "combined": "(\"Cerebral Hemorrhage\"[Majr] OR \"intracerebral hemorrhage\"[tiab])"
+    },
+    "Subarachnoid hemorrhage": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Subarachnoid Hemorrhage"
+      ],
+      "title_abstract": [
+        "subarachnoid hemorrhage",
+        "SAH",
+        "aneurysmal SAH"
+      ],
+      "combined": "(\"Subarachnoid Hemorrhage\"[Majr] OR \"subarachnoid hemorrhage\"[tiab])"
+    },
+    "Ascariasis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Ascariasis"
+      ],
+      "title_abstract": [
+        "ascariasis",
+        "ascaris",
+        "roundworm"
+      ],
+      "combined": "(\"Ascariasis\"[Majr] OR \"ascariasis\"[tiab])"
+    },
+    "Trichuriasis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Trichuriasis"
+      ],
+      "title_abstract": [
+        "trichuriasis",
+        "whipworm",
+        "trichuris"
+      ],
+      "combined": "(\"Trichuriasis\"[Majr] OR \"trichuriasis\"[tiab] OR \"whipworm\"[tiab])"
+    },
+    "Diphtheria": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Diphtheria"
+      ],
+      "title_abstract": [
+        "diphtheria",
+        "corynebacterium diphtheriae"
+      ],
+      "combined": "(\"Diphtheria\"[Majr] OR \"diphtheria\"[tiab])"
+    },
+    "Ebola": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Hemorrhagic Fever, Ebola",
+        "Ebolavirus"
+      ],
+      "title_abstract": [
+        "ebola",
+        "ebola virus",
+        "EVD"
+      ],
+      "combined": "(\"Hemorrhagic Fever, Ebola\"[Majr] OR \"ebola\"[tiab])"
+    },
+    "Endocrine, metabolic, blood, and immune disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Endocrine System Diseases",
+        "Metabolic Diseases",
+        "Hematologic Diseases",
+        "Immune System Diseases"
+      ],
+      "title_abstract": [
+        "endocrine disorder",
+        "metabolic disorder",
+        "blood disorder",
+        "immune disorder"
+      ],
+      "combined": "(\"Endocrine System Diseases\"[Majr] OR \"Metabolic Diseases\"[Majr] OR \"endocrine disorder\"[tiab])"
+    },
+    "Exposure to forces of nature": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Natural Disasters",
+        "Disasters"
+      ],
+      "title_abstract": [
+        "natural disaster",
+        "earthquake injury",
+        "flood injury",
+        "hurricane injury",
+        "tsunami"
+      ],
+      "combined": "(\"Natural Disasters\"[Majr] OR \"natural disaster\"[tiab] OR \"earthquake\"[tiab])"
+    },
+    "HIV AIDS": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "HIV Infections",
+        "Acquired Immunodeficiency Syndrome"
+      ],
+      "title_abstract": [
+        "HIV",
+        "AIDS",
+        "human immunodeficiency virus"
+      ],
+      "combined": "(\"HIV Infections\"[Majr] OR \"HIV\"[tiab] OR \"AIDS\"[tiab])"
+    },
+    "Idiopathic epilepsy": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Epilepsy",
+        "Epilepsy, Generalized"
+      ],
+      "title_abstract": [
+        "idiopathic epilepsy",
+        "primary epilepsy",
+        "genetic epilepsy"
+      ],
+      "combined": "(\"Epilepsy\"[Majr] OR \"idiopathic epilepsy\"[tiab])"
+    },
+    "Invasive Non-typhoidal Salmonella (iNTS)": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Salmonella Infections",
+        "Salmonella"
+      ],
+      "title_abstract": [
+        "non-typhoidal salmonella",
+        "iNTS",
+        "invasive salmonella",
+        "NTS bacteremia"
+      ],
+      "combined": "(\"Salmonella Infections\"[Majr] OR \"non-typhoidal salmonella\"[tiab] OR \"iNTS\"[tiab])"
+    },
+    "Malignant neoplasm of bone and articular cartilage": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Bone Neoplasms",
+        "Osteosarcoma",
+        "Chondrosarcoma"
+      ],
+      "title_abstract": [
+        "bone cancer",
+        "osteosarcoma",
+        "bone tumor",
+        "chondrosarcoma"
+      ],
+      "combined": "(\"Bone Neoplasms\"[Majr] OR \"Osteosarcoma\"[Majr] OR \"bone cancer\"[tiab])"
+    },
+    "Neuroblastoma and other peripheral nervous cell tumors": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Neuroblastoma",
+        "Peripheral Nervous System Neoplasms"
+      ],
+      "title_abstract": [
+        "neuroblastoma",
+        "peripheral nerve tumor",
+        "ganglioneuroblastoma"
+      ],
+      "combined": "(\"Neuroblastoma\"[Majr] OR \"neuroblastoma\"[tiab])"
+    },
+    "Other intestinal infectious diseases": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Intestinal Diseases",
+        "Gastrointestinal Infections"
+      ],
+      "title_abstract": [
+        "intestinal infection",
+        "enteric infection",
+        "GI infection"
+      ],
+      "combined": "(\"Intestinal Diseases\"[Majr] AND \"infection\"[tiab])"
+    },
+    "Other neurological disorders": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Nervous System Diseases",
+        "Neurologic Manifestations"
+      ],
+      "title_abstract": [
+        "neurological disorder",
+        "neurologic disease",
+        "nervous system disorder"
+      ],
+      "combined": "(\"Nervous System Diseases\"[Majr] OR \"neurological disorder\"[tiab])"
+    },
+    "Other transport injuries": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Transportation",
+        "Accidents"
+      ],
+      "title_abstract": [
+        "transport injury",
+        "transportation accident",
+        "railway injury",
+        "aviation injury"
+      ],
+      "combined": "(\"Accidents, Aviation\"[Majr] OR \"transport injury\"[tiab])"
+    },
+    "Other unspecified infectious diseases": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Communicable Diseases",
+        "Infection"
+      ],
+      "title_abstract": [
+        "infectious disease",
+        "communicable disease",
+        "infection"
+      ],
+      "combined": "(\"Communicable Diseases\"[Majr] OR \"infectious disease\"[tiab])"
+    },
+    "Pancreatitis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Pancreatitis",
+        "Pancreatitis, Acute Necrotizing",
+        "Pancreatitis, Chronic"
+      ],
+      "title_abstract": [
+        "pancreatitis",
+        "acute pancreatitis",
+        "chronic pancreatitis"
+      ],
+      "combined": "(\"Pancreatitis\"[Majr] OR \"pancreatitis\"[tiab])"
+    },
+    "Pertussis": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Whooping Cough"
+      ],
+      "title_abstract": [
+        "pertussis",
+        "whooping cough",
+        "bordetella pertussis"
+      ],
+      "combined": "(\"Whooping Cough\"[Majr] OR \"pertussis\"[tiab])"
+    },
+    "Police conflict and executions": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Violence",
+        "Law Enforcement"
+      ],
+      "title_abstract": [
+        "police violence",
+        "law enforcement violence",
+        "execution"
+      ],
+      "combined": "(\"Violence\"[Majr] AND \"police\"[tiab])"
+    },
+    "Pulmonary Arterial Hypertension": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Hypertension, Pulmonary",
+        "Familial Primary Pulmonary Hypertension"
+      ],
+      "title_abstract": [
+        "pulmonary arterial hypertension",
+        "PAH",
+        "pulmonary hypertension"
+      ],
+      "combined": "(\"Hypertension, Pulmonary\"[Majr] OR \"pulmonary arterial hypertension\"[tiab] OR \"PAH\"[tiab])"
+    },
+    "Soft tissue and other extraosseous sarcomas": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Sarcoma",
+        "Soft Tissue Neoplasms"
+      ],
+      "title_abstract": [
+        "soft tissue sarcoma",
+        "sarcoma",
+        "liposarcoma",
+        "leiomyosarcoma"
+      ],
+      "combined": "(\"Sarcoma\"[Majr] OR \"soft tissue sarcoma\"[tiab])"
+    },
+    "Tetanus": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Tetanus"
+      ],
+      "title_abstract": [
+        "tetanus",
+        "clostridium tetani",
+        "lockjaw"
+      ],
+      "combined": "(\"Tetanus\"[Majr] OR \"tetanus\"[tiab])"
+    },
+    "Tracheal": {
+      "priority": "NORMAL",
+      "mesh_terms": [
+        "Tracheal Neoplasms",
+        "Tracheal Diseases"
+      ],
+      "title_abstract": [
+        "tracheal cancer",
+        "tracheal disease",
+        "tracheal tumor"
+      ],
+      "combined": "(\"Tracheal Neoplasms\"[Majr] OR \"tracheal cancer\"[tiab])"
     }
   }
 }

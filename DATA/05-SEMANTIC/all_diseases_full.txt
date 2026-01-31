@@ -1,0 +1,176 @@
+Acne vulgaris
+Acute glomerulonephritis
+Acute hepatitis
+Adverse effects of medical treatment
+African trypanosomiasis
+Age-related and other hearing loss
+Alcohol use disorders
+Alopecia areata
+Alzheimer's disease and other dementias
+Animal contact
+Anxiety disorders
+Aortic aneurysm
+Appendicitis
+Asthma
+Atrial fibrillation and flutter
+Attention-deficit hyperactivity disorder
+Autism spectrum disorders
+Bacterial skin diseases
+Bipolar disorder
+Bladder cancer
+Blindness and vision loss
+Brain and central nervous system cancer
+Breast cancer
+Cardiomyopathy and myocarditis
+Cervical cancer
+Chagas disease
+Chronic kidney disease
+Chronic obstructive pulmonary disease
+Cirrhosis and other chronic liver diseases
+Colon and rectum cancer
+Conduct disorder
+Conflict and terrorism
+Congenital birth defects
+COVID-19
+Cystic echinococcosis
+Cysticercosis
+Decubitus ulcer
+Dengue
+Depressive disorders
+Dermatitis
+Diabetes mellitus
+Diarrheal diseases
+Dietary iron deficiency
+Diphtheria
+Drowning
+Drug use disorders
+Eating disorders
+Ebola
+Encephalitis
+Endocarditis
+Endocrine, metabolic, blood, and immune disorders
+Environmental heat and cold exposure
+Esophageal cancer
+Exposure to forces of nature
+Exposure to mechanical forces
+Eye cancer
+Falls
+Fire, heat, and hot substances
+Food-borne trematodiases
+Foreign body
+Fungal skin diseases
+Gallbladder and biliary diseases
+Gallbladder and biliary tract cancer
+Gout
+Guinea worm disease
+Gynecological diseases
+Headache disorders
+Hemoglobinopathies and hemolytic anemias
+HIV AIDS
+Hodgkin lymphoma
+Hypertensive heart disease
+Idiopathic developmental intellectual disability
+Idiopathic epilepsy
+Inflammatory bowel disease
+Inguinal, femoral, and abdominal hernia
+Interpersonal violence
+Interstitial lung disease and pulmonary sarcoidosis
+Intestinal nematode infections
+Invasive Non-typhoidal Salmonella (iNTS)
+Iodine deficiency
+Ischemic heart disease
+Kidney cancer
+Larynx cancer
+Leishmaniasis
+Leprosy
+Leukemia
+Lip and oral cavity cancer
+Liver cancer
+Low back pain
+Lower extremity peripheral arterial disease
+Lower respiratory infections
+Lymphatic filariasis
+Malaria
+Malignant neoplasm of bone and articular cartilage
+Malignant skin melanoma
+Maternal disorders
+Measles
+Meningitis
+Mesothelioma
+Motor neuron disease
+Multiple myeloma
+Multiple sclerosis
+Nasopharynx cancer
+Neck pain
+Neonatal disorders
+Neuroblastoma and other peripheral nervous cell tumors
+Non-Hodgkin lymphoma
+Non-melanoma skin cancer
+Non-rheumatic valvular heart disease
+Onchocerciasis
+Oral disorders
+Osteoarthritis
+Other cardiovascular and circulatory diseases
+Other chronic respiratory diseases
+Other digestive diseases
+Other intestinal infectious diseases
+Other malignant neoplasms
+Other mental disorders
+Other musculoskeletal disorders
+Other neglected tropical diseases
+Other neoplasms
+Other neurological disorders
+Other nutritional deficiencies
+Other pharynx cancer
+Other sense organ diseases
+Other skin and subcutaneous diseases
+Other transport injuries
+Other unintentional injuries
+Other unspecified infectious diseases
+Otitis media
+Ovarian cancer
+Pancreatic cancer
+Pancreatitis
+Paralytic ileus and intestinal obstruction
+Parkinson's disease
+Pertussis
+Pneumoconiosis
+Poisonings
+Police conflict and executions
+Prostate cancer
+Protein-energy malnutrition
+Pruritus
+Psoriasis
+Pulmonary Arterial Hypertension
+Rabies
+Rheumatic heart disease
+Rheumatoid arthritis
+Road injuries
+Scabies
+Schistosomiasis
+Schizophrenia
+Self-harm
+Sexually transmitted infections excluding HIV
+Soft tissue and other extraosseous sarcomas
+Stomach cancer
+Stroke
+Sudden infant death syndrome
+Testicular cancer
+Tetanus
+Thyroid cancer
+Tracheal
+Tracheal, bronchus, and lung cancer
+Trachoma
+Tuberculosis
+Typhoid and paratyphoid
+Upper digestive system diseases
+Upper respiratory infections
+Urinary diseases and male infertility
+Urticaria
+Uterine cancer
+Varicella and herpes zoster
+Vascular intestinal disorders
+Viral skin diseases
+Vitamin A deficiency
+Yellow fever
+Zika virus
