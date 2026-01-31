@@ -1,0 +1,27 @@
+{
+  "generated_at": "2026-01-18T06:16:55.869883",
+  "time_range": {
+    "start": 2000,
+    "end": 2025
+  },
+  "quality_thresholds": {
+    "min_year_coverage": 0.7,
+    "min_abstract_coverage": 0.95,
+    "min_papers": 50,
+    "min_quality_score": 80.0
+  },
+  "diseases": {
+    "Invasive Non-typhoidal Salmonella (iNTS)": {
+      "folder": "Invasive_Non-typhoidal_Salmonella_(iNTS)",
+      "passes_filters": false,
+      "quality_score": 93.09281607379795,
+      "total_papers": 15827
+    }
+  },
+  "summary": {
+    "total_diseases": 1,
+    "diseases_passing": 0,
+    "total_papers": 15827,
+    "total_unique_pmids": 14433
+  }
+}

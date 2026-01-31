@@ -1,0 +1,74 @@
+
+FIGURE 1: HEIM FRAMEWORK SCHEMATIC
+==================================
+
+Layout: 3-panel horizontal (A, B, C)
+
+PANEL A: Three Dimensions
+-------------------------
+Visual: Three interconnected circles/pillars
+
+[DISCOVERY]          [TRANSLATION]         [KNOWLEDGE]
+   |                      |                     |
+Biobanks             Clinical Trials      Scientific Literature
+70 cohorts           2.2M trials          13.1M abstracts
+29 countries         770K sites           175 diseases
+   |                      |                     |
+Gap Score            Trial Intensity      Semantic Isolation
+Equity Alignment     Geographic Ratio     Index (SII)
+Score (EAS)                               KTP, RCC
+
+Color scheme:
+- Discovery: Blue (#3498DB)
+- Translation: Green (#27AE60)
+- Knowledge: Purple (#9B59B6)
+
+
+PANEL B: Data Flow
+------------------
+Visual: Flowchart
+
+[GBD 2021 Taxonomy] ──────────────────────────────────┐
+       │                                               │
+       ▼                                               │
+[179 Disease Categories]                               │
+       │                                               │
+       ├────────────────┬──────────────────┬──────────┘
+       ▼                ▼                  ▼
+   [PubMed]         [AACT]            [IHCC]
+   Entrez API    ClinicalTrials.gov  Biobank Registry
+       │                │                  │
+       ▼                ▼                  ▼
+[13.1M abstracts] [770K sites]      [38K publications]
+       │                │                  │
+       ▼                ▼                  ▼
+  [PubMedBERT]    [Geographic]      [MeSH Mapping]
+  [Embeddings]    [Classification]  [Gap Scores]
+       │                │                  │
+       └────────────────┴──────────────────┘
+                        │
+                        ▼
+              [UNIFIED NEGLECT SCORE]
+
+
+PANEL C: Score Integration
+--------------------------
+Visual: Equation with weighting diagram
+
+Unified Score = 0.33 × Discovery + 0.33 × Translation + 0.34 × Knowledge
+
+[Three colored bars merging into one]
+Discovery (33%) ──┐
+Translation (33%) ─┼──► UNIFIED NEGLECT SCORE (0-50)
+Knowledge (34%) ──┘
+
+Scale bar: 0 ────────────────────────► 50
+           Well-resourced        Severely neglected
+
+
+DESIGN NOTES:
+- Use consistent color palette
+- Include icons for data sources (database, globe, document)
+- Arrows should show data flow direction
+- Consider using Nature Medicine figure style guide
+- Suggested tools: BioRender, Adobe Illustrator, Inkscape

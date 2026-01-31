@@ -1,0 +1,274 @@
+{
+  "generated_at": "2026-01-19T07:39:47.447334",
+  "summary": {
+    "total_diseases": 146,
+    "critical": 26,
+    "warning": 22,
+    "ok": 98,
+    "critical_pct": 17.8,
+    "warning_pct": 15.1,
+    "ok_pct": 67.1
+  },
+  "flag_counts": {
+    "LOW_PAPERS": 23,
+    "VERY_LOW_PAPERS": 14,
+    "LOW_VS_TRIALS": 20,
+    "HIGH_TRIALS_LOW_PAPERS": 10,
+    "HIGH_BURDEN_LOW_PAPERS": 15,
+    "BELOW_EXPECTED": 3,
+    "FAR_BELOW_EXPECTED": 8
+  },
+  "critical_diseases": [
+    {
+      "disease": "Conflict and terrorism",
+      "n_papers": 26,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Viral skin diseases",
+      "n_papers": 33,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Road injuries",
+      "n_papers": 279,
+      "n_trials": 19743,
+      "flags": [
+        "LOW_PAPERS",
+        "LOW_VS_TRIALS",
+        "HIGH_TRIALS_LOW_PAPERS",
+        "HIGH_BURDEN_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Fungal skin diseases",
+      "n_papers": 45,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Exposure to mechanical forces",
+      "n_papers": 28,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Lower respiratory infections",
+      "n_papers": 1197,
+      "n_trials": 45810,
+      "flags": [
+        "FAR_BELOW_EXPECTED",
+        "LOW_VS_TRIALS",
+        "HIGH_BURDEN_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Intestinal nematode infections",
+      "n_papers": 117,
+      "n_trials": 44321,
+      "flags": [
+        "LOW_PAPERS",
+        "LOW_VS_TRIALS",
+        "HIGH_TRIALS_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Neonatal disorders",
+      "n_papers": 228,
+      "n_trials": 11118,
+      "flags": [
+        "LOW_PAPERS",
+        "LOW_VS_TRIALS",
+        "HIGH_TRIALS_LOW_PAPERS",
+        "HIGH_BURDEN_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Other unintentional injuries",
+      "n_papers": 41,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Adverse effects of medical treatment",
+      "n_papers": 29,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Gallbladder and biliary diseases",
+      "n_papers": 22,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Other musculoskeletal disorders",
+      "n_papers": 132,
+      "n_trials": 29524,
+      "flags": [
+        "LOW_PAPERS",
+        "LOW_VS_TRIALS",
+        "HIGH_TRIALS_LOW_PAPERS",
+        "HIGH_BURDEN_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Tracheal, bronchus, and lung cancer",
+      "n_papers": 20,
+      "n_trials": 101350,
+      "flags": [
+        "VERY_LOW_PAPERS",
+        "FAR_BELOW_EXPECTED",
+        "LOW_VS_TRIALS",
+        "HIGH_TRIALS_LOW_PAPERS",
+        "HIGH_BURDEN_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Atrial fibrillation and flutter",
+      "n_papers": 408,
+      "n_trials": 4445,
+      "flags": [
+        "LOW_PAPERS",
+        "FAR_BELOW_EXPECTED",
+        "LOW_VS_TRIALS"
+      ]
+    },
+    {
+      "disease": "Bacterial skin diseases",
+      "n_papers": 40,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Non-rheumatic valvular heart disease",
+      "n_papers": 26,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Hypertensive heart disease",
+      "n_papers": 1559,
+      "n_trials": 12175,
+      "flags": [
+        "FAR_BELOW_EXPECTED",
+        "HIGH_BURDEN_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Other digestive diseases",
+      "n_papers": 38,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Stomach cancer",
+      "n_papers": 4299,
+      "n_trials": 100415,
+      "flags": [
+        "FAR_BELOW_EXPECTED",
+        "LOW_VS_TRIALS",
+        "HIGH_BURDEN_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Food-borne trematodiases",
+      "n_papers": 42,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Gallbladder and biliary tract cancer",
+      "n_papers": 47,
+      "n_trials": 0,
+      "flags": [
+        "VERY_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Brain and central nervous system cancer",
+      "n_papers": 30,
+      "n_trials": 100437,
+      "flags": [
+        "VERY_LOW_PAPERS",
+        "FAR_BELOW_EXPECTED",
+        "LOW_VS_TRIALS",
+        "HIGH_TRIALS_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Other malignant neoplasms",
+      "n_papers": 140,
+      "n_trials": 113268,
+      "flags": [
+        "LOW_PAPERS",
+        "LOW_VS_TRIALS",
+        "HIGH_TRIALS_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Colon and rectum cancer",
+      "n_papers": 132,
+      "n_trials": 100743,
+      "flags": [
+        "LOW_PAPERS",
+        "FAR_BELOW_EXPECTED",
+        "LOW_VS_TRIALS",
+        "HIGH_TRIALS_LOW_PAPERS",
+        "HIGH_BURDEN_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Alzheimer's disease and other dementias",
+      "n_papers": 470,
+      "n_trials": 10805,
+      "flags": [
+        "LOW_PAPERS",
+        "FAR_BELOW_EXPECTED",
+        "LOW_VS_TRIALS",
+        "HIGH_TRIALS_LOW_PAPERS",
+        "HIGH_BURDEN_LOW_PAPERS"
+      ]
+    },
+    {
+      "disease": "Maternal disorders",
+      "n_papers": 125,
+      "n_trials": 39534,
+      "flags": [
+        "LOW_PAPERS",
+        "LOW_VS_TRIALS",
+        "HIGH_TRIALS_LOW_PAPERS"
+      ]
+    }
+  ],
+  "recommendations": [
+    "CRITICAL diseases need re-collection with corrected search queries",
+    "WARNING diseases should be reviewed for search term accuracy",
+    "Use MeSH terms and synonyms instead of exact GBD names",
+    "Validate against PubMed web interface for spot checks"
+  ]
+}
