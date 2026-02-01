@@ -1,7 +1,7 @@
 {
   "title": "Cross-Disease Research Similarity",
   "description": "Clustered heatmap of cosine similarity between disease research centroids",
-  "generated_at": "2026-01-19T22:06:38.882745",
+  "generated_at": "2026-02-01T16:43:55.262515",
   "parameters": {
     "metric": "cosine_similarity",
     "clustering": "hierarchical"

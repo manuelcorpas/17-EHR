@@ -11,7 +11,7 @@ Visual: Three interconnected circles/pillars
 [DISCOVERY]          [TRANSLATION]         [KNOWLEDGE]
    |                      |                     |
 Biobanks             Clinical Trials      Scientific Literature
-70 cohorts           2.2M trials          13.1M abstracts
+70 cohorts           563K trials          13.1M abstracts
 29 countries         770K sites           175 diseases
    |                      |                     |
 Gap Score            Trial Intensity      Semantic Isolation

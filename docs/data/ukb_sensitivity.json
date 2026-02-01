@@ -17,7 +17,7 @@
       "strong_category": 1,
       "weak_category": 13,
       "poor_category": 56,
-      "diseases_with_coverage": 179,
+      "diseases_with_coverage": 175,
       "top_eas_biobank": {
         "id": "ukb",
         "name": "UK Biobank",
