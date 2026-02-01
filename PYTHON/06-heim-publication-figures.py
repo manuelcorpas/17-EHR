@@ -1,12 +1,36 @@
 #!/usr/bin/env python3
 """
-HEIM Publication Figures Generator
-For Nature Medicine submission
+06-heim-publication-figures.py
+==============================
 
-Generates:
-- Figure 2: Biobank equity landscape
-- Figure 4a: NTD vs non-NTD semantic isolation comparison
-- Figure 6: Unified Neglect Score ranking
+HEIM Publication Figures Generator for Nature Medicine submission.
+
+Generates main-text and extended-data figures from pre-computed HEIM metrics
+(webapp JSON data files). All output is PDF + PNG at 300 DPI.
+
+FIGURES:
+    - Figure 2a: World map of biobank equity (EAS by country)
+    - Figure 2b: Biobank EAS distribution (bar chart)
+    - Figure 2c: Publication share by WHO region
+    - Figure 3a: World map of clinical trial sites
+    - Figure 3b: Trial intensity gap (GS vs non-GS)
+    - Figure 4a: NTD vs non-NTD semantic isolation comparison
+    - Figure 6:  Unified Neglect Score ranking (top 30 diseases)
+
+INPUT:
+    docs/data/diseases.json   - Disease-level HEIM metrics
+    docs/data/summary.json    - Biobank-level summary statistics
+    docs/data/matrix.json     - Cross-disease similarity matrix
+
+OUTPUT:
+    ANALYSIS/05-04-HEIM-SEM-FIGURES/*.pdf
+    ANALYSIS/05-04-HEIM-SEM-FIGURES/*.png
+
+USAGE:
+    python3.11 06-heim-publication-figures.py
+
+REQUIREMENTS:
+    pip install matplotlib seaborn pandas numpy geopandas
 
 Author: Manuel Corpas
 Date: 2026-01-25
@@ -550,7 +574,7 @@ Visual: Three interconnected circles/pillars
 [DISCOVERY]          [TRANSLATION]         [KNOWLEDGE]
    |                      |                     |
 Biobanks             Clinical Trials      Scientific Literature
-70 cohorts           2.2M trials          13.1M abstracts
+70 cohorts           563K trials          13.1M abstracts
 29 countries         770K sites           175 diseases
    |                      |                     |
 Gap Score            Trial Intensity      Semantic Isolation
@@ -625,7 +649,7 @@ DESIGN NOTES:
     # Panel A: Three dimensions
     ax1 = axes[0]
     dims = ['Discovery\n(Biobanks)', 'Translation\n(Clinical Trials)', 'Knowledge\n(Literature)']
-    values = [70, 2.2, 13.1]  # Scaled for visualization
+    values = [70, 0.56, 13.1]  # Scaled for visualization
     colors = ['#3498DB', '#27AE60', '#9B59B6']
 
     bars = ax1.bar(dims, [1, 1, 1], color=colors, alpha=0.7, edgecolor='black')
@@ -635,7 +659,7 @@ DESIGN NOTES:
 
     # Add metrics below
     metrics = ['70 biobanks\n38K publications\nEAS, Gap Score',
-               '2.2M trials\n770K sites\nGeographic Ratio',
+               '563K trials\n770K sites\nGeographic Ratio',
                '13.1M abstracts\n175 diseases\nSII, KTP, RCC']
     for i, (bar, metric) in enumerate(zip(bars, metrics)):
         ax1.text(bar.get_x() + bar.get_width()/2, 0.5, metric,
@@ -649,7 +673,7 @@ DESIGN NOTES:
     # Panel B: Data sources
     ax2 = axes[1]
     sources = ['GBD 2021', 'PubMed', 'AACT', 'IHCC']
-    source_sizes = [179, 13.1, 2.2, 70]
+    source_sizes = [179, 13.1, 0.56, 70]
     ax2.barh(sources, source_sizes, color=['gray', '#9B59B6', '#27AE60', '#3498DB'])
     ax2.set_xlabel('Scale (diseases/millions/cohorts)')
     ax2.set_title('B. Data Sources and Scale', fontsize=12, fontweight='bold')
@@ -780,14 +804,14 @@ def create_figure_2a_world_map(biobank_data, output_path):
     norm = Normalize(vmin=0, vmax=100)
     sm = ScalarMappable(cmap=cmap, norm=norm)
     sm.set_array([])
-    cbar = plt.colorbar(sm, ax=ax, shrink=0.6, aspect=20, pad=0.02)
+    cbar = plt.colorbar(sm, ax=ax, shrink=0.5, aspect=25, pad=0.04)
     cbar.set_label('Equity Alignment Score (EAS)', fontsize=11)
 
     # Add threshold lines on colorbar
     cbar.ax.axhline(y=40, color='black', linestyle='--', linewidth=1)
     cbar.ax.axhline(y=60, color='black', linestyle='--', linewidth=1)
-    cbar.ax.text(1.5, 40, 'Moderate', fontsize=8, va='center')
-    cbar.ax.text(1.5, 60, 'High', fontsize=8, va='center')
+    cbar.ax.text(1.3, 40, 'Moderate', fontsize=7, va='center', clip_on=True)
+    cbar.ax.text(1.3, 60, 'High', fontsize=7, va='center', clip_on=True)
 
     # Title and labels
     ax.set_title('Global Distribution of Biobank Research Equity\n(n=70 IHCC Biobanks across 29 Countries)',

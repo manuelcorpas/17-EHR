@@ -5,7 +5,7 @@
   "overview": {
     "totalBiobanks": 70,
     "totalPublications": 38595,
-    "totalDiseases": 179,
+    "totalDiseases": 175,
     "addressableDiseases": 160,
     "totalCountries": 29,
     "equityRatio": 57.78
@@ -29,7 +29,7 @@
       "count": 4,
       "description": "Meta-categories for methodological publications (not disease-specific)"
     },
-    "interpretation": "Biobanks should not be penalized for low research on 'limited' appropriateness diseases; 160 of 179 diseases are realistically addressable"
+    "interpretation": "Biobanks should not be penalized for low research on 'limited' appropriateness diseases; 160 of 175 diseases are realistically addressable"
   },
   "gapDistribution": {
     "High": 26,

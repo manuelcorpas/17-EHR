@@ -1,7 +1,7 @@
 {
   "title": "Knowledge Transfer Network",
   "description": "Network of diseases with high research similarity (threshold = 0.7)",
-  "generated_at": "2026-01-19T22:06:40.230496",
+  "generated_at": "2026-02-01T16:43:56.304440",
   "parameters": {
     "threshold": 0.7,
     "n_nodes": 175,

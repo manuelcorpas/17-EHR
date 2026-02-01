@@ -11,7 +11,7 @@
     "description": "Mapping from PubMed MeSH terms to GBD 2021 disease causes",
     "method": "Manual curation with expert review",
     "validation": {
-      "total_gbd_causes": 179,
+      "total_gbd_causes": 175,
       "causes_with_mesh_mapping": 175,
       "causes_without_mesh_mapping": 4,
       "unmapped_causes": ["_GENOMICS", "_BIOBANK_METHODS", "_AGING", "_IMAGING"],

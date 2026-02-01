@@ -1,7 +1,7 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
   "generated": "2026-01-09T05:37:20.111891",
-  "count": 179,
+  "count": 175,
   "diseases": [
     {
       "id": "Malaria",
