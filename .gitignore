@@ -1,0 +1,110 @@
+# EHR-Linked Biobank Analysis - Git Ignore
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.spyderproject
+.spyproject
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Large data files (keep in DATA/ but don't track raw downloads)
+DATA/cache/
+DATA/*.tmp
+DATA/05-SEMANTIC/PUBMED-RAW/
+DATA/05-SEMANTIC/EMBEDDINGS/
+DATA/05-SEMANTIC/CHECKPOINTS/
+DATA/05-SEMANTIC/.embed_complete
+DATA/05-SEMANTIC/.fetch_complete
+DATA/05-SEMANTIC/.setup_complete
+
+# Large AACT clinical trial extracts (>100MB, exceed GitHub limit)
+DATA/heim_ct_baseline.csv
+DATA/heim_ct_eligibilities.csv
+DATA/heim_ct_mesh_conditions.csv
+DATA/heim_ct_studies.csv
+DATA/heim_ct_studies_mapped.csv
+DATA/heim_ct_conditions.csv
+
+# Temp Office lock files
+~$*
+
+# Binary analysis outputs (regenerate from scripts)
+ANALYSIS/**/*.npy
+
+# Local configuration
+.env
+.env.local
+config.local.py
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# Note: We DO track:
+# - DATA/*.csv (curated datasets)
+# - ANALYSIS/**/*.csv (tabular results)
+# - ANALYSIS/**/*.png (figures)
+# - ANALYSIS/**/*.pdf (figures)
+# - FIGS/* (publication figures)
+# - PRODUCTION/* (final outputs)
+DATA/bhem_publications*.csv
+DATA/bhem_fetch_progress.csv
+
+# Local Claude session intelligence (not for GitHub)
+DOCX/ANNUAL-REVIEWS/CLAUDE.md
+
+# Manuscript-editing scripts (contain hardcoded paths, not for public repo)
+PYTHON/06-01-nature-medicine-expand-methods.py

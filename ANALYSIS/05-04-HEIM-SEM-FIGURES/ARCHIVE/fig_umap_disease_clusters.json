@@ -1,7 +1,7 @@
 {
   "title": "Disease Research Semantic Landscape",
   "description": "UMAP projection of PubMedBERT disease centroids, colored by Semantic Isolation Index",
-  "generated_at": "2026-02-01T16:43:54.572005",
+  "generated_at": "2026-02-03T10:09:06.088837",
   "parameters": {
     "n_neighbors": 15,
     "min_dist": 0.1,
