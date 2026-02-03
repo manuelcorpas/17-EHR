@@ -1,55 +1,55 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-09T05:37:20.117263",
+  "generated": "2026-02-03T10:00:51.261674",
   "dimensions": {
     "biobanks": 70,
-    "diseases": 175
+    "diseases": 179
   },
   "biobanks": [
     {
       "id": "23andme",
       "name": "23andMe",
-      "eas": 39.9
+      "eas": 40.0
     },
     {
       "id": "45andup",
       "name": "45 and Up Study",
-      "eas": 36.7
+      "eas": 36.8
     },
     {
       "id": "acscps3",
       "name": "American Cancer Society Cancer Prevention Study-3",
-      "eas": 18.9
+      "eas": 19.2
     },
     {
       "id": "ahri",
       "name": "Africa Health Research Institute Population Cohort",
-      "eas": 7.7
+      "eas": 7.6
     },
     {
       "id": "aou",
       "name": "All of Us Research Program",
-      "eas": 49.1
+      "eas": 49.0
     },
     {
       "id": "awigen",
       "name": "AWI-Gen",
-      "eas": 10.8
+      "eas": 10.7
     },
     {
       "id": "bandim",
       "name": "Bandim Health Project",
-      "eas": 14.0
+      "eas": 13.9
     },
     {
       "id": "bbj",
       "name": "Biobank Japan",
-      "eas": 42.7
+      "eas": 42.9
     },
     {
       "id": "biovu",
       "name": "BioVU Vanderbilt",
-      "eas": 36.1
+      "eas": 36.2
     },
     {
       "id": "chop_cag",
@@ -59,7 +59,7 @@
     {
       "id": "ckb",
       "name": "China Kadoorie Biobank",
-      "eas": 41.6
+      "eas": 41.3
     },
     {
       "id": "constances",
@@ -69,7 +69,7 @@
     {
       "id": "cpsii",
       "name": "Cancer Prevention Study II Nutrition Cohort",
-      "eas": 29.2
+      "eas": 29.1
     },
     {
       "id": "cptp",
@@ -79,7 +79,7 @@
     {
       "id": "cts",
       "name": "California Teachers Study",
-      "eas": 22.6
+      "eas": 22.4
     },
     {
       "id": "dnb",
@@ -89,17 +89,17 @@
     {
       "id": "dnbc",
       "name": "Danish National Birth Cohort",
-      "eas": 44.4
+      "eas": 44.1
     },
     {
       "id": "dpuk",
       "name": "Dementias Platform UK",
-      "eas": 5.1
+      "eas": 5.5
     },
     {
       "id": "echo",
       "name": "ECHO Cohort",
-      "eas": 19.9
+      "eas": 19.7
     },
     {
       "id": "elsa_brasil",
@@ -109,32 +109,32 @@
     {
       "id": "epic",
       "name": "European Prospective Investigation into Cancer and Nutrition",
-      "eas": 45.2
+      "eas": 45.3
     },
     {
       "id": "epihealth",
       "name": "EpiHealth",
-      "eas": 15.4
+      "eas": 15.3
     },
     {
       "id": "estbb",
       "name": "Estonian Biobank",
-      "eas": 49.2
+      "eas": 49.3
     },
     {
       "id": "fmc",
       "name": "Finnish Maternity Cohort Serum Bank",
-      "eas": 14.3
+      "eas": 14.2
     },
     {
       "id": "geisinger",
       "name": "Geisinger MyCode Community Health Initiative",
-      "eas": 24.7
+      "eas": 24.5
     },
     {
       "id": "gel",
       "name": "Genomics England / 100,000 Genomes Project",
-      "eas": 43.6
+      "eas": 43.8
     },
     {
       "id": "generations",
@@ -144,17 +144,17 @@
     {
       "id": "genes_health",
       "name": "Genes & Health",
-      "eas": 7.6
+      "eas": 7.5
     },
     {
       "id": "genv",
       "name": "Generation Victoria",
-      "eas": 7.3
+      "eas": 7.2
     },
     {
       "id": "golestan",
       "name": "Golestan Cohort Study",
-      "eas": 23.5
+      "eas": 23.3
     },
     {
       "id": "hunt",
@@ -164,22 +164,22 @@
     {
       "id": "iganga_mayuge",
       "name": "Iganga Mayuge HDSS",
-      "eas": 11.1
+      "eas": 11.0
     },
     {
       "id": "jphc",
       "name": "JPHC Study",
-      "eas": 32.2
+      "eas": 32.3
     },
     {
       "id": "kcps",
       "name": "Korean Cancer Prevention Study",
-      "eas": 20.2
+      "eas": 20.0
     },
     {
       "id": "kemri",
       "name": "KEMRI-Wellcome",
-      "eas": 5.8
+      "eas": 5.7
     },
     {
       "id": "koges",
@@ -189,7 +189,7 @@
     {
       "id": "kprb",
       "name": "Kaiser Permanente Research Bank",
-      "eas": 13.7
+      "eas": 13.6
     },
     {
       "id": "lifegene",
@@ -209,12 +209,12 @@
     {
       "id": "mec",
       "name": "Multiethnic Cohort Study",
-      "eas": 29.4
+      "eas": 29.5
     },
     {
       "id": "moba",
       "name": "Norwegian Mother and Child Cohort Study",
-      "eas": 43.1
+      "eas": 42.9
     },
     {
       "id": "mvp",
@@ -224,17 +224,17 @@
     {
       "id": "mws",
       "name": "Million Women Study",
-      "eas": 24.2
+      "eas": 24.4
     },
     {
       "id": "myc",
       "name": "The Malaysian Cohort",
-      "eas": 19.2
+      "eas": 19.1
     },
     {
       "id": "nako",
       "name": "German National Cohort (NAKO)",
-      "eas": 38.3
+      "eas": 38.4
     },
     {
       "id": "nbk",
@@ -249,17 +249,17 @@
     {
       "id": "nhs",
       "name": "Nurses' Health Study",
-      "eas": 55.2
+      "eas": 55.1
     },
     {
       "id": "nhsii",
       "name": "Nurses' Health Study II",
-      "eas": 42.5
+      "eas": 42.4
     },
     {
       "id": "nshds",
       "name": "Northern Sweden Health and Disease Study",
-      "eas": 22.4
+      "eas": 22.3
     },
     {
       "id": "ntr",
@@ -269,42 +269,42 @@
     {
       "id": "peace",
       "name": "China PEACE Million Persons Project",
-      "eas": 8.1
+      "eas": 8.0
     },
     {
       "id": "persian",
       "name": "PERSIAN Cohort Study",
-      "eas": 19.5
+      "eas": 19.3
     },
     {
       "id": "plco",
       "name": "PLCO Cancer Screening Trial",
-      "eas": 31.4
+      "eas": 31.2
     },
     {
       "id": "qbb",
       "name": "Qatar Biobank",
-      "eas": 21.2
+      "eas": 21.5
     },
     {
       "id": "qgp",
       "name": "Qatar Genome Programme",
-      "eas": 10.6
+      "eas": 10.5
     },
     {
       "id": "sab",
       "name": "South Asia Biobank",
-      "eas": 2.5
+      "eas": 2.4
     },
     {
       "id": "simpler",
       "name": "SIMPLER",
-      "eas": 29.7
+      "eas": 29.4
     },
     {
       "id": "smwhs",
       "name": "Shanghai Men and Women's Health Studies",
-      "eas": 26.0
+      "eas": 25.8
     },
     {
       "id": "snb",
@@ -314,12 +314,12 @@
     {
       "id": "tommo",
       "name": "Tohoku Medical Megabank",
-      "eas": 28.3
+      "eas": 28.4
     },
     {
       "id": "twb",
       "name": "Taiwan Biobank",
-      "eas": 35.1
+      "eas": 35.3
     },
     {
       "id": "ugr",
@@ -334,7 +334,7 @@
     {
       "id": "ukbdc",
       "name": "UK Blood Donor Cohorts",
-      "eas": 26.2
+      "eas": 25.9
     },
     {
       "id": "uklwc",
@@ -344,17 +344,17 @@
     {
       "id": "usnih",
       "name": "US NIH Biobank",
-      "eas": 8.6
+      "eas": 8.7
     },
     {
       "id": "vhmpp",
       "name": "VHM&PP",
-      "eas": 13.5
+      "eas": 13.4
     },
     {
       "id": "whi",
       "name": "Women's Health Initiative",
-      "eas": 53.4
+      "eas": 53.5
     }
   ],
   "diseases": [
@@ -409,7 +409,7 @@
     {
       "id": "Alzheimer's disease and other dementias",
       "name": "Alzheimer's disease and other dementias",
-      "gapScore": 10.0,
+      "gapScore": 30.0,
       "category": "Neurological"
     },
     {
@@ -793,7 +793,7 @@
     {
       "id": "Idiopathic epilepsy",
       "name": "Idiopathic epilepsy",
-      "gapScore": 10.0,
+      "gapScore": 50.0,
       "category": "Neurological"
     },
     {
@@ -895,7 +895,7 @@
     {
       "id": "Lower extremity peripheral arterial disease",
       "name": "Lower extremity peripheral arterial disease",
-      "gapScore": 10.0,
+      "gapScore": 20.0,
       "category": "Cardiovascular"
     },
     {
@@ -1165,7 +1165,7 @@
     {
       "id": "Parkinson's disease",
       "name": "Parkinson's disease",
-      "gapScore": 10.0,
+      "gapScore": 30.0,
       "category": "Neurological"
     },
     {

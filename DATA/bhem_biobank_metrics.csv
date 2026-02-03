@@ -1,71 +1,71 @@
 biobank_id,name,country,region,is_global_south,total_publications,diseases_covered,research_opportunity_score,equity_alignment_score,equity_alignment_category,critical_gap_count,global_south_percentage,gap_severity_component,burden_miss_component,capacity_penalty
-ukb,UK Biobank,United Kingdom,EUR,False,13785,163,2047.14,84.6,Strong,16,17.5,17.32,5.4,22.99
-nhs,Nurses' Health Study,United States,AMR,False,3197,132,4351.66,55.2,Weak,47,22.3,34.78,20.95,82.14
-whi,Women's Health Initiative,United States,AMR,False,3433,127,4775.38,53.4,Weak,52,14.9,37.57,24.56,80.82
-estbb,Estonian Biobank,Estonia,EUR,False,675,131,4498.82,49.2,Weak,48,16.6,35.75,25.4,96.23
-aou,All of Us Research Program,United States,AMR,False,837,128,5271.82,49.1,Weak,51,16.8,38.97,22.39,95.32
-hunt,HUNT Study,Norway,EUR,False,1218,118,5248.58,48.1,Weak,61,19.0,41.9,23.84,93.2
-epic,European Prospective Investigation into Cancer and Nutrition,International,EUR,False,1870,122,5419.07,45.2,Weak,57,23.7,38.83,41.23,89.55
-dnbc,Danish National Birth Cohort,Denmark,EUR,False,636,127,6374.44,44.4,Weak,52,85.8,43.02,31.48,96.45
-gel,"Genomics England / 100,000 Genomes Project",United Kingdom,EUR,False,700,117,5754.14,43.6,Weak,62,27.7,41.34,36.93,96.09
-moba,Norwegian Mother and Child Cohort Study,Norway,EUR,False,962,129,7053.48,43.1,Weak,50,71.6,41.62,39.47,94.63
-bbj,Biobank Japan,Japan,WPR,False,345,111,5445.08,42.7,Weak,68,15.7,44.69,33.23,98.07
-nhsii,Nurses' Health Study II,United States,AMR,False,1008,106,5844.02,42.5,Weak,73,33.8,47.21,34.44,94.37
-ckb,China Kadoorie Biobank,China,WPR,True,583,116,6632.0,41.6,Weak,63,22.8,44.97,37.85,96.74
-mvp,Million Veteran Program,United States,AMR,False,445,105,6537.82,40.1,Weak,74,12.6,48.88,36.84,97.51
-23andme,23andMe,United States,AMR,False,310,118,6531.35,39.9,Poor,61,14.2,44.27,42.94,98.27
-nako,German National Cohort (NAKO),Germany,EUR,False,174,105,6695.09,38.3,Poor,74,23.6,49.86,40.21,99.03
-elsa_brasil,ELSA-Brasil,Brazil,AMR,True,655,91,6740.36,38.0,Poor,88,18.0,55.45,36.39,96.34
-45andup,45 and Up Study,Australia,WPR,False,434,95,6972.87,36.7,Poor,84,16.4,54.61,40.51,97.58
-biovu,BioVU Vanderbilt,United States,AMR,False,162,110,7458.28,36.1,Poor,69,17.9,48.6,49.21,99.09
-constances,CONSTANCES,France,EUR,False,234,88,7270.95,35.6,Poor,91,22.2,57.4,39.45,98.69
-twb,Taiwan Biobank,Taiwan,WPR,False,553,98,6640.64,35.1,Poor,81,10.5,51.82,50.33,96.91
-koges,Korean Genome and Epidemiology Study,South Korea,WPR,False,733,85,6648.96,34.7,Poor,94,16.2,56.98,45.78,95.91
-jphc,JPHC Study,Japan,WPR,False,446,81,6988.32,32.2,Poor,98,23.8,59.92,48.48,97.51
-plco,PLCO Cancer Screening Trial,United States,AMR,False,995,89,7424.54,31.4,Poor,90,10.7,57.4,57.59,94.44
-simpler,SIMPLER,Sweden,EUR,False,280,80,7487.37,29.7,Poor,99,14.3,59.78,56.27,98.44
-mec,Multiethnic Cohort Study,United States,AMR,False,332,82,7586.65,29.4,Poor,97,17.2,58.8,58.96,98.15
-cpsii,Cancer Prevention Study II Nutrition Cohort,United States,AMR,False,377,79,7434.82,29.2,Poor,100,22.0,59.78,58.25,97.89
-tommo,Tohoku Medical Megabank,Japan,WPR,False,245,81,7561.18,28.3,Poor,98,46.5,58.8,62.07,98.63
-ukbdc,UK Blood Donor Cohorts,United Kingdom,EUR,False,164,79,9457.24,26.2,Poor,100,28.0,66.48,58.32,99.08
-smwhs,Shanghai Men and Women's Health Studies,China,WPR,True,218,74,7980.7,26.0,Poor,105,19.3,63.41,63.34,98.78
-geisinger,Geisinger MyCode Community Health Initiative,United States,AMR,False,64,91,8684.32,24.7,Poor,88,18.8,56.98,75.52,99.64
-mws,Million Women Study,United Kingdom,EUR,False,207,71,8177.35,24.2,Poor,108,12.1,64.39,67.87,98.84
-golestan,Golestan Cohort Study,Iran,EMR,True,131,68,8103.51,23.5,Poor,111,25.2,66.34,67.31,99.27
-cts,California Teachers Study,United States,AMR,False,146,66,8145.87,22.6,Poor,113,21.2,66.06,70.63,99.18
-nshds,Northern Sweden Health and Disease Study,Sweden,EUR,False,107,65,8139.86,22.4,Poor,114,15.9,66.62,70.46,99.4
-qbb,Qatar Biobank,Qatar,EMR,True,207,78,9758.13,21.2,Poor,101,17.9,64.94,77.17,98.84
-kcps,Korean Cancer Prevention Study,South Korea,WPR,False,66,53,8391.81,20.2,Poor,126,18.2,71.93,70.45,99.63
-echo,ECHO Cohort,United States,AMR,False,269,49,9415.72,19.9,Poor,130,74.0,77.23,65.41,98.5
-persian,PERSIAN Cohort Study,Iran,EMR,True,197,56,9551.26,19.5,Poor,123,20.3,74.3,70.37,98.9
-myc,The Malaysian Cohort,Malaysia,WPR,True,87,70,9684.73,19.2,Poor,109,12.6,68.44,78.5,99.51
-acscps3,American Cancer Society Cancer Prevention Study-3,United States,AMR,False,94,70,8730.39,18.9,Poor,109,40.4,66.34,82.33,99.47
-epihealth,EpiHealth,Sweden,EUR,False,48,60,10357.48,15.4,Poor,119,25.0,73.46,84.46,99.73
-fmc,Finnish Maternity Cohort Serum Bank,Finland,EUR,False,57,53,10031.49,14.3,Poor,126,89.5,75.56,85.35,99.68
-bandim,Bandim Health Project,Guinea-Bissau,AFR,True,80,37,9770.02,14.0,Poor,142,92.5,83.52,75.73,99.55
-kprb,Kaiser Permanente Research Bank,United States,AMR,False,12,39,9048.17,13.7,Poor,140,33.3,79.05,82.42,99.93
-vhmpp,VHM&PP,Austria,EUR,False,28,46,10320.24,13.5,Poor,133,14.3,79.05,82.93,99.84
-generations,Generations Study,United Kingdom,EUR,False,73,58,10555.73,11.7,Poor,121,12.3,74.3,95.52,99.59
-iganga_mayuge,Iganga Mayuge HDSS,Uganda,AFR,True,54,32,10150.29,11.1,Poor,147,75.9,85.75,82.26,99.7
-awigen,AWI-Gen,South Africa,AFR,True,74,31,10320.75,10.8,Poor,148,29.7,86.17,82.71,99.59
-uklwc,UKCTOCS Longitudinal Women's Cohort,United Kingdom,EUR,False,101,45,10406.76,10.8,Poor,134,1.0,79.33,92.11,99.44
-qgp,Qatar Genome Programme,Qatar,EMR,True,25,45,11025.67,10.6,Poor,134,28.0,80.59,90.86,99.86
-lifegene,LifeGene,Sweden,EUR,False,29,34,10670.0,9.1,Poor,145,34.5,85.61,88.89,99.84
-cptp,Canadian Partnership for Tomorrow's Health,Canada,AMR,False,19,46,10974.93,8.7,Poor,133,26.3,80.03,97.78,99.89
-usnih,US NIH Biobank,United States,AMR,False,53,43,10835.71,8.6,Poor,136,13.2,81.01,96.9,99.7
-ntr,Netherlands Twin Registry,Netherlands,EUR,False,31,21,10466.22,8.2,Poor,158,45.2,89.94,86.12,99.83
-peace,China PEACE Million Persons Project,China,WPR,True,78,15,10658.09,8.1,Poor,164,15.4,92.32,83.67,99.56
-snb,Saudi National Biobank,Saudi Arabia,EMR,True,14,40,11031.74,7.9,Poor,139,7.1,82.68,96.67,99.92
-ahri,Africa Health Research Institute Population Cohort,South Africa,AFR,True,36,17,10593.05,7.7,Poor,162,63.9,91.62,85.86,99.8
-genes_health,Genes & Health,United Kingdom,EUR,False,31,20,10741.59,7.6,Poor,159,22.6,90.5,87.65,99.83
-genv,Generation Victoria,Australia,WPR,False,14,21,10676.49,7.3,Poor,158,64.3,90.22,88.82,99.92
-dnb,Danish National Biobank,Denmark,EUR,False,10,23,11026.23,6.4,Poor,156,60.0,90.08,91.79,99.94
-kemri,KEMRI-Wellcome,Kenya,AFR,True,27,17,10884.42,5.8,Poor,162,33.3,93.44,89.68,99.85
-dpuk,Dementias Platform UK,United Kingdom,EUR,False,16,14,10890.99,5.1,Poor,165,6.2,93.02,92.25,99.91
-lifepath,LIFEPATH,International,EUR,False,38,21,10902.73,4.8,Poor,158,18.4,90.08,97.3,99.79
-mauco,MAUCO,Chile,AMR,True,17,18,11108.93,3.6,Poor,161,5.9,92.04,98.58,99.91
-chop_cag,"Center for Applied Genomics, CHOP",United States,AMR,False,8,14,10967.65,3.5,Poor,165,100.0,93.3,97.42,99.96
-nbk,National Biobank of Korea,South Korea,WPR,False,17,14,11108.93,3.0,Poor,165,11.8,93.58,98.58,99.91
-ugr,Uganda Genome Resource,Uganda,AFR,True,6,13,11108.93,2.7,Poor,166,33.3,94.27,98.58,99.97
-sab,South Asia Biobank,United Kingdom,EUR,False,8,11,11108.93,2.5,Poor,168,12.5,94.97,98.58,99.96
-nepal_csh,Civil Service Hospital Nepal,Nepal,SEAR,True,10,10,11253.91,1.7,Poor,169,10.0,95.67,100.0,99.94
+ukb,UK Biobank,United Kingdom,EUR,False,13785,163,2047.14,84.6,High,16,17.5,17.32,5.29,22.99
+nhs,Nurses' Health Study,United States,AMR,False,3197,132,4423.08,55.1,Moderate,47,22.3,34.78,21.0,82.14
+whi,Women's Health Initiative,United States,AMR,False,3433,127,4775.38,53.5,Moderate,52,14.9,37.71,24.03,80.82
+estbb,Estonian Biobank,Estonia,EUR,False,675,131,4498.82,49.3,Moderate,48,16.6,35.89,24.86,96.23
+aou,All of Us Research Program,United States,AMR,False,837,128,5411.97,49.0,Moderate,51,16.8,38.97,22.67,95.32
+hunt,HUNT Study,Norway,EUR,False,1218,118,5388.73,48.1,Moderate,61,19.0,41.9,24.09,93.2
+epic,European Prospective Investigation into Cancer and Nutrition,International,EUR,False,1870,122,5490.49,45.3,Moderate,57,23.7,38.83,40.85,89.55
+dnbc,Danish National Birth Cohort,Denmark,EUR,False,636,127,6580.7,44.1,Moderate,52,85.8,43.02,32.43,96.45
+gel,"Genomics England / 100,000 Genomes Project",United Kingdom,EUR,False,700,117,5754.14,43.8,Moderate,62,27.7,41.34,36.14,96.09
+bbj,Biobank Japan,Japan,WPR,False,345,111,5445.08,42.9,Moderate,68,15.7,44.83,32.52,98.07
+moba,Norwegian Mother and Child Cohort Study,Norway,EUR,False,962,129,7259.74,42.9,Moderate,50,71.6,41.62,40.25,94.63
+nhsii,Nurses' Health Study II,United States,AMR,False,1008,106,6046.1,42.4,Moderate,73,33.8,47.21,34.52,94.37
+ckb,China Kadoorie Biobank,China,WPR,True,583,116,6779.02,41.3,Moderate,63,22.8,44.97,38.83,96.74
+mvp,Million Veteran Program,United States,AMR,False,445,105,6677.97,40.1,Moderate,74,12.6,48.88,36.82,97.51
+23andme,23andMe,United States,AMR,False,310,118,6722.78,40.0,Moderate,61,14.2,44.27,42.6,98.27
+nako,German National Cohort (NAKO),Germany,EUR,False,174,105,6828.44,38.4,Low,74,23.6,49.86,39.9,99.03
+elsa_brasil,ELSA-Brasil,Brazil,AMR,True,655,91,6942.44,38.0,Low,88,18.0,55.45,36.43,96.34
+45andup,45 and Up Study,Australia,WPR,False,434,95,7106.22,36.8,Low,84,16.4,54.61,40.2,97.58
+biovu,BioVU Vanderbilt,United States,AMR,False,162,110,7529.7,36.2,Low,69,17.9,48.6,48.66,99.09
+constances,CONSTANCES,France,EUR,False,234,88,7473.03,35.6,Low,91,22.2,57.4,39.42,98.69
+twb,Taiwan Biobank,Taiwan,WPR,False,553,98,6773.99,35.3,Low,81,10.5,51.82,49.8,96.91
+koges,Korean Genome and Epidemiology Study,South Korea,WPR,False,733,85,6851.04,34.7,Low,94,16.2,56.98,45.62,95.91
+jphc,JPHC Study,Japan,WPR,False,446,81,7190.4,32.3,Low,98,23.8,59.92,48.26,97.51
+plco,PLCO Cancer Screening Trial,United States,AMR,False,995,89,7702.22,31.2,Low,90,10.7,57.4,58.47,94.44
+mec,Multiethnic Cohort Study,United States,AMR,False,332,82,7788.73,29.5,Low,97,17.2,58.8,58.51,98.15
+simpler,SIMPLER,Sweden,EUR,False,280,80,7703.12,29.4,Low,99,14.3,59.78,57.13,98.44
+cpsii,Cancer Prevention Study II Nutrition Cohort,United States,AMR,False,377,79,7701.85,29.1,Low,100,22.0,59.78,58.87,97.89
+tommo,Tohoku Medical Megabank,Japan,WPR,False,245,81,7763.26,28.4,Low,98,46.5,58.8,61.57,98.63
+ukbdc,UK Blood Donor Cohorts,United Kingdom,EUR,False,164,79,9793.0,25.9,Low,100,28.0,66.48,59.21,99.08
+smwhs,Shanghai Men and Women's Health Studies,China,WPR,True,218,74,8258.38,25.8,Low,105,19.3,63.41,64.1,98.78
+geisinger,Geisinger MyCode Community Health Initiative,United States,AMR,False,64,91,9020.08,24.5,Low,88,18.8,56.98,76.04,99.64
+mws,Million Women Study,United Kingdom,EUR,False,207,71,8437.51,24.4,Low,108,12.1,64.39,67.26,98.84
+golestan,Golestan Cohort Study,Iran,EMR,True,131,68,8381.19,23.3,Low,111,25.2,66.34,67.98,99.27
+cts,California Teachers Study,United States,AMR,False,146,66,8481.63,22.4,Low,113,21.2,66.06,71.26,99.18
+nshds,Northern Sweden Health and Disease Study,Sweden,EUR,False,107,65,8406.89,22.3,Low,114,15.9,66.62,70.82,99.4
+qbb,Qatar Biobank,Qatar,EMR,True,207,78,9960.21,21.5,Low,101,17.9,64.94,76.34,98.84
+kcps,Korean Cancer Prevention Study,South Korea,WPR,False,66,53,8669.49,20.0,Low,126,18.2,71.93,71.06,99.63
+echo,ECHO Cohort,United States,AMR,False,269,49,9693.4,19.7,Low,130,74.0,77.23,66.13,98.5
+persian,PERSIAN Cohort Study,Iran,EMR,True,197,56,9828.94,19.3,Low,123,20.3,74.3,70.98,98.9
+acscps3,American Cancer Society Cancer Prevention Study-3,United States,AMR,False,94,70,8990.55,19.2,Low,109,40.4,66.34,81.41,99.47
+myc,The Malaysian Cohort,Malaysia,WPR,True,87,70,9962.41,19.1,Low,109,12.6,68.44,78.93,99.51
+epihealth,EpiHealth,Sweden,EUR,False,48,60,10693.24,15.3,Low,119,25.0,73.46,84.79,99.73
+fmc,Finnish Maternity Cohort Serum Bank,Finland,EUR,False,57,53,10367.25,14.2,Low,126,89.5,75.56,85.66,99.68
+bandim,Bandim Health Project,Guinea-Bissau,AFR,True,80,37,10105.78,13.9,Low,142,92.5,83.52,76.25,99.55
+kprb,Kaiser Permanente Research Bank,United States,AMR,False,12,39,9383.93,13.6,Low,140,33.3,79.05,82.79,99.93
+vhmpp,VHM&PP,Austria,EUR,False,28,46,10656.0,13.4,Low,133,14.3,79.05,83.3,99.84
+generations,Generations Study,United Kingdom,EUR,False,73,58,10891.49,11.7,Low,121,12.3,74.3,95.62,99.59
+iganga_mayuge,Iganga Mayuge HDSS,Uganda,AFR,True,54,32,10486.05,11.0,Low,147,75.9,85.75,82.64,99.7
+uklwc,UKCTOCS Longitudinal Women's Cohort,United Kingdom,EUR,False,101,45,10742.52,10.8,Low,134,1.0,79.33,92.28,99.44
+awigen,AWI-Gen,South Africa,AFR,True,74,31,10598.43,10.7,Low,148,29.7,86.17,83.06,99.59
+qgp,Qatar Genome Programme,Qatar,EMR,True,25,45,11361.43,10.5,Low,134,28.0,80.59,91.05,99.86
+lifegene,LifeGene,Sweden,EUR,False,29,34,11005.76,9.1,Low,145,34.5,85.61,89.13,99.84
+cptp,Canadian Partnership for Tomorrow's Health,Canada,AMR,False,19,46,11310.69,8.7,Low,133,26.3,80.03,97.83,99.89
+usnih,US NIH Biobank,United States,AMR,False,53,43,11102.74,8.7,Low,136,13.2,81.01,96.7,99.7
+ntr,Netherlands Twin Registry,Netherlands,EUR,False,31,21,10801.98,8.2,Low,158,45.2,89.94,86.41,99.83
+peace,China PEACE Million Persons Project,China,WPR,True,78,15,10935.77,8.0,Low,164,15.4,92.32,83.99,99.56
+snb,Saudi National Biobank,Saudi Arabia,EMR,True,14,40,11367.5,7.9,Low,139,7.1,82.68,96.74,99.92
+ahri,Africa Health Research Institute Population Cohort,South Africa,AFR,True,36,17,10928.81,7.6,Low,162,63.9,91.62,86.16,99.8
+genes_health,Genes & Health,United Kingdom,EUR,False,31,20,11077.35,7.5,Low,159,22.6,90.5,87.92,99.83
+genv,Generation Victoria,Australia,WPR,False,14,21,11012.25,7.2,Low,158,64.3,90.22,89.05,99.92
+dnb,Danish National Biobank,Denmark,EUR,False,10,23,11361.99,6.4,Low,156,60.0,90.08,91.96,99.94
+kemri,KEMRI-Wellcome,Kenya,AFR,True,27,17,11220.18,5.7,Low,162,33.3,93.44,89.9,99.85
+dpuk,Dementias Platform UK,United Kingdom,EUR,False,16,14,11151.15,5.5,Low,165,6.2,93.02,91.12,99.91
+lifepath,LIFEPATH,International,EUR,False,38,21,11238.49,4.8,Low,158,18.4,90.08,97.36,99.79
+mauco,MAUCO,Chile,AMR,True,17,18,11444.69,3.6,Low,161,5.9,92.04,98.61,99.91
+chop_cag,"Center for Applied Genomics, CHOP",United States,AMR,False,8,14,11303.41,3.5,Low,165,100.0,93.3,97.47,99.96
+nbk,National Biobank of Korea,South Korea,WPR,False,17,14,11444.69,3.0,Low,165,11.8,93.58,98.61,99.91
+ugr,Uganda Genome Resource,Uganda,AFR,True,6,13,11444.69,2.7,Low,166,33.3,94.27,98.61,99.97
+sab,South Asia Biobank,United Kingdom,EUR,False,8,11,11444.69,2.4,Low,168,12.5,94.97,98.61,99.96
+nepal_csh,Civil Service Hospital Nepal,Nepal,SEAR,True,10,10,11589.67,1.7,Low,169,10.0,95.67,100.0,99.94

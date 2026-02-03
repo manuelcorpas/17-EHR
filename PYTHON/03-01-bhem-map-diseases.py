@@ -1088,7 +1088,7 @@ def load_official_gbd_dalys(gbd_file: Path) -> dict:
         for our_key in GBD_MESH_MAPPING.keys():
             if our_key.startswith('_'):
                 continue
-            
+
             if our_key in mapping:
                 match_info = mapping[our_key]
                 ihme_name = match_info['best_match']
@@ -1096,9 +1096,36 @@ def load_official_gbd_dalys(gbd_file: Path) -> dict:
                 if ihme_name in ihme_dalys:
                     gbd_dalys[our_key] = ihme_dalys[ihme_name]
                     matched += 1
-        
+
+        # Catch diseases missed by semantic mapping via normalization fallback
+        def _normalize(name):
+            n = name.lower().replace("'", "").replace("\u2019", "")
+            n = n.replace("-", " ").replace("/", " ")
+            return ' '.join(n.split())
+
+        ihme_norm_lookup = {_normalize(k): v for k, v in ihme_dalys.items()}
+
+        unmatched_keys = [k for k in GBD_MESH_MAPPING if not k.startswith('_') and k not in gbd_dalys]
+        fallback_matched = 0
+        for our_key in unmatched_keys:
+            our_norm = _normalize(our_key)
+            # Exact normalized match
+            if our_norm in ihme_norm_lookup:
+                gbd_dalys[our_key] = ihme_norm_lookup[our_norm]
+                fallback_matched += 1
+                continue
+            # Partial match (substring in either direction)
+            for ihme_norm, dalys_val in ihme_norm_lookup.items():
+                if our_norm in ihme_norm or ihme_norm in our_norm:
+                    gbd_dalys[our_key] = dalys_val
+                    fallback_matched += 1
+                    break
+
+        if fallback_matched > 0:
+            logger.info(f"  Fallback matched DALYs for {fallback_matched} additional causes")
+
         total_dalys = sum(gbd_dalys.values())
-        logger.info(f"  Matched DALYs for {matched} causes via semantic mapping")
+        logger.info(f"  Matched DALYs for {matched + fallback_matched} causes via semantic + fallback")
         logger.info(f"  Total DALYs: {total_dalys/1e9:.2f} billion")
         return gbd_dalys
     

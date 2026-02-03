@@ -1,6 +1,6 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-09T05:37:20.193550",
+  "generated": "2026-02-03T10:00:51.343687",
   "equityRatio": 57.78,
   "equityInterpretation": "HIC-biased",
   "summary": {
@@ -14,7 +14,7 @@
       "biobanks": 18,
       "publications": 2499,
       "publicationShare": 6.5,
-      "averageEas": 15.2
+      "averageEas": 15.1
     }
   },
   "globalSouthDiseases": [
@@ -482,7 +482,7 @@
       "incomeCategory": "HIC",
       "biobanks": 25,
       "publications": 21482,
-      "averageEas": 25.8
+      "averageEas": 25.7
     },
     {
       "region": "AMR",
@@ -514,7 +514,7 @@
       "incomeCategory": "LMIC",
       "biobanks": 6,
       "publications": 277,
-      "averageEas": 8.7
+      "averageEas": 8.6
     },
     {
       "region": "SEAR",
@@ -542,7 +542,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 3433,
-      "eas": 53.4
+      "eas": 53.5
     },
     {
       "id": "nhs",
@@ -551,7 +551,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 3197,
-      "eas": 55.2
+      "eas": 55.1
     },
     {
       "id": "epic",
@@ -560,7 +560,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 1870,
-      "eas": 45.2
+      "eas": 45.3
     },
     {
       "id": "hunt",
@@ -578,7 +578,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 1008,
-      "eas": 42.5
+      "eas": 42.4
     },
     {
       "id": "plco",
@@ -587,7 +587,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 995,
-      "eas": 31.4
+      "eas": 31.2
     },
     {
       "id": "moba",
@@ -596,7 +596,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 962,
-      "eas": 43.1
+      "eas": 42.9
     },
     {
       "id": "aou",
@@ -605,7 +605,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 837,
-      "eas": 49.1
+      "eas": 49.0
     },
     {
       "id": "koges",
@@ -623,7 +623,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 700,
-      "eas": 43.6
+      "eas": 43.8
     },
     {
       "id": "estbb",
@@ -632,7 +632,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 675,
-      "eas": 49.2
+      "eas": 49.3
     },
     {
       "id": "dnbc",
@@ -641,7 +641,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 636,
-      "eas": 44.4
+      "eas": 44.1
     },
     {
       "id": "twb",
@@ -650,7 +650,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 553,
-      "eas": 35.1
+      "eas": 35.3
     },
     {
       "id": "jphc",
@@ -659,7 +659,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 446,
-      "eas": 32.2
+      "eas": 32.3
     },
     {
       "id": "mvp",
@@ -677,7 +677,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 434,
-      "eas": 36.7
+      "eas": 36.8
     },
     {
       "id": "cpsii",
@@ -686,7 +686,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 377,
-      "eas": 29.2
+      "eas": 29.1
     },
     {
       "id": "bbj",
@@ -695,7 +695,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 345,
-      "eas": 42.7
+      "eas": 42.9
     },
     {
       "id": "mec",
@@ -704,7 +704,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 332,
-      "eas": 29.4
+      "eas": 29.5
     },
     {
       "id": "23andme",
@@ -713,7 +713,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 310,
-      "eas": 39.9
+      "eas": 40.0
     },
     {
       "id": "simpler",
@@ -722,7 +722,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 280,
-      "eas": 29.7
+      "eas": 29.4
     },
     {
       "id": "echo",
@@ -731,7 +731,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 269,
-      "eas": 19.9
+      "eas": 19.7
     },
     {
       "id": "tommo",
@@ -740,7 +740,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 245,
-      "eas": 28.3
+      "eas": 28.4
     },
     {
       "id": "constances",
@@ -758,7 +758,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 207,
-      "eas": 24.2
+      "eas": 24.4
     },
     {
       "id": "nako",
@@ -767,7 +767,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 174,
-      "eas": 38.3
+      "eas": 38.4
     },
     {
       "id": "ukbdc",
@@ -776,7 +776,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 164,
-      "eas": 26.2
+      "eas": 25.9
     },
     {
       "id": "biovu",
@@ -785,7 +785,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 162,
-      "eas": 36.1
+      "eas": 36.2
     },
     {
       "id": "cts",
@@ -794,7 +794,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 146,
-      "eas": 22.6
+      "eas": 22.4
     },
     {
       "id": "nshds",
@@ -803,7 +803,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 107,
-      "eas": 22.4
+      "eas": 22.3
     },
     {
       "id": "uklwc",
@@ -821,7 +821,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 94,
-      "eas": 18.9
+      "eas": 19.2
     },
     {
       "id": "generations",
@@ -839,7 +839,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 66,
-      "eas": 20.2
+      "eas": 20.0
     },
     {
       "id": "geisinger",
@@ -848,7 +848,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 64,
-      "eas": 24.7
+      "eas": 24.5
     },
     {
       "id": "fmc",
@@ -857,7 +857,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 57,
-      "eas": 14.3
+      "eas": 14.2
     },
     {
       "id": "usnih",
@@ -866,7 +866,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 53,
-      "eas": 8.6
+      "eas": 8.7
     },
     {
       "id": "epihealth",
@@ -875,7 +875,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 48,
-      "eas": 15.4
+      "eas": 15.3
     },
     {
       "id": "lifepath",
@@ -893,7 +893,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 31,
-      "eas": 7.6
+      "eas": 7.5
     },
     {
       "id": "ntr",
@@ -920,7 +920,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 28,
-      "eas": 13.5
+      "eas": 13.4
     },
     {
       "id": "cptp",
@@ -947,7 +947,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 16,
-      "eas": 5.1
+      "eas": 5.5
     },
     {
       "id": "genv",
@@ -956,7 +956,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 14,
-      "eas": 7.3
+      "eas": 7.2
     },
     {
       "id": "kprb",
@@ -965,7 +965,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 12,
-      "eas": 13.7
+      "eas": 13.6
     },
     {
       "id": "dnb",
@@ -992,7 +992,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 8,
-      "eas": 2.5
+      "eas": 2.4
     }
   ],
   "lmicBiobanks": [
@@ -1012,7 +1012,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 583,
-      "eas": 41.6
+      "eas": 41.3
     },
     {
       "id": "smwhs",
@@ -1021,7 +1021,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 218,
-      "eas": 26.0
+      "eas": 25.8
     },
     {
       "id": "qbb",
@@ -1030,7 +1030,7 @@
       "region": "EMR",
       "incomeLevel": "",
       "publications": 207,
-      "eas": 21.2
+      "eas": 21.5
     },
     {
       "id": "persian",
@@ -1039,7 +1039,7 @@
       "region": "EMR",
       "incomeLevel": "",
       "publications": 197,
-      "eas": 19.5
+      "eas": 19.3
     },
     {
       "id": "golestan",
@@ -1048,7 +1048,7 @@
       "region": "EMR",
       "incomeLevel": "",
       "publications": 131,
-      "eas": 23.5
+      "eas": 23.3
     },
     {
       "id": "myc",
@@ -1057,7 +1057,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 87,
-      "eas": 19.2
+      "eas": 19.1
     },
     {
       "id": "bandim",
@@ -1066,7 +1066,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 80,
-      "eas": 14.0
+      "eas": 13.9
     },
     {
       "id": "peace",
@@ -1075,7 +1075,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 78,
-      "eas": 8.1
+      "eas": 8.0
     },
     {
       "id": "awigen",
@@ -1084,7 +1084,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 74,
-      "eas": 10.8
+      "eas": 10.7
     },
     {
       "id": "iganga_mayuge",
@@ -1093,7 +1093,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 54,
-      "eas": 11.1
+      "eas": 11.0
     },
     {
       "id": "ahri",
@@ -1102,7 +1102,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 36,
-      "eas": 7.7
+      "eas": 7.6
     },
     {
       "id": "kemri",
@@ -1111,7 +1111,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 27,
-      "eas": 5.8
+      "eas": 5.7
     },
     {
       "id": "qgp",
@@ -1120,7 +1120,7 @@
       "region": "EMR",
       "incomeLevel": "",
       "publications": 25,
-      "eas": 10.6
+      "eas": 10.5
     },
     {
       "id": "mauco",

@@ -3,9 +3,17 @@
 HEIM SEMANTIC INTEGRATION - FIGURE GENERATION
 ==============================================
 
-Generates publication-ready figures for semantic analysis.
+Generates publication-ready figures for the Knowledge dimension of the
+HEIM framework. Outputs both standalone figures and combined multi-panel
+figures for the manuscript.
 
-FIGURES:
+COMBINED FIGURES (manuscript):
+- 04_Fig4_Knowledge_Dimension_COMBINED.pdf - 4-panel: UMAP clusters,
+  SII comparison, isolation heatmap, temporal drift (300 DPI)
+- 05_Fig5_Semantic_Structure_Analysis.pdf - 4-panel: similarity matrix,
+  knowledge transfer network, RCC distribution, KTP scatter (300 DPI)
+
+STANDALONE FIGURES:
 1. fig_umap_disease_clusters.png - UMAP projection of disease centroids
 2. fig_semantic_isolation_heatmap.png - Cross-disease similarity matrix
 3. fig_temporal_drift.png - Semantic evolution over time
@@ -13,11 +21,12 @@ FIGURES:
 5. fig_knowledge_network.png - Knowledge transfer network
 
 OUTPUTS:
-- ANALYSIS/05-04-HEIM-SEM-FIGURES/*.png
+- ANALYSIS/05-04-HEIM-SEM-FIGURES/*.pdf (publication quality, 300 DPI)
+- ANALYSIS/05-04-HEIM-SEM-FIGURES/*.png (standalone figures, 300 DPI)
 - ANALYSIS/05-04-HEIM-SEM-FIGURES/*.json (metadata)
 
 USAGE:
-    python 05-04-heim-sem-generate-figures.py
+    python3.11 05-04-heim-sem-generate-figures.py
 
 REQUIREMENTS:
     pip install matplotlib seaborn pandas numpy umap-learn h5py networkx
@@ -74,7 +83,7 @@ BHEM_METRICS_FILE = DATA_DIR / "bhem_disease_metrics.csv"
 
 # Figure settings
 RANDOM_SEED = 42
-DPI = 150  # Lower DPI for web display
+DPI = 300  # Publication quality
 FIGSIZE_LARGE = (14, 12)
 FIGSIZE_MEDIUM = (12, 10)
 FIGSIZE_SMALL = (10, 8)
@@ -1016,7 +1025,7 @@ def generate_fig5_combined(
     plt.savefig(fig_path, dpi=300, bbox_inches='tight',
                 facecolor='white', edgecolor='none')
     plt.savefig((output_dir / "ARCHIVE" / "05_Fig5_Semantic_Structure_Analysis.png"),
-                dpi=150, bbox_inches='tight',
+                dpi=300, bbox_inches='tight',
                 facecolor='white', edgecolor='none')
     plt.close()
 
@@ -1257,7 +1266,7 @@ def generate_fig4_combined(
     plt.savefig(fig_path, dpi=300, bbox_inches='tight',
                 facecolor='white', edgecolor='none')
     # Also save PNG for quick preview
-    plt.savefig(fig_path.with_suffix('.png'), dpi=150, bbox_inches='tight',
+    plt.savefig(fig_path.with_suffix('.png'), dpi=300, bbox_inches='tight',
                 facecolor='white', edgecolor='none')
     plt.close()
 

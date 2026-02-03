@@ -8,7 +8,8 @@ HEIM Publication Figures Generator for Nature Medicine submission.
 Generates main-text and extended-data figures from pre-computed HEIM metrics
 (webapp JSON data files). All output is PDF + PNG at 300 DPI.
 
-FIGURES:
+FIGURES (individual panels, 300 DPI):
+    Main text:
     - Figure 2a: World map of biobank equity (EAS by country)
     - Figure 2b: Biobank EAS distribution (bar chart)
     - Figure 2c: Publication share by WHO region
@@ -16,6 +17,8 @@ FIGURES:
     - Figure 3b: Trial intensity gap (GS vs non-GS)
     - Figure 4a: NTD vs non-NTD semantic isolation comparison
     - Figure 6:  Unified Neglect Score ranking (top 30 diseases)
+    Extended data:
+    - Regional comparison chart (ED4)
 
 INPUT:
     docs/data/diseases.json   - Disease-level HEIM metrics

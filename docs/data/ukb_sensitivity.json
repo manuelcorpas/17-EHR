@@ -14,9 +14,9 @@
       "mean_eas": 24.1,
       "median_eas": 19.7,
       "eas_std": 15.6,
-      "strong_category": 1,
-      "weak_category": 13,
-      "poor_category": 56,
+      "high_category": 1,
+      "moderate_category": 14,
+      "low_category": 55,
       "diseases_with_coverage": 175,
       "top_eas_biobank": {
         "id": "ukb",
@@ -30,18 +30,18 @@
       "mean_eas": 23.2,
       "median_eas": 19.5,
       "eas_std": 13.9,
-      "strong_category": 0,
-      "weak_category": 13,
-      "poor_category": 56,
+      "high_category": 0,
+      "moderate_category": 13,
+      "low_category": 56,
       "diseases_with_coverage": 178,
       "top_eas_biobank": {
         "id": "nhs",
         "name": "Nurses' Health Study",
-        "eas": 55.2
+        "eas": 55.1
       },
       "notes": [
-        "No biobank achieves 'Strong' EAS category without UK Biobank",
-        "Second-highest EAS (55.2) is 29.4 points below UK Biobank (84.6)",
+        "No biobank achieves 'High' EAS category without UK Biobank",
+        "Second-highest EAS (55.1) is 29.4 points below UK Biobank (84.6)",
         "The gap between UK Biobank and #2 exceeds the entire range of other biobanks"
       ]
     }
@@ -114,8 +114,8 @@
   },
   "interpretation_guidance": [
     "UK Biobank's exceptional performance reflects its design, funding, and infrastructure - it sets a benchmark rather than distorting analysis",
-    "The 'Strong' EAS category effectively represents UK Biobank-level achievement, which may be unrealistic for newer or lower-resourced biobanks",
-    "For policy purposes, comparing biobanks to the 'Weak' threshold (40-60) may be more actionable than to UK Biobank",
+    "The 'High' EAS category effectively represents UK Biobank-level achievement, which may be unrealistic for newer or lower-resourced biobanks",
+    "For policy purposes, comparing biobanks to the 'Moderate' threshold (40-69) may be more actionable than to UK Biobank",
     "The analysis reveals that even well-established biobanks (NHS, WHI) have substantial equity gaps to address"
   ],
   "methodology": {

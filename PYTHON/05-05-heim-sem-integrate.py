@@ -99,8 +99,12 @@ def setup_logging() -> logging.Logger:
 # =============================================================================
 
 def normalize_disease_name(name: str) -> str:
-    """Normalize disease name for matching."""
-    return name.lower().replace("_", " ").replace("-", " ").strip()
+    """Normalize disease name for matching across data sources."""
+    n = name.lower()
+    n = n.replace("_", " ").replace("-", " ").replace("/", " ")
+    # Remove commas and everything after for short-form matching
+    n = ' '.join(n.split())  # collapse whitespace
+    return n.strip()
 
 def load_biobank_metrics(logger: logging.Logger) -> Tuple[Optional[pd.DataFrame], Dict]:
     """Load HEIM biobank metrics."""
@@ -267,6 +271,18 @@ def integrate_metrics(
                 how='left'
             )
             integrated.rename(columns={gap_col: 'gap_score'}, inplace=True)
+
+            # Substring fallback for unmatched diseases (e.g., "tracheal" in "tracheal, bronchus, and lung cancer")
+            unmatched = integrated[integrated['gap_score'].isna()].index
+            if len(unmatched) > 0:
+                biobank_lookup = dict(zip(biobank_subset['disease_normalized'], biobank_subset[gap_col]))
+                for idx in unmatched:
+                    sem_name = integrated.loc[idx, 'disease_normalized']
+                    for bhem_name, gap_val in biobank_lookup.items():
+                        if sem_name in bhem_name or bhem_name in sem_name:
+                            integrated.loc[idx, 'gap_score'] = gap_val
+                            break
+
             logger.info(f"    Merged biobank data: {integrated['gap_score'].notna().sum()} matches")
         else:
             integrated['gap_score'] = np.nan
