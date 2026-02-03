@@ -17,7 +17,7 @@ STANDALONE FIGURES:
 1. fig_umap_disease_clusters.png - UMAP projection of disease centroids
 2. fig_semantic_isolation_heatmap.png - Cross-disease similarity matrix
 3. fig_temporal_drift.png - Semantic evolution over time
-4. fig_gap_vs_isolation.png - Gap Score vs SII scatter
+4. fig_gap_vs_isolation.png - Top 20 most semantically isolated diseases (lollipop)
 5. fig_knowledge_network.png - Knowledge transfer network
 
 OUTPUTS:
@@ -522,86 +522,181 @@ def generate_gap_vs_isolation(
     output_dir: Path,
     logger: logging.Logger
 ) -> bool:
-    """Generate Gap Score vs SII scatter plot."""
-    logger.info("  Generating Gap Score vs Isolation plot...")
+    """Generate top-20 semantically isolated diseases lollipop chart.
 
+    Shows diseases with highest SII (knowledge silos with limited
+    cross-disciplinary research bridges), colored by gap severity,
+    with a side panel showing biobank publication counts.
+    """
+    import matplotlib.patches as mpatches
+    from matplotlib.lines import Line2D
+
+    logger.info("  Generating Semantic Isolation lollipop chart...")
+
+    # ── Merge disease_metrics with BHEM for gap scores and metadata ──
     if bhem_metrics is None:
-        logger.warning("  BHEM metrics not available, using simulated data")
-        # Create simulated gap scores for demonstration
-        np.random.seed(RANDOM_SEED)
-        disease_metrics['gap_score'] = np.random.uniform(0, 100, len(disease_metrics))
-    else:
-        # Merge with BHEM metrics
-        # Try to match on disease name
-        disease_metrics['disease_clean'] = disease_metrics['disease'].str.replace("_", " ").str.lower()
-        bhem_metrics['disease_clean'] = bhem_metrics['Condition'].str.lower() if 'Condition' in bhem_metrics.columns else bhem_metrics.iloc[:, 0].str.lower()
-
-        merged = disease_metrics.merge(
-            bhem_metrics[['disease_clean', 'Gap_Score']] if 'Gap_Score' in bhem_metrics.columns else bhem_metrics,
-            on='disease_clean',
-            how='left'
-        )
-
-        if 'Gap_Score' in merged.columns:
-            disease_metrics = merged
-            disease_metrics['gap_score'] = merged['Gap_Score']
-        else:
-            logger.warning("  Gap_Score column not found, using simulated data")
-            np.random.seed(RANDOM_SEED)
-            disease_metrics['gap_score'] = np.random.uniform(0, 100, len(disease_metrics))
-
-    # Filter to valid data
-    plot_df = disease_metrics.dropna(subset=['sii', 'gap_score'])
-
-    if len(plot_df) < 5:
-        logger.warning("  Insufficient data for correlation plot")
+        logger.warning("  BHEM metrics not available, skipping")
         return False
 
-    # Create figure
-    fig, ax = plt.subplots(figsize=FIGSIZE_SMALL)
+    def _norm(s):
+        return s.lower().replace('_', ' ').replace('-', ' ').replace("'", "").replace("/", " ").strip()
 
-    scatter = ax.scatter(
-        plot_df['gap_score'],
-        plot_df['sii'],
-        c=plot_df['n_papers'],
-        s=60,
-        cmap='viridis',
-        alpha=0.7,
-        edgecolors='white',
-        linewidths=0.5
-    )
+    # Build lookup from bhem_metrics
+    name_col = 'name' if 'name' in bhem_metrics.columns else (
+        'Condition' if 'Condition' in bhem_metrics.columns else bhem_metrics.columns[0])
+    gap_col = 'gap_score' if 'gap_score' in bhem_metrics.columns else 'Gap_Score'
+    sev_col = 'gap_severity' if 'gap_severity' in bhem_metrics.columns else 'Gap_Severity'
+    pubs_col = 'publications' if 'publications' in bhem_metrics.columns else 'Publications'
+    gs_col = 'global_south_priority' if 'global_south_priority' in bhem_metrics.columns else None
 
-    # Add colorbar
-    cbar = plt.colorbar(scatter, ax=ax, shrink=0.8)
-    cbar.set_label('Number of Papers', fontsize=14)
+    bhem_lookup = {}
+    for _, r in bhem_metrics.iterrows():
+        key = _norm(str(r[name_col]))
+        bhem_lookup[key] = {
+            'gap_score': r.get(gap_col, 0),
+            'gap_severity': r.get(sev_col, 'Unknown'),
+            'biobank_pubs': r.get(pubs_col, 0),
+            'gs_priority': bool(r.get(gs_col, False)) if gs_col else False,
+        }
+        # Also index by disease_id if present
+        if 'disease_id' in bhem_metrics.columns:
+            key2 = _norm(str(r['disease_id']))
+            if key2 not in bhem_lookup:
+                bhem_lookup[key2] = bhem_lookup[key]
 
-    # Fit regression line
-    from scipy import stats
-    slope, intercept, r_value, p_value, std_err = stats.linregress(
-        plot_df['gap_score'], plot_df['sii']
-    )
+    # Build combined dataframe
+    rows = []
+    for _, dm in disease_metrics.iterrows():
+        key = _norm(dm['disease'])
+        b = bhem_lookup.get(key, {})
+        rows.append({
+            'name': dm['disease'].replace('_', ' '),
+            'sii': dm['sii'],
+            'gap_score': b.get('gap_score', 0),
+            'gap_severity': b.get('gap_severity', 'Unknown'),
+            'biobank_pubs': b.get('biobank_pubs', 0),
+            'gs_priority': b.get('gs_priority', False),
+        })
 
-    x_line = np.linspace(plot_df['gap_score'].min(), plot_df['gap_score'].max(), 100)
-    y_line = slope * x_line + intercept
-    ax.plot(x_line, y_line, 'r--', alpha=0.7, label=f'R² = {r_value**2:.3f}')
+    plot_df = pd.DataFrame(rows).sort_values('sii', ascending=False)
+    plot_df = plot_df.dropna(subset=['sii'])
 
-    ax.set_xlabel('Gap Score (Biobank Research Gap)')
-    ax.set_ylabel('Semantic Isolation Index (SII)')
-    ax.set_title('Research Gap vs Semantic Isolation\n(Higher values = more neglected)')
-    ax.legend(loc='upper right')
+    if len(plot_df) < 20:
+        logger.warning("  Insufficient data for isolation chart")
+        return False
 
-    plt.tight_layout()
+    median_sii = plot_df['sii'].median()
+    p75_sii = plot_df['sii'].quantile(0.75)
+
+    # Top 20, reversed for bottom-up plotting
+    top20 = plot_df.head(20).iloc[::-1].reset_index(drop=True)
+
+    # Shorten long names
+    name_map = {
+        'Attention-deficit hyperactivity disorder': 'ADHD',
+        'Invasive Non-typhoidal Salmonella (iNTS)': 'Invasive NTS (iNTS)',
+        'Inguinal, femoral, and abdominal hernia': 'Inguinal/abdominal hernia',
+        'Exposure to forces of nature': 'Forces of nature exposure',
+        'Police conflict and executions': 'Police conflict & executions',
+    }
+    top20['display_name'] = top20['name'].map(lambda x: name_map.get(x, x))
+
+    sev_colors = {
+        'Critical': '#dc3545', 'High': '#fd7e14',
+        'Moderate': '#ffc107', 'Low': '#28a745', 'Unknown': '#6c757d'
+    }
+    top20['color'] = top20['gap_severity'].map(sev_colors)
+
+    # ── Figure ──
+    fig, (ax_main, ax_pubs) = plt.subplots(1, 2, figsize=(12, 8.5),
+        gridspec_kw={'width_ratios': [3.5, 1], 'wspace': 0.05})
+
+    y_pos = np.arange(len(top20))
+
+    # Main panel: lollipop chart
+    for i, (_, r) in enumerate(top20.iterrows()):
+        ax_main.plot([0, r['sii']], [i, i], color=r['color'], linewidth=1.5, alpha=0.7, zorder=1)
+        marker = 'D' if r['gs_priority'] else 'o'
+        ms = 9 if r['gs_priority'] else 8
+        ax_main.scatter(r['sii'], i, color=r['color'], s=ms**2, marker=marker,
+                        edgecolors='black', linewidths=0.6, zorder=3)
+
+    # Reference lines
+    ax_main.axvline(median_sii, color='#888888', linestyle=':', linewidth=0.9, alpha=0.5, zorder=0)
+    ax_main.text(median_sii, len(top20) + 0.1, 'Median', fontsize=7.5,
+                 color='#888888', ha='center', va='bottom')
+    ax_main.axvline(p75_sii, color='#888888', linestyle='--', linewidth=0.9, alpha=0.4, zorder=0)
+    ax_main.text(p75_sii, len(top20) + 0.1, '75th', fontsize=7.5,
+                 color='#888888', ha='center', va='bottom')
+
+    ax_main.set_yticks(y_pos)
+    ax_main.set_yticklabels(top20['display_name'], fontsize=10)
+    ax_main.set_xlabel('Semantic Isolation Index (SII)', fontsize=12, fontweight='bold')
+    ax_main.set_xlim(0, max(top20['sii']) * 1.08)
+    ax_main.set_ylim(-0.8, len(top20) + 0.5)
+    ax_main.spines['top'].set_visible(False)
+    ax_main.spines['right'].set_visible(False)
+
+    # Right panel: biobank publications (log scale)
+    for i, (_, r) in enumerate(top20.iterrows()):
+        pubs = max(r['biobank_pubs'], 0.5)
+        ax_pubs.barh(i, pubs, color=r['color'], alpha=0.6, height=0.6, edgecolor=r['color'])
+        label = str(int(r['biobank_pubs']))
+        x_label = max(pubs * 1.15, 1.5)
+        ax_pubs.text(x_label, i, label, fontsize=8, va='center', ha='left', color='#333333')
+
+    ax_pubs.set_xscale('symlog', linthresh=1)
+    ax_pubs.set_xlabel('Biobank\npublications', fontsize=10, fontweight='bold')
+    ax_pubs.set_yticks([])
+    ax_pubs.set_ylim(-0.8, len(top20) + 0.5)
+    ax_pubs.spines['top'].set_visible(False)
+    ax_pubs.spines['right'].set_visible(False)
+    ax_pubs.spines['left'].set_visible(False)
+    ax_pubs.tick_params(left=False)
+    ax_pubs.set_xlim(0.3, top20['biobank_pubs'].max() * 5)
+
+    # Legend
+    legend_elements = [
+        mpatches.Patch(facecolor='#dc3545', label='Critical (>70)'),
+        mpatches.Patch(facecolor='#fd7e14', label='High (50\u201370)'),
+        mpatches.Patch(facecolor='#ffc107', label='Moderate (30\u201350)'),
+        mpatches.Patch(facecolor='#28a745', label='Low (<30)'),
+        Line2D([0], [0], marker='D', color='w', markerfacecolor='grey',
+               markeredgecolor='black', markersize=8, label='Global South priority'),
+        Line2D([0], [0], marker='o', color='w', markerfacecolor='grey',
+               markeredgecolor='black', markersize=7, label='Other disease'),
+    ]
+    ax_main.legend(handles=legend_elements, loc='lower right', fontsize=8.5,
+                   framealpha=0.95, edgecolor='lightgrey', title='Gap Score',
+                   title_fontsize=9)
+
+    # Count GS priority in top 25
+    n_gs_top25 = int(plot_df.head(25)['gs_priority'].sum())
+    mean_pubs_top25 = int(plot_df.head(25)['biobank_pubs'].mean())
+    mean_pubs_bot25 = int(plot_df.tail(25)['biobank_pubs'].mean())
+
+    fig.text(0.5, 0.98, 'Top 20 Most Semantically Isolated Diseases',
+             ha='center', va='top', fontsize=14, fontweight='bold')
+    fig.text(0.5, 0.945,
+             'Diseases in knowledge silos with limited cross-disciplinary research bridges\n'
+             f'({n_gs_top25} of top 25 are Global South priority; '
+             f'mean biobank publications = {mean_pubs_top25:,} vs {mean_pubs_bot25:,} for least isolated)',
+             ha='center', va='top', fontsize=9.5, color='#555555', style='italic')
+
+    plt.subplots_adjust(top=0.90, bottom=0.07, left=0.24, right=0.95)
 
     # Save
     fig_path = output_dir / "fig_gap_vs_isolation.png"
-    plt.savefig(fig_path, dpi=DPI, bbox_inches='tight')
+    plt.savefig(fig_path, dpi=DPI, bbox_inches='tight', facecolor='white')
     plt.close()
 
     save_figure_metadata(
         fig_path,
-        "Gap Score vs Semantic Isolation",
-        f"Correlation between biobank Gap Score and semantic isolation (R² = {r_value**2:.3f})",
-        {"r_squared": r_value**2, "p_value": p_value, "n_points": len(plot_df)}
+        "Top 20 Most Semantically Isolated Diseases",
+        f"Lollipop chart of diseases with highest SII, colored by gap severity. "
+        f"{n_gs_top25}/25 most isolated are Global South priority.",
+        {"n_gs_top25": n_gs_top25, "mean_pubs_top25": mean_pubs_top25,
+         "mean_pubs_bot25": mean_pubs_bot25, "median_sii": float(median_sii)}
     )
 
     logger.info(f"    Saved: {fig_path.name}")
