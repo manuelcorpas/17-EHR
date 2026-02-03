@@ -619,7 +619,7 @@
     "name": "Lower extremity peripheral arterial disease",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
-    "dalys": 0,
+    "dalys": 1558242.6857373822,
     "publications": 143
   },
   "Endocarditis": {
@@ -647,7 +647,7 @@
     "name": "Pulmonary Arterial Hypertension",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
-    "dalys": 0,
+    "dalys": 642104.2886512369,
     "publications": 1023
   },
   "Chronic obstructive pulmonary disease": {
@@ -759,21 +759,21 @@
     "name": "Alzheimer's disease and other dementias",
     "gbd_level2": "Neurological disorders",
     "global_south_priority": false,
-    "dalys": 0,
+    "dalys": 36332686.73680246,
     "publications": 1181
   },
   "Parkinson's disease": {
     "name": "Parkinson's disease",
     "gbd_level2": "Neurological disorders",
     "global_south_priority": false,
-    "dalys": 0,
+    "dalys": 7471821.424322477,
     "publications": 285
   },
   "Idiopathic epilepsy": {
     "name": "Idiopathic epilepsy",
     "gbd_level2": "Neurological disorders",
     "global_south_priority": false,
-    "dalys": 0,
+    "dalys": 13877827.484414238,
     "publications": 101
   },
   "Multiple sclerosis": {

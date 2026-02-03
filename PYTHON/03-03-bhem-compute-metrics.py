@@ -442,15 +442,13 @@ def compute_equity_alignment_score(disease_publications: Dict[str, int],
     # Clamp to 0-100
     eas = max(0.0, min(100.0, eas))
     
-    # Categorize
-    if eas >= 80:
-        category = "Strong"
-    elif eas >= 60:
-        category = "Moderate"
+    # Categorize (3-tier: High/Moderate/Low per manuscript)
+    if eas >= 70:
+        category = "High"
     elif eas >= 40:
-        category = "Weak"
+        category = "Moderate"
     else:
-        category = "Poor"
+        category = "Low"
     
     components = {
         'gap_severity_component': round(gap_severity_component, 2),
@@ -872,9 +870,8 @@ def compute_all_biobank_metrics(df: pd.DataFrame,
         eas_dist[bm['equity_alignment_category']] += 1
     
     logger.info(f"Biobank metrics computed: {len(biobank_metrics)} biobanks")
-    logger.info(f"  EAS distribution: Strong={eas_dist['Strong']}, "
-                f"Moderate={eas_dist['Moderate']}, Weak={eas_dist['Weak']}, "
-                f"Poor={eas_dist['Poor']}")
+    logger.info(f"  EAS distribution: High={eas_dist.get('High', 0)}, "
+                f"Moderate={eas_dist.get('Moderate', 0)}, Low={eas_dist.get('Low', 0)}")
     
     return biobank_metrics
 

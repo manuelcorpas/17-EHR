@@ -1,7 +1,7 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-01-09T05:37:20.111891",
-  "count": 175,
+  "generated": "2026-02-03T10:00:51.256045",
+  "count": 179,
   "diseases": [
     {
       "id": "Malaria",
@@ -2376,6 +2376,57 @@
       ]
     },
     {
+      "id": "Idiopathic epilepsy",
+      "name": "Idiopathic epilepsy",
+      "category": "Neurological",
+      "globalSouthPriority": false,
+      "researchAppropriateness": "high",
+      "burden": {
+        "dalysMillions": 13.88,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 71.42
+      },
+      "research": {
+        "globalPublications": 105,
+        "biobanksEngaged": 16,
+        "researchIntensity": 7.566
+      },
+      "gap": {
+        "score": 50.0,
+        "severity": "Moderate",
+        "color": "#ffc107",
+        "adjustedNote": null
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 34
+        },
+        {
+          "id": "moba",
+          "name": "Norwegian Mother and Child Cohort Study",
+          "publications": 24
+        },
+        {
+          "id": "gel",
+          "name": "Genomics England / 100,000 Genomes Project",
+          "publications": 12
+        },
+        {
+          "id": "dnbc",
+          "name": "Danish National Birth Cohort",
+          "publications": 11
+        },
+        {
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 4
+        }
+      ]
+    },
+    {
       "id": "Drug use disorders",
       "name": "Drug use disorders",
       "category": "Mental Health",
@@ -4626,6 +4677,108 @@
       ]
     },
     {
+      "id": "Alzheimer's disease and other dementias",
+      "name": "Alzheimer's disease and other dementias",
+      "category": "Neurological",
+      "globalSouthPriority": false,
+      "researchAppropriateness": "high",
+      "burden": {
+        "dalysMillions": 36.33,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 75.6
+      },
+      "research": {
+        "globalPublications": 1202,
+        "biobanksEngaged": 37,
+        "researchIntensity": 33.083
+      },
+      "gap": {
+        "score": 30.0,
+        "severity": "Low",
+        "color": "#28a745",
+        "adjustedNote": null
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 798
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 137
+        },
+        {
+          "id": "hunt",
+          "name": "HUNT Study",
+          "publications": 39
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 36
+        },
+        {
+          "id": "elsa_brasil",
+          "name": "ELSA-Brasil",
+          "publications": 27
+        }
+      ]
+    },
+    {
+      "id": "Parkinson's disease",
+      "name": "Parkinson's disease",
+      "category": "Neurological",
+      "globalSouthPriority": false,
+      "researchAppropriateness": "high",
+      "burden": {
+        "dalysMillions": 7.47,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 68.73
+      },
+      "research": {
+        "globalPublications": 295,
+        "biobanksEngaged": 28,
+        "researchIntensity": 39.482
+      },
+      "gap": {
+        "score": 30.0,
+        "severity": "Low",
+        "color": "#28a745",
+        "adjustedNote": null
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 151
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 51
+        },
+        {
+          "id": "23andme",
+          "name": "23andMe",
+          "publications": 19
+        },
+        {
+          "id": "cpsii",
+          "name": "Cancer Prevention Study II Nutrition Cohort",
+          "publications": 11
+        },
+        {
+          "id": "estbb",
+          "name": "Estonian Biobank",
+          "publications": 6
+        }
+      ]
+    },
+    {
       "id": "Diabetes mellitus",
       "name": "Diabetes mellitus",
       "category": "Metabolic",
@@ -5168,6 +5321,57 @@
           "id": "epic",
           "name": "European Prospective Investigation into Cancer and Nutrition",
           "publications": 78
+        }
+      ]
+    },
+    {
+      "id": "Lower extremity peripheral arterial disease",
+      "name": "Lower extremity peripheral arterial disease",
+      "category": "Cardiovascular",
+      "globalSouthPriority": false,
+      "researchAppropriateness": "high",
+      "burden": {
+        "dalysMillions": 1.56,
+        "deathsMillions": null,
+        "prevalenceMillions": null,
+        "burdenScore": 61.93
+      },
+      "research": {
+        "globalPublications": 154,
+        "biobanksEngaged": 26,
+        "researchIntensity": 98.829
+      },
+      "gap": {
+        "score": 20.0,
+        "severity": "Low",
+        "color": "#28a745",
+        "adjustedNote": null
+      },
+      "topBiobanks": [
+        {
+          "id": "ukb",
+          "name": "UK Biobank",
+          "publications": 71
+        },
+        {
+          "id": "mvp",
+          "name": "Million Veteran Program",
+          "publications": 13
+        },
+        {
+          "id": "whi",
+          "name": "Women's Health Initiative",
+          "publications": 11
+        },
+        {
+          "id": "ckb",
+          "name": "China Kadoorie Biobank",
+          "publications": 6
+        },
+        {
+          "id": "nhs",
+          "name": "Nurses' Health Study",
+          "publications": 6
         }
       ]
     },
@@ -7416,57 +7620,6 @@
       ]
     },
     {
-      "id": "Lower extremity peripheral arterial disease",
-      "name": "Lower extremity peripheral arterial disease",
-      "category": "Cardiovascular",
-      "globalSouthPriority": false,
-      "researchAppropriateness": "high",
-      "burden": {
-        "dalysMillions": 0,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 0.0
-      },
-      "research": {
-        "globalPublications": 154,
-        "biobanksEngaged": 26,
-        "researchIntensity": 0
-      },
-      "gap": {
-        "score": 10.0,
-        "severity": "Low",
-        "color": "#28a745",
-        "adjustedNote": null
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 71
-        },
-        {
-          "id": "mvp",
-          "name": "Million Veteran Program",
-          "publications": 13
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 11
-        },
-        {
-          "id": "ckb",
-          "name": "China Kadoorie Biobank",
-          "publications": 6
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 6
-        }
-      ]
-    },
-    {
       "id": "Other cardiovascular and circulatory diseases",
       "name": "Other cardiovascular and circulatory diseases",
       "category": "Cardiovascular",
@@ -7524,15 +7677,15 @@
       "globalSouthPriority": false,
       "researchAppropriateness": "high",
       "burden": {
-        "dalysMillions": 0,
+        "dalysMillions": 0.64,
         "deathsMillions": null,
         "prevalenceMillions": null,
-        "burdenScore": 0.0
+        "burdenScore": 58.08
       },
       "research": {
         "globalPublications": 1095,
         "biobanksEngaged": 50,
-        "researchIntensity": 0
+        "researchIntensity": 1705.33
       },
       "gap": {
         "score": 10.0,
@@ -7667,159 +7820,6 @@
           "id": "moba",
           "name": "Norwegian Mother and Child Cohort Study",
           "publications": 15
-        }
-      ]
-    },
-    {
-      "id": "Alzheimer's disease and other dementias",
-      "name": "Alzheimer's disease and other dementias",
-      "category": "Neurological",
-      "globalSouthPriority": false,
-      "researchAppropriateness": "high",
-      "burden": {
-        "dalysMillions": 0,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 0.0
-      },
-      "research": {
-        "globalPublications": 1202,
-        "biobanksEngaged": 37,
-        "researchIntensity": 0
-      },
-      "gap": {
-        "score": 10.0,
-        "severity": "Low",
-        "color": "#28a745",
-        "adjustedNote": null
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 798
-        },
-        {
-          "id": "whi",
-          "name": "Women's Health Initiative",
-          "publications": 137
-        },
-        {
-          "id": "hunt",
-          "name": "HUNT Study",
-          "publications": 39
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 36
-        },
-        {
-          "id": "elsa_brasil",
-          "name": "ELSA-Brasil",
-          "publications": 27
-        }
-      ]
-    },
-    {
-      "id": "Parkinson's disease",
-      "name": "Parkinson's disease",
-      "category": "Neurological",
-      "globalSouthPriority": false,
-      "researchAppropriateness": "high",
-      "burden": {
-        "dalysMillions": 0,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 0.0
-      },
-      "research": {
-        "globalPublications": 295,
-        "biobanksEngaged": 28,
-        "researchIntensity": 0
-      },
-      "gap": {
-        "score": 10.0,
-        "severity": "Low",
-        "color": "#28a745",
-        "adjustedNote": null
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 151
-        },
-        {
-          "id": "nhs",
-          "name": "Nurses' Health Study",
-          "publications": 51
-        },
-        {
-          "id": "23andme",
-          "name": "23andMe",
-          "publications": 19
-        },
-        {
-          "id": "cpsii",
-          "name": "Cancer Prevention Study II Nutrition Cohort",
-          "publications": 11
-        },
-        {
-          "id": "estbb",
-          "name": "Estonian Biobank",
-          "publications": 6
-        }
-      ]
-    },
-    {
-      "id": "Idiopathic epilepsy",
-      "name": "Idiopathic epilepsy",
-      "category": "Neurological",
-      "globalSouthPriority": false,
-      "researchAppropriateness": "high",
-      "burden": {
-        "dalysMillions": 0,
-        "deathsMillions": null,
-        "prevalenceMillions": null,
-        "burdenScore": 0.0
-      },
-      "research": {
-        "globalPublications": 105,
-        "biobanksEngaged": 16,
-        "researchIntensity": 0
-      },
-      "gap": {
-        "score": 10.0,
-        "severity": "Low",
-        "color": "#28a745",
-        "adjustedNote": null
-      },
-      "topBiobanks": [
-        {
-          "id": "ukb",
-          "name": "UK Biobank",
-          "publications": 34
-        },
-        {
-          "id": "moba",
-          "name": "Norwegian Mother and Child Cohort Study",
-          "publications": 24
-        },
-        {
-          "id": "gel",
-          "name": "Genomics England / 100,000 Genomes Project",
-          "publications": 12
-        },
-        {
-          "id": "dnbc",
-          "name": "Danish National Birth Cohort",
-          "publications": 11
-        },
-        {
-          "id": "estbb",
-          "name": "Estonian Biobank",
-          "publications": 4
         }
       ]
     },
