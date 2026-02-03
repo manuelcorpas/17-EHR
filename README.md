@@ -1,25 +1,38 @@
-# EHR-Linked Biobank Expansion Reveals Global Health Inequities
+# Three Dimensions of Neglect: How Biobanks, Clinical Trials, and Scientific Literature Systematically Exclude the Global South
 
-[![DOI](https://img.shields.io/badge/DOI-10.xxxx/xxxxx-blue.svg)](https://doi.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![Python 3.11](https://img.shields.io/badge/python-3.11-blue.svg)](https://www.python.org/downloads/)
+[![Interactive Dashboard](https://img.shields.io/badge/Dashboard-Live-brightgreen.svg)](https://manuelcorpas.github.io/17-EHR/)
 
 ## Overview
 
-This repository contains the code, data, and analysis pipeline for the paper:
+This repository contains the complete code, data, and analysis pipeline for the **Health Equity Informative Metrics (HEIM)** framework, a three-dimensional analysis of research equity across biobanks, clinical trials, and scientific literature.
 
-> **EHR-Linked Biobank Expansion Reveals Global Health Inequities**  
-> Corpas M, Ojewunmi O, Guio H, Fatumo S (2025)  
-> *Annual Review of Biomedical Data Science*
-
-We present a comprehensive, semantics-based benchmark of the research footprint of five globally established EHR-linked biobanks: **UK Biobank**, **Million Veteran Program (MVP)**, **FinnGen**, **All of Us Research Program**, and **Estonian Biobank**.
+> **Corpas M, Freidin MB, Valdivia-Silva J, Baker S, Fatumo S, Guio H** (2026)
+>
+> Diseases affecting 1.5 billion people in the Global South are systematically excluded from biomedical research infrastructure. We show that this exclusion operates across three stages of the research enterprise: biobanks, clinical trials, and the scientific literature. Using HEIM, we analysed 70 biobanks, ~0.6 million clinical trials, and 13.1 million PubMed articles spanning 175 diseases. Only 1 of 70 biobanks produces research proportionate to global disease burden. The ten most neglected diseases are exclusively conditions of the Global South, facing disadvantage at every stage.
 
 ### Key Findings
 
-- Analysis of **14,142 peer-reviewed publications** (2000-2024)
-- Identification of distinct thematic profiles for each biobank using MeSH term clustering
-- Burden-adjusted gap scores reveal **critical underrepresentation** of conditions like malaria, tuberculosis, and diarrheal diseases
-- Development of **Research Opportunity Scores** to quantify unrealized potential for each biobank
+| Finding | Detail |
+|---------|--------|
+| Biobank equity | Only 1 of 70 biobanks achieves high equity alignment (EAS >= 70) |
+| Clinical trial concentration | Trial sites concentrate 2.5-fold in high-income countries |
+| Semantic isolation | NTDs are 44% more isolated in the knowledge landscape (P < 0.0001, Cohen's d = 1.80) |
+| Unified neglect | The 10 most neglected diseases are exclusively Global South conditions |
+| Zero publications | Lymphatic filariasis, dengue, and schistosomiasis have 0 biobank publications across 70 cohorts |
+
+---
+
+## Data Sources
+
+| Source | Description | Records | Access |
+|--------|-------------|---------|--------|
+| IHME GBD 2021 | DALYs, deaths, prevalence | 179 Level 3 disease categories, 204 countries | [IHME GBD Results](https://vizhub.healthdata.org/gbd-results/) |
+| IHCC Global Cohort Atlas | Biobank registry | 70 biobanks, 29 countries | [IHCC](https://ihccglobal.org/) |
+| PubMed/MEDLINE | Biobank-linked publications | 38,595 articles (2000-2025) | [NCBI Entrez API](https://www.ncbi.nlm.nih.gov/home/develop/api/) |
+| AACT (ClinicalTrials.gov) | Clinical trial records | 563,725 trials; 770,178 facility records | [AACT](https://aact.ctti-clinicaltrials.org/) |
+| PubMed abstracts | For semantic embeddings | 13,100,113 unique abstracts | NCBI Entrez API |
 
 ---
 
@@ -27,165 +40,231 @@ We present a comprehensive, semantics-based benchmark of the research footprint 
 
 ```
 17-EHR/
-├── PYTHON/                          # Analysis scripts (run in order)
-│   ├── 00-00-biobank-data-retrieval.py    # Step 1: PubMed data retrieval
-│   ├── 00-01-biobank-analysis.py          # Step 2: Publication analysis & figures
-│   ├── 00-02-biobank-mesh-clustering.py   # Step 3: MeSH term clustering (Fig 3)
-│   ├── 01-00-research-gap-discovery.py    # Step 4: Disease burden gap analysis
-│   ├── 01-01-data-driven-viz.py           # Step 5: Gap visualization (Fig 4-5)
-│   └── ARCHIVE/                           # Deprecated/exploratory scripts
+├── PYTHON/                              # Analysis pipeline (numbered sequentially)
+│   ├── 03-00  to 03-10                  # Discovery dimension (biobanks)
+│   ├── 04-00  to 04-04                  # Translation dimension (clinical trials)
+│   ├── 05-00  to 05-05                  # Knowledge dimension (semantic analysis)
+│   └── 06-heim-publication-figures.py   # Main-text and extended data figures
 │
-├── DATA/                            # Input data
-│   ├── biobank_research_data.csv          # Main dataset (14,655 records)
-│   ├── biobank_research_data_deduplicated.csv
-│   ├── IHMEGBD_2021_DATA*.csv             # GBD 2021 disease burden data
-│   └── README.md                          # Data documentation
+├── DATA/                                # Input data and computed metrics
+│   ├── gbd_disease_registry.json        # GBD 2021 disease taxonomy
+│   ├── bhem_metrics.json                # Discovery dimension metrics
+│   ├── heim_ct_metrics.json             # Translation dimension metrics
+│   ├── 05-SEMANTIC/                     # Embedding outputs and semantic metrics
+│   └── ARCHIVE/                         # Raw retrieval data
 │
-├── ANALYSIS/                        # Generated outputs
-│   ├── 00-01-BIOBANK-ANALYSIS/            # Publication trends & MeSH frequencies
-│   ├── 00-02-BIOBANK-MESH-CLUSTERING/     # Semantic clustering results
-│   ├── 01-00-RESEARCH-GAP-DISCOVERY/      # Gap analysis & heatmaps
-│   ├── 01-01-DATA-VIZ/                    # Final gap visualizations
-│   └── ARCHIVE/                           # Superseded analysis outputs
+├── ANALYSIS/                            # Generated figures and tables
+│   ├── 03-06-HEIM-FIGURES/              # Discovery dimension figures
+│   ├── 04-04-HEIM-CT-FIGURES/           # Translation dimension figures
+│   ├── 05-04-HEIM-SEM-FIGURES/          # Knowledge dimension + publication figures
+│   ├── 03-07-SENSITIVITY-ANALYSIS/      # Parameter sensitivity results
+│   └── 03-08-VALIDATION-METRICS/        # Validation outputs
 │
-├── FIGS/                            # Publication-ready figures
-│   ├── FIG-1-*.png                        # Overview combined plot
-│   ├── FIG-2-*.png                        # MeSH terms by biobank
-│   ├── FIG-3-*.png                        # Semantic cluster PCA
-│   ├── FIG-4-*.png                        # Disease-biobank heatmap
-│   ├── FIG-5-*.png                        # Research gap summary
-│   └── SUPPL-*.png/csv                    # Supplementary materials
+├── docs/                                # Interactive dashboard (GitHub Pages)
+│   ├── index.html
+│   ├── js/app.js, js/charts.js
+│   ├── css/style.css
+│   └── data/*.json                      # Dashboard data files
 │
-├── PRODUCTION/                      # Print-ready PDFs for journal
-│   └── *.pdf
-│
-├── DOCX/                            # Manuscript versions
-│   └── EHR-Linked-biobanks_v6.docx        # Submitted manuscript
-│
-├── REVISION_1/                      # Revision materials
-│   ├── EHR-Linked-biobanks_v7.docx        # Revised manuscript
-│   ├── Response-To-Reviewers_v1.docx
-│   └── BD9_Fatumo_ReviewerComments.docx
-│
-└── CONTEXT/                         # Reference literature
+├── SCRIPTS/                             # Shell scripts for pipeline orchestration
+└── requirements.txt                     # Python dependencies
 ```
 
 ---
 
-## Quick Start
+## Analysis Pipeline
+
+The pipeline is organised into three dimensions, each with numbered scripts that should be executed sequentially within their group. All scripts use `python3.11`.
+
+### Discovery Dimension (Biobank Research)
+
+| Script | Purpose | Key Outputs |
+|--------|---------|-------------|
+| `03-00-ihcc-fetch-pubmed.py` | Retrieve publications for 70 IHCC biobanks from PubMed | `DATA/bhem_publications_mapped.csv` |
+| `03-00b-bhem-build-gbd-map.py` | Build GBD-to-MeSH disease mapping | `DATA/gbd_disease_registry.json` |
+| `03-01-bhem-map-diseases.py` | Map publications to GBD taxonomy | Mapped publication records |
+| `03-02-bhem-analyze-themes.py` | Analyse research themes per biobank | `DATA/bhem_themes.json` |
+| `03-03-bhem-compute-metrics.py` | Compute Burden Score, Gap Score, EAS | `DATA/bhem_metrics.json` |
+| `03-04-bhem-build-site.py` | Generate interactive dashboard | `docs/` |
+| `03-05-bhem-generate-json.py` | Export dashboard data files | `docs/data/*.json` |
+| `03-06-bhem-generate-figures.py` | Generate Discovery dimension figures | `ANALYSIS/03-06-HEIM-FIGURES/` |
+| `03-07-sensitivity-analysis.py` | Parameter perturbation (weight +-20%) | `ANALYSIS/03-07-SENSITIVITY-ANALYSIS/` |
+| `03-08-validation-metrics.py` | Cross-validation of metrics | `ANALYSIS/03-08-VALIDATION-METRICS/` |
+| `03-09-supplementary-tables.py` | Supplementary tables | `ANALYSIS/03-09-SUPPLEMENTARY-TABLES/` |
+| `03-10-methodology-enhancements.py` | Additional methodological analyses | `ANALYSIS/03-10-REVISION-GUIDE/` |
+
+### Translation Dimension (Clinical Trials)
+
+| Script | Purpose | Key Outputs |
+|--------|---------|-------------|
+| `04-00-heim-ct-setup.py` | Validate environment and AACT connection | Connection test |
+| `04-01-heim-ct-fetch.py` | Fetch trial records from AACT database | `DATA/heim_ct_*.csv` |
+| `04-02-heim-ct-map-diseases.py` | Map trials to GBD taxonomy (multiprocessing) | `DATA/heim_ct_disease_trial_matrix.csv` |
+| `04-03-heim-ct-compute-metrics.py` | Compute research intensity, HIC:LMIC ratios | `DATA/heim_ct_metrics.json` |
+| `04-04-heim-ct-generate-figures.py` | Generate Translation dimension figures | `ANALYSIS/04-04-HEIM-CT-FIGURES/` |
+
+### Knowledge Dimension (Semantic Analysis)
+
+| Script | Purpose | Key Outputs |
+|--------|---------|-------------|
+| `05-00-heim-sem-setup.py` | Validate environment and dependencies | Setup report |
+| `05-01-heim-sem-fetch.py` | Retrieve 13.1M PubMed abstracts | `DATA/05-SEMANTIC/ABSTRACTS/` |
+| `05-02-heim-sem-embed.py` | Generate PubMedBERT embeddings (768-dim) | `DATA/05-SEMANTIC/EMBEDDINGS/` |
+| `05-03-heim-sem-compute-metrics.py` | Compute SII, KTP, RCC, temporal drift | `DATA/05-SEMANTIC/heim_sem_metrics.json` |
+| `05-04-heim-sem-generate-figures.py` | Generate Knowledge dimension figures | `ANALYSIS/05-04-HEIM-SEM-FIGURES/` |
+| `05-05-heim-sem-integrate.py` | Merge all three dimensions; Unified Score | `DATA/05-SEMANTIC/heim_integrated_metrics.json` |
+| `05-05-heim-sem-audit.py` | Data integrity audit | Audit report |
+
+### Publication Figures
+
+| Script | Purpose | Key Outputs |
+|--------|---------|-------------|
+| `06-heim-publication-figures.py` | Main-text and extended data figures | `ANALYSIS/05-04-HEIM-SEM-FIGURES/` |
+
+---
+
+## Metrics
+
+### Burden Score
+Composite measure of disease severity:
+```
+Burden Score = (0.5 x DALYs) + (50 x Deaths) + [10 x log10(Prevalence)]
+```
+
+### Gap Score (0-100)
+Three-tier system measuring the mismatch between disease burden and research attention:
+1. Zero-publication penalty (Gap = 95)
+2. Category-specific thresholds (stricter for infectious/NTDs)
+3. Burden-normalised research intensity
+
+| Category | Threshold |
+|----------|-----------|
+| Critical | > 70 |
+| High | 50-70 |
+| Moderate | 30-50 |
+| Low | < 30 |
+
+### Equity Alignment Score (EAS, 0-100)
+Biobank-level equity performance:
+```
+EAS = 100 - (0.4 x Gap_Severity + 0.3 x Burden_Miss + 0.3 x Capacity_Penalty)
+```
+
+| Category | Threshold |
+|----------|-----------|
+| High | >= 70 |
+| Moderate | 40-69 |
+| Low | < 40 |
+
+### Semantic Isolation Index (SII)
+Measures how disconnected a disease's research literature is from the broader biomedical knowledge base, computed as the mean cosine distance between a disease's publication embeddings and the centroids of its 100 nearest-neighbour diseases in PubMedBERT vector space.
+
+### Knowledge Transfer Potential (KTP)
+Mean cosine similarity between a disease centroid and the centroids of its top 10% most similar conditions, reflecting potential for cross-disciplinary spillover.
+
+### Research Clustering Coefficient (RCC)
+Mean cosine distance from individual abstracts to their disease centroid, quantifying within-disease research dispersion.
+
+### Unified Neglect Score
+Integrates all three dimensions:
+```
+Unified Score = (0.33 x Discovery) + (0.33 x Translation) + (0.34 x Knowledge)
+```
+
+---
+
+## Reproducing the Analysis
 
 ### Prerequisites
 
 ```bash
-# Clone the repository
 git clone https://github.com/manuelcorpas/17-EHR.git
 cd 17-EHR
-
-# Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
+python3.11 -m venv venv
+source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### Running the Pipeline
-
-Execute scripts in numerical order from the repository root:
+### Running the Full Pipeline
 
 ```bash
-# Step 1: Retrieve PubMed data (requires internet, ~30 min)
-python PYTHON/00-00-biobank-data-retrieval.py
+# Discovery dimension
+python3.11 PYTHON/03-00-ihcc-fetch-pubmed.py
+python3.11 PYTHON/03-00b-bhem-build-gbd-map.py
+python3.11 PYTHON/03-01-bhem-map-diseases.py
+python3.11 PYTHON/03-02-bhem-analyze-themes.py
+python3.11 PYTHON/03-03-bhem-compute-metrics.py
+python3.11 PYTHON/03-06-bhem-generate-figures.py
+python3.11 PYTHON/03-07-sensitivity-analysis.py
+python3.11 PYTHON/03-08-validation-metrics.py
 
-# Step 2: Generate publication analysis figures
-python PYTHON/00-01-biobank-analysis.py
+# Translation dimension (requires AACT database access)
+python3.11 PYTHON/04-00-heim-ct-setup.py
+python3.11 PYTHON/04-01-heim-ct-fetch.py
+python3.11 PYTHON/04-02-heim-ct-map-diseases.py
+python3.11 PYTHON/04-03-heim-ct-compute-metrics.py
+python3.11 PYTHON/04-04-heim-ct-generate-figures.py
 
-# Step 3: Perform MeSH term clustering
-python PYTHON/00-02-biobank-mesh-clustering.py
+# Knowledge dimension (requires GPU recommended; CPU fallback available)
+python3.11 PYTHON/05-00-heim-sem-setup.py
+python3.11 PYTHON/05-01-heim-sem-fetch.py
+python3.11 PYTHON/05-02-heim-sem-embed.py
+python3.11 PYTHON/05-03-heim-sem-compute-metrics.py
+python3.11 PYTHON/05-04-heim-sem-generate-figures.py
 
-# Step 4: Run research gap discovery analysis
-python PYTHON/01-00-research-gap-discovery.py
-
-# Step 5: Create final gap visualizations
-python PYTHON/01-01-data-driven-viz.py
+# Integration and publication figures
+python3.11 PYTHON/05-05-heim-sem-integrate.py
+python3.11 PYTHON/06-heim-publication-figures.py
 ```
 
-> **Note**: Step 1 queries PubMed and may take 20-30 minutes. Pre-computed data is available in `DATA/`.
+**Notes:**
+- PubMed retrieval (`03-00`, `05-01`) requires internet access and may take several hours
+- AACT access (`04-01`) requires database credentials (see [AACT registration](https://aact.ctti-clinicaltrials.org/))
+- Embedding generation (`05-02`) processes 13.1M abstracts; GPU (MPS/CUDA) strongly recommended
+- Pre-computed metrics and data are included in `DATA/` for analysis scripts that do not require raw retrieval
+
+### Sensitivity Analysis
+
+Weighting parameters in the EAS and Unified Score formulas were perturbed by +-20%. Rank-order stability was assessed using Spearman's rho (all rho > 0.92). See `ANALYSIS/03-07-SENSITIVITY-ANALYSIS/` for full results.
+
+### Statistical Methods
+
+- Group comparisons: Welch's t-test with Cohen's d effect sizes
+- Correlations: Pearson's r
+- Multiple comparisons: Benjamini-Hochberg FDR correction (q < 0.05)
+- Dimensionality reduction: UMAP (n_neighbours=15, min_dist=0.1, cosine metric)
 
 ---
 
-## Reproducibility
+## Interactive Dashboard
 
-### Data Sources
+An interactive dashboard for exploring HEIM metrics across all three dimensions is available at:
 
-| Source | Description | Access |
-|--------|-------------|--------|
-| PubMed | 14,142 biobank-linked publications | Via Entrez API |
-| GBD 2021 | DALYs, deaths, prevalence for 25 diseases | [IHME GBD Results Tool](https://vizhub.healthdata.org/gbd-results/) |
-| WHO GHO | Global health indicators | [WHO Data Portal](https://www.who.int/data/gho) |
+**https://manuelcorpas.github.io/17-EHR/**
 
-### Key Parameters
-
-- **Year range**: 2000-2024 (2025 excluded as incomplete)
-- **Preprint exclusion**: medRxiv, bioRxiv, Research Square, etc.
-- **Disease set**: 25 priority diseases based on DALYs, mortality, and prevalence
-- **Burden Score formula**: `(0.5 × DALYs) + (50 × Deaths) + [10 × log₁₀(Prevalence)]`
-
-### Validated Outputs
-
-All figures and tables in the manuscript can be reproduced by running the pipeline. Expected outputs:
-
-| Script | Key Outputs | Manuscript Location |
-|--------|-------------|---------------------|
-| `00-01-biobank-analysis.py` | Publication trends, MeSH frequencies | Fig 1, Fig 2 |
-| `00-02-biobank-mesh-clustering.py` | Semantic cluster PCA | Fig 3 |
-| `01-00-research-gap-discovery.py` | Disease-biobank heatmap | Fig 4 |
-| `01-01-data-driven-viz.py` | Gap summary visualization | Fig 5 |
-
----
-
-## Citation
-
-If you use this code or data, please cite:
-
-```bibtex
-@article{corpas2025ehrlinked,
-  title={EHR-Linked Biobank Expansion Reveals Global Health Inequities},
-  author={Corpas, Manuel and Ojewunmi, Oyesola and Guio, Heinner and Fatumo, Segun},
-  journal={Annual Review of Biomedical Data Science},
-  year={2025},
-  doi={10.xxxx/xxxxx}
-}
-```
+The dashboard source is in `docs/` and is served via GitHub Pages.
 
 ---
 
 ## Authors
 
-- **Manuel Corpas** - University of Westminster, Alan Turing Institute, Cambridge Precision Medicine
-- **Oyesola Ojewunmi** - Queen Mary University of London
-- **Heinner Guio** - UTEC Lima, INBIOMEDIC
-- **Segun Fatumo** - Queen Mary University of London, MRC/UVRI Uganda
+- **Manuel Corpas** - University of Westminster; Alan Turing Institute; GENEQ Global
+- **Maxim B. Freidin** - King's College London
+- **Julio Valdivia-Silva** - UTEC Lima
+- **Simeon Baker** - University of Bath; GENEQ Global
+- **Segun Fatumo** - MRC/UVRI and LSHTM Uganda Research Unit; Queen Mary University of London
+- **Heinner Guio** - UTEC Lima; Instituto Nacional de Salud, Peru; GENEQ Global
 
-**Corresponding authors**: m.corpas@westminster.ac.uk, s.fatumo@qmul.ac.uk
+**Corresponding author:** m.corpas@westminster.ac.uk (ORCID: 0000-0002-5765-9627)
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ---
 
-## Acknowledgments
+## Acknowledgements
 
-- UK Biobank, Million Veteran Program, FinnGen, All of Us Research Program, Estonian Biobank
-- Global Burden of Disease Study 2021 collaborators
-- NCBI PubMed for data access
-
----
-
-## Version History
-
-- **v1.0.0** (2025-XX-XX): Initial release accompanying publication
-- See [CHANGELOG.md](CHANGELOG.md) for full version history
+We thank the International Health Cohorts Consortium (IHCC) for biobank registry data, the Clinical Trials Transformation Initiative for AACT database access, the Institute for Health Metrics and Evaluation for GBD 2021 data, and NCBI for PubMed API access.
