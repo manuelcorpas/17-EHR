@@ -285,11 +285,27 @@ const HEIMEngine = (() => {
     // Apply a scenario (e.g., +50% publications for NTDs) and return new scores
     // =========================================================================
     function applyScenario(diseases, scenario, weights) {
+        const w = weights || DEFAULTS.unified;
+
+        // Capture baseline normalisation ranges BEFORE modification
+        const gaps = [], siis = [], ctInvs = [];
+        for (const d of diseases) {
+            if (d.gap_score != null) gaps.push(d.gap_score);
+            if (d.sii != null) siis.push(d.sii);
+            if (d.ct_equity != null) ctInvs.push(1.0 / (d.ct_equity + 1));
+        }
+        const ranges = {
+            gapMin: Math.min(...gaps), gapMax: Math.max(...gaps),
+            siiMin: Math.min(...siis), siiMax: Math.max(...siis),
+            ctMin: ctInvs.length ? Math.min(...ctInvs) : 0,
+            ctMax: ctInvs.length ? Math.max(...ctInvs) : 1
+        };
+
+        // Apply scenario modifications
         const modified = diseases.map(d => {
             const copy = { ...d };
             if (scenario.filter(copy)) {
                 if (scenario.pubsMultiplier != null) {
-                    // Increase ct_equity (trials per M DALYs) by multiplier
                     if (copy.ct_equity != null) {
                         copy.ct_equity = copy.ct_equity * scenario.pubsMultiplier;
                     }
@@ -302,7 +318,31 @@ const HEIMEngine = (() => {
             }
             return copy;
         });
-        return computeUnifiedScores(modified, weights);
+
+        // Recompute unified scores using BASELINE normalisation ranges
+        const results = [];
+        for (const d of modified) {
+            if (d.gap_score == null || d.sii == null) {
+                results.push({ ...d, unified_score: null, dimensions_available: 0 });
+                continue;
+            }
+            const dN = norm(d.gap_score, ranges.gapMin, ranges.gapMax);
+            const kN = norm(d.sii, ranges.siiMin, ranges.siiMax);
+
+            let score, dims;
+            if (d.ct_equity != null) {
+                const tN = norm(1.0 / (d.ct_equity + 1), ranges.ctMin, ranges.ctMax);
+                score = (w.discovery * dN + w.translation * tN + w.knowledge * kN) * 100;
+                dims = 3;
+            } else {
+                const wDK = w.discovery / (w.discovery + w.knowledge);
+                const wKD = w.knowledge / (w.discovery + w.knowledge);
+                score = (wDK * dN + wKD * kN) * 100;
+                dims = 2;
+            }
+            results.push({ ...d, unified_score: score, dimensions_available: dims });
+        }
+        return results;
     }
 
     // Built-in scenario presets
@@ -332,12 +372,19 @@ const HEIMEngine = (() => {
         },
         doubleInfectious: {
             name: 'Double infectious disease research',
-            description: 'Simulate doubling clinical trial intensity for infectious diseases',
+            description: 'Simulate doubling clinical trial intensity for all infectious diseases including NTDs',
             filter: d => {
                 const name = (d.disease || '').toLowerCase();
-                const infectious = ['malaria', 'tuberculosis', 'hiv', 'dengue', 'typhoid',
+                const infectious = [
+                    'malaria', 'tuberculosis', 'hiv', 'dengue', 'typhoid',
                     'leishmaniasis', 'chagas', 'schistosomiasis', 'meningitis',
-                    'lower_respiratory_infections', 'diarrheal'];
+                    'lower_respiratory_infections', 'diarrheal', 'guinea_worm',
+                    'lymphatic_filariasis', 'onchocerciasis', 'trachoma', 'rabies',
+                    'trypanosomiasis', 'cysticercosis', 'yellow_fever', 'leprosy',
+                    'trematodiases', 'neglected_tropical', 'encephalitis',
+                    'measles', 'pertussis', 'echinococcosis', 'tetanus',
+                    'hepatitis', 'sexually_transmitted', 'intestinal_infectious'
+                ];
                 return infectious.some(inf => name.includes(inf));
             },
             pubsMultiplier: 2.0,
