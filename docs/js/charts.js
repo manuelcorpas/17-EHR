@@ -1,4 +1,5 @@
 // HEIM-Biobank v2.0 (IHCC) Chart Visualizations
+// Note: chartInstances and destroyChart are defined in app.js (loaded first)
 
 // Color palettes
 const COLORS = {
@@ -15,16 +16,6 @@ const CHART_COLORS = [
     '#2563eb', '#dc3545', '#28a745', '#ffc107', '#17a2b8',
     '#6f42c1', '#fd7e14', '#20c997', '#e83e8c', '#6c757d'
 ];
-
-// Chart instances for cleanup
-let chartInstances = {};
-
-function destroyChart(id) {
-    if (chartInstances[id]) {
-        chartInstances[id].destroy();
-        delete chartInstances[id];
-    }
-}
 
 // EAS Distribution Chart (Overview)
 function renderEASDistributionChart() {

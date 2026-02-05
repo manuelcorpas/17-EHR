@@ -3,12 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEIM Framework | Health Equity Informative Metrics</title>
-    <meta name="description" content="Health Equity Informative Metrics - measuring research equity gaps in biobanks and clinical trials relative to global disease burden">
+    <title>HEIM Framework | Interactive Health Equity Measurement Tool</title>
+    <meta name="description" content="HEIM Interactive Tool - adjustable weights, scenario modelling, and real-time recalculation of health equity metrics across biobanks and clinical trials">
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
+
+    <!-- Computation Engine -->
+    <script src="js/engine.js"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
@@ -18,7 +21,7 @@
     <header class="header">
         <div class="header-content">
             <div class="header-title">
-                <h1>HEIM Framework <span class="version">v3.0</span></h1>
+                <h1>HEIM Framework <span class="version">v3.0</span> <span class="tool-badge">Interactive Tool</span></h1>
                 <p class="tagline">Health Equity Informative Metrics: Discovery + Translation + Knowledge</p>
             </div>
             <div class="header-meta">
@@ -39,6 +42,9 @@
         <button class="tab-btn" data-tab="clinical-trials">Clinical Trials</button>
         <button class="tab-btn" data-tab="biobanks">Biobanks</button>
         <button class="tab-btn" data-tab="diseases">Diseases</button>
+        <button class="tab-btn tab-btn-interactive" data-tab="weights">Weights</button>
+        <button class="tab-btn tab-btn-interactive" data-tab="scenarios">Scenarios</button>
+        <button class="tab-btn tab-btn-interactive" data-tab="biobank-compare">Compare</button>
         <button class="tab-btn" data-tab="comparison">Pipeline Gap</button>
         <button class="tab-btn" data-tab="trends">Trial Trends</button>
         <button class="tab-btn" data-tab="equity">Equity</button>
@@ -504,6 +510,256 @@
             </div>
         </section>
 
+        <!-- Tab: Weight Adjustment Panel -->
+        <section id="weights" class="tab-content">
+            <div class="section-header">
+                <h2>Weight Adjustment Panel</h2>
+                <p>Adjust HEIM formula weights and see rankings update in real-time</p>
+            </div>
+
+            <!-- Current Weights Status -->
+            <div class="card weight-status-card">
+                <div class="weight-status-row">
+                    <span class="weight-status-label">Status:</span>
+                    <span class="weight-status-value" id="weight-status">Using published PCA weights</span>
+                    <button class="btn btn-secondary" id="btn-reset-weights" onclick="resetAllWeights()">Reset to Defaults</button>
+                </div>
+            </div>
+
+            <!-- Unified Score Weights -->
+            <div class="card slider-card">
+                <h3>Unified Score Weights</h3>
+                <p class="card-description">PCA-derived weights for the three dimensions. Must sum to 1.0.</p>
+                <div class="slider-group">
+                    <div class="slider-row">
+                        <label class="slider-label">
+                            <span class="dim-dot dim-discovery-dot"></span> Discovery (Gap Score)
+                        </label>
+                        <input type="range" class="weight-slider" id="slider-w-discovery" min="0" max="100" value="50" step="1">
+                        <span class="slider-value" id="val-w-discovery">0.501</span>
+                    </div>
+                    <div class="slider-row">
+                        <label class="slider-label">
+                            <span class="dim-dot dim-translation-dot"></span> Translation (Trial Equity)
+                        </label>
+                        <input type="range" class="weight-slider" id="slider-w-translation" min="0" max="100" value="29" step="1">
+                        <span class="slider-value" id="val-w-translation">0.293</span>
+                    </div>
+                    <div class="slider-row">
+                        <label class="slider-label">
+                            <span class="dim-dot dim-knowledge-dot"></span> Knowledge (Semantic Isolation)
+                        </label>
+                        <input type="range" class="weight-slider" id="slider-w-knowledge" min="0" max="100" value="21" step="1">
+                        <span class="slider-value" id="val-w-knowledge">0.206</span>
+                    </div>
+                    <div class="slider-sum">
+                        Sum: <span id="weight-sum">1.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EAS Weights -->
+            <div class="card slider-card">
+                <h3>EAS Component Weights</h3>
+                <p class="card-description">Equity Alignment Score: EAS = 100 - (w_gap x GapSeverity + w_burden x BurdenMiss + w_capacity x CapacityPenalty)</p>
+                <div class="slider-group">
+                    <div class="slider-row">
+                        <label class="slider-label">Gap Severity</label>
+                        <input type="range" class="weight-slider" id="slider-eas-gap" min="0" max="100" value="40" step="1">
+                        <span class="slider-value" id="val-eas-gap">0.40</span>
+                    </div>
+                    <div class="slider-row">
+                        <label class="slider-label">Burden Miss</label>
+                        <input type="range" class="weight-slider" id="slider-eas-burden" min="0" max="100" value="30" step="1">
+                        <span class="slider-value" id="val-eas-burden">0.30</span>
+                    </div>
+                    <div class="slider-row">
+                        <label class="slider-label">Capacity Penalty</label>
+                        <input type="range" class="weight-slider" id="slider-eas-capacity" min="0" max="100" value="30" step="1">
+                        <span class="slider-value" id="val-eas-capacity">0.30</span>
+                    </div>
+                    <div class="slider-sum">
+                        Sum: <span id="eas-weight-sum">1.00</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Results Preview -->
+            <div class="card">
+                <h3>Live Rankings (Top 15)</h3>
+                <p class="card-description">Disease rankings update as you adjust weights above</p>
+                <div class="table-container">
+                    <table class="data-table" id="table-live-rankings">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Disease</th>
+                                <th>Unified Score</th>
+                                <th>Change</th>
+                                <th>Dims</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Live Methodology Display -->
+            <div class="card methodology-card">
+                <h3>Current Formulas</h3>
+                <div class="formula-box live-formula" id="formula-unified">
+                    <code>Unified = <span class="fw">0.501</span> x D_norm + <span class="fw">0.293</span> x T_norm + <span class="fw">0.206</span> x K_norm</code>
+                </div>
+                <div class="formula-box live-formula" id="formula-eas">
+                    <code>EAS = 100 - (<span class="fw">0.40</span> x GapSeverity + <span class="fw">0.30</span> x BurdenMiss + <span class="fw">0.30</span> x CapacityPenalty)</code>
+                </div>
+            </div>
+
+            <!-- Export -->
+            <div class="actions">
+                <button class="btn btn-primary" onclick="exportWeightedCSV()">Export CSV with Current Weights</button>
+                <button class="btn btn-secondary" onclick="exportPDFReport()">Export PDF Report</button>
+            </div>
+        </section>
+
+        <!-- Tab: Scenario Builder -->
+        <section id="scenarios" class="tab-content">
+            <div class="section-header">
+                <h2>Scenario Builder</h2>
+                <p>Model "what if" scenarios to see how research investment changes would shift disease rankings</p>
+            </div>
+
+            <!-- Preset Scenarios -->
+            <div class="card">
+                <h3>Preset Scenarios</h3>
+                <div class="scenario-grid">
+                    <div class="scenario-card" data-scenario="increaseNTD50" onclick="runScenario('increaseNTD50')">
+                        <div class="scenario-icon">+50%</div>
+                        <h4>Increase NTD Research</h4>
+                        <p>Simulate 50% more clinical trials for all 17 WHO NTDs and 30% gap reduction</p>
+                    </div>
+                    <div class="scenario-card" data-scenario="equaliseHICLMIC" onclick="runScenario('equaliseHICLMIC')">
+                        <div class="scenario-icon">=</div>
+                        <h4>Equalise HIC/LMIC</h4>
+                        <p>Double trial intensity for highly neglected diseases (gap &gt; 50)</p>
+                    </div>
+                    <div class="scenario-card" data-scenario="doubleInfectious" onclick="runScenario('doubleInfectious')">
+                        <div class="scenario-icon">2x</div>
+                        <h4>Double Infectious Research</h4>
+                        <p>Double clinical trial intensity for major infectious diseases</p>
+                    </div>
+                    <div class="scenario-card" data-scenario="reduceCancerBias" onclick="runScenario('reduceCancerBias')">
+                        <div class="scenario-icon">&#8652;</div>
+                        <h4>Reduce Cancer Bias</h4>
+                        <p>Redistribute 30% of excess cancer trial intensity to neglected diseases</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scenario Results -->
+            <div class="card" id="scenario-results-card" style="display:none;">
+                <h3>Scenario Results: <span id="scenario-name">--</span></h3>
+                <p class="card-description" id="scenario-desc">--</p>
+
+                <!-- Before/After Comparison -->
+                <div class="scenario-comparison">
+                    <div class="scenario-col">
+                        <h4>Baseline Rankings</h4>
+                        <div class="table-container">
+                            <table class="data-table" id="table-scenario-before">
+                                <thead><tr><th>#</th><th>Disease</th><th>Score</th></tr></thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="scenario-col">
+                        <h4>After Scenario</h4>
+                        <div class="table-container">
+                            <table class="data-table" id="table-scenario-after">
+                                <thead><tr><th>#</th><th>Disease</th><th>Score</th><th>Change</th></tr></thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Spearman Rho -->
+                <div class="scenario-stats">
+                    <div class="stat-box">
+                        <div class="stat-box-value" id="scenario-rho">--</div>
+                        <div class="stat-box-label">Spearman rho (rank stability)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-box-value" id="scenario-moved">--</div>
+                        <div class="stat-box-label">Diseases that changed rank</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-box-value" id="scenario-max-move">--</div>
+                        <div class="stat-box-label">Largest rank change</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sensitivity Analysis -->
+            <div class="card">
+                <h3>Sensitivity Analysis</h3>
+                <p class="card-description">Spearman rho between baseline and 200 random Dirichlet-distributed weight vectors</p>
+                <div class="chart-container" style="height: 350px;">
+                    <canvas id="chart-sensitivity"></canvas>
+                </div>
+                <div class="sensitivity-summary" id="sensitivity-summary">
+                    <p>Click "Run Sensitivity Analysis" to compute.</p>
+                </div>
+                <div class="actions">
+                    <button class="btn btn-primary" onclick="runSensitivityAnalysis()">Run Sensitivity Analysis</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tab: Biobank Comparison -->
+        <section id="biobank-compare" class="tab-content">
+            <div class="section-header">
+                <h2>Biobank Comparison</h2>
+                <p>Select 2-5 biobanks for side-by-side comparison</p>
+            </div>
+
+            <!-- Biobank Selection -->
+            <div class="card">
+                <h3>Select Biobanks</h3>
+                <p class="card-description">Check 2-5 biobanks to compare</p>
+                <div class="filters">
+                    <input type="text" id="compare-biobank-search" class="search-input" placeholder="Filter biobanks...">
+                </div>
+                <div class="compare-checklist" id="compare-checklist">
+                    <!-- Populated by JS -->
+                </div>
+                <div class="actions">
+                    <button class="btn btn-primary" onclick="runBiobankComparison()">Compare Selected</button>
+                    <button class="btn btn-secondary" onclick="clearBiobankSelection()">Clear Selection</button>
+                </div>
+            </div>
+
+            <!-- Radar Chart Comparison -->
+            <div class="card" id="compare-results-card" style="display:none;">
+                <h3>Comparison Results</h3>
+                <div class="chart-container" style="height: 400px;">
+                    <canvas id="chart-compare-radar"></canvas>
+                </div>
+
+                <!-- Difference Table -->
+                <div class="table-container" style="margin-top: 1.5rem;">
+                    <table class="data-table" id="table-compare-biobanks">
+                        <thead>
+                            <tr id="compare-header-row">
+                                <th>Metric</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
         <!-- Tab 5: Pipeline Comparison -->
         <section id="comparison" class="tab-content">
             <div class="section-header">
@@ -771,11 +1027,11 @@
 
                 <div class="methodology-subsection">
                     <h4>Unified Triple-Burden Score</h4>
-                    <div class="formula-box">
-                        <code>Unified = 0.33×Discovery + 0.33×Translation + 0.34×Knowledge</code>
+                    <div class="formula-box" id="about-formula-unified">
+                        <code>Unified = 0.501×Discovery + 0.293×Translation + 0.206×Knowledge</code>
                     </div>
                     <p>Combines Gap Score (biobanks), Clinical Trial Equity, and Semantic Isolation into a single measure of compound neglect. Higher scores indicate diseases facing disadvantage across multiple dimensions.</p>
-                    <p><strong>Weighting justification:</strong> Equal weights are used because the three dimensions are empirically orthogonal (inter-dimension correlation r=0.07), meaning they capture independent aspects of neglect rather than redundant signals. This orthogonality supports treating them as equally important contributors to overall disadvantage.</p>
+                    <p><strong>Weighting justification:</strong> Weights are derived empirically using PCA (PC1 loadings from 86 diseases with data across all three dimensions). PC1 explains 63.3% of total variance. The <a href="#" onclick="document.querySelector('[data-tab=weights]').click(); return false;">Weights tab</a> allows you to adjust these and verify ranking stability.</p>
                 </div>
             </div>
 
