@@ -246,6 +246,22 @@ a:hover { text-decoration: underline; }
     transition: width 1s ease;
 }
 
+.framework-bar-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 4px;
+    font-size: 0.7rem;
+    line-height: 1.2;
+}
+
+.bar-label-left {
+    font-weight: 600;
+}
+
+.bar-label-right {
+    color: var(--nm-text-light);
+}
+
 .formula-box {
     background: #1e293b;
     color: #e2e8f0;

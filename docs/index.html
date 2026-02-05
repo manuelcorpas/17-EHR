@@ -100,9 +100,13 @@
                 <div class="framework-card framework-card--discovery">
                     <div class="framework-card-label">Discovery</div>
                     <div class="framework-card-stat" id="fw-discovery-stat">70 biobanks</div>
-                    <div class="framework-card-desc"><span id="fw-discovery-gaps">22</span> critical gaps identified</div>
+                    <div class="framework-card-desc"><span id="fw-discovery-gaps">22</span> of 175 diseases have critical research gaps</div>
                     <div class="framework-mini-chart">
-                        <div class="framework-mini-bar" id="fw-discovery-bar" style="width: 31%; background: var(--dim-discovery);">31% critical</div>
+                        <div class="framework-mini-bar" id="fw-discovery-bar" style="width: 31%; background: var(--dim-discovery);"></div>
+                    </div>
+                    <div class="framework-bar-labels">
+                        <span class="bar-label-left" style="color: var(--dim-discovery);" id="fw-discovery-pct">12% critical</span>
+                        <span class="bar-label-right">175 disease categories</span>
                     </div>
                 </div>
 
@@ -110,9 +114,13 @@
                 <div class="framework-card framework-card--translation">
                     <div class="framework-card-label">Translation</div>
                     <div class="framework-card-stat" id="fw-translation-stat">563,725 trials</div>
-                    <div class="framework-card-desc"><span id="fw-translation-gap">2.4</span>x intensity gap</div>
+                    <div class="framework-card-desc"><span id="fw-translation-gap">2.4</span>x more trials per DALY in high-income countries</div>
                     <div class="framework-mini-chart">
-                        <div class="framework-mini-bar" id="fw-gs-bar" style="width: 20%; background: var(--dim-translation);">GS 20%</div>
+                        <div class="framework-mini-bar" id="fw-gs-bar" style="width: 20%; background: var(--dim-translation);"></div>
+                    </div>
+                    <div class="framework-bar-labels">
+                        <span class="bar-label-left" style="color: var(--dim-translation);">Global South share</span>
+                        <span class="bar-label-right">All clinical trials</span>
                     </div>
                 </div>
 
@@ -120,7 +128,7 @@
                 <div class="framework-card framework-card--knowledge">
                     <div class="framework-card-label">Knowledge</div>
                     <div class="framework-card-stat" id="fw-knowledge-stat">13.1M papers</div>
-                    <div class="framework-card-desc">NTDs <span id="fw-knowledge-isolation">44</span>% more isolated</div>
+                    <div class="framework-card-desc">NTDs <span id="fw-knowledge-isolation">44</span>% more semantically isolated than other diseases</div>
                     <div class="framework-mini-chart">
                         <canvas id="chart-mini-isolation" height="32"></canvas>
                     </div>
