@@ -158,7 +158,7 @@ function renderSection2Framework() {
         if (discoveryBar) {
             discoveryBar.style.width = critPct + '%';
         }
-        setText('fw-discovery-pct', critPct + '% critical gaps');
+        setText('fw-discovery-pct', critical + ' diseases with no biobank coverage');
     }
 
     if (DATA.clinicalTrials) {
