@@ -157,8 +157,8 @@ function renderSection2Framework() {
         const discoveryBar = document.getElementById('fw-discovery-bar');
         if (discoveryBar) {
             discoveryBar.style.width = critPct + '%';
-            discoveryBar.textContent = critPct + '% critical';
         }
+        setText('fw-discovery-pct', critPct + '% critical gaps');
     }
 
     if (DATA.clinicalTrials) {
@@ -172,7 +172,6 @@ function renderSection2Framework() {
             const gsBar = document.getElementById('fw-gs-bar');
             if (gsBar) {
                 gsBar.style.width = gs.gsTrialsPct + '%';
-                gsBar.textContent = `GS ${gs.gsTrialsPct}%`;
             }
         }
     }
