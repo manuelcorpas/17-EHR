@@ -3,551 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HEIM Framework | Interactive Health Equity Measurement Tool</title>
-    <meta name="description" content="HEIM Interactive Tool - adjustable weights, scenario modelling, and real-time recalculation of health equity metrics across biobanks and clinical trials">
+    <title>HEIM Framework | Quantifying the Architecture of Research Inequity</title>
+    <meta name="description" content="HEIM Framework - Three-dimensional analysis of global health research equity across Discovery, Translation, and Knowledge dimensions">
 
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 
-    <!-- Computation Engine -->
+    <!-- Computation Engine (untouched) -->
     <script src="js/engine.js"></script>
 
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Header Banner -->
-    <header class="header">
-        <div class="header-content">
-            <div class="header-title">
-                <h1>HEIM Framework <span class="version">v3.0</span> <span class="tool-badge">Interactive Tool</span></h1>
-                <p class="tagline">Health Equity Informative Metrics: Discovery + Translation + Knowledge</p>
+
+    <!-- Mobile Progress Bar -->
+    <div class="mobile-progress">
+        <div class="mobile-progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Dot Navigation -->
+    <nav class="dot-nav" id="dot-nav">
+        <div class="dot-nav-item active" data-section="overview">
+            <span class="dot-nav-label">Overview</span>
+            <span class="dot-nav-dot"></span>
+        </div>
+        <div class="dot-nav-item" data-section="framework">
+            <span class="dot-nav-label">Framework</span>
+            <span class="dot-nav-dot"></span>
+        </div>
+        <div class="dot-nav-item" data-section="rankings">
+            <span class="dot-nav-label">Rankings</span>
+            <span class="dot-nav-dot"></span>
+        </div>
+        <div class="dot-nav-item" data-section="equity">
+            <span class="dot-nav-label">Equity</span>
+            <span class="dot-nav-dot"></span>
+        </div>
+        <div class="dot-nav-item" data-section="explorer">
+            <span class="dot-nav-label">Explorer</span>
+            <span class="dot-nav-dot"></span>
+        </div>
+        <div class="dot-nav-item" data-section="methods">
+            <span class="dot-nav-label">Methods</span>
+            <span class="dot-nav-dot"></span>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         SECTION 1: OVERVIEW (Hero)
+         ============================================================ -->
+    <section id="overview" class="scroll-section hero-section">
+        <h1 class="hero-title">Three Dimensions of Compounding Neglect</h1>
+        <p class="hero-subtitle">How Biobanks, Clinical Trials, and Scientific Literature Systematically Exclude the Global South</p>
+
+        <div class="hero-stat">
+            <div class="hero-stat-number" id="hero-top-score">538&times;</div>
+            <div class="hero-stat-label">Research intensity disparity between diseases of comparable burden</div>
+            <div class="hero-stat-detail" id="hero-stat-detail">Lymphatic filariasis: 89 trials for 1.3M DALYs vs Type 2 diabetes: 47,892 trials for 2.5M DALYs</div>
+        </div>
+
+        <p class="hero-authors">Corpas M, Freidin MB, Valdivia-Silva J, Baker S, Fatumo S, Guio H (2026)</p>
+
+        <div class="scroll-indicator" onclick="document.getElementById('framework').scrollIntoView({behavior:'smooth'})">&#8595;</div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 2: FRAMEWORK
+         ============================================================ -->
+    <section id="framework" class="scroll-section">
+        <div class="section-inner">
+            <h2 class="section-heading">Three Dimensions of Research Inequity</h2>
+            <p class="section-subheading">HEIM measures compound neglect across discovery, translation, and knowledge - revealing how disadvantage accumulates at every stage of the research pipeline.</p>
+
+            <div class="framework-cards">
+                <!-- Discovery -->
+                <div class="framework-card framework-card--discovery">
+                    <div class="framework-card-label">Discovery</div>
+                    <div class="framework-card-stat" id="fw-discovery-stat">70 biobanks</div>
+                    <div class="framework-card-desc"><span id="fw-discovery-gaps">22</span> critical gaps identified</div>
+                    <div class="framework-mini-chart">
+                        <div class="framework-mini-bar" id="fw-discovery-bar" style="width: 31%; background: var(--dim-discovery);">31% critical</div>
+                    </div>
+                </div>
+
+                <!-- Translation -->
+                <div class="framework-card framework-card--translation">
+                    <div class="framework-card-label">Translation</div>
+                    <div class="framework-card-stat" id="fw-translation-stat">563,725 trials</div>
+                    <div class="framework-card-desc"><span id="fw-translation-gap">2.4</span>x intensity gap</div>
+                    <div class="framework-mini-chart">
+                        <div class="framework-mini-bar" id="fw-gs-bar" style="width: 20%; background: var(--dim-translation);">GS 20%</div>
+                    </div>
+                </div>
+
+                <!-- Knowledge -->
+                <div class="framework-card framework-card--knowledge">
+                    <div class="framework-card-label">Knowledge</div>
+                    <div class="framework-card-stat" id="fw-knowledge-stat">13.1M papers</div>
+                    <div class="framework-card-desc">NTDs <span id="fw-knowledge-isolation">44</span>% more isolated</div>
+                    <div class="framework-mini-chart">
+                        <canvas id="chart-mini-isolation" height="32"></canvas>
+                    </div>
+                </div>
             </div>
-            <div class="header-meta">
-                <span class="framework-badge">Three-Dimensional Equity Analysis</span>
-                <div class="dimension-badges">
-                    <span class="dim-badge dim-discovery">Discovery</span>
-                    <span class="dim-badge dim-translation">Translation</span>
-                    <span class="dim-badge dim-knowledge">Knowledge</span>
+
+            <div class="equity-figure" style="margin-top: 2rem;">
+                <img src="figures/Fig_01_Framework_Schematic.png" alt="HEIM Framework - Three Dimensions of Research Inequity" loading="lazy">
+                <p class="equity-figure-caption">Figure 1. The HEIM framework quantifies research inequity across three independent dimensions: Discovery (biobank gaps), Translation (clinical trial equity), and Knowledge (semantic isolation).</p>
+            </div>
+
+            <div class="formula-box" id="formula-display">
+                <code>Unified = <span class="fw">0.501</span> &times; Discovery + <span class="fw">0.293</span> &times; Translation + <span class="fw">0.206</span> &times; Knowledge</code>
+                <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #94a3b8;">PCA-derived weights (PC1 explains 63.3% variance, n=86 diseases)</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3: DISEASE RANKINGS
+         ============================================================ -->
+    <section id="rankings" class="scroll-section">
+        <div class="section-inner">
+            <h2 class="section-heading">The Most Neglected Diseases</h2>
+            <p class="section-subheading">Ranked by unified score combining biobank gaps, clinical trial equity, and semantic isolation.</p>
+
+            <!-- Interactive chart: Top 20 diseases -->
+            <div class="ranking-chart-container" style="height: 700px;">
+                <canvas id="chart-unified-ranking"></canvas>
+            </div>
+
+            <div class="callout-box">
+                <strong>All top-10 most neglected diseases are infectious conditions exclusively affecting the Global South</strong> - 9 of 10 are WHO-classified neglected tropical diseases, collectively affecting over 1.5 billion people.
+            </div>
+
+            <div class="stats-row">
+                <div class="stats-row-item">
+                    <div class="stats-row-value" id="rank-mean">19.3</div>
+                    <div class="stats-row-label">Mean Score</div>
+                </div>
+                <div class="stats-row-item">
+                    <div class="stats-row-value" id="rank-range">5.0 &ndash; 46.9</div>
+                    <div class="stats-row-label">Score Range</div>
+                </div>
+                <div class="stats-row-item">
+                    <div class="stats-row-value" id="rank-3d-count">86</div>
+                    <div class="stats-row-label">3-Dimension Diseases</div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- Navigation Tabs -->
-    <nav class="nav-tabs">
-        <button class="tab-btn active" data-tab="overview">Overview</button>
-        <button class="tab-btn" data-tab="knowledge">Knowledge</button>
-        <button class="tab-btn" data-tab="clinical-trials">Clinical Trials</button>
-        <button class="tab-btn" data-tab="biobanks">Biobanks</button>
-        <button class="tab-btn" data-tab="diseases">Diseases</button>
-        <button class="tab-btn tab-btn-interactive" data-tab="weights">Weights</button>
-        <button class="tab-btn tab-btn-interactive" data-tab="scenarios">Scenarios</button>
-        <button class="tab-btn tab-btn-interactive" data-tab="biobank-compare">Compare</button>
-        <button class="tab-btn" data-tab="comparison">Pipeline Gap</button>
-        <button class="tab-btn" data-tab="trends">Trial Trends</button>
-        <button class="tab-btn" data-tab="equity">Equity</button>
-        <button class="tab-btn" data-tab="about">About</button>
-    </nav>
+    <!-- ============================================================
+         SECTION 4: EQUITY GAP
+         ============================================================ -->
+    <section id="equity" class="scroll-section">
+        <div class="section-inner">
+            <h2 class="section-heading">The Geography of Neglect</h2>
+            <p class="section-subheading">Research investment follows wealth, not disease burden.</p>
 
-    <!-- Main Content -->
-    <main class="main-content">
-
-        <!-- Tab 1: Overview -->
-        <section id="overview" class="tab-content active">
-            <div class="section-header">
-                <h2>The Architecture of Research Inequity</h2>
-                <p>How disadvantage compounds across Discovery, Translation, and Knowledge</p>
-            </div>
-
-            <!-- Key Finding Banner - NTD Focus -->
-            <div class="card key-finding-card">
-                <div class="key-finding-icon">&#9888;</div>
-                <div class="key-finding-content">
-                    <h3>Key Finding</h3>
-                    <p><strong>Neglected Tropical Diseases are structurally isolated</strong> in the research literature. NTDs show 20% higher semantic isolation than other diseases (p=0.002, Cohen's d=0.82), limiting their ability to benefit from advances in related fields. This isolation compounds existing funding and trial coverage gaps.</p>
-                </div>
-            </div>
-
-            <!-- Three Pillars - Simplified Visual -->
-            <div class="three-pillars">
-                <div class="pillar pillar-discovery">
-                    <div class="pillar-header">Discovery</div>
-                    <div class="pillar-stat" id="stat-biobanks">70</div>
-                    <div class="pillar-label">Biobanks analyzed</div>
-                    <div class="pillar-finding"><span id="stat-critical">22</span> diseases with critical gaps</div>
-                </div>
-                <div class="pillar pillar-translation">
-                    <div class="pillar-header">Translation</div>
-                    <div class="pillar-stat" id="stat-ct-gap">2.4x</div>
-                    <div class="pillar-label">Research intensity gap</div>
-                    <div class="pillar-finding">Global South diseases get <span id="stat-ct-gs-pct">20%</span> of trials</div>
-                </div>
-                <div class="pillar pillar-knowledge">
-                    <div class="pillar-header">Knowledge</div>
-                    <div class="pillar-stat" id="stat-sem-diseases">176</div>
-                    <div class="pillar-label">Diseases mapped semantically</div>
-                    <div class="pillar-finding"><span id="stat-sem-isolated">8</span> diseases are research "islands"</div>
-                </div>
-            </div>
-
-            <!-- Top 5 Most Neglected - Clean List -->
-            <div class="card">
-                <h3>Most Neglected Diseases</h3>
-                <p class="card-description">Ranked by unified triple-burden score (combines all three dimensions)</p>
-                <div class="top-five-list" id="top-neglected-unified">
-                    <!-- Populated by JS -->
-                </div>
-            </div>
-
-            <!-- Single Chart -->
-            <div class="card chart-card">
-                <h3>Research Intensity Gap</h3>
-                <p class="card-description">Trials per million DALYs: Lowest vs Highest research attention</p>
-                <div class="chart-container">
-                    <canvas id="chart-intensity-compare"></canvas>
-                </div>
-            </div>
-
-            <!-- Brief Methodology -->
-            <div class="card info-card">
-                <h3>About This Analysis</h3>
-                <p><strong>HEIM v3.0</strong> integrates three data sources to reveal compound neglect:</p>
-                <ul>
-                    <li><strong>70 biobanks</strong> from the International HundredK+ Cohorts Consortium (Discovery)</li>
-                    <li><strong>563,725 clinical trials</strong> from ClinicalTrials.gov (Translation)</li>
-                    <li><strong>13.1M PubMed papers</strong> with PubMedBERT embeddings (Knowledge)</li>
-                </ul>
-                <p class="methodology-source">Corpas et al. (2026) - In preparation</p>
-            </div>
-        </section>
-
-        <!-- Tab 2: Knowledge Structure (NEW) -->
-        <section id="knowledge" class="tab-content">
-            <div class="section-header">
-                <h2>Knowledge Structure Analysis</h2>
-                <p>Semantic analysis of PubMed papers revealing the architecture of research knowledge</p>
-            </div>
-
-            <!-- Semantic Summary Cards -->
-            <div class="summary-cards">
-                <div class="card summary-card sem-card">
-                    <div class="card-value" id="sem-total-papers">--</div>
-                    <div class="card-label">Papers Analyzed</div>
-                    <div class="card-sublabel">2000-2025</div>
-                </div>
-                <div class="card summary-card sem-card">
-                    <div class="card-value" id="sem-embeddings">--</div>
-                    <div class="card-label">Embeddings Generated</div>
-                    <div class="card-sublabel">PubMedBERT 768-dim</div>
-                </div>
-                <div class="card summary-card sem-card">
-                    <div class="card-value" id="sem-diseases">--</div>
-                    <div class="card-label">Diseases Analyzed</div>
-                </div>
-                <div class="card summary-card sem-card">
-                    <div class="card-value" id="sem-unified-mean">--</div>
-                    <div class="card-label">Mean Unified Score</div>
-                </div>
-            </div>
-
-            <!-- Data Quality Notice -->
-            <div class="card" style="background: #fef3c7; border-left: 4px solid #f59e0b; margin-bottom: 1.5rem;">
-                <h3 style="color: #92400e;">&#9888; Data Quality Notice</h3>
-                <p>The semantic analysis for some diseases has incomplete PubMed coverage due to search term limitations.
-                Affected diseases include lung cancer, brain cancer, and Alzheimer's disease.
-                Results for these diseases should be interpreted with caution. A data re-collection with improved MeSH term mapping is in progress.</p>
-            </div>
-
-            <!-- Key Insight - Statistically Validated -->
-            <div class="card insight-card semantic-insight">
-                <h3>&#129504; NTDs Are Structurally Isolated in Research</h3>
-                <p><strong>17 WHO Neglected Tropical Diseases</strong> show significantly higher semantic isolation than other diseases:</p>
-                <ul style="margin: 0.5rem 0 0.5rem 1.5rem;">
-                    <li>Mean SII: 0.00242 vs 0.00201 (<strong>p=0.002</strong>, Cohen's d=0.82)</li>
-                    <li>Lower Knowledge Transfer Potential (<strong>p=0.009</strong>)</li>
-                    <li><strong>Guinea worm disease</strong> has the highest isolation (2x mean)</li>
-                </ul>
-                <p style="margin-top: 0.75rem;">This isolation limits NTDs' ability to benefit from advances in related fields, compounding existing funding gaps.</p>
-            </div>
-
-            <!-- Semantic Metrics Explanation -->
-            <div class="card">
-                <h3>Semantic Metrics Explained</h3>
-                <div class="metrics-grid">
-                    <div class="metric-box">
-                        <h4>SII (Semantic Isolation Index)</h4>
-                        <p>Measures how far a disease's research is from the centroid of all biomedical knowledge. Higher values indicate more isolated, siloed research.</p>
-                        <div class="metric-interpretation"><strong>Interpretation:</strong> Diseases with high SII (top 25%) are research "islands" disconnected from mainstream science</div>
+            <div class="equity-layout">
+                <!-- Left: Intensity gap chart -->
+                <div class="equity-chart-col">
+                    <div class="chart-container" style="height: 500px;">
+                        <canvas id="chart-intensity-gap"></canvas>
                     </div>
-                    <div class="metric-box">
-                        <h4>KTP (Knowledge Transfer Potential)</h4>
-                        <p>Maximum similarity to any other disease. Lower values mean less opportunity to benefit from advances in related fields.</p>
-                        <div class="metric-interpretation"><strong>Interpretation:</strong> Most diseases have high KTP (>99%), but even small differences indicate reduced spillover benefit</div>
+                </div>
+
+                <!-- Right: Stat blocks -->
+                <div class="equity-stats-col">
+                    <div class="equity-stat-block">
+                        <div class="equity-stat-value">57.78:1</div>
+                        <div class="equity-stat-label">HIC vs LMIC publication ratio (biobanks)</div>
                     </div>
-                    <div class="metric-box">
-                        <h4>RCC (Research Clustering Coefficient)</h4>
-                        <p>Density of connections in the knowledge network. Lower values indicate sparser research communities.</p>
-                        <div class="metric-interpretation"><strong>Interpretation:</strong> Low RCC diseases have fewer collaborating research fields and less integrated knowledge</div>
+                    <div class="equity-stat-block">
+                        <div class="equity-stat-value" id="eq-ct-ratio">2.5:1</div>
+                        <div class="equity-stat-label">HIC vs LMIC trial site ratio</div>
                     </div>
-                    <div class="metric-box">
-                        <h4>Unified Score (0-100)</h4>
-                        <p>Combined neglect score integrating Discovery (biobank gaps), Translation (trial equity), and Knowledge (semantic isolation).</p>
-                        <div class="metric-interpretation"><strong>Interpretation:</strong> Higher scores = more neglected. Top diseases score 40+ across all three dimensions</div>
+                    <div class="equity-stat-block">
+                        <div class="equity-stat-value" id="eq-cancer-pct">61.5%</div>
+                        <div class="equity-stat-label">Clinical trials focused on cancer</div>
                     </div>
                 </div>
             </div>
 
-            <!-- Knowledge Landscape Visualization -->
-            <div class="card figure-card">
-                <h3>Knowledge Landscape (UMAP Projection)</h3>
-                <p class="card-description">2D projection of disease embeddings showing research clusters</p>
-                <div class="figure-container">
-                    <img id="fig-umap" src="" alt="UMAP Knowledge Landscape" class="analysis-figure">
+            <!-- Pipeline paradox callout -->
+            <div class="pipeline-paradox">
+                <h4>The Pipeline Paradox</h4>
+                <p>Geographic concentration is <strong>better</strong> in clinical trials (2.5:1 vs 57.8:1 HIC:LMIC). But <strong>disease priorities are worse</strong>: lymphatic filariasis has 89 trials for 1.3M DALYs, while type 2 diabetes has 47,892 trials for 2.5M DALYs - a <strong>538-fold disparity</strong> for comparable disease burden.</p>
+            </div>
+
+            <!-- Interactive Charts -->
+            <div class="chart-container" style="height: 450px; margin: 2rem 0;">
+                <canvas id="chart-trial-sites"></canvas>
+            </div>
+
+            <div class="chart-container" style="height: 250px; margin: 2rem 0;">
+                <canvas id="chart-regional-pubs"></canvas>
+            </div>
+
+            <div class="chart-container" style="height: 120px; margin: 2rem 0;">
+                <canvas id="chart-ntd-isolation"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 5: INTERACTIVE EXPLORER
+         ============================================================ -->
+    <section id="explorer" class="scroll-section">
+        <div class="section-inner">
+            <h2 class="section-heading">Interactive Explorer</h2>
+            <p class="section-subheading">Adjust weights, model scenarios, and explore the data.</p>
+
+            <!-- 5a: Weight Adjustment + Live Rankings -->
+            <div class="explorer-subsection">
+                <h3 class="explorer-subtitle">Weight Adjustment</h3>
+                <p class="explorer-desc">Modify the PCA-derived dimension weights and watch rankings update in real time.</p>
+
+                <div class="weight-status-bar">
+                    <span class="weight-status-text" id="weight-status">Using published PCA weights</span>
+                    <button class="btn btn-secondary" onclick="resetAllWeights()">Reset to Defaults</button>
                 </div>
-            </div>
 
-            <div class="card figure-card">
-                <h3>Knowledge Transfer Network</h3>
-                <p class="card-description">Connections between diseases based on semantic similarity</p>
-                <div class="figure-container">
-                    <img id="fig-network" src="" alt="Knowledge Network" class="analysis-figure">
-                </div>
-            </div>
-
-            <div class="card figure-card">
-                <h3>Disease Similarity Heatmap</h3>
-                <p class="card-description">Cross-disease semantic similarity matrix - darker colors indicate more related research</p>
-                <div class="figure-container">
-                    <img id="fig-heatmap" src="" alt="Semantic Similarity Heatmap" class="analysis-figure">
-                </div>
-            </div>
-
-            <div class="card figure-card">
-                <h3>Gap Score vs Semantic Isolation</h3>
-                <p class="card-description">Correlation between biobank neglect and knowledge isolation</p>
-                <div class="figure-container">
-                    <img id="fig-gap-isolation" src="" alt="Gap vs Isolation" class="analysis-figure">
-                </div>
-            </div>
-
-            <div class="card figure-card">
-                <h3>Temporal Research Drift</h3>
-                <p class="card-description">How research focus has shifted over 25 years</p>
-                <div class="figure-container">
-                    <img id="fig-temporal" src="" alt="Temporal Drift" class="analysis-figure">
-                </div>
-            </div>
-
-            <!-- Disease Rankings Table -->
-            <div class="card">
-                <h3>Disease Semantic Metrics</h3>
-                <p class="card-description">Complete metrics for all analyzed diseases, sorted by Unified Score</p>
-                <div class="filters">
-                    <input type="text" id="semantic-disease-search" class="search-input" placeholder="Search diseases...">
-                    <select id="semantic-filter" class="filter-select">
-                        <option value="all">All Diseases</option>
-                        <option value="high-isolation">High Isolation (SII > 0.003)</option>
-                        <option value="low-ktp">Low Transfer Potential</option>
-                        <option value="top-unified">Top 20 Unified Score</option>
-                    </select>
-                </div>
-                <div class="table-container">
-                    <table class="data-table sortable" id="table-semantic-diseases">
-                        <thead>
-                            <tr>
-                                <th>Disease</th>
-                                <th>Papers</th>
-                                <th>Gap Score</th>
-                                <th>Isolation %</th>
-                                <th>Transfer %</th>
-                                <th>Clustering %</th>
-                                <th>Unified</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-                <p class="table-note">Note: Isolation/Transfer/Clustering show percentile ranks (0-100%). Higher isolation = more neglected. Higher transfer = better connected.</p>
-            </div>
-        </section>
-
-        <!-- Tab 3: Clinical Trials -->
-        <section id="clinical-trials" class="tab-content">
-            <div class="section-header">
-                <h2>Clinical Trials Analysis</h2>
-                <p>563,725 clinical trials from ClinicalTrials.gov (2000-2025) mapped to GBD disease categories</p>
-            </div>
-
-            <!-- CT Summary Cards -->
-            <div class="summary-cards">
-                <div class="card summary-card">
-                    <div class="card-value" id="ct-total-trials">--</div>
-                    <div class="card-label">Total Trials</div>
-                </div>
-                <div class="card summary-card">
-                    <div class="card-value" id="ct-gs-trials">--</div>
-                    <div class="card-label">GS Priority Trials</div>
-                    <div class="card-sublabel" id="ct-gs-trials-pct">--</div>
-                </div>
-                <div class="card summary-card">
-                    <div class="card-value" id="ct-intensity-gap">--</div>
-                    <div class="card-label">Intensity Gap</div>
-                    <div class="card-sublabel">non-GS vs GS</div>
-                </div>
-                <div class="card summary-card">
-                    <div class="card-value" id="ct-neglected">--</div>
-                    <div class="card-label">Severely Neglected</div>
-                    <div class="card-sublabel">&lt;500 trials in 26 years</div>
-                </div>
-            </div>
-
-            <!-- Cancer Dominance Alert -->
-            <div class="card alert-card">
-                <div class="alert-icon">&#9888;</div>
-                <div class="alert-content">
-                    <h4>Cancer Dominance Problem</h4>
-                    <p><strong id="ct-cancer-pct">--</strong> of all clinical trials focus on cancers, which represent only <strong id="ct-cancer-burden-pct">--</strong> of global disease burden-a <strong id="ct-cancer-ratio">--</strong> overrepresentation.</p>
-                </div>
-            </div>
-
-            <!-- Charts -->
-            <div class="charts-row">
-                <div class="card chart-card">
-                    <h3>Trial Count by Disease Category</h3>
-                    <div class="chart-container chart-large">
-                        <canvas id="chart-ct-by-category"></canvas>
-                    </div>
-                </div>
-                <div class="card chart-card">
-                    <h3>Research Intensity by Category</h3>
-                    <div class="chart-container chart-large">
-                        <canvas id="chart-ct-intensity"></canvas>
-                    </div>
-                </div>
-            </div>
-
-            <!-- All Diseases Trial Coverage -->
-            <div class="card">
-                <h3>Disease Trial Coverage</h3>
-                <p class="card-description">All diseases mapped to GBD categories with clinical trial coverage</p>
-                <div class="table-container">
-                    <table class="data-table sortable" id="table-ct-gs-diseases">
-                        <thead>
-                            <tr>
-                                <th>Disease</th>
-                                <th>Category</th>
-                                <th>Trials</th>
-                                <th>DALYs (M)</th>
-                                <th>Intensity</th>
-                                <th>Assessment</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Geographic Distribution -->
-            <div class="card">
-                <h3>Geographic Distribution of Trial Sites</h3>
-                <div class="charts-row">
-                    <div class="chart-card-inner">
-                        <h4>HIC vs LMIC Distribution</h4>
-                        <div class="chart-container">
-                            <canvas id="chart-ct-hic-lmic"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card-inner">
-                        <h4>Top 15 Countries</h4>
-                        <div class="chart-container chart-large">
-                            <canvas id="chart-ct-countries"></canvas>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Temporal Trends -->
-            <div class="card">
-                <h3>Temporal Trends (2000-2025)</h3>
-                <div class="charts-row">
-                    <div class="chart-card-inner">
-                        <h4>Trial Volume Growth</h4>
-                        <div class="chart-container">
-                            <canvas id="chart-ct-temporal-volume"></canvas>
-                        </div>
-                    </div>
-                    <div class="chart-card-inner">
-                        <h4>GS Priority Share Over Time</h4>
-                        <div class="chart-container">
-                            <canvas id="chart-ct-temporal-gs"></canvas>
-                        </div>
-                    </div>
-                </div>
-                <div class="trend-insight">
-                    <strong>Trend Insight:</strong> Despite a <span id="ct-growth-factor">--</span> increase in trial volume since 2000, the share of trials addressing Global South Priority diseases has <strong>declined</strong> by <span id="ct-gs-decline">--</span> percentage points.
-                </div>
-            </div>
-
-            <!-- Lowest Intensity Diseases -->
-            <div class="card">
-                <h3>Lowest Research Intensity Diseases (&gt;5M DALYs)</h3>
-                <p class="card-description">High-burden diseases receiving the least research attention</p>
-                <div class="table-container">
-                    <table class="data-table" id="table-ct-lowest-intensity">
-                        <thead>
-                            <tr>
-                                <th>Disease</th>
-                                <th>Trials/M DALYs</th>
-                                <th>Total Trials</th>
-                                <th>DALYs (M)</th>
-                                <th>GS Priority</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tab 3: Biobanks -->
-        <section id="biobanks" class="tab-content">
-            <div class="section-header">
-                <h2>Biobank Analysis</h2>
-                <p>Detailed equity metrics for each biobank in the International HundredK+ Cohorts Consortium (IHCC)</p>
-            </div>
-
-            <!-- Filters -->
-            <div class="filters">
-                <input type="text" id="biobank-search" class="search-input" placeholder="Search biobanks...">
-                <select id="biobank-region-filter" class="filter-select">
-                    <option value="">All Regions</option>
-                    <option value="AFR">Africa</option>
-                    <option value="AMR">Americas</option>
-                    <option value="EMR">Eastern Mediterranean</option>
-                    <option value="EUR">Europe</option>
-                    <option value="SEAR">South-East Asia</option>
-                    <option value="WPR">Western Pacific</option>
-                </select>
-                <select id="biobank-category-filter" class="filter-select">
-                    <option value="">All Categories</option>
-                    <option value="High">High Alignment</option>
-                    <option value="Moderate">Moderate Alignment</option>
-                    <option value="Low">Low Alignment</option>
-                </select>
-            </div>
-
-            <!-- Biobanks Table -->
-            <div class="card">
-                <div class="table-container">
-                    <table class="data-table sortable" id="table-biobanks">
-                        <thead>
-                            <tr>
-                                <th data-sort="name">Biobank</th>
-                                <th data-sort="country">Country</th>
-                                <th data-sort="region">Region</th>
-                                <th data-sort="eas">EAS</th>
-                                <th data-sort="category">Category</th>
-                                <th data-sort="publications">Publications</th>
-                                <th data-sort="diseases">Diseases</th>
-                                <th data-sort="gaps">Critical Gaps</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Download Button -->
-            <div class="actions">
-                <button class="btn btn-primary" onclick="downloadBiobanksCSV()">Download CSV</button>
-            </div>
-        </section>
-
-        <!-- Tab 4: Diseases -->
-        <section id="diseases" class="tab-content">
-            <div class="section-header">
-                <h2>Disease Analysis</h2>
-                <p>Research gaps by disease relative to global burden (GBD 2021)</p>
-            </div>
-
-            <!-- Filters -->
-            <div class="filters">
-                <input type="text" id="disease-search" class="search-input" placeholder="Search diseases...">
-                <select id="disease-view-filter" class="filter-select">
-                    <option value="all">All Diseases</option>
-                    <option value="gs">Global South Priority Only</option>
-                    <option value="neglected">Severely Neglected (&lt;500 trials)</option>
-                </select>
-            </div>
-
-            <!-- Disease Chart -->
-            <div class="card chart-card">
-                <h3>Disease Burden vs Clinical Trial Coverage</h3>
-                <div class="chart-container chart-large">
-                    <canvas id="chart-disease-scatter"></canvas>
-                </div>
-            </div>
-
-            <!-- Diseases Table -->
-            <div class="card">
-                <div class="table-container">
-                    <table class="data-table sortable" id="table-diseases">
-                        <thead>
-                            <tr>
-                                <th>Disease</th>
-                                <th>Category</th>
-                                <th>DALYs (M)</th>
-                                <th>Clinical Trials</th>
-                                <th>Intensity</th>
-                                <th>GS Priority</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tab: Weight Adjustment Panel -->
-        <section id="weights" class="tab-content">
-            <div class="section-header">
-                <h2>Weight Adjustment Panel</h2>
-                <p>Adjust HEIM formula weights and see rankings update in real-time</p>
-            </div>
-
-            <!-- Current Weights Status -->
-            <div class="card weight-status-card">
-                <div class="weight-status-row">
-                    <span class="weight-status-label">Status:</span>
-                    <span class="weight-status-value" id="weight-status">Using published PCA weights</span>
-                    <button class="btn btn-secondary" id="btn-reset-weights" onclick="resetAllWeights()">Reset to Defaults</button>
-                </div>
-            </div>
-
-            <!-- Unified Score Weights -->
-            <div class="card slider-card">
-                <h3>Unified Score Weights</h3>
-                <p class="card-description">PCA-derived weights for the three dimensions. Must sum to 1.0.</p>
                 <div class="slider-group">
                     <div class="slider-row">
                         <label class="slider-label">
-                            <span class="dim-dot dim-discovery-dot"></span> Discovery (Gap Score)
+                            <span class="dim-dot dim-dot--discovery"></span> Discovery (Gap Score)
                         </label>
                         <input type="range" class="weight-slider" id="slider-w-discovery" min="0" max="100" value="50" step="1">
                         <span class="slider-value" id="val-w-discovery">0.501</span>
                     </div>
                     <div class="slider-row">
                         <label class="slider-label">
-                            <span class="dim-dot dim-translation-dot"></span> Translation (Trial Equity)
+                            <span class="dim-dot dim-dot--translation"></span> Translation (Trial Equity)
                         </label>
                         <input type="range" class="weight-slider" id="slider-w-translation" min="0" max="100" value="29" step="1">
                         <span class="slider-value" id="val-w-translation">0.293</span>
                     </div>
                     <div class="slider-row">
                         <label class="slider-label">
-                            <span class="dim-dot dim-knowledge-dot"></span> Knowledge (Semantic Isolation)
+                            <span class="dim-dot dim-dot--knowledge"></span> Knowledge (Semantic Isolation)
                         </label>
                         <input type="range" class="weight-slider" id="slider-w-knowledge" min="0" max="100" value="21" step="1">
                         <span class="slider-value" id="val-w-knowledge">0.206</span>
@@ -556,565 +253,217 @@
                         Sum: <span id="weight-sum">1.000</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- EAS Weights -->
-            <div class="card slider-card">
-                <h3>EAS Component Weights</h3>
-                <p class="card-description">Equity Alignment Score: EAS = 100 - (w_gap x GapSeverity + w_burden x BurdenMiss + w_capacity x CapacityPenalty)</p>
-                <div class="slider-group">
-                    <div class="slider-row">
-                        <label class="slider-label">Gap Severity</label>
-                        <input type="range" class="weight-slider" id="slider-eas-gap" min="0" max="100" value="40" step="1">
-                        <span class="slider-value" id="val-eas-gap">0.40</span>
-                    </div>
-                    <div class="slider-row">
-                        <label class="slider-label">Burden Miss</label>
-                        <input type="range" class="weight-slider" id="slider-eas-burden" min="0" max="100" value="30" step="1">
-                        <span class="slider-value" id="val-eas-burden">0.30</span>
-                    </div>
-                    <div class="slider-row">
-                        <label class="slider-label">Capacity Penalty</label>
-                        <input type="range" class="weight-slider" id="slider-eas-capacity" min="0" max="100" value="30" step="1">
-                        <span class="slider-value" id="val-eas-capacity">0.30</span>
-                    </div>
-                    <div class="slider-sum">
-                        Sum: <span id="eas-weight-sum">1.00</span>
-                    </div>
+                <div class="formula-box live-formula" id="formula-unified">
+                    <code>Unified = <span class="fw">0.501</span> &times; D_norm + <span class="fw">0.293</span> &times; T_norm + <span class="fw">0.206</span> &times; K_norm</code>
                 </div>
-            </div>
 
-            <!-- Live Results Preview -->
-            <div class="card">
-                <h3>Live Rankings (Top 15)</h3>
-                <p class="card-description">Disease rankings update as you adjust weights above</p>
+                <!-- Live Rankings Table -->
                 <div class="table-container">
                     <table class="data-table" id="table-live-rankings">
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Disease</th>
-                                <th>Unified Score</th>
-                                <th>Change</th>
-                                <th>Dims</th>
-                            </tr>
-                        </thead>
+                        <thead><tr></tr></thead>
                         <tbody></tbody>
                     </table>
                 </div>
-            </div>
 
-            <!-- Live Methodology Display -->
-            <div class="card methodology-card">
-                <h3>Current Formulas</h3>
-                <div class="formula-box live-formula" id="formula-unified">
-                    <code>Unified = <span class="fw">0.501</span> x D_norm + <span class="fw">0.293</span> x T_norm + <span class="fw">0.206</span> x K_norm</code>
-                </div>
-                <div class="formula-box live-formula" id="formula-eas">
-                    <code>EAS = 100 - (<span class="fw">0.40</span> x GapSeverity + <span class="fw">0.30</span> x BurdenMiss + <span class="fw">0.30</span> x CapacityPenalty)</code>
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="exportWeightedCSV()">Export CSV</button>
+                    <button class="btn btn-secondary" onclick="exportPDFReport()">Export PDF</button>
                 </div>
             </div>
 
-            <!-- Export -->
-            <div class="actions">
-                <button class="btn btn-primary" onclick="exportWeightedCSV()">Export CSV with Current Weights</button>
-                <button class="btn btn-secondary" onclick="exportPDFReport()">Export PDF Report</button>
-            </div>
-        </section>
+            <!-- 5b: Scenario Builder -->
+            <div class="explorer-subsection">
+                <h3 class="explorer-subtitle">Scenario Builder</h3>
+                <p class="explorer-desc">Model "what if" scenarios to see how research investment changes would shift disease rankings.</p>
 
-        <!-- Tab: Scenario Builder -->
-        <section id="scenarios" class="tab-content">
-            <div class="section-header">
-                <h2>Scenario Builder</h2>
-                <p>Model "what if" scenarios to see how research investment changes would shift disease rankings</p>
-            </div>
-
-            <!-- Preset Scenarios -->
-            <div class="card">
-                <h3>Preset Scenarios</h3>
                 <div class="scenario-grid">
                     <div class="scenario-card" data-scenario="increaseNTD50" onclick="runScenario('increaseNTD50')">
                         <div class="scenario-icon">+50%</div>
                         <h4>Increase NTD Research</h4>
-                        <p>Simulate 50% more clinical trials for all 17 WHO NTDs and 30% gap reduction</p>
+                        <p>50% more clinical trials for all 17 WHO NTDs</p>
                     </div>
                     <div class="scenario-card" data-scenario="equaliseHICLMIC" onclick="runScenario('equaliseHICLMIC')">
                         <div class="scenario-icon">=</div>
                         <h4>Equalise HIC/LMIC</h4>
-                        <p>Double trial intensity for highly neglected diseases (gap &gt; 50)</p>
+                        <p>Double trial intensity for highly neglected diseases</p>
                     </div>
                     <div class="scenario-card" data-scenario="doubleInfectious" onclick="runScenario('doubleInfectious')">
                         <div class="scenario-icon">2x</div>
                         <h4>Double Infectious Research</h4>
-                        <p>Double clinical trial intensity for major infectious diseases</p>
+                        <p>Double clinical trial intensity for infectious diseases</p>
                     </div>
                     <div class="scenario-card" data-scenario="reduceCancerBias" onclick="runScenario('reduceCancerBias')">
                         <div class="scenario-icon">&#8652;</div>
                         <h4>Reduce Cancer Bias</h4>
-                        <p>Redistribute 30% of excess cancer trial intensity to neglected diseases</p>
+                        <p>Redistribute 30% of excess cancer trials to neglected diseases</p>
                     </div>
                 </div>
-            </div>
 
-            <!-- Scenario Results -->
-            <div class="card" id="scenario-results-card" style="display:none;">
-                <h3>Scenario Results: <span id="scenario-name">--</span></h3>
-                <p class="card-description" id="scenario-desc">--</p>
+                <!-- Scenario Results (hidden until a scenario is run) -->
+                <div class="scenario-results" id="scenario-results">
+                    <h4 style="margin-bottom: 0.5rem;">Results: <span id="scenario-name">--</span></h4>
+                    <p style="font-size: 0.85rem; color: var(--nm-text-secondary); margin-bottom: 1rem;" id="scenario-desc">--</p>
 
-                <!-- Before/After Comparison -->
-                <div class="scenario-comparison">
-                    <div class="scenario-col">
-                        <h4>Baseline Rankings</h4>
-                        <div class="table-container">
-                            <table class="data-table" id="table-scenario-before">
-                                <thead><tr><th>#</th><th>Disease</th><th>Score</th></tr></thead>
-                                <tbody></tbody>
-                            </table>
+                    <div class="scenario-comparison">
+                        <div class="scenario-col">
+                            <h4>Baseline Rankings</h4>
+                            <div class="table-container">
+                                <table class="data-table" id="table-scenario-before">
+                                    <thead><tr><th>#</th><th>Disease</th><th>Score</th></tr></thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="scenario-col">
+                            <h4>Most Affected Diseases</h4>
+                            <div class="table-container">
+                                <table class="data-table" id="table-scenario-after">
+                                    <thead><tr><th>#</th><th>Disease</th><th>Score</th><th>&Delta;</th></tr></thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                    <div class="scenario-col">
-                        <h4>After Scenario</h4>
-                        <div class="table-container">
-                            <table class="data-table" id="table-scenario-after">
-                                <thead><tr><th>#</th><th>Disease</th><th>Score</th><th>Change</th></tr></thead>
-                                <tbody></tbody>
-                            </table>
+
+                    <div class="scenario-stats">
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="scenario-rho">--</div>
+                            <div class="stat-box-label">Spearman rho</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="scenario-moved">--</div>
+                            <div class="stat-box-label">Rank changes</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-box-value" id="scenario-max-move">--</div>
+                            <div class="stat-box-label">Largest shift</div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Spearman Rho -->
-                <div class="scenario-stats">
-                    <div class="stat-box">
-                        <div class="stat-box-value" id="scenario-rho">--</div>
-                        <div class="stat-box-label">Spearman rho (rank stability)</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-box-value" id="scenario-moved">--</div>
-                        <div class="stat-box-label">Diseases that changed rank</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-box-value" id="scenario-max-move">--</div>
-                        <div class="stat-box-label">Largest rank change</div>
-                    </div>
+                    <!-- Verification trace -->
+                    <details class="scenario-verification" id="scenario-verification">
+                        <summary class="verification-toggle">Verification trace</summary>
+                        <div class="verification-body" id="verification-body">
+                            <!-- Populated by JS -->
+                        </div>
+                    </details>
                 </div>
             </div>
 
-            <!-- Sensitivity Analysis -->
-            <div class="card">
-                <h3>Sensitivity Analysis</h3>
-                <p class="card-description">Spearman rho between baseline and 200 random Dirichlet-distributed weight vectors</p>
-                <div class="chart-container" style="height: 350px;">
-                    <canvas id="chart-sensitivity"></canvas>
-                </div>
-                <div class="sensitivity-summary" id="sensitivity-summary">
-                    <p>Click "Run Sensitivity Analysis" to compute.</p>
-                </div>
-                <div class="actions">
-                    <button class="btn btn-primary" onclick="runSensitivityAnalysis()">Run Sensitivity Analysis</button>
-                </div>
-            </div>
-        </section>
+            <!-- 5d: Biobank Search/Compare -->
+            <div class="explorer-subsection">
+                <h3 class="explorer-subtitle">Biobank Comparison</h3>
+                <p class="explorer-desc">Select 2-5 biobanks for side-by-side comparison. Grouped by WHO region.</p>
 
-        <!-- Tab: Biobank Comparison -->
-        <section id="biobank-compare" class="tab-content">
-            <div class="section-header">
-                <h2>Biobank Comparison</h2>
-                <p>Select 2-5 biobanks for side-by-side comparison</p>
-            </div>
-
-            <!-- Biobank Selection -->
-            <div class="card">
-                <h3>Select Biobanks</h3>
-                <p class="card-description">Check 2-5 biobanks to compare</p>
-                <div class="filters">
+                <div class="biobank-search-container">
                     <input type="text" id="compare-biobank-search" class="search-input" placeholder="Filter biobanks...">
                 </div>
+
                 <div class="compare-checklist" id="compare-checklist">
                     <!-- Populated by JS -->
                 </div>
-                <div class="actions">
+
+                <div class="btn-group">
                     <button class="btn btn-primary" onclick="runBiobankComparison()">Compare Selected</button>
-                    <button class="btn btn-secondary" onclick="clearBiobankSelection()">Clear Selection</button>
-                </div>
-            </div>
-
-            <!-- Radar Chart Comparison -->
-            <div class="card" id="compare-results-card" style="display:none;">
-                <h3>Comparison Results</h3>
-                <div class="chart-container" style="height: 400px;">
-                    <canvas id="chart-compare-radar"></canvas>
+                    <button class="btn btn-secondary" onclick="clearBiobankSelection()">Clear</button>
                 </div>
 
-                <!-- Difference Table -->
-                <div class="table-container" style="margin-top: 1.5rem;">
-                    <table class="data-table" id="table-compare-biobanks">
-                        <thead>
-                            <tr id="compare-header-row">
-                                <th>Metric</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-
-        <!-- Tab 5: Pipeline Comparison -->
-        <section id="comparison" class="tab-content">
-            <div class="section-header">
-                <h2>Discovery-to-Translation Gap</h2>
-                <p>Comparing equity patterns between biobank research and clinical trials</p>
-            </div>
-
-            <!-- Comparison Summary -->
-            <div class="comparison-table-card card">
-                <h3>Pipeline Stage Comparison</h3>
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Metric</th>
-                            <th>Biobanks (Discovery)</th>
-                            <th>Clinical Trials (Translation)</th>
-                            <th>Interpretation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>HIC:LMIC Ratio</strong></td>
-                            <td>57.8:1 (publications)</td>
-                            <td id="comp-hic-ratio">--</td>
-                            <td class="interpretation-good">Better in trials</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Cancer Focus</strong></td>
-                            <td>~42% of publications</td>
-                            <td id="comp-cancer-focus">--</td>
-                            <td class="interpretation-bad">Worse in trials</td>
-                        </tr>
-                        <tr>
-                            <td><strong>GS Priority Share</strong></td>
-                            <td>~15% of research</td>
-                            <td id="comp-gs-share">--</td>
-                            <td class="interpretation-moderate">Slightly better</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Temporal Trend</strong></td>
-                            <td>Slowly improving</td>
-                            <td id="comp-trend">Declining (-12.3 pp)</td>
-                            <td class="interpretation-bad">Worsening</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-            <!-- Key Insight -->
-            <div class="card insight-card">
-                <h3>&#128161; Key Insight: The Pipeline Paradox</h3>
-                <p>While <strong>geographic concentration is better</strong> in clinical trials (2.5:1 vs 57.8:1 HIC:LMIC ratio), <strong>disease priorities are worse</strong>. Cancer research dominates trials even more than biobank publications (61.5% vs 42%), suggesting that while trials are more geographically accessible, research agendas remain skewed toward high-income country priorities.</p>
-            </div>
-
-            <!-- Consistently Neglected -->
-            <div class="card">
-                <h3>Consistently Neglected Diseases</h3>
-                <p class="card-description">Diseases under-researched at BOTH discovery and translation stages</p>
-                <div class="neglected-diseases-grid" id="neglected-diseases-grid">
-                    <!-- Populated by JS -->
-                </div>
-            </div>
-        </section>
-
-        <!-- Tab 6: Trends -->
-        <section id="trends" class="tab-content">
-            <div class="section-header">
-                <h2>Clinical Trial Trends</h2>
-                <p>How translation-stage research equity has evolved (2000-2025)</p>
-            </div>
-
-            <div class="card chart-card">
-                <h3>Clinical Trial Volume Growth</h3>
-                <div class="chart-container chart-large">
-                    <canvas id="chart-trends-ct-growth"></canvas>
-                </div>
-            </div>
-
-            <div class="card chart-card">
-                <h3>Global South Priority Share Over Time</h3>
-                <div class="chart-container chart-large">
-                    <canvas id="chart-trends-gs-share"></canvas>
-                </div>
-            </div>
-
-            <div class="card info-card">
-                <h3>Trend Analysis</h3>
-                <p><strong>2000-2005 average:</strong> 47.7% of trials addressed GS priority diseases</p>
-                <p><strong>2020-2025 average:</strong> 35.5% of trials addressed GS priority diseases</p>
-                <p><strong>Change:</strong> <span class="trend-negative">-12.3 percentage points</span></p>
-                <p>Despite a <strong>15.5x increase</strong> in total trial volume, the share dedicated to Global South Priority diseases has <em>declined</em>. The COVID-19 pandemic temporarily increased GS share (43.1% in 2020) but this was transient.</p>
-            </div>
-        </section>
-
-        <!-- Tab 7: Equity -->
-        <section id="equity" class="tab-content">
-            <div class="section-header">
-                <h2>Research Equity Summary</h2>
-                <p>Key inequities across the three dimensions of the research pipeline</p>
-            </div>
-
-            <!-- Three Dimension Equity Summary -->
-            <div class="equity-dimensions">
-                <div class="equity-dim">
-                    <h4>Discovery (Biobanks)</h4>
-                    <div class="equity-stat">57.8:1</div>
-                    <div class="equity-label">HIC vs LMIC publication ratio</div>
-                    <p class="equity-detail">High-income country biobanks produce 58x more research output than LMIC biobanks</p>
-                </div>
-                <div class="equity-dim">
-                    <h4>Translation (Trials)</h4>
-                    <div class="equity-stat" id="equity-ct-ratio">2.5:1</div>
-                    <div class="equity-label">HIC vs LMIC trial site ratio</div>
-                    <p class="equity-detail">Global South diseases get 20% of trials despite 38% of disease burden</p>
-                </div>
-                <div class="equity-dim">
-                    <h4>Knowledge (Semantic)</h4>
-                    <div class="equity-stat">8</div>
-                    <div class="equity-label">Semantically isolated diseases</div>
-                    <p class="equity-detail">Neglected diseases exist as research "islands" disconnected from mainstream science</p>
-                </div>
-            </div>
-
-            <!-- Key Insight -->
-            <div class="card alert-card">
-                <div class="alert-icon">&#9888;</div>
-                <div class="alert-content">
-                    <h4>The Compounding Effect</h4>
-                    <p>Inequity worsens at each stage: diseases under-studied in biobanks are also under-represented in trials AND semantically isolated. This creates self-reinforcing cycles where neglected diseases receive progressively less attention.</p>
-                </div>
-            </div>
-
-            <!-- Charts -->
-            <div class="charts-row">
-                <div class="card chart-card">
-                    <h3>Burden vs Research Allocation</h3>
-                    <p class="card-description">Global South diseases: 38% of burden, 20% of trials</p>
-                    <div class="chart-container">
-                        <canvas id="chart-equity-burden-research"></canvas>
+                <!-- Comparison Results (hidden until comparison is run) -->
+                <div class="compare-results" id="compare-results">
+                    <div class="compare-radar-container">
+                        <canvas id="chart-compare-radar"></canvas>
                     </div>
-                </div>
-                <div class="card chart-card">
-                    <h3>Trial Site Distribution</h3>
-                    <p class="card-description">Where clinical trials are conducted globally</p>
-                    <div class="chart-container">
-                        <canvas id="chart-equity-geo"></canvas>
+                    <div class="table-container">
+                        <table class="data-table" id="table-compare-biobanks">
+                            <thead>
+                                <tr id="compare-header-row">
+                                    <th>Metric</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- What This Means -->
-            <div class="card info-card">
-                <h3>What This Means</h3>
-                <p>The three-dimensional analysis reveals that research inequity is not random but <strong>structural</strong>. The same diseases that are neglected in one dimension tend to be neglected across all dimensions, suggesting systemic factors that perpetuate the gap.</p>
-                <p>Addressing this requires interventions at multiple levels: funding priorities, trial site selection, and deliberate efforts to connect isolated research communities to mainstream biomedical science.</p>
-            </div>
-        </section>
+    <!-- ============================================================
+         SECTION 6: METHODS & CITATION
+         ============================================================ -->
+    <section id="methods" class="scroll-section">
+        <div class="section-inner">
+            <h2 class="section-heading">Methods &amp; Citation</h2>
+            <p class="section-subheading">Data sources, statistical validation, and how to cite this work.</p>
 
-        <!-- Tab 8: About -->
-        <section id="about" class="tab-content">
-            <div class="section-header">
-                <h2>About HEIM Framework</h2>
-                <p>Methodology, data sources, and how to interpret this dashboard</p>
-            </div>
+            <details>
+                <summary>Data Sources</summary>
+                <div class="details-content">
+                    <p><strong>Biobanks (Discovery):</strong> Publication data from PubMed for 70 biobanks in the International HundredK+ Cohorts Consortium (IHCC). Disease coverage mapped to GBD 2021 taxonomy.</p>
+                    <p><strong>Clinical Trials (Translation):</strong> 563,725 studies from ClinicalTrials.gov via the AACT database (2000-2025). 2,189,930 disease-trial mappings across 770,178 trial sites in 194 countries.</p>
+                    <p><strong>PubMed Semantic (Knowledge):</strong> 13.1M papers with PubMedBERT embeddings (768-dimensional). 176 diseases analysed for semantic isolation, knowledge transfer potential, and research clustering.</p>
+                    <p><strong>Disease Burden:</strong> Global Burden of Disease Study 2021 (IHME). 175 disease categories mapped to GBD Level 3 causes. 29 Global South Priority diseases identified.</p>
+                </div>
+            </details>
 
-            <!-- What is HEIM -->
-            <div class="card methodology-card">
-                <h3>&#127919; What is HEIM?</h3>
-                <p><strong>HEIM (Health Equity Informative Metrics)</strong> is a comprehensive framework for measuring alignment between biomedical research output and global health priorities. It quantifies the "discovery-to-translation gap"-showing how health equity disparities persist and even worsen as research moves from basic science (biobanks) to clinical application (trials).</p>
-                <p>The framework answers critical questions:</p>
-                <ul>
-                    <li>Are we studying the diseases that cause the most suffering?</li>
-                    <li>Do Global South populations benefit equitably from research?</li>
-                    <li>Is the situation improving or worsening over time?</li>
-                </ul>
-            </div>
+            <details>
+                <summary>Key Metrics</summary>
+                <div class="details-content">
+                    <p><strong>Unified Score</strong> = w_D &times; Discovery_norm + w_T &times; Translation_norm + w_K &times; Knowledge_norm (PCA-derived weights: 0.501, 0.293, 0.206). Higher = more neglected.</p>
+                    <p><strong>Gap Score (Discovery)</strong>: Three-tier scoring: zero publications (95), category thresholds (infectious/neglected), burden-normalised intensity deciles. Global South penalty (+10 if &lt;50 pubs).</p>
+                    <p><strong>Research Intensity</strong> = Trials per Million DALYs. Measures research attention relative to disease burden.</p>
+                    <p><strong>Semantic Isolation Index (SII)</strong>: Mean cosine distance from the global centroid of all biomedical knowledge. Higher = more isolated.</p>
+                    <p><strong>Knowledge Transfer Potential (KTP)</strong>: Maximum similarity to any other disease. Lower = less benefit from related fields.</p>
+                    <p><strong>Equity Alignment Score (EAS)</strong>: Per-biobank metric. EAS = 100 - (w_gap &times; GapSeverity + w_burden &times; BurdenMiss + w_capacity &times; CapacityPenalty).</p>
+                </div>
+            </details>
 
-            <!-- Data Sources -->
-            <div class="card methodology-card">
-                <h3>&#128202; Data Sources</h3>
+            <details>
+                <summary>Statistical Validation</summary>
+                <div class="details-content">
+                    <p><strong>NTD Semantic Isolation:</strong> 17 WHO NTDs show 44% higher isolation than other diseases (mean SII 0.00211 vs 0.00146, P&nbsp;&lt;&nbsp;0.0001, Cohen's d&nbsp;=&nbsp;1.80).</p>
+                    <p><strong>Dimension Orthogonality:</strong> r=0.07 between dimensions confirms they measure independent aspects of neglect.</p>
+                    <p><strong>Ranking Robustness:</strong> 200 Dirichlet-distributed weight perturbations show mean Spearman rho &gt;0.95, confirming rankings are stable under weight variation.</p>
+                    <p><strong>PCA Justification:</strong> PC1 explains 63.3% of variance across 86 diseases with complete data. PC1+PC2 explain 86.9%.</p>
+                </div>
+            </details>
 
-                <div class="methodology-subsection">
-                    <h4>Clinical Trials Data (Translation)</h4>
-                    <p>Trial data comes from <a href="https://clinicaltrials.gov/" target="_blank">ClinicalTrials.gov</a> via the AACT database (Aggregate Analysis of ClinicalTrials.gov).</p>
+            <details>
+                <summary>Limitations</summary>
+                <div class="details-content">
                     <ul>
-                        <li><strong>563,725 studies</strong> retrieved (2000-2025)</li>
-                        <li><strong>2,189,930 disease-trial mappings</strong> (trials can address multiple diseases)</li>
-                        <li><strong>770,178 trial site records</strong> across 194 countries</li>
+                        <li><strong>ClinicalTrials.gov:</strong> US/Western registration bias; many non-US trials unregistered.</li>
+                        <li><strong>PubMed:</strong> English-language bias; some diseases have incomplete MeSH coverage (lung cancer, Alzheimer's).</li>
+                        <li><strong>Biobank coverage:</strong> 70 IHCC biobanks may not represent all global biobank activity.</li>
+                        <li><strong>Temporal scope:</strong> Embeddings trained on 2000-2025 literature.</li>
+                        <li><strong>Causal claims:</strong> Framework measures association not causation between dimensions.</li>
                     </ul>
                 </div>
+            </details>
 
-                <div class="methodology-subsection">
-                    <h4>Disease Burden Data</h4>
-                    <p>Burden data from <a href="https://www.healthdata.org/gbd/2021" target="_blank">Global Burden of Disease Study 2021</a> (IHME).</p>
-                    <ul>
-                        <li><strong>DALYs (Disability-Adjusted Life Years)</strong>: One DALY = one year of healthy life lost</li>
-                        <li><strong>89 disease categories</strong> mapped to GBD Level 3 causes</li>
-                        <li><strong>29 Global South Priority diseases</strong> identified based on WHO criteria and LMIC burden distribution</li>
-                    </ul>
-                </div>
-
-                <div class="methodology-subsection">
-                    <h4>Biobank Data (Discovery)</h4>
-                    <p>Publication data from PubMed for 70 biobanks in the <a href="https://ihccglobal.org/" target="_blank">IHCC registry</a>.</p>
-                </div>
-
-                <div class="methodology-subsection">
-                    <h4>PubMed Semantic Data (Knowledge)</h4>
-                    <p>Abstracts retrieved from <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank">PubMed</a> (2000-2025) using MeSH terms and keyword searches. Embeddings generated using <a href="https://huggingface.co/microsoft/BiomedNLP-PubMedBERT-base-uncased-abstract-fulltext" target="_blank">PubMedBERT</a>.</p>
-                    <ul>
-                        <li><strong>13,100,113 papers</strong> retrieved for 176 diseases</li>
-                        <li><strong>13,100,113 embeddings</strong> generated (768-dimensional dense vectors)</li>
-                        <li><strong>176 diseases</strong> with sufficient data for analysis</li>
-                    </ul>
-                </div>
+            <div class="citation-box" id="citation-text">
+                <button class="citation-copy-btn" onclick="copyCitation()">Copy</button>
+                <p><strong>Corpas M, Freidin MB, Valdivia-Silva J, Baker S, Fatumo S, Guio H.</strong> (2026). Three Dimensions of Compounding Neglect: How Biobanks, Clinical Trials, and Scientific Literature Systematically Exclude the Global South. <em>In preparation</em>.</p>
             </div>
 
-            <!-- Key Metrics -->
-            <div class="card methodology-card">
-                <h3>&#128208; Key Metrics Explained</h3>
-
-                <div class="methodology-subsection">
-                    <h4>Research Intensity</h4>
-                    <div class="formula-box">
-                        <code>Research Intensity = Trials (or Publications) / Million DALYs</code>
-                    </div>
-                    <p>Measures research attention relative to disease burden. Higher = more research per unit of suffering.</p>
-                </div>
-
-                <div class="methodology-subsection">
-                    <h4>Intensity Gap</h4>
-                    <div class="formula-box">
-                        <code>Intensity Gap = Non-GS Intensity / GS Priority Intensity</code>
-                    </div>
-                    <p>Ratio of research intensity between non-Global South diseases and GS Priority diseases. A value of 2.4x means non-GS diseases receive 2.4 times more research attention per DALY.</p>
-                </div>
-
-                <div class="methodology-subsection">
-                    <h4>Global South Priority Diseases</h4>
-                    <p>29 diseases identified based on WHO classification criteria and GBD 2021 burden distribution:</p>
-                    <ul>
-                        <li><strong>WHO Neglected Tropical Diseases:</strong> Chagas, Dengue, Leishmaniasis, Lymphatic filariasis, Malaria, Onchocerciasis, Schistosomiasis, Trachoma, etc.</li>
-                        <li><strong>Major infectious diseases:</strong> TB, HIV/AIDS, Lower respiratory infections, Diarrheal diseases, Meningitis</li>
-                        <li><strong>Maternal and neonatal:</strong> Maternal disorders, Neonatal disorders</li>
-                        <li><strong>Nutritional:</strong> Protein-energy malnutrition, Dietary iron deficiency</li>
-                    </ul>
-                    <p>Selection based on diseases where >60% of global DALYs occur in low- and middle-income countries.</p>
-                </div>
-
-                <div class="methodology-subsection">
-                    <h4>Semantic Isolation Index (SII)</h4>
-                    <div class="formula-box">
-                        <code>SII = mean(cosine_distance(disease_embedding, global_centroid))</code>
-                    </div>
-                    <p>Measures how far a disease's research is from the center of all biomedical knowledge. Higher SII indicates more isolated research that doesn't benefit from mainstream advances.</p>
-                </div>
-
-                <div class="methodology-subsection">
-                    <h4>Knowledge Transfer Potential (KTP)</h4>
-                    <div class="formula-box">
-                        <code>KTP = max(cosine_similarity(disease_i, disease_j)) for all j ≠ i</code>
-                    </div>
-                    <p>Maximum similarity to any other disease. Higher KTP means the disease can potentially benefit from advances in related fields.</p>
-                </div>
-
-                <div class="methodology-subsection">
-                    <h4>Unified Triple-Burden Score</h4>
-                    <div class="formula-box" id="about-formula-unified">
-                        <code>Unified = 0.501×Discovery + 0.293×Translation + 0.206×Knowledge</code>
-                    </div>
-                    <p>Combines Gap Score (biobanks), Clinical Trial Equity, and Semantic Isolation into a single measure of compound neglect. Higher scores indicate diseases facing disadvantage across multiple dimensions.</p>
-                    <p><strong>Weighting justification:</strong> Weights are derived empirically using PCA (PC1 loadings from 86 diseases with data across all three dimensions). PC1 explains 63.3% of total variance. The <a href="#" onclick="document.querySelector('[data-tab=weights]').click(); return false;">Weights tab</a> allows you to adjust these and verify ranking stability.</p>
-                </div>
+            <div class="methods-links">
+                <a href="https://github.com/manuelcorpas/17-EHR" target="_blank" class="methods-link">GitHub Repository</a>
+                <a href="mailto:m.corpas@westminster.ac.uk" class="methods-link">Contact: m.corpas@westminster.ac.uk</a>
             </div>
-
-            <!-- Statistical Validation -->
-            <div class="card methodology-card">
-                <h3>&#128202; Statistical Validation</h3>
-                <p>The central finding - that NTDs are semantically isolated - was validated using multiple statistical approaches:</p>
-
-                <div class="methodology-subsection">
-                    <h4>NTD Semantic Isolation</h4>
-                    <table class="comparison-table" style="margin: 1rem 0;">
-                        <thead>
-                            <tr><th>Metric</th><th>NTDs (n=17)</th><th>Non-NTDs (n=129)</th><th>p-value</th></tr>
-                        </thead>
-                        <tbody>
-                            <tr><td>Mean SII</td><td>0.00242</td><td>0.00201</td><td><strong>0.002</strong></td></tr>
-                            <tr><td>Mean KTP</td><td>0.9987</td><td>0.9989</td><td><strong>0.009</strong></td></tr>
-                            <tr><td>Mann-Whitney U</td><td colspan="2">U=1715</td><td><strong>0.0001</strong></td></tr>
-                        </tbody>
-                    </table>
-                    <p><strong>Effect size:</strong> Cohen's d = 0.82 (large effect). The orthogonality of dimensions (r=0.07) confirms they measure independent aspects of neglect.</p>
-                </div>
-            </div>
-
-            <!-- Policy Implications -->
-            <div class="card methodology-card">
-                <h3>&#127919; Policy Implications</h3>
-                <p>The identification of semantic isolation as a measurable dimension of neglect suggests actionable interventions:</p>
-                <ul>
-                    <li><strong>Targeted funding mechanisms:</strong> Prioritize semantically isolated diseases (high SII) for cross-disciplinary research initiatives</li>
-                    <li><strong>Research network building:</strong> Fund collaborative projects that explicitly connect NTD researchers with mainstream biomedical science</li>
-                    <li><strong>WHO monitoring:</strong> Consider adopting SII as a complementary indicator alongside traditional R&D metrics</li>
-                    <li><strong>Knowledge translation:</strong> Develop systematic reviews that explicitly bridge isolated disease literature with related therapeutic areas</li>
-                </ul>
-                <p>The finding that isolation is <em>measurable</em> means progress can be tracked - providing accountability for equity-focused research investments.</p>
-            </div>
-
-            <!-- Limitations -->
-            <div class="card methodology-card">
-                <h3>&#9888; Limitations</h3>
-                <ul>
-                    <li><strong>Data sources:</strong> ClinicalTrials.gov has US/Western registration bias; PubMed has English-language bias</li>
-                    <li><strong>Biobank coverage:</strong> 70 IHCC biobanks may not represent all global biobank activity</li>
-                    <li><strong>Temporal scope:</strong> Embeddings trained on 2000-2025 literature; historical patterns may differ</li>
-                    <li><strong>Generalizability:</strong> The NTD finding is robust; broader framework applicability requires further validation</li>
-                </ul>
-            </div>
-
-            <!-- Citation -->
-            <div class="card methodology-card">
-                <h3>&#128218; Citation</h3>
-                <div class="citation-box">
-                    <p><strong>Corpas M, Valdivia-Silva J, Baker S, Fatumo S, Guio H.</strong> (2026). Health Equity Informative Metrics (HEIM): Quantifying the Discovery-to-Translation Gap in Global Health Research. <em>In preparation</em>.</p>
-                </div>
-                <p>Source code and data: <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">github.com/manuelcorpas/17-EHR</a></p>
-            </div>
-
-            <!-- Contact -->
-            <div class="card methodology-card">
-                <h3>&#128231; Contact</h3>
-                <p><strong>Manuel Corpas</strong> - <a href="mailto:m.corpas@westminster.ac.uk">m.corpas@westminster.ac.uk</a></p>
-                <p>University of Westminster | The Alan Turing Institute | GENEQ Global</p>
-            </div>
-        </section>
-
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <p>
-                <strong>HEIM Framework v3.0</strong> |
-                Data: GBD 2021, ClinicalTrials.gov, PubMed, PubMedBERT Embeddings |
-                <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">GitHub</a>
-            </p>
-            <p class="footer-methodology">
-                Corpas et al. (2026) - Three-Dimensional Health Equity Analysis
-            </p>
-        </div>
+    <footer class="site-footer">
+        <p class="site-footer-line"><strong>HEIM Framework v3.0</strong></p>
+        <p class="site-footer-line">Data: GBD 2021, ClinicalTrials.gov, PubMed, PubMedBERT | <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">GitHub</a></p>
+        <p class="site-footer-line">Corpas, Freidin, Valdivia-Silva, Baker, Fatumo &amp; Guio (2026) - Three Dimensions of Compounding Neglect</p>
     </footer>
 
     <!-- Scripts -->
-    <script src="js/app.js"></script>
     <script src="js/charts.js"></script>
+    <script src="js/app.js"></script>
+
 </body>
 </html>

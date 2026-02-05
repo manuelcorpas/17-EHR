@@ -1,70 +1,221 @@
-// HEIM-Biobank v2.0 (IHCC) Chart Visualizations
-// Note: chartInstances and destroyChart are defined in app.js (loaded first)
+// HEIM Framework v3.0 — Chart Library (Scroll Narrative)
+// Publication-quality charts for the 6-section scroll dashboard
+// Dependencies: Chart.js 4.4.1, ChartDataLabels plugin
+// Note: chartInstances and destroyChart are defined in app.js (loaded after)
 
-// Color palettes
-const COLORS = {
-    primary: '#2563eb',
-    critical: '#dc3545',
-    high: '#fd7e14',
-    moderate: '#ffc107',
-    low: '#28a745',
-    hic: '#17a2b8',
-    lmic: '#28a745'
-};
+'use strict';
 
-const CHART_COLORS = [
-    '#2563eb', '#dc3545', '#28a745', '#ffc107', '#17a2b8',
-    '#6f42c1', '#fd7e14', '#20c997', '#e83e8c', '#6c757d'
-];
+// ============================================================
+// CHART 1: Unified Ranking — Top 25 diseases (Section 3)
+// Horizontal bar chart, colour-coded by severity
+// ============================================================
+function renderUnifiedRankingChart(diseases) {
+    const ctx = document.getElementById('chart-unified-ranking');
+    if (!ctx || !diseases) return;
 
-// EAS Distribution Chart (Overview)
-function renderEASDistributionChart() {
-    const canvas = document.getElementById('chart-eas-distribution');
-    if (!canvas || !DATA.summary?.easDistribution) return;
-    
-    destroyChart('eas-dist');
-    
-    const dist = DATA.summary.easDistribution;
-    const labels = ['High', 'Moderate', 'Low'];
-    const values = labels.map(l => dist[l] || 0);
-    const colors = [COLORS.low, COLORS.moderate, COLORS.critical];
-    
-    chartInstances['eas-dist'] = new Chart(canvas, {
-        type: 'doughnut',
+    if (typeof destroyChart === 'function') destroyChart('chart-unified-ranking');
+
+    // Filter out injuries and null scores, sort descending, take top 20
+    const ranked = diseases
+        .filter(d => !HEIMEngine.INJURIES.has(d.disease) && d.unified_score != null)
+        .sort((a, b) => b.unified_score - a.unified_score)
+        .slice(0, 20);
+
+    const labels = ranked.map(d => d.disease.replace(/_/g, ' '));
+    const scores = ranked.map(d => d.unified_score);
+
+    // Dynamic max based on actual data
+    const dynamicMax = Math.ceil(Math.max(...scores) * 1.05);
+
+    // Continuous colour gradient by rank position: #1 = dark crimson, #20 = amber
+    const bgColors = scores.map((_, i) => {
+        const t = i / (ranked.length - 1); // 0 = top, 1 = bottom
+        const r = Math.round(180 + t * 37);   // 180 → 217
+        const g = Math.round(28 + t * 91);    // 28 → 119
+        const b = Math.round(28 - t * 22);    // 28 → 6
+        return `rgba(${r}, ${g}, ${b}, 0.9)`;
+    });
+
+    chartInstances['chart-unified-ranking'] = new Chart(ctx, {
+        type: 'bar',
         data: {
             labels: labels,
             datasets: [{
-                data: values,
-                backgroundColor: colors
+                label: 'Unified Score',
+                data: scores,
+                backgroundColor: bgColors,
+                borderRadius: 3,
+                barThickness: 24
             }]
         },
         options: {
+            indexAxis: 'y',
             responsive: true,
             maintainAspectRatio: false,
+            layout: {
+                padding: { right: 50 }
+            },
             plugins: {
-                legend: { position: 'bottom' }
+                legend: { display: false },
+                datalabels: {
+                    display: true,
+                    anchor: 'end',
+                    align: 'right',
+                    color: '#6b7280',
+                    font: { size: 11, family: 'Georgia, serif', weight: 'normal' },
+                    formatter: (v) => v.toFixed(1)
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    max: dynamicMax,
+                    title: {
+                        display: true,
+                        text: 'Unified Score',
+                        font: { size: 13, family: '-apple-system, sans-serif' },
+                        color: '#6b7280'
+                    },
+                    grid: { color: '#f1f3f5' },
+                    ticks: { color: '#9ca3af', font: { size: 11 } }
+                },
+                y: {
+                    grid: { display: false },
+                    ticks: {
+                        color: '#1a1a2e',
+                        font: { size: 12, family: '-apple-system, sans-serif' }
+                    }
+                }
             }
-        }
+        },
+        plugins: [ChartDataLabels]
     });
 }
 
-// Critical Gaps Chart (Overview)
-function renderCriticalGapsChart() {
-    const canvas = document.getElementById('chart-critical-gaps');
-    if (!canvas || !DATA.summary?.criticalGaps) return;
-    
-    destroyChart('critical-gaps');
-    
-    const gaps = DATA.summary.criticalGaps.slice(0, 8);
-    
-    chartInstances['critical-gaps'] = new Chart(canvas, {
+
+// ============================================================
+// CHART 2: Intensity Gap — Lowest vs Highest (Section 4)
+// Redesigned diverging bar for equity section
+// ============================================================
+function renderIntensityGapChart(clinicalTrials) {
+    const ctx = document.getElementById('chart-intensity-gap');
+    if (!ctx || !clinicalTrials?.keyFindings) return;
+
+    if (typeof destroyChart === 'function') destroyChart('chart-intensity-gap');
+
+    const lowest = clinicalTrials.keyFindings.lowestIntensity.slice(0, 8);
+    const highest = clinicalTrials.keyFindings.highestIntensity.slice(0, 5);
+
+    const allItems = [
+        ...lowest.map(d => ({ name: d.name, value: d.intensity, type: 'low', gs: d.gs })),
+        ...highest.map(d => ({ name: d.name, value: d.intensity, type: 'high', gs: false }))
+    ];
+
+    const labels = allItems.map(d => {
+        const name = d.name.length > 28 ? d.name.substring(0, 26) + '...' : d.name;
+        return d.gs ? name + ' *' : name;
+    });
+    const values = allItems.map(d => d.value);
+    const colors = allItems.map(d =>
+        d.type === 'low'
+            ? (d.gs ? 'rgba(220, 38, 38, 0.85)' : 'rgba(234, 88, 12, 0.7)')
+            : 'rgba(22, 163, 74, 0.75)'
+    );
+
+    chartInstances['chart-intensity-gap'] = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: gaps.map(g => g.name.substring(0, 15)),
+            labels: labels,
             datasets: [{
-                label: 'Gap Score',
-                data: gaps.map(g => g.gapScore),
-                backgroundColor: COLORS.critical
+                label: 'Trials per Million DALYs',
+                data: values,
+                backgroundColor: colors,
+                borderRadius: 3,
+                barThickness: 24
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: { padding: { right: 20 } },
+            plugins: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: 'Research Intensity: Lowest vs Highest',
+                    font: { size: 14, family: 'Georgia, serif', weight: 'normal' },
+                    color: '#1a1a2e',
+                    padding: { bottom: 16 }
+                },
+                datalabels: {
+                    display: true,
+                    anchor: 'end',
+                    align: 'right',
+                    color: '#6b7280',
+                    font: { size: 10 },
+                    formatter: (v) => v >= 1000 ? (v/1000).toFixed(1) + 'K' : v.toFixed(0)
+                }
+            },
+            scales: {
+                x: {
+                    type: 'logarithmic',
+                    title: {
+                        display: true,
+                        text: 'Trials per Million DALYs (log scale)',
+                        font: { size: 12 },
+                        color: '#6b7280'
+                    },
+                    grid: { color: '#f1f3f5' },
+                    ticks: { color: '#9ca3af', font: { size: 10 } }
+                },
+                y: {
+                    grid: { display: false },
+                    ticks: {
+                        color: '#1a1a2e',
+                        font: { size: 11 }
+                    }
+                }
+            }
+        },
+        plugins: [ChartDataLabels]
+    });
+}
+
+
+// ============================================================
+// CHART 3: Mini Isolation bar (Section 2 — Knowledge card)
+// Tiny inline chart showing NTD vs non-NTD isolation
+// ============================================================
+function renderMiniIsolationChart(diseases) {
+    const ctx = document.getElementById('chart-mini-isolation');
+    if (!ctx || !diseases) return;
+
+    if (typeof destroyChart === 'function') destroyChart('chart-mini-isolation');
+
+    // NTD list
+    const ntds = new Set([
+        'Chagas_disease', 'Dengue', 'Leishmaniasis', 'Lymphatic_filariasis',
+        'Onchocerciasis', 'Schistosomiasis', 'Trachoma', 'Rabies',
+        'African_trypanosomiasis', 'Guinea_worm_disease', 'Cysticercosis',
+        'Yellow_fever', 'Typhoid_and_paratyphoid', 'Malaria',
+        'Leprosy', 'Food-borne_trematodiases', 'Other_neglected_tropical_diseases'
+    ]);
+
+    const ntdSII = diseases.filter(d => ntds.has(d.disease) && d.sii).map(d => d.sii);
+    const otherSII = diseases.filter(d => !ntds.has(d.disease) && d.sii).map(d => d.sii);
+    const ntdMean = ntdSII.length ? ntdSII.reduce((a,b) => a+b, 0) / ntdSII.length : 0;
+    const otherMean = otherSII.length ? otherSII.reduce((a,b) => a+b, 0) / otherSII.length : 0;
+
+    chartInstances['chart-mini-isolation'] = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['NTDs', 'Other'],
+            datasets: [{
+                data: [ntdMean * 10000, otherMean * 10000],
+                backgroundColor: ['#7c3aed', '#d8b4fe'],
+                borderRadius: 3,
+                barThickness: 12
             }]
         },
         options: {
@@ -72,316 +223,352 @@ function renderCriticalGapsChart() {
             responsive: true,
             maintainAspectRatio: false,
             plugins: {
-                legend: { display: false }
-            },
-            scales: {
-                x: { 
-                    max: 100,
-                    title: { display: true, text: 'Gap Score' }
-                }
-            }
-        }
-    });
-}
-
-// Disease Burden Chart (Diseases Tab)
-function renderDiseaseBurdenChart() {
-    const canvas = document.getElementById('chart-disease-burden');
-    if (!canvas || !DATA.diseases?.diseases) return;
-    
-    destroyChart('disease-burden');
-    
-    const diseases = DATA.diseases.diseases.slice(0, 15);
-    
-    chartInstances['disease-burden'] = new Chart(canvas, {
-        type: 'scatter',
-        data: {
-            datasets: [{
-                label: 'Diseases',
-                data: diseases.map(d => ({
-                    x: d.burden?.dalysMillions || 0,
-                    y: d.gap?.score || 0
-                })),
-                backgroundColor: diseases.map(d => {
-                    const sev = d.gap?.severity?.toLowerCase();
-                    return COLORS[sev] || COLORS.primary;
-                }),
-                pointRadius: 8
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
                 legend: { display: false },
-                tooltip: {
-                    callbacks: {
-                        label: (ctx) => {
-                            const d = diseases[ctx.dataIndex];
-                            return `${d.name}: ${d.burden?.dalysMillions?.toFixed(1)}M DALYs, Gap: ${d.gap?.score?.toFixed(0)}`;
-                        }
-                    }
-                }
+                datalabels: { display: false }
             },
             scales: {
-                x: { 
-                    title: { display: true, text: 'Disease Burden (Million DALYs)' }
-                },
-                y: { 
-                    title: { display: true, text: 'Research Gap Score' },
-                    max: 100
+                x: { display: false, beginAtZero: true },
+                y: {
+                    display: true,
+                    grid: { display: false },
+                    ticks: { font: { size: 9 }, color: '#6b7280' }
                 }
             }
         }
     });
 }
 
-// Global Trends Chart (Trends Tab)
-function renderGlobalTrendsChart() {
-    const canvas = document.getElementById('chart-trends-global');
-    if (!canvas || !DATA.trends?.global?.yearly) return;
-    
-    destroyChart('trends-global');
-    
-    const yearly = DATA.trends.global.yearly;
-    const years = Object.keys(yearly).sort();
-    const values = years.map(y => yearly[y]);
-    
-    chartInstances['trends-global'] = new Chart(canvas, {
-        type: 'line',
-        data: {
-            labels: years,
-            datasets: [{
-                label: 'Publications',
-                data: values,
-                borderColor: COLORS.primary,
-                backgroundColor: COLORS.primary + '20',
-                fill: true,
-                tension: 0.3
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { display: false }
-            },
-            scales: {
-                y: { 
-                    beginAtZero: true,
-                    title: { display: true, text: 'Publications' }
-                }
-            }
-        }
-    });
-}
 
-// Biobank Trends Chart
-function renderBiobankTrendsChart(biobankId) {
-    const canvas = document.getElementById('chart-trends-biobank');
-    if (!canvas || !DATA.trends?.byBiobank?.[biobankId]) return;
-    
-    destroyChart('trends-biobank');
-    
-    const biobank = DATA.trends.byBiobank[biobankId];
-    const yearly = biobank.yearly || {};
-    const years = Object.keys(yearly).sort();
-    const values = years.map(y => yearly[y]);
-    
-    chartInstances['trends-biobank'] = new Chart(canvas, {
-        type: 'bar',
-        data: {
-            labels: years,
-            datasets: [{
-                label: biobank.name,
-                data: values,
-                backgroundColor: COLORS.primary
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { position: 'top' }
-            },
-            scales: {
-                y: { 
-                    beginAtZero: true,
-                    title: { display: true, text: 'Publications' }
-                }
-            }
-        }
-    });
-}
+// ============================================================
+// CHART 4: Sensitivity Scatter (Section 5c — kept from original)
+// ============================================================
+// ============================================================
+// CHART 5: Biobank Compare Radar (Section 5d — kept from original)
+// ============================================================
+function renderCompareRadar(biobanks) {
+    const ctx = document.getElementById('chart-compare-radar');
+    if (!ctx) return;
 
-// Theme Distribution Chart
-function renderThemeDistributionChart() {
-    const canvas = document.getElementById('chart-theme-dist');
-    if (!canvas || !DATA.themes?.themes) return;
-    
-    destroyChart('theme-dist');
-    
-    const themes = DATA.themes.themes.slice(0, 8);
-    
-    chartInstances['theme-dist'] = new Chart(canvas, {
-        type: 'pie',
-        data: {
-            labels: themes.map(t => t.name),
-            datasets: [{
-                data: themes.map(t => t.publications),
-                backgroundColor: CHART_COLORS
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { position: 'right' }
-            }
-        }
-    });
-}
+    if (typeof destroyChart === 'function') destroyChart('chart-compare-radar');
 
-// Theme Publications Chart
-function renderThemePublicationsChart() {
-    const canvas = document.getElementById('chart-theme-pubs');
-    if (!canvas || !DATA.themes?.themes) return;
-    
-    destroyChart('theme-pubs');
-    
-    const themes = DATA.themes.themes.slice(0, 8);
-    
-    chartInstances['theme-pubs'] = new Chart(canvas, {
-        type: 'bar',
-        data: {
-            labels: themes.map(t => t.name.substring(0, 12)),
-            datasets: [{
-                label: 'Publications',
-                data: themes.map(t => t.publications),
-                backgroundColor: CHART_COLORS
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { display: false }
-            },
-            scales: {
-                y: { beginAtZero: true }
-            }
-        }
-    });
-}
+    const labels = ['Equity Alignment Score', 'Publications', 'Diseases Covered', 'Critical Gaps (inv)', 'Global South Coverage'];
+    const colors = ['#2563eb', '#dc2626', '#059669', '#d97706', '#7c3aed'];
 
-// Comparison Radar Chart
-function renderComparisonRadar(id1, id2) {
-    const canvas = document.getElementById('chart-compare-radar');
-    if (!canvas || !DATA.comparison?.biobanks) return;
-    
-    destroyChart('compare-radar');
-    
-    const b1 = DATA.comparison.biobanks.find(b => b.id === id1);
-    const b2 = DATA.comparison.biobanks.find(b => b.id === id2);
-    if (!b1 || !b2) return;
-    
-    const dims = DATA.comparison.radarDimensions || [];
-    const labels = dims.map(d => d.label);
-    
-    chartInstances['compare-radar'] = new Chart(canvas, {
+    const datasets = biobanks.map((b, i) => {
+        const maxPubs = Math.max(...biobanks.map(bb => bb.stats?.totalPublications || 0));
+        return {
+            label: b.name,
+            data: [
+                b.scores?.equityAlignment || 0,
+                maxPubs > 0 ? (b.stats?.totalPublications / maxPubs) * 100 : 0,
+                b.stats?.diseasesCovered ? (b.stats.diseasesCovered / 179) * 100 : 0,
+                b.stats?.criticalGaps != null ? Math.max(0, 100 - b.stats.criticalGaps) : 50,
+                50
+            ],
+            borderColor: colors[i % colors.length],
+            backgroundColor: colors[i % colors.length] + '25',
+            pointRadius: 3
+        };
+    });
+
+    chartInstances['chart-compare-radar'] = new Chart(ctx, {
         type: 'radar',
-        data: {
-            labels: labels,
-            datasets: [
-                {
-                    label: b1.name,
-                    data: dims.map(d => b1.radar?.[d.key] || 0),
-                    borderColor: COLORS.primary,
-                    backgroundColor: COLORS.primary + '40'
-                },
-                {
-                    label: b2.name,
-                    data: dims.map(d => b2.radar?.[d.key] || 0),
-                    borderColor: COLORS.critical,
-                    backgroundColor: COLORS.critical + '40'
-                }
-            ]
-        },
+        data: { labels, datasets },
         options: {
             responsive: true,
             maintainAspectRatio: false,
             scales: {
                 r: {
                     beginAtZero: true,
-                    max: 100
+                    max: 100,
+                    grid: { color: '#e5e7eb' },
+                    ticks: { color: '#9ca3af', font: { size: 10 } },
+                    pointLabels: { color: '#1a1a2e', font: { size: 11 } }
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: { font: { size: 12 }, color: '#1a1a2e' }
                 }
             }
         }
     });
 }
 
-// Equity Share Chart
-function renderEquityShareChart() {
-    const canvas = document.getElementById('chart-equity-share');
-    if (!canvas || !DATA.equity?.summary) return;
-    
-    destroyChart('equity-share');
-    
-    const s = DATA.equity.summary;
-    
-    chartInstances['equity-share'] = new Chart(canvas, {
-        type: 'doughnut',
-        data: {
-            labels: ['HIC', 'LMIC'],
-            datasets: [{
-                data: [s.hic?.publicationShare || 0, s.lmic?.publicationShare || 0],
-                backgroundColor: [COLORS.hic, COLORS.lmic]
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-                legend: { position: 'bottom' }
-            }
-        }
-    });
-}
 
-// Equity Region Chart
-function renderEquityRegionChart() {
-    const canvas = document.getElementById('chart-equity-region');
-    if (!canvas || !DATA.equity?.byRegion) return;
-    
-    destroyChart('equity-region');
-    
-    const regions = DATA.equity.byRegion;
-    
-    chartInstances['equity-region'] = new Chart(canvas, {
+// ============================================================
+// CHART 6: Trial Sites by Country — Top 15 (Section 4)
+// Horizontal bar, HIC blue vs LMIC orange
+// ============================================================
+function renderTrialSitesChart(clinicalTrials) {
+    const ctx = document.getElementById('chart-trial-sites');
+    if (!ctx || !clinicalTrials?.geographic?.topCountries) return;
+
+    if (typeof destroyChart === 'function') destroyChart('chart-trial-sites');
+
+    const countries = clinicalTrials.geographic.topCountries.slice(0, 15);
+    const labels = countries.map(c => c.name);
+    const values = countries.map(c => c.sites);
+    const colors = countries.map(c =>
+        c.income === 'HIC' ? 'rgba(37, 99, 235, 0.8)' : 'rgba(234, 88, 12, 0.8)'
+    );
+
+    chartInstances['chart-trial-sites'] = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: regions.map(r => r.name),
+            labels: labels,
             datasets: [{
-                label: 'Publications',
-                data: regions.map(r => r.publications),
-                backgroundColor: regions.map(r => 
-                    r.incomeCategory === 'LMIC' ? COLORS.lmic : 
-                    r.incomeCategory === 'HIC' ? COLORS.hic : COLORS.moderate
-                )
+                label: 'Trial Sites',
+                data: values,
+                backgroundColor: colors,
+                borderRadius: 3,
+                barThickness: 20
             }]
         },
         options: {
+            indexAxis: 'y',
             responsive: true,
             maintainAspectRatio: false,
+            layout: { padding: { right: 50 } },
             plugins: {
-                legend: { display: false }
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: 'Clinical Trial Sites by Country (Top 15)',
+                    font: { size: 14, family: 'Georgia, serif', weight: 'normal' },
+                    color: '#1a1a2e',
+                    padding: { bottom: 12 }
+                },
+                subtitle: {
+                    display: true,
+                    text: 'Blue = HIC  |  Orange = LMIC',
+                    font: { size: 11 },
+                    color: '#9ca3af',
+                    padding: { bottom: 8 }
+                },
+                datalabels: {
+                    display: true,
+                    anchor: 'end',
+                    align: 'right',
+                    color: '#6b7280',
+                    font: { size: 10 },
+                    formatter: (v) => v >= 1000 ? (v / 1000).toFixed(1) + 'K' : v.toLocaleString()
+                }
             },
             scales: {
-                y: { 
+                x: {
                     beginAtZero: true,
-                    title: { display: true, text: 'Publications' }
+                    title: {
+                        display: true,
+                        text: 'Number of Trial Sites',
+                        font: { size: 12 },
+                        color: '#6b7280'
+                    },
+                    grid: { color: '#f1f3f5' },
+                    ticks: {
+                        color: '#9ca3af',
+                        font: { size: 10 },
+                        callback: (v) => v >= 1000 ? (v / 1000) + 'K' : v
+                    }
+                },
+                y: {
+                    grid: { display: false },
+                    ticks: {
+                        color: '#1a1a2e',
+                        font: { size: 11 }
+                    }
                 }
             }
-        }
+        },
+        plugins: [ChartDataLabels]
+    });
+}
+
+
+// ============================================================
+// CHART 7: Regional Publication Distribution (Section 4)
+// Horizontal bar — 6 WHO regions sorted by publication count
+// ============================================================
+function renderRegionalPubsChart(summary) {
+    const ctx = document.getElementById('chart-regional-pubs');
+    if (!ctx || !summary?.regionStats) return;
+
+    if (typeof destroyChart === 'function') destroyChart('chart-regional-pubs');
+
+    const regions = [...summary.regionStats].sort((a, b) => b.publications - a.publications);
+    const labels = regions.map(r => r.name);
+    const values = regions.map(r => r.publications);
+    const biobanks = regions.map(r => r.biobanks);
+
+    const maxVal = Math.max(...values);
+    const colors = regions.map(r => {
+        const t = r.publications / maxVal;
+        return `rgba(37, 99, 235, ${0.3 + t * 0.6})`;
+    });
+
+    chartInstances['chart-regional-pubs'] = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Publications',
+                data: values,
+                backgroundColor: colors,
+                borderRadius: 3,
+                barThickness: 22
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: { padding: { right: 70 } },
+            plugins: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: 'IHCC Biobank Publications by WHO Region',
+                    font: { size: 14, family: 'Georgia, serif', weight: 'normal' },
+                    color: '#1a1a2e',
+                    padding: { bottom: 4 }
+                },
+                subtitle: {
+                    display: true,
+                    text: 'Connolly et al. (2025) Commun Med 5:210',
+                    font: { size: 10, style: 'italic' },
+                    color: '#9ca3af',
+                    padding: { bottom: 8 }
+                },
+                datalabels: {
+                    display: true,
+                    anchor: 'end',
+                    align: 'right',
+                    color: '#6b7280',
+                    font: { size: 10 },
+                    formatter: (v, context) => {
+                        const idx = context.dataIndex;
+                        const bb = biobanks[idx];
+                        return v.toLocaleString() + ' (' + bb + ' biobanks)';
+                    }
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Total Publications',
+                        font: { size: 12 },
+                        color: '#6b7280'
+                    },
+                    grid: { color: '#f1f3f5' },
+                    ticks: { color: '#9ca3af', font: { size: 10 } }
+                },
+                y: {
+                    grid: { display: false },
+                    ticks: {
+                        color: '#1a1a2e',
+                        font: { size: 11 }
+                    }
+                }
+            }
+        },
+        plugins: [ChartDataLabels]
+    });
+}
+
+
+// ============================================================
+// CHART 8: NTD vs Non-NTD Semantic Isolation (Section 4)
+// Two horizontal bars with statistical annotation
+// ============================================================
+function renderNTDIsolationChart(diseases) {
+    const ctx = document.getElementById('chart-ntd-isolation');
+    if (!ctx || !diseases) return;
+
+    if (typeof destroyChart === 'function') destroyChart('chart-ntd-isolation');
+
+    const ntds = new Set([
+        'Chagas_disease', 'Dengue', 'Leishmaniasis', 'Lymphatic_filariasis',
+        'Onchocerciasis', 'Schistosomiasis', 'Trachoma', 'Rabies',
+        'African_trypanosomiasis', 'Guinea_worm_disease', 'Cysticercosis',
+        'Yellow_fever', 'Typhoid_and_paratyphoid', 'Malaria',
+        'Leprosy', 'Food-borne_trematodiases', 'Other_neglected_tropical_diseases'
+    ]);
+
+    const ntdSII = diseases.filter(d => ntds.has(d.disease) && d.sii).map(d => d.sii);
+    const otherSII = diseases.filter(d => !ntds.has(d.disease) && d.sii).map(d => d.sii);
+    const ntdMean = ntdSII.length ? ntdSII.reduce((a, b) => a + b, 0) / ntdSII.length : 0;
+    const otherMean = otherSII.length ? otherSII.reduce((a, b) => a + b, 0) / otherSII.length : 0;
+
+    // Scale to readable units (×10,000)
+    const ntdVal = ntdMean * 10000;
+    const otherVal = otherMean * 10000;
+
+    chartInstances['chart-ntd-isolation'] = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['NTDs (n=' + ntdSII.length + ')', 'Non-NTD (n=' + otherSII.length + ')'],
+            datasets: [{
+                label: 'Mean SII (×10⁴)',
+                data: [ntdVal, otherVal],
+                backgroundColor: ['rgba(124, 58, 237, 0.85)', 'rgba(209, 196, 233, 0.7)'],
+                borderRadius: 3,
+                barThickness: 28
+            }]
+        },
+        options: {
+            indexAxis: 'y',
+            responsive: true,
+            maintainAspectRatio: false,
+            layout: { padding: { right: 20 } },
+            plugins: {
+                legend: { display: false },
+                title: {
+                    display: true,
+                    text: 'NTD vs Non-NTD Semantic Isolation',
+                    font: { size: 14, family: 'Georgia, serif', weight: 'normal' },
+                    color: '#1a1a2e',
+                    padding: { bottom: 4 }
+                },
+                subtitle: {
+                    display: true,
+                    text: '44% higher isolation, P < 0.0001, Cohen\u2019s d = 1.80',
+                    font: { size: 11, style: 'italic' },
+                    color: '#7c3aed',
+                    padding: { bottom: 8 }
+                },
+                datalabels: {
+                    display: true,
+                    anchor: 'end',
+                    align: 'right',
+                    color: '#6b7280',
+                    font: { size: 11 },
+                    formatter: (v) => v.toFixed(2)
+                }
+            },
+            scales: {
+                x: {
+                    beginAtZero: true,
+                    title: {
+                        display: true,
+                        text: 'Mean Semantic Isolation Index (×10\u2074)',
+                        font: { size: 11 },
+                        color: '#6b7280'
+                    },
+                    grid: { color: '#f1f3f5' },
+                    ticks: { color: '#9ca3af', font: { size: 10 } }
+                },
+                y: {
+                    grid: { display: false },
+                    ticks: {
+                        color: '#1a1a2e',
+                        font: { size: 11 }
+                    }
+                }
+            }
+        },
+        plugins: [ChartDataLabels]
     });
 }
