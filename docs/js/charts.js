@@ -620,6 +620,9 @@ function renderNTDIsolationChart(diseases) {
     const ntdVal = ntdMean * 10000;
     const otherVal = otherMean * 10000;
 
+    // Compute isolation difference live
+    const isolationPct = otherMean > 0 ? Math.round(((ntdMean - otherMean) / otherMean) * 100) : 0;
+
     chartInstances['chart-ntd-isolation'] = new Chart(ctx, {
         type: 'bar',
         data: {
@@ -648,7 +651,7 @@ function renderNTDIsolationChart(diseases) {
                 },
                 subtitle: {
                     display: true,
-                    text: '44% higher isolation, P < 0.0001, Cohen\u2019s d = 1.80',
+                    text: isolationPct + '% higher isolation, P < 0.0001, Cohen\u2019s d = 1.80',
                     font: { size: 11, style: 'italic' },
                     color: '#7c3aed',
                     padding: { bottom: 8 }
