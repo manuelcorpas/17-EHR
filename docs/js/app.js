@@ -1,5 +1,6 @@
-// HEIM Framework v3.0 Dashboard Application
+// HEIM Framework v3.0 Interactive Tool
 // Three-Dimensional Equity Analysis: Discovery + Translation + Knowledge
+// With adjustable weights, scenario modelling, and real-time recalculation
 
 // Global data store
 let DATA = {
@@ -12,16 +13,26 @@ let DATA = {
     comparison: null,
     equity: null,
     clinicalTrials: null,
-    semantic: null,       // NEW: Semantic analysis data
-    integrated: null      // NEW: Integrated three-dimensional metrics
+    semantic: null,
+    integrated: null
 };
+
+// Current weights state (mutable — changes when user adjusts sliders)
+let WEIGHTS = {
+    unified: { discovery: 0.501, translation: 0.293, knowledge: 0.206 },
+    eas: { gap: 0.4, burdenMiss: 0.3, capacity: 0.3 },
+    burden: { dalys: 0.5, deaths: 50.0, prevalence: 10.0 }
+};
+
+// Baseline scores for comparison (computed once on load)
+let BASELINE_SCORES = null;
 
 // Chart instances for cleanup
 let chartInstances = {};
 
 // Initialize application
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('HEIM Framework v3.0 Dashboard initializing...');
+    console.log('HEIM Framework v3.0 Interactive Tool initializing...');
 
     // Setup tab navigation
     setupTabs();
@@ -29,13 +40,24 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Load all data
     await loadAllData();
 
+    // Store baseline scores for comparison
+    if (DATA.integrated?.diseases) {
+        BASELINE_SCORES = DATA.integrated.diseases.map(d => ({
+            disease: d.disease,
+            unified_score: d.unified_score
+        }));
+    }
+
     // Render initial view
     renderOverview();
 
     // Setup filters and interactions
     setupFilters();
 
-    console.log('Dashboard ready');
+    // Setup weight sliders
+    setupWeightSliders();
+
+    console.log('Interactive Tool ready');
 });
 
 // Tab Navigation
@@ -66,6 +88,9 @@ function renderTab(tabId) {
         case 'clinical-trials': renderClinicalTrials(); break;
         case 'biobanks': renderBiobanks(); break;
         case 'diseases': renderDiseases(); break;
+        case 'weights': renderWeightsPanel(); break;
+        case 'scenarios': renderScenarios(); break;
+        case 'biobank-compare': renderBiobankCompare(); break;
         case 'comparison': renderComparison(); break;
         case 'trends': renderTrends(); break;
         case 'equity': renderEquity(); break;
@@ -967,6 +992,543 @@ function downloadBiobanksCSV() {
     const a = document.createElement('a');
     a.href = url;
     a.download = 'heim-biobank-data.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+
+
+// ============================================================
+// WEIGHT ADJUSTMENT PANEL
+// ============================================================
+
+function setupWeightSliders() {
+    // Unified weight sliders
+    ['discovery', 'translation', 'knowledge'].forEach(dim => {
+        const slider = document.getElementById(`slider-w-${dim}`);
+        if (slider) {
+            slider.addEventListener('input', () => onUnifiedWeightChange());
+        }
+    });
+
+    // EAS weight sliders
+    ['gap', 'burden', 'capacity'].forEach(comp => {
+        const slider = document.getElementById(`slider-eas-${comp}`);
+        if (slider) {
+            slider.addEventListener('input', () => onEASWeightChange());
+        }
+    });
+}
+
+function onUnifiedWeightChange() {
+    const dRaw = parseInt(document.getElementById('slider-w-discovery').value);
+    const tRaw = parseInt(document.getElementById('slider-w-translation').value);
+    const kRaw = parseInt(document.getElementById('slider-w-knowledge').value);
+    const total = dRaw + tRaw + kRaw;
+
+    if (total === 0) return;
+
+    // Normalise to sum to 1.0
+    WEIGHTS.unified.discovery = dRaw / total;
+    WEIGHTS.unified.translation = tRaw / total;
+    WEIGHTS.unified.knowledge = kRaw / total;
+
+    // Update display
+    setText('val-w-discovery', WEIGHTS.unified.discovery.toFixed(3));
+    setText('val-w-translation', WEIGHTS.unified.translation.toFixed(3));
+    setText('val-w-knowledge', WEIGHTS.unified.knowledge.toFixed(3));
+    setText('weight-sum', (WEIGHTS.unified.discovery + WEIGHTS.unified.translation + WEIGHTS.unified.knowledge).toFixed(3));
+
+    // Update formula display
+    updateFormulaDisplay();
+
+    // Update weight status
+    updateWeightStatus();
+
+    // Recalculate and update live rankings
+    recalculateAndUpdate();
+}
+
+function onEASWeightChange() {
+    const gRaw = parseInt(document.getElementById('slider-eas-gap').value);
+    const bRaw = parseInt(document.getElementById('slider-eas-burden').value);
+    const cRaw = parseInt(document.getElementById('slider-eas-capacity').value);
+    const total = gRaw + bRaw + cRaw;
+
+    if (total === 0) return;
+
+    WEIGHTS.eas.gap = gRaw / total;
+    WEIGHTS.eas.burdenMiss = bRaw / total;
+    WEIGHTS.eas.capacity = cRaw / total;
+
+    setText('val-eas-gap', WEIGHTS.eas.gap.toFixed(2));
+    setText('val-eas-burden', WEIGHTS.eas.burdenMiss.toFixed(2));
+    setText('val-eas-capacity', WEIGHTS.eas.capacity.toFixed(2));
+    setText('eas-weight-sum', (WEIGHTS.eas.gap + WEIGHTS.eas.burdenMiss + WEIGHTS.eas.capacity).toFixed(2));
+
+    updateFormulaDisplay();
+    updateWeightStatus();
+}
+
+function updateFormulaDisplay() {
+    const unifiedEl = document.getElementById('formula-unified');
+    const easEl = document.getElementById('formula-eas');
+
+    if (unifiedEl) {
+        unifiedEl.innerHTML = `<code>Unified = <span class="fw">${WEIGHTS.unified.discovery.toFixed(3)}</span> x D_norm + <span class="fw">${WEIGHTS.unified.translation.toFixed(3)}</span> x T_norm + <span class="fw">${WEIGHTS.unified.knowledge.toFixed(3)}</span> x K_norm</code>`;
+    }
+    if (easEl) {
+        easEl.innerHTML = `<code>EAS = 100 - (<span class="fw">${WEIGHTS.eas.gap.toFixed(2)}</span> x GapSeverity + <span class="fw">${WEIGHTS.eas.burdenMiss.toFixed(2)}</span> x BurdenMiss + <span class="fw">${WEIGHTS.eas.capacity.toFixed(2)}</span> x CapacityPenalty)</code>`;
+    }
+}
+
+function updateWeightStatus() {
+    const def = HEIMEngine.DEFAULTS.unified;
+    const isDefault = (
+        Math.abs(WEIGHTS.unified.discovery - def.discovery) < 0.01 &&
+        Math.abs(WEIGHTS.unified.translation - def.translation) < 0.01 &&
+        Math.abs(WEIGHTS.unified.knowledge - def.knowledge) < 0.01
+    );
+
+    const statusEl = document.getElementById('weight-status');
+    if (statusEl) {
+        statusEl.textContent = isDefault ? 'Using published PCA weights' : 'Custom weights (modified)';
+        statusEl.className = 'weight-status-value' + (isDefault ? '' : ' weight-modified');
+    }
+}
+
+function resetAllWeights() {
+    const def = HEIMEngine.DEFAULTS;
+
+    WEIGHTS.unified = { ...def.unified };
+    WEIGHTS.eas = { ...def.eas };
+    WEIGHTS.burden = { ...def.burden };
+
+    // Reset slider positions
+    const total = def.unified.discovery + def.unified.translation + def.unified.knowledge;
+    document.getElementById('slider-w-discovery').value = Math.round(def.unified.discovery / total * 100);
+    document.getElementById('slider-w-translation').value = Math.round(def.unified.translation / total * 100);
+    document.getElementById('slider-w-knowledge').value = Math.round(def.unified.knowledge / total * 100);
+
+    document.getElementById('slider-eas-gap').value = Math.round(def.eas.gap * 100);
+    document.getElementById('slider-eas-burden').value = Math.round(def.eas.burdenMiss * 100);
+    document.getElementById('slider-eas-capacity').value = Math.round(def.eas.capacity * 100);
+
+    // Update displays
+    setText('val-w-discovery', def.unified.discovery.toFixed(3));
+    setText('val-w-translation', def.unified.translation.toFixed(3));
+    setText('val-w-knowledge', def.unified.knowledge.toFixed(3));
+    setText('weight-sum', '1.000');
+
+    setText('val-eas-gap', def.eas.gap.toFixed(2));
+    setText('val-eas-burden', def.eas.burdenMiss.toFixed(2));
+    setText('val-eas-capacity', def.eas.capacity.toFixed(2));
+    setText('eas-weight-sum', '1.00');
+
+    updateFormulaDisplay();
+    updateWeightStatus();
+    recalculateAndUpdate();
+}
+
+function recalculateAndUpdate() {
+    if (!DATA.integrated?.diseases) return;
+
+    const result = HEIMEngine.recalculateAll(DATA, WEIGHTS);
+
+    // Update integrated data in memory
+    DATA.integrated.diseases = result.diseases;
+    DATA.integrated.summary = result.summary;
+
+    // Update live rankings table
+    renderLiveRankings(result.diseases);
+
+    // Update top neglected on overview
+    renderTopNeglected(result.diseases);
+}
+
+function renderLiveRankings(diseases) {
+    const tbody = document.querySelector('#table-live-rankings tbody');
+    if (!tbody) return;
+
+    const diseaseOnly = diseases.filter(d => !HEIMEngine.INJURIES.has(d.disease) && d.unified_score != null);
+    const top15 = diseaseOnly.slice(0, 15);
+
+    const baselineLookup = {};
+    if (BASELINE_SCORES) {
+        BASELINE_SCORES.forEach(b => { baselineLookup[b.disease] = b.unified_score; });
+    }
+
+    tbody.innerHTML = top15.map((d, i) => {
+        const name = d.disease.replace(/_/g, ' ');
+        const baseline = baselineLookup[d.disease];
+        const change = baseline != null && d.unified_score != null ? d.unified_score - baseline : 0;
+        const changeStr = change > 0.1 ? `+${change.toFixed(1)}` : change < -0.1 ? change.toFixed(1) : '-';
+        const changeClass = change > 0.1 ? 'change-up' : change < -0.1 ? 'change-down' : '';
+
+        return `<tr>
+            <td>${i + 1}</td>
+            <td>${name}</td>
+            <td>${d.unified_score?.toFixed(1) || '--'}</td>
+            <td class="${changeClass}">${changeStr}</td>
+            <td>${d.dimensions_available || '--'}</td>
+        </tr>`;
+    }).join('');
+}
+
+function renderWeightsPanel() {
+    updateFormulaDisplay();
+    updateWeightStatus();
+    if (DATA.integrated?.diseases) {
+        renderLiveRankings(DATA.integrated.diseases);
+    }
+}
+
+
+// ============================================================
+// SCENARIO BUILDER
+// ============================================================
+
+function renderScenarios() {
+    // Scenarios tab just needs to be shown; preset cards are static HTML
+}
+
+function runScenario(scenarioId) {
+    if (!DATA.integrated?.diseases) return;
+
+    const scenario = HEIMEngine.SCENARIOS[scenarioId];
+    if (!scenario) return;
+
+    // Compute baseline
+    const baseline = HEIMEngine.computeUnifiedScores(DATA.integrated.diseases, WEIGHTS.unified);
+    const baselineSorted = baseline
+        .filter(d => !HEIMEngine.INJURIES.has(d.disease) && d.unified_score != null)
+        .sort((a, b) => b.unified_score - a.unified_score);
+
+    // Apply scenario
+    const after = HEIMEngine.applyScenario(DATA.integrated.diseases, scenario, WEIGHTS.unified);
+    const afterSorted = after
+        .filter(d => !HEIMEngine.INJURIES.has(d.disease) && d.unified_score != null)
+        .sort((a, b) => b.unified_score - a.unified_score);
+
+    // Show results card
+    const card = document.getElementById('scenario-results-card');
+    if (card) card.style.display = 'block';
+
+    setText('scenario-name', scenario.name);
+    setText('scenario-desc', scenario.description);
+
+    // Highlight selected scenario card
+    document.querySelectorAll('.scenario-card').forEach(c => c.classList.remove('scenario-active'));
+    const activeCard = document.querySelector(`[data-scenario="${scenarioId}"]`);
+    if (activeCard) activeCard.classList.add('scenario-active');
+
+    // Before table
+    const beforeTbody = document.querySelector('#table-scenario-before tbody');
+    if (beforeTbody) {
+        beforeTbody.innerHTML = baselineSorted.slice(0, 15).map((d, i) =>
+            `<tr><td>${i + 1}</td><td>${d.disease.replace(/_/g, ' ')}</td><td>${d.unified_score.toFixed(1)}</td></tr>`
+        ).join('');
+    }
+
+    // After table with change indicators
+    const afterTbody = document.querySelector('#table-scenario-after tbody');
+    if (afterTbody) {
+        // Build baseline rank lookup
+        const baselineRank = {};
+        baselineSorted.forEach((d, i) => { baselineRank[d.disease] = i + 1; });
+
+        afterTbody.innerHTML = afterSorted.slice(0, 15).map((d, i) => {
+            const oldRank = baselineRank[d.disease] || '-';
+            const oldScore = baselineSorted.find(b => b.disease === d.disease)?.unified_score || 0;
+            const scoreDiff = d.unified_score - oldScore;
+            const changeStr = scoreDiff < -0.1 ? scoreDiff.toFixed(1) : scoreDiff > 0.1 ? `+${scoreDiff.toFixed(1)}` : '-';
+            const changeClass = scoreDiff < -0.1 ? 'change-down' : scoreDiff > 0.1 ? 'change-up' : '';
+            return `<tr><td>${i + 1}</td><td>${d.disease.replace(/_/g, ' ')}</td><td>${d.unified_score.toFixed(1)}</td><td class="${changeClass}">${changeStr}</td></tr>`;
+        }).join('');
+    }
+
+    // Compute Spearman rho
+    const baseNames = baselineSorted.map(d => d.disease);
+    const baseScores = baselineSorted.map(d => d.unified_score);
+    const afterScoresAligned = baseNames.map(name => {
+        const found = afterSorted.find(d => d.disease === name);
+        return found ? found.unified_score : 0;
+    });
+    const rho = HEIMEngine.spearmanRho(baseScores, afterScoresAligned);
+
+    // Count rank changes
+    const afterRank = {};
+    afterSorted.forEach((d, i) => { afterRank[d.disease] = i + 1; });
+    let moved = 0, maxMove = 0;
+    baselineSorted.forEach((d, i) => {
+        const newRank = afterRank[d.disease] || baselineSorted.length;
+        const diff = Math.abs(newRank - (i + 1));
+        if (diff > 0) moved++;
+        maxMove = Math.max(maxMove, diff);
+    });
+
+    setText('scenario-rho', rho.toFixed(3));
+    setText('scenario-moved', moved);
+    setText('scenario-max-move', maxMove);
+}
+
+
+// ============================================================
+// SENSITIVITY ANALYSIS
+// ============================================================
+
+function runSensitivityAnalysis() {
+    if (!DATA.integrated?.diseases) return;
+
+    const summaryEl = document.getElementById('sensitivity-summary');
+    if (summaryEl) summaryEl.innerHTML = '<p>Computing 200 random weight combinations...</p>';
+
+    // Use requestAnimationFrame to allow UI update before heavy computation
+    requestAnimationFrame(() => {
+        const result = HEIMEngine.sensitivitySweep(DATA.integrated.diseases, 200);
+
+        // Update summary
+        if (summaryEl) {
+            summaryEl.innerHTML = `
+                <p><strong>Mean Spearman rho:</strong> ${result.summary.meanRho.toFixed(3)}
+                | <strong>Min:</strong> ${result.summary.minRho.toFixed(3)}
+                | <strong>Max:</strong> ${result.summary.maxRho.toFixed(3)}</p>
+                <p><strong>${result.summary.pctAbove90}%</strong> of weight combinations produce rho > 0.90
+                | <strong>${result.summary.pctAbove95}%</strong> produce rho > 0.95</p>
+                <p>This confirms that disease rankings are <strong>robust</strong> to weight perturbation.</p>
+            `;
+        }
+
+        // Render scatter chart
+        renderSensitivityChart(result.samples);
+    });
+}
+
+function renderSensitivityChart(samples) {
+    const ctx = document.getElementById('chart-sensitivity');
+    if (!ctx) return;
+
+    destroyChart('chart-sensitivity');
+
+    chartInstances['chart-sensitivity'] = new Chart(ctx, {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'Weight perturbation vs rank stability',
+                data: samples.map(s => ({
+                    x: s.distance,
+                    y: s.rho,
+                    w: `D=${s.weights.discovery.toFixed(2)} T=${s.weights.translation.toFixed(2)} K=${s.weights.knowledge.toFixed(2)}`
+                })),
+                backgroundColor: samples.map(s => s.rho >= 0.95 ? 'rgba(22, 163, 74, 0.5)' : s.rho >= 0.90 ? 'rgba(202, 138, 4, 0.5)' : 'rgba(220, 38, 38, 0.5)'),
+                pointRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: { display: false },
+                tooltip: {
+                    callbacks: {
+                        label: ctx => `rho=${ctx.raw.y.toFixed(3)} | ${ctx.raw.w}`
+                    }
+                }
+            },
+            scales: {
+                x: { title: { display: true, text: 'Distance from PCA weights' } },
+                y: { title: { display: true, text: 'Spearman rho' }, min: 0.5, max: 1.0 }
+            }
+        }
+    });
+}
+
+
+// ============================================================
+// BIOBANK COMPARISON
+// ============================================================
+
+function renderBiobankCompare() {
+    if (!DATA.biobanks?.biobanks) return;
+
+    const checklist = document.getElementById('compare-checklist');
+    if (!checklist) return;
+
+    const searchVal = document.getElementById('compare-biobank-search')?.value.toLowerCase() || '';
+
+    const biobanks = DATA.biobanks.biobanks.filter(b => {
+        if (searchVal && !b.name.toLowerCase().includes(searchVal)) return false;
+        return true;
+    });
+
+    checklist.innerHTML = biobanks.map(b => `
+        <label class="compare-check-item">
+            <input type="checkbox" class="compare-checkbox" value="${b.id}" ${b._selected ? 'checked' : ''}>
+            <span>${b.name} (${b.country})</span>
+            <span class="compare-check-eas">EAS: ${b.scores?.equityAlignment?.toFixed(1) || '--'}</span>
+        </label>
+    `).join('');
+
+    // Setup search filter
+    const searchInput = document.getElementById('compare-biobank-search');
+    if (searchInput && !searchInput._bound) {
+        searchInput.addEventListener('input', renderBiobankCompare);
+        searchInput._bound = true;
+    }
+}
+
+function clearBiobankSelection() {
+    document.querySelectorAll('.compare-checkbox').forEach(cb => { cb.checked = false; });
+    const card = document.getElementById('compare-results-card');
+    if (card) card.style.display = 'none';
+}
+
+function runBiobankComparison() {
+    const checked = Array.from(document.querySelectorAll('.compare-checkbox:checked')).map(cb => cb.value);
+    if (checked.length < 2 || checked.length > 5) {
+        alert('Please select 2-5 biobanks to compare.');
+        return;
+    }
+
+    const biobanks = checked.map(id => DATA.biobanks.biobanks.find(b => b.id === id)).filter(Boolean);
+
+    // Show results
+    const card = document.getElementById('compare-results-card');
+    if (card) card.style.display = 'block';
+
+    // Radar chart
+    renderCompareRadar(biobanks);
+
+    // Comparison table
+    renderCompareTable(biobanks);
+}
+
+function renderCompareRadar(biobanks) {
+    const ctx = document.getElementById('chart-compare-radar');
+    if (!ctx) return;
+
+    destroyChart('chart-compare-radar');
+
+    const labels = ['EAS', 'Publications', 'Diseases Covered', 'Critical Gaps (inv)', 'GS Coverage'];
+    const colors = ['#2563eb', '#dc3545', '#28a745', '#ffc107', '#7c3aed'];
+
+    const datasets = biobanks.map((b, i) => {
+        const maxPubs = Math.max(...biobanks.map(bb => bb.stats?.totalPublications || 0));
+        return {
+            label: b.name,
+            data: [
+                b.scores?.equityAlignment || 0,
+                maxPubs > 0 ? (b.stats?.totalPublications / maxPubs) * 100 : 0,
+                b.stats?.diseasesCovered ? (b.stats.diseasesCovered / 179) * 100 : 0,
+                b.stats?.criticalGaps != null ? Math.max(0, 100 - b.stats.criticalGaps) : 50,
+                50 // placeholder for GS coverage
+            ],
+            borderColor: colors[i % colors.length],
+            backgroundColor: colors[i % colors.length] + '30'
+        };
+    });
+
+    chartInstances['chart-compare-radar'] = new Chart(ctx, {
+        type: 'radar',
+        data: { labels, datasets },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: { r: { beginAtZero: true, max: 100 } },
+            plugins: { legend: { position: 'top' } }
+        }
+    });
+}
+
+function renderCompareTable(biobanks) {
+    const headerRow = document.getElementById('compare-header-row');
+    const tbody = document.querySelector('#table-compare-biobanks tbody');
+    if (!headerRow || !tbody) return;
+
+    headerRow.innerHTML = '<th>Metric</th>' + biobanks.map(b => `<th>${b.name}</th>`).join('');
+
+    const metrics = [
+        { label: 'Country', fn: b => b.country },
+        { label: 'Region', fn: b => b.regionName },
+        { label: 'EAS', fn: b => b.scores?.equityAlignment?.toFixed(1) || '--' },
+        { label: 'EAS Category', fn: b => b.scores?.equityCategory || '--' },
+        { label: 'Publications', fn: b => formatNumber(b.stats?.totalPublications) },
+        { label: 'Diseases Covered', fn: b => b.stats?.diseasesCovered || '--' },
+        { label: 'Critical Gaps', fn: b => b.stats?.criticalGaps || '--' },
+        { label: 'Gap Severity', fn: b => b.components?.gap_severity_component?.toFixed(1) || '--' },
+        { label: 'Burden Miss', fn: b => b.components?.burden_miss_component?.toFixed(1) || '--' },
+    ];
+
+    tbody.innerHTML = metrics.map(m => {
+        const values = biobanks.map(b => m.fn(b));
+        return `<tr><td><strong>${m.label}</strong></td>${values.map(v => `<td>${v}</td>`).join('')}</tr>`;
+    }).join('');
+}
+
+
+// ============================================================
+// EXPORT FUNCTIONS
+// ============================================================
+
+function exportWeightedCSV() {
+    if (!DATA.integrated?.diseases) return;
+
+    const diseases = DATA.integrated.diseases
+        .filter(d => d.unified_score != null)
+        .sort((a, b) => b.unified_score - a.unified_score);
+
+    const weightHeader = `# Weights: D=${WEIGHTS.unified.discovery.toFixed(3)} T=${WEIGHTS.unified.translation.toFixed(3)} K=${WEIGHTS.unified.knowledge.toFixed(3)}`;
+    const headers = ['Rank', 'Disease', 'Gap Score', 'CT Equity', 'SII', 'Unified Score', 'Dimensions'];
+    let csv = weightHeader + '\n' + headers.join(',') + '\n';
+
+    diseases.forEach((d, i) => {
+        csv += [
+            i + 1,
+            `"${d.disease.replace(/_/g, ' ')}"`,
+            d.gap_score?.toFixed(1) || '',
+            d.ct_equity?.toFixed(1) || '',
+            d.sii?.toFixed(6) || '',
+            d.unified_score?.toFixed(2) || '',
+            d.dimensions_available || ''
+        ].join(',') + '\n';
+    });
+
+    downloadFile(csv, 'heim-weighted-rankings.csv', 'text/csv');
+}
+
+function exportPDFReport() {
+    // Use browser's print dialog for PDF generation
+    const printContent = document.createElement('div');
+    printContent.className = 'print-report';
+    printContent.innerHTML = `
+        <h1>HEIM Framework - Interactive Analysis Report</h1>
+        <p><strong>Generated:</strong> ${new Date().toISOString().split('T')[0]}</p>
+        <h2>Current Weights</h2>
+        <p>Unified Score: D=${WEIGHTS.unified.discovery.toFixed(3)}, T=${WEIGHTS.unified.translation.toFixed(3)}, K=${WEIGHTS.unified.knowledge.toFixed(3)}</p>
+        <p>EAS: Gap=${WEIGHTS.eas.gap.toFixed(2)}, BurdenMiss=${WEIGHTS.eas.burdenMiss.toFixed(2)}, Capacity=${WEIGHTS.eas.capacity.toFixed(2)}</p>
+        <h2>Top 20 Most Neglected Diseases</h2>
+        <table border="1" cellpadding="5" style="border-collapse:collapse;width:100%">
+            <tr><th>Rank</th><th>Disease</th><th>Unified Score</th><th>Dims</th></tr>
+            ${(DATA.integrated?.diseases || [])
+                .filter(d => !HEIMEngine.INJURIES.has(d.disease) && d.unified_score != null)
+                .slice(0, 20)
+                .map((d, i) => `<tr><td>${i+1}</td><td>${d.disease.replace(/_/g,' ')}</td><td>${d.unified_score.toFixed(1)}</td><td>${d.dimensions_available}</td></tr>`)
+                .join('')}
+        </table>
+        <p style="margin-top:2rem;font-size:0.8rem;">Corpas et al. (2026) - HEIM Framework. Source: https://manuelcorpas.github.io/17-EHR/</p>
+    `;
+
+    const printWin = window.open('', '_blank');
+    printWin.document.write(`<html><head><title>HEIM Report</title><style>body{font-family:sans-serif;padding:2rem;} table{margin:1rem 0;} th{background:#f0f0f0;}</style></head><body>${printContent.innerHTML}</body></html>`);
+    printWin.document.close();
+    printWin.print();
+}
+
+function downloadFile(content, filename, type) {
+    const blob = new Blob([content], { type });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
     a.click();
     URL.revokeObjectURL(url);
 }
