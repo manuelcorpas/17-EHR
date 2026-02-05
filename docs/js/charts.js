@@ -6,89 +6,203 @@
 'use strict';
 
 // ============================================================
-// CHART 1: Unified Ranking — Top 25 diseases (Section 3)
-// Horizontal bar chart, colour-coded by severity
+// CHART 1: Unified Ranking — Top 30 diseases (Section 3)
+// Horizontal bar chart, three-colour scheme matching publication Fig 5
 // ============================================================
+
+// WHO NTD classification (from 06-heim-publication-figures.py)
+const WHO_NTDS = new Set([
+    'lymphatic filariasis', 'guinea worm disease', 'schistosomiasis',
+    'onchocerciasis', 'leishmaniasis', 'chagas disease',
+    'african trypanosomiasis', 'dengue', 'rabies', 'ascariasis',
+    'trichuriasis', 'hookworm disease', 'scabies', 'trachoma',
+    'cysticercosis', 'cystic echinococcosis', 'yellow fever',
+    'foodborne trematodiases', 'food-borne trematodiases', 'leprosy'
+]);
+
+// Global South priority diseases (from clinical_trials.json + additional)
+const GS_PRIORITY = new Set([
+    'covid-19', 'neonatal disorders', 'lower respiratory infections',
+    'diarrheal diseases', 'malaria', 'tuberculosis', 'hiv/aids',
+    'dietary iron deficiency', 'meningitis', 'rheumatic heart disease',
+    'maternal disorders', 'hemoglobinopathies and hemolytic anemias',
+    'protein-energy malnutrition', 'cervical cancer',
+    'typhoid and paratyphoid', 'sexually transmitted infections excluding hiv',
+    'acute hepatitis', 'other neglected tropical diseases',
+    'intestinal nematode infections',
+    // Additional GS diseases
+    'iodine deficiency', 'vitamin a deficiency',
+    'invasive non-typhoidal salmonella (ints)', 'encephalitis',
+    'measles', 'pertussis', 'tetanus', 'ebola', 'zika virus'
+]);
+
+function classifyDisease(diseaseName) {
+    const clean = diseaseName.replace(/_/g, ' ').toLowerCase().trim();
+    for (const ntd of WHO_NTDS) {
+        if (clean.includes(ntd) || ntd.includes(clean)) return 'ntd';
+    }
+    for (const gs of GS_PRIORITY) {
+        if (clean.includes(gs) || gs.includes(clean)) return 'gs';
+    }
+    return 'other';
+}
+
+const DISEASE_COLORS = {
+    ntd:   '#E74C3C',  // Red — WHO NTD
+    gs:    '#F39C12',  // Orange — Global South priority
+    other: '#95A5A6'   // Grey — Other condition
+};
+
 function renderUnifiedRankingChart(diseases) {
     const ctx = document.getElementById('chart-unified-ranking');
     if (!ctx || !diseases) return;
 
     if (typeof destroyChart === 'function') destroyChart('chart-unified-ranking');
 
-    // Filter out injuries and null scores, sort descending, take top 20
+    // Filter out injuries and null scores, sort descending, take top 30
     const ranked = diseases
         .filter(d => !HEIMEngine.INJURIES.has(d.disease) && d.unified_score != null)
         .sort((a, b) => b.unified_score - a.unified_score)
-        .slice(0, 20);
+        .slice(0, 30);
 
-    const labels = ranked.map(d => d.disease.replace(/_/g, ' '));
+    // Display name formatting (matching publication)
+    const displayName = (d) => {
+        let name = d.disease.replace(/_/g, ' ');
+        name = name.replace('Paralytic ileus and intestinal obstruction', 'Paralytic ileus / intestinal obstruction');
+        name = name.replace('Inguinal, femoral, and abdominal hernia', 'Inguinal/femoral/abdominal hernia');
+        name = name.replace('Invasive Non-typhoidal Salmonella (iNTS)', 'Invasive non-typhoidal Salmonella');
+        if (name.length > 40) name = name.substring(0, 37) + '...';
+        return name;
+    };
+
+    const labels = ranked.map(d => displayName(d));
     const scores = ranked.map(d => d.unified_score);
+    const categories = ranked.map(d => classifyDisease(d.disease));
+    const bgColors = categories.map(c => DISEASE_COLORS[c]);
 
-    // Dynamic max based on actual data
-    const dynamicMax = Math.ceil(Math.max(...scores) * 1.05);
+    // Count NTDs and GS in top 10
+    const ntdTop10 = categories.slice(0, 10).filter(c => c === 'ntd').length;
+    const gsTop10 = categories.slice(0, 10).filter(c => c !== 'other').length;
 
-    // Continuous colour gradient by rank position: #1 = dark crimson, #20 = amber
-    const bgColors = scores.map((_, i) => {
-        const t = i / (ranked.length - 1); // 0 = top, 1 = bottom
-        const r = Math.round(180 + t * 37);   // 180 → 217
-        const g = Math.round(28 + t * 91);    // 28 → 119
-        const b = Math.round(28 - t * 22);    // 28 → 6
-        return `rgba(${r}, ${g}, ${b}, 0.9)`;
-    });
+    // Build three datasets for the legend
+    const ntdData = scores.map((s, i) => categories[i] === 'ntd' ? s : null);
+    const gsData = scores.map((s, i) => categories[i] === 'gs' ? s : null);
+    const otherData = scores.map((s, i) => categories[i] === 'other' ? s : null);
 
     chartInstances['chart-unified-ranking'] = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: labels,
-            datasets: [{
-                label: 'Unified Score',
-                data: scores,
-                backgroundColor: bgColors,
-                borderRadius: 3,
-                barThickness: 24
-            }]
+            datasets: [
+                {
+                    label: 'WHO Neglected Tropical Disease',
+                    data: ntdData,
+                    backgroundColor: DISEASE_COLORS.ntd,
+                    borderRadius: 2,
+                    barThickness: 18,
+                    skipNull: true
+                },
+                {
+                    label: 'Global South priority (non-NTD)',
+                    data: gsData,
+                    backgroundColor: DISEASE_COLORS.gs,
+                    borderRadius: 2,
+                    barThickness: 18,
+                    skipNull: true
+                },
+                {
+                    label: 'Other condition',
+                    data: otherData,
+                    backgroundColor: DISEASE_COLORS.other,
+                    borderRadius: 2,
+                    barThickness: 18,
+                    skipNull: true
+                }
+            ]
         },
         options: {
             indexAxis: 'y',
             responsive: true,
             maintainAspectRatio: false,
             layout: {
-                padding: { right: 50 }
+                padding: { right: 50, bottom: 10 }
             },
             plugins: {
-                legend: { display: false },
-                datalabels: {
+                legend: {
                     display: true,
+                    position: 'bottom',
+                    labels: {
+                        usePointStyle: true,
+                        pointStyle: 'rect',
+                        padding: 16,
+                        font: { size: 11, family: '-apple-system, sans-serif' },
+                        color: '#1a1a2e'
+                    }
+                },
+                datalabels: {
+                    display: (context) => context.dataset.data[context.dataIndex] !== null,
                     anchor: 'end',
                     align: 'right',
                     color: '#6b7280',
-                    font: { size: 11, family: 'Georgia, serif', weight: 'normal' },
-                    formatter: (v) => v.toFixed(1)
+                    font: { size: 10, family: '-apple-system, sans-serif' },
+                    formatter: (v) => v !== null ? v.toFixed(1) : ''
+                },
+                tooltip: {
+                    callbacks: {
+                        title: (items) => items[0]?.label || '',
+                        label: (item) => {
+                            const v = item.raw;
+                            return v !== null ? `${item.dataset.label}: ${v.toFixed(1)}` : '';
+                        }
+                    }
                 }
             },
             scales: {
                 x: {
+                    stacked: true,
                     beginAtZero: true,
-                    max: dynamicMax,
+                    max: 100,
                     title: {
                         display: true,
-                        text: 'Unified Score',
-                        font: { size: 13, family: '-apple-system, sans-serif' },
+                        text: 'Unified Neglect Score (PCA-derived)',
+                        font: { size: 12, family: '-apple-system, sans-serif' },
                         color: '#6b7280'
                     },
                     grid: { color: '#f1f3f5' },
-                    ticks: { color: '#9ca3af', font: { size: 11 } }
+                    ticks: { color: '#9ca3af', font: { size: 10 } }
                 },
                 y: {
+                    stacked: true,
                     grid: { display: false },
                     ticks: {
                         color: '#1a1a2e',
-                        font: { size: 12, family: '-apple-system, sans-serif' }
+                        font: { size: 10, family: '-apple-system, sans-serif' }
                     }
                 }
             }
         },
-        plugins: [ChartDataLabels]
+        plugins: [ChartDataLabels, {
+            id: 'annotationBox',
+            afterDraw: (chart) => {
+                const { ctx: c, chartArea } = chart;
+                c.save();
+                const x = chartArea.left + 8;
+                const y = chartArea.bottom - 58;
+                c.fillStyle = 'rgba(255, 255, 240, 0.9)';
+                c.strokeStyle = '#d1d5db';
+                c.lineWidth = 1;
+                c.beginPath();
+                c.roundRect(x, y, 260, 52, 4);
+                c.fill();
+                c.stroke();
+                c.fillStyle = '#374151';
+                c.font = '10px -apple-system, sans-serif';
+                c.fillText(`Top 10: ${gsTop10}/10 Global South burden`, x + 8, y + 16);
+                c.fillText(`${ntdTop10}/10 WHO NTDs`, x + 8, y + 30);
+                c.fillText('Weights: D=0.50, T=0.29, K=0.21 (PCA)', x + 8, y + 44);
+                c.restore();
+            }
+        }]
     });
 }
 
