@@ -103,7 +103,7 @@ function renderUnifiedRankingChart(diseases) {
                     skipNull: true
                 },
                 {
-                    label: 'Global South priority (non-NTD)',
+                    label: 'Global South priority',
                     data: gsData,
                     backgroundColor: DISEASE_COLORS.gs,
                     borderRadius: 2,
@@ -192,13 +192,13 @@ function renderUnifiedRankingChart(diseases) {
                 c.strokeStyle = '#d1d5db';
                 c.lineWidth = 1;
                 c.beginPath();
-                c.roundRect(x, y, 260, 52, 4);
+                c.roundRect(x, y, 320, 52, 4);
                 c.fill();
                 c.stroke();
                 c.fillStyle = '#374151';
                 c.font = '10px -apple-system, sans-serif';
                 c.fillText(`Top 10: ${gsTop10}/10 Global South burden`, x + 8, y + 16);
-                c.fillText(`${ntdTop10}/10 WHO NTDs`, x + 8, y + 30);
+                c.fillText(`${ntdTop10}/10 WHO neglected tropical diseases`, x + 8, y + 30);
                 c.fillText('Weights: D=0.50, T=0.29, K=0.21 (PCA)', x + 8, y + 44);
                 c.restore();
             }
@@ -626,7 +626,7 @@ function renderNTDIsolationChart(diseases) {
     chartInstances['chart-ntd-isolation'] = new Chart(ctx, {
         type: 'bar',
         data: {
-            labels: ['NTDs (n=' + ntdSII.length + ')', 'Non-NTD (n=' + otherSII.length + ')'],
+            labels: ['Neglected tropical diseases (n=' + ntdSII.length + ')', 'Other diseases (n=' + otherSII.length + ')'],
             datasets: [{
                 label: 'Mean SII (×10⁴)',
                 data: [ntdVal, otherVal],
@@ -644,7 +644,7 @@ function renderNTDIsolationChart(diseases) {
                 legend: { display: false },
                 title: {
                     display: true,
-                    text: 'NTD vs Non-NTD Semantic Isolation',
+                    text: 'Neglected Tropical Disease vs Other Disease Semantic Isolation',
                     font: { size: 14, family: 'Georgia, serif', weight: 'normal' },
                     color: '#1a1a2e',
                     padding: { bottom: 4 }
