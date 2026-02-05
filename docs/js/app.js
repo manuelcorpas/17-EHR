@@ -613,7 +613,7 @@ function renderBiobankChecklist() {
             `<label class="compare-check-item">
                 <input type="checkbox" class="compare-checkbox" value="${b.id}">
                 <span>${b.name} (${b.country})</span>
-                <span class="compare-check-eas">EAS: ${b.scores?.equityAlignment?.toFixed(1) || '--'}</span>
+                <span class="compare-check-eas">${(b.stats?.totalPublications || 0).toLocaleString()} publications</span>
             </label>`
         ).join('');
         return `<div class="compare-region-group">
