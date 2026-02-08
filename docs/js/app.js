@@ -337,6 +337,19 @@ function recalculateAndUpdate() {
 
     renderLiveRankings(result.diseases);
     renderUnifiedRankingChart(result.diseases);
+
+    // Update summary stats
+    const scored = result.diseases.filter(d => !HEIMEngine.INJURIES.has(d.disease) && d.unified_score != null);
+    const scores = scored.map(d => d.unified_score);
+    if (scores.length) {
+        const mean = scores.reduce((a, b) => a + b, 0) / scores.length;
+        const min = Math.min(...scores);
+        const max = Math.max(...scores);
+        const threeDim = scored.filter(d => d.dimensions_available === 3).length;
+        setText('rank-mean', mean.toFixed(1));
+        document.getElementById('rank-range').innerHTML = min.toFixed(1) + ' &ndash; ' + max.toFixed(1);
+        setText('rank-3d-count', threeDim);
+    }
 }
 
 

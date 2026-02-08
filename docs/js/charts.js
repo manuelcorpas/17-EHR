@@ -199,7 +199,10 @@ function renderUnifiedRankingChart(diseases) {
                 c.font = '10px -apple-system, sans-serif';
                 c.fillText(`Top 10: ${gsTop10}/10 Global South burden`, x + 8, y + 16);
                 c.fillText(`${ntdTop10}/10 WHO neglected tropical diseases`, x + 8, y + 30);
-                c.fillText('Weights: D=0.50, T=0.29, K=0.21 (PCA)', x + 8, y + 44);
+                const wD = (typeof WEIGHTS !== 'undefined' ? WEIGHTS.unified.discovery : 0.501).toFixed(2);
+                const wT = (typeof WEIGHTS !== 'undefined' ? WEIGHTS.unified.translation : 0.293).toFixed(2);
+                const wK = (typeof WEIGHTS !== 'undefined' ? WEIGHTS.unified.knowledge : 0.206).toFixed(2);
+                c.fillText(`Weights: D=${wD}, T=${wT}, K=${wK}`, x + 8, y + 44);
                 c.restore();
             }
         }]

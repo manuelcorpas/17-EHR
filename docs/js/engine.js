@@ -60,7 +60,7 @@ const HEIMEngine = (() => {
         'Poisonings', 'Exposure_to_mechanical_forces', 'Foreign_body',
         'Environmental_heat_and_cold_exposure', 'Other_transport_injuries',
         'Executions_and_police_conflict', 'Other_unintentional_injuries',
-        'Adverse_effects_of_medical_treatment', 'Paralytic_ileus_and_intestinal_obstruction'
+        'Adverse_effects_of_medical_treatment'
     ]);
 
     // =========================================================================
