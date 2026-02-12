@@ -290,8 +290,8 @@ If you use this code, data, or the HEIM framework, please cite:
              Global South Diseases},
   journal = {medRxiv},
   year    = {2026},
-  doi     = {10.1101/2026.01.04.26343419},
-  url     = {https://doi.org/10.1101/2026.01.04.26343419}
+  doi     = {10.64898/2026.02.10.26346004},
+  url     = {https://doi.org/10.64898/2026.02.10.26346004}
 }
 ```
 
