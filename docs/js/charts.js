@@ -552,7 +552,7 @@ function renderRegionalPubsChart(summary) {
                 },
                 subtitle: {
                     display: true,
-                    text: 'Connolly et al. (2025) Commun Med 5:210',
+                    text: 'Source: 70 IHCC biobanks, PubMed 2000\u20132025',
                     font: { size: 10, style: 'italic' },
                     color: '#9ca3af',
                     padding: { bottom: 8 }

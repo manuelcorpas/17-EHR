@@ -12,7 +12,7 @@
     <!-- Open Graph / Social Media -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://manuelcorpas.github.io/17-EHR/">
-    <meta property="og:title" content="HEIM Framework | Three Dimensions of Compounding Neglect">
+    <meta property="og:title" content="HEIM Framework | Three Dimensions of Neglect">
     <meta property="og:description" content="Interactive dashboard quantifying global health research inequity across 175 diseases, 70 biobanks, and 563,725 clinical trials. 538x research intensity disparity between diseases of comparable burden.">
     <meta property="og:image" content="https://manuelcorpas.github.io/17-EHR/og-image.png">
     <meta property="og:image:width" content="1200">
@@ -20,7 +20,7 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="HEIM Framework | Three Dimensions of Compounding Neglect">
+    <meta name="twitter:title" content="HEIM Framework | Three Dimensions of Neglect">
     <meta name="twitter:description" content="Interactive dashboard quantifying global health research inequity across 175 diseases, 70 biobanks, and 563,725 clinical trials.">
     <meta name="twitter:image" content="https://manuelcorpas.github.io/17-EHR/og-image.png">
 
@@ -73,8 +73,8 @@
          SECTION 1: OVERVIEW (Hero)
          ============================================================ -->
     <section id="overview" class="scroll-section hero-section">
-        <h1 class="hero-title">Three Dimensions of Compounding Neglect</h1>
-        <p class="hero-subtitle">How Biobanks, Clinical Trials, and Scientific Literature Systematically Exclude the Global South</p>
+        <h1 class="hero-title">Three Dimensions of Neglect</h1>
+        <p class="hero-subtitle">How Biobanks, Clinical Trials, and Scientific Literature Systematically Underserve Global South Diseases</p>
 
         <div class="hero-stat">
             <div class="hero-stat-number" id="hero-top-score">538&times;</div>
@@ -160,8 +160,13 @@
                 <canvas id="chart-unified-ranking"></canvas>
             </div>
 
+            <div class="equity-figure" style="margin-top: 2rem;">
+                <img src="figures/Fig_05_Unified_Neglect_Score.png" alt="Figure 5 - Unified Neglect Score Rankings" loading="lazy">
+                <p class="equity-figure-caption">Figure 5. Unified Neglect Score combining Discovery, Translation, and Knowledge dimensions with PCA-derived weights. The top-ranked diseases are exclusively infectious conditions affecting the Global South.</p>
+            </div>
+
             <div class="callout-box">
-                <strong>All top-10 most neglected diseases are infectious conditions exclusively affecting the Global South</strong> - 9 of 10 are WHO-classified neglected tropical diseases, collectively affecting over 1.5 billion people.
+                <strong>Nine of the top ten most neglected diseases have primary burden in the Global South.</strong> Five are WHO-classified neglected tropical diseases. The remainder, including malaria, encephalitis, iodine deficiency, and invasive non-typhoidal Salmonella, are likewise conditions of poverty and structural neglect, collectively affecting over 1.5 billion people.
             </div>
 
             <div class="stats-row">
@@ -212,6 +217,22 @@
                         <div class="equity-stat-label">Clinical trials focused on cancer</div>
                     </div>
                 </div>
+            </div>
+
+            <!-- Publication Figures: Discovery, Translation, Knowledge -->
+            <div class="equity-figure" style="margin-top: 2rem;">
+                <img src="figures/Fig_02_Discovery_Dimension.png" alt="Figure 2 - Discovery Dimension: Biobank Research Gaps" loading="lazy">
+                <p class="equity-figure-caption">Figure 2. Discovery dimension analysis. Biobank research gaps across 175 GBD disease categories, showing disease coverage and publication intensity for 70 IHCC biobanks.</p>
+            </div>
+
+            <div class="equity-figure" style="margin-top: 2rem;">
+                <img src="figures/Fig_03_Translation_Dimension.png" alt="Figure 3 - Translation Dimension: Clinical Trial Equity" loading="lazy">
+                <p class="equity-figure-caption">Figure 3. Translation dimension analysis. Clinical trial equity across 563,725 studies, showing geographic distribution and disease-specific research intensity relative to burden.</p>
+            </div>
+
+            <div class="equity-figure" style="margin-top: 2rem;">
+                <img src="figures/Fig_04_Semantic_Isolation.png" alt="Figure 4 - Knowledge Dimension: Semantic Isolation" loading="lazy">
+                <p class="equity-figure-caption">Figure 4. Knowledge dimension analysis. Semantic isolation of diseases in the biomedical literature, computed from PubMedBERT embeddings across 13.1M papers. Neglected tropical diseases show 40% higher isolation (Cohen's d = 1.80).</p>
             </div>
 
             <!-- Pipeline paradox callout -->
@@ -428,8 +449,8 @@
                 <div class="details-content">
                     <p><strong>Biobanks (Discovery):</strong> Publication data from PubMed for 70 biobanks in the International HundredK+ Cohorts Consortium (IHCC). Disease coverage mapped to GBD 2021 taxonomy.</p>
                     <p><strong>Clinical Trials (Translation):</strong> 563,725 studies from ClinicalTrials.gov via the AACT database (2000-2025). 2,189,930 disease-trial mappings across 770,178 trial sites in 194 countries.</p>
-                    <p><strong>PubMed Semantic (Knowledge):</strong> 13.1M papers with PubMedBERT embeddings (768-dimensional). 176 diseases analysed for semantic isolation, knowledge transfer potential, and research clustering.</p>
-                    <p><strong>Disease Burden:</strong> Global Burden of Disease Study 2021 (IHME). 175 disease categories mapped to GBD Level 3 causes. 29 Global South Priority diseases identified.</p>
+                    <p><strong>PubMed Semantic (Knowledge):</strong> 13.1M papers with PubMedBERT embeddings (768-dimensional). 175 diseases analysed for semantic isolation, knowledge transfer potential, and research clustering.</p>
+                    <p><strong>Disease Burden:</strong> Global Burden of Disease Study 2021 (IHME). 175 disease categories mapped to GBD Level 3 causes. 30 Global South Priority diseases identified.</p>
                 </div>
             </details>
 
@@ -439,7 +460,7 @@
                     <p><strong>Unified Score</strong> = w_D &times; Discovery_norm + w_T &times; Translation_norm + w_K &times; Knowledge_norm (PCA-derived weights: 0.501, 0.293, 0.206). Higher = more neglected.</p>
                     <p><strong>Gap Score (Discovery)</strong>: Three-tier scoring: zero publications (95), category thresholds (infectious/neglected), burden-normalised intensity deciles. Global South penalty (+10 if &lt;50 pubs).</p>
                     <p><strong>Research Intensity</strong> = Trials per Million DALYs. Measures research attention relative to disease burden.</p>
-                    <p><strong>Semantic Isolation Index (SII)</strong>: Mean cosine distance from the global centroid of all biomedical knowledge. Higher = more isolated.</p>
+                    <p><strong>Semantic Isolation Index (SII)</strong>: Mean cosine distance from a disease's centroid to the centroids of its k=100 nearest-neighbour diseases in PubMedBERT embedding space. Higher = more isolated.</p>
                     <p><strong>Knowledge Transfer Potential (KTP)</strong>: Maximum similarity to any other disease. Lower = less benefit from related fields.</p>
                     <p><strong>Equity Alignment Score (EAS)</strong>: Per-biobank metric. EAS = 100 - (w_gap &times; GapSeverity + w_burden &times; BurdenMiss + w_capacity &times; CapacityPenalty).</p>
                 </div>
@@ -450,7 +471,7 @@
                 <div class="details-content">
                     <p><strong>Semantic Isolation:</strong> 17 WHO neglected tropical diseases show 40% higher isolation than other diseases (mean SII 0.00204 vs 0.00146, P&nbsp;&lt;&nbsp;0.0001, Cohen's d&nbsp;=&nbsp;1.80).</p>
                     <p><strong>Dimension Orthogonality:</strong> r=0.07 between dimensions confirms they measure independent aspects of neglect.</p>
-                    <p><strong>Ranking Robustness:</strong> 200 Dirichlet-distributed weight perturbations show mean Spearman rho &gt;0.95, confirming rankings are stable under weight variation.</p>
+                    <p><strong>Ranking Robustness:</strong> Systematic perturbation of each dimension's weight by &plusmn;20% across 51 schemes yields Spearman rho &gt;0.975 for all pairwise rank comparisons. Additionally, 200 Dirichlet-distributed random weight vectors confirm mean rho &gt;0.95.</p>
                     <p><strong>PCA Justification:</strong> PC1 explains 63.3% of variance across 86 diseases with complete data. PC1+PC2 explain 86.9%.</p>
                 </div>
             </details>
@@ -468,12 +489,33 @@
                 </div>
             </details>
 
+            <details>
+                <summary>Extended Data Figures</summary>
+                <div class="details-content">
+                    <div class="equity-figure" style="margin-top: 1rem;">
+                        <img src="figures/Extended_Data_Fig_01_Temporal_Trends.png" alt="Extended Data Figure 1 - Temporal Trends" loading="lazy">
+                        <p class="equity-figure-caption">Extended Data Figure 1. Temporal trends in research activity across the three HEIM dimensions, showing how discovery, translation, and knowledge patterns have evolved over time.</p>
+                    </div>
+
+                    <div class="equity-figure" style="margin-top: 1.5rem;">
+                        <img src="figures/Extended_Data_Fig_02_Sensitivity_Analysis.png" alt="Extended Data Figure 2 - Sensitivity Analysis" loading="lazy">
+                        <p class="equity-figure-caption">Extended Data Figure 2. Sensitivity analysis of unified neglect rankings under systematic &plusmn;20% weight perturbation across 51 schemes (all Spearman rho &gt; 0.975) and 200 Dirichlet-distributed random weight vectors (mean rho &gt; 0.95).</p>
+                    </div>
+
+                    <div class="equity-figure" style="margin-top: 1.5rem;">
+                        <img src="figures/Extended_Data_Fig_03_Regional_Comparison.png" alt="Extended Data Figure 3 - Regional Comparison" loading="lazy">
+                        <p class="equity-figure-caption">Extended Data Figure 3. Regional comparison of research equity metrics across WHO regions, highlighting systematic disparities between high-income and low- and middle-income country settings.</p>
+                    </div>
+                </div>
+            </details>
+
             <div class="citation-box" id="citation-text">
                 <button class="citation-copy-btn" onclick="copyCitation()">Copy</button>
-                <p><strong>Corpas M, Freidin MB, Valdivia-Silva J, Baker S, Fatumo S, Guio H.</strong> (2026). Three Dimensions of Compounding Neglect: How Biobanks, Clinical Trials, and Scientific Literature Systematically Exclude the Global South. <em>In preparation</em>.</p>
+                <p><strong>Corpas M, Freidin MB, Valdivia-Silva J, Baker S, Fatumo S, Guio H.</strong> (2026). Three Dimensions of Neglect: How Biobanks, Clinical Trials, and Scientific Literature Systematically Underserve Global South Diseases. <em>medRxiv</em>. doi: <a href="https://doi.org/10.1101/2026.01.04.26343419" target="_blank" style="color: var(--nm-accent);">10.1101/2026.01.04.26343419</a></p>
             </div>
 
             <div class="methods-links">
+                <a href="https://doi.org/10.1101/2026.01.04.26343419" target="_blank" class="methods-link">medRxiv Preprint</a>
                 <a href="https://github.com/manuelcorpas/17-EHR" target="_blank" class="methods-link">GitHub Repository</a>
                 <a href="mailto:m.corpas@westminster.ac.uk" class="methods-link">Contact: m.corpas@westminster.ac.uk</a>
             </div>
@@ -484,7 +526,7 @@
     <footer class="site-footer">
         <p class="site-footer-line"><strong>HEIM Framework v3.0</strong></p>
         <p class="site-footer-line">Data: GBD 2021, ClinicalTrials.gov, PubMed, PubMedBERT | <a href="https://github.com/manuelcorpas/17-EHR" target="_blank">GitHub</a></p>
-        <p class="site-footer-line">Corpas, Freidin, Valdivia-Silva, Baker, Fatumo &amp; Guio (2026) - Three Dimensions of Compounding Neglect</p>
+        <p class="site-footer-line">Corpas, Freidin, Valdivia-Silva, Baker, Fatumo &amp; Guio (2026) - <a href="https://doi.org/10.1101/2026.01.04.26343419" target="_blank" style="color: inherit;">Three Dimensions of Neglect</a></p>
     </footer>
 
     <!-- Scripts -->
