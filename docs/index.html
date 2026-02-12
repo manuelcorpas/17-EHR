@@ -457,12 +457,23 @@
             <details>
                 <summary>Key Metrics</summary>
                 <div class="details-content">
-                    <p><strong>Unified Score</strong> = w_D &times; Discovery_norm + w_T &times; Translation_norm + w_K &times; Knowledge_norm (PCA-derived weights: 0.501, 0.293, 0.206). Higher = more neglected.</p>
-                    <p><strong>Gap Score (Discovery)</strong>: Three-tier scoring: zero publications (95), category thresholds (infectious/neglected), burden-normalised intensity deciles. Global South penalty (+10 if &lt;50 pubs).</p>
-                    <p><strong>Research Intensity</strong> = Trials per Million DALYs. Measures research attention relative to disease burden.</p>
-                    <p><strong>Semantic Isolation Index (SII)</strong>: Mean cosine distance from a disease's centroid to the centroids of its k=100 nearest-neighbour diseases in PubMedBERT embedding space. Higher = more isolated.</p>
-                    <p><strong>Knowledge Transfer Potential (KTP)</strong>: Maximum similarity to any other disease. Lower = less benefit from related fields.</p>
-                    <p><strong>Equity Alignment Score (EAS)</strong>: Per-biobank metric. EAS = 100 - (w_gap &times; GapSeverity + w_burden &times; BurdenMiss + w_capacity &times; CapacityPenalty).</p>
+                    <p><strong>Unified Neglect Score (0&ndash;100)</strong><br>
+                    A single number summarising how neglected a disease is across all three research stages. It combines the Gap Score (biobank research gaps), clinical trial equity, and semantic isolation using weights derived from principal component analysis: Discovery receives the largest weight (0.50) because biobank-stage neglect explains the most variance, followed by Translation (0.29) and Knowledge (0.21). A score of 0 means no measurable neglect; higher scores indicate compounding disadvantage across multiple dimensions.</p>
+
+                    <p><strong>Gap Score (0&ndash;100) &mdash; Discovery dimension</strong><br>
+                    Measures how far a disease's biobank research output falls short of what its global burden would warrant. Diseases with zero publications across all 70 biobanks receive the maximum penalty (95). Diseases with some publications are scored based on whether their research volume is proportionate to their share of global DALYs, with stricter thresholds for infectious and neglected tropical diseases. An additional penalty (+10) is applied to Global South priority diseases with fewer than 50 publications. Categories: Critical (&gt;70), High (50&ndash;70), Moderate (30&ndash;50), Low (&lt;30).</p>
+
+                    <p><strong>Research Intensity &mdash; Translation dimension</strong><br>
+                    The number of registered clinical trials per million DALYs for each disease. This metric reveals whether translational research investment is proportionate to disease burden. For example, type 2 diabetes has approximately 19,000 trials per million DALYs, while malaria has only 25. For the Unified Score, intensity is inverted so that diseases with fewer trials per unit of burden receive higher neglect scores.</p>
+
+                    <p><strong>Semantic Isolation Index (SII) &mdash; Knowledge dimension</strong><br>
+                    Measures how disconnected a disease's research literature is from the rest of biomedical science. For each disease, we compute a representative "fingerprint" (centroid) from all its PubMed abstracts using PubMedBERT, a language model trained on biomedical text. We then measure how distant that fingerprint is from the 100 most similar diseases. Diseases with higher SII values have research that "speaks its own language," cut off from the methods, concepts, and findings of mainstream biomedicine. NTDs are 40% more isolated than other diseases (Cohen's d&nbsp;=&nbsp;1.80).</p>
+
+                    <p><strong>Knowledge Transfer Potential (KTP)</strong><br>
+                    How much a disease could benefit from advances in related fields. Computed as the similarity between a disease's research fingerprint and its closest neighbours. Diseases with low KTP have few related conditions whose progress might "spill over" into new treatments or understanding.</p>
+
+                    <p><strong>Equity Alignment Score (EAS, 0&ndash;100) &mdash; per biobank</strong><br>
+                    Rates each biobank on how well its research portfolio matches global disease burden. A score of 100 would mean the biobank covers all high-burden diseases proportionately. The score penalises three things: the severity of research gaps (weighted 40%), the share of global burden in diseases the biobank barely studies (30%), and limited disease breadth (30%). Only 1 of 70 biobanks (UK Biobank, EAS&nbsp;=&nbsp;84.6) achieves High equity (&ge;70); 55 score below 40 (Low).</p>
                 </div>
             </details>
 
