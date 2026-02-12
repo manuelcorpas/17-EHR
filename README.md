@@ -166,10 +166,11 @@ Mean cosine similarity between a disease centroid and the centroids of its top 1
 Mean cosine distance from individual abstracts to their disease centroid, quantifying within-disease research dispersion.
 
 ### Unified Neglect Score
-Integrates all three dimensions:
+Integrates all three dimensions using PCA-derived weights (PC1 explains 63.3% of variance across 86 diseases with complete data):
 ```
-Unified Score = (0.33 x Discovery) + (0.33 x Translation) + (0.34 x Knowledge)
+Unified Score = (0.50 x Discovery) + (0.29 x Translation) + (0.21 x Knowledge)
 ```
+For diseases lacking clinical trial data, the score uses Discovery and Knowledge only (weights rescaled to 0.71 and 0.29 respectively).
 
 ---
 
@@ -185,47 +186,64 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+### AACT Database Access (Translation Dimension)
+
+The clinical trials pipeline (scripts `04-*`) requires access to the AACT PostgreSQL database:
+
+1. Register at https://aact.ctti-clinicaltrials.org/users/sign_up (free; approval typically within 24 hours)
+2. Copy `.env.example` to `.env` and fill in your credentials:
+   ```bash
+   cp .env.example .env
+   ```
+3. Test the connection:
+   ```bash
+   python3.11 PYTHON/04-00-heim-ct-setup.py
+   ```
+
 ### Running the Full Pipeline
+
+Approximate runtimes are listed for each script (measured on Apple M3 Max, 36 GB RAM, 100 Mbps connection). Actual times will vary with hardware and network speed.
 
 ```bash
 # Discovery dimension
-python3.11 PYTHON/03-00-ihcc-fetch-pubmed.py
-python3.11 PYTHON/03-00b-bhem-build-gbd-map.py
-python3.11 PYTHON/03-01-bhem-map-diseases.py
-python3.11 PYTHON/03-02-bhem-analyze-themes.py
-python3.11 PYTHON/03-03-bhem-compute-metrics.py
-python3.11 PYTHON/03-06-bhem-generate-figures.py
-python3.11 PYTHON/03-07-sensitivity-analysis.py
-python3.11 PYTHON/03-08-validation-metrics.py
+python3.11 PYTHON/03-00-ihcc-fetch-pubmed.py       # ~2-3 hours (PubMed API, rate-limited)
+python3.11 PYTHON/03-00b-bhem-build-gbd-map.py      # ~1 min
+python3.11 PYTHON/03-01-bhem-map-diseases.py         # ~5 min
+python3.11 PYTHON/03-02-bhem-analyze-themes.py       # ~3 min
+python3.11 PYTHON/03-03-bhem-compute-metrics.py      # ~2 min
+python3.11 PYTHON/03-06-bhem-generate-figures.py     # ~2 min
+python3.11 PYTHON/03-07-sensitivity-analysis.py      # ~5 min
+python3.11 PYTHON/03-08-validation-metrics.py        # ~1 min
 
-# Translation dimension (requires AACT database access)
-python3.11 PYTHON/04-00-heim-ct-setup.py
-python3.11 PYTHON/04-01-heim-ct-fetch.py
-python3.11 PYTHON/04-02-heim-ct-map-diseases.py
-python3.11 PYTHON/04-03-heim-ct-compute-metrics.py
-python3.11 PYTHON/04-04-heim-ct-generate-figures.py
+# Translation dimension (requires AACT database access; see above)
+python3.11 PYTHON/04-00-heim-ct-setup.py             # ~10 sec (connection test)
+python3.11 PYTHON/04-01-heim-ct-fetch.py             # ~30-45 min (downloads ~2M trial records)
+python3.11 PYTHON/04-02-heim-ct-map-diseases.py      # ~15 min (24-core multiprocessing)
+python3.11 PYTHON/04-03-heim-ct-compute-metrics.py   # ~2 min
+python3.11 PYTHON/04-04-heim-ct-generate-figures.py  # ~2 min
 
-# Knowledge dimension (requires GPU recommended; CPU fallback available)
-python3.11 PYTHON/05-00-heim-sem-setup.py
-python3.11 PYTHON/05-01-heim-sem-fetch.py
-python3.11 PYTHON/05-02-heim-sem-embed.py
-python3.11 PYTHON/05-03-heim-sem-compute-metrics.py
-python3.11 PYTHON/05-04-heim-sem-generate-figures.py
+# Knowledge dimension (GPU strongly recommended; CPU fallback available)
+python3.11 PYTHON/05-00-heim-sem-setup.py            # ~10 sec (dependency check)
+python3.11 PYTHON/05-01-heim-sem-fetch.py            # ~4-6 hours (13.1M PubMed abstracts)
+python3.11 PYTHON/05-02-heim-sem-embed.py            # ~8-12 hours GPU / days on CPU
+python3.11 PYTHON/05-03-heim-sem-compute-metrics.py  # ~10 min
+python3.11 PYTHON/05-04-heim-sem-generate-figures.py # ~3 min
 
 # Integration and publication figures
-python3.11 PYTHON/05-05-heim-sem-integrate.py
-python3.11 PYTHON/06-heim-publication-figures.py
+python3.11 PYTHON/05-05-heim-sem-integrate.py        # ~1 min
+python3.11 PYTHON/06-heim-publication-figures.py      # ~2 min
 ```
 
 **Notes:**
-- PubMed retrieval (`03-00`, `05-01`) requires internet access and may take several hours
-- AACT access (`04-01`) requires database credentials (see [AACT registration](https://aact.ctti-clinicaltrials.org/))
+- PubMed retrieval (`03-00`, `05-01`) requires internet access and is rate-limited to 3 requests/second
+- AACT access (`04-01`) requires database credentials (see AACT Database Access section above)
 - Embedding generation (`05-02`) processes 13.1M abstracts; GPU (MPS/CUDA) strongly recommended
 - Pre-computed metrics and data are included in `DATA/` for analysis scripts that do not require raw retrieval
+- Total pipeline runtime: ~16-24 hours with GPU, longer on CPU-only hardware
 
 ### Sensitivity Analysis
 
-Weighting parameters in the EAS and Unified Score formulas were perturbed by +-20%. Rank-order stability was assessed using Spearman's rho (all rho > 0.92). See `ANALYSIS/03-07-SENSITIVITY-ANALYSIS/` for full results.
+Weighting parameters in the EAS and Unified Score formulas were perturbed by +-20% across 51 total schemes. Rank-order stability was assessed using Spearman's rho (all rho > 0.975). See `ANALYSIS/03-07-SENSITIVITY-ANALYSIS/` for full results.
 
 ### Statistical Methods
 
@@ -256,6 +274,28 @@ The dashboard source is in `docs/` and is served via GitHub Pages.
 - **Heinner Guio** - UTEC Lima; Instituto Nacional de Salud, Peru; GENEQ Global
 
 **Corresponding author:** m.corpas@westminster.ac.uk (ORCID: 0000-0002-5765-9627)
+
+---
+
+## How to Cite
+
+If you use this code, data, or the HEIM framework, please cite:
+
+```bibtex
+@article{corpas2026heim,
+  author  = {Corpas, Manuel and Freidin, Maxim B. and Valdivia-Silva, Julio
+             and Baker, Simeon and Fatumo, Segun and Guio, Heinner},
+  title   = {Three Dimensions of Neglect: How Biobanks, Clinical Trials,
+             and Scientific Literature Systematically Underserve
+             Global South Diseases},
+  journal = {medRxiv},
+  year    = {2026},
+  doi     = {10.1101/2026.01.04.26343419},
+  url     = {https://doi.org/10.1101/2026.01.04.26343419}
+}
+```
+
+A machine-readable citation is also available in [CITATION.cff](CITATION.cff).
 
 ---
 
