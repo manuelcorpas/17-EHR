@@ -19,16 +19,23 @@ umap-learn>=0.5.3
 # PubMed data retrieval
 biopython>=1.81
 
-# Network analysis (optional, for archived scripts)
-# networkx>=3.0
-
-# Progress bars (optional)
+# Progress bars
 tqdm>=4.65.0
 
-# Logging
-logging
+# Deep learning & NLP (Knowledge dimension: 05-00, 05-02)
+torch>=2.0.0
+transformers>=4.30.0
+
+# HDF5 embedding storage (05-02, 05-03, 05-04)
+h5py>=3.8.0
+
+# AACT database access (Translation dimension: 04-00, 04-01)
+psycopg2-binary>=2.9.0
+
+# Geospatial visualization (optional, used by 03-06 for world maps)
+cartopy>=0.21.0
 
 # Note: Standard library modules used:
 # - os, sys, re, json, time, datetime
-# - collections, warnings, math
+# - collections, warnings, math, logging
 # - xml.etree.ElementTree

@@ -1,0 +1,65 @@
+cff-version: 1.2.0
+title: >-
+  Health Equity Informative Metrics (HEIM): Three Dimensions of Neglect
+  in Global Biomedical Research
+message: >-
+  If you use this software or data, please cite the associated preprint.
+type: software
+authors:
+  - given-names: Manuel
+    family-names: Corpas
+    email: m.corpas@westminster.ac.uk
+    orcid: "https://orcid.org/0000-0002-5765-9627"
+    affiliation: >-
+      University of Westminster; Alan Turing Institute; GENEQ Global
+  - given-names: Maxim B.
+    family-names: Freidin
+    affiliation: King's College London
+  - given-names: Julio
+    family-names: Valdivia-Silva
+    affiliation: UTEC Lima
+  - given-names: Simeon
+    family-names: Baker
+    affiliation: University of Bath; GENEQ Global
+  - given-names: Segun
+    family-names: Fatumo
+    affiliation: >-
+      MRC/UVRI and LSHTM Uganda Research Unit; Queen Mary University of London
+  - given-names: Heinner
+    family-names: Guio
+    affiliation: UTEC Lima; Instituto Nacional de Salud, Peru; GENEQ Global
+repository-code: "https://github.com/manuelcorpas/17-EHR"
+url: "https://manuelcorpas.github.io/17-EHR/"
+keywords:
+  - health equity
+  - biobanks
+  - clinical trials
+  - semantic analysis
+  - neglected tropical diseases
+  - global burden of disease
+  - PubMedBERT
+license: MIT
+version: 1.0.0
+date-released: "2026-01-05"
+preferred-citation:
+  type: article
+  title: >-
+    Three Dimensions of Neglect: How Biobanks, Clinical Trials, and
+    Scientific Literature Systematically Underserve Global South Diseases
+  authors:
+    - given-names: Manuel
+      family-names: Corpas
+    - given-names: Maxim B.
+      family-names: Freidin
+    - given-names: Julio
+      family-names: Valdivia-Silva
+    - given-names: Simeon
+      family-names: Baker
+    - given-names: Segun
+      family-names: Fatumo
+    - given-names: Heinner
+      family-names: Guio
+  doi: "10.1101/2026.01.04.26343419"
+  url: "https://doi.org/10.1101/2026.01.04.26343419"
+  journal: medRxiv
+  year: 2026
