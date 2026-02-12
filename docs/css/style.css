@@ -381,6 +381,8 @@ a:hover { text-decoration: underline; }
     height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
 }
 
 .equity-figure-caption {
