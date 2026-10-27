@@ -1,6 +1,6 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
-  "generated": "2026-02-03T10:00:51.343687",
+  "generated": "2026-10-25T15:49:08.853188",
   "equityRatio": 57.78,
   "equityInterpretation": "HIC-biased",
   "summary": {
@@ -8,23 +8,39 @@
       "biobanks": 52,
       "publications": 36096,
       "publicationShare": 93.5,
-      "averageEas": 27.1
+      "averageEas": 16.4
     },
     "lmic": {
       "biobanks": 18,
       "publications": 2499,
       "publicationShare": 6.5,
-      "averageEas": 15.1
+      "averageEas": 8.3
     }
   },
   "globalSouthDiseases": [
     {
-      "id": "Malaria",
-      "name": "Malaria",
+      "id": "Typhoid and paratyphoid",
+      "name": "Typhoid and paratyphoid",
       "gapScore": 95.0,
       "severity": "Critical",
-      "publications": 17,
-      "dalys": 55.17
+      "publications": 0,
+      "dalys": 8.1
+    },
+    {
+      "id": "Invasive Non-typhoidal Salmonella (iNTS)",
+      "name": "Invasive Non-typhoidal Salmonella (iNTS)",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 9,
+      "dalys": 4.74
+    },
+    {
+      "id": "Other intestinal infectious diseases",
+      "name": "Other intestinal infectious diseases",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 4,
+      "dalys": 0.11
     },
     {
       "id": "Dengue",
@@ -35,12 +51,44 @@
       "dalys": 2.08
     },
     {
+      "id": "Yellow fever",
+      "name": "Yellow fever",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 0.32
+    },
+    {
+      "id": "Rabies",
+      "name": "Rabies",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 0.57
+    },
+    {
+      "id": "Intestinal nematode infections",
+      "name": "Intestinal nematode infections",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 1.38
+    },
+    {
       "id": "Schistosomiasis",
       "name": "Schistosomiasis",
       "gapScore": 95.0,
       "severity": "Critical",
       "publications": 0,
       "dalys": 1.75
+    },
+    {
+      "id": "Leishmaniasis",
+      "name": "Leishmaniasis",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 0.78
     },
     {
       "id": "Lymphatic filariasis",
@@ -51,12 +99,92 @@
       "dalys": 1.31
     },
     {
+      "id": "Onchocerciasis",
+      "name": "Onchocerciasis",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 1.26
+    },
+    {
+      "id": "Trachoma",
+      "name": "Trachoma",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 0.12
+    },
+    {
+      "id": "Chagas disease",
+      "name": "Chagas disease",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 2,
+      "dalys": 0.24
+    },
+    {
+      "id": "African trypanosomiasis",
+      "name": "African trypanosomiasis",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 0.06
+    },
+    {
       "id": "Cysticercosis",
       "name": "Cysticercosis",
       "gapScore": 95.0,
       "severity": "Critical",
       "publications": 0,
       "dalys": 1.24
+    },
+    {
+      "id": "Cystic echinococcosis",
+      "name": "Cystic echinococcosis",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 1,
+      "dalys": 0.11
+    },
+    {
+      "id": "Leprosy",
+      "name": "Leprosy",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 0.02
+    },
+    {
+      "id": "Food-borne trematodiases",
+      "name": "Food-borne trematodiases",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 1.0
+    },
+    {
+      "id": "Other neglected tropical diseases",
+      "name": "Other neglected tropical diseases",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 4.22
+    },
+    {
+      "id": "Ebola",
+      "name": "Ebola",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 0.0
+    },
+    {
+      "id": "Zika virus",
+      "name": "Zika virus",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 2,
+      "dalys": 0.0
     },
     {
       "id": "Guinea worm disease",
@@ -67,12 +195,84 @@
       "dalys": 0.0
     },
     {
+      "id": "Meningitis",
+      "name": "Meningitis",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 1,
+      "dalys": 14.51
+    },
+    {
+      "id": "Encephalitis",
+      "name": "Encephalitis",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 3,
+      "dalys": 4.95
+    },
+    {
+      "id": "Tetanus",
+      "name": "Tetanus",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 1,
+      "dalys": 1.34
+    },
+    {
+      "id": "Pertussis",
+      "name": "Pertussis",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 5,
+      "dalys": 4.61
+    },
+    {
+      "id": "Diphtheria",
+      "name": "Diphtheria",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 1,
+      "dalys": 0.32
+    },
+    {
+      "id": "Iodine deficiency",
+      "name": "Iodine deficiency",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 0,
+      "dalys": 2.25
+    },
+    {
+      "id": "Vitamin A deficiency",
+      "name": "Vitamin A deficiency",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 3,
+      "dalys": 1.1
+    },
+    {
+      "id": "Rheumatic heart disease",
+      "name": "Rheumatic heart disease",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 4,
+      "dalys": 13.43
+    },
+    {
       "id": "Scabies",
       "name": "Scabies",
       "gapScore": 95.0,
       "severity": "Critical",
       "publications": 1,
       "dalys": 5.32
+    },
+    {
+      "id": "Hemoglobinopathies and hemolytic anemias",
+      "name": "Hemoglobinopathies and hemolytic anemias",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 3,
+      "dalys": 11.92
     },
     {
       "id": "Drowning",
@@ -83,6 +283,14 @@
       "dalys": 15.7
     },
     {
+      "id": "Fire, heat, and hot substances",
+      "name": "Fire, heat, and hot substances",
+      "gapScore": 95.0,
+      "severity": "Critical",
+      "publications": 1,
+      "dalys": 8.47
+    },
+    {
       "id": "Animal contact",
       "name": "Animal contact",
       "gapScore": 95.0,
@@ -91,51 +299,75 @@
       "dalys": 4.89
     },
     {
-      "id": "Typhoid and paratyphoid",
-      "name": "Typhoid and paratyphoid",
-      "gapScore": 90.0,
+      "id": "Dietary iron deficiency",
+      "name": "Dietary iron deficiency",
+      "gapScore": 92.0,
       "severity": "Critical",
-      "publications": 21,
-      "dalys": 8.1
+      "publications": 17,
+      "dalys": 32.32
     },
     {
-      "id": "Encephalitis",
-      "name": "Encephalitis",
+      "id": "Sexually transmitted infections excluding HIV",
+      "name": "Sexually transmitted infections excluding HIV",
       "gapScore": 90.0,
       "severity": "Critical",
-      "publications": 4,
-      "dalys": 4.95
+      "publications": 22,
+      "dalys": 7.95
+    },
+    {
+      "id": "Otitis media",
+      "name": "Otitis media",
+      "gapScore": 90.0,
+      "severity": "Critical",
+      "publications": 14,
+      "dalys": 2.48
+    },
+    {
+      "id": "Malaria",
+      "name": "Malaria",
+      "gapScore": 90.0,
+      "severity": "Critical",
+      "publications": 17,
+      "dalys": 55.17
+    },
+    {
+      "id": "Measles",
+      "name": "Measles",
+      "gapScore": 90.0,
+      "severity": "Critical",
+      "publications": 10,
+      "dalys": 4.88
+    },
+    {
+      "id": "Varicella and herpes zoster",
+      "name": "Varicella and herpes zoster",
+      "gapScore": 90.0,
+      "severity": "Critical",
+      "publications": 19,
+      "dalys": 0.89
     },
     {
       "id": "Conflict and terrorism",
       "name": "Conflict and terrorism",
       "gapScore": 90.0,
       "severity": "Critical",
-      "publications": 6,
+      "publications": 5,
       "dalys": 8.73
     },
     {
-      "id": "Iodine deficiency",
-      "name": "Iodine deficiency",
+      "id": "Protein-energy malnutrition",
+      "name": "Protein-energy malnutrition",
       "gapScore": 82.0,
       "severity": "Critical",
-      "publications": 28,
-      "dalys": 2.25
-    },
-    {
-      "id": "Otitis media",
-      "name": "Otitis media",
-      "gapScore": 80.0,
-      "severity": "Critical",
       "publications": 31,
-      "dalys": 2.48
+      "dalys": 11.83
     },
     {
       "id": "Tuberculosis",
       "name": "Tuberculosis",
       "gapScore": 80.0,
       "severity": "Critical",
-      "publications": 42,
+      "publications": 41,
       "dalys": 46.98
     },
     {
@@ -143,111 +375,55 @@
       "name": "Diarrheal diseases",
       "gapScore": 80.0,
       "severity": "Critical",
-      "publications": 46,
+      "publications": 28,
       "dalys": 58.98
-    },
-    {
-      "id": "Invasive Non-typhoidal Salmonella (iNTS)",
-      "name": "Invasive Non-typhoidal Salmonella (iNTS)",
-      "gapScore": 80.0,
-      "severity": "Critical",
-      "publications": 31,
-      "dalys": 4.74
-    },
-    {
-      "id": "Leishmaniasis",
-      "name": "Leishmaniasis",
-      "gapScore": 80.0,
-      "severity": "Critical",
-      "publications": 1,
-      "dalys": 0.78
     },
     {
       "id": "Road injuries",
       "name": "Road injuries",
       "gapScore": 80.0,
       "severity": "Critical",
-      "publications": 58,
+      "publications": 53,
       "dalys": 65.14
     },
     {
-      "id": "Meningitis",
-      "name": "Meningitis",
+      "id": "Lower respiratory infections",
+      "name": "Lower respiratory infections",
       "gapScore": 70.0,
       "severity": "High",
-      "publications": 32,
-      "dalys": 14.51
+      "publications": 146,
+      "dalys": 82.53
     },
     {
-      "id": "Measles",
-      "name": "Measles",
+      "id": "Neonatal disorders",
+      "name": "Neonatal disorders",
       "gapScore": 70.0,
       "severity": "High",
-      "publications": 19,
-      "dalys": 4.88
+      "publications": 249,
+      "dalys": 186.37
     },
     {
-      "id": "Pertussis",
-      "name": "Pertussis",
+      "id": "Cervical cancer",
+      "name": "Cervical cancer",
       "gapScore": 70.0,
       "severity": "High",
-      "publications": 21,
-      "dalys": 4.61
-    },
-    {
-      "id": "Hemoglobinopathies and hemolytic anemias",
-      "name": "Hemoglobinopathies and hemolytic anemias",
-      "gapScore": 70.0,
-      "severity": "High",
-      "publications": 38,
-      "dalys": 11.92
-    },
-    {
-      "id": "Fire, heat, and hot substances",
-      "name": "Fire, heat, and hot substances",
-      "gapScore": 70.0,
-      "severity": "High",
-      "publications": 18,
-      "dalys": 8.47
-    },
-    {
-      "id": "Protein-energy malnutrition",
-      "name": "Protein-energy malnutrition",
-      "gapScore": 65.0,
-      "severity": "High",
-      "publications": 59,
-      "dalys": 11.83
-    },
-    {
-      "id": "Vitamin A deficiency",
-      "name": "Vitamin A deficiency",
-      "gapScore": 65.0,
-      "severity": "High",
-      "publications": 90,
-      "dalys": 1.1
+      "publications": 49,
+      "dalys": 9.91
     },
     {
       "id": "HIV/AIDS",
       "name": "HIV/AIDS",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 163,
+      "publications": 101,
       "dalys": 40.27
-    },
-    {
-      "id": "Lower respiratory infections",
-      "name": "Lower respiratory infections",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 177,
-      "dalys": 82.53
     },
     {
       "id": "Upper respiratory infections",
       "name": "Upper respiratory infections",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 64,
+      "publications": 63,
       "dalys": 5.68
     },
     {
@@ -255,207 +431,55 @@
       "name": "COVID-19",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 579,
+      "publications": 531,
       "dalys": 212.01
     },
     {
-      "id": "Rabies",
-      "name": "Rabies",
+      "id": "Acute hepatitis",
+      "name": "Acute hepatitis",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 3,
-      "dalys": 0.57
+      "publications": 66,
+      "dalys": 4.23
     },
     {
-      "id": "Onchocerciasis",
-      "name": "Onchocerciasis",
+      "id": "Interpersonal violence",
+      "name": "Interpersonal violence",
       "gapScore": 60.0,
       "severity": "High",
-      "publications": 10,
-      "dalys": 1.26
+      "publications": 98,
+      "dalys": 26.83
     },
     {
-      "id": "Cystic echinococcosis",
-      "name": "Cystic echinococcosis",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 1,
-      "dalys": 0.11
-    },
-    {
-      "id": "Tetanus",
-      "name": "Tetanus",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 11,
-      "dalys": 1.34
-    },
-    {
-      "id": "Dietary iron deficiency",
-      "name": "Dietary iron deficiency",
-      "gapScore": 60.0,
-      "severity": "High",
-      "publications": 139,
-      "dalys": 32.32
-    },
-    {
-      "id": "Intestinal nematode infections",
-      "name": "Intestinal nematode infections",
+      "id": "Police conflict and executions",
+      "name": "Police conflict and executions",
       "gapScore": 50.0,
       "severity": "Moderate",
-      "publications": 17,
-      "dalys": 1.38
-    },
-    {
-      "id": "Neonatal disorders",
-      "name": "Neonatal disorders",
-      "gapScore": 50.0,
-      "severity": "Moderate",
-      "publications": 1680,
-      "dalys": 186.37
+      "publications": 14,
+      "dalys": 1.01
     },
     {
       "id": "Exposure to forces of nature",
       "name": "Exposure to forces of nature",
       "gapScore": 50.0,
       "severity": "Moderate",
-      "publications": 24,
+      "publications": 23,
       "dalys": 1.09
     },
     {
-      "id": "Sexually transmitted infections excluding HIV",
-      "name": "Sexually transmitted infections excluding HIV",
+      "id": "Other unspecified infectious diseases",
+      "name": "Other unspecified infectious diseases",
       "gapScore": 40.0,
       "severity": "Moderate",
-      "publications": 103,
-      "dalys": 7.95
-    },
-    {
-      "id": "Leprosy",
-      "name": "Leprosy",
-      "gapScore": 40.0,
-      "severity": "Moderate",
-      "publications": 1,
-      "dalys": 0.02
-    },
-    {
-      "id": "Other neglected tropical diseases",
-      "name": "Other neglected tropical diseases",
-      "gapScore": 40.0,
-      "severity": "Moderate",
-      "publications": 58,
-      "dalys": 4.22
-    },
-    {
-      "id": "Acute hepatitis",
-      "name": "Acute hepatitis",
-      "gapScore": 40.0,
-      "severity": "Moderate",
-      "publications": 75,
-      "dalys": 4.23
-    },
-    {
-      "id": "Diphtheria",
-      "name": "Diphtheria",
-      "gapScore": 40.0,
-      "severity": "Moderate",
-      "publications": 10,
-      "dalys": 0.32
-    },
-    {
-      "id": "Rheumatic heart disease",
-      "name": "Rheumatic heart disease",
-      "gapScore": 40.0,
-      "severity": "Moderate",
-      "publications": 153,
-      "dalys": 13.43
-    },
-    {
-      "id": "Police conflict and executions",
-      "name": "Police conflict and executions",
-      "gapScore": 40.0,
-      "severity": "Moderate",
-      "publications": 29,
-      "dalys": 1.01
-    },
-    {
-      "id": "Yellow fever",
-      "name": "Yellow fever",
-      "gapScore": 30.0,
-      "severity": "Low",
-      "publications": 21,
-      "dalys": 0.32
-    },
-    {
-      "id": "Trachoma",
-      "name": "Trachoma",
-      "gapScore": 20.0,
-      "severity": "Low",
-      "publications": 13,
-      "dalys": 0.12
-    },
-    {
-      "id": "Ebola",
-      "name": "Ebola",
-      "gapScore": 20.0,
-      "severity": "Low",
-      "publications": 18,
-      "dalys": 0.0
-    },
-    {
-      "id": "Zika virus",
-      "name": "Zika virus",
-      "gapScore": 20.0,
-      "severity": "Low",
-      "publications": 2,
-      "dalys": 0.0
-    },
-    {
-      "id": "Interpersonal violence",
-      "name": "Interpersonal violence",
-      "gapScore": 20.0,
-      "severity": "Low",
-      "publications": 1533,
-      "dalys": 26.83
-    },
-    {
-      "id": "Other intestinal infectious diseases",
-      "name": "Other intestinal infectious diseases",
-      "gapScore": 10.0,
-      "severity": "Low",
-      "publications": 110,
-      "dalys": 0.11
-    },
-    {
-      "id": "Chagas disease",
-      "name": "Chagas disease",
-      "gapScore": 10.0,
-      "severity": "Low",
-      "publications": 51,
-      "dalys": 0.24
-    },
-    {
-      "id": "African trypanosomiasis",
-      "name": "African trypanosomiasis",
-      "gapScore": 10.0,
-      "severity": "Low",
-      "publications": 599,
-      "dalys": 0.06
-    },
-    {
-      "id": "Food-borne trematodiases",
-      "name": "Food-borne trematodiases",
-      "gapScore": 10.0,
-      "severity": "Low",
-      "publications": 166,
-      "dalys": 1.0
+      "publications": 114,
+      "dalys": 5.85
     },
     {
       "id": "Maternal disorders",
       "name": "Maternal disorders",
-      "gapScore": 10.0,
+      "gapScore": 30.0,
       "severity": "Low",
-      "publications": 3495,
+      "publications": 514,
       "dalys": 12.31
     },
     {
@@ -463,16 +487,8 @@
       "name": "Other nutritional deficiencies",
       "gapScore": 10.0,
       "severity": "Low",
-      "publications": 693,
+      "publications": 162,
       "dalys": 1.43
-    },
-    {
-      "id": "Cervical cancer",
-      "name": "Cervical cancer",
-      "gapScore": 10.0,
-      "severity": "Low",
-      "publications": 1399,
-      "dalys": 9.91
     }
   ],
   "byRegion": [
@@ -482,7 +498,7 @@
       "incomeCategory": "HIC",
       "biobanks": 25,
       "publications": 21482,
-      "averageEas": 25.7
+      "averageEas": 15.5
     },
     {
       "region": "AMR",
@@ -490,7 +506,7 @@
       "incomeCategory": "Mixed",
       "biobanks": 20,
       "publications": 12433,
-      "averageEas": 28.4
+      "averageEas": 17.0
     },
     {
       "region": "WPR",
@@ -498,7 +514,7 @@
       "incomeCategory": "HIC",
       "biobanks": 13,
       "publications": 3819,
-      "averageEas": 25.8
+      "averageEas": 15.5
     },
     {
       "region": "EMR",
@@ -506,7 +522,7 @@
       "incomeCategory": "LMIC",
       "biobanks": 5,
       "publications": 574,
-      "averageEas": 16.5
+      "averageEas": 8.0
     },
     {
       "region": "AFR",
@@ -514,7 +530,7 @@
       "incomeCategory": "LMIC",
       "biobanks": 6,
       "publications": 277,
-      "averageEas": 8.6
+      "averageEas": 5.2
     },
     {
       "region": "SEAR",
@@ -522,7 +538,7 @@
       "incomeCategory": "LMIC",
       "biobanks": 1,
       "publications": 10,
-      "averageEas": 1.7
+      "averageEas": 0.9
     }
   ],
   "hicBiobanks": [
@@ -533,7 +549,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 13785,
-      "eas": 84.6
+      "eas": 75.2
     },
     {
       "id": "whi",
@@ -542,7 +558,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 3433,
-      "eas": 53.5
+      "eas": 39.9
     },
     {
       "id": "nhs",
@@ -551,7 +567,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 3197,
-      "eas": 55.1
+      "eas": 45.6
     },
     {
       "id": "epic",
@@ -560,7 +576,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 1870,
-      "eas": 45.3
+      "eas": 33.3
     },
     {
       "id": "hunt",
@@ -569,7 +585,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 1218,
-      "eas": 48.1
+      "eas": 37.7
     },
     {
       "id": "nhsii",
@@ -578,7 +594,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 1008,
-      "eas": 42.4
+      "eas": 33.0
     },
     {
       "id": "plco",
@@ -587,7 +603,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 995,
-      "eas": 31.2
+      "eas": 19.5
     },
     {
       "id": "moba",
@@ -596,7 +612,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 962,
-      "eas": 42.9
+      "eas": 23.9
     },
     {
       "id": "aou",
@@ -605,7 +621,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 837,
-      "eas": 49.0
+      "eas": 31.8
     },
     {
       "id": "koges",
@@ -614,7 +630,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 733,
-      "eas": 34.7
+      "eas": 21.6
     },
     {
       "id": "gel",
@@ -623,7 +639,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 700,
-      "eas": 43.8
+      "eas": 20.7
     },
     {
       "id": "estbb",
@@ -632,7 +648,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 675,
-      "eas": 49.3
+      "eas": 30.6
     },
     {
       "id": "dnbc",
@@ -641,7 +657,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 636,
-      "eas": 44.1
+      "eas": 24.1
     },
     {
       "id": "twb",
@@ -650,7 +666,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 553,
-      "eas": 35.3
+      "eas": 24.8
     },
     {
       "id": "jphc",
@@ -659,7 +675,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 446,
-      "eas": 32.3
+      "eas": 21.4
     },
     {
       "id": "mvp",
@@ -668,7 +684,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 445,
-      "eas": 40.1
+      "eas": 25.1
     },
     {
       "id": "45andup",
@@ -677,7 +693,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 434,
-      "eas": 36.8
+      "eas": 24.2
     },
     {
       "id": "cpsii",
@@ -686,7 +702,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 377,
-      "eas": 29.1
+      "eas": 18.2
     },
     {
       "id": "bbj",
@@ -695,7 +711,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 345,
-      "eas": 42.9
+      "eas": 25.7
     },
     {
       "id": "mec",
@@ -704,7 +720,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 332,
-      "eas": 29.5
+      "eas": 18.7
     },
     {
       "id": "23andme",
@@ -713,7 +729,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 310,
-      "eas": 40.0
+      "eas": 18.6
     },
     {
       "id": "simpler",
@@ -722,7 +738,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 280,
-      "eas": 29.4
+      "eas": 18.6
     },
     {
       "id": "echo",
@@ -731,7 +747,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 269,
-      "eas": 19.7
+      "eas": 13.8
     },
     {
       "id": "tommo",
@@ -740,7 +756,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 245,
-      "eas": 28.4
+      "eas": 16.4
     },
     {
       "id": "constances",
@@ -749,7 +765,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 234,
-      "eas": 35.6
+      "eas": 20.5
     },
     {
       "id": "mws",
@@ -758,7 +774,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 207,
-      "eas": 24.4
+      "eas": 17.1
     },
     {
       "id": "nako",
@@ -767,7 +783,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 174,
-      "eas": 38.4
+      "eas": 13.8
     },
     {
       "id": "ukbdc",
@@ -776,7 +792,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 164,
-      "eas": 25.9
+      "eas": 14.4
     },
     {
       "id": "biovu",
@@ -785,7 +801,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 162,
-      "eas": 36.2
+      "eas": 16.4
     },
     {
       "id": "cts",
@@ -794,7 +810,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 146,
-      "eas": 22.4
+      "eas": 11.1
     },
     {
       "id": "nshds",
@@ -803,7 +819,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 107,
-      "eas": 22.3
+      "eas": 12.7
     },
     {
       "id": "uklwc",
@@ -812,7 +828,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 101,
-      "eas": 10.8
+      "eas": 5.6
     },
     {
       "id": "acscps3",
@@ -821,7 +837,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 94,
-      "eas": 19.2
+      "eas": 6.1
     },
     {
       "id": "generations",
@@ -830,7 +846,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 73,
-      "eas": 11.7
+      "eas": 4.3
     },
     {
       "id": "kcps",
@@ -839,7 +855,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 66,
-      "eas": 20.0
+      "eas": 11.6
     },
     {
       "id": "geisinger",
@@ -848,7 +864,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 64,
-      "eas": 24.5
+      "eas": 5.1
     },
     {
       "id": "fmc",
@@ -857,7 +873,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 57,
-      "eas": 14.2
+      "eas": 5.2
     },
     {
       "id": "usnih",
@@ -866,7 +882,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 53,
-      "eas": 8.7
+      "eas": 5.8
     },
     {
       "id": "epihealth",
@@ -875,7 +891,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 48,
-      "eas": 15.3
+      "eas": 5.5
     },
     {
       "id": "lifepath",
@@ -884,7 +900,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 38,
-      "eas": 4.8
+      "eas": 2.2
     },
     {
       "id": "genes_health",
@@ -893,7 +909,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 31,
-      "eas": 7.5
+      "eas": 3.1
     },
     {
       "id": "ntr",
@@ -902,7 +918,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 31,
-      "eas": 8.2
+      "eas": 3.4
     },
     {
       "id": "lifegene",
@@ -911,7 +927,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 29,
-      "eas": 9.1
+      "eas": 4.0
     },
     {
       "id": "vhmpp",
@@ -920,7 +936,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 28,
-      "eas": 13.4
+      "eas": 7.4
     },
     {
       "id": "cptp",
@@ -929,7 +945,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 19,
-      "eas": 8.7
+      "eas": 2.4
     },
     {
       "id": "nbk",
@@ -938,7 +954,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 17,
-      "eas": 3.0
+      "eas": 1.6
     },
     {
       "id": "dpuk",
@@ -947,7 +963,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 16,
-      "eas": 5.5
+      "eas": 1.8
     },
     {
       "id": "genv",
@@ -956,7 +972,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 14,
-      "eas": 7.2
+      "eas": 1.7
     },
     {
       "id": "kprb",
@@ -965,7 +981,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 12,
-      "eas": 13.6
+      "eas": 3.6
     },
     {
       "id": "dnb",
@@ -974,7 +990,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 10,
-      "eas": 6.4
+      "eas": 2.0
     },
     {
       "id": "chop_cag",
@@ -983,7 +999,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 8,
-      "eas": 3.5
+      "eas": 1.5
     },
     {
       "id": "sab",
@@ -992,7 +1008,7 @@
       "region": "EUR",
       "incomeLevel": "",
       "publications": 8,
-      "eas": 2.4
+      "eas": 0.7
     }
   ],
   "lmicBiobanks": [
@@ -1003,7 +1019,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 655,
-      "eas": 38.0
+      "eas": 21.3
     },
     {
       "id": "ckb",
@@ -1012,7 +1028,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 583,
-      "eas": 41.3
+      "eas": 24.3
     },
     {
       "id": "smwhs",
@@ -1021,7 +1037,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 218,
-      "eas": 25.8
+      "eas": 15.0
     },
     {
       "id": "qbb",
@@ -1030,7 +1046,7 @@
       "region": "EMR",
       "incomeLevel": "",
       "publications": 207,
-      "eas": 21.5
+      "eas": 11.2
     },
     {
       "id": "persian",
@@ -1039,7 +1055,7 @@
       "region": "EMR",
       "incomeLevel": "",
       "publications": 197,
-      "eas": 19.3
+      "eas": 11.6
     },
     {
       "id": "golestan",
@@ -1048,7 +1064,7 @@
       "region": "EMR",
       "incomeLevel": "",
       "publications": 131,
-      "eas": 23.3
+      "eas": 11.4
     },
     {
       "id": "myc",
@@ -1057,7 +1073,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 87,
-      "eas": 19.1
+      "eas": 9.1
     },
     {
       "id": "bandim",
@@ -1066,7 +1082,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 80,
-      "eas": 13.9
+      "eas": 9.5
     },
     {
       "id": "peace",
@@ -1075,7 +1091,7 @@
       "region": "WPR",
       "incomeLevel": "",
       "publications": 78,
-      "eas": 8.0
+      "eas": 4.7
     },
     {
       "id": "awigen",
@@ -1084,7 +1100,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 74,
-      "eas": 10.7
+      "eas": 7.3
     },
     {
       "id": "iganga_mayuge",
@@ -1093,7 +1109,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 54,
-      "eas": 11.0
+      "eas": 6.9
     },
     {
       "id": "ahri",
@@ -1102,7 +1118,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 36,
-      "eas": 7.6
+      "eas": 5.0
     },
     {
       "id": "kemri",
@@ -1111,7 +1127,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 27,
-      "eas": 5.7
+      "eas": 1.6
     },
     {
       "id": "qgp",
@@ -1120,7 +1136,7 @@
       "region": "EMR",
       "incomeLevel": "",
       "publications": 25,
-      "eas": 10.5
+      "eas": 3.6
     },
     {
       "id": "mauco",
@@ -1129,7 +1145,7 @@
       "region": "AMR",
       "incomeLevel": "",
       "publications": 17,
-      "eas": 3.6
+      "eas": 2.3
     },
     {
       "id": "snb",
@@ -1138,7 +1154,7 @@
       "region": "EMR",
       "incomeLevel": "",
       "publications": 14,
-      "eas": 7.9
+      "eas": 2.0
     },
     {
       "id": "nepal_csh",
@@ -1147,7 +1163,7 @@
       "region": "SEAR",
       "incomeLevel": "",
       "publications": 10,
-      "eas": 1.7
+      "eas": 0.9
     },
     {
       "id": "ugr",
@@ -1156,7 +1172,7 @@
       "region": "AFR",
       "incomeLevel": "",
       "publications": 6,
-      "eas": 2.7
+      "eas": 1.0
     }
   ]
 }

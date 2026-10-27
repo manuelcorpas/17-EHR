@@ -1,0 +1,10 @@
+{
+  "rho_nopen": 0.9972354908048722,
+  "top10_nopen": 9,
+  "rho_fallback": 0.9956760841274505,
+  "top10_fallback": 8,
+  "rho_correction": 0.7057909889217574,
+  "top10_correction": 5,
+  "n_all": 159,
+  "n_cc": 83
+}

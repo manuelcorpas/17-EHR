@@ -1,7 +1,7 @@
 {
   "version": "HEIM-Biobank v2.0 (IHCC)",
   "versionDate": "2026-01-07",
-  "generated": "2026-02-03T10:00:51.250970",
+  "generated": "2026-10-25T15:49:08.731497",
   "overview": {
     "totalBiobanks": 70,
     "totalPublications": 38595,
@@ -10,15 +10,15 @@
     "equityRatio": 57.78
   },
   "gapDistribution": {
-    "High": 26,
-    "Moderate": 48,
-    "Critical": 22,
-    "Low": 83
+    "High": 33,
+    "Critical": 53,
+    "Moderate": 52,
+    "Low": 41
   },
   "easDistribution": {
-    "Moderate": 14,
+    "Low": 68,
     "High": 1,
-    "Low": 55
+    "Moderate": 1
   },
   "regionStats": [
     {
@@ -60,17 +60,52 @@
   ],
   "criticalGaps": [
     {
-      "id": "Malaria",
-      "name": "Malaria",
+      "id": "Typhoid and paratyphoid",
+      "name": "Typhoid and paratyphoid",
       "gapScore": 95.0,
-      "dalys": 55.17,
-      "publications": 17
+      "dalys": 8.1,
+      "publications": 0
+    },
+    {
+      "id": "Invasive Non-typhoidal Salmonella (iNTS)",
+      "name": "Invasive Non-typhoidal Salmonella (iNTS)",
+      "gapScore": 95.0,
+      "dalys": 4.74,
+      "publications": 9
+    },
+    {
+      "id": "Other intestinal infectious diseases",
+      "name": "Other intestinal infectious diseases",
+      "gapScore": 95.0,
+      "dalys": 0.11,
+      "publications": 4
     },
     {
       "id": "Dengue",
       "name": "Dengue",
       "gapScore": 95.0,
       "dalys": 2.08,
+      "publications": 0
+    },
+    {
+      "id": "Yellow fever",
+      "name": "Yellow fever",
+      "gapScore": 95.0,
+      "dalys": 0.32,
+      "publications": 0
+    },
+    {
+      "id": "Rabies",
+      "name": "Rabies",
+      "gapScore": 95.0,
+      "dalys": 0.57,
+      "publications": 0
+    },
+    {
+      "id": "Intestinal nematode infections",
+      "name": "Intestinal nematode infections",
+      "gapScore": 95.0,
+      "dalys": 1.38,
       "publications": 0
     },
     {
@@ -81,131 +116,96 @@
       "publications": 0
     },
     {
+      "id": "Leishmaniasis",
+      "name": "Leishmaniasis",
+      "gapScore": 95.0,
+      "dalys": 0.78,
+      "publications": 0
+    },
+    {
       "id": "Lymphatic filariasis",
       "name": "Lymphatic filariasis",
       "gapScore": 95.0,
       "dalys": 1.31,
       "publications": 0
-    },
-    {
-      "id": "Cysticercosis",
-      "name": "Cysticercosis",
-      "gapScore": 95.0,
-      "dalys": 1.24,
-      "publications": 0
-    },
-    {
-      "id": "Guinea worm disease",
-      "name": "Guinea worm disease",
-      "gapScore": 95.0,
-      "dalys": 0.0,
-      "publications": 0
-    },
-    {
-      "id": "Scabies",
-      "name": "Scabies",
-      "gapScore": 95.0,
-      "dalys": 5.32,
-      "publications": 1
-    },
-    {
-      "id": "Drowning",
-      "name": "Drowning",
-      "gapScore": 95.0,
-      "dalys": 15.7,
-      "publications": 0
-    },
-    {
-      "id": "Animal contact",
-      "name": "Animal contact",
-      "gapScore": 95.0,
-      "dalys": 4.89,
-      "publications": 0
-    },
-    {
-      "id": "Typhoid and paratyphoid",
-      "name": "Typhoid and paratyphoid",
-      "gapScore": 90.0,
-      "dalys": 8.1,
-      "publications": 21
     }
   ],
   "topBiobanks": [
     {
       "id": "ukb",
       "name": "UK Biobank",
-      "eas": 84.6,
+      "eas": 75.2,
       "category": "High",
       "publications": 13785
     },
     {
       "id": "nhs",
       "name": "Nurses' Health Study",
-      "eas": 55.1,
+      "eas": 45.6,
       "category": "Moderate",
       "publications": 3197
     },
     {
       "id": "whi",
       "name": "Women's Health Initiative",
-      "eas": 53.5,
-      "category": "Moderate",
+      "eas": 39.9,
+      "category": "Low",
       "publications": 3433
-    },
-    {
-      "id": "estbb",
-      "name": "Estonian Biobank",
-      "eas": 49.3,
-      "category": "Moderate",
-      "publications": 675
-    },
-    {
-      "id": "aou",
-      "name": "All of Us Research Program",
-      "eas": 49.0,
-      "category": "Moderate",
-      "publications": 837
     },
     {
       "id": "hunt",
       "name": "HUNT Study",
-      "eas": 48.1,
-      "category": "Moderate",
+      "eas": 37.7,
+      "category": "Low",
       "publications": 1218
     },
     {
       "id": "epic",
       "name": "European Prospective Investigation into Cancer and Nutrition",
-      "eas": 45.3,
-      "category": "Moderate",
+      "eas": 33.3,
+      "category": "Low",
       "publications": 1870
     },
     {
-      "id": "dnbc",
-      "name": "Danish National Birth Cohort",
-      "eas": 44.1,
-      "category": "Moderate",
-      "publications": 636
+      "id": "nhsii",
+      "name": "Nurses' Health Study II",
+      "eas": 33.0,
+      "category": "Low",
+      "publications": 1008
     },
     {
-      "id": "gel",
-      "name": "Genomics England / 100,000 Genomes Project",
-      "eas": 43.8,
-      "category": "Moderate",
-      "publications": 700
+      "id": "aou",
+      "name": "All of Us Research Program",
+      "eas": 31.8,
+      "category": "Low",
+      "publications": 837
+    },
+    {
+      "id": "estbb",
+      "name": "Estonian Biobank",
+      "eas": 30.6,
+      "category": "Low",
+      "publications": 675
     },
     {
       "id": "bbj",
       "name": "Biobank Japan",
-      "eas": 42.9,
-      "category": "Moderate",
+      "eas": 25.7,
+      "category": "Low",
       "publications": 345
+    },
+    {
+      "id": "mvp",
+      "name": "Million Veteran Program",
+      "eas": 25.1,
+      "category": "Low",
+      "publications": 445
     }
   ],
   "averages": {
-    "eas": 24.0,
-    "ros": 8785.88,
-    "gapScore": 38.3
+    "eas": 14.3,
+    "ros": 10239.62,
+    "gapScore": 56.1
   },
   "methodology": {
     "burden_score": "0.5 \u00d7 DALYs + 50 \u00d7 Deaths + 10 \u00d7 log\u2081\u2080(Prevalence) [or 10 \u00d7 log\u2081\u2080(DALYs) if Deaths/Prevalence unavailable]",

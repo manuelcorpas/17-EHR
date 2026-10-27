@@ -31,7 +31,7 @@ Visual: Flowchart
 [GBD 2021 Taxonomy] ──────────────────────────────────┐
        │                                               │
        ▼                                               │
-[179 Disease Categories]                               │
+[175 Disease Categories]                               │
        │                                               │
        ├────────────────┬──────────────────┬──────────┘
        ▼                ▼                  ▼
@@ -55,14 +55,15 @@ PANEL C: Score Integration
 --------------------------
 Visual: Equation with weighting diagram
 
-Unified Score = 0.33 × Discovery + 0.33 × Translation + 0.34 × Knowledge
+Unified Score = 0.50 × Discovery + 0.29 × Translation + 0.21 × Knowledge
+(PCA-derived weights from PC1 loadings, 63.3% variance explained, n = 86 diseases)
 
 [Three colored bars merging into one]
-Discovery (33%) ──┐
-Translation (33%) ─┼──► UNIFIED NEGLECT SCORE (0-50)
-Knowledge (34%) ──┘
+Discovery (50%) ──┐
+Translation (29%) ─┼──► UNIFIED NEGLECT SCORE (0-100)
+Knowledge (21%) ──┘
 
-Scale bar: 0 ────────────────────────► 50
+Scale bar: 0 ────────────────────────► 100
            Well-resourced        Severely neglected
 
 

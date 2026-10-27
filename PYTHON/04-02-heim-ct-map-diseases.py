@@ -180,7 +180,7 @@ GBD_CONDITION_MAPPING = {
         'global_south_priority': True
     },
     'Trachoma': {
-        'mesh_terms': ['Trachoma', 'Chlamydia trachomatis'],
+        'mesh_terms': ['Trachoma'],  # 'Chlamydia trachomatis' removed 2026-10-25: it indexes genital infection, not trachoma
         'keywords': ['trachoma'],
         'gbd_level2': 'NTDs and Malaria',
         'global_south_priority': True
@@ -673,6 +673,15 @@ def normalize_text(text: str) -> str:
     return re.sub(r'[^\w\s]', ' ', str(text).lower()).strip()
 
 
+def lookup_dalys(cause: str, gbd_dalys: Dict[str, float]) -> float:
+    """DALYs for a GBD cause by exact normalised name (0 if absent)."""
+    key = normalize_text(cause)
+    for name, val in gbd_dalys.items():
+        if normalize_text(name) == key:
+            return val
+    return 0
+
+
 def match_mesh_term(mesh_term: str, mapping: Dict) -> List[str]:
     """Match a MeSH term to GBD causes."""
     if not mesh_term or pd.isna(mesh_term):
@@ -684,7 +693,9 @@ def match_mesh_term(mesh_term: str, mapping: Dict) -> List[str]:
     for gbd_cause, info in mapping.items():
         for term in info.get('mesh_terms', []):
             term_norm = normalize_text(term)
-            if term_norm and (term_norm in mesh_norm or mesh_norm in term_norm):
+            # Exact match or curated term plus a MeSH qualifier; bidirectional substring
+            # matching removed 2026-10-25 (generic 'Neoplasms' had linked to every cancer)
+            if term_norm and (mesh_norm == term_norm or str(mesh_term).lower().strip().startswith(term.lower().strip() + ',')):
                 matched.append(gbd_cause)
                 break
     
@@ -704,17 +715,25 @@ def match_condition_text(condition: str, mapping: Dict) -> List[str]:
         for keyword in info.get('keywords', []):
             kw_norm = normalize_text(keyword)
             if kw_norm and len(kw_norm) >= 3:
-                # Word boundary matching for short keywords
-                if len(kw_norm) <= 4:
-                    pattern = r'\b' + re.escape(kw_norm) + r'\b'
-                    if re.search(pattern, cond_norm):
-                        matched.append(gbd_cause)
-                        break
-                elif kw_norm in cond_norm:
+                # Whole-word matching for every keyword (2026-10-25; substring matching
+                # had sent every '... cancer' trial to 'Other malignant neoplasms')
+                pattern = r'\b' + re.escape(kw_norm) + r'\b'
+                if re.search(pattern, cond_norm):
                     matched.append(gbd_cause)
                     break
-    
+
     return list(set(matched))
+
+
+RESIDUAL_CANCER = 'Other malignant neoplasms'
+
+
+def finalise_causes(causes: set) -> set:
+    """GBD residual categories are 'everything else': a trial that matched a specific cancer
+    (by MeSH or keyword) is not also 'Other malignant neoplasms' (2026-10-25)."""
+    if RESIDUAL_CANCER in causes and len(causes) > 1:
+        return {c for c in causes if c != RESIDUAL_CANCER}
+    return set(causes)
 
 
 def map_trial_to_diseases(
@@ -740,6 +759,7 @@ def map_trial_to_diseases(
         causes = match_condition_text(condition, mapping)
         matched_causes.update(causes)
 
+    matched_causes = finalise_causes(matched_causes)
     return list(matched_causes)
 
 
@@ -762,7 +782,7 @@ def map_trial_fast(nct_id: str) -> Tuple[str, List[str]]:
         causes = match_condition_text(condition, GBD_CONDITION_MAPPING)
         matched_causes.update(causes)
 
-    return (nct_id, list(matched_causes))
+    return (nct_id, list(finalise_causes(matched_causes)))
 
 
 def init_worker(conditions_dict, mesh_dict):
@@ -934,12 +954,7 @@ def main():
     # Build disease registry
     registry = {}
     for cause, info in GBD_CONDITION_MAPPING.items():
-        dalys = 0
-        # Try to match cause name to GBD DALYs
-        for gbd_name, daly_val in gbd_dalys.items():
-            if normalize_text(cause) in normalize_text(gbd_name) or normalize_text(gbd_name) in normalize_text(cause):
-                dalys = daly_val
-                break
+        dalys = lookup_dalys(cause, gbd_dalys)  # exact normalised name; the substring join (removed 2026-10-25) gave Non-Hodgkin lymphoma Hodgkin's DALYs
         
         registry[cause] = {
             'name': cause,

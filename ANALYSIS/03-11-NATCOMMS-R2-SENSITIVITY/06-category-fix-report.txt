@@ -1,0 +1,7 @@
+Category changed: 2 diseases; gap score changed: 0
+Re-derived PCA weights: [0.575 0.171 0.254] (published 0.501/0.293/0.206)
+Spearman rho old vs corrected unified (n=158): 1.0000; top10 overlap 10/10
+  old top10: ['African_trypanosomiasis', 'Ebola', 'Zika_virus', 'Guinea_worm_disease', 'Cystic_echinococcosis', 'Invasive_Non-typhoidal_Salmonella_(iNTS)', 'Cysticercosis', 'Iodine_deficiency', 'Food-borne_trematodiases', 'Scabies']
+  new top10: ['African_trypanosomiasis', 'Ebola', 'Zika_virus', 'Guinea_worm_disease', 'Cystic_echinococcosis', 'Invasive_Non-typhoidal_Salmonella_(iNTS)', 'Cysticercosis', 'Iodine_deficiency', 'Food-borne_trematodiases', 'Scabies']
+GS-priority in corrected top20: 20/20, bottom20: 1/20
+Mean unified, Neglected-category vs rest: old 77.7 vs 37.3; corrected 77.7 vs 37.3

@@ -1,0 +1,180 @@
+condition,biobank_publications_published,biobank_publications_corrected,trials_published,trials_corrected,trial_intensity_published,trial_intensity_corrected
+Acne vulgaris,14,14,,,,
+Acute glomerulonephritis,20,19,,,,
+Acute hepatitis,75,66,5229.0,4681.0,1236.74,1107.13
+Adverse effects of medical treatment,81,32,,,,
+African trypanosomiasis,599,0,,,,
+Age-related and other hearing loss,248,183,,,,
+Alcohol use disorders,1041,1021,2007.0,2007.0,118.19,118.19
+Alopecia areata,35,35,,,,
+Alzheimer's disease and other dementias,1202,1145,10805.0,8322.0,297.39,229.05
+Animal contact,0,0,,,,
+Anxiety disorders,493,484,8440.0,8400.0,198.54,197.6
+Aortic aneurysm,103,103,,,,
+Appendicitis,6,6,,,,
+Asthma,381,378,4913.0,4912.0,229.33,229.29
+Atrial fibrillation and flutter,351,338,4445.0,4176.0,531.77,499.59
+Attention-deficit/hyperactivity disorder,161,135,1748.0,1748.0,1695.54,1695.54
+Autism spectrum disorders,143,115,2079.0,2079.0,180.09,180.09
+Bacterial skin diseases,109,1,,,,
+Bipolar disorder,129,127,2041.0,1792.0,254.88,223.78
+Bladder cancer,1420,101,100358.0,2298.0,22823.85,522.62
+Blindness and vision loss,611,492,6888.0,6660.0,236.18,228.36
+Brain and central nervous system cancer,2199,87,100437.0,5060.0,11269.11,567.74
+Breast cancer,3345,1998,101576.0,15068.0,4922.34,730.19
+COVID-19,579,531,9239.0,9080.0,43.58,42.83
+Cardiomyopathy and myocarditis,82,76,1574.0,1573.0,135.06,134.98
+Cervical cancer,1399,49,100308.0,2268.0,10120.21,228.82
+Chagas disease,51,2,2251.0,80.0,9434.62,335.3
+Chronic kidney disease,712,588,16614.0,13531.0,373.74,304.38
+Chronic obstructive pulmonary disease,339,283,7672.0,5526.0,96.16,69.27
+Cirrhosis and other chronic liver diseases,607,481,15290.0,13149.0,329.4,283.28
+Colon and rectum cancer,2535,1263,100743.0,9407.0,4128.63,385.52
+Conduct disorder,1545,61,,,,
+Conflict and terrorism,6,5,,,,
+Congenital birth defects,284,129,8320.0,8319.0,159.01,158.99
+Cystic echinococcosis,1,1,,,,
+Cysticercosis,0,0,,,,
+Decubitus ulcer,6,1,,,,
+Dengue,0,0,273.0,273.0,131.47,131.47
+Depressive disorders,1344,1340,11303.0,11295.0,200.66,200.51
+Dermatitis,104,104,2202.0,2196.0,269.29,268.55
+Diabetes mellitus,3482,3255,23548.0,23357.0,298.31,295.89
+Diarrheal diseases,46,28,49696.0,6434.0,842.54,109.08
+Dietary iron deficiency,139,17,4550.0,757.0,140.8,23.43
+Diphtheria,10,1,,,,
+Drowning,0,0,,,,
+Drug use disorders,84,84,7720.0,7695.0,496.08,494.47
+Eating disorders,283,35,1423.0,883.0,418.14,259.47
+Ebola,18,0,,,,
+Encephalitis,4,3,,,,
+Endocarditis,179,17,,,,
+"Endocrine, metabolic, blood, and immune disorders",4162,4057,,,,
+Environmental heat and cold exposure,890,2,,,,
+Esophageal cancer,1428,106,,,,
+Exposure to forces of nature,24,23,,,,
+Exposure to mechanical forces,39,21,,,,
+Eye cancer,1324,1,,,,
+Falls,382,373,4434.0,4203.0,101.22,95.95
+"Fire, heat, and hot substances",18,1,,,,
+Food-borne trematodiases,166,0,,,,
+Foreign body,10,10,,,,
+Fungal skin diseases,6,2,,,,
+Gallbladder and biliary diseases,157,105,,,,
+Gallbladder and biliary tract cancer,1357,33,,,,
+Gout,230,227,,,,
+Guinea worm disease,0,0,,,,
+Gynecological diseases,25578,1049,,,,
+HIV/AIDS,163,101,46676.0,9161.0,1159.17,227.51
+Headache disorders,193,170,2490.0,2457.0,51.9,51.21
+Hemoglobinopathies and hemolytic anemias,38,3,4499.0,1519.0,377.42,127.43
+Hodgkin lymphoma,86,9,,,,
+Hypertensive heart disease,1598,1541,12175.0,10572.0,478.16,415.2
+Idiopathic developmental intellectual disability,62,52,,,,
+Idiopathic epilepsy,105,104,2684.0,2630.0,193.4,189.51
+Inflammatory bowel disease,320,265,6194.0,3727.0,4099.86,2466.93
+"Inguinal, femoral, and abdominal hernia",13,13,,,,
+Interpersonal violence,1533,98,1741.0,1734.0,64.89,64.63
+Interstitial lung disease and pulmonary sarcoidosis,329,11,43021.0,1778.0,10643.1,439.86
+Intestinal nematode infections,17,0,44321.0,167.0,32078.52,120.87
+Invasive Non-typhoidal Salmonella (iNTS),31,9,,,,
+Iodine deficiency,28,0,,,,
+Ischemic heart disease,2196,2019,13654.0,10529.0,72.49,55.9
+Kidney cancer,1651,124,100264.0,2561.0,24963.88,637.64
+Larynx cancer,1329,7,,,,
+Leishmaniasis,1,0,358.0,202.0,458.28,258.58
+Leprosy,1,0,,,,
+Leukemia,79,66,9423.0,9415.0,857.98,857.25
+Lip and oral cavity cancer,1347,11,,,,
+Liver cancer,1714,223,100571.0,4272.0,7803.67,331.48
+Low back pain,147,80,24572.0,3508.0,350.24,50.0
+Lower extremity peripheral arterial disease,154,66,,,,
+Lower respiratory infections,177,146,45810.0,16012.0,555.04,194.0
+Lymphatic filariasis,0,0,90.0,87.0,68.46,66.18
+Malaria,17,17,1402.0,1400.0,25.41,25.37
+Malignant neoplasm of bone and articular cartilage,1332,7,,,,
+Malignant skin melanoma,131,131,,,,
+Maternal disorders,3495,514,39534.0,7956.0,3210.49,646.09
+Measles,19,10,,,,
+Meningitis,32,1,610.0,610.0,42.04,42.04
+Mesothelioma,1326,3,,,,
+Motor neuron disease,132,83,3510.0,1307.0,3373.16,1256.05
+Multiple myeloma,1394,45,3756.0,3751.0,1447.07,1445.14
+Multiple sclerosis,199,149,3434.0,3414.0,3528.21,3507.66
+Nasopharynx cancer,1380,5,,,,
+Neck pain,108,25,,,,
+Neonatal disorders,1680,249,11118.0,6121.0,59.66,32.84
+Neuroblastoma and other peripheral nervous cell tumors,1332,4,,,,
+Non-Hodgkin lymphoma,125,102,8319.0,6431.0,6954.59,828.09
+Non-melanoma skin cancer,1631,248,,,,
+Non-rheumatic valvular heart disease,198,61,,,,
+Onchocerciasis,10,0,34.0,34.0,26.92,26.92
+Oral disorders,226,131,,,,
+Osteoarthritis,231,169,10776.0,5772.0,505.81,270.93
+Other cardiovascular and circulatory diseases,3288,3132,64945.0,62979.0,6503.92,6307.03
+Other chronic respiratory diseases,1012,155,,,,
+Other digestive diseases,246,164,,,,
+Other intestinal infectious diseases,110,4,,,,
+Other malignant neoplasms,1559,690,113268.0,27792.0,17548.02,4305.67
+Other mental disorders,1431,812,46434.0,46409.0,5181.01,5178.22
+Other musculoskeletal disorders,817,740,29524.0,27437.0,653.51,607.31
+Other neglected tropical diseases,58,0,2209.0,37.0,523.67,8.77
+Other neoplasms,7428,1445,,,,
+Other neurological disorders,985,143,,,,
+Other nutritional deficiencies,693,162,,,,
+Other pharynx cancer,1343,16,,,,
+Other sense organ diseases,59,7,,,,
+Other skin and subcutaneous diseases,95,24,,,,
+Other transport injuries,62,32,,,,
+Other unintentional injuries,184,7,,,,
+Other unspecified infectious diseases,603,114,,,,
+Otitis media,31,14,,,,
+Ovarian cancer,1869,575,100314.0,3702.0,19428.44,716.99
+Pancreatic cancer,1571,257,100378.0,3879.0,8869.69,342.76
+Pancreatitis,43,41,794.0,793.0,193.6,193.36
+Paralytic ileus and intestinal obstruction,1,1,,,,
+Parkinson's disease,295,246,6800.0,4364.0,910.09,584.06
+Pertussis,21,5,,,,
+Pneumoconiosis,4,3,,,,
+Poisonings,57,3,,,,
+Police conflict and executions,29,14,,,,
+Prostate cancer,1960,659,100772.0,6815.0,12377.48,837.06
+Protein-energy malnutrition,59,31,2702.0,2702.0,228.48,228.48
+Pruritus,2,2,,,,
+Psoriasis,166,155,2434.0,2426.0,659.63,657.47
+Pulmonary Arterial Hypertension,1095,8,,,,
+Rabies,3,0,107.0,107.0,187.87,187.87
+Rheumatic heart disease,153,4,2665.0,95.0,198.49,7.08
+Rheumatoid arthritis,485,320,10357.0,3500.0,3367.8,1138.1
+Road injuries,58,53,19743.0,17523.0,303.07,268.99
+Scabies,1,1,,,,
+Schistosomiasis,0,0,94.0,94.0,53.83,53.83
+Schizophrenia,224,223,4344.0,4068.0,293.18,274.56
+Self-harm,127,112,38351.0,1245.0,1143.95,37.14
+Sexually transmitted infections excluding HIV,103,22,46703.0,8513.0,5872.15,1070.37
+Soft tissue and other extraosseous sarcomas,1331,5,,,,
+Stomach cancer,1491,175,100415.0,3208.0,4406.75,140.78
+Stroke,1932,993,18444.0,12427.0,114.95,77.45
+Sudden infant death syndrome,586,1,,,,
+Testicular cancer,1333,11,,,,
+Tetanus,11,1,,,,
+Thyroid cancer,1399,85,,,,
+"Tracheal, bronchus, and lung cancer",2186,718,101350.0,12357.0,2177.87,265.53
+Trachoma,13,0,91.0,36.0,738.69,292.23
+Tuberculosis,42,41,1507.0,1503.0,32.08,31.99
+Typhoid and paratyphoid,21,0,483.0,76.0,59.63,9.38
+Upper digestive system diseases,155,150,2402.0,2149.0,157.96,141.32
+Upper respiratory infections,64,63,2557.0,2298.0,450.26,404.66
+Urinary diseases and male infertility,16821,136,,,,
+Urticaria,3,3,,,,
+Uterine cancer,1621,306,,,,
+Varicella and herpes zoster,19,19,,,,
+Vascular intestinal disorders,19,6,,,,
+Viral skin diseases,2,2,,,,
+Vitamin A deficiency,90,3,,,,
+Yellow fever,21,0,459.0,51.0,1444.34,160.48
+Zika virus,2,2,,,,
+_AGING,19650,14540,,,,
+_BIOBANK_METHODS,23807,23516,,,,
+_GENOMICS,9297,9208,,,,
+_IMAGING,2219,1330,,,,

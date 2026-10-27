@@ -1,0 +1,21 @@
+{
+  "generated": "2026-02-04T04:03:45.705163",
+  "quadrant": {
+    "compounding_neglect": {
+      "n": 40,
+      "n_gs": 26,
+      "n_ntd": 10,
+      "dalys_millions": 691.3963110633241
+    },
+    "well_served": {
+      "n": 64,
+      "n_gs": 6,
+      "dalys_millions": 877.2540493379415
+    }
+  },
+  "divergence": {
+    "ratio_2000": 1.3757791318898054,
+    "ratio_2025": 1.5938519767951522,
+    "pct_widening": 15.850861511890823
+  }
+}

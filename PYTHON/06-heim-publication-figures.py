@@ -61,7 +61,7 @@ except ImportError:
 
 # Set publication-quality defaults
 plt.rcParams['font.family'] = 'Arial'
-plt.rcParams['font.size'] = 10
+plt.rcParams['font.size'] = 12
 plt.rcParams['axes.linewidth'] = 1.0
 plt.rcParams['xtick.major.width'] = 1.0
 plt.rcParams['ytick.major.width'] = 1.0
@@ -71,31 +71,32 @@ plt.rcParams['savefig.bbox'] = 'tight'
 plt.rcParams['savefig.pad_inches'] = 0.1
 
 # Paths
-BASE_PATH = Path("/Users/superintelligent/Library/Mobile Documents/com~apple~CloudDocs/PUBLICATIONS/07-EHR-LINKED-BIOBANKS")
+BASE_PATH = Path(__file__).resolve().parents[1]
 DATA_PATH = BASE_PATH / "docs" / "data"
-OUTPUT_PATH = BASE_PATH / "ANALYSIS" / "05-04-HEIM-SEM-FIGURES"
+OUTPUT_PATH = BASE_PATH / "ANALYSIS" / "08-NATCOMMS-R2-FIGURES"
+
+def weights_label(integrated_data):
+    w = integrated_data['weights']
+    return f"Weights: D={w['discovery']:.2f}, T={w['translation']:.2f}, K={w['knowledge']:.2f} (PCA)"
+
+
+def global_south_set(diseases_json):
+    return {d['id'].replace('_', ' ').lower().strip() for d in diseases_json['diseases'] if d.get('globalSouthPriority')}
+
+
+def eas_summary(df):
+    counts = {k: int((df['category'] == k).sum()) for k in ('High', 'Moderate', 'Low')}
+    return {'counts': counts, 'pct_low': round(100 * counts['Low'] / len(df)),
+            'uk_eas': float(df.loc[df['name'] == 'UK Biobank', 'eas'].iloc[0])}
+
 
 # WHO NTD list for classification
-WHO_NTDS = [
-    'Lymphatic_filariasis', 'Lymphatic filariasis',
-    'Guinea_worm_disease', 'Guinea worm disease',
-    'Schistosomiasis',
-    'Onchocerciasis',
-    'Leishmaniasis',
-    'Chagas_disease', 'Chagas disease',
-    'African_trypanosomiasis', 'African trypanosomiasis',
-    'Dengue',
-    'Rabies',
-    'Ascariasis',
-    'Trichuriasis',
-    'Hookworm_disease', 'Hookworm disease',
-    'Scabies',
-    'Trachoma',
-    'Cysticercosis',
-    'Cystic_echinococcosis', 'Cystic echinococcosis',
-    'Yellow_fever', 'Yellow fever',
-    'Foodborne_trematodiases', 'Foodborne trematodiases',
-    'Leprosy'
+WHO_NTDS = [  # WHO NTD Roadmap 2021-2030 conditions present in the GBD data (Methods, External Validation)
+    'Lymphatic_filariasis', 'Lymphatic filariasis', 'Guinea_worm_disease', 'Guinea worm disease',
+    'Schistosomiasis', 'Onchocerciasis', 'Leishmaniasis', 'Chagas_disease', 'Chagas disease',
+    'African_trypanosomiasis', 'African trypanosomiasis', 'Dengue', 'Rabies', 'Scabies', 'Trachoma',
+    'Cysticercosis', 'Cystic_echinococcosis', 'Cystic echinococcosis',
+    'Food-borne_trematodiases', 'Food-borne trematodiases', 'Leprosy'
 ]
 
 def load_data():
@@ -176,7 +177,7 @@ def create_figure_4a(semantic_data, output_path):
     fig, ax = plt.subplots(figsize=(4, 5))
 
     # Colors
-    colors = ['#E74C3C', '#3498DB']  # Red for NTD, Blue for non-NTD
+    colors = ['#D55E00', '#3498DB']  # Red for NTD, Blue for non-NTD
 
     # Box plot
     bp = ax.boxplot([ntd_sii, non_ntd_sii],
@@ -211,20 +212,20 @@ def create_figure_4a(semantic_data, output_path):
     else:
         sig_text = 'ns'
 
-    ax.text(1.5, bracket_y*1.04, sig_text, ha='center', va='bottom', fontsize=12, fontweight='bold')
+    ax.text(1.5, bracket_y*1.04, sig_text, ha='center', va='bottom', fontsize=15, fontweight='bold')
 
     # Labels
     ax.set_xticks([1, 2])
     ax.set_xticklabels(['NTDs\n(n={})'.format(len(ntd_sii)),
                         'Other diseases\n(n={})'.format(len(non_ntd_sii))],
-                       fontsize=10)
-    ax.set_ylabel('Semantic Isolation Index (SII)', fontsize=11)
-    ax.set_title('Semantic Isolation:\nNTDs vs Other Conditions', fontsize=12, fontweight='bold')
+                       fontsize=13)
+    ax.set_ylabel('Semantic Isolation Index (SII)', fontsize=14)
+    ax.set_title('Semantic Isolation:\nNTDs vs Other Conditions', fontsize=15, fontweight='bold')
 
     # Add statistics annotation
     stats_text = f'Δ = {pct_diff:.0f}%\nP = {p_value:.3f}\nd = {cohens_d:.2f}'
     ax.text(0.98, 0.98, stats_text, transform=ax.transAxes,
-            fontsize=9, verticalalignment='top', horizontalalignment='right',
+            fontsize=12, verticalalignment='top', horizontalalignment='right',
             bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
     # Clean up
@@ -256,11 +257,26 @@ def create_figure_4a(semantic_data, output_path):
 def create_figure_6(integrated_data, output_path):
     """
     Figure 6: Unified Neglect Score ranking - Top 30 diseases
+    PCA-derived weights read from integrated.json['weights'].
     """
-    print("\nGenerating Figure 6: Unified Neglect Score ranking...")
+    print("\nGenerating Figure 6: Unified Neglect Score ranking (PCA-derived)...")
 
-    # Get disease data
-    diseases = integrated_data['diseases']
+    # Injury/external cause categories to exclude from rankings (substring match)
+    injury_keywords = [
+        'injur', 'falls', 'drowning', 'fire,', 'fire_', 'poisoning',
+        'violence', 'self-harm', 'self_harm', 'conflict', 'transport',
+        'forces_of_nature', 'heat_and_cold', 'foreign_body',
+        'animal_contact', 'mechanical_forces', 'police_conflict',
+        'execution',
+    ]
+
+    def _is_injury(name):
+        lower = name.lower()
+        return any(kw in lower for kw in injury_keywords)
+
+    # Get disease data, excluding injury categories
+    diseases = [d for d in integrated_data['diseases']
+                if not _is_injury(d['disease'])]
 
     # Sort by unified score
     diseases_sorted = sorted(diseases, key=lambda x: x.get('unified_score', 0), reverse=True)
@@ -268,28 +284,53 @@ def create_figure_6(integrated_data, output_path):
     # Take top 30
     top_30 = diseases_sorted[:30]
 
+    # Global South classification from the data (diseases.json globalSouthPriority)
+    with open(DATA_PATH / "diseases.json", 'r') as f:
+        all_gs = global_south_set(json.load(f))
+
+    def _is_gs(name):
+        return name.replace('_', ' ').lower().strip() in all_gs
+
     # Prepare data
     names = []
     scores = []
     is_ntd_list = []
+    is_gs_list = []
     gap_scores = []
     sii_scores = []
 
     for d in top_30:
         name = d['disease'].replace('_', ' ')
-        if len(name) > 25:
-            name = name[:22] + '...'
+        # Nicer display for specific long names (before truncation)
+        name = name.replace('Paralytic ileus and intestinal obstruction',
+                            'Paralytic ileus / intestinal obstruction')
+        name = name.replace('Inguinal, femoral, and abdominal hernia',
+                            'Inguinal/femoral/abdominal hernia')
+        name = name.replace('Invasive Non-typhoidal Salmonella (iNTS)',
+                            'Invasive non-typhoidal Salmonella')
+        if len(name) > 40:
+            name = name[:37] + '...'
+        if d.get('low_measured_burden'):
+            name += ' \u2020'
         names.append(name)
         scores.append(d.get('unified_score', 0))
         is_ntd_list.append(is_ntd(d['disease']))
+        is_gs_list.append(_is_gs(d['disease']))
         gap_scores.append(d.get('gap_score', 0))
-        sii_scores.append(d.get('sii', 0) * 10000)  # Scale for visibility
+        sii_scores.append(d.get('sii', 0) * 10000)
+
+    # Three-colour scheme: NTD check FIRST, then GS, then other
+    colors = []
+    for ntd, gs in zip(is_ntd_list, is_gs_list):
+        if ntd:
+            colors.append('#D55E00')      # Vermillion = WHO NTD
+        elif gs:
+            colors.append('#56B4E9')      # Sky blue = Global South (non-NTD)
+        else:
+            colors.append('#95A5A6')      # Grey = Other
 
     # Create figure
-    fig, ax = plt.subplots(figsize=(10, 10))
-
-    # Colors based on NTD status
-    colors = ['#E74C3C' if ntd else '#95A5A6' for ntd in is_ntd_list]
+    fig, ax = plt.subplots(figsize=(10, 11.5))
 
     # Horizontal bar chart
     y_pos = np.arange(len(names))
@@ -297,27 +338,30 @@ def create_figure_6(integrated_data, output_path):
 
     # Labels
     ax.set_yticks(y_pos)
-    ax.set_yticklabels(names, fontsize=9)
-    ax.invert_yaxis()  # Highest at top
+    ax.set_yticklabels(names, fontsize=12)
+    ax.invert_yaxis()
 
-    ax.set_xlabel('Unified Neglect Score', fontsize=11)
-    ax.set_title('Top 30 Most Neglected Diseases\n(HEIM Unified Score)', fontsize=12, fontweight='bold')
+    ax.set_xlabel('Unified Neglect Score (PCA-derived)', fontsize=14)
+    ax.set_title('Top 30 Most Neglected Diseases\n(PCA-Derived Unified Score)', fontsize=15, fontweight='bold')
 
     # Add score labels
     for i, (bar, score) in enumerate(zip(bars, scores)):
         ax.text(score + 0.5, bar.get_y() + bar.get_height()/2,
-                f'{score:.1f}', va='center', fontsize=8)
+                f'{score:.1f}', va='center', fontsize=11)
 
     # Legend
-    ntd_patch = mpatches.Patch(color='#E74C3C', label='WHO Neglected Tropical Disease')
+    ntd_patch = mpatches.Patch(color='#D55E00', label='WHO Neglected Tropical Disease')
+    gs_patch = mpatches.Patch(color='#56B4E9', label='Global South priority (non-NTD)')
     other_patch = mpatches.Patch(color='#95A5A6', label='Other condition')
-    ax.legend(handles=[ntd_patch, other_patch], loc='lower right', fontsize=9)
+    ax.legend(handles=[ntd_patch, gs_patch, other_patch], loc='upper left', bbox_to_anchor=(0.45, -0.07), fontsize=12, frameon=False)
 
-    # Add annotation
-    ntd_count = sum(is_ntd_list[:10])
-    ax.text(0.02, 0.02, f'Top 10: {ntd_count}/10 are NTDs\nAll top 10 affect Global South',
-            transform=ax.transAxes, fontsize=9,
-            bbox=dict(boxstyle='round', facecolor='lightyellow', alpha=0.8))
+    # Add annotation — count from actual classification
+    ntd_top10 = sum(is_ntd_list[:10])
+    gs_top10 = sum(1 for ntd, gs in zip(is_ntd_list[:10], is_gs_list[:10]) if ntd or gs)
+    ax.text(-0.02, -0.07,
+            f'Top 10: {gs_top10}/10 Global South burden\n{ntd_top10}/10 WHO NTDs\n{weights_label(integrated_data)}\n\u2020 lowest decile of global DALYs',
+            transform=ax.transAxes, fontsize=12, va='top',
+            bbox=dict(boxstyle='round', facecolor='white', edgecolor='0.6'))
 
     # Clean up
     ax.spines['top'].set_visible(False)
@@ -365,7 +409,7 @@ def create_figure_2(biobank_data, output_path):
     fig, ax = plt.subplots(figsize=(12, 6))
 
     # Color mapping
-    color_map = {'High': '#27AE60', 'Moderate': '#F39C12', 'Low': '#E74C3C'}
+    color_map = {'High': '#0072B2', 'Moderate': '#56B4E9', 'Low': '#D55E00'}
     colors = [color_map[cat] for cat in df['category']]
 
     # Bar chart
@@ -373,34 +417,35 @@ def create_figure_2(biobank_data, output_path):
     bars = ax.bar(x_pos, df['eas'], color=colors, edgecolor='white', linewidth=0.3)
 
     # Threshold lines
-    ax.axhline(y=60, color='#27AE60', linestyle='--', linewidth=1.5, label='High threshold (60)')
-    ax.axhline(y=40, color='#F39C12', linestyle='--', linewidth=1.5, label='Moderate threshold (40)')
+    ax.axhline(y=70, color='#0072B2', linestyle='--', linewidth=1.5, label='High threshold (70)')
+    ax.axhline(y=40, color='#56B4E9', linestyle='--', linewidth=1.5, label='Moderate threshold (40)')
 
     # Labels
     ax.set_xticks(x_pos[::5])
     ax.set_xticklabels([df.iloc[i]['name'][:15] for i in range(0, len(df), 5)],
-                        rotation=45, ha='right', fontsize=8)
-    ax.set_ylabel('Equity Alignment Score (EAS)', fontsize=11)
-    ax.set_xlabel('Biobanks (ranked by EAS)', fontsize=11)
-    ax.set_title('Biobank Equity Alignment Distribution\n(n=70 IHCC biobanks)', fontsize=12, fontweight='bold')
+                        rotation=45, ha='right', fontsize=11)
+    ax.set_ylabel('Equity Alignment Score (EAS)', fontsize=14)
+    ax.set_xlabel('Biobanks (ranked by EAS)', fontsize=14)
+    summ = eas_summary(df)
+    ax.set_title(f'Biobank Equity Alignment Distribution\n(n={len(df)} IHCC biobanks)', fontsize=15, fontweight='bold')
 
     # Add UK Biobank label
     uk_idx = df[df['name'] == 'UK Biobank'].index[0]
     uk_pos = list(df.index).index(uk_idx)
-    ax.annotate('UK Biobank\n(EAS=84.6)', xy=(uk_pos, df.loc[uk_idx, 'eas']),
+    ax.annotate(f"UK Biobank\n(EAS={summ['uk_eas']:.1f})", xy=(uk_pos, df.loc[uk_idx, 'eas']),
                 xytext=(uk_pos+5, df.loc[uk_idx, 'eas']+5),
-                fontsize=9, ha='left',
+                fontsize=12, ha='left',
                 arrowprops=dict(arrowstyle='->', color='black', lw=0.5))
 
     # Legend
-    high_patch = mpatches.Patch(color='#27AE60', label=f'High (n=1)')
-    mod_patch = mpatches.Patch(color='#F39C12', label=f'Moderate (n=13)')
-    low_patch = mpatches.Patch(color='#E74C3C', label=f'Low (n=56)')
-    ax.legend(handles=[high_patch, mod_patch, low_patch], loc='upper right', fontsize=9)
+    high_patch = mpatches.Patch(color='#0072B2', label=f"High (n={summ['counts']['High']})")
+    mod_patch = mpatches.Patch(color='#56B4E9', label=f"Moderate (n={summ['counts']['Moderate']})")
+    low_patch = mpatches.Patch(color='#D55E00', label=f"Low (n={summ['counts']['Low']})")
+    ax.legend(handles=[high_patch, mod_patch, low_patch], loc='upper right', fontsize=12)
 
     # Add percentage annotation
-    ax.text(0.98, 0.5, '80% of biobanks\nshow LOW\nequity alignment',
-            transform=ax.transAxes, fontsize=10, ha='right',
+    ax.text(0.98, 0.5, f"{summ['pct_low']}% of biobanks\nshow LOW\nequity alignment",
+            transform=ax.transAxes, fontsize=13, ha='right',
             bbox=dict(boxstyle='round', facecolor='mistyrose', alpha=0.8))
 
     # Clean up
@@ -452,7 +497,7 @@ def create_figure_2c(biobank_data, output_path):
     sizes = [hic_pct, lmic_pct]
     labels = [f'High-Income\nCountries\n{hic_pct:.1f}%',
               f'Global South\n{lmic_pct:.1f}%']
-    colors = ['#3498DB', '#E74C3C']
+    colors = ['#3498DB', '#D55E00']
     explode = (0, 0.05)
 
     wedges, texts, autotexts = ax.pie(sizes, labels=labels, colors=colors,
@@ -462,9 +507,9 @@ def create_figure_2c(biobank_data, output_path):
 
     # Center text
     ax.text(0, 0, f'Total:\n{total:,}\npublications',
-            ha='center', va='center', fontsize=11, fontweight='bold')
+            ha='center', va='center', fontsize=14, fontweight='bold')
 
-    ax.set_title('Biobank Publication Share\nby Country Income Level', fontsize=12, fontweight='bold')
+    ax.set_title('Biobank Publication Share\nby Country Income Level', fontsize=15, fontweight='bold')
 
     plt.tight_layout()
 
@@ -501,22 +546,22 @@ def create_figure_3b(clinical_trial_data, output_path):
     ax1 = axes[0]
     categories = ['High-Income\nCountries', 'Low/Middle-Income\nCountries']
     sites = [hic_sites, lmic_sites]
-    colors = ['#3498DB', '#E74C3C']
+    colors = ['#3498DB', '#D55E00']
 
     bars1 = ax1.bar(categories, sites, color=colors, edgecolor='white')
-    ax1.set_ylabel('Number of Trial Sites', fontsize=11)
-    ax1.set_title('Clinical Trial Site Distribution', fontsize=12, fontweight='bold')
+    ax1.set_ylabel('Number of Trial Sites', fontsize=14)
+    ax1.set_title('Clinical Trial Site Distribution', fontsize=15, fontweight='bold')
 
     # Add count labels
     for bar, count in zip(bars1, sites):
         ax1.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 10000,
                 f'{count:,}\n({count/sum(sites)*100:.1f}%)',
-                ha='center', fontsize=10)
+                ha='center', fontsize=13)
 
     # Add ratio
     ratio = hic_sites / lmic_sites
     ax1.text(0.5, 0.85, f'Ratio: {ratio:.1f}×',
-            transform=ax1.transAxes, ha='center', fontsize=11, fontweight='bold',
+            transform=ax1.transAxes, ha='center', fontsize=14, fontweight='bold',
             bbox=dict(boxstyle='round', facecolor='lightyellow'))
 
     ax1.spines['top'].set_visible(False)
@@ -528,20 +573,20 @@ def create_figure_3b(clinical_trial_data, output_path):
     intensities = [hic_intensity, gs_intensity]
 
     bars2 = ax2.bar(categories2, intensities, color=colors, edgecolor='white')
-    ax2.set_ylabel('Trials per Million DALYs', fontsize=11)
-    ax2.set_title('Trial Intensity by Region\n(Global South diseases)', fontsize=12, fontweight='bold')
+    ax2.set_ylabel('Trials per Million DALYs', fontsize=14)
+    ax2.set_title('Trial Intensity by Region\n(Global South diseases)', fontsize=15, fontweight='bold')
 
     # Add intensity labels
     for bar, intensity in zip(bars2, intensities):
         ax2.text(bar.get_x() + bar.get_width()/2, bar.get_height() + 20,
                 f'{intensity:.0f}',
-                ha='center', fontsize=10)
+                ha='center', fontsize=13)
 
     # Add gap annotation
     ax2.annotate('', xy=(1, gs_intensity), xytext=(1, hic_intensity),
                 arrowprops=dict(arrowstyle='<->', color='black', lw=2))
     ax2.text(1.15, (hic_intensity + gs_intensity)/2, f'{intensity_gap}×\ngap',
-            ha='left', va='center', fontsize=11, fontweight='bold')
+            ha='left', va='center', fontsize=14, fontweight='bold')
 
     ax2.spines['top'].set_visible(False)
     ax2.spines['right'].set_visible(False)
@@ -586,7 +631,7 @@ Score (EAS)                               KTP, RCC
 
 Color scheme:
 - Discovery: Blue (#3498DB)
-- Translation: Green (#27AE60)
+- Translation: Bluish green (#009E73)
 - Knowledge: Purple (#9B59B6)
 
 
@@ -597,7 +642,7 @@ Visual: Flowchart
 [GBD 2021 Taxonomy] ──────────────────────────────────┐
        │                                               │
        ▼                                               │
-[179 Disease Categories]                               │
+[175 Disease Categories]                               │
        │                                               │
        ├────────────────┬──────────────────┬──────────┘
        ▼                ▼                  ▼
@@ -621,14 +666,15 @@ PANEL C: Score Integration
 --------------------------
 Visual: Equation with weighting diagram
 
-Unified Score = 0.33 × Discovery + 0.33 × Translation + 0.34 × Knowledge
+Unified Score = 0.50 × Discovery + 0.29 × Translation + 0.21 × Knowledge
+(PCA-derived weights from PC1 loadings, 63.3% variance explained, n = 86 diseases)
 
 [Three colored bars merging into one]
-Discovery (33%) ──┐
-Translation (33%) ─┼──► UNIFIED NEGLECT SCORE (0-50)
-Knowledge (34%) ──┘
+Discovery (50%) ──┐
+Translation (29%) ─┼──► UNIFIED NEGLECT SCORE (0-100)
+Knowledge (21%) ──┘
 
-Scale bar: 0 ────────────────────────► 50
+Scale bar: 0 ────────────────────────► 100
            Well-resourced        Severely neglected
 
 
@@ -653,12 +699,12 @@ DESIGN NOTES:
     ax1 = axes[0]
     dims = ['Discovery\n(Biobanks)', 'Translation\n(Clinical Trials)', 'Knowledge\n(Literature)']
     values = [70, 0.56, 13.1]  # Scaled for visualization
-    colors = ['#3498DB', '#27AE60', '#9B59B6']
+    colors = ['#0072B2', '#009E73', '#CC79A7']
 
     bars = ax1.bar(dims, [1, 1, 1], color=colors, alpha=0.7, edgecolor='black')
     ax1.set_ylim(0, 1.5)
     ax1.set_ylabel('')
-    ax1.set_title('A. Three Dimensions of Research Equity', fontsize=12, fontweight='bold')
+    ax1.set_title('A. Three Dimensions of Research Equity', fontsize=15, fontweight='bold')
 
     # Add metrics below
     metrics = ['70 biobanks\n38K publications\nEAS, Gap Score',
@@ -666,7 +712,7 @@ DESIGN NOTES:
                '13.1M abstracts\n175 diseases\nSII, KTP, RCC']
     for i, (bar, metric) in enumerate(zip(bars, metrics)):
         ax1.text(bar.get_x() + bar.get_width()/2, 0.5, metric,
-                ha='center', va='center', fontsize=9)
+                ha='center', va='center', fontsize=12)
 
     ax1.spines['top'].set_visible(False)
     ax1.spines['right'].set_visible(False)
@@ -676,21 +722,21 @@ DESIGN NOTES:
     # Panel B: Data sources
     ax2 = axes[1]
     sources = ['GBD 2021', 'PubMed', 'AACT', 'IHCC']
-    source_sizes = [179, 13.1, 0.56, 70]
-    ax2.barh(sources, source_sizes, color=['gray', '#9B59B6', '#27AE60', '#3498DB'])
+    source_sizes = [175, 13.1, 0.56, 70]
+    ax2.barh(sources, source_sizes, color=['gray', '#CC79A7', '#009E73', '#0072B2'])
     ax2.set_xlabel('Scale (diseases/millions/cohorts)')
-    ax2.set_title('B. Data Sources and Scale', fontsize=12, fontweight='bold')
+    ax2.set_title('B. Data Sources and Scale', fontsize=15, fontweight='bold')
     ax2.spines['top'].set_visible(False)
     ax2.spines['right'].set_visible(False)
 
-    # Panel C: Score integration
+    # Panel C: Score integration (PCA-derived weights, PC1 63.3% variance)
     ax3 = axes[2]
-    weights = [0.33, 0.33, 0.34]
-    labels = ['Discovery\n(33%)', 'Translation\n(33%)', 'Knowledge\n(34%)']
+    weights = [0.50, 0.29, 0.21]
+    labels = ['Discovery\n(50%)', 'Translation\n(29%)', 'Knowledge\n(21%)']
     ax3.pie(weights, labels=labels, colors=colors, autopct='', startangle=90,
            wedgeprops=dict(width=0.4, edgecolor='white'))
-    ax3.text(0, 0, 'UNIFIED\nSCORE', ha='center', va='center', fontsize=10, fontweight='bold')
-    ax3.set_title('C. Score Integration', fontsize=12, fontweight='bold')
+    ax3.text(0, 0, 'UNIFIED\nSCORE', ha='center', va='center', fontsize=13, fontweight='bold')
+    ax3.set_title('C. PCA-Derived Score Integration', fontsize=15, fontweight='bold')
 
     plt.tight_layout()
 
@@ -705,6 +751,9 @@ DESIGN NOTES:
 def get_world_map():
     """Load world map from Natural Earth (handles geopandas 1.0+ deprecation)."""
     # URL for Natural Earth low-res countries
+    local = BASE_PATH / "DATA" / "naturalearth" / "ne_110m_admin_0_countries.shp"
+    if local.exists():
+        return gpd.read_file(local)
     url = "https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip"
     try:
         world = gpd.read_file(url)
@@ -789,7 +838,7 @@ def create_figure_2a_world_map(biobank_data, output_path):
     )
 
     # Plot countries with biobanks, colored by EAS
-    cmap = LinearSegmentedColormap.from_list('eas_cmap', ['#E74C3C', '#F39C12', '#27AE60'])
+    cmap = plt.get_cmap('cividis')  # perceptually uniform, colour-vision-deficiency safe
     world_with_biobank = world[world['has_biobank']]
 
     world_with_biobank.plot(
@@ -808,28 +857,28 @@ def create_figure_2a_world_map(biobank_data, output_path):
     sm = ScalarMappable(cmap=cmap, norm=norm)
     sm.set_array([])
     cbar = plt.colorbar(sm, ax=ax, shrink=0.5, aspect=25, pad=0.04)
-    cbar.set_label('Equity Alignment Score (EAS)', fontsize=11)
+    cbar.set_label('Equity Alignment Score (EAS)', fontsize=14)
 
     # Add threshold lines on colorbar
     cbar.ax.axhline(y=40, color='black', linestyle='--', linewidth=1)
-    cbar.ax.axhline(y=60, color='black', linestyle='--', linewidth=1)
-    cbar.ax.text(1.3, 40, 'Moderate', fontsize=7, va='center', clip_on=True)
-    cbar.ax.text(1.3, 60, 'High', fontsize=7, va='center', clip_on=True)
+    cbar.ax.axhline(y=70, color='black', linestyle='--', linewidth=1)
+    cbar.ax.text(1.3, 40, 'Moderate', fontsize=10, va='center', clip_on=True)
+    cbar.ax.text(1.3, 70, 'High', fontsize=10, va='center', clip_on=True)
 
     # Title and labels
     ax.set_title('Global Distribution of Biobank Research Equity\n(n=70 IHCC Biobanks across 29 Countries)',
-                 fontsize=14, fontweight='bold')
-    ax.set_xlabel('Longitude', fontsize=10)
-    ax.set_ylabel('Latitude', fontsize=10)
+                 fontsize=17, fontweight='bold')
+    ax.set_xlabel('Longitude', fontsize=13)
+    ax.set_ylabel('Latitude', fontsize=13)
 
     # Add legend for gray countries
     gray_patch = mpatches.Patch(color='#E0E0E0', label='No IHCC biobank')
-    ax.legend(handles=[gray_patch], loc='lower left', fontsize=9)
+    ax.legend(handles=[gray_patch], loc='lower left', fontsize=12)
 
     # Add annotation
     top_country = max(country_eas.items(), key=lambda x: x[1])
     ax.text(0.02, 0.98, f'Highest EAS: {top_country[0]} ({top_country[1]:.1f})',
-            transform=ax.transAxes, fontsize=9, va='top',
+            transform=ax.transAxes, fontsize=12, va='top',
             bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
 
     # Remove axis spines
@@ -957,7 +1006,7 @@ def create_figure_3a_world_map(clinical_trial_data, output_path):
     sm = ScalarMappable(cmap='YlOrRd', norm=norm)
     sm.set_array([])
     cbar = plt.colorbar(sm, ax=ax, shrink=0.5, aspect=20, pad=0.02)
-    cbar.set_label('Trial Sites (log₁₀ scale)', fontsize=10)
+    cbar.set_label('Trial Sites (log₁₀ scale)', fontsize=13)
     cbar.set_ticks([0, 2, 4, 6])
     cbar.set_ticklabels(['1', '100', '10K', '1M'])
 
@@ -965,26 +1014,26 @@ def create_figure_3a_world_map(clinical_trial_data, output_path):
     total_sites = geo.get('hicSites', 0) + geo.get('lmicSites', 0)
     hic_pct = geo.get('hicPct', 71.8)
     ax.set_title(f'Global Distribution of Clinical Trial Sites\n({total_sites:,} sites; HIC {hic_pct:.0f}% vs LMIC {100-hic_pct:.0f}%)',
-                 fontsize=14, fontweight='bold')
+                 fontsize=17, fontweight='bold')
 
     # Legend
     hic_patch = mpatches.Patch(color='#3498DB', label=f'High-Income ({hic_pct:.0f}%)')
-    lmic_patch = mpatches.Patch(color='#E74C3C', label=f'Low/Middle-Income ({100-hic_pct:.0f}%)')
+    lmic_patch = mpatches.Patch(color='#D55E00', label=f'Low/Middle-Income ({100-hic_pct:.0f}%)')
     gray_patch = mpatches.Patch(color='#F5F5F5', label='No data')
-    ax.legend(handles=[hic_patch, lmic_patch, gray_patch], loc='lower left', fontsize=9)
+    ax.legend(handles=[hic_patch, lmic_patch, gray_patch], loc='lower left', fontsize=12)
 
     # Add top countries annotation
     top_5 = sorted(country_sites.items(), key=lambda x: x[1], reverse=True)[:5]
     top_text = "Top 5 countries:\n" + "\n".join([f"{c[0][:12]}: {c[1]:,}" for c in top_5])
     ax.text(0.02, 0.98, top_text,
-            transform=ax.transAxes, fontsize=8, va='top',
+            transform=ax.transAxes, fontsize=11, va='top',
             family='monospace',
             bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
 
     # Add ratio annotation
     ratio = geo.get('hicLmicRatio', 2.5)
     ax.text(0.98, 0.02, f'HIC:LMIC Ratio = {ratio:.1f}×',
-            transform=ax.transAxes, fontsize=11, ha='right', fontweight='bold',
+            transform=ax.transAxes, fontsize=14, ha='right', fontweight='bold',
             bbox=dict(boxstyle='round', facecolor='lightyellow', alpha=0.9))
 
     # Remove axis
@@ -1046,39 +1095,39 @@ def create_regional_comparison(biobank_data, clinical_trial_data, output_path):
                     label='Biobanks', color='#3498DB', edgecolor='white')
     ax1_twin = ax1.twinx()
     bars2 = ax1_twin.bar(x + width/2, df['publications']/1000, width,
-                         label='Publications (thousands)', color='#27AE60', edgecolor='white')
+                         label='Publications (thousands)', color='#0072B2', edgecolor='white')
 
-    ax1.set_ylabel('Number of Biobanks', color='#3498DB', fontsize=11)
-    ax1_twin.set_ylabel('Publications (thousands)', color='#27AE60', fontsize=11)
+    ax1.set_ylabel('Number of Biobanks', color='#3498DB', fontsize=14)
+    ax1_twin.set_ylabel('Publications (thousands)', color='#0072B2', fontsize=14)
     ax1.set_xticks(x)
-    ax1.set_xticklabels(df.index, rotation=30, ha='right', fontsize=9)
-    ax1.set_title('A. Biobanks and Publications by WHO Region', fontsize=12, fontweight='bold')
+    ax1.set_xticklabels(df.index, rotation=30, ha='right', fontsize=12)
+    ax1.set_title('A. Biobanks and Publications by WHO Region', fontsize=15, fontweight='bold')
 
     # Combined legend
     ax1.legend([bars1, bars2], ['Biobanks', 'Publications (thousands)'],
-               loc='upper right', fontsize=9)
+               loc='upper right', fontsize=12)
 
     ax1.spines['top'].set_visible(False)
     ax1_twin.spines['top'].set_visible(False)
 
     # Panel B: Mean EAS by region
     ax2 = axes[1]
-    colors = ['#E74C3C' if eas < 40 else '#F39C12' if eas < 60 else '#27AE60'
+    colors = ['#D55E00' if eas < 40 else '#56B4E9' if eas < 60 else '#0072B2'
               for eas in df['mean_eas']]
 
     bars = ax2.barh(df.index, df['mean_eas'], color=colors, edgecolor='white')
-    ax2.axvline(x=40, color='#F39C12', linestyle='--', linewidth=1.5, label='Moderate threshold')
-    ax2.axvline(x=60, color='#27AE60', linestyle='--', linewidth=1.5, label='High threshold')
+    ax2.axvline(x=40, color='#56B4E9', linestyle='--', linewidth=1.5, label='Moderate threshold (40)')
+    ax2.axvline(x=70, color='#0072B2', linestyle='--', linewidth=1.5, label='High threshold (70)')
 
-    ax2.set_xlabel('Mean Equity Alignment Score (EAS)', fontsize=11)
-    ax2.set_title('B. Research Equity by WHO Region', fontsize=12, fontweight='bold')
+    ax2.set_xlabel('Mean Equity Alignment Score (EAS)', fontsize=14)
+    ax2.set_title('B. Research Equity by WHO Region', fontsize=15, fontweight='bold')
     ax2.set_xlim(0, 100)
-    ax2.legend(loc='lower right', fontsize=9)
+    ax2.legend(loc='lower right', fontsize=12)
 
     # Add score labels
     for bar, score in zip(bars, df['mean_eas']):
         ax2.text(score + 1, bar.get_y() + bar.get_height()/2,
-                f'{score:.1f}', va='center', fontsize=9)
+                f'{score:.1f}', va='center', fontsize=12)
 
     ax2.spines['top'].set_visible(False)
     ax2.spines['right'].set_visible(False)

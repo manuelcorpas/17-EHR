@@ -1,0 +1,20 @@
+{
+  "discovery": [
+    0.97,
+    1.0
+  ],
+  "translation": [
+    0.961,
+    1.0
+  ],
+  "knowledge": [
+    0.989,
+    1.0
+  ],
+  "min_all": 0.961,
+  "equal_weights": 0.98,
+  "dirichlet_1000": [
+    0.615,
+    0.948
+  ]
+}

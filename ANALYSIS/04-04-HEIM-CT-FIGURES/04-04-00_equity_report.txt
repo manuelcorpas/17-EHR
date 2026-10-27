@@ -1,0 +1,92 @@
+================================================================================
+HEIM-CT: Clinical Trial Enrollment Equity Report
+Generated: 2026-10-25 14:22:46
+Version: HEIM-CT v1.0
+Methodology: HEIM Framework (Corpas et al. 2025)
+================================================================================
+
+ENROLLMENT REPRESENTATION INDEX (ERI)
+----------------------------------------
+ERI = Observed% / Reference% (US Census 2020)
+< 0.5: Severely underrepresented | 0.5-0.8: Underrepresented
+0.8-1.2: Proportional | > 1.2: Overrepresented
+
+  white                ERI= 0.00  Obs=  0.0%  Ref= 57.8%  [Severely underrepresented]
+  black                ERI= 0.00  Obs=  0.0%  Ref= 12.1%  [Severely underrepresented]
+  asian                ERI= 0.00  Obs=  0.0%  Ref=  5.9%  [Severely underrepresented]
+  hispanic             ERI= 0.00  Obs=  0.0%  Ref= 18.7%  [Severely underrepresented]
+  american_indian      ERI= 0.00  Obs=  0.0%  Ref=  0.7%  [Severely underrepresented]
+  pacific_islander     ERI= 0.00  Obs=  0.0%  Ref=  0.2%  [Severely underrepresented]
+  multiple             ERI= 0.00  Obs=  0.0%  Ref= 10.7%  [Severely underrepresented]
+  other                ERI= 0.00  Obs=  0.0%  Ref=  3.9%  [Severely underrepresented]
+
+GEOGRAPHIC DISTRIBUTION
+----------------------------------------
+HIC trials: 577,613 (75.0%)
+LMIC trials: 131,557 (17.1%)
+HIC:LMIC ratio: 4.4:1
+
+Top 10 countries:
+  United States                   192,501 trials
+  China                            48,028 trials
+  France                           41,913 trials
+  Canada                           32,892 trials
+  Germany                          29,157 trials
+  United Kingdom                   29,012 trials
+  Italy                            25,614 trials
+  Spain                            25,007 trials
+  Turkey (Türkiye)                 22,053 trials
+  South Korea                      17,413 trials
+
+DISEASE GAP ANALYSIS
+----------------------------------------
+Gap severity distribution:
+  Critical      89 diseases
+  High           0 diseases
+  Moderate       0 diseases
+  Low            0 diseases
+
+Top 15 Critical Gap Diseases (by burden):
+  🌍 COVID-19                                 Gap=  95  Trials=    0  DALYs= 212.0M
+     Ischemic heart disease                   Gap=  95  Trials=    0  DALYs= 188.4M
+  🌍 Neonatal disorders                       Gap=  95  Trials=    0  DALYs= 186.4M
+     Stroke                                   Gap=  95  Trials=    0  DALYs= 160.5M
+  🌍 Lower respiratory infections             Gap=  95  Trials=    0  DALYs=  82.5M
+     Chronic obstructive pulmonary disease    Gap=  95  Trials=    0  DALYs=  79.8M
+     Diabetes mellitus                        Gap=  95  Trials=    0  DALYs=  78.9M
+     Low back pain                            Gap=  95  Trials=    0  DALYs=  70.2M
+  🌍 Road injuries                            Gap=  95  Trials=    0  DALYs=  65.1M
+  🌍 Diarrheal diseases                       Gap=  95  Trials=    0  DALYs=  59.0M
+     Depressive disorders                     Gap=  95  Trials=    0  DALYs=  56.3M
+  🌍 Malaria                                  Gap=  95  Trials=    0  DALYs=  55.2M
+     Congenital birth defects                 Gap=  95  Trials=    0  DALYs=  52.3M
+     Headache disorders                       Gap=  95  Trials=    0  DALYs=  48.0M
+  🌍 Tuberculosis                             Gap=  95  Trials=    0  DALYs=  47.0M
+
+GLOBAL SOUTH PRIORITY DISEASES
+----------------------------------------
+Total GS priority diseases: 30
+With Critical gaps: 30 (100.0%)
+Average CT Gap Score: 95.0
+
+TEMPORAL TRENDS
+----------------------------------------
+  2010: 17,506 trials,  13.7% GS priority
+  2011: 18,366 trials,  13.6% GS priority
+  2012: 19,438 trials,  13.6% GS priority
+  2013: 20,321 trials,  13.2% GS priority
+  2014: 22,624 trials,  13.0% GS priority
+  2015: 24,373 trials,  13.5% GS priority
+  2016: 26,448 trials,  12.7% GS priority
+  2017: 27,927 trials,  12.6% GS priority
+  2018: 30,103 trials,  12.4% GS priority
+  2019: 31,901 trials,  12.3% GS priority
+  2020: 33,393 trials,  23.0% GS priority
+  2021: 38,180 trials,  17.0% GS priority
+  2022: 37,117 trials,  14.2% GS priority
+  2023: 38,337 trials,  12.6% GS priority
+  2024: 38,595 trials,  11.6% GS priority
+
+================================================================================
+END OF REPORT
+================================================================================

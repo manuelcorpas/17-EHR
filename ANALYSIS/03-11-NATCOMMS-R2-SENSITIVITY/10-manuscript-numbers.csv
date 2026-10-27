@@ -1,0 +1,41 @@
+,previous,corrected,changed
+w_D,0.501,0.574,True
+w_T,0.293,0.17,True
+w_K,0.206,0.256,True
+pc1_pct,63.3,69.1,True
+w2_D,0.71,0.69,True
+w2_K,0.29,0.31,True
+unified_mean,27.7,42.4,True
+unified_sd,22.2,24.5,True
+unified_min,"Endocrine,_metabolic,_blood,_and_immune_disorders 0.5","Endocrine,_metabolic,_blood,_and_immune_disorders 0.5",False
+unified_max,Guinea_worm_disease 87.9,African_trypanosomiasis 91.7,True
+breast_cancer,2.3,9.6,True
+top10_who_ntd_excl_malaria,6,6,False
+top10_low_burden,0,5,True
+top10,Guinea_worm_disease 87.9/gap 95; Malaria 87.2/gap 95; Cysticercosis 85.0/gap 95; Scabies 83.2/gap 95; Lymphatic_filariasis 74.0/gap 95; Encephalitis 73.7/gap 90; Iodine_deficiency 73.6/gap 82; Invasive_Non-typhoidal_Salmonella_(iNTS) 72.7/gap 80; Schistosomiasis 71.8/gap 95; Onchocerciasis 71.6/gap 60,African_trypanosomiasis 91.7/gap 95; Ebola 89.2/gap 95; Zika_virus 88.8/gap 95; Guinea_worm_disease 87.3/gap 95; Cystic_echinococcosis 86.3/gap 95; Invasive_Non-typhoidal_Salmonella_(iNTS) 84.4/gap 95; Cysticercosis 84.1/gap 95; Iodine_deficiency 83.5/gap 95; Food-borne_trematodiases 83.3/gap 95; Scabies 82.2/gap 95,True
+top10_gs,10,10,False
+top10_who_ntd,6,6,False
+ntd_mean,52.6,78.1,True
+non_ntd_mean,25.1,38.7,True
+ntd_p,1.2e-04,2.2e-08,True
+gap_critical,22,53,True
+gap_high,26,33,True
+gap_moderate,48,52,True
+gap_low,83,41,True
+gap_n,179,179,False
+eas_uk,84.6,75.2,True
+eas_high,1,1,False
+eas_mod,14,1,True
+eas_low,55,68,True
+eas_low_pct,79,97,True
+eas_nurses,55.1,45.6,True
+eas_whi,53.5,39.9,True
+eas_estonia,49.3,30.6,True
+eas_median,21.9,11.5,True
+eas_q1,8.8,4.1,True
+eas_q3,36.6,21.2,True
+r_gap_sii,0.28,0.41,True
+ihd,33.9,29.7,True
+stroke,26.6,31.6,True
+n_who_mapped,15,15,False
+malaria_rank,2,35,True

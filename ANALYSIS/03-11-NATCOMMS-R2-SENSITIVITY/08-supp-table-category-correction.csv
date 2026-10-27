@@ -1,0 +1,161 @@
+disease,category_published,gap_score_published,unified_score_published,rank_published,category_corrected,gap_score_corrected,unified_score_corrected,rank_corrected,dalys,low_measured_burden,category_changed,rank_change
+African trypanosomiasis,Other NCD,10.0,21.26,89.0,Neglected,95.0,91.65,1.0,61962.48,True,True,88.0
+Ebola,Other NCD,20.0,27.24,69.0,Neglected,95.0,89.17,2.0,2602.33,True,True,67.0
+Zika virus,Other NCD,20.0,26.89,71.0,Neglected,95.0,88.8,3.0,157.95,True,True,68.0
+Guinea worm disease,Other NCD,95.0,87.93,1.0,Neglected,95.0,87.27,4.0,0.85,True,True,-3.0
+Cystic echinococcosis,Other NCD,60.0,57.8,20.0,Neglected,95.0,86.26,5.0,105071.57,True,True,15.0
+Invasive Non-typhoidal Salmonella (iNTS),Infectious,80.0,72.71,8.0,Infectious,95.0,84.39,6.0,4740234.7,False,False,2.0
+Cysticercosis,Other NCD,95.0,85.0,3.0,Neglected,95.0,84.15,7.0,1235938.99,False,True,-4.0
+Iodine deficiency,Nutritional,82.0,73.55,7.0,Nutritional,95.0,83.53,8.0,2246334.37,False,False,-1.0
+Food-borne trematodiases,Other NCD,10.0,13.32,105.0,Neglected,95.0,83.28,9.0,998028.52,False,True,96.0
+Scabies,Other NCD,95.0,83.17,4.0,Other NCD,95.0,82.24,10.0,5315518.99,False,False,-6.0
+Typhoid and paratyphoid,Infectious,90.0,68.65,13.0,Infectious,95.0,81.52,11.0,8099574.46,False,False,2.0
+Rheumatic heart disease,Cardiovascular,40.0,26.71,72.0,Cardiovascular,95.0,80.83,12.0,13426369.18,False,False,60.0
+Onchocerciasis,Other NCD,60.0,71.63,10.0,Neglected,95.0,80.28,13.0,1262988.13,False,True,-3.0
+Leprosy,Other NCD,40.0,34.78,47.0,Neglected,95.0,79.53,14.0,21427.51,True,True,33.0
+Diphtheria,Other NCD,40.0,34.39,48.0,Infectious,95.0,79.14,15.0,318203.82,True,True,33.0
+Other neglected tropical diseases,Other NCD,40.0,25.18,76.0,Neglected,95.0,79.0,16.0,4218302.25,False,True,60.0
+Pertussis,Other NCD,70.0,59.13,18.0,Infectious,95.0,78.84,17.0,4614086.06,False,True,1.0
+Vitamin A deficiency,Nutritional,65.0,54.76,22.0,Nutritional,95.0,78.64,18.0,1104931.49,False,False,4.0
+Tetanus,Other NCD,60.0,49.83,28.0,Infectious,95.0,77.85,19.0,1341513.37,False,True,9.0
+Encephalitis,Other NCD,90.0,73.68,6.0,Infectious,95.0,76.57,20.0,4952818.58,False,True,-14.0
+Lymphatic filariasis,Other NCD,95.0,74.01,5.0,Neglected,95.0,75.36,21.0,1314563.4,False,True,-16.0
+Fungal skin diseases,Other NCD,70.0,66.91,14.0,Other NCD,80.0,74.8,22.0,3429496.84,False,False,-8.0
+Measles,Other NCD,70.0,59.1,19.0,Infectious,90.0,74.78,23.0,4878526.63,False,True,-4.0
+Other intestinal infectious diseases,Infectious,10.0,3.61,142.0,Infectious,95.0,73.01,24.0,105381.67,True,False,118.0
+Otitis media,Infectious,80.0,65.48,15.0,Infectious,90.0,72.68,25.0,2479622.9,False,False,-10.0
+Chagas disease,Other NCD,10.0,11.73,109.0,Neglected,95.0,72.31,26.0,238589.29,True,True,83.0
+Yellow fever,Other NCD,30.0,23.29,84.0,Neglected,95.0,71.94,27.0,317791.95,True,True,57.0
+Leishmaniasis,Other NCD,80.0,53.9,23.0,Neglected,95.0,71.58,28.0,781187.61,False,True,-5.0
+Varicella and herpes zoster,Other NCD,40.0,31.05,61.0,Infectious,90.0,71.51,29.0,886066.54,False,True,32.0
+Intestinal nematode infections,Other NCD,50.0,33.5,51.0,Neglected,95.0,70.88,30.0,1381640.97,False,True,21.0
+Trachoma,Other NCD,20.0,16.97,98.0,Neglected,95.0,70.39,31.0,123190.24,True,True,67.0
+Dengue,Other NCD,95.0,64.69,17.0,Neglected,95.0,69.37,32.0,2076524.69,False,True,-15.0
+Schistosomiasis,Other NCD,95.0,71.76,9.0,Neglected,95.0,69.33,33.0,1746333.31,False,True,-24.0
+Sudden infant death syndrome,Other NCD,10.0,7.71,116.0,Other NCD,85.0,69.22,34.0,2746174.49,False,False,82.0
+Malaria,Other NCD,95.0,87.22,2.0,Neglected,90.0,69.0,35.0,55174060.7,False,True,-33.0
+Bacterial skin diseases,Other NCD,30.0,23.63,82.0,Other NCD,85.0,68.38,36.0,2269423.95,False,False,46.0
+Rabies,Other NCD,60.0,41.54,36.0,Neglected,95.0,68.1,37.0,569550.28,True,True,-1.0
+Viral skin diseases,Other NCD,85.0,68.76,12.0,Other NCD,85.0,67.65,38.0,4199075.03,False,False,-26.0
+Meningitis,Other NCD,70.0,57.29,21.0,Infectious,95.0,65.52,39.0,14511046.48,False,True,-18.0
+Dietary iron deficiency,Nutritional,60.0,38.1,43.0,Nutritional,92.0,64.99,40.0,32315750.9,False,False,3.0
+Urticaria,Other NCD,80.0,65.24,16.0,Other NCD,80.0,64.22,41.0,3980785.68,False,False,-25.0
+Hemoglobinopathies and hemolytic anemias,Other NCD,70.0,41.46,37.0,Other NCD,95.0,63.55,42.0,11920415.82,False,False,-5.0
+Sexually transmitted infections excluding HIV,Infectious,40.0,22.61,88.0,Infectious,90.0,60.19,43.0,7953311.09,False,False,45.0
+Police conflict and executions,Other NCD,40.0,50.13,27.0,Injuries,50.0,59.13,44.0,1011911.98,False,True,-17.0
+Neck pain,Musculoskeletal,50.0,42.69,34.0,Musculoskeletal,70.0,58.75,45.0,20415496.55,False,False,-11.0
+Tuberculosis,Infectious,80.0,68.91,11.0,Infectious,80.0,56.74,46.0,46977462.56,False,False,-35.0
+Protein-energy malnutrition,Nutritional,65.0,41.06,38.0,Nutritional,82.0,55.82,47.0,11826130.8,False,False,-9.0
+Decubitus ulcer,Other NCD,50.0,39.88,40.0,Other NCD,70.0,55.79,48.0,803747.4,False,False,-8.0
+Conduct disorder,Mental Health,10.0,29.16,67.0,Mental Health,40.0,55.24,49.0,5002614.36,False,False,18.0
+Other sense organ diseases,Other NCD,40.0,30.64,62.0,Other NCD,70.0,54.83,50.0,3713356.18,False,False,12.0
+Lip and oral cavity cancer,Cancer,10.0,4.49,134.0,Cancer,70.0,53.56,51.0,5874069.63,False,False,83.0
+Appendicitis,Digestive,60.0,53.06,25.0,Digestive,60.0,52.77,52.0,1330162.78,False,False,-27.0
+Exposure to forces of nature,Other NCD,50.0,52.02,26.0,Injuries,50.0,52.33,53.0,1092510.37,False,True,-27.0
+Low back pain,Musculoskeletal,60.0,38.16,42.0,Musculoskeletal,70.0,51.32,54.0,70156962.19,False,False,-12.0
+Diarrheal diseases,Infectious,80.0,44.33,33.0,Infectious,80.0,51.26,55.0,58983816.79,False,False,-22.0
+Vascular intestinal disorders,Digestive,40.0,33.4,52.0,Digestive,60.0,49.54,56.0,1708446.84,False,False,-4.0
+Eye cancer,Cancer,10.0,7.93,115.0,Cancer,60.0,49.14,57.0,468748.49,True,False,58.0
+Age-related and other hearing loss,Other NCD,50.0,40.77,39.0,Other NCD,60.0,48.58,58.0,44449944.07,False,False,-19.0
+"Inguinal, femoral, and abdominal hernia",Digestive,50.0,48.41,30.0,Digestive,50.0,48.56,59.0,2344644.54,False,False,-29.0
+Acne vulgaris,Other NCD,60.0,48.58,29.0,Other NCD,60.0,47.99,60.0,5125473.49,False,False,-31.0
+Larynx cancer,Cancer,10.0,6.75,120.0,Cancer,60.0,47.9,61.0,3143308.77,False,False,59.0
+Soft tissue and other extraosseous sarcomas,Cancer,10.0,6.09,121.0,Cancer,60.0,47.16,62.0,1677891.91,False,False,59.0
+Neonatal disorders,Maternal/Child,50.0,38.04,44.0,Maternal/Child,70.0,46.74,63.0,186366011.77,False,False,-19.0
+Mesothelioma,Cancer,10.0,5.16,129.0,Cancer,60.0,46.1,64.0,689358.83,False,False,65.0
+Malignant neoplasm of bone and articular cartilage,Cancer,10.0,5.03,130.0,Cancer,60.0,46.07,65.0,2525827.8,False,False,65.0
+COVID-19,Infectious,60.0,53.89,24.0,Infectious,60.0,45.71,66.0,212009595.97,False,False,-42.0
+Nasopharynx cancer,Cancer,10.0,4.72,133.0,Cancer,60.0,45.66,67.0,2490191.45,False,False,66.0
+Cervical cancer,Cancer,10.0,3.59,143.0,Cancer,70.0,45.53,68.0,9911653.09,False,False,75.0
+Endocarditis,Cardiovascular,20.0,20.55,92.0,Cardiovascular,50.0,45.47,69.0,2076412.89,False,False,23.0
+Pruritus,Other NCD,60.0,46.04,32.0,Other NCD,60.0,45.29,70.0,851113.05,False,False,-38.0
+Lower respiratory infections,Infectious,60.0,32.97,56.0,Infectious,70.0,43.87,71.0,82534840.54,False,False,-15.0
+Chronic obstructive pulmonary disease,Respiratory,60.0,41.68,35.0,Respiratory,60.0,40.97,72.0,79779695.05,False,False,-37.0
+Gallbladder and biliary tract cancer,Cancer,10.0,7.55,118.0,Cancer,50.0,40.49,73.0,3732121.32,False,False,45.0
+Hodgkin lymphoma,Cancer,20.0,15.66,103.0,Cancer,50.0,40.24,74.0,1196188.22,False,False,29.0
+Esophageal cancer,Cancer,10.0,7.19,119.0,Cancer,50.0,40.11,75.0,12999264.9,False,False,44.0
+Acute hepatitis,Other NCD,40.0,23.21,85.0,Infectious,60.0,40.0,76.0,4228048.13,False,True,9.0
+Headache disorders,Neurological,60.0,46.54,31.0,Neurological,60.0,39.47,77.0,47975675.06,False,False,-46.0
+Congenital birth defects,Other NCD,50.0,32.27,58.0,Other NCD,60.0,39.44,78.0,52325332.69,False,False,-20.0
+Pneumoconiosis,Respiratory,50.0,39.66,41.0,Respiratory,50.0,39.17,79.0,447064.52,True,False,-38.0
+Other pharynx cancer,Cancer,10.0,5.87,123.0,Cancer,50.0,38.74,80.0,2843780.85,False,False,43.0
+HIV AIDS,,60.0,33.38,53.0,,60.0,38.46,81.0,,False,True,-28.0
+Non-rheumatic valvular heart disease,Cardiovascular,20.0,20.84,90.0,Cardiovascular,40.0,37.6,82.0,3238184.62,False,False,8.0
+Autism spectrum disorders,Mental Health,40.0,29.77,64.0,Mental Health,50.0,37.51,83.0,11544038.08,False,False,-19.0
+Interstitial lung disease and pulmonary sarcoidosis,,,,,Respiratory,60.0,37.26,84.0,4042150.49,False,True,
+Upper respiratory infections,Infectious,60.0,33.19,54.0,Infectious,60.0,36.63,85.0,5678886.77,False,False,-31.0
+Oral disorders,Other NCD,50.0,36.96,45.0,Other NCD,50.0,36.41,86.0,23239420.62,False,False,-41.0
+Drug use disorders,Mental Health,50.0,32.13,59.0,Mental Health,50.0,36.04,87.0,15562161.53,False,False,-28.0
+Stomach cancer,Cancer,20.0,12.03,108.0,Cancer,50.0,35.36,88.0,22786633.1,False,False,20.0
+Osteoarthritis,Musculoskeletal,40.0,25.02,77.0,Musculoskeletal,50.0,34.76,89.0,21304565.82,False,False,-12.0
+Idiopathic epilepsy,Neurological,50.0,32.55,57.0,Neurological,50.0,33.96,90.0,13877827.48,False,False,-33.0
+Anxiety disorders,Mental Health,40.0,31.81,60.0,Mental Health,40.0,33.72,91.0,42509645.28,False,False,-31.0
+Cardiomyopathy and myocarditis,Cardiovascular,50.0,33.67,50.0,Cardiovascular,50.0,33.46,92.0,11653957.53,False,False,-42.0
+Leukemia,Cancer,50.0,29.29,66.0,Cancer,50.0,33.12,93.0,10982836.19,False,False,-27.0
+Idiopathic developmental intellectual disability,Mental Health,40.0,33.12,55.0,Mental Health,40.0,33.01,94.0,3810634.66,False,False,-39.0
+Neuroblastoma and other peripheral nervous cell tumors,Cancer,10.0,8.14,114.0,Cancer,40.0,32.99,95.0,285478.61,True,False,19.0
+Other skin and subcutaneous diseases,Other NCD,30.0,16.67,100.0,Other NCD,50.0,32.56,96.0,3530584.55,False,False,4.0
+Testicular cancer,Cancer,10.0,7.57,117.0,Cancer,40.0,32.45,97.0,560921.46,True,False,20.0
+Stroke,Cardiovascular,40.0,26.65,73.0,Cardiovascular,50.0,31.65,98.0,160457220.63,False,False,-25.0
+Brain and central nervous system cancer,Cancer,10.0,3.26,148.0,Cancer,50.0,31.23,99.0,8912595.21,False,False,49.0
+Pancreatitis,Digestive,40.0,24.31,79.0,Digestive,50.0,31.02,100.0,4101153.97,False,False,-21.0
+Aortic aneurysm,Cardiovascular,30.0,29.99,63.0,Cardiovascular,30.0,30.38,101.0,3107762.32,False,False,-38.0
+Pulmonary Arterial Hypertension,Cardiovascular,10.0,5.55,127.0,Cardiovascular,40.0,30.24,102.0,642104.29,False,False,25.0
+Bipolar disorder,Mental Health,40.0,27.9,68.0,Mental Health,40.0,29.83,103.0,8007783.13,False,False,-35.0
+Ischemic heart disease,Cardiovascular,40.0,33.86,49.0,Cardiovascular,40.0,29.67,104.0,188360557.32,False,False,-55.0
+Gallbladder and biliary diseases,Digestive,40.0,29.7,65.0,Digestive,40.0,29.36,105.0,7734159.3,False,False,-40.0
+Schizophrenia,Mental Health,40.0,27.09,70.0,Mental Health,40.0,29.2,106.0,14816611.18,False,False,-36.0
+Upper digestive system diseases,Digestive,40.0,23.17,86.0,Digestive,50.0,28.77,107.0,15206382.81,False,False,-21.0
+Other unspecified infectious diseases,Other NCD,10.0,4.09,138.0,Infectious,40.0,28.77,108.0,5851960.76,False,True,30.0
+Non-Hodgkin lymphoma,Cancer,40.0,24.25,80.0,Cancer,40.0,28.39,109.0,7766063.22,False,False,-29.0
+Eating disorders,Mental Health,20.0,12.98,106.0,Mental Health,40.0,27.35,110.0,3403145.79,False,False,-4.0
+Multiple myeloma,Cancer,10.0,5.88,122.0,Cancer,40.0,26.94,111.0,2595594.99,False,False,11.0
+Depressive disorders,Mental Health,40.0,26.03,74.0,Mental Health,40.0,26.6,112.0,56330361.15,False,False,-38.0
+Blindness and vision loss,Other NCD,40.0,25.22,75.0,Other NCD,40.0,26.2,113.0,29163992.74,False,False,-38.0
+Chronic kidney disease,Metabolic,40.0,23.86,81.0,Metabolic,40.0,25.81,114.0,44453683.61,False,False,-33.0
+Urinary diseases and male infertility,Other NCD,10.0,1.21,157.0,Other NCD,40.0,25.68,115.0,11353107.89,False,False,42.0
+Liver cancer,Cancer,10.0,4.14,137.0,Cancer,40.0,25.65,116.0,12887652.41,False,False,21.0
+Asthma,Respiratory,40.0,24.38,78.0,Respiratory,40.0,24.99,117.0,21422859.89,False,False,-39.0
+Pancreatic cancer,Cancer,10.0,3.56,144.0,Cancer,40.0,24.94,118.0,11316963.35,False,False,26.0
+Bladder cancer,Cancer,10.0,3.34,147.0,Cancer,40.0,24.63,119.0,4397066.63,False,False,28.0
+Dermatitis,Other NCD,40.0,23.57,83.0,Other NCD,40.0,24.52,120.0,8177101.56,False,False,-37.0
+Cirrhosis and other chronic liver diseases,Digestive,40.0,22.7,87.0,Digestive,40.0,24.05,121.0,46417777.16,False,False,-34.0
+"Tracheal, bronchus, and lung cancer",Cancer,30.0,14.81,104.0,Cancer,40.0,24.05,122.0,46536272.12,False,False,-18.0
+Atrial fibrillation and flutter,Cardiovascular,30.0,20.56,91.0,Cardiovascular,30.0,22.88,123.0,8358893.71,False,False,-32.0
+Other musculoskeletal disorders,Musculoskeletal,40.0,20.36,93.0,Musculoskeletal,40.0,22.37,124.0,45177825.37,False,False,-31.0
+Parkinson's disease,Neurological,30.0,19.18,96.0,Neurological,30.0,21.86,125.0,7471821.42,False,False,-29.0
+Alzheimer's disease and other dementias,Neurological,30.0,20.03,95.0,Neurological,30.0,21.12,126.0,36332686.74,False,False,-31.0
+Lower extremity peripheral arterial disease,Cardiovascular,20.0,11.31,111.0,Cardiovascular,30.0,19.44,127.0,1558242.69,False,False,-16.0
+Gynecological diseases,Other NCD,10.0,2.26,153.0,Other NCD,30.0,18.69,128.0,27737635.89,False,False,25.0
+Psoriasis,Other NCD,30.0,16.97,99.0,Other NCD,30.0,18.67,129.0,3689928.26,False,False,-30.0
+Kidney cancer,Cancer,10.0,3.95,139.0,Cancer,30.0,18.56,130.0,4016362.12,False,False,9.0
+Maternal disorders,Maternal/Child,10.0,3.91,140.0,Maternal/Child,30.0,18.31,131.0,12314021.23,False,False,9.0
+Acute glomerulonephritis,Metabolic,20.0,17.99,97.0,Metabolic,20.0,18.24,132.0,312303.17,True,False,-35.0
+Alcohol use disorders,Mental Health,20.0,20.28,94.0,Mental Health,20.0,17.74,133.0,16980984.23,False,False,-39.0
+Other neurological disorders,Neurological,10.0,1.07,158.0,Neurological,30.0,17.43,134.0,4356968.9,False,False,24.0
+Diabetes mellitus,Metabolic,30.0,16.55,101.0,Metabolic,30.0,16.7,135.0,78938587.05,False,False,-34.0
+Alopecia areata,Other NCD,20.0,16.22,102.0,Other NCD,20.0,16.44,136.0,571860.27,True,False,-34.0
+Thyroid cancer,Cancer,10.0,5.74,125.0,Cancer,20.0,14.2,137.0,1246484.78,False,False,-12.0
+Attention-deficit hyperactivity disorder,,10.0,11.58,110.0,,10.0,13.91,138.0,,False,True,-28.0
+Motor neuron disease,Neurological,10.0,5.69,126.0,Neurological,20.0,13.63,139.0,1040565.98,False,False,-13.0
+Malignant skin melanoma,Cancer,20.0,12.75,107.0,Cancer,20.0,12.78,140.0,1678836.31,False,False,-33.0
+Other mental disorders,Mental Health,10.0,4.47,135.0,Mental Health,20.0,12.19,141.0,8962343.98,False,False,-6.0
+Other chronic respiratory diseases,Respiratory,10.0,3.36,146.0,Respiratory,20.0,11.64,142.0,2811236.93,False,False,4.0
+Prostate cancer,Cancer,10.0,3.22,149.0,Cancer,20.0,10.84,143.0,8141561.07,False,False,6.0
+Hypertensive heart disease,Cardiovascular,20.0,9.82,112.0,Cardiovascular,20.0,9.96,144.0,25462184.71,False,False,-32.0
+Colon and rectum cancer,Cancer,10.0,2.25,154.0,Cancer,20.0,9.67,145.0,24401100.18,False,False,9.0
+Breast cancer,Cancer,10.0,2.32,152.0,Cancer,20.0,9.64,146.0,20635718.18,False,False,6.0
+Other digestive diseases,Digestive,20.0,8.53,113.0,Digestive,20.0,8.34,147.0,3001821.78,False,False,-34.0
+Other neoplasms,Cancer,10.0,5.78,124.0,Cancer,10.0,6.16,148.0,1215448.67,False,False,-24.0
+Non-melanoma skin cancer,Cancer,10.0,5.31,128.0,Cancer,10.0,5.57,149.0,1212872.38,False,False,-21.0
+Other nutritional deficiencies,Nutritional,10.0,4.98,131.0,Nutritional,10.0,5.29,150.0,1426113.49,False,False,-19.0
+Gout,Musculoskeletal,10.0,4.79,132.0,Musculoskeletal,10.0,5.04,151.0,1747546.24,False,False,-19.0
+Multiple sclerosis,Neurological,10.0,3.86,141.0,Neurological,10.0,4.55,152.0,973298.27,False,False,-11.0
+Uterine cancer,Cancer,10.0,4.23,136.0,Cancer,10.0,4.48,153.0,2562942.98,False,False,-17.0
+Ovarian cancer,Cancer,10.0,3.38,145.0,Cancer,10.0,4.32,154.0,5163256.3,False,False,-9.0
+Rheumatoid arthritis,Musculoskeletal,10.0,2.92,150.0,Musculoskeletal,10.0,3.43,155.0,3075303.17,False,False,-5.0
+Inflammatory bowel disease,Digestive,10.0,2.87,151.0,Digestive,10.0,3.36,156.0,1510783.81,False,False,-5.0
+Other malignant neoplasms,Cancer,10.0,1.99,155.0,Cancer,10.0,2.43,157.0,6454745.91,False,False,-2.0
+Other cardiovascular and circulatory diseases,Cardiovascular,10.0,1.36,156.0,Cardiovascular,10.0,1.57,158.0,9985522.4,False,False,-2.0
+"Endocrine, metabolic, blood, and immune disorders",Other NCD,10.0,0.46,159.0,Other NCD,10.0,0.5,159.0,12862747.88,False,False,0.0
+Tracheal,,30.0,35.72,46.0,,,,,,,True,

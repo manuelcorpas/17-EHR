@@ -1,11 +1,12 @@
 {
-  "title": "Gap Score vs Semantic Isolation",
-  "description": "Correlation between biobank Gap Score and semantic isolation (R\u00b2 = 0.000)",
-  "generated_at": "2026-02-03T10:09:07.291182",
+  "title": "Top 20 Most Semantically Isolated Diseases",
+  "description": "Lollipop chart of diseases with highest SII, colored by gap severity. 18/25 most isolated are Global South priority.",
+  "generated_at": "2026-02-04T10:53:21.141746",
   "parameters": {
-    "r_squared": 7.457643250208909e-05,
-    "p_value": 0.9096945361833764,
-    "n_points": 175
+    "n_gs_top25": 18,
+    "mean_pubs_top25": 185,
+    "mean_pubs_bot25": 2813,
+    "median_sii": 0.0014070111792534
   },
   "file": "fig_gap_vs_isolation.png"
 }

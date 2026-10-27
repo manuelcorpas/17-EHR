@@ -795,18 +795,12 @@ def generate_knowledge_network(
     return True
 
 # WHO NTD list for classification
-WHO_NTDS = [
-    'Lymphatic_filariasis', 'Lymphatic filariasis',
-    'Guinea_worm_disease', 'Guinea worm disease',
-    'Schistosomiasis', 'Onchocerciasis', 'Leishmaniasis',
-    'Chagas_disease', 'Chagas disease',
-    'African_trypanosomiasis', 'African trypanosomiasis',
-    'Dengue', 'Rabies', 'Ascariasis', 'Trichuriasis',
-    'Hookworm_disease', 'Hookworm disease',
-    'Scabies', 'Trachoma', 'Cysticercosis',
-    'Cystic_echinococcosis', 'Cystic echinococcosis',
-    'Yellow_fever', 'Yellow fever',
-    'Foodborne_trematodiases', 'Foodborne trematodiases', 'Leprosy'
+WHO_NTDS = [  # WHO NTD Roadmap 2021-2030 conditions present in the GBD data (Methods, External Validation)
+    'Lymphatic_filariasis', 'Lymphatic filariasis', 'Guinea_worm_disease', 'Guinea worm disease',
+    'Schistosomiasis', 'Onchocerciasis', 'Leishmaniasis', 'Chagas_disease', 'Chagas disease',
+    'African_trypanosomiasis', 'African trypanosomiasis', 'Dengue', 'Rabies', 'Scabies', 'Trachoma',
+    'Cysticercosis', 'Cystic_echinococcosis', 'Cystic echinococcosis',
+    'Food-borne_trematodiases', 'Food-borne trematodiases', 'Leprosy'
 ]
 
 
@@ -839,17 +833,36 @@ CATEGORY_GROUPS = {
     'Cancer': 'Neoplasms',
     'Cardiovascular': 'Cardiovascular',
     'Infectious': 'Infectious',
+    'Neglected': 'Infectious',  # non-WHO-NTD neglected infections (malaria, Ebola, Zika); WHO NTDs regrouped as 'NTDs'
     'Mental Health': 'Mental disorders',
     'Neurological': 'Neurological',
     'Digestive': 'Digestive',
     'Respiratory': 'Respiratory',
     'Musculoskeletal': 'Musculoskeletal',
-    'Injuries': 'Other',
+    'Injuries': 'Injuries',
     'Nutritional': 'Other',
     'Metabolic': 'Other',
     'Maternal/Child': 'Other',
     'Other NCD': 'Other',
 }
+
+# Global South priority diseases (from clinical_trials.json + curated additions)
+
+def _load_gs_set() -> set:
+    """Global South priority conditions from docs/data/diseases.json (globalSouthPriority)."""
+    path = Path(__file__).resolve().parent.parent / "docs" / "data" / "diseases.json"
+    with open(path) as f:
+        return {d['id'].replace('_', ' ').lower().strip() for d in json.load(f)['diseases'] if d.get('globalSouthPriority')}
+
+_GS_SET = None
+
+def is_global_south(disease_name):
+    """Check if a disease is a Global South priority condition."""
+    global _GS_SET
+    if _GS_SET is None:
+        _GS_SET = _load_gs_set()
+    clean = disease_name.replace('_', ' ').lower().strip()
+    return clean in _GS_SET
 
 
 def generate_fig5_combined(
@@ -890,6 +903,7 @@ def generate_fig5_combined(
             'log_papers': np.log10(max(n_papers, 1)),
             'category': cat_group,
             'is_ntd': is_ntd(disease),
+            'is_gs': is_global_south(disease),
         })
 
     df = pd.DataFrame(rows)
@@ -924,12 +938,12 @@ def generate_fig5_combined(
     # Panel labels
     for ax, label in zip([ax_a, ax_b, ax_c, ax_d], ['a', 'b', 'c', 'd']):
         ax.text(-0.08, 1.08, label, transform=ax.transAxes,
-                fontsize=22, fontweight='bold', va='top')
+                fontsize=27, fontweight='bold', va='top')
 
     # =========================================================================
     # Panel A: Semantic Isolation by Disease Category (boxplot)
     # =========================================================================
-    palette_a = {cat: '#E74C3C' if cat == 'NTDs' else '#A0C4E8' for cat in cat_order_a}
+    palette_a = {cat: '#D55E00' if cat == 'NTDs' else '#A0C4E8' for cat in cat_order_a}
 
     box_data = [df_plot_a[df_plot_a['category'] == cat]['sii'].values
                 for cat in cat_order_a]
@@ -937,30 +951,25 @@ def generate_fig5_combined(
     bp = ax_a.boxplot(box_data, positions=range(len(cat_order_a)),
                       widths=0.6, patch_artist=True, showfliers=True,
                       flierprops=dict(marker='o', markersize=3, alpha=0.4),
-                      medianprops=dict(color='darkorange', linewidth=1.5))
+                      medianprops=dict(color='black', linewidth=2.5))
 
     for patch, cat in zip(bp['boxes'], cat_order_a):
         patch.set_facecolor(palette_a[cat])
-        patch.set_alpha(0.7)
+        patch.set_alpha(0.65)
+        patch.set_edgecolor('black')
+        patch.set_linewidth(0.6)
 
     # Add individual points with jitter
     np.random.seed(RANDOM_SEED)
     for i, cat in enumerate(cat_order_a):
         vals = df_plot_a[df_plot_a['category'] == cat]['sii'].values
         x = np.random.normal(i, 0.06, len(vals))
-        color = '#C0392B' if cat == 'NTDs' else '#7BAFD4'
+        color = '#D55E00' if cat == 'NTDs' else '#7BAFD4'
         ax_a.scatter(x, vals, alpha=0.4, s=12, color=color,
                      edgecolors='white', linewidth=0.3, zorder=3)
 
-    # Median reference line
-    overall_median = df['sii'].median()
-    ax_a.axhline(y=overall_median, color='gray', linestyle='--',
-                 linewidth=1, alpha=0.5)
-    ax_a.text(len(cat_order_a) - 0.5, overall_median, 'Median',
-              fontsize=9, color='gray', va='bottom', ha='right')
-
     ax_a.set_xticks(range(len(cat_order_a)))
-    ax_a.set_xticklabels(cat_order_a, rotation=35, ha='right', fontsize=11)
+    ax_a.set_xticklabels(cat_order_a, rotation=35, ha='right', fontsize=16)
     ax_a.set_ylabel('Semantic Isolation Index (SII)')
     ax_a.set_title('Semantic Isolation by Disease Category', fontweight='bold')
     ax_a.spines['top'].set_visible(False)
@@ -969,10 +978,18 @@ def generate_fig5_combined(
     # =========================================================================
     # Panel B: Top 20 Most Semantically Isolated Diseases (bar chart)
     # =========================================================================
-    top20 = df.nlargest(20, 'sii')
+    # Injury and external causes excluded, matching the Unified Score ranking (Fig 5)
+    top20 = df[df['category'] != 'Injuries'].nlargest(20, 'sii')
 
-    colors_b = ['#E74C3C' if ntd else '#A0C4E8'
-                for ntd in top20['is_ntd']]
+    # Three-colour scheme: NTD red, Global South (non-NTD) orange, Other grey
+    def _bar_color(row):
+        if row['is_ntd']:
+            return '#D55E00'
+        elif row['is_gs']:
+            return '#56B4E9'
+        return '#95A5A6'
+
+    colors_b = [_bar_color(row) for _, row in top20.iterrows()]
 
     ax_b.barh(range(len(top20)), top20['sii'].values,
               color=colors_b, edgecolor='white', linewidth=0.3)
@@ -985,26 +1002,29 @@ def generate_fig5_combined(
             labels_b.append(name[:27] + '...')
         else:
             labels_b.append(name)
-    ax_b.set_yticklabels(labels_b, fontsize=10)
+    ax_b.set_yticklabels(labels_b, fontsize=15)
     ax_b.invert_yaxis()
 
     ax_b.set_xlabel('Semantic Isolation Index (SII)')
-    ax_b.set_title('Top 20 Most Semantically Isolated Diseases', fontweight='bold')
+    ax_b.set_title('Top 20 Most Semantically Isolated Diseases\n(injury causes excluded)', fontweight='bold')
 
-    # NTD count annotation
+    # Count NTDs and Global South diseases
     ntd_count = top20['is_ntd'].sum()
-    ax_b.text(0.97, 0.03, f'{ntd_count}/20 are NTDs',
-              transform=ax_b.transAxes, fontsize=12, fontweight='bold',
+    gs_count = (top20['is_ntd'] | top20['is_gs']).sum()
+    ax_b.text(0.97, 0.03, f'{ntd_count}/20 WHO NTDs\n{gs_count}/20 Global South',
+              transform=ax_b.transAxes, fontsize=16, fontweight='bold',
               ha='right', va='bottom',
               bbox=dict(boxstyle='round', facecolor='#FDEBD0', alpha=0.9))
 
     # Legend
     from matplotlib.patches import Patch
-    ax_b.legend(handles=[Patch(facecolor='#E74C3C', label='NTD'),
-                         Patch(facecolor='#A0C4E8', label='Non-NTD')],
-                loc='lower right', fontsize=10, framealpha=0.9,
-                bbox_to_anchor=(0.97, 0.12))
+    ax_b.legend(handles=[Patch(facecolor='#D55E00', label='WHO NTD'),
+                         Patch(facecolor='#56B4E9', label='Global South (non-NTD)'),
+                         Patch(facecolor='#95A5A6', label='Other')],
+                loc='lower right', fontsize=14, framealpha=0.9,
+                bbox_to_anchor=(0.97, 0.17))
 
+    ax_b.set_xlim(0, top20['sii'].max() * 1.6)  # room for legend and counts beside the bars
     ax_b.spines['top'].set_visible(False)
     ax_b.spines['right'].set_visible(False)
 
@@ -1012,12 +1032,17 @@ def generate_fig5_combined(
     # Panel C: Semantic Isolation vs Research Volume (scatter)
     # =========================================================================
     ntd_mask = df['is_ntd']
+    gs_mask = df['is_gs'] & ~df['is_ntd']
+    other_mask = ~df['is_ntd'] & ~df['is_gs']
 
-    ax_c.scatter(df.loc[~ntd_mask, 'log_papers'], df.loc[~ntd_mask, 'sii'],
+    ax_c.scatter(df.loc[other_mask, 'log_papers'], df.loc[other_mask, 'sii'],
                  alpha=0.4, s=30, color='#B0BEC5', edgecolors='white',
                  linewidth=0.3, label='Other', zorder=2)
+    ax_c.scatter(df.loc[gs_mask, 'log_papers'], df.loc[gs_mask, 'sii'],
+                 alpha=0.7, s=40, color='#56B4E9', edgecolors='white',
+                 linewidth=0.4, label='Global South', zorder=2.5)
     ax_c.scatter(df.loc[ntd_mask, 'log_papers'], df.loc[ntd_mask, 'sii'],
-                 alpha=0.8, s=50, color='#E74C3C', edgecolors='white',
+                 alpha=0.8, s=50, color='#D55E00', edgecolors='white',
                  linewidth=0.5, label='NTD', zorder=3)
 
     # Regression line (all diseases)
@@ -1029,7 +1054,7 @@ def generate_fig5_combined(
 
     # Correlation annotation
     ax_c.text(0.03, 0.97, f'r = {r_value:.2f}\nP < 0.001',
-              transform=ax_c.transAxes, fontsize=12, va='top',
+              transform=ax_c.transAxes, fontsize=17, va='top',
               bbox=dict(boxstyle='round', facecolor='white', alpha=0.8))
 
     # Label notable NTDs
@@ -1041,14 +1066,14 @@ def generate_fig5_combined(
         ax_c.annotate(label,
                       xy=(row['log_papers'], row['sii']),
                       xytext=(8, 4), textcoords='offset points',
-                      fontsize=9, color='#C0392B', fontweight='bold',
+                      fontsize=14, color='#D55E00', fontweight='bold',
                       arrowprops=dict(arrowstyle='-', color='gray',
                                       alpha=0.4, lw=0.5))
 
     ax_c.set_xlabel('Publication Count (log$_{10}$)')
     ax_c.set_ylabel('Semantic Isolation Index (SII)')
     ax_c.set_title('Semantic Isolation vs Research Volume', fontweight='bold')
-    ax_c.legend(loc='upper right', fontsize=10, framealpha=0.9)
+    ax_c.legend(loc='upper right', fontsize=15, framealpha=0.9)
     ax_c.spines['top'].set_visible(False)
     ax_c.spines['right'].set_visible(False)
 
@@ -1063,15 +1088,17 @@ def generate_fig5_combined(
     cohens_d = (np.mean(ntd_sii) - np.mean(non_ntd_sii)) / pooled_std
     pct_diff = ((np.mean(ntd_sii) - np.mean(non_ntd_sii)) / np.mean(non_ntd_sii)) * 100
 
-    colors_d = ['#E74C3C', '#3498DB']
+    colors_d = ['#D55E00', '#3498DB']
     bp_d = ax_d.boxplot([ntd_sii, non_ntd_sii], positions=[1, 2], widths=0.6,
                         patch_artist=True, showfliers=True,
                         flierprops=dict(marker='o', markersize=3, alpha=0.4),
-                        medianprops=dict(color='darkorange', linewidth=1.5))
+                        medianprops=dict(color='black', linewidth=2.5))
 
     for patch, color in zip(bp_d['boxes'], colors_d):
         patch.set_facecolor(color)
-        patch.set_alpha(0.7)
+        patch.set_alpha(0.65)
+        patch.set_edgecolor('black')
+        patch.set_linewidth(0.6)
 
     # Individual points
     np.random.seed(RANDOM_SEED + 1)
@@ -1089,7 +1116,7 @@ def generate_fig5_combined(
 
     sig_text = '***' if p_val < 0.001 else '**' if p_val < 0.01 else '*' if p_val < 0.05 else 'ns'
     ax_d.text(1.5, bracket_y * 1.04, sig_text, ha='center', va='bottom',
-              fontsize=14, fontweight='bold')
+              fontsize=19, fontweight='bold')
 
     # Extra top margin so title doesn't clip the bracket
     ax_d.set_ylim(top=y_max * 1.22)
@@ -1103,7 +1130,7 @@ def generate_fig5_combined(
     # Stats box
     stats_text = f'+{pct_diff:.0f}% higher\nP < 0.0001\nd = {cohens_d:.2f}'
     ax_d.text(0.97, 0.97, stats_text, transform=ax_d.transAxes,
-              fontsize=12, va='top', ha='right',
+              fontsize=17, va='top', ha='right',
               bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5))
 
     ax_d.spines['top'].set_visible(False)
@@ -1113,8 +1140,7 @@ def generate_fig5_combined(
     # =========================================================================
     # Suptitle and save
     # =========================================================================
-    fig.suptitle('Figure 5. Semantic Structure of Disease Research Literature',
-                 fontsize=20, fontweight='bold', y=0.97)
+    # Composite heading removed 2026-10-25: these panels are placed as Fig 4b-e; the journal sets figure labels
 
     fig_path = output_dir / "05_Fig5_Semantic_Structure_Analysis.pdf"
     plt.savefig(fig_path, dpi=300, bbox_inches='tight',

@@ -1,0 +1,31 @@
+{
+  "generated": "2026-02-04T03:55:32.137369",
+  "n_diseases_2d": 175,
+  "n_diseases_3d": 86,
+  "correlations": {
+    "Discovery (Gap Score) vs Knowledge (SII)": {
+      "pearson_r": 0.2801674011364596,
+      "pearson_p": 0.008983167050755756,
+      "spearman_r": 0.26044698791766774,
+      "spearman_p": 0.015439655938092994,
+      "n": 86
+    },
+    "Discovery (Gap Score) vs Translation (Trial Neglect)": {
+      "pearson_r": 0.4545215599969025,
+      "pearson_p": 1.1021135225156065e-05,
+      "spearman_r": 0.6975090198761629,
+      "spearman_p": 8.54690137982553e-14,
+      "n": 86
+    },
+    "Knowledge (SII) vs Translation (Trial Neglect)": {
+      "pearson_r": 0.12412783417504339,
+      "pearson_p": 0.25483663685558516,
+      "spearman_r": 0.23920939666965424,
+      "spearman_p": 0.02654218160288985,
+      "n": 86
+    }
+  },
+  "shared_variance_discovery_knowledge_pct": 7.849377265955787,
+  "unique_variance_pct": 92.15062273404422,
+  "key_finding": "Discovery and Knowledge dimensions share only 7.8% variance (r = 0.28), meaning 92.2% of the information in each dimension is unique \u2014 confirming that the multi-dimensional approach captures patterns invisible to any single metric."
+}

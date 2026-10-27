@@ -1,0 +1,46 @@
+CONTROL gap: 172/175 matched, 3 mismatches vs stored gap: [{'disease': 'Leprosy', 'gap': 40.0, 'gap_recalc': 30.0, 'pubs': 1.0, 'category': 'Other NCD', 'gsp': True}, {'disease': 'Ebola', 'gap': 20.0, 'gap_recalc': 50.0, 'pubs': 18.0, 'category': 'Other NCD', 'gsp': True}, {'disease': 'Zika_virus', 'gap': 20.0, 'gap_recalc': 70.0, 'pubs': 2.0, 'category': 'Other NCD', 'gsp': True}]
+CONTROL unified: weights [0.501 0.293 0.206], max abs diff vs stored 1.42e-14
+CONTROL unexplained gap mismatches: []; unmatched: ['Attention-deficit_hyperactivity_disorder', 'HIV_AIDS', 'Tracheal']
+
+A1: 82 complete-case non-injury diseases (86 incl. injuries with all dims); baseline top10 members with 3 dims: 4/10
+A1 complete-case top 10 (3-dim scores unchanged; ranking among complete cases):
+  1. Malaria 87.2 (full-rank 2)
+  2. Lymphatic_filariasis 74.0 (full-rank 5)
+  3. Schistosomiasis 71.8 (full-rank 9)
+  4. Onchocerciasis 71.6 (full-rank 10)
+  5. Tuberculosis 68.9 (full-rank 11)
+  6. Typhoid_and_paratyphoid 68.6 (full-rank 13)
+  7. Dengue 64.7 (full-rank 17)
+  8. Meningitis 57.3 (full-rank 21)
+  9. Leishmaniasis 53.9 (full-rank 23)
+  10. COVID-19 53.9 (full-rank 24)
+A1b mean unified: 2-dim 29.0 (n=77), 3-dim 26.4
+A1c on the 86-type set, D+K fallback vs full 3-dim score: rho=0.9843, top10 overlap=8/10
+
+A2: penalty changes the Gap Score of 27 diseases
+A2 re-derived PCA weights without penalty: [0.483 0.304 0.213]
+
+## A2 no penalty, baseline weights
+n=159  Spearman rho vs baseline=0.9959  top10 overlap=8/10
+  dropped from top10: ['Invasive_Non-typhoidal_Salmonella_(iNTS)', 'Iodine_deficiency']
+  entered top10: ['Fungal_skin_diseases', 'Viral_skin_diseases']
+
+## A2 no penalty, re-derived PCA weights
+n=159  Spearman rho vs baseline=0.9958  top10 overlap=8/10
+  dropped from top10: ['Encephalitis', 'Invasive_Non-typhoidal_Salmonella_(iNTS)']
+  entered top10: ['Fungal_skin_diseases', 'Viral_skin_diseases']
+
+A4 rank of well-studied conditions (of 159; 1 = most neglected):
+  Ischemic_heart_disease: rank 49 (score 33.9, dims=3)
+  HIV_AIDS: rank 53 (score 33.4, dims=3)
+  Stroke: rank 73 (score 26.6, dims=3)
+  Depressive_disorders: rank 74 (score 26.0, dims=3)
+  Asthma: rank 78 (score 24.4, dims=3)
+  Sexually_transmitted_infections_excluding_HIV: rank 88 (score 22.6, dims=3)
+  Alzheimer's_disease_and_other_dementias: rank 95 (score 20.0, dims=3)
+  Diabetes_mellitus: rank 101 (score 16.6, dims=3)
+  Tracheal,_bronchus,_and_lung_cancer: rank 104 (score 14.8, dims=3)
+  Prostate_cancer: rank 149 (score 3.2, dims=3)
+  Breast_cancer: rank 152 (score 2.3, dims=3)
+  Colon_and_rectum_cancer: rank 154 (score 2.2, dims=3)
+A4 GS-priority among top 20: 17/20; among bottom 20: 3/20

@@ -123,7 +123,20 @@ GBD_LEVEL2_TO_CATEGORY = {
     "Transport injuries": "Injuries",
     "Unintentional injuries": "Injuries",
     "Self-harm and interpersonal violence": "Injuries",
+    # Labels as written in DATA/gbd_disease_registry.json (added 2026-10-25; previously fell
+    # through to "Other NCD", which put all NTDs, malaria and nine infections on NCD thresholds)
+    "Other infectious": "Infectious",
+    "Self-harm and violence": "Injuries",
+    # Non-disease methodology pseudo-entries (_GENOMICS etc.); behaviour unchanged
+    "Research methodology": "Other NCD",
 }
+
+_GBD_LEVEL2_LOOKUP = {k.lower(): v for k, v in GBD_LEVEL2_TO_CATEGORY.items()}
+
+
+def map_gbd_category(gbd_level2: str) -> str:
+    """Map a GBD Level 2 label to a gap-scoring category. Case-insensitive; unknown labels raise."""
+    return _GBD_LEVEL2_LOOKUP[str(gbd_level2).strip().lower()]
 
 # Categories requiring stricter gap thresholds (from original methodology)
 INFECTIOUS_CATEGORIES = {"Infectious", "Neglected"}
@@ -152,6 +165,7 @@ GLOBAL_SOUTH_COUNTRIES = {
 
 # GBD Level 2 categories that are Global South priorities
 GLOBAL_SOUTH_GBD_CATEGORIES = {
+    "Other infectious",  # registry spelling (2026-10-25); the long form below is kept for older registries
     "HIV/AIDS and sexually transmitted infections",
     "HIV/AIDS and STIs",
     "Respiratory infections and tuberculosis",
@@ -717,7 +731,7 @@ def compute_all_disease_metrics(df: pd.DataFrame,
         gbd_level2 = disease_data.get('gbd_level2', 'Unknown')
         
         # Map gbd_level2 to simplified category for gap scoring
-        category = GBD_LEVEL2_TO_CATEGORY.get(gbd_level2, "Other NCD")
+        category = map_gbd_category(gbd_level2)
         
         # Determine Global South priority
         global_south = disease_data.get('global_south_priority', False)

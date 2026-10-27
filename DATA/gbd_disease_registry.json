@@ -4,77 +4,77 @@
     "gbd_level2": "HIV/AIDS and STIs",
     "global_south_priority": true,
     "dalys": 40266791.7452044,
-    "publications": 157
+    "publications": 97
   },
   "Sexually transmitted infections excluding HIV": {
     "name": "Sexually transmitted infections excluding HIV",
     "gbd_level2": "HIV/AIDS and STIs",
     "global_south_priority": true,
     "dalys": 7953311.087690656,
-    "publications": 101
+    "publications": 21
   },
   "Lower respiratory infections": {
     "name": "Lower respiratory infections",
     "gbd_level2": "Respiratory infections",
     "global_south_priority": true,
     "dalys": 82534840.53909253,
-    "publications": 167
+    "publications": 137
   },
   "Upper respiratory infections": {
     "name": "Upper respiratory infections",
     "gbd_level2": "Respiratory infections",
     "global_south_priority": false,
     "dalys": 5678886.772827445,
-    "publications": 63
+    "publications": 62
   },
   "Otitis media": {
     "name": "Otitis media",
     "gbd_level2": "Respiratory infections",
     "global_south_priority": false,
     "dalys": 2479622.897227385,
-    "publications": 31
+    "publications": 14
   },
   "COVID-19": {
     "name": "COVID-19",
     "gbd_level2": "Respiratory infections",
     "global_south_priority": true,
     "dalys": 212009595.96699756,
-    "publications": 553
+    "publications": 507
   },
   "Tuberculosis": {
     "name": "Tuberculosis",
     "gbd_level2": "Respiratory infections",
     "global_south_priority": true,
     "dalys": 46977462.561743826,
-    "publications": 42
+    "publications": 41
   },
   "Diarrheal diseases": {
     "name": "Diarrheal diseases",
     "gbd_level2": "Enteric infections",
     "global_south_priority": true,
     "dalys": 58983816.792969696,
-    "publications": 46
+    "publications": 28
   },
   "Typhoid and paratyphoid": {
     "name": "Typhoid and paratyphoid",
     "gbd_level2": "Enteric infections",
     "global_south_priority": true,
     "dalys": 8099574.463723717,
-    "publications": 21
+    "publications": 0
   },
   "Invasive Non-typhoidal Salmonella (iNTS)": {
     "name": "Invasive Non-typhoidal Salmonella (iNTS)",
     "gbd_level2": "Enteric infections",
     "global_south_priority": true,
     "dalys": 4740234.700806706,
-    "publications": 31
+    "publications": 9
   },
   "Other intestinal infectious diseases": {
     "name": "Other intestinal infectious diseases",
     "gbd_level2": "Enteric infections",
     "global_south_priority": true,
     "dalys": 105381.67496445322,
-    "publications": 107
+    "publications": 3
   },
   "Malaria": {
     "name": "Malaria",
@@ -95,21 +95,21 @@
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 317791.9486190491,
-    "publications": 21
+    "publications": 0
   },
   "Rabies": {
     "name": "Rabies",
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 569550.281705966,
-    "publications": 3
+    "publications": 0
   },
   "Intestinal nematode infections": {
     "name": "Intestinal nematode infections",
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 1381640.9735708872,
-    "publications": 17
+    "publications": 0
   },
   "Schistosomiasis": {
     "name": "Schistosomiasis",
@@ -123,7 +123,7 @@
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 781187.607463255,
-    "publications": 1
+    "publications": 0
   },
   "Lymphatic filariasis": {
     "name": "Lymphatic filariasis",
@@ -137,28 +137,28 @@
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 1262988.1254184735,
-    "publications": 9
+    "publications": 0
   },
   "Trachoma": {
     "name": "Trachoma",
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 123190.23740696211,
-    "publications": 13
+    "publications": 0
   },
   "Chagas disease": {
     "name": "Chagas disease",
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 238589.28521429855,
-    "publications": 50
+    "publications": 2
   },
   "African trypanosomiasis": {
     "name": "African trypanosomiasis",
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 61962.48267660358,
-    "publications": 560
+    "publications": 0
   },
   "Cysticercosis": {
     "name": "Cysticercosis",
@@ -179,28 +179,28 @@
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 21427.508513152632,
-    "publications": 1
+    "publications": 0
   },
   "Food-borne trematodiases": {
     "name": "Food-borne trematodiases",
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 998028.5173432152,
-    "publications": 162
+    "publications": 0
   },
   "Other neglected tropical diseases": {
     "name": "Other neglected tropical diseases",
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 4218302.247168106,
-    "publications": 57
+    "publications": 0
   },
   "Ebola": {
     "name": "Ebola",
     "gbd_level2": "NTDs and Malaria",
     "global_south_priority": true,
     "dalys": 2602.330849425826,
-    "publications": 18
+    "publications": 0
   },
   "Zika virus": {
     "name": "Zika virus",
@@ -221,49 +221,49 @@
     "gbd_level2": "Other infectious",
     "global_south_priority": true,
     "dalys": 14511046.482412158,
-    "publications": 29
+    "publications": 1
   },
   "Encephalitis": {
     "name": "Encephalitis",
     "gbd_level2": "Other infectious",
     "global_south_priority": true,
     "dalys": 4952818.577897604,
-    "publications": 4
+    "publications": 3
   },
   "Acute hepatitis": {
     "name": "Acute hepatitis",
     "gbd_level2": "Other infectious",
     "global_south_priority": true,
     "dalys": 4228048.1290571205,
-    "publications": 73
+    "publications": 66
   },
   "Measles": {
     "name": "Measles",
     "gbd_level2": "Other infectious",
     "global_south_priority": true,
     "dalys": 4878526.633494856,
-    "publications": 18
+    "publications": 9
   },
   "Tetanus": {
     "name": "Tetanus",
     "gbd_level2": "Other infectious",
     "global_south_priority": true,
     "dalys": 1341513.3705532718,
-    "publications": 11
+    "publications": 1
   },
   "Pertussis": {
     "name": "Pertussis",
     "gbd_level2": "Other infectious",
     "global_south_priority": true,
     "dalys": 4614086.055527066,
-    "publications": 21
+    "publications": 5
   },
   "Diphtheria": {
     "name": "Diphtheria",
     "gbd_level2": "Other infectious",
     "global_south_priority": true,
     "dalys": 318203.8241430244,
-    "publications": 10
+    "publications": 1
   },
   "Varicella and herpes zoster": {
     "name": "Varicella and herpes zoster",
@@ -277,175 +277,175 @@
     "gbd_level2": "Other infectious",
     "global_south_priority": false,
     "dalys": 5851960.763236187,
-    "publications": 582
+    "publications": 111
   },
   "Maternal disorders": {
     "name": "Maternal disorders",
     "gbd_level2": "Maternal disorders",
     "global_south_priority": true,
     "dalys": 12314021.231347067,
-    "publications": 3235
+    "publications": 473
   },
   "Neonatal disorders": {
     "name": "Neonatal disorders",
     "gbd_level2": "Neonatal disorders",
     "global_south_priority": true,
     "dalys": 186366011.77438888,
-    "publications": 1599
+    "publications": 228
   },
   "Protein-energy malnutrition": {
     "name": "Protein-energy malnutrition",
     "gbd_level2": "Nutritional deficiencies",
     "global_south_priority": true,
     "dalys": 11826130.803078312,
-    "publications": 57
+    "publications": 31
   },
   "Dietary iron deficiency": {
     "name": "Dietary iron deficiency",
     "gbd_level2": "Nutritional deficiencies",
     "global_south_priority": true,
     "dalys": 32315750.897590935,
-    "publications": 138
+    "publications": 17
   },
   "Iodine deficiency": {
     "name": "Iodine deficiency",
     "gbd_level2": "Nutritional deficiencies",
     "global_south_priority": true,
     "dalys": 2246334.372497986,
-    "publications": 28
+    "publications": 0
   },
   "Vitamin A deficiency": {
     "name": "Vitamin A deficiency",
     "gbd_level2": "Nutritional deficiencies",
     "global_south_priority": true,
     "dalys": 1104931.4906998908,
-    "publications": 85
+    "publications": 3
   },
   "Other nutritional deficiencies": {
     "name": "Other nutritional deficiencies",
     "gbd_level2": "Nutritional deficiencies",
     "global_south_priority": true,
     "dalys": 1426113.4944669786,
-    "publications": 662
+    "publications": 158
   },
   "Breast cancer": {
     "name": "Breast cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 20635718.17792674,
-    "publications": 3085
+    "publications": 1791
   },
   "Cervical cancer": {
     "name": "Cervical cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": true,
     "dalys": 9911653.091017734,
-    "publications": 1350
+    "publications": 49
   },
   "Uterine cancer": {
     "name": "Uterine cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 2562942.9808763117,
-    "publications": 1544
+    "publications": 278
   },
   "Ovarian cancer": {
     "name": "Ovarian cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 5163256.304643558,
-    "publications": 1777
+    "publications": 531
   },
   "Prostate cancer": {
     "name": "Prostate cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 8141561.072273841,
-    "publications": 1895
+    "publications": 642
   },
   "Testicular cancer": {
     "name": "Testicular cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 560921.4615696082,
-    "publications": 1283
+    "publications": 10
   },
   "Colon and rectum cancer": {
     "name": "Colon and rectum cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 24401100.179965258,
-    "publications": 2431
+    "publications": 1207
   },
   "Lip and oral cavity cancer": {
     "name": "Lip and oral cavity cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 5874069.625403691,
-    "publications": 1293
+    "publications": 10
   },
   "Nasopharynx cancer": {
     "name": "Nasopharynx cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 2490191.448386309,
-    "publications": 1331
+    "publications": 5
   },
   "Other pharynx cancer": {
     "name": "Other pharynx cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 2843780.8510169946,
-    "publications": 1294
+    "publications": 16
   },
   "Esophageal cancer": {
     "name": "Esophageal cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 12999264.904907202,
-    "publications": 1377
+    "publications": 104
   },
   "Stomach cancer": {
     "name": "Stomach cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 22786633.095688548,
-    "publications": 1435
+    "publications": 166
   },
   "Liver cancer": {
     "name": "Liver cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 12887652.414924735,
-    "publications": 1649
+    "publications": 207
   },
   "Gallbladder and biliary tract cancer": {
     "name": "Gallbladder and biliary tract cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 3732121.315072251,
-    "publications": 1306
+    "publications": 31
   },
   "Pancreatic cancer": {
     "name": "Pancreatic cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 11316963.350583198,
-    "publications": 1509
+    "publications": 242
   },
   "Larynx cancer": {
     "name": "Larynx cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 3143308.765139411,
-    "publications": 1280
+    "publications": 7
   },
   "Tracheal, bronchus, and lung cancer": {
     "name": "Tracheal, bronchus, and lung cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 46536272.12165932,
-    "publications": 2093
+    "publications": 678
   },
   "Malignant skin melanoma": {
     "name": "Malignant skin melanoma",
@@ -459,154 +459,154 @@
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 1212872.3836802046,
-    "publications": 1561
+    "publications": 227
   },
   "Kidney cancer": {
     "name": "Kidney cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 4016362.117183706,
-    "publications": 1591
+    "publications": 118
   },
   "Bladder cancer": {
     "name": "Bladder cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 4397066.632743376,
-    "publications": 1368
+    "publications": 96
   },
   "Brain and central nervous system cancer": {
     "name": "Brain and central nervous system cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 8912595.213850375,
-    "publications": 2131
+    "publications": 77
   },
   "Thyroid cancer": {
     "name": "Thyroid cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 1246484.7780890486,
-    "publications": 1341
+    "publications": 74
   },
   "Mesothelioma": {
     "name": "Mesothelioma",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 689358.8282873848,
-    "publications": 1277
+    "publications": 3
   },
   "Hodgkin lymphoma": {
     "name": "Hodgkin lymphoma",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 1196188.224062072,
-    "publications": 84
+    "publications": 9
   },
   "Non-Hodgkin lymphoma": {
     "name": "Non-Hodgkin lymphoma",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 7766063.220113368,
-    "publications": 120
+    "publications": 98
   },
   "Multiple myeloma": {
     "name": "Multiple myeloma",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 2595594.988860918,
-    "publications": 1342
+    "publications": 44
   },
   "Leukemia": {
     "name": "Leukemia",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 10982836.18560453,
-    "publications": 75
+    "publications": 63
   },
   "Other neoplasms": {
     "name": "Other neoplasms",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 1215448.6701364976,
-    "publications": 6925
+    "publications": 1382
   },
   "Other malignant neoplasms": {
     "name": "Other malignant neoplasms",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 6454745.913878909,
-    "publications": 1462
+    "publications": 646
   },
   "Malignant neoplasm of bone and articular cartilage": {
     "name": "Malignant neoplasm of bone and articular cartilage",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 2525827.79628869,
-    "publications": 1283
+    "publications": 7
   },
   "Soft tissue and other extraosseous sarcomas": {
     "name": "Soft tissue and other extraosseous sarcomas",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 1677891.905736146,
-    "publications": 1282
+    "publications": 5
   },
   "Eye cancer": {
     "name": "Eye cancer",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 468748.4871560018,
-    "publications": 1275
+    "publications": 1
   },
   "Neuroblastoma and other peripheral nervous cell tumors": {
     "name": "Neuroblastoma and other peripheral nervous cell tumors",
     "gbd_level2": "Neoplasms",
     "global_south_priority": false,
     "dalys": 285478.6136708956,
-    "publications": 1282
+    "publications": 4
   },
   "Ischemic heart disease": {
     "name": "Ischemic heart disease",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
     "dalys": 188360557.3226801,
-    "publications": 2090
+    "publications": 1918
   },
   "Stroke": {
     "name": "Stroke",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
     "dalys": 160457220.63007683,
-    "publications": 1869
+    "publications": 948
   },
   "Hypertensive heart disease": {
     "name": "Hypertensive heart disease",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
     "dalys": 25462184.707367495,
-    "publications": 1492
+    "publications": 1439
   },
   "Rheumatic heart disease": {
     "name": "Rheumatic heart disease",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": true,
     "dalys": 13426369.18219696,
-    "publications": 151
+    "publications": 4
   },
   "Cardiomyopathy and myocarditis": {
     "name": "Cardiomyopathy and myocarditis",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
     "dalys": 11653957.527670862,
-    "publications": 74
+    "publications": 68
   },
   "Atrial fibrillation and flutter": {
     "name": "Atrial fibrillation and flutter",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
     "dalys": 8358893.711971431,
-    "publications": 340
+    "publications": 328
   },
   "Aortic aneurysm": {
     "name": "Aortic aneurysm",
@@ -620,91 +620,91 @@
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
     "dalys": 1558242.6857373822,
-    "publications": 143
+    "publications": 61
   },
   "Endocarditis": {
     "name": "Endocarditis",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
     "dalys": 2076412.89062605,
-    "publications": 174
+    "publications": 17
   },
   "Non-rheumatic valvular heart disease": {
     "name": "Non-rheumatic valvular heart disease",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
     "dalys": 3238184.620265596,
-    "publications": 191
+    "publications": 56
   },
   "Other cardiovascular and circulatory diseases": {
     "name": "Other cardiovascular and circulatory diseases",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
     "dalys": 9985522.400504963,
-    "publications": 3137
+    "publications": 2985
   },
   "Pulmonary Arterial Hypertension": {
     "name": "Pulmonary Arterial Hypertension",
     "gbd_level2": "Cardiovascular diseases",
     "global_south_priority": false,
     "dalys": 642104.2886512369,
-    "publications": 1023
+    "publications": 8
   },
   "Chronic obstructive pulmonary disease": {
     "name": "Chronic obstructive pulmonary disease",
     "gbd_level2": "Chronic respiratory diseases",
     "global_south_priority": false,
     "dalys": 79779695.05315077,
-    "publications": 329
+    "publications": 274
   },
   "Asthma": {
     "name": "Asthma",
     "gbd_level2": "Chronic respiratory diseases",
     "global_south_priority": false,
     "dalys": 21422859.890543565,
-    "publications": 364
+    "publications": 361
   },
   "Interstitial lung disease and pulmonary sarcoidosis": {
     "name": "Interstitial lung disease and pulmonary sarcoidosis",
     "gbd_level2": "Chronic respiratory diseases",
     "global_south_priority": false,
     "dalys": 4042150.4889248433,
-    "publications": 316
+    "publications": 10
   },
   "Pneumoconiosis": {
     "name": "Pneumoconiosis",
     "gbd_level2": "Chronic respiratory diseases",
     "global_south_priority": false,
     "dalys": 447064.5224412201,
-    "publications": 4
+    "publications": 3
   },
   "Other chronic respiratory diseases": {
     "name": "Other chronic respiratory diseases",
     "gbd_level2": "Chronic respiratory diseases",
     "global_south_priority": false,
     "dalys": 2811236.9270185316,
-    "publications": 959
+    "publications": 151
   },
   "Cirrhosis and other chronic liver diseases": {
     "name": "Cirrhosis and other chronic liver diseases",
     "gbd_level2": "Digestive diseases",
     "global_south_priority": false,
     "dalys": 46417777.1594818,
-    "publications": 586
+    "publications": 464
   },
   "Upper digestive system diseases": {
     "name": "Upper digestive system diseases",
     "gbd_level2": "Digestive diseases",
     "global_south_priority": false,
     "dalys": 15206382.808753757,
-    "publications": 149
+    "publications": 144
   },
   "Inflammatory bowel disease": {
     "name": "Inflammatory bowel disease",
     "gbd_level2": "Digestive diseases",
     "global_south_priority": false,
     "dalys": 1510783.814759216,
-    "publications": 294
+    "publications": 240
   },
   "Paralytic ileus and intestinal obstruction": {
     "name": "Paralytic ileus and intestinal obstruction",
@@ -718,14 +718,14 @@
     "gbd_level2": "Digestive diseases",
     "global_south_priority": false,
     "dalys": 7734159.29912451,
-    "publications": 146
+    "publications": 95
   },
   "Pancreatitis": {
     "name": "Pancreatitis",
     "gbd_level2": "Digestive diseases",
     "global_south_priority": false,
     "dalys": 4101153.965670044,
-    "publications": 41
+    "publications": 39
   },
   "Appendicitis": {
     "name": "Appendicitis",
@@ -739,7 +739,7 @@
     "gbd_level2": "Digestive diseases",
     "global_south_priority": false,
     "dalys": 1708446.8392166472,
-    "publications": 19
+    "publications": 6
   },
   "Inguinal, femoral, and abdominal hernia": {
     "name": "Inguinal, femoral, and abdominal hernia",
@@ -753,133 +753,133 @@
     "gbd_level2": "Digestive diseases",
     "global_south_priority": false,
     "dalys": 3001821.7809071476,
-    "publications": 235
+    "publications": 157
   },
   "Alzheimer's disease and other dementias": {
     "name": "Alzheimer's disease and other dementias",
     "gbd_level2": "Neurological disorders",
     "global_south_priority": false,
     "dalys": 36332686.73680246,
-    "publications": 1181
+    "publications": 1125
   },
   "Parkinson's disease": {
     "name": "Parkinson's disease",
     "gbd_level2": "Neurological disorders",
     "global_south_priority": false,
     "dalys": 7471821.424322477,
-    "publications": 285
+    "publications": 237
   },
   "Idiopathic epilepsy": {
     "name": "Idiopathic epilepsy",
     "gbd_level2": "Neurological disorders",
     "global_south_priority": false,
     "dalys": 13877827.484414238,
-    "publications": 101
+    "publications": 100
   },
   "Multiple sclerosis": {
     "name": "Multiple sclerosis",
     "gbd_level2": "Neurological disorders",
     "global_south_priority": false,
     "dalys": 973298.2653784076,
-    "publications": 168
+    "publications": 119
   },
   "Motor neuron disease": {
     "name": "Motor neuron disease",
     "gbd_level2": "Neurological disorders",
     "global_south_priority": false,
     "dalys": 1040565.9783974624,
-    "publications": 113
+    "publications": 65
   },
   "Headache disorders": {
     "name": "Headache disorders",
     "gbd_level2": "Neurological disorders",
     "global_south_priority": false,
     "dalys": 47975675.06486085,
-    "publications": 182
+    "publications": 160
   },
   "Other neurological disorders": {
     "name": "Other neurological disorders",
     "gbd_level2": "Neurological disorders",
     "global_south_priority": false,
     "dalys": 4356968.89619153,
-    "publications": 970
+    "publications": 141
   },
   "Depressive disorders": {
     "name": "Depressive disorders",
     "gbd_level2": "Mental disorders",
     "global_south_priority": false,
     "dalys": 56330361.14911696,
-    "publications": 1293
+    "publications": 1290
   },
   "Anxiety disorders": {
     "name": "Anxiety disorders",
     "gbd_level2": "Mental disorders",
     "global_south_priority": false,
     "dalys": 42509645.27941539,
-    "publications": 475
+    "publications": 466
   },
   "Bipolar disorder": {
     "name": "Bipolar disorder",
     "gbd_level2": "Mental disorders",
     "global_south_priority": false,
     "dalys": 8007783.132923044,
-    "publications": 121
+    "publications": 119
   },
   "Schizophrenia": {
     "name": "Schizophrenia",
     "gbd_level2": "Mental disorders",
     "global_south_priority": false,
     "dalys": 14816611.183696533,
-    "publications": 211
+    "publications": 210
   },
   "Eating disorders": {
     "name": "Eating disorders",
     "gbd_level2": "Mental disorders",
     "global_south_priority": false,
     "dalys": 3403145.791933371,
-    "publications": 264
+    "publications": 35
   },
   "Autism spectrum disorders": {
     "name": "Autism spectrum disorders",
     "gbd_level2": "Mental disorders",
     "global_south_priority": false,
     "dalys": 11544038.080669444,
-    "publications": 134
+    "publications": 108
   },
   "Attention-deficit/hyperactivity disorder": {
     "name": "Attention-deficit/hyperactivity disorder",
     "gbd_level2": "Mental disorders",
     "global_south_priority": false,
     "dalys": 1030941.3513749616,
-    "publications": 152
+    "publications": 128
   },
   "Conduct disorder": {
     "name": "Conduct disorder",
     "gbd_level2": "Mental disorders",
     "global_south_priority": false,
     "dalys": 5002614.360377089,
-    "publications": 1424
+    "publications": 61
   },
   "Idiopathic developmental intellectual disability": {
     "name": "Idiopathic developmental intellectual disability",
     "gbd_level2": "Mental disorders",
     "global_south_priority": false,
     "dalys": 3810634.655527162,
-    "publications": 58
+    "publications": 51
   },
   "Other mental disorders": {
     "name": "Other mental disorders",
     "gbd_level2": "Mental disorders",
     "global_south_priority": false,
     "dalys": 8962343.979627114,
-    "publications": 1333
+    "publications": 747
   },
   "Alcohol use disorders": {
     "name": "Alcohol use disorders",
     "gbd_level2": "Substance use disorders",
     "global_south_priority": false,
     "dalys": 16980984.234290704,
-    "publications": 974
+    "publications": 955
   },
   "Drug use disorders": {
     "name": "Drug use disorders",
@@ -893,21 +893,21 @@
     "gbd_level2": "Diabetes and kidney diseases",
     "global_south_priority": false,
     "dalys": 78938587.05039968,
-    "publications": 3255
+    "publications": 3045
   },
   "Chronic kidney disease": {
     "name": "Chronic kidney disease",
     "gbd_level2": "Diabetes and kidney diseases",
     "global_south_priority": false,
     "dalys": 44453683.61051758,
-    "publications": 686
+    "publications": 567
   },
   "Acute glomerulonephritis": {
     "name": "Acute glomerulonephritis",
     "gbd_level2": "Diabetes and kidney diseases",
     "global_south_priority": false,
     "dalys": 312303.17065783445,
-    "publications": 19
+    "publications": 18
   },
   "Dermatitis": {
     "name": "Dermatitis",
@@ -921,7 +921,7 @@
     "gbd_level2": "Skin and subcutaneous diseases",
     "global_south_priority": false,
     "dalys": 3689928.256191686,
-    "publications": 144
+    "publications": 133
   },
   "Scabies": {
     "name": "Scabies",
@@ -935,7 +935,7 @@
     "gbd_level2": "Skin and subcutaneous diseases",
     "global_south_priority": false,
     "dalys": 3429496.8383021043,
-    "publications": 6
+    "publications": 2
   },
   "Viral skin diseases": {
     "name": "Viral skin diseases",
@@ -977,154 +977,154 @@
     "gbd_level2": "Skin and subcutaneous diseases",
     "global_south_priority": false,
     "dalys": 803747.4037738226,
-    "publications": 6
+    "publications": 1
   },
   "Bacterial skin diseases": {
     "name": "Bacterial skin diseases",
     "gbd_level2": "Skin and subcutaneous diseases",
     "global_south_priority": false,
     "dalys": 2269423.947498302,
-    "publications": 104
+    "publications": 1
   },
   "Other skin and subcutaneous diseases": {
     "name": "Other skin and subcutaneous diseases",
     "gbd_level2": "Skin and subcutaneous diseases",
     "global_south_priority": false,
     "dalys": 3530584.5483833007,
-    "publications": 93
+    "publications": 24
   },
   "Blindness and vision loss": {
     "name": "Blindness and vision loss",
     "gbd_level2": "Sense organ diseases",
     "global_south_priority": false,
     "dalys": 29163992.73777044,
-    "publications": 588
+    "publications": 472
   },
   "Age-related and other hearing loss": {
     "name": "Age-related and other hearing loss",
     "gbd_level2": "Sense organ diseases",
     "global_south_priority": false,
     "dalys": 44449944.07336713,
-    "publications": 227
+    "publications": 167
   },
   "Other sense organ diseases": {
     "name": "Other sense organ diseases",
     "gbd_level2": "Sense organ diseases",
     "global_south_priority": false,
     "dalys": 3713356.183090227,
-    "publications": 58
+    "publications": 7
   },
   "Low back pain": {
     "name": "Low back pain",
     "gbd_level2": "Musculoskeletal disorders",
     "global_south_priority": false,
     "dalys": 70156962.18649575,
-    "publications": 144
+    "publications": 80
   },
   "Neck pain": {
     "name": "Neck pain",
     "gbd_level2": "Musculoskeletal disorders",
     "global_south_priority": false,
     "dalys": 20415496.55499668,
-    "publications": 105
+    "publications": 25
   },
   "Osteoarthritis": {
     "name": "Osteoarthritis",
     "gbd_level2": "Musculoskeletal disorders",
     "global_south_priority": false,
     "dalys": 21304565.816655383,
-    "publications": 229
+    "publications": 168
   },
   "Rheumatoid arthritis": {
     "name": "Rheumatoid arthritis",
     "gbd_level2": "Musculoskeletal disorders",
     "global_south_priority": false,
     "dalys": 3075303.1663426203,
-    "publications": 452
+    "publications": 289
   },
   "Gout": {
     "name": "Gout",
     "gbd_level2": "Musculoskeletal disorders",
     "global_south_priority": false,
     "dalys": 1747546.2415835075,
-    "publications": 215
+    "publications": 212
   },
   "Other musculoskeletal disorders": {
     "name": "Other musculoskeletal disorders",
     "gbd_level2": "Musculoskeletal disorders",
     "global_south_priority": false,
     "dalys": 45177825.367834285,
-    "publications": 786
+    "publications": 710
   },
   "Congenital birth defects": {
     "name": "Congenital birth defects",
     "gbd_level2": "Other non-communicable diseases",
     "global_south_priority": false,
     "dalys": 52325332.69132468,
-    "publications": 277
+    "publications": 125
   },
   "Oral disorders": {
     "name": "Oral disorders",
     "gbd_level2": "Other non-communicable diseases",
     "global_south_priority": false,
     "dalys": 23239420.62383663,
-    "publications": 219
+    "publications": 131
   },
   "Sudden infant death syndrome": {
     "name": "Sudden infant death syndrome",
     "gbd_level2": "Other non-communicable diseases",
     "global_south_priority": false,
     "dalys": 2746174.492763149,
-    "publications": 569
+    "publications": 1
   },
   "Urinary diseases and male infertility": {
     "name": "Urinary diseases and male infertility",
     "gbd_level2": "Other non-communicable diseases",
     "global_south_priority": false,
     "dalys": 11353107.892407538,
-    "publications": 16129
+    "publications": 121
   },
   "Gynecological diseases": {
     "name": "Gynecological diseases",
     "gbd_level2": "Other non-communicable diseases",
     "global_south_priority": false,
     "dalys": 27737635.893985625,
-    "publications": 23966
+    "publications": 902
   },
   "Hemoglobinopathies and hemolytic anemias": {
     "name": "Hemoglobinopathies and hemolytic anemias",
     "gbd_level2": "Other non-communicable diseases",
     "global_south_priority": true,
     "dalys": 11920415.820543597,
-    "publications": 38
+    "publications": 3
   },
   "Endocrine, metabolic, blood, and immune disorders": {
     "name": "Endocrine, metabolic, blood, and immune disorders",
     "gbd_level2": "Other non-communicable diseases",
     "global_south_priority": false,
     "dalys": 12862747.877879905,
-    "publications": 3898
+    "publications": 3799
   },
   "Road injuries": {
     "name": "Road injuries",
     "gbd_level2": "Transport injuries",
     "global_south_priority": true,
     "dalys": 65143646.66178717,
-    "publications": 53
+    "publications": 48
   },
   "Other transport injuries": {
     "name": "Other transport injuries",
     "gbd_level2": "Transport injuries",
     "global_south_priority": false,
     "dalys": 4485873.598196637,
-    "publications": 62
+    "publications": 32
   },
   "Falls": {
     "name": "Falls",
     "gbd_level2": "Unintentional injuries",
     "global_south_priority": false,
     "dalys": 43804122.62423419,
-    "publications": 376
+    "publications": 368
   },
   "Drowning": {
     "name": "Drowning",
@@ -1138,28 +1138,28 @@
     "gbd_level2": "Unintentional injuries",
     "global_south_priority": true,
     "dalys": 8470611.491859864,
-    "publications": 18
+    "publications": 1
   },
   "Poisonings": {
     "name": "Poisonings",
     "gbd_level2": "Unintentional injuries",
     "global_south_priority": false,
     "dalys": 2880957.559910405,
-    "publications": 53
+    "publications": 2
   },
   "Exposure to mechanical forces": {
     "name": "Exposure to mechanical forces",
     "gbd_level2": "Unintentional injuries",
     "global_south_priority": false,
     "dalys": 10315630.852825675,
-    "publications": 36
+    "publications": 18
   },
   "Adverse effects of medical treatment": {
     "name": "Adverse effects of medical treatment",
     "gbd_level2": "Unintentional injuries",
     "global_south_priority": false,
     "dalys": 4846980.934884624,
-    "publications": 79
+    "publications": 31
   },
   "Animal contact": {
     "name": "Animal contact",
@@ -1180,76 +1180,76 @@
     "gbd_level2": "Unintentional injuries",
     "global_south_priority": false,
     "dalys": 1683247.504555038,
-    "publications": 853
+    "publications": 2
   },
   "Other unintentional injuries": {
     "name": "Other unintentional injuries",
     "gbd_level2": "Unintentional injuries",
     "global_south_priority": false,
     "dalys": 8773812.091806827,
-    "publications": 136
+    "publications": 7
   },
   "Self-harm": {
     "name": "Self-harm",
     "gbd_level2": "Self-harm and violence",
     "global_south_priority": false,
     "dalys": 33525091.29481815,
-    "publications": 124
+    "publications": 109
   },
   "Interpersonal violence": {
     "name": "Interpersonal violence",
     "gbd_level2": "Self-harm and violence",
     "global_south_priority": true,
     "dalys": 26829606.60148959,
-    "publications": 1399
+    "publications": 74
   },
   "Conflict and terrorism": {
     "name": "Conflict and terrorism",
     "gbd_level2": "Self-harm and violence",
     "global_south_priority": true,
     "dalys": 8727823.186955787,
-    "publications": 6
+    "publications": 5
   },
   "Police conflict and executions": {
     "name": "Police conflict and executions",
     "gbd_level2": "Self-harm and violence",
     "global_south_priority": true,
     "dalys": 1011911.9797431168,
-    "publications": 21
+    "publications": 10
   },
   "Exposure to forces of nature": {
     "name": "Exposure to forces of nature",
     "gbd_level2": "Self-harm and violence",
     "global_south_priority": true,
     "dalys": 1092510.3723861952,
-    "publications": 24
+    "publications": 23
   },
   "_GENOMICS": {
     "name": "_GENOMICS",
     "gbd_level2": "Research methodology",
     "global_south_priority": false,
     "dalys": 0,
-    "publications": 8657
+    "publications": 8572
   },
   "_BIOBANK_METHODS": {
     "name": "_BIOBANK_METHODS",
     "gbd_level2": "Research methodology",
     "global_south_priority": false,
     "dalys": 0,
-    "publications": 22295
+    "publications": 22017
   },
   "_IMAGING": {
     "name": "_IMAGING",
     "gbd_level2": "Research methodology",
     "global_south_priority": false,
     "dalys": 0,
-    "publications": 2162
+    "publications": 1305
   },
   "_AGING": {
     "name": "_AGING",
     "gbd_level2": "Research methodology",
     "global_south_priority": false,
     "dalys": 0,
-    "publications": 18662
+    "publications": 14028
   }
 }

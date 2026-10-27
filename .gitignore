@@ -107,4 +107,23 @@ DATA/bhem_fetch_progress.csv
 DOCX/ANNUAL-REVIEWS/CLAUDE.md
 
 # Manuscript-editing scripts (contain hardcoded paths, not for public repo)
-PYTHON/06-01-nature-medicine-expand-methods.py
+PYTHON/06-0[1-9]-*.py
+PYTHON/06-1[0-3]-*.py
+PYTHON/07-0[1-3]-*.py
+PYTHON/04-05-*.py
+
+# Manuscript DOCX files (not for public GitHub)
+DOCX/NATURE-HEALTH/
+DOCX/ARCHIVE/LANCET-GLOBAL-HEALTH/
+DOCX/ARCHIVE/NATURE-MEDICINE/
+DOCX/ARCHIVE/OLD/
+DOCX/ARCHIVE/Picture*
+
+# Claude session directories
+.claude/
+DOCX/**/.claude/
+
+# Round 2 revision: manuscript, letters and redline generators stay private
+DOCX/NATURE-COMMUNICATIONS-TRANSFER/
+ANALYSIS/03-11-NATCOMMS-R2-SENSITIVITY/ms/
+ANALYSIS/03-11-NATCOMMS-R2-SENSITIVITY/REDLINE/

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-18T06:16:55.869883",
+  "generated_at": "2026-10-25T14:38:30.237327",
   "time_range": {
     "start": 2000,
     "end": 2025
@@ -16,12 +16,18 @@
       "passes_filters": false,
       "quality_score": 93.09281607379795,
       "total_papers": 15827
+    },
+    "Interstitial lung disease and pulmonary sarcoidosis": {
+      "folder": "Interstitial_lung_disease_and_pulmonary_sarcoidosis",
+      "passes_filters": false,
+      "quality_score": 91.2241827768014,
+      "total_papers": 71125
     }
   },
   "summary": {
-    "total_diseases": 1,
+    "total_diseases": 2,
     "diseases_passing": 0,
-    "total_papers": 15827,
-    "total_unique_pmids": 14433
+    "total_papers": 86952,
+    "total_unique_pmids": 78437
   }
 }

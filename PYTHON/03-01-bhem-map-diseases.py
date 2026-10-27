@@ -176,7 +176,7 @@ GBD_MESH_MAPPING = {
         'global_south_priority': True
     },
     'Trachoma': {
-        'mesh_terms': ['Trachoma', 'Chlamydia trachomatis'],
+        'mesh_terms': ['Trachoma'],  # 'Chlamydia trachomatis' removed 2026-10-25: it indexes genital infection, not trachoma
         'gbd_level2': 'NTDs and Malaria',
         'global_south_priority': True
     },
@@ -1224,22 +1224,15 @@ def map_publication_to_causes(mesh_terms_str: str, mapping: dict) -> list:
             if not mesh_term:
                 continue
             
-            # Exact match
-            if mesh_term in article_terms:
+            # Exact match, or the curated term carrying a MeSH qualifier
+            # ("Tuberculosis, Pulmonary" matches curated "Tuberculosis").
+            # Bidirectional substring matching was removed on 2026-10-25: an article
+            # term inside a curated term ("Sleep" in "Sleeping Sickness", "Neoplasms"
+            # in "Laryngeal Neoplasms") linked about half of all publication-cause
+            # pairs to diseases the papers were not about.
+            if mesh_term in article_terms or any(at.startswith(mesh_term + ',') for at in article_terms):
                 matched_causes.append(gbd_cause)
                 break
-            
-            # Substring match (for flexibility)
-            for article_term in article_terms:
-                if len(mesh_term) >= 4 and mesh_term in article_term:
-                    matched_causes.append(gbd_cause)
-                    break
-                if len(article_term) >= 4 and article_term in mesh_term:
-                    matched_causes.append(gbd_cause)
-                    break
-            else:
-                continue
-            break
     
     return list(set(matched_causes))
 

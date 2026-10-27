@@ -1,7 +1,7 @@
 {
   "title": "Temporal Semantic Drift",
   "description": "Mean year-over-year cosine distance between research centroids",
-  "generated_at": "2026-02-03T10:09:07.145672",
+  "generated_at": "2026-02-04T10:53:20.823835",
   "parameters": {
     "top_n": 25
   },
