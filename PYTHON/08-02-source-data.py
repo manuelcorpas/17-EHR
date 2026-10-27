@@ -1,5 +1,5 @@
 """Source Data workbook for NCOMMS-26-040266-T: one sheet per display item, values as plotted or tabulated.
-Reads docs/data/*.json, the sensitivity outputs and the ED Fig 1 source CSVs. Writes
+Reads docs/data/*.json, the sensitivity outputs, the ED Fig 1 source CSVs and the Fig 4a UMAP coordinates. Writes
 ANALYSIS/08-NATCOMMS-R2-FIGURES/Source_Data.xlsx. Usage: python PYTHON/08-02-source-data.py
 """
 import json
@@ -39,8 +39,13 @@ def sheets():
         if f.exists(): out[f'EDFig1{p}'] = pd.read_csv(f)
     out['EDFig2_sensitivity'] = pd.read_csv(SENS / '02-r2-sensitivity-scores.csv')
     out['EDFig3_regional'] = out['Fig2b_biobank_EAS'].groupby('region').agg(biobanks=('biobank', 'count'), publications=('publications', 'sum'), mean_EAS=('EAS', 'mean')).reset_index()
-    out['SuppTable_SX_scores'] = pd.read_csv(SENS / '08-supp-table-category-correction.csv')
-    out['SuppTable_SY_counts'] = pd.read_csv(SENS / '15-supp-table-mapping-counts.csv')
+    out['SuppTable_S1_scores'] = pd.read_csv(SENS / '08-supp-table-category-correction.csv')
+    out['SuppTable_S2_counts'] = pd.read_csv(SENS / '15-supp-table-mapping-counts.csv')
+    w = I['weights']
+    out['Fig1c_weights'] = pd.DataFrame({'dimension': ['Discovery', 'Translation', 'Knowledge'],
+                                         'weight': [w['discovery'], w['translation'], w['knowledge']],
+                                         'pc1_explained_variance': w['pc1_explained_variance'], 'n_complete_cases': w['n_complete_cases']})
+    out['Fig4a_UMAP'] = pd.read_csv(FIGS / 'fig4a_umap_coords.csv')  # written by the UMAP run that drew Fig 4a (seed 42)
     return out
 
 
