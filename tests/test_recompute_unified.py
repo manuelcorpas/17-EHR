@@ -61,3 +61,10 @@ def test_summary_block_is_recomputed():
     vals = [d['unified_score'] for d in out['diseases'] if d['unified_score'] is not None]
     import statistics
     assert abs(out['summary']['mean_unified'] - statistics.mean(vals)) < 1e-9
+
+def test_method_label_reports_actual_complete_case_count():
+    integ = json.load(open(ARC / 'integrated.json'))
+    integ['weights']['method'] = 'PCA (PC1 loadings from 999 diseases with all three dimensions)'
+    out = ru.recompute(integ, json.load(open(ARC / 'diseases.json')), json.load(open(ARC / 'clinical_trials.json')))
+    n = out['weights']['n_complete_cases']
+    assert f'from {n} diseases' in out['weights']['method'] and '999' not in out['weights']['method']

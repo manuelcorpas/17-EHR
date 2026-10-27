@@ -82,7 +82,8 @@ def recompute(integrated, diseases_json, ct_data, semantic=None, exclude=()):
         else:
             d['unified_score'] = float((w_D*dn + w_K*kn)/(w_D + w_K) * 100); d['dimensions_available'] = 2
     ev = pca.explained_variance_ratio_
-    out['weights'].update({'discovery': round(float(w_D), 3), 'translation': round(float(w_T), 3),
+    out['weights'].update({'method': f'PCA (PC1 loadings from {len(three)} diseases with all three dimensions)',
+                           'discovery': round(float(w_D), 3), 'translation': round(float(w_T), 3),
                            'knowledge': round(float(w_K), 3), 'pc1_explained_variance': round(float(ev[0]), 3),
                            'pc1_pc2_explained_variance': round(float(ev[0] + ev[1]), 3), 'n_complete_cases': len(three)})
     rows.sort(key=lambda d: d['unified_score'] if d['unified_score'] is not None else -1, reverse=True)

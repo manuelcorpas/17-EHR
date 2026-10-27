@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-25T15:54:36.790209",
+  "generated_at": "2026-10-27T13:21:03.819958",
   "weights": {
-    "method": "PCA (PC1 loadings from 86 diseases with all three dimensions)",
+    "method": "PCA (PC1 loadings from 87 diseases with all three dimensions)",
     "discovery": 0.574,
     "translation": 0.17,
     "knowledge": 0.256,
